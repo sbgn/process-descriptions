@@ -1,0 +1,99 @@
+% $HeadURL$
+
+\chapter{What is the Systems Biology Graphical Notation?}
+
+The goal of the \textbf{S}ystems \textbf{B}iology \textbf{G}raphical \textbf{N}otation (SBGN) is to standardize the graphical/visual representation of essential biochemical and cellular processes studied in systems biology.  SBGN defines a comprehensive set of symbols with precise semantics, together with detailed syntactic rules defining their use.  It also describes the manner in which such graphical information should be represented in machine-readable form, to ensure consistent storage, exchange, and reproduction of graphical representation between different software systems.
+
+Standardizing graphical notations for describing biological interactions is an important step towards the efficient and accurate transmission of biological knowledge between different communities.  Traditionally, diagrams representing interactions among genes and molecules have been drawn in an informal manner, using simple unconstrained shapes and edges such as arrows.  Until the development of SBGN, no standard agreed-upon convention existed defining exactly how to draw such diagrams in a way that helps readers interpret them consistently, correctly, and unambiguously.  By standardizing the visual notation, SBGN can serve as a bridge between different communities such as computational and experimental biologists, and even more broadly in education, publishing, and more.
+
+For SBGN to be successful, it must satisfy a majority of technical and practical needs, and must be embraced by the community of researchers in biology.  With regards to the technical and practical aspects, a successful visual language must meet at least the following goals:
+
+\begin{enumerate}
+
+\item Allow the representation of diverse biological objects and interactions;
+
+\item Be semantically and visually unambiguous;
+
+\item Allow implementation in software that can aid the drawing and verification of diagrams;
+
+\item Have semantics that are sufficiently well defined that software tools can convert graphical models into formal models, suitable for analysis if not for simulation;
+
+\item Be unrestricted in use and distribution, so that the entire community can freely use the notation without encumbrance or fear of intellectual property infractions.
+
+\end{enumerate}
+
+This document defines the \emph{\PD{}} visual language of SBGN.  As explained more fully in~\sect{languages}, \PDs are one of three views of a model offered by SBGN.  It is the product of many hours of discussion and development by many individuals and groups.  In the following sections, we describe the background, motivations, and context of \PDs.
+
+
+\section{History of SBGN development}
+\label{sec:history}
+
+Although problems surrounding the representation of biological pathways has been discussed for a long time, see for instance~\cite{Michal:1998}, the effort to create a well-defined visual notation was pioneered by Kurt Kohn with his Molecular Interaction Map (MIM), a notation defining symbols and syntax to describe the interactions of molecules~\cite{Kohn:1999}.  MIM is essentially a variation of the entity-relationship diagrams~\cite{Chen:1976}. Kohn's work was followed by numerous other attempts to define both alternative notations for diagramming cellular processes (\eg the work of Pirson and colleagues~\cite{Pirson:2000}, BioD~\cite{Cook:2001}, and others), as well as extensions of Kohn's notation (\eg the Diagrammatic Cell Language of Maimon and Browning~\cite{Maimon:2001}).
+
+Kitano originated the idea of having multiple views of the \emph{same} model.  This addresses two problems: no single view can satisfy the needs of all users, and a given view can only represent a subset of the semantics necessary to express biological knowledge.  Kitano proposed the development of process diagrams, entity-relationship diagrams, timing charts (to describe temporal changes in a system), and abstract flow charts~\cite{Kitano:2003}.  The \PD notation was the first to be fully defined using a well-delineated set of symbols and syntax~\cite{Kitano:2005}.  It lead to a desire to establish a unified standard for graphical representation of biochemical entities, and from this arose the current SBGN effort.  Separately and roughly concurrently, other groups designed similar notations, for example the Edinburgh Pathway Notation~\cite{Moodie:2006}.  All of these efforts began to attract attention as more emphasis in biological research was placed on networks of interactions and not just characterization of individual entities.
+
+In 2005, thanks to funding from the Japanese agency \emph{The New Energy and Industrial Technology Development Organization} (NEDO, \url{http://www.nedo.go.jp/}), Kitano initiated the Systems Biology Graphical Notation (SBGN) project as a community effort.  The first SBGN workshop was held in February 2006 in Tokyo, with over 30 participants from major organizations interested in this effort.  From the in-depth discussions held during that meeting emerged a set of decisions that are the basis of the current SBGN specification.  These decisions are:
+
+\begin{itemize}
+
+\item SBGN should be made up of two different visual grammars, describing \ER{} and \PD{} diagrams (called \emph{State Transition} diagrams at the time).  See Section~\vref{sec:languages}.
+
+\item In order to promote wide acceptance, the initial version(s) of SBGN should stick to at most a few dozens symbols that non-specialists could easily learn.
+
+\end{itemize}
+
+The second SBGN workshop was held in October, 2006, in Yokohama, Japan.  This meeting featured the first technical discussions about which symbols to include in SBGN Level~1, as well as discussions about the syntax, semantics, and layout of graphs.  A follow-up technical meeting was held in March, 2007, in Heidelberg, Germany; the participants of that meeting fleshed out most of the design of SBGN.  The third SBGN workshop, held in Long Beach in October, 2007, was dedicated to reaching agreement on the final outstanding issues of notation and syntax.  The participants of that meeting collectively realized that a third language would be necessary: the \AF diagrams.  The specification for the \PD language was finalized and largely completed during a follow-up technical meeting held in Okinawa, Japan, in January, 2008.  At this last meeting, attendees also held the first in-depth discussions about the syntax of the \ER language.
+
+SBGN workshops are an opportunity for public discussions about SBGN, allowing interested persons to learn more about SBGN and help identify needs and issues.  More meetings are expected to be held in the future, long after this specification document has been issued.
+
+
+\section{The three languages of SBGN}
+\label{sec:languages}
+
+Readers may well wonder, why are there \emph{three} languages in SBGN?  The reason is that this approach solves a problem that was found insurmountable any other way: attempting to include all relevant facets of a biological system in a single diagram causes the diagram to become hopelessly complicated and incomprehensible to human readers.
+
+The three different notations in SBGN correspond to three different \emph{views} of the same model.  These views are representations of different classes of information, as follows:
+
+\begin{enumerate}\setlength{\parskip}{0ex}
+
+\item \emph{\PD{}}: the causal sequences of molecular processes and their
+  results
+
+\item \emph{\ER{}}: the interactions between entities irrespective of
+sequence
+
+\item \emph{\AF{}}: the flux of information going from one entity to
+another
+
+\end{enumerate}
+
+In the \PD{} view, each node in the diagram represents a given \emph{state} of a species, and therefore a given species may appear multiple times in the same diagram if it represents the same entity in different states.  Conversely, in the \ER{} view, a given species appears only once in a diagram.  \PDs{} are suitable for following the temporal aspects of interactions, and are easy to understand.  The drawback of the \PD{}, however, is that because the same entity appears multiple times in one diagram, it is difficult to understand which interactions actually exist for the entity.  Conversely, \ERs{} are suitable for understanding relationships involving each molecule, but the temporal course of events is difficult or impossible to follow because \ERs do not describe the sequence of events.
+
+\PDs{} can quickly become very complex.  Moreover, when diagramming a biochemical network, one often wants to ignore the biochemical basis underlying the action of one entity on the activity of another.  A common desire is to represent only the flow of activity between nodes, without representing the transitions in the states of the nodes.  This is the motivation for the creation of the \AF view.  \AFs permit the use of \glyph{modulation}, \glyph{stimulation} and \glyph{inhibition} and allow them to point to State/Entity nodes rather than process nodes.  The \AF view is thus a hybrid between \PD and \ERs.  It is particularly convenient for representing the effect of perturbations, whether genetic or environmental in nature.
+
+A recurring argument in SBGN development is that these these three types of diagrams should be merged into one.  Unfortunately, each view has such different meanings that merging them would compromise the robustness of the representation and destroy the mathematical integrity of the notation system.  While having three different notations makes the overall system more complex, much of the complexity and increase in burden on learning is mitigated by reusing most of the same symbols in all three notations.  It is primarily the syntax and semantics that change between the different views, reflecting fundamental differences in the underlying mathematics of what is being described.
+
+\section{SBGN levels}
+\label{sec:sbgn-levels}
+
+It was clear at the outset of SBGN development that it would be impossible to design a perfect and complete notation right from the beginning.  Apart from the prescience this would require (which, sadly, none of the authors possess), it also would likely require a vast language that most newcomers would shun as being too complex.  Thus, the SBGN community followed an idea used in the development of the Systems Biology Markup Language (SBML; \cite{Hucka:2003}): stratify language development into levels.
+
+A \emph{level} of SBGN represents a set of features deemed to fit together cohesively, constituting a usable set of functionality that the user community agrees is sufficient for a reasonable set of tasks and goals.  Capabilities and features that cannot be agreed upon and are judged insufficiently critical to require inclusion in a given level, are postponed to a higher level.  In this way, SBGN development is envisioned to proceed in stages, with each higher SBGN level adding richness compared to the levels below it.
+
+
+
+\section{Developments, discussions, and notifications of updates}
+\label{sec:discussions}
+
+The SBGN website (\url{http://sbgn.org}) is a portal for all things related to SBGN.  It provides a web forum interface to the SBGN discussion list (\mailto{sbgn-discuss@sbgn.org}) and information about how anyone may subscribe to it.  The easiest and best way to get involved in SBGN discussions is to join the mailing list and participate.
+
+Face-to-face meetings of the SBGN community are announced on the website as well as the mailing list.  Although no set schedule currently exists for workshops and other meetings, we envision holding at least one public workshop per year.  As with other similar efforts, the workshops are likely to be held as satellite workshops of larger conferences, enabling attendees to use their international travel time and money more efficiently.
+
+Notifications of updates to the SBGN specification are also broadcast on the mailing list and announced on the SBGN website.
+
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

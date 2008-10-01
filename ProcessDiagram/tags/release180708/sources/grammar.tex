@@ -1,0 +1,382 @@
+\chapter{Process Diagram grammar}
+\label{chp:grammar}
+
+\section{Overview}
+
+In this chapter, we describe how the glyphs of SBGN can be combined
+to make a valid SBGN diagram. To do this, we must at the very least
+define what glyphs can be connected to each other. This is called
+syntax. Next, we must define rules over and above connection rules,
+such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a SBGN diagram without external help, and a writer is to create one that reflects his understanding of a biological system.
+
+In this section we start off by describing the concepts of the
+\PD{} notation. Next a detailed description of the syntax is provided
+followed by a description of the syntactic rules of the notation.
+
+\section{Concepts}
+
+The SBGN \PD{} is more than a collection of symbols. It is a
+visual language that uses specific abstractions to describe the
+biological processes that make up a quantitative model, a signalling pathway or a metabolic network. This abstraction is the
+semantics of SBGN, and to describe it requires more than a definition
+of the symbols and syntax of the language. We first need to define the
+abstractions we are using.
+
+The \PD{} in SBGN describes biological processes involving biological entities. An \glyph{Entity pool node} (\sect{EPNs}), such as a molecule, is converted into other \glyph{EPNs} via a process. 
+
+It may be convenient to think of a SBGN \PD{} as describing the
+flow of a fluid. In this analogy, each \glyph{EPN} represents a
+tank of fluid, which may be emptied via a pipe (the consumption arc, \sect{consumption}) 
+that is connected to a valve (the process node, \sect{PNs}), which in turn is
+connected to other pipes (the production arcs, \sect{production}) that fill other tanks
+(\glyph{EPNs}). A valve can be
+controlled in relation to the amount of fluid in another tank.  This
+precise nature of the relationship between valve opening and amount of
+fluid determines the nature of the modulation.
+
+%%  In SBGN modulation takes 3 forms:
+
+%% \begin{enumerate}
+%% \item The rate of fluid flow through the value is opened is related to the amount of fluid in the modulating tank (modulation arc).
+%% \item The rate is directly related to the fluid level in the modulating tank (activation arc).
+%% \item The rate is inversely related to the fluid level in the modulating tank (inhibition arc; note that a catalysis arc is identical to this).
+%% \end{enumerate}
+
+%% A more subtle form of modulatory control is exhibited by special
+%% ```logic'' valves that open based on boolean logic (Logic Gates).
+%% These are as follows:
+
+%% \begin{description}
+%% \item[AND] The valve has more than one input pipe. If water flows in both pipes then the value opens and lets water flow into its output pipe.
+%% \item[OR] This is equivalent to two pipes that flow into one. Fluid from two or more input pipes is directed to the output pipe.
+%% \item[NOT] This value must work in conjunction with another valve and
+%%   has one input and one output pipe. If fluid flows into the valve
+%%   then nothing flows out of it and if there is no flow into it there
+%%   is flow out of it.
+%% \end{description}
+
+%% The input pipe to a logic valve is in turn connected to a
+%% ``pressure-dependent'' value (Existence Arc). This valve only opens at
+%% a specified pressure and so it allows us to determine a threshold
+%% above which water can flow to the logic valve. This is important as it
+%% allows us to convert an analogue value (fluid pressure or in the case
+%% of SBGN the concentration of a chemical Entity Pool Node) into a digital true
+%% or false value required by Boolean logic.
+
+Finally, the system needs a source of fluid from one or
+more external sources (\glyph{source}, section \sect{sourceSink}) and somewhere for it to drain away (the
+\glyph{sink}).
+
+% This analogy can equally apply to an electronic circuit.% where the
+%valves may be transistors, the Entity Pool Node capacitors, sources the cathode
+%of a battery and an earth as the sink.
+
+\section{The conceptual model}
+
+In order to formalize the conceptual representation described above
+and the semantic rules that we will describe later, we have developed a UML
+Domain Object Model of SBGN\@. This defines what would otherwise be
+vaguely defined in the SBGN specification, and enables us to define
+clearly what is a valid SBGN diagram.
+
+The model is separated into two layers. The Visual Layer
+(\fig{sbgn_visual}) directly maps to the glyphs used to
+visualise SBGN and reflects the syntax of the notation. The Conceptual
+Layer describes what is ``meant'' by the visual SBGN representation
+(\fig{sbgn_conceptual}). It is important in defining
+concepts such as Entity types and state variables that are implicit in the Visual Layer.
+
+ \begin{landscape}
+\begin{figure}[p]
+\begin{center}
+\includegraphics[width=0.85\linewidth]{images/sbgn_visual}
+\caption{UML model of SBGN visual representation. Class names shown in italics are abstract classes and do not correspond to a glyph. Classes in non-italicised script with the suffixes ``Node'' and ``Arc'' correspond to node and arc glyphs respectively.}
+\label{fig:sbgn_visual}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+\begin{center}
+\includegraphics[width=0.85\linewidth]{images/sbgn_conceptual}
+\caption{UML model of SBGN conceptual representation. The main difference between visual and conceptual representaions is that the conceptual model is non-redundant with only one instance of an EntityPool with a given identity. Each class has a mapping back to the Visual Layer.}
+\label{fig:sbgn_conceptual}
+\end{center}
+\end{figure}
+\end{landscape}
+The Classes shown in the UML model are described in more detail in the
+tables below. In particular the tables define the properties that
+uniquely identify each component of the notation. This is important in
+defining the rules for duplication and the submap interface later.
+
+\newlength{\commlen}
+\setlength{\commlen}{6cm}
+\begin{landscape}
+\begin{center}
+\begin{scriptsize}
+\tablefirsthead{\hline\multicolumn{5}{|c|}{Visual Layer Data Dictionary}\\\hline
+ Name & \multicolumn{2}{|c|}{Attributes} & Glyph & Comment\\\cline{2-3}
+ & Name & Description & & \\\hline}
+\tablehead{\hline
+\multicolumn{5}{|l|}{\small\sl continued from previous page}\\\hline
+Name & \multicolumn{2}{|c|}{Attributes} & Glyph & Comment\\\cline{2-3}
+ & Name & Description & & \\\hline\hline}
+\tabletail{\hline
+\multicolumn{5}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+
+\topcaption{A data dictionary for the Visual Layer of the SBGN
+  Conceptual Model. Attributes that uniquely identify a class are
+  followed by (I) and required attributes by (R): it is implied that
+  identifying attributes are also required. The default cardinality of
+  an attribute is one (or zero or one if it is not required) unless
+  otherwise specified. A standard notation for cardinality is used,
+  for example \{0 \ldots *\} should be read zero, one or many. The Glyph
+  column states the Glyph the class maps to, unless the class is
+  purely conceptual and so defined as Abstract.}
+
+
+\begin{supertabular}{|p{3cm}|p{4cm}|p{5.5cm}|p{2.5cm}|p{\commlen}|}\hline
+%
+MapDiagram & name (I) & Name of the map. & N/A & The diagram is the visualisation of a SBGN map.\\\hline
+%
+SubmapDiagram & mainMapName (I) & Name of the main map this is a sub-map of.& N/A & \multirow{2}{\commlen}{A SBGN diagram used to define a SBGN submap}\\
+& name (I) & Name of the sub-map. & & \\\hline
+%
+BasicEntity\-Node & & & Abstract & The most fundamental node type. Any node that can be drawn on a MapDiagram inherits from this.\\\hline
+%
+ConsumableNode & & & Abstract & Nodes that can be consumed and are connected at the start of a consumption arc.\\\hline
+%
+ProducableNode & & & Abstract & Nodes that can produced and are linked to the end of a production arc.\\\hline
+%
+ModulatableNode & modulatingNodes (I) \{0 \ldots *\} & Any number of nodes that modulate this one.& Abstract & Nodes that can be modulated and so are linked to the end of a modulation arc.\\\hline
+%
+ModulatingNode & & & Abstract & Nodes that can modulate modulatable nodes. They are linked to the origin of a modulating arc.\\\hline
+%
+CompartmentNode & name (I) & Name of compartment being defined. At present the name of the compartment is not restricted, i.e.\, a controlled vocabulary is not used. & Compartment & \\
+& unitsOfInformation \{0 \ldots *\} & any number of Units of Information. & &\\\hline
+%
+EntityPoolNode (EPN) & name (I) & The name of the entity. & Abstract & \multirow{3}{\commlen}{Nodes that inherit from this type are generally chemical species that can be produced, consumed or transformed in chemical processes. It refers to a population (or pool) of such species.} \\
+ & compartment (I) & If no compartment is specified then this is implicitly defined as the ``default'' compartment. & & \\
+& unitsOfInformation \{0 \ldots *\} & Any number of Units of Information. & &\\\hline
+%
+StatefulEntity\-Pool\-Node & As EPN & & Abstract & \multirow{2}{\commlen}{All EPN that inherit from this class may have state variables assigned to them.}\\
+& stateDescriptions (I) \{0 \ldots *\} & Any number of StateDescriptions associated with this EPN. & &\\\hline
+%
+SimpleChemical\-Node & As EPN & & SimpleChemical & \\\hline
+%
+Unspecified\-Entity\-Node & As EPN &  & UnspecifiedEntity & \\\hline
+%
+SourceNode & &  & Source/Sink & The SourceNode can only be associated with \emph{one} consumption arc. Note that this shares the same Glyph as SinkNode.\\\hline
+%
+SinkNode & & & Source/Sink & The SinkNode can only be associated with \emph{one} production arc. Note that this shares the same Glyph as SourceNode.\\\hline
+%
+ObservableNode & name (I) & Name of the observable. & Observable & \\\hline
+%
+PerturbationNode & name (I) & Name of the perturbation. & Perturbation & \\\hline
+%
+MacromoleculeNode & As StatefulEntityPoolNode & & Macromolecule & \multirow{2}{\commlen}{} \\
+ & macromoleculeType (I) & The type of the macromolecule. Currently there are no constraints on permitted types. & & \\\hline
+%
+Nucleic\-Acid\-Feature\-Node & As StatefulEntityPoolNode & & Nucleic\-Acid\-Feature & \\\hline
+%
+ComplexNode & As StatefulEntityPoolNode & & Complex & \multirow{3}{\commlen}{} \\
+ & subunits \{0 \ldots *\} & A list of EPNs that together compose the complex. & & \\
+ & subunitStates (I) \{0 \ldots *\} & The set of state descriptions of any Subunits that are StatefulEntityPoolNodes. & & \\\hline
+%
+Multimer\-Macromolecule\-Node & As MacromoleculeNode & & Multimer\-Macromolecule & \multirow{2}{\commlen}{Note that all sub-units have the \emph{same} StateDescription values.} \\
+ & numberOfSubunits (I) & The number of identical sub-units of this macromolecule. & & \\\hline
+%
+MultimerSimple\-Chemical\-Node & As SimpleChemicalNode & & MultimerSimple\-Chemical & \multirow{2}{\commlen}{} \\
+& numberOfSubunits (I) & The number of identical sub-units of this simple chemical. & & \\\hline
+%
+MultimerComplex\-Node & As ComplexNode & & MultimerComplex & \multirow{2}{\commlen}{Note that all sub-units have the \emph{same} StateDescription values.}\\
+ & numberOfSubunits (I) & The number of identical sub-units of this complex. & & \\\hline
+%
+UnitOfInformation & owningEPN (I) & Identity of the owning EntityPoolNode (not displayed, but implied by ``ownership'' of the glyph). & Unit Of Information & \multirow{2}{\commlen}{} \\
+& prefix & Prefix (I) & & \\
+& annotation & Annotation (R) & & \\\hline
+%
+StateDescription & owningStatefulEPN & Identity of the owning Stateful\-Entity\-Pool\-Node (not displayed, but implied by ``ownership'' of the glyph). & State Variables & \multirow{3}{\commlen}{} \\
+ & variable & The name (identification) of the ``state variable'' glyph associated a StatefulEntityPoolNode. & & \\
+ & value &  The definition of a value for the given variable. & & \\\hline
+%
+ProcessNode & As ModulatableNode & & Process & \multirow{3}{\commlen}{}\\
+ & producableNodes (I) \{1 \ldots *\} & The ProducableNodes linked to the process by a ProductionArc. & & \\
+ & consumableNodes (I) \{1 \ldots *\} & The ConsumableNodes linked to the process by a ConsumptionArc. & & \\\hline
+%
+OmittedProcess\-Node & As Process Node & & Omitted Process &\\\hline
+%
+UncertainProcess\-Node & As Process Node & & Uncertain Process & \\\hline
+%
+Association\-Node & As Process Node & & Association & \\\hline
+%
+Dissociation\-Node & As Process Node & & Dissociation& \\\hline
+%
+LogicGateNode & gateType (I) & The type of boolean gate. Currently one of OR, AND, NOT. & Abstract & \multirow{3}{\commlen}{Not a glyph but a placeholder for the common behaviour of all logic gates.}\\
+ & modulatingNodes (I) & The modulating nodes that are the input the Boolean logic operator. They must be linked via a LogicArc. & & \\
+ & modulatedNode (I) & A ModulatableNode connected via a Modulation\-Arc or another Logic\-Gate\-Node connected via a LogicArc. & & \\\hline
+%
+ANDNode & As LogicGateNode & & And & \\\hline
+%
+ORNode & As LogicGateNode & & Or & \\\hline
+%
+NOTNode & As LogicGateNode & & Not & \\\hline
+%
+SubMapNode & subMapName (I) & The name of the sub-map it is defining. & Submap & \multirow{2}{\commlen}{} \\
+ & compartment (R) & If no compartment is specified then this is implicitly defined as the ``default'' compartment. & & \\\hline
+%
+TagNode & subMapName (I) & Name of submap that owns tag. & Tag & \\
+& identifier (I) & A name that uniquely identifies the tag on the submap. & & \\\hline
+%
+SubMapTerminalNode & subMapName (I) & Name of submap that owns labeled terminal. & SubMapTerminal & \\
+& identifier (I) & A name that uniquely identifies the terminal on the submap. & & \\\hline
+%
+ProductionArc & processNode (I) & The ProcessNode that this is the output of. & Production & \multirow{2}{\commlen}{It is assumed that the arc is unidirectional.} \\
+ & producableNode (I) & The ProducableNode that is the product of the process. & & \\\hline
+%
+ConsumptionArc & consumableNode (I) & The ConsumableNode that is the input to the process. & Consumption & It is assumed that the arc is unidirectional.\\
+ & processNode (I) & The ProcessNode that this is the input to. & & \\\hline
+%
+ModulationArc & modulatingNode (I) & The ModulatingNode that is the origin of this link. & Modulation & \multirow{2}{\commlen}{} \\
+ & modulatedNode (I) & The ModulatableNode that is controlled (modulated) by this arc. & & \\\hline
+%
+StimulationArc & As ModulationArc & & Stimulation & \\\hline
+%
+CatalysisArc & As ModulatioArc & & Catalysis & \\\hline
+%
+InhibitionArc & As ModulationArc & & Inhibition & \\\hline
+%
+TriggerArc & As ModulationArc & & Inhibition & \\\hline
+%
+LogicArc & modulatingNode (I) & The ModulatingNode that is the origin of this link. & LogicArc & \multirow{3}{\commlen}{Conceptually this class can be thought of as converting a continuous input (the population of the EntityPool) into a discrete Boolean output (True or False).} \\
+ &  &  & & \\
+ & logicGate (I) & The logicGateNode that is the target of this link. & & \\\hline
+%
+% TagArc & tag (I) & The tag assigned to with the EPN. & Tag & \multirow{2}{\commlen}{} \\
+%  & taggedEPN (I) & The EPN assigned to the tag. & & \\\hline
+EquivalenceArc & Tag (I) & The tag assigned to with the EPN. & Tag & \multirow{2}{\commlen}{} \\
+ & EPN (I) & The EPN assigned to the tag. & & \\\hline
+%
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+
+\newlength{\mappinglen}
+\setlength{\mappinglen}{3.5cm}
+\newlength{\desclen}
+\setlength{\desclen}{5.5cm}
+\begin{center}
+\begin{scriptsize}
+\tablefirsthead{\hline\multicolumn{5}{|c|}{Conceptual Layer Data Dictionary}\\\hline
+Name & \multicolumn{2}{|c|}{Attributes} & Description & Mapping to Visual Layer\\\cline{2-3}
+ & Name & Description & & \\\hline}
+\tablehead{\hline
+\multicolumn{5}{|l|}{\small\sl continued from previous page}\\
+\hline\hline
+Name & \multicolumn{2}{|c|}{Attributes} & Description & Visual Mapping\\\cline{2-3}
+ & Name & Description & & \\\hline\hline}
+\tabletail{\hline
+\multicolumn{5}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+
+\topcaption{A data dictionary for the Conceptual Layer of the SBGN
+  Model. Attributes that uniquely identify a class are
+  followed by (I) and required attributes by (R): it is implied that
+  identifying attributes are also required. The default cardinality of
+  an attribute is one (or zero or one if it is not required) unless
+  otherwise specified. A standard notation for cardinality is used,
+  for example \{0 \ldots *\} should be read zero, one or many. A mapping to a class in the Visual Layer is provided where appropriate.}
+
+\begin{supertabular}{|p{3cm}|p{4cm}|p{6cm}|p{\desclen}|p{\mappinglen}|}\hline
+%
+Map & name (I) & A name or identifier for the map. & The biological pathway that is represented by the SBGN diagram. & MapDiagram\\\hline
+%
+SubMap & name (I) & The name of the submap. &  & SubMapDiagram\\
+ & mainMapName (I) & The name of the map that refers to this submap. & & \\\hline
+%
+Compartment & name (I) & The name of the compartment. & & CompartmentNode\\\hline
+%  & containingCompartment & The compartment that contains this compartment, if any. & & \\\hline
+%
+BasicEntity & & & Root class of all Entities that can be contained by a Compartment. & BasicEntityNode \\\hline
+%
+Controller & & & Something that can control a Controllable. & ModulatingNode \\\hline
+%
+Controllable & & & Something that can be controlled by a Controller & ModulatableNode \\\hline
+%
+Producible & & & Something that can be produced by a process. & ProducibleNode \\\hline
+%
+Consumable & & & Something that can be consumed by a process. & ConsumableNode \\\hline
+%
+EntityType & Name (I) & The name of the EntityType. & \multirow{2}{\desclen}{This is the type of the EntityPool.} & \multirow{2}{\mappinglen}{No direct maps to the visual layer. It is an implied attribute of the EntityPoolNode.}\\
+& type (I) &  Type of the Entity. One of: SimpleChemical, UnspeciedEntity, Complex, Macromolecule, and Nucleic\-Acid\-Feature. & & \\
+ & annotations \{0 \ldots *\} & Annotation must be associated with the type and be general to all Entity Pool Node. If it were associated with the Species then this would be synonymous with a state description. & & \\\hline
+%
+Multimeric\-Entity\-Type & As EntityType & & An Entity that can form homo-multimeric complexes. All copies share the same attributes. & \\
+ & cardinality (I) & The number of subunits in the monomer. & & \\\hline
+%
+Stateful\-Entity\-Type & As EntityType & & An EntityType that can have state variables associated with it. & \\
+ & stateVariables \{ 0 \ldots * \} & & & \\\hline
+%
+Complex\-Entity\-Type & As Stateful\-Entity\-Type & & & \multirow{3}{\mappinglen}{Implicitly defined by a ComplexNode.} \\
+ & cardinality (I) & from MultimericEntityType. & & \\
+ & subunits \{ 0 \ldots * \} & The set of EntityTypes that the complex composed of. & & \\\hline
+%
+Macromolecule\-Entity\-Type & macromoleculeType (I) &  The type of the macromolecule. The permitted type names are not constrained as yet. Suggest types are protein, mRNA, miRNA, tRNA, rRNA, DNA, polysaccaride. See also controlled vocabularies for material type \ref{sec:material-types-cv} and conceptual type \ref{sec:conceptual-types-cv} & & Implicitly defined by a Macromolecule\-Node and Multimer\-Macromolecule\-Node\\\hline
+%
+StateVariable & name (I) & The name of the state variable. & \multirow{2}{\desclen}{The state variable is assigned to a StatefulEntityType and can have one or more values assigned to it when used in a StatefulEntityPool.} & \multirow{2}{\mappinglen}{The name of a State\-Description.} \\[20pt]
+ & & & & \\
+%  & domainValues \{1 \ldots * \} & The domain of the StateVariable, i.e. the set of possible values it can hold. This is required because an Stateful\-Entity\-Pool is assigned a set of state values for a given StateVariable. & & \\
+ \hline
+%
+StateValue & value (I) & The value of the state. & A value that can be assigned to a state variable. & The value string or ``regexp'' used in the State\-Description.\\\hline
+%
+EntityPool & entityType (I) & The EntityType of the pool. & An instantiation of an EntityType. & EntityPoolNode\\\hline
+%
+StatefulEntity\-Pool & As EntityPool & & & \multirow{2}{\mappinglen}{Stateful\-Entity\-Pool\-Node} \\
+ & stateValueSets \{1 \ldots * \} &  A set of state values assigned to a the State\-Variables of the associated Stateful\-Entity\-Type. & & \\\hline
+%
+ComplexEntityPool & As StatefulEntity & & \multirow{3}{\desclen}{The instantiation of a complex that is defined by it's own state and the states of its subunits.} & ComplexNode \\
+ & subunitValues (I) \{0 \ldots * \} &  The set of StateValues for all subunits. & & \\
+ & & & & \\\hline
+%
+Annotation & prefix (I) & A classifier for the annotation. & & UnitOfInformation\\
+ & annotation & Annotation that is associated with a Entity\-Type or Compartment. & & \\\hline
+%
+Process & processType (I) &  One of: Unspecified, Dissociation, Association, Omitted Process, Uncertain Process. & & The type is specified by the type of Glyph used: Process\-Node, Dissociation\-Node, Association\-Node, Omitted\-Process\-Node, Uncertain\-Process\-Node.\\\hline
+%
+Output & process (I) & The process that this is the output of. & & ProductionArc \\
+ & product (I) & The EPN that is the product of the process. & & \\\hline
+%
+Input & substrate (I) & The EPN that is the input to the process. & & ConsumptionArc \\
+ & process (I) & The process that this is the input of. & & \\\hline
+%
+Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Trigger, Catalysis or LogicGate. & & ModulationArc \\\hline
+%
+LogicGate & type (R) & The type of LogicGate. One of AND, OR, NOT. & & LogicGateNode \\\hline
+%
+LogicAdapter & & & The LogicGate takes a set of Boolean inputs (T or F) from an EntityPool which is a non-Boolean quantity. Conceptually, the adapter converts the continuous quantity into a discrete Boolean quantity. & LogicArc \\\hline
+%
+Perturbation & name & Name of the perturbation. & & PerturbationNode \\\hline
+%
+Observable & name & Name of the observable. & & ObservableNode \\\hline
+%
+Source & & & & SourceNode \\\hline
+%
+Sink & & & & SinkNode \\\hline
+%
+Collapsed\-Sub\-Map & referredSubMap (I) & Submap that this refers too. & The submap is ``collapsed'' down to this element, which acts as a placeholder for the submap. & SubMapNode \\\hline
+%
+SubMap\-Entity\-Mapping & identifier (I) & Identifier in Visual layer to link Entity\-Pool\-Nodes in the main map and submap. & \multirow{3}{\desclen}{A definition of the mapping between the submap and main map for a single EntityPool.} & \multirow{3}{\mappinglen}{SubMap\-Terminal\-Node and Tag\-Node}\\
+ & entityPool (R) & The EntityPool node that is mapped between the submap and the main map. & & \\\hline
+%
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+\end{landscape}
+
+\input{sources/syntax.tex}
+
+\input{sources/semantics.tex}
+

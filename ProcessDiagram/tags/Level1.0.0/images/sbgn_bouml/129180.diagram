@@ -1,0 +1,440 @@
+format 50
+
+classcanvas 128002 class_ref 128002 // TriggerArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 308 1008 2009
+  end
+classcanvas 128028 class_ref 129180 // EntityPoolNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1211 489 2000
+  end
+classcanvas 128034 class_ref 131484 // UnitOfInformation
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1350 150 2005
+  end
+classcanvas 128103 class_ref 128359 // EquivalenceNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1057 190 2000
+  end
+classcanvas 128156 class_ref 129308 // ModulatableNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 144 714 2000
+  end
+classcanvas 128284 class_ref 129436 // TransitionNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 321 492 2004
+  end
+classcanvas 128334 class_ref 128206 // NucleicAcidFeatureNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1387 856 2000
+  end
+classcanvas 128540 class_ref 129564 // ProducableNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 836 399 3005
+  end
+classcanvas 128674 class_ref 128034 // SubMapTerminalNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1037 274 2008
+  end
+classcanvas 128743 class_ref 128487 // CloneMarker
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1407 380 2000
+  end
+classcanvas 128924 class_ref 129692 // ConsumableNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 795 493 2004
+  end
+note 129117 "Visual Model 1.0.1 17/7/08"
+  xyzwh 1317 46 2000 213 36
+classcanvas 129245 class_ref 128093 // EquivalenceArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1213 227 2004
+  end
+classcanvas 129308 class_ref 129820 // ModulatingNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 632 714 2004
+  end
+classcanvas 129692 class_ref 129948 // SourceNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 729 327 2004
+  end
+classcanvas 129948 class_ref 130076 // SinkNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 646 349 2004
+  end
+classcanvas 130204 class_ref 130204 // ObservableNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 147 832 2004
+  end
+classcanvas 130460 class_ref 130332 // PerturbationNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 640 573 2004
+  end
+classcanvas 130716 class_ref 130460 // LogicGateNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 634 818 2004
+  end
+classcanvas 131100 class_ref 130588 // LogicArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 743 776 3005
+  end
+classcanvas 131356 class_ref 130716 // StatefulEntityPoolNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1202 653 3005
+  end
+classcanvas 131612 class_ref 130844 // UnspecifiedEntityNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1430 501 2004
+  end
+classcanvas 131868 class_ref 130972 // SimpleChemicalNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1085 732 2004
+  end
+classcanvas 132124 class_ref 131100 // StateDescription
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1432 653 3005
+  end
+classcanvas 132380 class_ref 131228 // ComplexNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1007 663 2004
+  end
+classcanvas 132892 class_ref 131356 // MacromoleculeNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1208 894 2004
+  end
+classcanvas 133404 class_ref 131612 // ConsumptionArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 462 573 3005
+  end
+classcanvas 133660 class_ref 131740 // ProductionArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 470 384 2003
+  end
+classcanvas 133916 class_ref 131868 // ModulationArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 389 782 2003
+  end
+classcanvas 134172 class_ref 131996 // MapDiagram
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 578 110 2000
+  end
+classcanvas 134300 class_ref 132124 // CompartmentNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 863 157 2000
+  end
+classcanvas 134428 class_ref 132252 // BasicEntityNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 578 219 2004
+  end
+classcanvas 135324 class_ref 132380 // InhibitionArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 401 1007 2004
+  end
+classcanvas 135580 class_ref 132508 // StimulationArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 293 944 2004
+  end
+classcanvas 135836 class_ref 132636 // CatalysisArc
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 181 997 2004
+  end
+classcanvas 136092 class_ref 132764 // DissociationNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 299 612 2004
+  end
+classcanvas 136348 class_ref 132892 // OmittedProcessNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 103 396 2004
+  end
+classcanvas 136604 class_ref 133020 // UncertainProcessNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 87 504 2004
+  end
+classcanvas 136860 class_ref 133148 // AssociationNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 145 597 2004
+  end
+classcanvas 137116 class_ref 133276 // SubMapDiagram
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 783 23 2004
+  end
+classcanvas 137500 class_ref 133404 // TagNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 963 23 3005
+  end
+classcanvas 137884 class_ref 133532 // SubMapNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 907 268 3005
+  end
+classcanvas 138396 class_ref 133660 // MultimerMacromoleculeNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 889 891 2004
+  end
+classcanvas 138652 class_ref 133788 // MultimerSimpleChemicalNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 1055 822 2004
+  end
+classcanvas 138908 class_ref 133916 // MultimerComplexNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 842 708 2004
+  end
+classcanvas 139676 class_ref 134172 // AndNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 560 897 2004
+  end
+classcanvas 139932 class_ref 134300 // OrNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 738 913 2004
+  end
+classcanvas 140188 class_ref 134428 // NotNode
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 643 932 2004
+  end
+relationcanvas 128093 relation_ref 129245 // <composition>
+  from ref 134300 z 1999 to point 925 235
+  line 128221 z 1999 to ref 134428
+  no_role_a no_role_b
+  multiplicity_a_pos 698 244 3000 no_multiplicity_b
+relationcanvas 128130 relation_ref 128002 // <generalisation>
+  from ref 128002 z 2003 to ref 135580
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128290 relation_ref 134044 // <association>
+  from ref 128028 z 1999 to ref 128034
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128359 relation_ref 128487 // <generalisation>
+  decenter_end 451
+  from ref 128674 z 1999 to ref 128103
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128412 relation_ref 129180 // <generalisation>
+  from ref 128284 z 1999 to ref 128156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128418 relation_ref 128034 // <association>
+  from ref 134300 z 1999 to ref 128034
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128462 relation_ref 128078 // <generalisation>
+  from ref 128334 z 1999 to ref 131356
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128477 relation_ref 129373 // <composition>
+  from ref 134300 z 1999 to point 923 125
+  line 128861 z 1999 to point 835 125
+  line 128605 z 1999 to point 835 178
+  line 128733 z 1999 to ref 134300
+  role_a_pos 718 163 3000 no_role_b
+  multiplicity_a_pos 847 186 3000 no_multiplicity_b
+relationcanvas 128487 relation_ref 128615 // <generalisation>
+  from ref 137500 z 1999 to ref 128103
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128668 relation_ref 132636 // <generalisation>
+  from ref 128028 z 1999 to ref 128540
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128796 relation_ref 135452 // ProductionArc
+  from ref 128284 z 1999 label "ProductionArc" italic xyz 588 449 1999 to ref 128540
+  role_a_pos 774 407 3000 role_b_pos 433 482 3000
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128802 relation_ref 128162 // <association>
+  from ref 137884 z 2007 to ref 128674
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128871 relation_ref 128743 // <association>
+  from ref 128743 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128930 relation_ref 128290 // <association>
+  from ref 128674 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129052 relation_ref 132764 // <generalisation>
+  from ref 128028 z 1999 to ref 128924
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129180 relation_ref 135580 // 
+  from ref 128284 z 1999 to ref 128924
+  role_a_pos 728 493 3000 role_b_pos 433 493 3000
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129436 relation_ref 132508 // <generalisation>
+  from ref 128028 z 1999 to ref 129308
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129564 relation_ref 135324 // 
+  from ref 128156 z 1999 to ref 129308
+  role_a_pos 563 715 3000 role_b_pos 268 715 3000
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129820 relation_ref 129308 // <generalisation>
+  from ref 129692 z 1999 to ref 128924
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130076 relation_ref 129436 // <generalisation>
+  from ref 129948 z 1999 to ref 128540
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130332 relation_ref 129564 // <generalisation>
+  from ref 130204 z 1999 to ref 128156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130588 relation_ref 129692 // <generalisation>
+  decenter_end 596
+  from ref 130460 z 1999 to ref 129308
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130844 relation_ref 129820 // <generalisation>
+  from ref 130716 z 1999 to ref 129308
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130972 relation_ref 135196 // LogicArc
+  from ref 129308 z 1999 label "LogicArc" italic xyz 758 716 1999 to point 821 731
+  line 142236 z 1999 to point 820 839
+  line 141596 z 1999 to ref 130716
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131484 relation_ref 129948 // <generalisation>
+  from ref 131356 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131740 relation_ref 130076 // <generalisation>
+  from ref 131612 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131996 relation_ref 130204 // <generalisation>
+  from ref 131868 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 132252 relation_ref 134428 // <composition>
+  from ref 131356 z 1999 to ref 132124
+  no_role_a no_role_b
+  multiplicity_a_pos 1411 692 3000 multiplicity_b_pos 1366 692 3000
+relationcanvas 132508 relation_ref 130332 // <generalisation>
+  from ref 132380 z 1999 to ref 131356
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 132764 relation_ref 134172 // <association>
+  from ref 128028 z 1999 to ref 132380
+  no_role_a role_b_pos 1172 511 3000
+  multiplicity_a_pos 1084 661 3000 multiplicity_b_pos 1198 536 3000
+relationcanvas 133020 relation_ref 130460 // <generalisation>
+  from ref 132892 z 1999 to ref 131356
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 134556 relation_ref 134684 // <composition>
+  from ref 134172 z 1999 to ref 134428
+  no_role_a no_role_b
+  multiplicity_a_pos 615 200 3000 no_multiplicity_b
+relationcanvas 134684 relation_ref 133276 // <generalisation>
+  from ref 129948 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 134812 relation_ref 132892 // <generalisation>
+  from ref 128028 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 134940 relation_ref 133020 // <generalisation>
+  from ref 128284 z 1999 to point 369 235
+  line 128590 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 135068 relation_ref 133404 // <generalisation>
+  from ref 134300 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 135196 relation_ref 133148 // <generalisation>
+  from ref 129692 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 135452 relation_ref 130588 // <generalisation>
+  from ref 135324 z 1999 to ref 133916
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 135708 relation_ref 130716 // <generalisation>
+  from ref 135580 z 1999 to ref 133916
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 135964 relation_ref 130844 // <generalisation>
+  from ref 135836 z 1999 to ref 135580
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136220 relation_ref 130972 // <generalisation>
+  from ref 136092 z 1999 to ref 128284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136476 relation_ref 131100 // <generalisation>
+  from ref 136348 z 1999 to ref 128284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136732 relation_ref 131228 // <generalisation>
+  from ref 136604 z 1999 to ref 128284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136988 relation_ref 131356 // <generalisation>
+  from ref 136860 z 1999 to ref 128284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 137244 relation_ref 131484 // <generalisation>
+  from ref 137116 z 1999 to ref 134172
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 137372 relation_ref 134556 // <association>
+  from ref 134172 z 1999 to point 618 39
+  line 141340 z 1999 to ref 137116
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 137756 relation_ref 134940 // <association>
+  from ref 137116 z 1999 to ref 137500
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 138012 relation_ref 131612 // <generalisation>
+  from ref 137884 z 1999 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 138524 relation_ref 131740 // <generalisation>
+  from ref 138396 z 1999 to ref 132892
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 138780 relation_ref 131868 // <generalisation>
+  from ref 138652 z 1999 to ref 131868
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 139036 relation_ref 131996 // <generalisation>
+  from ref 138908 z 1999 to ref 132380
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 139804 relation_ref 132124 // <generalisation>
+  from ref 139676 z 1999 to ref 130716
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 140060 relation_ref 132252 // <generalisation>
+  from ref 139932 z 1999 to ref 130716
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 140316 relation_ref 132380 // <generalisation>
+  from ref 140188 z 1999 to ref 130716
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 142364 relation_ref 135708 // <generalisation>
+  decenter_end 432
+  from ref 130460 z 2003 to point 695 420
+  line 142748 z 2003 to point 622 420
+  line 142620 z 2003 to ref 134428
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+line 128386 -_-_
+  from ref 128487 z 1998 to point 1263 121
+  line 128770 z 1998 to ref 129245
+line 129826 -_-_
+  from ref 129245 z 1998 to point 1258 377
+  line 128898 z 1998 to ref 128930
+line 131228 -_-_
+  from ref 130972 z 1998 to ref 131100
+line 133532 -_-_
+  from ref 129180 z 1998 to ref 133404
+line 133788 -_-_
+  from ref 128796 z 1998 to ref 133660
+line 134044 -_-_
+  from ref 129564 z 1998 to ref 133916
+end

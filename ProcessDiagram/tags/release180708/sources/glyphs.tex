@@ -1,0 +1,118 @@
+% $HeadURL$
+
+\chapter{Process Diagram glyphs}
+
+%[Note on the color code: \textcolor{blue}{The glyphs that have been thorougly discussed, and are considered frozen, are represented in blue}. \textcolor{green}{The glyphs that have been thorougly discussed, but are still posing problems are represented in green}. \textcolor{red}{The glyphs that have been proposed but for which in-depth discussion is yet to come are represented in red}.]
+
+This chapter provides a catalog of the graphical symbols available for representing entities in \PDs.  There are different classes of glyphs corresponding to different classes of material or conceptual entities, containers, processes, connecting arcs, and logical operators.  In \chap{grammar} beginning on page~\pageref{chp:grammar}, we describe the rules for combining these glyphs into a legal SBGN \PD, and in \chap{layout} beginning on page~\pageref{chp:layout}, we describe requirements and guidelines for the way that diagrams are visually organized.
+
+\section{Overview}
+
+\input{sources/pd-overview.tex}
+
+\section{Controlled vocabularies used in \SBGNPDLone}\label{sec:CVs}
+
+\input{sources/CVs.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   State nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Entity pool nodes}\label{sec:EPNs}
+
+An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, and entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools whent it comes to representing calcium release from the endoplasmic reticulum.
+
+\SBGNPDLone{} contains five glyphs representing classes of material entities: \glyph{unspecified entity}, \glyph{simple chemical}, \glyph{macromolecule}, \glyph{nucleic acid feature}, and \glyph{multimer}.  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \SBGNPDLone but may be part of future levels of SBGN.)  In addition to the material entities, \SBGNPDLone{} represents four conceptual entities: \glyph{source/sink}, \glyph{perturbation}, \glyph{observable}, and \glyph{tag}.  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information}, \glyph{state variables} and \glyph{clone markers}.
+
+\input{sources/unspecified.tex}
+\input{sources/simpleChemical.tex}
+\input{sources/macromolecule.tex}
+\input{sources/genetic.tex}
+\input{sources/multimer.tex}
+
+\input{sources/sourceSink.tex}
+\input{sources/perturbation.tex}
+\input{sources/observable.tex}
+\input{sources/tag.tex}
+
+\input{sources/unitInformation.tex}
+\input{sources/stateVariable.tex}
+\input{sources/cloneMarker.tex}
+
+\input{sources/complex-epn-eg.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Container nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Container nodes}\label{sec:CNs}
+
+\glyph{Containers} are SBGN constructions that contain one or several other SBGN constructs.  There are three container nodes in \SBGNPDLone: \glyph{complex}, \glyph{compartment}, and \glyph{submap}.
+
+\input{sources/complex.tex}
+\input{sources/compartment.tex}
+\input{sources/submap.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Transition nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Process nodes}\label{sec:PNs}
+
+Process nodes represent processes that transform one or several EPNs into one or several different EPNs.   \SBGNPDLone defines a generic \glyph{transition} (\sect{transition}), as well as four more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}) and the \glyph{dissociation} (\sect{dissociation}).  In future levels of the SBGN Process Diagram notation, more transitions may be defined.  (One can even envision the development of a controlled vocabulary of transitions, as is done now for \glyph{EPNs}; see \sect{CVs}.)
+
+\input{sources/transition.tex}
+\input{sources/omitted.tex}
+\input{sources/uncertain.tex}
+\input{sources/association.tex}
+\input{sources/dissociation.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                  Arcs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Connecting arcs}\label{sec:arcs}
+
+Connecting arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
+
+\input{sources/consumption.tex}
+\input{sources/production.tex}
+\input{sources/modulation.tex}
+\input{sources/stimulation.tex}
+\input{sources/catalysis.tex}
+\input{sources/inhibition.tex}
+\input{sources/trigger.tex}
+\input{sources/logicArc.tex}
+\input{sources/equivalenceArc.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Logical operators
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Logical operators}\label{sec:logic}
+
+\input{sources/and.tex}
+\input{sources/or.tex}
+\input{sources/not.tex}
+
+
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

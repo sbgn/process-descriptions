@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images"
+   sodipodi:docname="submap.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path2972"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path2978"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142137"
+     inkscape:cx="548.79034"
+     inkscape:cy="556.72839"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     width="1052.3622px"
+     height="744.09448px"
+     inkscape:window-width="1345"
+     inkscape:window-height="1020"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="vertical"
+       position="721.24884"
+       id="guide2990" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="299.99997"
+       id="guide3405" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="325.99997"
+       id="guide3518" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="final"
+     style="opacity:1">
+    <rect
+       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3545"
+       width="237.78326"
+       height="219.39851"
+       x="418.42261"
+       y="64.900757"
+       rx="0"
+       ry="0" />
+    <rect
+       ry="0"
+       rx="0"
+       y="382.67035"
+       x="260.32434"
+       height="303.72717"
+       width="560.9798"
+       id="rect3953"
+       style="opacity:0.98999999;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:20,10;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       id="path3955"
+       d="M 816.94524,570.11219 L 788.31444,570.23961 L 769.37804,591.90184 L 788.24984,613.30922 L 816.94524,613.30922 L 816.94524,570.11219 z "
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 816.94524,442.11219 L 788.31444,442.23961 L 769.37804,463.90184 L 788.24984,485.3092 L 816.94524,485.3092 L 816.94524,442.11219 z "
+       id="path3959" />
+    <path
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 264.96388,505.98942 L 293.59465,506.11684 L 312.53107,527.77907 L 293.65928,549.18643 L 264.96388,549.18643 L 264.96388,505.98942 z "
+       id="path3965" />
+    <path
+       id="path3969"
+       d="M 706.77308,113.7716 C 655.15429,113.7716 655.15429,113.7716 655.15429,113.7716"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 706.77308,241.7716 C 655.15429,241.7716 655.15429,241.7716 655.15429,241.7716"
+       id="path3971" />
+    <path
+       transform="matrix(-1,0,0,1,965.55,-177.4223)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path4113"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="794.45715"
+       y="106.80022"
+       id="text4115"><tspan
+         sodipodi:role="line"
+         x="794.45715"
+         y="106.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan4117">EPN</tspan><tspan
+         id="tspan4119"
+         sodipodi:role="line"
+         x="794.45715"
+         y="136.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 364.77308,527.7716 C 313.1543,527.7716 313.1543,527.7716 313.1543,527.7716"
+       id="path4145" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 771.77307,463.77157 C 720.15428,463.77157 720.15428,463.77157 720.15428,463.77157"
+       id="path4177" />
+    <path
+       id="path4179"
+       d="M 771.77307,591.77157 C 720.15428,591.77157 720.15428,591.77157 720.15428,591.77157"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2842"
+       sodipodi:cx="170.71428"
+       sodipodi:cy="290.52304"
+       sodipodi:rx="86.428574"
+       sodipodi:ry="47.857143"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       transform="matrix(-1,0,0,1,965.55,-177.4223)" />
+    <text
+       id="text2844"
+       y="106.80022"
+       x="794.45715"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan2846"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="106.80022"
+         x="794.45715"
+         sodipodi:role="line">EPN</tspan><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="136.80022"
+         x="794.45715"
+         sodipodi:role="line"
+         id="tspan2848">or CN</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3735"
+       sodipodi:cx="170.71428"
+       sodipodi:cy="290.52304"
+       sodipodi:rx="86.428574"
+       sodipodi:ry="47.857143"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       transform="matrix(-1,0,0,1,965.55,-49.4223)" />
+    <text
+       id="text3737"
+       y="234.80022"
+       x="794.45715"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3739"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="234.80022"
+         x="794.45715"
+         sodipodi:role="line">EPN</tspan><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="264.80022"
+         x="794.45715"
+         sodipodi:role="line"
+         id="tspan3741">or CN</tspan></text>
+    <path
+       transform="matrix(-1,0,0,1,965.55,-49.4223)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path3743"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="794.45715"
+       y="234.80022"
+       id="text3745"><tspan
+         sodipodi:role="line"
+         x="794.45715"
+         y="234.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan3747">EPN</tspan><tspan
+         id="tspan3749"
+         sodipodi:role="line"
+         x="794.45715"
+         y="264.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <path
+       transform="matrix(-1,0,0,1,447.55,-117.4223)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path3751"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="276.45715"
+       y="166.80022"
+       id="text3753"><tspan
+         sodipodi:role="line"
+         x="276.45715"
+         y="166.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan3755">EPN</tspan><tspan
+         id="tspan3757"
+         sodipodi:role="line"
+         x="276.45715"
+         y="196.80022"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3759"
+       sodipodi:cx="170.71428"
+       sodipodi:cy="290.52304"
+       sodipodi:rx="86.428574"
+       sodipodi:ry="47.857143"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       transform="matrix(-1,0,0,1,447.55,-117.4223)" />
+    <text
+       id="text3761"
+       y="166.80022"
+       x="276.45715"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3763"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="166.80022"
+         x="276.45715"
+         sodipodi:role="line">EPN</tspan><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="196.80022"
+         x="276.45715"
+         sodipodi:role="line"
+         id="tspan3765">or CN</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3767"
+       sodipodi:cx="170.71428"
+       sodipodi:cy="290.52304"
+       sodipodi:rx="86.428574"
+       sodipodi:ry="47.857143"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       transform="matrix(-1,0,0,1,804.0345,173.9286)" />
+    <text
+       id="text3769"
+       y="458.15112"
+       x="632.94171"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3771"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="458.15112"
+         x="632.94171"
+         sodipodi:role="line">EPN</tspan><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="488.15112"
+         x="632.94171"
+         sodipodi:role="line"
+         id="tspan3773">or CN</tspan></text>
+    <path
+       transform="matrix(-1,0,0,1,804.0345,173.9286)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path3775"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="632.94171"
+       y="458.15112"
+       id="text3777"><tspan
+         sodipodi:role="line"
+         x="632.94171"
+         y="458.15112"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan3779">EPN</tspan><tspan
+         id="tspan3781"
+         sodipodi:role="line"
+         x="632.94171"
+         y="488.15112"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <path
+       transform="matrix(-1,0,0,1,804.0345,301.9286)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path3783"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="632.94171"
+       y="586.15112"
+       id="text3785"><tspan
+         sodipodi:role="line"
+         x="632.94171"
+         y="586.15112"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan3787">EPN</tspan><tspan
+         id="tspan3789"
+         sodipodi:role="line"
+         x="632.94171"
+         y="616.15112"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3791"
+       sodipodi:cx="170.71428"
+       sodipodi:cy="290.52304"
+       sodipodi:rx="86.428574"
+       sodipodi:ry="47.857143"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       transform="matrix(-1,0,0,1,804.0345,301.9286)" />
+    <text
+       id="text3793"
+       y="586.15112"
+       x="632.94171"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3795"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="586.15112"
+         x="632.94171"
+         sodipodi:role="line">EPN</tspan><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="616.15112"
+         x="632.94171"
+         sodipodi:role="line"
+         id="tspan3797">or CN</tspan></text>
+    <path
+       id="path3799"
+       d="M 416.77308,173.7716 C 365.1543,173.7716 365.1543,173.7716 365.1543,173.7716"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       transform="matrix(-1,0,0,1,622.55,236.5777)"
+       d="M 257.14285 290.52304 A 86.428574 47.857143 0 1 1  84.285706,290.52304 A 86.428574 47.857143 0 1 1  257.14285 290.52304 z"
+       sodipodi:ry="47.857143"
+       sodipodi:rx="86.428574"
+       sodipodi:cy="290.52304"
+       sodipodi:cx="170.71428"
+       id="path3809"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="451.45712"
+       y="520.80017"
+       id="text3811"><tspan
+         sodipodi:role="line"
+         x="451.45712"
+         y="520.80017"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan3813">EPN</tspan><tspan
+         id="tspan3815"
+         sodipodi:role="line"
+         x="451.45712"
+         y="550.80017"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle">or CN</tspan></text>
+    <text
+       id="text4801"
+       y="534.04517"
+       x="275.27271"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:20px;font-weight:bold"
+         y="534.04517"
+         x="275.27271"
+         id="tspan4803"
+         sodipodi:role="line">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="792.55902"
+       y="471.47662"
+       id="text4805"><tspan
+         sodipodi:role="line"
+         id="tspan4807"
+         x="792.55902"
+         y="471.47662"
+         style="font-size:20px;font-weight:bold">B</tspan></text>
+    <text
+       id="text4809"
+       y="599.47662"
+       x="792.55902"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:20px;font-weight:bold"
+         y="599.47662"
+         x="792.55902"
+         id="tspan4811"
+         sodipodi:role="line">C</tspan></text>
+    <text
+       id="text4846"
+       y="177.8002"
+       x="537.45709"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="177.8002"
+         x="537.45709"
+         sodipodi:role="line"
+         id="tspan4850">LABEL</tspan></text>
+    <path
+       id="path2236"
+       d="M 418.25675,151.93923 L 446.88752,152.06665 L 465.82394,173.72888 L 446.95215,195.13624 L 418.25675,195.13624 L 418.25675,151.93923 z "
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="428.56561"
+       y="179.99495"
+       id="text2238"><tspan
+         sodipodi:role="line"
+         id="tspan2240"
+         x="428.56561"
+         y="179.99495"
+         style="font-size:20px;font-weight:bold">A</tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 655.60359,222.21564 L 626.97279,222.34306 L 608.03639,244.00529 L 626.90819,265.41267 L 655.60359,265.41267 L 655.60359,222.21564 z "
+       id="path2242" />
+    <path
+       id="path2244"
+       d="M 655.60359,94.215667 L 626.97279,94.343087 L 608.03639,116.00529 L 626.90819,137.41265 L 655.60359,137.41265 L 655.60359,94.215667 z "
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text2246"
+       y="123.58011"
+       x="631.21735"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:20px;font-weight:bold"
+         y="123.58011"
+         x="631.21735"
+         id="tspan2248"
+         sodipodi:role="line">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="631.21735"
+       y="251.58025"
+       id="text2250"><tspan
+         sodipodi:role="line"
+         id="tspan2252"
+         x="631.21735"
+         y="251.58025"
+         style="font-size:20px;font-weight:bold">C</tspan></text>
+  </g>
+</svg>

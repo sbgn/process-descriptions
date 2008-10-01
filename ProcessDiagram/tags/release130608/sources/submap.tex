@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     module
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\color{green}
+\subsection{Glyph: \glyph{Submap}}\label{sec:submap}
+
+A \glyph{submap} is used to encapsulate a certain number of processes (including all types of nodes and edges) within one glyph. The module hides its content to the users, and display only input terminals (or ports). A module is not equivalent to an omitted process (see section~\ref{sec:omitted}). In the case of an SBGN diagram available through a software tool, the content of a module may be available to the tool. A user could then ask the tool to expand the module, for instance by clicking on the module icon, that would expand the module within the same diagram (on the same canvas) or open it in a different canvas.
+
+\begin{glyphDescription}
+\glyphSboTerm to be determined
+\glyphContainer The \glyph{submap} is represented as a square box, to remind that it is fundamentaly a process.
+\glyphLabel The identification of the \glyph{submap} is carried by an unbordered box containing a string of
+  characters. The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the container box.
+\glyphAux A \glyph{submap} carries labeled terminals. When the submap is represented folded, those terminals are linked to external EPNs (section~\ref{sec:EPNs}) or containers (section~\ref{sec:CNs}). In the unfolded view, exposing the internal structure of the submap, a set of \glyph{tags} point to the corresponding internal EPNs (section~\ref{sec:EPNs}) or containers (section~\ref{sec:CNs}).
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/submap}
+  \caption{The \PD glyph for \glyph{submap}.}
+  \label{fig:submap}
+\end{figure}
+
+
+The following diagram represents a \glyph{submap} that transforms glucose into fructose-6-phosphate. The \glyph{submap} carry five terminals, four linked to EPNs and one linked to a \glyph{compartment}. The latter is particularly important in the case of EPNs present only in a \glyph{compartment} enclosed in a \glyph{submap}, and that are not linked to terminals themselves. Note that the terminals do not define a ``direction'', such as input or output. The flux of the reactions is determined by the context.
+
+\begin{center}
+\scalebox{0.3}{\includegraphics{examples/submap-folded}}
+\end{center}
+
+The following diagram represents an unfolded version of the submap. Here, anything outside the submap has disappeared, and the internal \glyph{tags} are not linked to the corresponding external \glyph{terminals}. Note the tag 5, linking the compartment ``mito'' of the submap to the to the compartment ``mito'' outside the submap. The compartment containing Glu6P is implicitely defined as the same than the compartment containing Glu and Fru6p. There is no ambiguity because if Glu and Fru6 were in different compartments, one of them should have been defined within the submap.
+
+\begin{center}
+\scalebox{0.3}{\includegraphics{examples/submap-dissociated}}
+\end{center}
+
+
+
