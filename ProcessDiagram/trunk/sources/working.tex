@@ -1,0 +1,27 @@
+\chapter{Issues postponed to future levels}\label{sec:postponed}
+
+\section{Multicompartment entities}
+
+The problem of entities, such as macromolecules, spanning several compartments proved to be a challenge for the community involved in the development of SBGN Process Diagram Level 1. It was thus decided to leave it for a future Level. It turns out there is at the moment no obvious solution satisfactory for everyone. Three broad classes of solutions have been identified so far:
+
+\begin{itemize}
+\item One can systematically locate an \glyph{EPN} in a given \glyph{compartment}, for instance a transmembrane receptor in a membrane. However, the reactions of this entity with entities represented by \glyph{EPN} in other compartments, such as extracellular ligands and second messenger systems, will create artificial transport reactions.
+\item One can represent the domains of proteins in different compartments by \glyph{macromolecules}, and link all those macromolecules in a \glyph{complex} spanning several compartments. However, such a representation would be very confusing, implying that the domains are actually different molecules linked through non-covalent bonds.
+\item On can accept \glyph{macromolecules} that span several compartments, and represent domains as \glyph{units of information}. Those \glyph{units of information} should then be located in given compartments. To make a full use of such a representation, one should then start and end connecting arcs on given \glyph{units of information}, something prohibited by the current specification.
+\end{itemize}
+
+\section{Logical combination of state variable values}
+
+The value of a \glyph{state variable} has to be perfectly defined in \SBGNPDLone. If a state variable can take the alternative values 'A', 'B' and 'C',  one cannot attribute it values such as 'non-A', 'A or B', 'any' or 'none'. As a consequence some biochemical processes cannot be easily represented because of the very large number of state to enumerate. The decision to forbid such a Boolean logic lies in the necessity of maintaining truth path all over an SBGN map. 
+
+\section{Non-chemical entity nodes}
+
+The current specification cannot represent combinations of events and entities. For instance a variable ''voltage'' cannot be controlled by a difference of concentration between different entities, such as a given ion in both sides of a membrane. 
+
+\section{Generics}
+
+\SBGNPDLone does not provide mechanisms to sub-class \glyph{EPNs}. There is no specific means of specifying that \glyph{macromolecules} or \glyph{nucleic acid features} X1, X2 and X2 are subclasses of X. Therefore, any process that applies to all the subtypes of X has to be triplicated. That situation can easily generate combinatorial explosions of the number of \glyph{EPNs} or \glyph{PNs}.
+
+\section{State and transformation of compartments}
+
+In \SBGNPDLone a \glyph{compartment} is a stateless entity. It cannot carry  \glyph{state variables}, and cannot be subjected to process modifying a state. As a recult, a \glyph{compartment} cannot be transformed, moved, split or merged with another. If one want to represent the transformation of a compartment, one has to create the start and end compartments, and represent the transport of all the \glyph{EPNs} from one to the other. This is not satisfactory, and should be addressed in the future.

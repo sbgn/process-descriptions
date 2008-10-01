@@ -1,0 +1,44 @@
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/sources/observable.tex $
+
+\subsection{Glyph: \glyph{Observable}}
+\label{sec:observable}
+
+A biochemical network can generate phenotypes or affect biological
+processes.  Such processes can take place at different levels and are
+independent of the biochemical network itself.  To represent these
+processes in a diagram, SBGN defines the \glyph{observable} glyph.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000358 ! observable
+
+\glyphContainer An \glyph{observable} is represented by an elongated
+hexagon, as illustrated in \fig{observable}.
+
+\glyphLabel An \glyph{observable} is identified by a label placed in an
+unbordered box containing a string of characters.  The characters can be
+distributed on several lines to improve readability, although this is not
+mandatory.  The label box must be attached to the center of the
+\glyph{observable} container.  The label may spill outside of the container.
+
+\glyphAux An \glyph{observable} may carry a \glyph{clone marker}
+(\sect{cloneMarker}).
+
+\end{glyphDescription}
+ 
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/observable}
+  \caption{The \PD glyph for \glyph{observable}.}
+  \label{fig:observable}
+\end{figure}
+
+
+
+
+
+
+% The following is for [X]Emacs users.   Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
