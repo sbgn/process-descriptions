@@ -1,7 +1,7 @@
-format 50
+format 49
 "visual" // sbgn::visual
-  revision 12
-  modified_by 2 "anatolysorokin"
+  revision 11
+  modified_by 77 "smoodie"
   // class settings
   //class diagram settings
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
@@ -129,7 +129,7 @@ format 50
       end
     end
 
-    class 129436 "TransitionNode"
+    class 129436 "ProcessNode"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -620,7 +620,7 @@ format 50
       end
     end
 
-    class 132124 "CompartmentNode"
+    class 132124 "CompartmentShape"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -762,7 +762,7 @@ format 50
 	relation 130972 ---|>
 	  a public
 	    classrelation_ref 130972 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -778,7 +778,7 @@ format 50
 	relation 131100 ---|>
 	  a public
 	    classrelation_ref 131100 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -794,7 +794,7 @@ format 50
 	relation 131228 ---|>
 	  a public
 	    classrelation_ref 131228 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -810,7 +810,7 @@ format 50
 	relation 131356 ---|>
 	  a public
 	    classrelation_ref 131356 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -860,7 +860,7 @@ format 50
 	    java "${type}"
 	    classrelation_ref 128743 // <generalisation>
 	  b parent class_ref 128359 // EquivalenceNode
-	  association_type class_ref 128093 // EquivalenceArc
+	  association_type class_ref 128078 // TagArc
       end
     end
 
@@ -1078,7 +1078,7 @@ ${members}}
       
     end
 
-    class 128206 "NucleicAcidFeatureNode"
+    class 128206 "GeneticEntity"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1109,7 +1109,7 @@ ${members}}
       
     end
 
-    class 128034 "SubMapTerminalNode"
+    class 128034 "SubMapTagNode"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1146,7 +1146,7 @@ ${members}}
     end
 
     class 128359 "EquivalenceNode"
-      abstract visibility package 
+      visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -1165,7 +1165,7 @@ ${members}}
       end
     end
 
-    class 128487 "CloneMarker"
+    class 128487 "CloningTag"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1194,25 +1194,6 @@ ${members}}
 "
 	php_decl ""
 	idl_decl ""
-      end
-    end
-
-    class 128002 "TriggerArc"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 128002 // <generalisation>
-	relation 128002 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 128002 // <generalisation>
-	  b parent class_ref 132508 // StimulationArc
       end
     end
   end

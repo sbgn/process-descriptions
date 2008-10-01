@@ -1,7 +1,7 @@
-format 50
+format 49
 "conceptual" // sbgn::conceptual
-  revision 14
-  modified_by 2 "anatolysorokin"
+  revision 13
+  modified_by 77 "smoodie"
   // class settings
   //class diagram settings
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
@@ -1087,7 +1087,7 @@ ${members}}
       
     end
 
-    class 128111 "NucleicAcidFeatureType"
+    class 128111 "GeneticEntityType"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1103,33 +1103,6 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 128111 // <generalisation>
 	  b parent class_ref 128629 // StatefulEntityType
-      end
-    end
-
-    class 128130 "UnspecifiedEntityType"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 128130 // <generalisation>
-	relation 128130 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 128130 // <generalisation>
-	  b parent class_ref 128117 // EntityType
-      end
-
-      classrelation 128258 // <generalisation>
-	relation 128258 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 128258 // <generalisation>
-	  b parent class_ref 128757 // MultimericEntityType
       end
     end
   end

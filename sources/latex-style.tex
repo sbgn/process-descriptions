@@ -206,27 +206,6 @@
     \if@restonecol\twocolumn\fi
 }
 
-% There seems to be no way to redefine the font used by the table of contents
-% line printing command except to modify the source from latex.ltx.
-
-\def\@dottedtocline#1#2#3#4#5{%
-  \ifnum #1>\c@tocdepth \else
-    \vskip \z@ \@plus.2\p@
-    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
-     \parindent #2\relax\@afterindenttrue
-     \interlinepenalty\@M
-     \leavevmode
-     \@tempdima #3\relax
-     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-     {#4}\nobreak
-     \leaders\hbox{$\m@th
-        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
-        mu$}\hfill
-     \nobreak
-     \hb@xt@\@pnumwidth{\hfil\normalfont\sffamily \normalcolor #5}%
-     \par}%
-  \fi}
-
 % The following was ripped out of caption.sty, version 1.4b.
 % Copyright (C) 1994-95 Harald Axel Sommerfeldt
 % The first few lines set up the parameters for the layout created
@@ -310,10 +289,6 @@
 \newcommand{\glyphContainer}{\item[Container:]\mbox{}\newline}
 \newcommand{\glyphLabel}{\item[Label:]\mbox{}\newline}
 \newcommand{\glyphAux}{\item[Auxiliary items:]\mbox{}\newline}
-\newcommand{\glyphOrigin}{\item[Origin:]\mbox{}\newline}
-\newcommand{\glyphTarget}{\item[Target:]\mbox{}\newline}
-\newcommand{\glyphNode}{\item[Node:]\mbox{}\newline}
-\newcommand{\glyphEndPoint}{\item[End point:]\mbox{}\newline}
 
 
 %% ----------------------------------------------------------------------------

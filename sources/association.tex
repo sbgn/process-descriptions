@@ -1,18 +1,16 @@
-% $HeadURL$
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                     Association
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%\color{blue}
 \subsection{Glyph: \glyph{Association}}\label{sec:association}
 
-The association between one or more \glyph{EPNs} represents the non-covalent binding of the biological objects represented by those \glyph{EPNs} into a larger complex.
+The association between two EPNs represents the non-covalent binding of the biological objects represented by those EPNs into a larger complex.
 
 \begin{glyphDescription}
- \glyphSboTerm SBO:0000177 ! binding.
- \glyphOrigin One or more \glyph{consumption} arcs (\sect{consumption}).
- \glyphTarget  One \glyph{production} arc (\sect{production}).
- \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors. The connectors and the disc move as a rigid entity.
+ \item[SBO]\mbox{}\\ SBO:0000177 ! binding.
+ \item[origin]\mbox{}\\ More than one \glyph{consumption} arcss (section \ref{sec:consumption}).
+ \item[target]\mbox{}\\  One \glyph{production} arc (section \ref{sec:production}).
+ \item[node]\mbox{}\\ An \glyph{association} between several entities is represented by a filled disc.
  \end{glyphDescription}
 
 \begin{figure}[H]
@@ -22,36 +20,22 @@ The association between one or more \glyph{EPNs} represents the non-covalent bin
   \label{fig:association}
 \end{figure}
 
-The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2 kinase into the Maturation Promoting Factor.
+The following example illustrates the association of two cyclin and CDC2 kinase into the Maturation Promoting Factor in ST.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{examples/association-MPF}
-  \caption{Association of cyclin and CDC2 kinase into the Maturation Promoting Factor.}
-  \label{fig:assoc-cyclin}
-\end{figure}
+\begin{center}
+\scalebox{0.3}{\includegraphics{examples/association-MPF}}
+\end{center}
 
-\fig{assoc-unamed} gives an example illustrating the association of a pentameric macromolecule (a nicotinic acetylcholine receptor) with a simple chemical (the local anesthetic chlorpromazin) in an unnamed complex.
+The following example illustrates the association of a pentameric macromolecule (a nicotinic acetylcholine receptor) with a simple chemical (the local anesthetic chlorpromazin) in an unamed complex, in an ST diagram. 
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{examples/association-unamed}
-  \caption{The association of a pentameric macromolecule with a simple chemical in an unnamed complex.}
-  \label{fig:assoc-unamed}
-\end{figure}
+\begin{center}
+\scalebox{0.3}{\includegraphics{examples/association-unamed}}
+\end{center}
 
-An association does not necessarily result in the formation of a \glyph{complex}; it can also produce a \glyph{multimer}, or a \glyph{macromolecule} (although the latter case is semantically borderline).  \fig{assoc-multi} gives an example of this, using the formation of hemoglobin.
+An association does not obligatory results in the formation of a \glyph{complex}, but can also produce a \glyph{multimer}. See the formation of the hemoglobin below.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{examples/association-multimerisation}
-  \caption{Formation of hemoglobin.}
-  \label{fig:assoc-multi}
-\end{figure}
+\begin{center}
+\scalebox{0.3}{\includegraphics{examples/association-multimerisation}}
+\end{center}
+\normalcolor
 
-
-
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:

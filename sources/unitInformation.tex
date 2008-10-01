@@ -5,15 +5,15 @@
 
 When representing biological entities, it is often necessary to convey some abstract information about the entity's function that cannot (or does not need to) be easily related to its structure.  The SBGN \glyph{unit of information} is a decoration that can be used in this situation to add information to a glyph.  Some example uses include: characterizing a logical part of an entity such as a functional domain (a binding domain, a catalytic site, a promoter, etc.), or the information encoded in the entity (an exon, an open reading frame, etc.).  A \glyph{unit of information} can also convey information about the physical environment, or the specific type of biological entity it is decorating.
 
-\begin{glyphDescription}
+\begin{description}
 
 \glyphSboTerm Not applicable.
 
-\glyphContainer A unit of information is represented by a rectangle.  The long side of the rectangle should be oriented parallel to the border of the \glyph{EPN} being annotated by the \glyph{unit of information}. The center of the bounding box of a \glyph{state of information} should be located on the mid-line of the border of the \glyph{EPN}.
+\glyphContainer A unit of information is represented by a rectangle.  The long side of the rectangle is oriented parallel to the border of the glyph being annotated by the \glyph{unit of information}.
 
 \glyphLabel A \glyph{unit of information} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 
-The label defines the information carried by the \glyph{unit of information}.  For certain predefined types of information having controlled vocabularies associated with them, SBGN defines specific prefixes that must be included in the label to indicate the type of information in question.  The controlled vocabularies predefined in \SBGNPDLone are described in \sect{CVs} and summarized in the following list:
+The label defines the information carried by the \glyph{unit of information}.  It may optionally be prefixed by a sequence of characters indicating the type of the information (\eg taken from a controlled vocabulary).  The controlled vocabularies predefined in \SBGNPDLone are described in \sect{CVs} and summarized in the following list:
 
 \begin{center}
   \begin{itemize}\setlength{\parskip}{0ex}
@@ -26,7 +26,7 @@ The label defines the information carried by the \glyph{unit of information}.  F
 
 \glyphAux A \glyph{unit of information} does not carry any auxiliary items.  
 
-\end{glyphDescription}
+\end{description}
 
 \begin{figure}[H]
   \centering

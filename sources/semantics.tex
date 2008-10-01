@@ -1,31 +1,31 @@
-\section{Semantic rules}
+\section{Semantic Rules}
 
 \subsection{Namespaces}
 
-The notation has a concept of a namespace within which entities with the same 
+The notation has a concept of a namespace within which Entities with the same 
 identifying attributes are regarded as identical. The SBGN namespaces are shown 
-in table \ref{tab:namespacedefs}.
+in figure \ref{tab:namespacedefs}.
 
 
 \begin{center}
-\tablecaption{Namespace scope definitions.}
-\label{tab:namespacedefs}
 \begin{small}
 \tablefirsthead{\hline
   Namespace Scope & Entities affected & Notes\\\hline}
 \tablehead{\hline
 \multicolumn{3}{|l|}{\small\sl continued from previous page}\\
 \hline\hline
-  Namespace scope & Entities Effected & Notes\\\hline\hline}
+  Namespace Scope & Entities Effected & Notes\\\hline\hline}
 \tabletail{\hline
 \multicolumn{3}{|r|}{\small\sl continued on next page}\\
 \hline}
 \tablelasttail{\hline}
-\begin{supertabular}{|l|p{5cm}|p{5cm}|}\hline
+\tablecaption{Namespace scope definitions.}
+\label{tab:namespacedefs}
+\begin{supertabular}{|l|p{5cm}|p{4cm}|}\hline
 %
-MapDiagram & CompartmentNode, SubMapDiagram, EquivalenceNode & \\\hline
+MapDiagram & CompartmentShape, SubMapDiagram, EquivalenceNode & \\\hline
 %
-CompartmentShape & BasicEntityNode & If no \glyph{compartment} is drawn then all BasicEntityNodes are assumed to belong to an invisible ``default'' compartment.\\\hline
+CompartmentShape & BasicEntityNode & If no Compartment is drawn then all BasicEntityNodes are assumed to belong to an invisible ``default'' compartment.\\\hline
 EntityType & StateVariable, Annotation & \\\hline
 ComplexType & EntityType & \\\hline
 \end{supertabular}
@@ -35,71 +35,71 @@ ComplexType & EntityType & \\\hline
 \subsection{Cloning}
 
 SBGN only allows identical nodes to duplicated on a map if they are
-explicitly marked as such. This is using a \glyph{labeled clone marker} with all the
+explicitly marked as such. This is using a CloningTag with all the
 nodes that are identical. The details are shown in table \ref{tab:processduprules}.
 
 
 \begin{center}
-\tablecaption{Duplication rules.}
-\label{tab:processduprules}
-\begin{footnotesize}
+\begin{small}
 \tablefirsthead{\hline
   Node & Can Duplicate? & Indication & Additional Rules\\\hline}
 \tablehead{\hline
 \multicolumn{4}{|l|}{\small\sl continued from previous page}\\
 \hline\hline
-  Node & Duplicate? & Indication & Additional Rules\\\hline\hline}
+  Node & Can Duplicate? & Indication & Additional Rules\\\hline\hline}
 \tabletail{\hline
 \multicolumn{4}{|r|}{\small\sl continued on next page}\\
 \hline}
 \tablelasttail{\hline}
-\begin{supertabular}{|l|c|p{4cm}|p{3.5cm}|}\hline
-%  Node & Duplicate? & How & Additional Rules\\\hline
-CompartmentNode   & N & & \\\hline
-SimpleChemicalNode & Y & \glyph{Simple clone marker} & \\\hline
-UnspecifiedEntityNode & Y & \glyph{Simple clone marker} & \\\hline
+\tablecaption{Duplication rules.}
+\label{tab:processduprules}
+\begin{supertabular}{|l|c|p{5cm}|p{4cm}|}\hline
+%  Node & Can Duplicate? & How & Additional Rules\\\hline
+CompartmentShape   & N & & \\\hline
+SimpleChemicalNode & Y & Clone Marker & \\\hline
+UnspecifiedEntityNode & Y & Clone Marker & \\\hline
 SourceNode & N & & \\\hline
 SinkNode & N & & \\\hline
-Perturbation & Y & \glyph{Simple clone marker} & \\\hline
-Observable & Y & \glyph{Simple clone marker} & \\\hline
-MultimerChemicalEntity & Y & \glyph{Simple clone marker} & \\\hline
-StatefulEntityPoolNode & Y & \glyph{Labeled clone marker} & \\\hline
-MacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
-MultimerMacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
-Nucleic\-Acid\-FeatureNode & Y & \glyph{Labeled clone marker} & \\\hline
-ComplexNode & Y & \glyph{Labeled clone marker} & \\\hline
-TransitionNode & Y & None & Duplication is implied when all EPNs linked to the TransitionNode are marked as clones.\\\hline
-OmittedProcessNode & Y & As Transition Node & \\\hline
-UncertainProcessNode & Y & As Transition Node & \\\hline
-AssociationNode & Y & As Transition Node & \\\hline
-DissociationNode & Y & As Transition Node & \\\hline
-LogicalOperatorNode & Y & None & \\\hline
-ANDNode & Y & None & \\\hline
-ORNode & Y & None & \\\hline
-NOTNode & Y & None & \\\hline
+Perturbation & Y & & CloneMarker \\\hline
+Observable & Y & & CloneMarker \\\hline
+MultimerChemicalEntity & Y & Clone Marker & \\\hline
+StatefulEntityPoolNode & Y & Clone Label & \\\hline
+MacromoleculeNode & Y & As StatefulEntityPoolNode & \\\hline
+MultimerMacromoleculeNode & Y & As StatefulEntityPoolNode & \\\hline
+GeneticEntityNode & Y & As StatefulEntityPoolNode & \\\hline
+ComplexNode & Y & As StatefulEntityPoolNode & \\\hline
+ProcessNode & Y & None & Duplication is implied when all EPNs linked to the ProcessNode are marked as clones.\\\hline
+OmittedProcessNode & Y & As Process Node & \\\hline
+UncertainProcessNode & Y & As Process Node & \\\hline
+AssociationNode & Y & As Process Node & \\\hline
+DissociationNode & Y & As Process Node & \\\hline
+LogicalOperatorNode & Y & As ProcessNode & \\\hline
+ANDNode & Y & As LogicalOperatorNode & \\\hline
+ORNode & Y & As LogicalOperatorNode & \\\hline
+NOTNode & Y & As LogicalOperatorNode & \\\hline
 \end{supertabular}
-\end{footnotesize}
+\end{small}
 \end{center}
 
-\subsection{State variables}
+\subsection{State Variables}
 
-\glyph{States variables} are very simple. The variable can have a name. If the
-name is set, it should be displayed. The variable can take any
+States variables are very simple. The variable can have a name. If the
+name is set it should be displayed. The variable can take any
 value. The names used in the controlled vocabulary of
 post-translational modification in section \ref{sec:CVs} are
 reserved. Authors should avoid attaching any other meaning to them.
 
 An entity pool node has a set of state variables, which is the union
-of all the state variables used in the diagram. 
+of all the state variables used in the diagram 
 %(see diagram \ref{fig: sbgn}).  
-All stateful EPNs must explicitly display the same set of
+All Stateful EPNs must explicitly display the same set of
 state variables and each state variable must be assigned a value or be
 assigned the value ``Not Set''.
 
-\subsection{Compartment spanning}
+\subsection{Compartment Spanning}
 
-In all cases an EPN cannot \emph{belong} to more than one
-compartment. However, an EPN can be \emph{drawn} over more than one
+In all cases an EPN cannot belong to more than one
+compartment. However, an EPN can be drawn over more than one
 compartment. In such cases the decision on which is the owning
 compartment is deferred to the drawing tool or the
 author. ComplexNodes may contain EPNs which belong to different
@@ -123,7 +123,7 @@ compartment.
 The current solution is consistent with other Systems Biology
 representations such as SBML and BioPAX. For more information about the
 problems representing membrane spanning proteins and the rationale
-behind the current solution see \sect{postponed}.
+behind the current solution see section WRITE-ME.
 
 \subsection{Compartments}
 
@@ -146,15 +146,15 @@ important in understanding how SBGN describes process modulation.
 \item Stimulation is a modulation that's effect is to increase the basal rate.
 \item Inhibition is a modulation that's effect is to decrease the basal rate.
 \item The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
-\item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
+\item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their affect is therefore additive.
 \item At most one trigger can be assigned to a process. Two triggers
   would imply an implicit Boolean AND or OR operator. For clarity only
-  one trigger can be assigned to a process and such combinations must be
-  explicitly expressed as the Boolean operators.
+  one trigger can be assigned to a process and such cmbinations must
+  explicitly used the Boolean operators.
 \item At most one catalysis can be assigned to a process. A catalysis
   modulation implies that the exact biochemical mechanism underlying
   the process is known. In this context two catalysis reactions cannot
-  be assigned to the same process as they are
+  be meaning fully assigned to the same process as they are
   independent reactions. Other EPNs that modulate the catalysis can be
   assigned to the same process as modulators, stimulators, and
   inhibitors and will have a multiplicative modulation on the reaction
@@ -172,11 +172,11 @@ the equivalent EntityPoolNodes in both maps.
 \subsubsection{Rules for mapping to submaps}
 
 An EntityPoolNode in the main map can be mapped to one in the submap
-using a TagNode in the submap and SubMapTerminals (see \sect{submap}) in the main map. For a
+using a TagNode in the submap and SubMapTagNode in the main map. For a
 mapping between map and submap to exists the following must be true:
 
 \begin{enumerate}
-\item The identifiers in the TagNode and SubMapTerminals must be identical.
+\item The identifiers in the TagNode and SubMapTagNode must be identical.
 \item The EntityPoolNodes must be identical.
 \end{enumerate}
 

@@ -14,8 +14,8 @@
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
    version="1.0"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
-   sodipodi:docname="trigger-transport.svg"
+   sodipodi:docbase="/home/lenov/SBGN/cvs/documents/specifications/Level1/images"
+   sodipodi:docname="trigger-example4.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs4">
@@ -64,7 +64,7 @@
      width="1052.3622px"
      height="744.09448px"
      inkscape:window-width="1392"
-     inkscape:window-height="1020"
+     inkscape:window-height="1022"
      inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
@@ -109,7 +109,7 @@
          id="tspan2892"
          x="167.80103"
          y="177.3927"
-         style="font-size:48px">ER</tspan></text>
+         style="font-size:48px">RE</tspan></text>
     <path
        transform="matrix(-0.6974023,0,0,0.6974023,593.58037,189.29343)"
        d="M 363.65492 267.30249 A 58.588848 58.588848 0 1 1  246.47722,267.30249 A 58.588848 58.588848 0 1 1  363.65492 267.30249 z"

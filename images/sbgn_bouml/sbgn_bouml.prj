@@ -1,7 +1,7 @@
-format 50
+format 49
 "sbgn_bouml"
-  revision 4
-  modified_by 2 "anatolysorokin"
+  revision 3
+  modified_by 30 "smoodie"
 
 
   
@@ -37,6 +37,6 @@ format 50
   mark_for_import
   
   ncouples 1
-  key "html dir" value "/Users/anatolysorokin/Documents/????????/"
+  key "html dir" value "/home/smoodie/bouml_sbgn/"
   package_ref 129564 // sbgn
 end

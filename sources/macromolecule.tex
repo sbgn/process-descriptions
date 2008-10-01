@@ -13,21 +13,18 @@ Many biological processes involve \emph{macromolecules}: biochemical substances 
 
 \glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 
-\glyphAux A \glyph{macromolecule} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a macromolecule is therefore defined as the vector of all its state variables. 
+\glyphAux A \glyph{macromolecule} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a macromolecule is therefore defined as the vector of all its state variables.  A state variable is represented by an ellipsoid container, with the long axis of the ellipsoid placed on the border of the \glyph{macromolecule}'s container as illustrated in \fig{macromolecule}.  The label of the state variable (which can precise the type of characteristic represented by the state variable, residue type, residue number etc.) can be optionally written either within the \glyph{macromolecule} container, or next to the border of the state variable container, or within the state variable's container itself.
 
-A \glyph{macromolecule} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  The units of information can characterize a domain, such as a binding site.  Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a macromolecule.  
+A \glyph{macromolecule} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  The units of information can characterise a domain, such as a binding site.  Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a macromolecule.  The center of the bounding box of a \glyph{unit of information} is located on the midline of the border of the macromolecule.
 
-A \glyph{macromolecule} may also carry a \glyph{clone marker} (see \sect{cloneMarker})
+A \glyph{macromolecule} may also carry a \glyph{clone marker} (see section~\ref{sec:cloneMarker})
 
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 1.25in]{images/macromolecule-plain} \hspace*{2em}
-  \raisebox{0.04in}{\includegraphics[width = 1.25in]{images/macromolecule}}
-  \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
-    unadorned on the left, and with with an additional state variable and a
-    unit of information on the right.}
+  \includegraphics[scale = 0.3]{images/macromolecule}
+  \caption{The \PD glyph for \glyph{macromolecule}.}
   \label{fig:macromolecule}
 \end{figure}
 
