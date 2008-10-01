@@ -5,7 +5,7 @@
 # $HeadURL$
 # =============================================================================
 
-MAIN   = sbgn_PD-level1_1
+MAIN   = sbgn_PD-level1
 
 LATEX  = pdflatex
 BIBTEX = bibtex
