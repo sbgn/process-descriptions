@@ -1,0 +1,41 @@
+% $HeadURL$
+
+\subsection{Glyph: \glyph{Macromolecule}}
+\label{sec:macromolecule}
+
+Many biological processes involve \emph{macromolecules}: biochemical substances that are built up from the covalent linking of pseudo-identical units.  Examples of macromolecules include proteins, nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose, starch, etc.).  Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone defines only one glyph for all macromolecules.  The same glyph is to be used for a protein, a nucleic acid, a complex sugar, and so on.  The exact nature of a particular macromolecule in a diagram is then clarified using its label and decorations, as will become clear below.  (Future levels of SBGN may subclass the macromolecule and introduce different glyphs to differentiate macromolecules.)
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000245 ! macromolecule 
+
+\glyphContainer A macromolecule is represented by a rectangular container with rounded corners, as illustrated in \fig{macromolecule}.
+
+\glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{macromolecule} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a macromolecule is therefore defined as the vector of all its state variables. 
+
+A \glyph{macromolecule} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  The units of information can characterize a domain, such as a binding site.  Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a macromolecule.  
+
+A \glyph{macromolecule} may also carry a \glyph{clone marker} (see \sect{cloneMarker})
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.25in]{images/macromolecule-plain} \hspace*{2em}
+  \raisebox{0.04in}{\includegraphics[width = 1.25in]{images/macromolecule}}
+  \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
+    unadorned on the left, and with with an additional state variable and a
+    unit of information on the right.}
+  \label{fig:macromolecule}
+\end{figure}
+
+
+
+
+
+% The following is for [X]Emacs users.   Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
