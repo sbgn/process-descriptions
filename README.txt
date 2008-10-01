@@ -3,7 +3,7 @@
 
 		 ----------------------------------------
 		 Systems Biology Graphical Notation (SBGN)
-			 Process Diagrams Level 1
+			 Process Diagrams Level 1.1
 		 ----------------------------------------
 
 		  For more information about SBGN, visit:
