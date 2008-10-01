@@ -3,7 +3,7 @@
 \subsection{Glyph: \glyph{Clone marker}}
 \label{sec:cloneMarker}
 
-If an \glyph{EPN} is duplicated on a map, it is necessary to indicate this fact by using the \glyph{clone marker} auxiliary unit.  The purpose of this marker is to provide the reader with a visual indication that this node has been cloned, and that at least one other occurrence of the \glyph{EPN} can be found in the map (or in a submap; see \sect{submap}).  The clone marker takes two forms, simple and labeled, depending on whether the node being cloned can carry state variables (\ie whether it is a stateful EPN). Note that an \glyph{EPN} belongs to a single compartment. If two glyphs labelled ``X'' are located in two different compartments, such as ATP in cytosol and ATP in mitochondiral lumen, they represent different \glyph{EPNs}, and therefore do not need to be marked as cloned.
+If an \glyph{EPN} is duplicated on a map, it is necessary to indicate this fact by using the \glyph{clone marker} auxiliary unit.  The purpose of this marker is to provide the reader with a visual indication that this node has been cloned, and that at least one other occurrence of the \glyph{EPN} can be found in the map (or in a submap; see \sect{submap}).  The clone marker takes two forms, simple and labeled, depending on whether the node being cloned can carry state variables (\ie whether it is a stateful EPN). Note that an \glyph{EPN} belong to a single compartment. If two glyphs labelled ``X'' are located in two different compartments, such as ATP in cytosol and ATP in mitochondiral lumen, they represent different \glyph{EPN}, and therefore do not need to be marked as cloned.
 
 
 \subsubsection{Simple clone marker}
@@ -39,9 +39,10 @@ Unlike the \glyph{simple clone marker}, the \glyph{labeled clone marker} include
 
 \glyphSboTerm Not applicable.
 
-\glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be significantly smaller than the unfilled one, but the be large enough to have a height larger than the \glyph{clone marker}'s label (cf below). A marker's surface must not exceed 30\% of the \glyph{EPN}'s surface. A value in the range 15 and 25\% is advised. \fig{labeledCloneMarker} illustrates this.   
+\glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be significantly smaller than the unfilled one, but the be large enough to have an height larger than the \glyph{clone marker}'s label (cf below). A marker's surface must not exceed 30\% of the \glyph{EPN}'s surface. A value in the range 15 and 25\% is advised. \fig{labeledCloneMarker} illustrates this.   
 
-\glyphLabel A \glyph{clone marker} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container (the portion of the surface of the EPN that has been modified visually).  The font color of the label and the color of the clone marker should contrast with one another.  The label on a \glyph{labeled clone marker} is mandatory.
+\glyphLabel A \glyph{clone marker} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container (the portion of the surface
+of the EPN that has been modified visually).  The font color of the label and the color of the clone marker should contrast with one another.  The label on a \glyph{labeled clone marker} is mandatory.
 
 \glyphAux A \glyph{clone marker} does not carry any auxiliary items.
 

@@ -2,7 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:cc="http://web.resource.org/cc/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,21 +12,13 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.45.1"
    version="1.0"
    sodipodi:docbase="D:\workspace-doc\SBGN_trunk\documents\specifications\ProcessDiagram\Level1\examples"
    sodipodi:docname="insulin.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
-     id="defs4">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 372.04724 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="1052.3622 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
-       id="perspective206" />
-  </defs>
+     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -37,20 +29,19 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.1732208"
-     inkscape:cx="377.79684"
+     inkscape:zoom="0.79330519"
+     inkscape:cx="567.69453"
      inkscape:cy="363.89912"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1680"
-     inkscape:window-height="1026"
+     inkscape:window-width="1360"
+     inkscape:window-height="746"
      inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
-     inkscape:guide-bbox="true"
-     showgrid="false">
+     inkscape:guide-bbox="true">
     <sodipodi:guide
        orientation="horizontal"
        position="324.70167"
@@ -1039,8 +1030,8 @@
        d="M 493.04929,277.16884 L 493.04929,322.51518"
        id="path9815" />
     <path
-       transform="matrix(0.8836351,0,0,0.8274989,107.10446,212.02196)"
-       d="M 224.81711,214.14584 A 6.6401677,6.6401677 0 1 1 211.53677,214.14584 A 6.6401677,6.6401677 0 1 1 224.81711,214.14584 z"
+       transform="matrix(0.8836351,0,0,0.8274989,107.10446,200.02196)"
+       d="M 224.81711 214.14584 A 6.6401677 6.6401677 0 1 1  211.53677,214.14584 A 6.6401677 6.6401677 0 1 1  224.81711 214.14584 z"
        sodipodi:ry="6.6401677"
        sodipodi:rx="6.6401677"
        sodipodi:cy="214.14584"
