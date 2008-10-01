@@ -1,4 +1,4 @@
-% $HeadURL$
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/sources/compartment.tex $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%                   Compartment
@@ -33,7 +33,8 @@ It is important to note that a compartment never contains another compartment, b
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.4]{examples/compartment-cell}
-  \caption{Compartments can surround other compartments; in that case, both of the compartment's borders must still be shown, with the result that the separation is drawn as two lines.}
+ \includegraphics[scale = 0.4]{examples/compartment-cell-wrong}
+  \caption{Compartments can surround other compartments; in that case, both of the compartment's borders must still be shown, with the result that the separation is drawn as two lines. The left example is correct, with twoo disjoint compartments representing the ``cytoplasm'' and the ``nucleus''. The right example is incorrect. Indeed the compartments ``cell'' and ``nucleus'' would be disjoint, the latter only overlapping the former. As a result, the volume of the nucleus is duplicated.}
   \label{fig:two-comp}
 \end{figure}
 
