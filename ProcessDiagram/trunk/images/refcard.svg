@@ -17,7 +17,7 @@
    sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images"
    sodipodi:docname="refcard.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1.1/images/refcard.png"
+   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/images/refcard.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150">
   <defs
@@ -41,16 +41,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5812853"
-     inkscape:cx="524.39105"
-     inkscape:cy="520.1999"
+     inkscape:cx="898.76352"
+     inkscape:cy="77.739749"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1024"
+     inkscape:window-width="993"
      inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
      showgrid="false">
@@ -954,7 +954,7 @@
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
          y="218.55905"
          x="820.87415"
-         sodipodi:role="line">TRN</tspan></text>
+         sodipodi:role="line">PN</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect2197"
@@ -1808,9 +1808,9 @@
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle">Target</tspan><tspan
          sodipodi:role="line"
          x="820.87415"
-         y="268.55903"
+         y="268.55902"
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
-         id="tspan5067">TRN</tspan></text>
+         id="tspan5067">PN</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5069"
@@ -1831,9 +1831,9 @@
          sodipodi:role="line">Target</tspan><tspan
          id="tspan5075"
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
-         y="316.87227"
+         y="316.87225"
          x="820.87415"
-         sodipodi:role="line">TRN</tspan></text>
+         sodipodi:role="line">PN</tspan></text>
     <rect
        y="343.26199"
        x="803.48956"
@@ -1854,9 +1854,9 @@
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle">Target</tspan><tspan
          sodipodi:role="line"
          x="820.87415"
-         y="365.81196"
+         y="365.81195"
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
-         id="tspan5083">TRN</tspan></text>
+         id="tspan5083">PN</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5085"
@@ -1869,7 +1869,10 @@
        y="403.19495"
        x="820.87415"
        style="font-size:4.62268543px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/images/refcard.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
          y="403.19495"
          x="820.87415"
@@ -1877,9 +1880,9 @@
          sodipodi:role="line">Target</tspan><tspan
          id="tspan5091"
          style="font-size:9.24537086px;font-weight:normal;text-align:center;text-anchor:middle"
-         y="414.75166"
+         y="414.75165"
          x="820.87415"
-         sodipodi:role="line">TRN</tspan></text>
+         sodipodi:role="line">PN</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 133.83404,444.48096 L 133.83404,466.94971 L 133.86529,466.94971 L 133.86529,479.47471 C 133.86529,483.43185 137.0519,486.61845 141.00904,486.61846 L 203.00904,486.61846 C 206.96618,486.61846 210.1528,483.43185 210.1528,479.47471 L 210.1528,451.76221 C 210.1528,451.42595 210.12858,451.0921 210.08404,450.76846 L 210.08404,444.48096 L 133.83404,444.48096 z "
