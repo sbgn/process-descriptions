@@ -4,7 +4,7 @@
 \section{Introduction}
 
 The previous chapters describe the appearance and meaning of
-\SBGNPDLone components. Objects are \glyph{EPNs}, \glyph{transition nodes}, 
+\SBGNPDLone components. Objects are \glyph{EPNs}, \glyph{process nodes}, 
 \glyph{container nodes}, \glyph{logical operators} as well as \glyph{connecting arcs}. The components of a \PD
 have to be placed in a meaningful way -- a random
 distribution with spaghetti-like connections will most likely hide
@@ -38,7 +38,7 @@ Please note that the color of objects do not carry any meaning in
 SBGN. Although one can use colors to emphasize part of a diagram or
 encode additional information, the meaning of the diagram should not
 depend on the colors. Furthermore, objects can have different sizes
-and size is also meaningless in SBGN. For example, a transition node
+and size is also meaningless in SBGN. For example, a process node
 may be larger than a protein node. Also the meaning of a graph
 should be conserved upon scaling as far as possible.
 
@@ -121,17 +121,17 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \subsubsection{Node-edge connection}
 
-The arcs linking the square glyph of a \glyph{transition} to the \glyph{consumption} and \glyph{production arcs}
+The arcs linking the square glyph of a \glyph{process} to the \glyph{consumption} and \glyph{production arcs}
  are attached to the center of opposite sides (\fig{layout6}). The modulatory
 arcs are attached to the other two sides, but not necessarily
-all to the center, as several modifiers can affect the same \glyph{transition
-node}. A \glyph{transition} connected to \glyph{production arcs} on opposite
-sides is a reversible transition.
+all to the center, as several modifiers can affect the same \glyph{process
+node}. A \glyph{process} connected to \glyph{production arcs} on opposite
+sides is a reversible process.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.3]{images/layout-connecting-arcs}
-  \caption{Arcs between a \glyph{transition}  and the \glyph{consumption} and \glyph{production arcs} must be attached to the center of opposite sides, modulatory
+  \caption{Arcs between a \glyph{process}  and the \glyph{consumption} and \glyph{production arcs} must be attached to the center of opposite sides, modulatory
   arcs must be attached to the other two sides.}\label{fig:layout6}
 \end{figure}
 
@@ -149,11 +149,11 @@ of nodes.
 
 \subsubsection{Compartments}
 
-If a transition has all participants in the same compartment the
-transition node and all edges/arcs have to be in this compartment.
-If a transition has participants in at least two different
-compartments, the transition node has to be either in a compartment
-where the transition has at least one participant or in the empty
+If a process has all participants in the same compartment the
+process node and all edges/arcs have to be in this compartment.
+If a process has participants in at least two different
+compartments, the process node has to be either in a compartment
+where the process has at least one participant or in the empty
 space.
 
 \subsection{Recommendations}
@@ -183,7 +183,7 @@ The amount of crossings between edges should be minimized.
 
 \subsubsection{Branching of \glyph{association} and \glyph{dissociation}}
 
-The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed closed to the symbol of the transition, if possible at a distance comparable than, or smaller to, the diameter of the symbol defining the transition (\fig{branching}).
+The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed closed to the symbol of the process, if possible at a distance comparable than, or smaller to, the diameter of the symbol defining the process (\fig{branching}).
 
 \begin{figure}[h!]
   \centering
@@ -213,9 +213,9 @@ understand.
 \begin{itemize}
   \item Angle of edge crossings: If edge crossings are not avoidable
   edges should cross with an angle close to 90 degrees.
-  \item Placement of substrates and products of a transition:
+  \item Placement of substrates and products of a process:
   Substrate and product nodes should be placed
-  on different sides of the transition node.
+  on different sides of the process node.
   \item Drawing area and width/height ratio: The drawing should
   be compact and the ratio between the width and the height
   of the drawing should be close to 1.
@@ -226,7 +226,7 @@ understand.
   should be drawn in a similar way, and symmetric parts
   should be drawn symmetrically.
   \item Proximity information: Related elements (e.\,g.~nodes
-  connected by a transition or all elements within a compartment)
+  connected by a process or all elements within a compartment)
   should be drawn close together.
   \item Directional information: Subsequent processes (e.\,g.~a sequence
   of reactions) should be drawn in one direction (e.\,g.~from

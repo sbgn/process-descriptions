@@ -61,15 +61,15 @@ An entity pool is a population of entities that cannot be distinguished from eac
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Transition nodes
+%%%%                   Process nodes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Process nodes}\label{sec:PNs}
 
-Process nodes represent processes that transform one or several EPNs into one or several different EPNs.   \SBGNPDLone defines a generic \glyph{transition} (\sect{transition}), as well as four more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}) and the \glyph{dissociation} (\sect{dissociation}).  In future levels of the SBGN Process Diagram notation, more transitions may be defined.  (One can even envision the development of a controlled vocabulary of transitions, as is done now for \glyph{EPNs}; see \sect{CVs}.)
+Process nodes represent processes that transform one or several EPNs into one or several different EPNs.   \SBGNPDLone defines a generic \glyph{process} (\sect{process}), as well as four more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}) and the \glyph{dissociation} (\sect{dissociation}).  In future levels of the SBGN Process Diagram notation, more processes may be defined.  (One can even envision the development of a controlled vocabulary of processes, as is done now for \glyph{EPNs}; see \sect{CVs}.)
 
-\input{sources/transition.tex}
+\input{sources/process.tex}
 \input{sources/omitted.tex}
 \input{sources/uncertain.tex}
 \input{sources/association.tex}
@@ -82,9 +82,9 @@ Process nodes represent processes that transform one or several EPNs into one or
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Connecting arcs}\label{sec:arcs}
+\section{Arcs}\label{sec:arcs}
 
-Connecting arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
+Arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
 
 \input{sources/consumption.tex}
 \input{sources/production.tex}
@@ -92,7 +92,7 @@ Connecting arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The 
 \input{sources/stimulation.tex}
 \input{sources/catalysis.tex}
 \input{sources/inhibition.tex}
-\input{sources/trigger.tex}
+\input{sources/necessary_stim.tex}
 \input{sources/logicArc.tex}
 \input{sources/equivalenceArc.tex}
 

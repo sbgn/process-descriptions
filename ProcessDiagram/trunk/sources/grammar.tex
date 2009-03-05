@@ -249,7 +249,7 @@ CatalysisArc & As ModulatioArc & & Catalysis & \\\hline
 %
 InhibitionArc & As ModulationArc & & Inhibition & \\\hline
 %
-TriggerArc & As ModulationArc & & Inhibition & \\\hline
+Necessary StimulationArc & As ModulationArc & & Inhibition & \\\hline
 %
 LogicArc & modulatingNode (I) & The ModulatingNode that is the origin of this link. & LogicArc & \multirow{3}{\commlen}{Conceptually this class can be thought of as converting a continuous input (the population of the EntityPool) into a discrete Boolean output (True or False).} \\
  &  &  & & \\
@@ -354,7 +354,7 @@ Output & process (I) & The process that this is the output of. & & ProductionArc
 Input & substrate (I) & The EPN that is the input to the process. & & ConsumptionArc \\
  & process (I) & The process that this is the input of. & & \\\hline
 %
-Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Trigger, Catalysis or LogicGate. & & ModulationArc \\\hline
+Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Necessary Stimulation, Catalysis or LogicGate. & & ModulationArc \\\hline
 %
 LogicGate & type (R) & The type of LogicGate. One of AND, OR, NOT. & & LogicGateNode \\\hline
 %
