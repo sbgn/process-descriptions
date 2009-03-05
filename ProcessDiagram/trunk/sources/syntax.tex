@@ -1,6 +1,6 @@
 \section{Syntax}
 
-The syntax of SBGN State Transition diagrams is defined in the form of an incidence matrix. 
+The syntax of SBGN Process diagrams is defined in the form of an incidence matrix. 
 An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Input (I) means that the arc can begin at that node. Output (O) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
 
 For simplicity Logical operators are treated as EPNs.
@@ -13,15 +13,15 @@ For simplicity Logical operators are treated as EPNs.
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
 \vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source/sink} &  
 \vglyph{perturbation} &  \vglyph{observable} & \vglyph{submap}\\ \hline 
-\glyph{consumption}     & I & I & I & I & I & I &   & I &   &   & \\ \hline 
-\glyph{production}      & O & O & O & O & O & O &   & O &   &   & \\ \hline 
-\glyph{modulation}      & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{stimulation}     & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{catalysis}       & I & I & I & I & I &   &   &   & I & O & \\ \hline 
-\glyph{inhibition}      & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{trigger}         & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{logic arc}       & I & I & I & I & I & I &   &   &   &   & \\ \hline 
-\glyph{equivalence arc} & I & I & I & I & I & I & O &   &   &   &O \\ \hline \hline
+\glyph{consumption}      & I & I & I & I & I & I &   & I &   &   & \\ \hline 
+\glyph{production}        & O & O & O & O & O & O &   & O &   &   & \\ \hline 
+\glyph{modulation}        & I & I & I & I & I & I &   &   & I & O & \\ \hline 
+\glyph{stimulation}        & I & I & I & I & I & I &   &   & I & O & \\ \hline 
+\glyph{catalysis}          & I & I & I & I & I &   &   &   & I & O & \\ \hline 
+\glyph{inhibition}          & I & I & I & I & I & I &   &   & I & O & \\ \hline 
+\glyph{necessary activation} & I & I & I & I & I & I &   &   & I & O & \\ \hline 
+\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & \\ \hline 
+\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &   &   &O \\ \hline \hline
 \end{tabular}
 
 
@@ -30,7 +30,7 @@ For simplicity Logical operators are treated as EPNs.
 \begin{tabular}{||c|c|c|c|c|c|c|c|c||}
 \hline
 \hline
-\raisebox{20pt}{$Arc \backslash PN$} & \vglyph{transition}  & \vglyph{omitted process}  & 
+\raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
 \vglyph{uncertain process} & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
 \vglyph{or} & \vglyph{not} \\ \hline 
 \glyph{consumption} & O & O & O & O    & O(1) &      &      &      \\ \hline
@@ -39,15 +39,15 @@ For simplicity Logical operators are treated as EPNs.
 \glyph{stimulation} & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{catalysis}   & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{inhibition}  & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{trigger}     & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{necessary activation}     & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{logic arc}   &   &   &   &      &      & O    & O    & O(1) \\ \hline
 \glyph{equivalence arc} &   &   &  &   &      &      &      &      \\ \hline \hline
 \end{tabular}
 
 \subsection{Containment definition}
-There are two EPN types which allows containment in SBGN: \glyph{compartment} and
+There are three EPN types allowing containment of other EPN in SBGN: \glyph{compartment} and
 \glyph{complex}. The next table describe relationship between EPN elements of SBGN
-and these two containers. Plus sign means that the element is able to be
+and these three containers. Plus sign means that the element is able to be
 contained within a container. An empty cell means containment is not allowed.
 
 
@@ -55,19 +55,19 @@ contained within a container. An empty cell means containment is not allowed.
 \hline
 \hline
 $EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{submap} \\ \hline
-\glyph{unspecified entity}   &         +       &          +          &        +       \\ \hline
+\glyph{unspecified entity}    &         +       &          +          &        +       \\ \hline
 \glyph{simple chemical}      &         +       &          +          &        +       \\ \hline
 \glyph{macromolecule}        &         +       &          +          &        +       \\ \hline
-\glyph{nucleic acid feature} &         +       &          +          &        +       \\ \hline 
+\glyph{nucleic acid feature}   &         +       &          +          &        +       \\ \hline 
 \glyph{multimer}             &         +       &          +          &        +       \\ \hline
 \glyph{source/sink}          &         -       &          +          &        +       \\ \hline 
-\glyph{perturbation}         &         -       &          +          &        +       \\ \hline
+\glyph{perturbation}          &         -       &          +          &        +       \\ \hline
 \glyph{observable}           &         -       &          +          &        +       \\ \hline
 \glyph{tag}                  &         -       &          +          &        +       \\ \hline
 \glyph{complex}              &         +       &          +          &        +       \\ \hline
 \glyph{compartment}          &         -       &          -          &        +       \\ \hline
 \glyph{submap}               &         -       &          +          &        +       \\ \hline
-\glyph{transition}           &         -       &          +          &        +       \\ \hline
+\glyph{process}             &         -       &          +          &        +       \\ \hline
 \glyph{omitted process}      &         -       &          +          &        +       \\ \hline
 \glyph{uncertain process}    &         -       &          +          &        +       \\ \hline
 \glyph{association}          &         -       &          +          &        +       \\ \hline
@@ -78,7 +78,7 @@ $EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{su
 \glyph{stimulation}          &         -       &          +          &        +       \\ \hline
 \glyph{catalysis}            &         -       &          +          &        +       \\ \hline
 \glyph{inhibition}           &         -       &          +          &        +       \\ \hline
-\glyph{trigger}              &         -       &          +          &        +       \\ \hline
+\glyph{necessary activation}   &         -       &          +          &        +       \\ \hline
 \glyph{logic arc}            &         -       &          +          &        +       \\ \hline
 \glyph{equivalence arc}      &         -       &          +          &        +       \\ \hline
 \glyph{and}                  &         -       &          +          &        +       \\ \hline
@@ -121,13 +121,13 @@ Additional rules should be defined to make the syntax definition more precise.
     \item Once cardinality label set to one arc of the EPN all other arcs should
     make their cardinality visible, even if it is undefined. In a case
     cardinality is undefined or unknown question mark (``?'') should be placed as cardinality label. 
-    \item The EPN is not allowed to be a substrate and product of the same 
-    process. This rule is applicable to cloned EPNs as well.
+%    \item The EPN is not allowed to be a substrate and product of the same 
+%    process. This rule is applicable to cloned EPNs as well.
     \item PN should have only one \glyph{Catalysis} arc connected to it. If
     there more than one catalyst known for the process several PNs should be
     drawn. 
-    \item PN should have only one \glyph{Trigger} arc connected to it. If
-    there more than one trigger known for the process several PNs should be
+    \item PN should have only one \glyph{Necessary activation} arc connected to it. If
+    there more than one necessary activators are known for the process -- several PNs should be
     drawn or explicit logic gate should be used.  
   \end{enumerate}  
     \item \glyph{Association}
