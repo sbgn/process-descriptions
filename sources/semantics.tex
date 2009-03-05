@@ -68,11 +68,11 @@ MacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
 MultimerMacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
 Nucleic\-Acid\-FeatureNode & Y & \glyph{Labeled clone marker} & \\\hline
 ComplexNode & Y & \glyph{Labeled clone marker} & \\\hline
-TransitionNode & Y & None & Duplication is implied when all EPNs linked to the TransitionNode are marked as clones.\\\hline
-OmittedProcessNode & Y & As Transition Node & \\\hline
-UncertainProcessNode & Y & As Transition Node & \\\hline
-AssociationNode & Y & As Transition Node & \\\hline
-DissociationNode & Y & As Transition Node & \\\hline
+ProcessNode & Y & None & Duplication is implied when all EPNs linked to the ProcessNode are marked as clones.\\\hline
+OmittedProcessNode & Y & As Process Node & \\\hline
+UncertainProcessNode & Y & As Process Node & \\\hline
+AssociationNode & Y & As Process Node & \\\hline
+DissociationNode & Y & As Process Node & \\\hline
 LogicalOperatorNode & Y & None & \\\hline
 ANDNode & Y & None & \\\hline
 ORNode & Y & None & \\\hline
@@ -147,9 +147,9 @@ important in understanding how SBGN describes process modulation.
 \item Inhibition is a modulation that's effect is to decrease the basal rate.
 \item The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
 \item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
-\item At most one trigger can be assigned to a process. Two triggers
+\item At most one necessary stimulation can be assigned to a process. Two necessary stimulations
   would imply an implicit Boolean AND or OR operator. For clarity only
-  one trigger can be assigned to a process and such combinations must be
+  one necessary stimulation can be assigned to a process and such combinations must be
   explicitly expressed as the Boolean operators.
 \item At most one catalysis can be assigned to a process. A catalysis
   modulation implies that the exact biochemical mechanism underlying

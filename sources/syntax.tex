@@ -19,7 +19,7 @@ For simplicity Logical operators are treated as EPNs.
 \glyph{stimulation}        & I & I & I & I & I & I &   &   & I & O & \\ \hline 
 \glyph{catalysis}          & I & I & I & I & I &   &   &   & I & O & \\ \hline 
 \glyph{inhibition}          & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{necessary activation} & I & I & I & I & I & I &   &   & I & O & \\ \hline 
+\glyph{necessary stimulation} & I & I & I & I & I & I &   &   & I & O & \\ \hline 
 \glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & \\ \hline 
 \glyph{equivalence arc}     & I & I & I & I & I & I & O &   &   &   &O \\ \hline \hline
 \end{tabular}
@@ -39,7 +39,7 @@ For simplicity Logical operators are treated as EPNs.
 \glyph{stimulation} & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{catalysis}   & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{inhibition}  & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{necessary activation}     & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{necessary stimulation}     & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
 \glyph{logic arc}   &   &   &   &      &      & O    & O    & O(1) \\ \hline
 \glyph{equivalence arc} &   &   &  &   &      &      &      &      \\ \hline \hline
 \end{tabular}
@@ -78,7 +78,7 @@ $EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{su
 \glyph{stimulation}          &         -       &          +          &        +       \\ \hline
 \glyph{catalysis}            &         -       &          +          &        +       \\ \hline
 \glyph{inhibition}           &         -       &          +          &        +       \\ \hline
-\glyph{necessary activation}   &         -       &          +          &        +       \\ \hline
+\glyph{necessary stimulation}   &         -       &          +          &        +       \\ \hline
 \glyph{logic arc}            &         -       &          +          &        +       \\ \hline
 \glyph{equivalence arc}      &         -       &          +          &        +       \\ \hline
 \glyph{and}                  &         -       &          +          &        +       \\ \hline
@@ -112,10 +112,10 @@ Additional rules should be defined to make the syntax definition more precise.
   \begin{enumerate}
     \item PN should have nonzero number of \glyph{consumption} links.
     \item PN should have nonzero number of \glyph{production} links.
-    \item All substrates of the transition should be different. If several 
+    \item All substrates of the process should be different. If several 
     copies of the same EPN are involved in the process, cardinality label of 
     \glyph{consumption} arc should be used.
-    \item All products of the transition should be different. If several copies 
+    \item All products of the process should be different. If several copies 
     of the same EPN are produced in the process, cardinality label of 
     \glyph{production} arc should be used.
     \item Once cardinality label set to one arc of the EPN all other arcs should
@@ -126,9 +126,8 @@ Additional rules should be defined to make the syntax definition more precise.
     \item PN should have only one \glyph{Catalysis} arc connected to it. If
     there more than one catalyst known for the process several PNs should be
     drawn. 
-    \item PN should have only one \glyph{Necessary activation} arc connected to it. If
-    there more than one necessary activators are known for the process -- several PNs should be
-    drawn or explicit logic gate should be used.  
+    \item PN should have only one \glyph{Necessary Stimulation} arc connected to it. If
+    there is more than one EPN acting as a necessary stimulator on a process then several a logic gate should be used.  
   \end{enumerate}  
     \item \glyph{Association}
   \begin{enumerate}
