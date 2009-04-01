@@ -32,6 +32,8 @@ A process is the basic process node in SBGN.  It describes a process that transf
 
 A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or \glyph{production} (\sect{production}) arcs to indicate the stoichiometry of the process.  This label becomes a requirement when the exact composition of the number of copies of the inputs or outputs to a reaction are ambiguous in the diagram.
 
+A process is regarded as reversible if both `sides' of the process are connected to \glyph{production} arcs (see section \ref{sec: semantics reversible procs}).
+
 The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein in a \PD.
 
 \begin{figure}[H]

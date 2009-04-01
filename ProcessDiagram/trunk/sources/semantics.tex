@@ -161,6 +161,13 @@ important in understanding how SBGN describes process modulation.
   rate defined by the catalysis.
 \end{enumerate}
 
+\subsection{Reversible Processes}
+\label{sec: semantics reversible procs}
+
+Process nodes are deemed to be reversible if they have production arcs on both ``sides'' of the process. A mixture of consumption and production arcs on the same side of a process is not permitted. Semantically the production arc and be thought of as allowing a reversible flow of entities between the process and EPN. A Consumption arc only permits an irreversible flow from the EPN to the process. In this way the consumption arc forces the process to be irreversible. Consumption arcs cannot be associated with both sides of a process as this would prohibit any flow through the process.
+
+The semantics of modulation is the same for reversible processes as they affect the rate, but not the direction of the flow. [SLM: Is this true?]
+
 \subsection{Submaps}
 
 Submaps are a visual device that allow a map to be split into several
@@ -191,3 +198,77 @@ If an EntityPoolNode is cloned in the main map then it must also be
 marked as cloned in the submap even if there is only one copy of the
 EntityPoolNode in the submap. The converse rule also applies where the
 EntityPoolNode is cloned in the submap, but not the main map.
+
+\section{Summary of Rules}
+
+\subsection{Entity Pool Nodes}
+
+\begin{enumerate}
+\item The identity of an EPN is defined by a combination of its compartment, entity type (e.g. complex or macromolecule), name and state variables (if any).
+\item A Complex’s identity consists of the identity of its subunits and a name is optional. All complexes with the same name should have the same subunits.
+\item An EPN may belong to only one compartment.
+\item An EPN belongs to only one compartment. If no compartment is draw it is assumed to belong to a “default” compartment.
+\item An EPN can overlap more than one compartment and in this case it is deferred to the drawing tool or author to assign the owning compartment. Note this rule need not apply in cases where SBGN is draw by hand.
+\item A Complex may contain subunits that belong to different compartments (the complex itself will belong to only one, however).
+\item The layout or organisation of a compartment does not imply anything about its topology.
+\item The layout or organisation of the EPNs in a complex does not imply any information about topology.
+\item Complexes can be nested. This does imply information about the complex’s topology.
+\item A complex should consist of different EPNs. If two or more elements of the complex are identical then they should be replaced by a multimer.
+\item Source and sink nodes must have no name and be attached to only one consumption or production arc.
+\item An EPN must be connected to at least 1 consumption, production or modulation arc.
+\item An EPN is not allowed to be a substrate and product of the same process. This applies to cloned EPNs as well.
+States
+\item All state variables in a stateful EPN should have different names.
+\item A blank state variable has the value “unset”.
+\item The state of a complex is the sum of its subunits’ and its own state variables.
+\end{enumerate}
+
+\subsection{Compartments}
+
+\begin{enumerate}
+\item Compartments cannot be nested. Compartments may overlap, but overlap does not imply containment.
+\item The layout or organisation of a compartment does not imply anything about its topology.
+\item If no compartment is draw it is assumed to belong to a “default” compartment.
+\item If one or more compartment glyphs are drawn then all EPNs must owned by a compartment glyph.
+\end{enumerate}
+
+\subsection{Process Nodes (PN)}
+
+\begin{enumerate}
+\item A Process Node should have non-zero number of consumption and production links.
+\item All substrates of the Process Node should be different. If several copies of the same EPN are involved in the process, the cardinality label of consumption arc should be used.
+\item All products of the PN should be different. If several copies of the same EPN are produced in the process, the cardinality label of production arc should be used.
+\item Once the cardinality label is added to one arc connected to a PN all other such arcs should display a cardinality label.
+\item The cardinality of an arc can be undefined or unknown, in which case a question mark (``?'') should be used.
+\item A PN should correspond to only one process or series of connected process. The same set of EPNs should be connected by different PNs if they are consumed and produced by different processes.
+\item The composition of the product of an association process should be equivalent to its substrates
+\item The composition of the products of a dissociation process should be equivalent to its substrate.
+\end{enumerate}
+
+\subsection{Modulation and Logical Operators}
+
+\begin{enumerate}
+\item A PN with no modulations has an underlying “basal rate” which describes the rate at which it converts inputs to outputs.
+\item Modulation changes the basal rate in an unspecified fashion.
+\item Stimulation is a modulation that’s effect is to increase the basal rate.
+\item Inhibition is a modulation that’s effect is to decrease the basal rate.
+\item The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
+\item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
+\item At most one trigger can be assigned to a process. Two triggers would imply an implicit Boolean AND or OR operator, so for clarity only one trigger can be assigned to a process and such combinations must be explicitly expressed as the Boolean operators.
+\item The PN should have only one Catalysis arc connected to it. A catalysis modulation implies that the exact biochemical mechanism underlying the process is known.
+\item The PN should have only one Trigger arc connected to it.
+\item AND and OR Boolean logic gates should have two or more input and one output.
+\item A NOT gate can only have one input and output.
+\end{enumerate}
+
+\subsection{Cloning and Sub-Maps}
+
+\begin{enumerate}
+\item Duplicate EPNs must be marked as clones.
+\item Duplicate stateful EPNs must use a Labelled Clone Marker.
+\item Duplicate non-stateful EPNs must use a simple clone marker.
+\item A sub-map shares the same namespace as its main map.
+\item To map an EPN in the main map to one in a sub-map, the SubMap glyph in the main map must contain an identifier that matches the identifier of a Tag in the sub-map. Both EPNs must be identical.
+\item If a main map and a sub-map contain an identical EPN then a mapping must exist between them.
+\item If an EPN is cloned in the main map, then it must be marked as cloned in the sub-map, with the same identifier in both maps. This is true if there is only one EPN of this type in the submap.
+\end{enumerate}
