@@ -6,22 +6,22 @@ An incidence matrix has arcs as rows and nodes as columns. Each element of the m
 For simplicity Logical operators are treated as EPNs.
 
 \subsection{Entity Pool Nodes connectivity definition}  
-\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c||}
+\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c|c||}
 \hline
 \hline
 \raisebox{20pt}{$Arc \backslash EPN$} &\vglyph{macromolecule} & \vglyph{simple chemical} & 
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
-\vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source/sink} &  
+\vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source} & \vglyph{sink} &  
 \vglyph{perturbation} &  \vglyph{observable} & \vglyph{submap}\\ \hline 
-\glyph{consumption}      & I & I & I & I & I & I &   & I &   &   & \\ \hline 
-\glyph{production}        & O & O & O & O & O & O &   & O &   &   & \\ \hline 
-\glyph{modulation}        & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{stimulation}        & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{catalysis}          & I & I & I & I & I &   &   &   & I & O & \\ \hline 
-\glyph{inhibition}          & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{necessary stimulation} & I & I & I & I & I & I &   &   & I & O & \\ \hline 
-\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & \\ \hline 
-\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &   &   &O \\ \hline \hline
+\glyph{consumption}      & I & I & I & I & I & I &   & I &   &   & & \\ \hline 
+\glyph{production}        & O & O & O & O & O & O &   & & O &   &   & \\ \hline 
+\glyph{modulation}        & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
+\glyph{stimulation}        & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
+\glyph{catalysis}          & I & I & I & I & I &   &   &   & & I & O & \\ \hline 
+\glyph{inhibition}          & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
+\glyph{necessary stimulation} & I & I & I & I & I & I &   &  &  & I & O & \\ \hline 
+\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & & \\ \hline 
+\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &  &  &   &O \\ \hline \hline
 \end{tabular}
 
 
@@ -60,7 +60,8 @@ $EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{su
 \glyph{macromolecule}        &         +       &          +          &        +       \\ \hline
 \glyph{nucleic acid feature}   &         +       &          +          &        +       \\ \hline 
 \glyph{multimer}             &         +       &          +          &        +       \\ \hline
-\glyph{source/sink}          &         -       &          +          &        +       \\ \hline 
+\glyph{source}          &         -       &          +          &        +       \\ \hline 
+\glyph{sink}          &         -       &          +          &        +       \\ \hline 
 \glyph{perturbation}          &         -       &          +          &        +       \\ \hline
 \glyph{observable}           &         -       &          +          &        +       \\ \hline
 \glyph{tag}                  &         -       &          +          &        +       \\ \hline
@@ -90,26 +91,28 @@ $EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{su
 
 \subsection{Syntactic rules}
 
-The incidence matrix, defining main part of the syntax, is too permissive. 
-Additional rules should be defined to make the syntax definition more precise.
+There are additional syntactic rules that must be applied in addition to those defined above.
 
-\begin{enumerate}
-  \item EPNs. That rules are applicable to all EPNs (\ref{sec:EPNs})
-  \begin{enumerate}
+\subsubsection{EPNs}
+
+ \begin{enumerate}
     \item If \glyph{macromolecule} has more than one \glyph{state variable}, 
     all \glyph{state variables} should have a name;
     \item All \glyph{state variables} of the \glyph{macromolecule} should have 
     different names;
     \item \glyph{Complex} should consists of different EPNs. If two or more 
     elements of the complex are identical they should be replaced by multimer. 
+    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
   \end{enumerate}
-  \item Source/Sink (\ref{sec:sourceSink}).
-  \begin{enumerate}
-    \item \glyph{source/sink} is allowed to have only one link attached to it. It
-    could be either \glyph{consumption} or \glyph{production} link.
+
+\subsubsection{\glyph{Source} and \glyph{Sink}}
+
+ \begin{enumerate}
+    \item Only one arc can be attached to these glyphs (degree 1).
   \end{enumerate}
-    \item Process. That rules are applicable to all PNs (\ref{sec:PNs})
-  \begin{enumerate}
+
+\subsubsection{\glyph{Process}}
+ \begin{enumerate}
     \item PN should have nonzero number of \glyph{consumption} links.
     \item PN should have nonzero number of \glyph{production} links.
     \item All substrates of the process should be different. If several 
@@ -127,9 +130,10 @@ Additional rules should be defined to make the syntax definition more precise.
     there more than one catalyst known for the process several PNs should be
     drawn. 
     \item PN should have only one \glyph{Necessary Stimulation} arc connected to it. If
-    there is more than one EPN acting as a necessary stimulator on a process then several a logic gate should be used.  
-  \end{enumerate}  
-    \item \glyph{Association}
+    there is more than one EPN acting as a necessary stimulator on a process then several a logic gate should be used.    \end{enumerate}  
+
+\subsubsection{\glyph{Association}}
+
   \begin{enumerate}
     \item Composition of the \glyph{complex} or \glyph{multimer} produced by
     \glyph{association} should be identical to set of \glyph{association} substrates.
@@ -142,7 +146,8 @@ Additional rules should be defined to make the syntax definition more precise.
     \glyph{multimer}, then cardinality of the consumption arc should be equal to
     ratio of number of monomers in product and in substrate \glyph{multimers}.
   \end{enumerate}  
-    \item \glyph{Dissociation}
+
+\subsubsection{\glyph{Dissociation}}
   \begin{enumerate}
     \item Composition of \glyph{complex} or \glyph{multimer} consumed by
     \glyph{dissociation} should be identical to set of products of the process.
@@ -156,6 +161,3 @@ Additional rules should be defined to make the syntax definition more precise.
     ratio of number of monomers in substrate and in product \glyph{multimers}.
   \end{enumerate}  
   
-  
-\end{enumerate}
-
