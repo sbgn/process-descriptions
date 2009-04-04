@@ -1,6 +1,6 @@
 format 63
 "visual" // sbgn::visual
-  revision 13
+  revision 14
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -121,7 +121,7 @@ ${members}};
 	relation_ref 128290 // <association>
       end
 
-      classrelation 128999 // clonemarker (<association>)
+      classrelation 128999 // <association>
 	relation_ref 128743 // <association>
       end
     end
@@ -145,7 +145,7 @@ ${members}};
       end
     end
 
-    class 129436 "TransitionNode"
+    class 129436 "ProcessNode"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -185,6 +185,30 @@ ${members}};
 	    classrelation_ref 136988 // consumed ()
 	  association_type class_ref 131612 // ConsumptionArc
       end
+
+      classrelation 128045 // inputs (<association>)
+	relation 128045 ----
+	  a role_name "inputs" multiplicity "1..*" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128045 // inputs (<association>)
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128173 // <association>
+      end
+
+      classrelation 128301 // outputs (<association>)
+	relation 128173 ----
+	  a role_name "outputs" multiplicity "1..*" public
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128301 // outputs (<association>)
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128429 // <association>
+      end
     end
 
     class 129564 "ProducableNode"
@@ -199,6 +223,18 @@ ${members}};
       classrelation 136732 // produced (ProductionArc)
 	relation_ref 135452 // ProductionArc
       end
+
+      classrelation 128813 // <association>
+	relation 128557 ----
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128813 // <association>
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128941 // <association>
+      end
     end
 
     class 129692 "ConsumableNode"
@@ -212,6 +248,18 @@ ${members}};
       
       classrelation 136988 // consumed ()
 	relation_ref 135580 // 
+      end
+
+      classrelation 129069 // <association>
+	relation 128685 ----
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129069 // <association>
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129197 // <association>
       end
     end
 
@@ -601,6 +649,18 @@ ${members}};
 	python_decl ""
 	idl_decl ""
       end
+
+      classrelation 128557 // <generalisation>
+	relation 128301 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128557 // <generalisation>
+	  b parent class_ref 128045 // FluxArc
+      end
+
+      classrelation 129197 // <association>
+	relation_ref 128685 // <association>
+      end
     end
 
     class 131740 "ProductionArc"
@@ -620,6 +680,18 @@ ${members}};
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      classrelation 128685 // <generalisation>
+	relation 128429 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128685 // <generalisation>
+	  b parent class_ref 128045 // FluxArc
+      end
+
+      classrelation 128941 // <association>
+	relation_ref 128557 // <association>
       end
     end
 
@@ -819,7 +891,7 @@ ${members}};
 	relation 130972 ---|>
 	  a public
 	    classrelation_ref 130972 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -836,7 +908,7 @@ ${members}};
 	relation 131100 ---|>
 	  a public
 	    classrelation_ref 131100 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -853,7 +925,7 @@ ${members}};
 	relation 131228 ---|>
 	  a public
 	    classrelation_ref 131228 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -870,7 +942,7 @@ ${members}};
 	relation 131356 ---|>
 	  a public
 	    classrelation_ref 131356 // <generalisation>
-	  b parent class_ref 129436 // TransitionNode
+	  b parent class_ref 129436 // ProcessNode
       end
     end
 
@@ -1266,7 +1338,7 @@ ${members}}
 	  b role_name "clonemarker" multiplicity "0..1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128999 // clonemarker (<association>)
+	    classrelation_ref 128999 // <association>
       end
 
       attribute 128615 "identifier"
@@ -1297,6 +1369,26 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 128002 // <generalisation>
 	  b parent class_ref 132508 // StimulationArc
+      end
+    end
+
+    class 128045 "FluxArc"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128173 // <association>
+	relation_ref 128045 // <association>
+      end
+
+      classrelation 128429 // <association>
+	relation_ref 128173 // <association>
       end
     end
   end
