@@ -145,9 +145,9 @@ SubmapDiagram & mainMapName (I) & Name of the main map this is a sub-map of.& N/
 %
 BasicEntity\-Node & & & Abstract & The most fundamental node type. Any node that can be drawn on a MapDiagram inherits from this.\\\hline
 %
-ConsumableNode & & & Abstract & Nodes that can be consumed and are connected at the start of a consumption arc.\\\hline
+ConsumableNode & & & Abstract & Nodes that are connected to the start of a consumption arc.\\\hline
 %
-ProducableNode & & & Abstract & Nodes that can produced and are linked to the end of a production arc.\\\hline
+ProducableNode & & & Abstract & Nodes that linked to the end of a production arc.\\\hline
 %
 ModulatableNode & modulatingNodes (I) \{0 \ldots *\} & Any number of
 nodes that modulate this one.& Abstract & Nodes representing a process
@@ -204,8 +204,8 @@ StateDescription & owningStatefulEPN & Identity of the owning Stateful\-Entity\-
  & value &  The definition of a value for the given variable. & & \\\hline
 %
 ProcessNode & As ModulatableNode & & Process & \multirow{3}{\commlen}{}\\
- & producableNodes (I) \{1 \ldots *\} & The ProducableNodes linked to the process by a ProductionArc. & & \\
- & consumableNodes (I) \{1 \ldots *\} & The ConsumableNodes linked to the process by a ConsumptionArc. & & \\\hline
+ & outputNodes (I) \{1 \ldots *\} & The OutputNodes linked to the process by a ProductionArc. & & \\
+ & inputNodes (I) \{1 \ldots *\} & The InputNodes linked to the process by either a ProductionArc or ConsumptionArc. & & \\\hline
 %
 OmittedProcess\-Node & As Process Node & & Omitted Process &\\\hline
 %
@@ -235,10 +235,10 @@ SubMapTerminalNode & subMapName (I) & Name of submap that owns labeled terminal.
 & identifier (I) & A name that uniquely identifies the terminal on the submap. & & \\\hline
 %
 ProductionArc & processNode (I) & The ProcessNode that this is the output of. & Production & \multirow{2}{\commlen}{It is assumed that the arc is unidirectional.} \\
- & producableNode (I) & The ProducableNode that is the product of the process. & & \\\hline
+ & producableNode (I) &  & & \\\hline
 %
 ConsumptionArc & consumableNode (I) & The ConsumableNode that is the input to the process. & Consumption & It is assumed that the arc is unidirectional.\\
- & processNode (I) & The ProcessNode that this is the input to. & & \\\hline
+ & processNode (I) & & & \\\hline
 %
 ModulationArc & modulatingNode (I) & The ModulatingNode that is the origin of this link. & Modulation & \multirow{2}{\commlen}{} \\
  & modulatedNode (I) & The ModulatableNode that is controlled (modulated) by this arc. & & \\\hline
@@ -307,10 +307,6 @@ Controller & & & Something that can control a Controllable. & ModulatingNode \\\
 %
 Controllable & & & Something that can be controlled by a Controller & ModulatableNode \\\hline
 %
-Producible & & & Something that can be produced by a process. & ProducibleNode \\\hline
-%
-Consumable & & & Something that can be consumed by a process. & ConsumableNode \\\hline
-%
 EntityType & Name (I) & The name of the EntityType. & \multirow{2}{\desclen}{This is the type of the EntityPool.} & \multirow{2}{\mappinglen}{No direct maps to the visual layer. It is an implied attribute of the EntityPoolNode.}\\
 & type (I) &  Type of the Entity. One of: SimpleChemical, UnspeciedEntity, Complex, Macromolecule, and Nucleic\-Acid\-Feature. & & \\
  & annotations \{0 \ldots *\} & Annotation must be associated with the type and be general to all Entity Pool Node. If it were associated with the Species then this would be synonymous with a state description. & & \\\hline
@@ -348,11 +344,12 @@ Annotation & prefix (I) & A classifier for the annotation. & & UnitOfInformation
 %
 Process & processType (I) &  One of: Unspecified, Dissociation, Association, Omitted Process, Uncertain Process. & & The type is specified by the type of Glyph used: Process\-Node, Dissociation\-Node, Association\-Node, Omitted\-Process\-Node, Uncertain\-Process\-Node.\\\hline
 %
-Output & process (I) & The process that this is the output of. & & ProductionArc \\
- & product (I) & The EPN that is the product of the process. & & \\\hline
+Flux & process (I) & The process that this is the output of.  &  The flux represent the flow of EPNs to or from a process. & ProductionArc\\
+ & participant (I) & The EPN that is involved with the above process. & &\\\hline
+% 
+Reversible Flux & As Flux & & & ProductionArc \\ \hline
 %
-Input & substrate (I) & The EPN that is the input to the process. & & ConsumptionArc \\
- & process (I) & The process that this is the input of. & & \\\hline
+Input & As Flux & & Here the flow can only go from the EPN to the Process. & ConsumptionArc \\ \hline
 %
 Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Necessary Stimulation, Catalysis or LogicGate. & & ModulationArc \\\hline
 %

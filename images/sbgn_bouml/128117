@@ -1,6 +1,6 @@
 format 63
 "conceptual" // sbgn::conceptual
-  revision 15
+  revision 16
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -138,12 +138,16 @@ ${members}}
 	  b parent class_ref 129781 // BasicEntity
       end
 
-      classrelation 132597 // <generalisation>
-	relation 131317 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 132597 // <generalisation>
-	  b parent class_ref 131317 // Producible
+      classrelation 131629 // <association>
+	relation 130605 ----
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 131629 // <association>
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 131757 // <association>
       end
     end
 
@@ -166,12 +170,16 @@ ${members}}
 	  b parent class_ref 129781 // BasicEntity
       end
 
-      classrelation 135285 // <generalisation>
-	relation 133109 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 135285 // <generalisation>
-	  b parent class_ref 131445 // Consumable
+      classrelation 132141 // <association>
+	relation 130861 ----
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 132141 // <association>
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 132269 // <association>
       end
     end
 
@@ -625,22 +633,6 @@ ${members}}
 	  b parent class_ref 130933 // Controller
       end
 
-      classrelation 132725 // <generalisation>
-	relation 131445 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 132725 // <generalisation>
-	  b parent class_ref 131317 // Producible
-      end
-
-      classrelation 133365 // <generalisation>
-	relation 131829 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 133365 // <generalisation>
-	  b parent class_ref 131445 // Consumable
-      end
-
       classrelation 128560 // entityType (<aggregation>)
 	relation 128304 o---
 	  a role_name "entityType" multiplicity "1" protected
@@ -651,6 +643,18 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 128688 // <aggregation>
+      end
+
+      classrelation 131885 // <association>
+	relation 130733 ----
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 131885 // <association>
+	  b role_name "participant" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 132013 // participant (<association>)
       end
     end
 
@@ -671,14 +675,6 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 132085 // <generalisation>
 	  b parent class_ref 131061 // Controllable
-      end
-
-      classrelation 132981 // <association>
-	relation_ref 131573 // <association>
-      end
-
-      classrelation 133237 // <association>
-	relation_ref 131701 // <association>
       end
 
       classrelation 128605 // <generalisation>
@@ -830,80 +826,6 @@ ${members}}
       end
     end
 
-    class 131317 "Producible"
-      abstract visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 132853 // <association>
-	relation 131573 ----
-	  a role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 132853 // <association>
-	  b role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 132981 // <association>
-	  association_type class_ref 132085 // ReversibleFlux
-      end
-
-      classrelation 130349 // <association>
-	relation 129453 ----
-	  a role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 130349 // <association>
-	  b role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 130477 // <association>
-      end
-    end
-
-    class 131445 "Consumable"
-      abstract visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 133109 // <association>
-	relation 131701 ----
-	  a role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 133109 // <association>
-	  b role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 133237 // <association>
-	  association_type class_ref 131957 // IrreversibleFlux
-      end
-
-      classrelation 130093 // <association>
-	relation 129325 ----
-	  a role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 130093 // <association>
-	  b role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 130221 // <association>
-      end
-    end
-
     class 131573 "SubMapEntityMapping"
       visibility package 
       cpp_decl ""
@@ -1032,8 +954,8 @@ ${members}}
 	  b parent class_ref 128173 // Flux
       end
 
-      classrelation 130221 // <association>
-	relation_ref 129325 // <association>
+      classrelation 132269 // <association>
+	relation_ref 130861 // <association>
       end
     end
 
@@ -1066,8 +988,8 @@ ${members}}
 	  b parent class_ref 128173 // Flux
       end
 
-      classrelation 130477 // <association>
-	relation_ref 129453 // <association>
+      classrelation 131757 // <association>
+	relation_ref 130605 // <association>
       end
     end
 
@@ -1273,6 +1195,10 @@ ${members}}
 
       classrelation 129965 // <association>
 	relation_ref 129197 // <association>
+      end
+
+      classrelation 132013 // participant (<association>)
+	relation_ref 130733 // <association>
       end
     end
   end
