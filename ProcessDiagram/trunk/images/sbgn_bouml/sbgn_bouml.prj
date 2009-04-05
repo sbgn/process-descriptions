@@ -1,6 +1,6 @@
 format 63
 "sbgn_bouml"
-  revision 5
+  revision 6
   modified_by 45 "smoodie"
 
 
@@ -37,6 +37,6 @@ format 63
   mark_for_import
   
   ncouples 1
-  key "html dir" value "/Users/anatolysorokin/Documents/????????/"
+  key "html dir" value "/Users/smoodie/Documents/testoutput/"
   package_ref 129564 // sbgn
 end
