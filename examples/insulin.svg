@@ -21,7 +21,15 @@
    inkscape:export-xdpi="65.270683"
    inkscape:export-ydpi="65.270683">
   <defs
-     id="defs4" />
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 388.04501 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="979 : 388.04501 : 1"
+       inkscape:persp3d-origin="489.5 : 258.69668 : 1"
+       id="perspective2843" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -34,15 +42,15 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
      inkscape:cx="247.69453"
-     inkscape:cy="750.90166"
+     inkscape:cy="112.63682"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
      inkscape:window-width="1440"
-     inkscape:window-height="900"
+     inkscape:window-height="878"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="0"
      showguides="false"
      inkscape:guide-bbox="true"
      showgrid="false">
@@ -487,7 +495,7 @@
        sodipodi:nodetypes="cccc"
        id="path7019"
        d="M 892.05952,702.23192 L 887.2146,692.43757 L 896.94287,692.43757 L 892.05952,702.23192 z"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.86454642;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:1.86454641999999993;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.86454642;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="M 153.21955,576.25171 L 280.86546,576.25171"

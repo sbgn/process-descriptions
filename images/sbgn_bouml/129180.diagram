@@ -60,11 +60,11 @@ classcanvas 129308 class_ref 129820 // ModulatingNode
 end
 classcanvas 129692 class_ref 129948 // SourceNode
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_infonote default shadow default show_stereotype_properties default
-  xyz 729 327 2004
+  xyz 1013 353 2004
 end
 classcanvas 129948 class_ref 130076 // SinkNode
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_infonote default shadow default show_stereotype_properties default
-  xyz 632 324 2004
+  xyz 844 571 2004
 end
 classcanvas 130204 class_ref 130204 // ObservableNode
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_infonote default shadow default show_stereotype_properties default
@@ -198,7 +198,7 @@ relationcanvas 128093 relation_ref 129245 // <composition>
   from ref 134300 z 1999 to point 925 235
   line 128221 z 1999 to ref 134428
   no_role_a no_role_b
-  multiplicity_a_pos 698 244 3000 no_multiplicity_b
+  multiplicity_a_pos 704 243 3000 no_multiplicity_b
 end
 relationcanvas 128130 relation_ref 128002 // <generalisation>
   from ref 128002 z 2003 to ref 135580
@@ -311,6 +311,16 @@ relationcanvas 129564 relation_ref 135324 //
   role_a_pos 563 715 3000 role_b_pos 268 715 3000
   no_multiplicity_a no_multiplicity_b
 end
+relationcanvas 129581 relation_ref 132653 // <generalisation>
+  from ref 129948 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129709 relation_ref 132781 // <generalisation>
+  from ref 129692 z 1999 to ref 128028
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
 relationcanvas 129820 relation_ref 129308 // <generalisation>
   from ref 129692 z 1999 to ref 128924
   no_role_a no_role_b
@@ -382,12 +392,7 @@ end
 relationcanvas 134556 relation_ref 134684 // <composition>
   from ref 134172 z 1999 to ref 134428
   no_role_a no_role_b
-  multiplicity_a_pos 615 200 3000 no_multiplicity_b
-end
-relationcanvas 134684 relation_ref 133276 // <generalisation>
-  from ref 129948 z 1999 to ref 134428
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
+  multiplicity_a_pos 604 199 3000 no_multiplicity_b
 end
 relationcanvas 134812 relation_ref 132892 // <generalisation>
   from ref 128028 z 1999 to ref 134428
@@ -402,11 +407,6 @@ relationcanvas 134940 relation_ref 133020 // <generalisation>
 end
 relationcanvas 135068 relation_ref 133404 // <generalisation>
   from ref 134300 z 1999 to ref 134428
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 135196 relation_ref 133148 // <generalisation>
-  from ref 129692 z 1999 to ref 134428
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

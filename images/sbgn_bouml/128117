@@ -1,6 +1,6 @@
 format 63
 "conceptual" // sbgn::conceptual
-  revision 16
+  revision 17
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -130,14 +130,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 129269 // <generalisation>
-	relation 129141 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 129269 // <generalisation>
-	  b parent class_ref 129781 // BasicEntity
-      end
-
       classrelation 131629 // <association>
 	relation 130605 ----
 	  a role_name "" protected
@@ -148,6 +140,14 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 131757 // <association>
+      end
+
+      classrelation 133421 // <generalisation>
+	relation 132013 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133421 // <generalisation>
+	  b parent class_ref 130549 // EntityPool
       end
     end
 
@@ -162,14 +162,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 129397 // <generalisation>
-	relation 129269 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 129397 // <generalisation>
-	  b parent class_ref 129781 // BasicEntity
-      end
-
       classrelation 132141 // <association>
 	relation 130861 ----
 	  a role_name "" protected
@@ -180,6 +172,14 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 132269 // <association>
+      end
+
+      classrelation 133549 // <generalisation>
+	relation 132141 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133549 // <generalisation>
+	  b parent class_ref 130549 // EntityPool
       end
     end
 
@@ -342,14 +342,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 129013 // <generalisation>
-	relation 128885 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 129013 // <generalisation>
-	  b parent class_ref 129781 // BasicEntity
-      end
-
       classrelation 133493 // <generalisation>
 	relation 131957 ---|>
 	  a public
@@ -367,6 +359,14 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
+
+      classrelation 133933 // <generalisation>
+	relation 132525 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133933 // <generalisation>
+	  b parent class_ref 129781 // BasicEntity
+      end
     end
 
     class 129269 "Perturbation"
@@ -380,14 +380,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 129141 // <generalisation>
-	relation 129013 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 129141 // <generalisation>
-	  b parent class_ref 129781 // BasicEntity
-      end
-
       classrelation 133621 // <generalisation>
 	relation 132085 ---|>
 	  a public
@@ -404,6 +396,14 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      classrelation 133805 // <generalisation>
+	relation 132397 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133805 // <generalisation>
+	  b parent class_ref 130549 // EntityPool
       end
     end
 
@@ -656,6 +656,7 @@ ${members}}
 "
 	    classrelation_ref 132013 // participant (<association>)
       end
+
     end
 
     class 130677 "Process"
