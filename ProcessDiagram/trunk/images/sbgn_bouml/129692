@@ -1,6 +1,6 @@
 format 63
 "visual" // sbgn::visual
-  revision 15
+  revision 16
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -302,11 +302,12 @@ ${members}};
 	  b parent class_ref 129692 // ConsumableNode
       end
 
-      classrelation 133148 // <generalisation>
-	relation 133148 ---|>
+      classrelation 134189 // <generalisation>
+	relation 132781 ---|>
 	  a public
-	    classrelation_ref 133148 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
+	    java "${type}"
+	    classrelation_ref 134189 // <generalisation>
+	  b parent class_ref 129180 // EntityPoolNode
       end
     end
 
@@ -326,11 +327,12 @@ ${members}};
 	  b parent class_ref 129564 // ProducableNode
       end
 
-      classrelation 133276 // <generalisation>
-	relation 133276 ---|>
+      classrelation 134061 // <generalisation>
+	relation 132653 ---|>
 	  a public
-	    classrelation_ref 133276 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
+	    java "${type}"
+	    classrelation_ref 134061 // <generalisation>
+	  b parent class_ref 129180 // EntityPoolNode
       end
     end
 
