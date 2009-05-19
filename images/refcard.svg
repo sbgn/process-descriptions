@@ -41,9 +41,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="504.70298"
-     inkscape:cy="447.03394"
+     inkscape:zoom="4"
+     inkscape:cx="773.21953"
+     inkscape:cy="82.066627"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
@@ -55,7 +55,7 @@
      showguides="true"
      inkscape:guide-bbox="true"
      showgrid="true"
-     inkscape:snap-global="false">
+     inkscape:snap-global="true">
     <sodipodi:guide
        orientation="vertical"
        position="823.48958"
@@ -115,6 +115,10 @@
     <inkscape:grid
        type="xygrid"
        id="grid2791" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="723.25,131"
+       id="guide2782" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -1696,8 +1700,8 @@
        d="M 762.8099,606.48389 L 797.98924,606.55872"
        style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 734.52923,606.35451 L 762.95025,606.35451"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.17574644;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 723.47042,606.35451 L 762.75906,606.35451"
        id="path3726" />
     <path
        sodipodi:type="arc"
@@ -2290,5 +2294,9 @@
        style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#646464;stroke-width:0.65501279;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="M 566.73778,320.77373 L 543.56851,320.77373"
        id="path2797" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.02170944px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 735.54981,652.15533 L 723.26085,652.38363"
+       id="path2780" />
   </g>
 </svg>
