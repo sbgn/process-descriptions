@@ -1,10 +1,10 @@
 % $HeadURL$
 
 \chapter{Process Diagram glyphs}
+\label{chap:glyphs}
 
 %[Note on the color code: \textcolor{blue}{The glyphs that have been thorougly discussed, and are considered frozen, are represented in blue}. \textcolor{green}{The glyphs that have been thorougly discussed, but are still posing problems are represented in green}. \textcolor{red}{The glyphs that have been proposed but for which in-depth discussion is yet to come are represented in red}.]
 
-This chapter provides a catalog of the graphical symbols available for representing entities in \PDs.  There are different classes of glyphs corresponding to different classes of material or conceptual entities, containers, processes, connecting arcs, and logical operators.  In \chap{grammar} beginning on page~\pageref{chp:grammar}, we describe the rules for combining these glyphs into a legal SBGN \PD, and in \chap{layout} beginning on page~\pageref{chp:layout}, we describe requirements and guidelines for the way that diagrams are visually organized.
 
 \section{Overview}
 
@@ -22,9 +22,9 @@ This chapter provides a catalog of the graphical symbols available for represent
 
 \section{Entity pool nodes}\label{sec:EPNs}
 
-An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools whent it comes to representing calcium release from the endoplasmic reticulum.
+An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
 
-\SBGNPDLone{} contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \SBGNPDLone but may be part of future levels of SBGN.)  In addition to the material entities, \SBGNPDLone{} represents three conceptual entities: \glyph{source/sink} (\sect{sourceSink}), \glyph{perturbing agent} (\sect{perturbation}), and \glyph{tag} (\sect{tag}).  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
+The \PD contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN.)  In addition to the material entities, \PD represents three conceptual entities: \glyph{source}, \glyph{sink} (\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing agent}).  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
 
 \input{sources/unspecified.tex}
 \input{sources/simpleChemical.tex}
@@ -34,8 +34,17 @@ An entity pool is a population of entities that cannot be distinguished from eac
 \input{sources/complex.tex}
 
 \input{sources/sourceSink.tex}
-\input{sources/perturbation.tex}
+\input{sources/perturbing_agent.tex}
+
+\section{Reference Node}
+
+Reference nodes handle links or relationships between elements of a map and sub-map. At present there is only one reference glyph, \glyph{tag}, which can be used in a sub-map diagram or as an auxilary unit with the \glyph{submap} glyph (\sect{submap}). The \glyph{clone marker} can also provide additional reference mechanisms and is discussed below (\sect{cloneMarker}).
+
 \input{sources/tag.tex}
+
+\section{Auxiliary Units}
+
+Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
 
 \input{sources/unitInformation.tex}
 \input{sources/stateVariable.tex}
@@ -50,6 +59,8 @@ An entity pool is a population of entities that cannot be distinguished from eac
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\section{Container nodes}\label{sec:CNs}
+\section{Compartment Node}
+
 \input{sources/compartment.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,14 +81,14 @@ An entity pool is a population of entities that cannot be distinguished from eac
 
 \section{Process nodes}\label{sec:PNs}
 
-Process nodes represent processes that transform one or several EPNs into one or several different EPNs.   \SBGNPDLone defines a generic \glyph{process} (\sect{process}), as well as five more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}) and the \glyph{dissociation} (\sect{dissociation}), and the \glyph{observable} (\sect{observable}).  In future levels of the SBGN Process Diagram notation, more processes may be defined.  (One can even envision the development of a controlled vocabulary of processes, as is done now for \glyph{EPNs}; see \sect{CVs}.)
+Process nodes represent processes that transform one or several EPNs into one or several different EPNs.   \SBGNPDLone defines a generic \glyph{process} (\sect{process}), as well as five more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}) and the \glyph{dissociation} (\sect{dissociation}), and the \glyph{phenotype} (\sect{phenotype}).  In future levels of the SBGN Process Diagram notation, more processes may be defined.  (One can even envision the development of a controlled vocabulary of processes, as is done now for \glyph{EPNs}; see \sect{CVs}.)
 
 \input{sources/process.tex}
 \input{sources/omitted.tex}
 \input{sources/uncertain.tex}
 \input{sources/association.tex}
 \input{sources/dissociation.tex}
-\input{sources/observable.tex}
+\input{sources/phenotype.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
