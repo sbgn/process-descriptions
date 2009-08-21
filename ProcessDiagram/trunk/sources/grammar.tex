@@ -173,9 +173,9 @@ SourceNode & &  & Source/Sink & The SourceNode can only be associated with \emph
 %
 SinkNode & & & Source/Sink & The SinkNode can only be associated with \emph{one} production arc. Note that this shares the same Glyph as SourceNode.\\\hline
 %
-ObservableNode & name (I) & Name of the observable. & Observable & \\\hline
+PhenotypeNode & name (I) & Name of the phenotype. & Phenotype & \\\hline
 %
-PerturbationNode & name (I) & Name of the perturbation. & Perturbation & \\\hline
+Perturbing Agent Node & name (I) & Name of the perturbing agent. & Perturbing Agent & \\\hline
 %
 MacromoleculeNode & As StatefulEntityPoolNode & & Macromolecule & \multirow{2}{\commlen}{} \\
  & macromoleculeType (I) & The type of the macromolecule. Currently there are no constraints on permitted types. & & \\\hline
@@ -357,9 +357,9 @@ LogicGate & type (R) & The type of LogicGate. One of AND, OR, NOT. & & LogicGate
 %
 LogicAdapter & & & The LogicGate takes a set of Boolean inputs (T or F) from an EntityPool which is a non-Boolean quantity. Conceptually, the adapter converts the continuous quantity into a discrete Boolean quantity. & LogicArc \\\hline
 %
-Perturbation & name & Name of the perturbation. & & PerturbationNode \\\hline
+Perturbing Agent & name & Name of the perturbing agent. & & Perturbing Agent Node \\\hline
 %
-Observable & name & Name of the observable. & & ObservableNode \\\hline
+Phenotype & name & Name of the phenotype. & & PhenotypeNode \\\hline
 %
 Source & & & & SourceNode \\\hline
 %
