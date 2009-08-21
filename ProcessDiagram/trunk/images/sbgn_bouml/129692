@@ -1,6 +1,6 @@
-format 63
+format 67
 "visual" // sbgn::visual
-  revision 16
+  revision 19
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -336,7 +336,7 @@ ${members}};
       end
     end
 
-    class 130204 "ObservableNode"
+    class 130204 "PhenotypeNode"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -363,7 +363,7 @@ ${members}};
       end
     end
 
-    class 130332 "PerturbationNode"
+    class 130332 "PerturbingAgentNode"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1354,7 +1354,7 @@ ${members}}
       end
     end
 
-    class 128002 "TriggerArc"
+    class 128002 "NecessaryStimulationArc"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {

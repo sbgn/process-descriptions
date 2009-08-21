@@ -1,6 +1,6 @@
-format 63
+format 67
 "conceptual" // sbgn::conceptual
-  revision 17
+  revision 20
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -331,7 +331,7 @@ ${members}}
       end
     end
 
-    class 129141 "Observable"
+    class 129141 "Phenotype"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -367,9 +367,21 @@ ${members}}
 	    classrelation_ref 133933 // <generalisation>
 	  b parent class_ref 129781 // BasicEntity
       end
+
+      classrelation 140717 // <aggregation>
+	relation 139309 o---
+	  a role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140717 // <aggregation>
+	  b role_name "" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140845 // <aggregation>
+      end
     end
 
-    class 129269 "Perturbation"
+    class 129269 "PerturbingAgent"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -656,7 +668,6 @@ ${members}}
 "
 	    classrelation_ref 132013 // participant (<association>)
       end
-
     end
 
     class 130677 "Process"
@@ -1072,6 +1083,10 @@ ${members}}
 
       classrelation 128432 // ()
 	relation_ref 128176 // 
+      end
+
+      classrelation 140845 // <aggregation>
+	relation_ref 139309 // <aggregation>
       end
     end
 
