@@ -18,7 +18,7 @@
    sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
    sodipodi:docname="IFNGeneRef.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="D:\workspace-doc\SBGN_trunk\documents\specifications\ProcessDiagram\Level1\examples\muscle.png"
+   inkscape:export-filename="/Users/smoodie/Documents/sbgn-pd/examples/IFNGeneRef.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -73,23 +73,23 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0939471"
-     inkscape:cx="308.70487"
-     inkscape:cy="294.86661"
+     inkscape:zoom="2"
+     inkscape:cx="329.19325"
+     inkscape:cy="272.02223"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1392"
-     inkscape:window-height="994"
+     inkscape:window-width="1440"
+     inkscape:window-height="800"
      inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
      showgrid="false">
     <sodipodi:guide
        orientation="horizontal"
-       position="341.65166"
+       position="463,307"
        id="guide4750" />
     <sodipodi:guide
        orientation="vertical"
@@ -99,6 +99,10 @@
        orientation="horizontal"
        position="564.30445"
        id="guide7283" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="501,313.5"
+       id="guide2625" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -206,42 +210,42 @@
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.865;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        id="path5920"
-       d="M 502.27714,452.60067 L 501.64699,528.39288 L 501.1545,551.01665"
-       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.865;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500.60466,501.48755 L 501.07847,532.07077 L 500.73195,541.20988"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50019968;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 396.44682,438.35903 L 487.71589,438.64002"
+       d="M 392.44682,437.09448 L 501,461.64002"
        id="path4211"
        inkscape:connector-type="polyline"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.86500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 617.61156,438.12607 L 516.15206,438.0439"
+       d="M 615.14089,438.20857 L 501,461.4614"
        id="path4213"
        inkscape:connector-type="polyline"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:type="arc"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.48306098;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.48306084;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path9268"
        sodipodi:cx="394.28571"
        sodipodi:cy="289.09448"
        sodipodi:rx="41.42857"
        sodipodi:ry="41.42857"
-       d="M 435.71428 289.09448 A 41.42857 41.42857 0 1 1  352.85714,289.09448 A 41.42857 41.42857 0 1 1  435.71428 289.09448 z"
-       transform="matrix(0.3385717,0,0,0.3417125,368.61014,339.55231)" />
+       d="M 435.71428,289.09448 A 41.42857,41.42857 0 1 1 352.85714,289.09448 A 41.42857,41.42857 0 1 1 435.71428,289.09448 z"
+       transform="matrix(0.3385717,0,0,0.3417125,366.61014,387.55231)" />
     <text
        xml:space="preserve"
        style="font-size:4.29097843px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="492.73508"
-       y="439.99991"
+       x="490.72583"
+       y="487.77872"
        id="text4124"
        transform="scale(0.9953936,1.0046277)"><tspan
          sodipodi:role="line"
          id="tspan4126"
-         x="492.73508"
-         y="439.99991"
+         x="490.72583"
+         y="487.77872"
          style="font-size:10px;font-weight:bold;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none">AND</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -454,8 +458,8 @@
          id="tspan6498"
          sodipodi:role="line">mt:prot</tspan></text>
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 485.62677,534.53225 L 517.39248,534.53225"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.42690027;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 491.7123,535.53225 L 510.30695,535.53225"
        id="path2312"
        sodipodi:nodetypes="cc" />
     <path
@@ -643,5 +647,9 @@
            style="font-size:10px;font-weight:normal;text-align:center;text-anchor:middle;stroke-width:1.86500001;stroke-miterlimit:4;stroke-dasharray:none"
            id="tspan2584">P@Y727</tspan></text>
     </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.9641031px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 500.9901,471.50784 L 501,461.50249"
+       id="path2621" />
   </g>
 </svg>
