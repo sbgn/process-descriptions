@@ -14,6 +14,14 @@
 
 \input{sources/CVs.tex}
 
+\section{Auxiliary Units}
+
+Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
+
+\input{sources/unitInformation.tex}
+\input{sources/stateVariable.tex}
+\input{sources/cloneMarker.tex}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%                   State nodes
@@ -36,21 +44,13 @@ The \PD contains six glyphs representing classes of material entities: \glyph{un
 \input{sources/sourceSink.tex}
 \input{sources/perturbing_agent.tex}
 
-\section{Reference Node}
+\input{sources/complex-epn-eg.tex}
+
+\section{Referring to other Nodes}
 
 Reference nodes handle links or relationships between elements of a map and sub-map. At present there is only one reference glyph, \glyph{tag}, which can be used in a sub-map diagram or as an auxilary unit with the \glyph{submap} glyph (\sect{submap}). The \glyph{clone marker} can also provide additional reference mechanisms and is discussed below (\sect{cloneMarker}).
 
 \input{sources/tag.tex}
-
-\section{Auxiliary Units}
-
-Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
-
-\input{sources/unitInformation.tex}
-\input{sources/stateVariable.tex}
-\input{sources/cloneMarker.tex}
-
-\input{sources/complex-epn-eg.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,7 +59,7 @@ Auxiliary units are glyphs that decorate other glyphs, providing additional info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\section{Container nodes}\label{sec:CNs}
-\section{Compartment Node}
+\section{Representing Compartments}
 
 \input{sources/compartment.tex}
 
@@ -69,7 +69,7 @@ Auxiliary units are glyphs that decorate other glyphs, providing additional info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\section{Summarising detail}
 \input{sources/submap.tex}
 
 
