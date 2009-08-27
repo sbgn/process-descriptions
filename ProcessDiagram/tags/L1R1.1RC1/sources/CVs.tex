@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Controlled vocabularies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\color{blue}
+
+Some glyphs in SBGN \PDs can contain particular kinds of textual annotations conveying information relevant to the purpose of the glyph.  These annotations are \glyph{units of information} (\sect{unitInfo}) or \glyph{state variable}  (\sect{stateVariable}).  An example is in the case of multimers, which can have a unit of information conveying the number of monomers composing the multimer.  Other cases are described throughout the rest of this chapter.
+
+The text that appears as the unit of information decorating an Entity Pool Node (EPN) must in most cases be prefixed with a controlled vocabulary term indicating the type of information being expressed.  The prefixes are mandatory except in the case of macromolecule covalent modifications (\sect{covalent-mod-cv}).  Without the use of controlled vocabulary prefixes, it would be necessary to have different glyphs to indicate different classes of information; this would lead to an explosion in the number of symbols needed.
+
+In the rest of this section, we describe the controlled vocabularies (CVs) used in \SBGNPDLone.  They cover the following categories of information: an EPN's material type, an EPN's conceptual type, covalent modifications on macromolecules, the physical characteristics of compartments, and cardinality (\eg of multimers).  In each case, some CV terms are predefined by SBGN, but unless otherwise noted, \emph{they are not the only terms permitted}.  Authors may use other CV values not listed here, but in such cases, they should explain the term's meanings in a figure legend or other text accompanying the diagram.
+
+
+\subsection{Entity pool node material types}
+\label{sec:material-types-cv}
+
+The material type of an EPN indicates its chemical structure.  A list of common material types is shown in \tab{material-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{participant}$\rightarrow$\emph{physical participant}).  The labels are defined by \SBGNPDLone.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}              & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Non-macromolecular ion     & mt:ion  & SBO:0000327\\
+    Non-macromolecular radical & mt:rad  & SBO:0000328\\
+    Ribonucleic acid           & mt:rna  & SBO:0000250\\
+    Deoxribonucleic acid       & mt:dna  & SBO:0000251\\
+    Protein                    & mt:prot & SBO:0000297\\
+    Polysaccharide             & mt:psac & SBO:0000249\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{material types} controlled
+    vocabulary (\sect{material-types-cv}).}
+  \label{tab:material-types-cv}
+\end{table}
+
+The material types are in contrast to the \emph{conceptual types} (see below).  The distinction is that material types are about physical composition, while conceptual types are about roles.  For example, a strand of RNA is a physical artifact, but its use as messenger RNA is a role.
+
+
+\subsection{Entity pool node conceptual types}
+\label{sec:conceptual-types-cv}
+
+An EPN's \emph{conceptual type} indicates its function within the context of a given \PD.  A list of common conceptual types is shown in \tab{conceptual-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000241} ($\!$\emph{conceptual entity} under \emph{participant}$\rightarrow$\emph{physical participant}).  The labels are defined by \SBGNPDLone.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}              & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Gene                      & ct:gene   & SBO:0000243\\
+    Transcription start site  & ct:tss    & SBO:0000329\\
+    Gene coding region        & ct:coding & SBO:0000335\\
+    Gene regulatory region    & ct:grr    & SBO:0000369\\
+    Messenger RNA             & ct:mRNA   & SBO:0000278\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{conceptual types} vocabulary
+    (\sect{conceptual-types-cv}).}
+  \label{tab:conceptual-types-cv}
+\end{table}
+
+
+\subsection{Macromolecule covalent modifications}
+\label{sec:covalent-mod-cv}
+
+A common reason for the introduction of state variables (\sect{stateVariable}) on an entity is to allow access to the configuration of possible covalent modification sites on that entity.  For instance, a macromolecule may have one or more sites where a phosphate group may be attached; this change in the site's configuration (\ie being either phosphorylated or not) may factor into whether, and how, the entity can participate in different processes.  Being able to describe such modifications in a consistent fashion is the motivation for the existence of SBGN's covalent modifications controlled vocabulary.  
+
+\tab{covalent-mod-cv} lists a number of common types of covalent modifications.  The most common values are defined by the \sbo in the branch having identifier \sboid{SBO:0000210} (\emph{addition} under \emph{events}$\rightarrow$\emph{reaction}$\rightarrow$\emph{biochemical reaction}$\rightarrow$\emph{conversion}).  The labels shown in \tab{covalent-mod-cv} are defined by \SBGNPDLone; for all other kinds of modifications not listed here, the author of a \PD must create a new label (and should also describe the meaning of the label in a legend or text accompanying the diagram).
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Acetylation     & Ac    & SBO:0000215\\
+    Glycosylation   & G     & SBO:0000217\\
+    Hydroxylation   & OH    & SBO:0000233\\
+    Methylation     & Me    & SBO:0000214\\
+    Myristoylation  & My    & SBO:0000219\\
+    Palmytoylation  & Pa    & SBO:0000218\\
+    Phosphorylation & P     & SBO:0000216\\
+    Prenylation     & Pr    & SBO:0000221\\
+    Protonation     & H     & SBO:0000212\\
+    Sulfation       & S     & SBO:0000220\\
+    Ubiquitination  & Ub    & SBO:0000224\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{covalent modifications} vocabulary
+    (\sect{covalent-mod-cv}).}
+  \label{tab:covalent-mod-cv}
+\end{table}
+
+
+\subsection{Physical characteristics}
+\label{sec:physical-characteristics-cv}
+
+\SBGNPDLone defines a special unit of information for describing certain common physical characteristics.  \tab{physical-characteristics-cv} lists the particular values defined by \SBGNPDLone.  The values correspond to the \sbo branch with identifier \sboid{SBO:0000255} (\emph{physical characteristic} under \emph{quantitative parameter}). It is antciated that these will be used to describe the nature of a \glyph{perturbing agent} (section \ref{sec:perturbing agent}) or a \glyph{phenotype} (section \ref{sec:phenotype}).
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Temperature   & pc:T  & SBO:0000147\\
+    Voltage       & pc:V  & SBO:0000259\\
+    pH            & pc:pH & SBO:0000304\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{physical
+      characteristics} vocabulary (\sect{physical-characteristics-cv}).}
+  \label{tab:physical-characteristics-cv}
+\end{table}
+
+
+\subsection{Cardinality}
+\label{sec:cardinality-cv}
+
+\SBGNPDLone defines a special unit of information usable on multimers for describing the number of monomers composing the multimer.  \tab{cardinality-cv} shows the way in which the values must be written.  Note that the value is an positive non-zero integer, and not (for example) a range.  There is no provision in \SBGNPDLone for specifying a range in this context because it leads to problems of entity identifiability.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    cardinality    & N:\#  & SBO:0000364\\
+    \bottomrule
+  \end{tabular}
+  \caption{The format of the possible values for the
+    \emph{cardinality} unit of information
+    (\sect{cardinality-cv}).  Here, \texttt{\#} stands for the
+    number; for example, ``\texttt{N:5}''.}
+  \label{tab:cardinality-cv}
+\end{table}
+
+
+
+% \normalcolor
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

@@ -1,0 +1,48 @@
+\chapter{Complete examples of \SBGNPDLone graphs}
+
+The following diagrams present complete examples of SBGN Process Diagrams representing Biological processes. They by no mean exhaust the possibilities of  \SBGNPDLone.
+
+\fig{glycolysis} presents an example of metabolic pathway, that examplifies the use of the \glyph{EPNs} \glyph{simple chemical}, \glyph{macromolecule}, and \glyph{clone marker}, the \glyph{PNs} \glyph{process}, and the \glyph{connecting arcs} \glyph{consumption}, \glyph{production} and \glyph{catalysis}.
+
+\begin{figure}[htb]
+\begin{center}
+\scalebox{0.5}{\includegraphics{examples/glycolysis}}
+\caption{Glycolysis. This example illustrates how SBGN can be used to describe metabolic pathways.}\label{fig:glycolysis}
+\end{center}
+\end{figure}
+
+\fig{insulin} presents an example of signalling pathway, that examplifies in addition the use of the \glyph{EPNs} \glyph{phenotype}, and \glyph{state variable}, the \glyph{containers} \glyph{complex}, \glyph{compartment} and \glyph{submap}, the \glyph{PNs} \glyph{association}, and the \glyph{connecting arcs} \glyph{stimulation}. Note the complex IGF and IGF receptor, located on the boundary of the compartment. This position is only for user convenience. The complex has to belong to a given compartment in \SBGNPDLone.
+
+\begin{figure}[t]
+\begin{center}
+\scalebox{0.5}{\includegraphics{examples/insulin}}
+\caption{Insulin-like Growth Factor (IGF) signalling. This example shows the use of compartments and how details can be hidden by using a submap. The submap is shown on \fig{mapk}.}\label{fig:insulin}
+\end{center}
+\end{figure}
+
+\fig{mapk} is an expanded version of the submap present on the diagram present in \fig{insulin}. It shows the use of \glyph{tag}.
+
+\begin{figure}[b]
+\begin{center}
+\scalebox{0.5}{\includegraphics{examples/MAPK}}
+\caption{A submap of the previous diagram showing the MAPK cascade.}\label{fig:mapk}
+\end{center}
+\end{figure}
+
+\fig{muscle} introduces an SBGN \PD that spans several compartments. Note that the compartment ``synaptic vesicle'' is not \textbf{contained} in the compartment ``synaptic button'' but \textbf{overlaps} it. The \glyph{simple chemical} ``ACh'' of the ''synaptic vesicle`` is not the same \glyph{EPN} than the ``ACh'' of the ``synaptic button'' and of ``synaptic cleft''.  The situation is similar with the compartments ``ER'' and ``muscle cytosol''.  The diagram exemplifies the use of the \glyph{PN} \glyph{omitted} and \glyph{dissociation}, and the \glyph{connecting arc} \glyph{necessary stimulation}.
+
+\begin{figure}[htb]
+\begin{center}
+\scalebox{0.5}{\includegraphics{examples/muscle}}
+\caption{Neuronal/Muscle signalling. A description of inter-cellular signalling using SBGN.}\label{fig:muscle}
+\end{center}
+\end{figure}
+
+\fig{IFN} introduces the use of \SBGNPDLone to encode gene regulatory networks. It also show the use of the \glyph{EPNs} \glyph{Source} and the \glyph{logical operator} \glyph{and}.
+
+\begin{figure}[htb]
+\begin{center}
+\scalebox{0.5}{\includegraphics{examples/IFNGeneRef}}
+\caption{Activated STAT1$\alpha$ induction of the IRF1 gene. An example of gene regulation using logical operators.}\label{fig:IFN}
+\end{center}
+\end{figure}
