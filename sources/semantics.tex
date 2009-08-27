@@ -23,7 +23,7 @@ in table \ref{tab:namespacedefs}.
 \tablelasttail{\hline}
 \begin{supertabular}{|l|p{5cm}|p{5cm}|}\hline
 %
-MapDiagram & CompartmentNode, SubMapDiagram, EquivalenceNode & \\\hline
+Map & CompartmentNode, SubMap, EquivalenceNode & \\\hline
 %
 CompartmentShape & BasicEntityNode & If no \glyph{compartment} is drawn then all BasicEntityNodes are assumed to belong to an invisible ``default'' compartment.\\\hline
 EntityType & StateVariable, Annotation & \\\hline
@@ -90,8 +90,8 @@ post-translational modification in section \ref{sec:CVs} are
 reserved. Authors should avoid attaching any other meaning to them.
 
 An entity pool node has a set of state variables, which is the union
-of all the state variables used in the diagram. 
-%(see diagram \ref{fig: sbgn}).  
+of all the state variables used in the map. 
+%(see map \ref{fig: sbgn}).  
 All stateful EPNs must explicitly display the same set of
 state variables and each state variable must be assigned a value or be
 assigned the value ``Not Set''.
@@ -127,7 +127,7 @@ behind the current solution see \sect{postponed}.
 
 \subsection{Compartments}
 
-The layout of compartments in an SBGN diagram does not imply anything
+The layout of compartments in an SBGN map does not imply anything
 about the topology of compartments in the cell. Compartments should be
 bounded and may overlap. However, adjacency and the nesting of
 compartments does not imply that these compartments are next to each
@@ -203,7 +203,7 @@ EntityPoolNode is cloned in the submap, but not the main map.
 
 \section{Summary of Rules}
 
-This section summarises the rules of SBGN-PD in a form that is intended to be accessible to tool developers and those interested in validating process diagrams. Each rule has been given an identifier for ease of reference. Note that no meaning is attached to the rule identifier and any perceived ordering of the identifiers is not significant.
+This section summarises the rules of SBGN-PD in a form that is intended to be accessible to tool developers and those interested in validating process maps. Each rule has been given an identifier for ease of reference. Note that no meaning is attached to the rule identifier and any perceived ordering of the identifiers is not significant.
 
 \subsection{Entity Pool Nodes}
 

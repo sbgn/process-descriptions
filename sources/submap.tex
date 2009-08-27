@@ -3,7 +3,7 @@
 \subsection{Glyph: \glyph{Submap}}
 \label{sec:submap}
 
-A \glyph{submap} is used to encapsulate processes (including all types of nodes and edges) within one glyph.  The submap hides its content to the users, and display only input terminals (or ports), linked to \glyph{EPNs} (\sect{EPNs}).  A submap is not equivalent to an omitted process (see \sect{omitted}).  In the case of an SBGN diagram that is made available through a software tool, the content of a submap may be available to the tool.  A user could then ask the tool to expand the submap, for instance by clicking on the icon for the submap.  The tool might then expand and show the submap within the same diagram (on the same canvas), or it might open it in a different canvas.
+A \glyph{submap} is used to encapsulate processes (including all types of nodes and edges) within one glyph.  The submap hides its content to the users, and display only input terminals (or ports), linked to \glyph{EPNs} (\sect{EPNs}).  A submap is not equivalent to an omitted process (see \sect{omitted}).  In the case of an SBGN description that is made available through a software tool, the content of a submap may be available to the tool.  A user could then ask the tool to expand the submap, for instance by clicking on the icon for the submap.  The tool might then expand and show the submap within the same map (on the same canvas), or it might open it in a different canvas.
 
 \begin{glyphDescription}
 
@@ -34,7 +34,7 @@ A \glyph{submap} is used to encapsulate processes (including all types of nodes 
   \label{fig:submap-folded}
 \end{figure}
 
-The diagram in \fig{submap-unfolded} represents an unfolded version of a submap.  Here, anything outside the submap has disappeared, and the internal \glyph{tags} are not linked to the corresponding external \glyph{terminals}.  Note the tag 5, linking the compartment ``mito'' of the submap to the compartment ``mito'' outside the submap.  The compartment containing Glu6P is implicitly defined as the same as the compartment containing Glu and Fru6P.  There is no ambiguity because if Glu and Fru6P were in different compartments, one of them should have been defined within the submap.
+The map in \fig{submap-unfolded} represents an unfolded version of a submap.  Here, anything outside the submap has disappeared, and the internal \glyph{tags} are not linked to the corresponding external \glyph{terminals}.  Note the tag 5, linking the compartment ``mito'' of the submap to the compartment ``mito'' outside the submap.  The compartment containing Glu6P is implicitly defined as the same as the compartment containing Glu and Fru6P.  There is no ambiguity because if Glu and Fru6P were in different compartments, one of them should have been defined within the submap.
 
 \begin{figure}[H]
   \centering
