@@ -1,0 +1,279 @@
+\section{Semantic rules}
+
+\subsection{Namespaces}
+
+The notation has a concept of a namespace within which entities with the same 
+identifying attributes are regarded as identical. The SBGN namespaces are shown 
+in table \ref{tab:namespacedefs}.
+
+
+\begin{center}
+\tablecaption{Namespace scope definitions.}
+\label{tab:namespacedefs}
+\begin{small}
+\tablefirsthead{\hline
+  Namespace Scope & Entities affected & Notes\\\hline}
+\tablehead{\hline
+\multicolumn{3}{|l|}{\small\sl continued from previous page}\\
+\hline\hline
+  Namespace scope & Entities Effected & Notes\\\hline\hline}
+\tabletail{\hline
+\multicolumn{3}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+\begin{supertabular}{|l|p{5cm}|p{5cm}|}\hline
+%
+Map & CompartmentNode, SubMap, EquivalenceNode & \\\hline
+%
+CompartmentShape & BasicEntityNode & If no \glyph{compartment} is drawn then all BasicEntityNodes are assumed to belong to an invisible ``default'' compartment.\\\hline
+EntityType & StateVariable, Annotation & \\\hline
+ComplexType & EntityType & \\\hline
+\end{supertabular}
+\end{small}
+\end{center}
+
+\subsection{Cloning}
+
+SBGN only allows identical nodes to duplicated on a map if they are
+explicitly marked as such. This is using a \glyph{labeled clone marker} with all the
+nodes that are identical. The details are shown in table \ref{tab:processduprules}.
+
+
+\begin{center}
+\tablecaption{Duplication rules.}
+\label{tab:processduprules}
+\begin{footnotesize}
+\tablefirsthead{\hline
+  Node & Can Duplicate? & Indication & Additional Rules\\\hline}
+\tablehead{\hline
+\multicolumn{4}{|l|}{\small\sl continued from previous page}\\
+\hline\hline
+  Node & Duplicate? & Indication & Additional Rules\\\hline\hline}
+\tabletail{\hline
+\multicolumn{4}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+\begin{supertabular}{|l|c|p{4cm}|p{3.5cm}|}\hline
+%  Node & Duplicate? & How & Additional Rules\\\hline
+CompartmentNode   & N & & \\\hline
+SimpleChemicalNode & Y & \glyph{Simple clone marker} & \\\hline
+UnspecifiedEntityNode & Y & \glyph{Simple clone marker} & \\\hline
+SourceNode & N & & \\\hline
+SinkNode & N & & \\\hline
+Perturbing Agent & Y & \glyph{Simple clone marker} & \\\hline
+Phenotype & Y & \glyph{Simple clone marker} & \\\hline
+MultimerChemicalEntity & Y & \glyph{Simple clone marker} & \\\hline
+StatefulEntityPoolNode & Y & \glyph{Labeled clone marker} & \\\hline
+MacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
+MultimerMacromoleculeNode & Y & \glyph{Labeled clone marker} & \\\hline
+Nucleic\-Acid\-FeatureNode & Y & \glyph{Labeled clone marker} & \\\hline
+ComplexNode & Y & \glyph{Labeled clone marker} & \\\hline
+ProcessNode & Y & None & Duplication is implied when all EPNs linked to the ProcessNode are marked as clones.\\\hline
+OmittedProcessNode & Y & As Process Node & \\\hline
+UncertainProcessNode & Y & As Process Node & \\\hline
+AssociationNode & Y & As Process Node & \\\hline
+DissociationNode & Y & As Process Node & \\\hline
+LogicalOperatorNode & Y & None & \\\hline
+ANDNode & Y & None & \\\hline
+ORNode & Y & None & \\\hline
+NOTNode & Y & None & \\\hline
+\end{supertabular}
+\end{footnotesize}
+\end{center}
+
+\subsection{State variables}
+
+\glyph{States variables} are very simple. The variable can have a name. If the
+name is set, it should be displayed. The variable can take any
+value. The names used in the controlled vocabulary of
+post-translational modification in section \ref{sec:CVs} are
+reserved. Authors should avoid attaching any other meaning to them.
+
+An entity pool node has a set of state variables, which is the union
+of all the state variables used in the map. 
+%(see map \ref{fig: sbgn}).  
+All stateful EPNs must explicitly display the same set of
+state variables and each state variable must be assigned a value or be
+assigned the value ``Not Set''.
+
+\subsection{Compartment spanning}
+
+In all cases an EPN cannot \emph{belong} to more than one
+compartment. However, an EPN can be \emph{drawn} over more than one
+compartment. In such cases the decision on which is the owning
+compartment is deferred to the drawing tool or the
+author. ComplexNodes may contain EPNs which belong to different
+compartments and in this way a complex can be used to describe an
+entity that spans more than one compartment.
+
+This restriction makes it impossible to represent in a semantically
+correct way a macromolecule that spans more then one compartment ---
+for example a receptor protein. It is clearly desirable to be able to
+show a macromolecule in a manner that the biologist expects (i.e.\,
+spanning from the outside through the membrane to the
+inside). Therefore, the author is recommended to draw the
+macromolecule across compartment boundaries, but the underlying SBGN
+semantic model will assign it to only one. The assignment to a
+compartment may be decided by the software drawing tool or the
+author. Note that this has implications for auto-layout algorithms as
+they will only be able to treat such entity nodes as contained within
+a compartment and will have no way of knowing a macromolecule spans a
+compartment.
+
+The current solution is consistent with other Systems Biology
+representations such as SBML and BioPAX. For more information about the
+problems representing membrane spanning proteins and the rationale
+behind the current solution see \sect{postponed}.
+
+\subsection{Compartments}
+
+The layout of compartments in an SBGN map does not imply anything
+about the topology of compartments in the cell. Compartments should be
+bounded and may overlap. However, adjacency and the nesting of
+compartments does not imply that these compartments are next to each
+other physically or hat one compartment contains the other.
+
+\subsection{Modulation}
+
+It is implied, but not defined explicitly that a process has a rate at
+which it converts its input EPNs to its output EPNs. This concept is
+important in understanding how SBGN describes process modulation.
+
+\begin{enumerate}
+\item A process with no modulations has an underlying ``basal rate''
+  which describes the rate at which it converts inputs to outputs.
+\item Modulation changes the basal rate in an unspecified fashion.
+\item Stimulation is a modulation that's effect is to increase the basal rate.
+\item Inhibition is a modulation that's effect is to decrease the basal rate.
+\item The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
+\item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
+\item At most one necessary stimulation can be assigned to a process. Two necessary stimulations
+  would imply an implicit Boolean AND or OR operator. For clarity only
+  one necessary stimulation can be assigned to a process and such combinations must be
+  explicitly expressed as the Boolean operators.
+\item At most one catalysis can be assigned to a process. A catalysis
+  modulation implies that the exact biochemical mechanism underlying
+  the process is known. In this context two catalysis reactions cannot
+  be assigned to the same process as they are
+  independent reactions. Other EPNs that modulate the catalysis can be
+  assigned to the same process as modulators, stimulators, and
+  inhibitors and will have a multiplicative modulation on the reaction
+  rate defined by the catalysis.
+\end{enumerate}
+
+\subsection{Reversible Processes}
+\label{sec: semantics reversible procs}
+
+Process nodes are deemed to be reversible if they have production arcs on both ``sides'' of the process. A mixture of consumption and production arcs on the same side of a process is not permitted. Semantically the production arc can be thought of as allowing a reversible flow of entities between the process and EPN. A Consumption arc only permits an irreversible flow from the EPN to the process. In this way the consumption arc forces the process to be irreversible. Consumption arcs cannot be associated with both sides of a process as this would prohibit any flow through the process.
+
+The semantics of modulation is the same as for irreversible processes, .i.e. the amount of entity in the modulation pool affects the rate of the process.
+
+Note that a sink cannot be linked to a reversible process as a sink and only received entities, and so would effectively make the process irreversible.
+
+\subsection{Submaps}
+
+Submaps are a visual device that allow a map to be split into several
+views. They remain, however, part of the main map and share its
+namespace. As a test of validity it should be possible to reintroduced
+a submap into the main map by eliminating the SubMapNode and merging
+the equivalent EntityPoolNodes in both maps.
+
+\subsubsection{Rules for mapping to submaps}
+
+An EntityPoolNode in the main map can be mapped to one in the submap
+using a TagNode in the submap and SubMapTerminals (see \sect{submap}) in the main map. For a
+mapping between map and submap to exists the following must be true:
+
+\begin{enumerate}
+\item The identifiers in the TagNode and SubMapTerminals must be identical.
+\item The EntityPoolNodes must be identical.
+\end{enumerate}
+
+\subsubsection{Requirement to define a mapping}
+
+If a map and submap both contain the same EntityPoolNode, then a
+mapping between them must be defined as above.
+
+\subsubsection{Cloning consistency}
+
+If an EntityPoolNode is cloned in the main map then it must also be
+marked as cloned in the submap even if there is only one copy of the
+EntityPoolNode in the submap. The converse rule also applies where the
+EntityPoolNode is cloned in the submap, but not the main map.
+
+\section{Summary of Rules}
+
+This section summarises the rules of SBGN-PD in a form that is intended to be accessible to tool developers and those interested in validating process maps. Each rule has been given an identifier for ease of reference. Note that no meaning is attached to the rule identifier and any perceived ordering of the identifiers is not significant.
+
+\subsection{Entity Pool Nodes}
+
+\begin{description}
+\item[PD1] The identity of an EPN is defined by a combination of its compartment, entity type (e.g. complex or macromolecule), name and state variables (if any).
+\item[PD2] A Complex’s identity consists of the identity of its subunits and a name is optional. All complexes with the same name should have the same subunits.
+\item[PD3] An EPN may belong to only one compartment.
+\item[PD4] An EPN belongs to only one compartment. If no compartment is draw it is assumed to belong to a “default” compartment.
+\item[PD5] An EPN can overlap more than one compartment and in this case it is deferred to the drawing tool or author to assign the owning compartment. Note this rule need not apply in cases where SBGN is draw by hand.
+\item[PD6] A Complex may contain subunits that belong to different compartments (the complex itself will belong to only one, however).
+\item[PD7] The layout or organisation of a compartment does not imply anything about its topology.
+\item[PD8] The layout or organisation of the EPNs in a complex does not imply any information about topology.
+\item[PD10] Complexes can be nested. This does imply information about the complex’s topology.
+\item[PD11] A complex should consist of different EPNs. If two or more elements of the complex are identical then they should be replaced by a multimer.
+\item[PD12] Source and sink nodes must have no name and be attached to only one consumption or production arc.
+\item[PD13] An EPN must be connected to at least 1 consumption, production or modulation arc.
+\item[PD14] An EPN is not allowed to be a substrate and product of the same process. This applies to cloned EPNs as well.
+States
+\item[PD15] All state variables in a stateful EPN should have different names.
+\item[PD16] A blank state variable has the value “unset”.
+\item[PD17] The state of a complex is the sum of its subunits’ and its own state variables.
+\item[PD48] The \glyph{Sink} cannot be linked to a reversible process.
+\end{description}
+
+\subsection{Compartments}
+
+\begin{description}
+\item[PD18] Compartments cannot be nested. Compartments may overlap, but overlap does not imply containment.
+\item[PD19] The layout or organisation of a compartment does not imply anything about its topology.
+\item[PD20] If no compartment is draw it is assumed to belong to a “default” compartment.
+\item[PD21] If one or more compartment glyphs are drawn then all EPNs must owned by a compartment glyph.
+\end{description}
+
+\subsection{Process Nodes (PN)}
+
+\begin{description}
+\item[PD22] A Process Node should have non-zero number of consumption and production links.
+\item[PD23] All substrates of the Process Node should be different. If several copies of the same EPN are involved in the process, the cardinality label of consumption arc should be used.
+\item[PD24] All products of the PN should be different. If several copies of the same EPN are produced in the process, the cardinality label of production arc should be used.
+\item[PD25] Once the cardinality label is added to one arc connected to a PN all other such arcs should display a cardinality label.
+\item[PD26] The cardinality of an arc can be undefined or unknown, in which case a question mark (``?'') should be used.
+\item[PD27] A PN should correspond to only one process or series of connected process. The same set of EPNs should be connected by different PNs if they are consumed and produced by different processes.
+\item[PD28] The composition of the products of an association process should be equivalent to its substrates
+\item[PD29] The composition of the products of a dissociation process should be equivalent to its substrate.
+\end{description}
+
+\subsection{Modulation and Logical Operators}
+
+\begin{description}
+\item[PD30] A PN with no modulations has an underlying “basal rate” which describes the rate at which it converts inputs to outputs.
+\item[PD31] Modulation changes the basal rate in an unspecified fashion.
+\item[PD32] Stimulation is a modulation that’s effect is to increase the basal rate.
+\item[PD33] Inhibition is a modulation that’s effect is to decrease the basal rate.
+\item[PD34] The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
+\item[PD35] Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
+\item[PD36] At most one trigger can be assigned to a process. Two triggers would imply an implicit Boolean AND or OR operator, so for clarity only one trigger can be assigned to a process and such combinations must be explicitly expressed as the Boolean operators.
+\item[PD37] The PN should have only one Catalysis arc connected to it. A catalysis modulation implies that the exact biochemical mechanism underlying the process is known.
+\item[PD38] The PN should have only one Trigger arc connected to it.
+\item[PD39] AND and OR Boolean logic gates should have two or more input and one output.
+\item[PD40] A NOT gate can only have one input and output.
+\end{description}
+
+\subsection{Cloning and Sub-Maps}
+
+\begin{description}
+\item[PD41] Duplicate EPNs must be marked as clones.
+\item[PD42] Duplicate stateful EPNs must use a Labelled Clone Marker.
+\item[PD43] Duplicate non-stateful EPNs must use a simple clone marker.
+\item[PD44] A sub-map shares the same namespace as its main map.
+\item[PD45] To map an EPN in the main map to one in a sub-map, the SubMap glyph in the main map must contain an identifier that matches the identifier of a Tag in the sub-map. Both EPNs must be identical.
+\item[PD46] If a main map and a sub-map contain an identical EPN then a mapping must exist between them.
+\item[PD47] If an EPN is cloned in the main map, then it must be marked as cloned in the sub-map, with the same identifier in both maps. This is true if there is only one EPN of this type in the submap.
+\end{description}
