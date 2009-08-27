@@ -1,13 +1,13 @@
-\chapter{Process Diagram grammar}
+\chapter{Process Description Language Grammar}
 \label{chp:grammar}
 
 \section{Overview}
 
 In this chapter, we describe how the glyphs of SBGN can be combined
-to make a valid SBGN diagram. To do this, we must at the very least
+to make a valid SBGN map. To do this, we must at the very least
 define what glyphs can be connected to each other. This is called
 syntax. Next, we must define rules over and above connection rules,
-such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a SBGN diagram without external help, and a writer is to create one that reflects his understanding of a biological system.
+such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a SBGN map without external help, and a writer is to create one that reflects his understanding of a biological system.
 
 In this section we start off by describing the concepts of the
 \PD{} notation. Next a detailed description of the syntax is provided
@@ -77,7 +77,7 @@ In order to formalize the conceptual representation described above
 and the semantic rules that we will describe later, we have developed a UML
 Domain Object Model of SBGN\@. This defines what would otherwise be
 vaguely defined in the SBGN specification, and enables us to define
-clearly what is a valid SBGN diagram.
+clearly what is a valid SBGN map.
 
 The model is separated into two layers. The Visual Layer
 (\fig{sbgn_visual}) directly maps to the glyphs used to
@@ -138,12 +138,12 @@ Name & \multicolumn{2}{|c|}{Attributes} & Glyph & Comment\\\cline{2-3}
 
 \begin{supertabular}{|p{3cm}|p{4cm}|p{5.5cm}|p{2.5cm}|p{\commlen}|}\hline
 %
-MapDiagram & name (I) & Name of the map. & N/A & The diagram is the visualisation of a SBGN map.\\\hline
+Map & name (I) & Name of the map. & N/A & This is the visualisation of a SBGN map.\\\hline
 %
-SubmapDiagram & mainMapName (I) & Name of the main map this is a sub-map of.& N/A & \multirow{2}{\commlen}{A SBGN diagram used to define a SBGN submap}\\
+Submap & mainMapName (I) & Name of the main map this is a sub-map of.& N/A & \multirow{2}{\commlen}{A SBGN map used to define a SBGN submap}\\
 & name (I) & Name of the sub-map. & & \\\hline
 %
-BasicEntity\-Node & & & Abstract & The most fundamental node type. Any node that can be drawn on a MapDiagram inherits from this.\\\hline
+BasicEntity\-Node & & & Abstract & The most fundamental node type. Any node that can be drawn on a Map inherits from this.\\\hline
 %
 ConsumableNode & & & Abstract & Nodes that are connected to the start of a consumption arc.\\\hline
 %
@@ -293,9 +293,9 @@ Name & \multicolumn{2}{|c|}{Attributes} & Description & Visual Mapping\\\cline{2
 
 \begin{supertabular}{|p{3cm}|p{4cm}|p{6cm}|p{\desclen}|p{\mappinglen}|}\hline
 %
-Map & name (I) & A name or identifier for the map. & The biological pathway that is represented by the SBGN diagram. & MapDiagram\\\hline
+Map & name (I) & A name or identifier for the map. & The biological pathway that is represented by the SBGN map. & Map\\\hline
 %
-SubMap & name (I) & The name of the submap. &  & SubMapDiagram\\
+SubMap & name (I) & The name of the submap. &  & SubMap\\
  & mainMapName (I) & The name of the map that refers to this submap. & & \\\hline
 %
 Compartment & name (I) & The name of the compartment. & & CompartmentNode\\\hline
