@@ -16,7 +16,7 @@ in table \ref{tab:namespacedefs}.
 \tablehead{\hline
 \multicolumn{3}{|l|}{\small\sl continued from previous page}\\
 \hline\hline
-  Namespace scope & Entities Effected & Notes\\\hline\hline}
+  Namespace scope & Entities affected & Notes\\\hline\hline}
 \tabletail{\hline
 \multicolumn{3}{|r|}{\small\sl continued on next page}\\
 \hline}
@@ -34,9 +34,8 @@ ComplexType & EntityType & \\\hline
 
 \subsection{Cloning}
 
-SBGN only allows identical nodes to duplicated on a map if they are
-explicitly marked as such. This is using a \glyph{labeled clone marker} with all the
-nodes that are identical. The details are shown in table \ref{tab:processduprules}.
+SBGN allows identical nodes to be duplicated on a map if they are
+explicitly marked as such. This is done using a \glyph{clone marker}. The details are shown in table \ref{tab:processduprules}.
 
 
 \begin{center}
@@ -44,7 +43,7 @@ nodes that are identical. The details are shown in table \ref{tab:processduprule
 \label{tab:processduprules}
 \begin{footnotesize}
 \tablefirsthead{\hline
-  Node & Can Duplicate? & Indication & Additional Rules\\\hline}
+  Node & Can be duplicated & Indication & Additional Rules\\\hline}
 \tablehead{\hline
 \multicolumn{4}{|l|}{\small\sl continued from previous page}\\
 \hline\hline
@@ -83,28 +82,28 @@ NOTNode & Y & None & \\\hline
 
 \subsection{State variables}
 
-\glyph{States variables} are very simple. The variable can have a name. If the
-name is set, it should be displayed. The variable can take any
+A \glyph{states variable} may have a name. If the
+name is set, it should be displayed. A variable can take any
 value. The names used in the controlled vocabulary of
 post-translational modification in section \ref{sec:CVs} are
-reserved. Authors should avoid attaching any other meaning to them.
+reserved. Authors must not attach any other meaning to them.
 
-An entity pool node has a set of state variables, which is the union
-of all the state variables used in the map. 
+An \glyph{entity pool node} intrisicaly possesses a set of \glyph{state variables}, which is the union
+of all the \glyph{state variables} displayed on all the related \glyph{entity pool nodes} in the map. 
 %(see map \ref{fig: sbgn}).  
-All stateful EPNs must explicitly display the same set of
-state variables and each state variable must be assigned a value or be
+All stateful \glyph{EPNs} must explicitly display the same set of
+\glyph{state variables} and each \glyph{state variable} must be assigned a value, or be
 assigned the value ``Not Set''.
 
 \subsection{Compartment spanning}
 
-In all cases an EPN cannot \emph{belong} to more than one
-compartment. However, an EPN can be \emph{drawn} over more than one
-compartment. In such cases the decision on which is the owning
-compartment is deferred to the drawing tool or the
-author. ComplexNodes may contain EPNs which belong to different
-compartments and in this way a complex can be used to describe an
-entity that spans more than one compartment.
+An \glyph{EPN} cannot \emph{belong} to more than one
+\glyph{compartment}. However, an \glyph{EPN} can be \emph{drawn} over more than one
+\glyph{compartment}. In such cases, the decision on which is the owning
+\glyph{compartment} is deferred to the drawing tool or the
+author. ComplexNodes may contain \glyph{EPNs} which belong to different
+\glyph{compartments} and in this way a \glyph{complex} can be used to describe
+entities that span more than one {compartment}.
 
 This restriction makes it impossible to represent in a semantically
 correct way a macromolecule that spans more then one compartment ---
@@ -114,10 +113,10 @@ spanning from the outside through the membrane to the
 inside). Therefore, the author is recommended to draw the
 macromolecule across compartment boundaries, but the underlying SBGN
 semantic model will assign it to only one. The assignment to a
-compartment may be decided by the software drawing tool or the
+\glyph{compartment} may be decided by the software drawing tool or the
 author. Note that this has implications for auto-layout algorithms as
-they will only be able to treat such entity nodes as contained within
-a compartment and will have no way of knowing a macromolecule spans a
+they will only be able to treat such \glyph{entity pool nodes} as contained within
+a \glyph{compartment} and will have no way of knowing a macromolecule spans a
 compartment.
 
 The current solution is consistent with other Systems Biology
@@ -127,7 +126,7 @@ behind the current solution see \sect{postponed}.
 
 \subsection{Compartments}
 
-The layout of compartments in an SBGN map does not imply anything
+The layout of compartments in an SBGN \PDm does not imply anything
 about the topology of compartments in the cell. Compartments should be
 bounded and may overlap. However, adjacency and the nesting of
 compartments does not imply that these compartments are next to each
@@ -136,70 +135,71 @@ other physically or hat one compartment contains the other.
 \subsection{Modulation}
 
 It is implied, but not defined explicitly that a process has a rate at
-which it converts its input EPNs to its output EPNs. This concept is
+which it converts its input \glyph{EPNs} to its output \glyph{EPNs}. This concept is
 important in understanding how SBGN describes process modulation.
 
 \begin{enumerate}
-\item A process with no modulations has an underlying ``basal rate''
+\item A \glyph{process} with no modulations has an underlying ``basal rate''
   which describes the rate at which it converts inputs to outputs.
-\item Modulation changes the basal rate in an unspecified fashion.
-\item Stimulation is a modulation that's effect is to increase the basal rate.
-\item Inhibition is a modulation that's effect is to decrease the basal rate.
-\item The above types of modulation, when assigned to the same process are combined and have a multiplicative effect on the basal rate of the process.
-\item Modulators that do not interact with each other in the above manner should be drawn as modulating different process nodes. Their effect is therefore additive.
-\item At most one necessary stimulation can be assigned to a process. Two necessary stimulations
-  would imply an implicit Boolean AND or OR operator. For clarity only
-  one necessary stimulation can be assigned to a process and such combinations must be
-  explicitly expressed as the Boolean operators.
-\item At most one catalysis can be assigned to a process. A catalysis
+\item A \glyph{modulation} changes the basal rate in an unspecified fashion.
+\item A \glyph{stimulation} is a modulation that increases the basal rate.
+\item An \glyph{inhibition} is a modulation that decreases the basal rate.
+\item The above types of modulation, when assigned to the same process, are combined and have a multiplicative effect on the basal rate of the process.
+\item Modulators that do not interact with each other in the above manner, should be drawn as modulating different process nodes. Their effect is therefore additive.
+\item At most one \glyph{necessary stimulation} can be assigned to a \glyph{process}. Two \glyph{necessary stimulations}
+  would imply an implicit AND or OR operator. For clarity only
+  one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
+  explicitly expressed using \glyph{logical operators}.
+\item At most one \glyph{catalysis} can be assigned to a \glyph{process}. A catalysis
   modulation implies that the exact biochemical mechanism underlying
-  the process is known. In this context two catalysis reactions cannot
-  be assigned to the same process as they are
-  independent reactions. Other EPNs that modulate the catalysis can be
-  assigned to the same process as modulators, stimulators, and
-  inhibitors and will have a multiplicative modulation on the reaction
+  the process is known. In this context two \glyph{catalysis} cannot
+  be assigned to the same \glyph{process} as they represent
+  independent reactions. Other \glyph{EPNs} can be
+  assigned to the same process than a catalysis, such as modulators, stimulators, and
+  inhibitors, and will have a multiplicative modulation on the reaction
   rate defined by the catalysis.
 \end{enumerate}
 
 \subsection{Reversible Processes}
 \label{sec: semantics reversible procs}
 
-Process nodes are deemed to be reversible if they have production arcs on both ``sides'' of the process. A mixture of consumption and production arcs on the same side of a process is not permitted. Semantically the production arc can be thought of as allowing a reversible flow of entities between the process and EPN. A Consumption arc only permits an irreversible flow from the EPN to the process. In this way the consumption arc forces the process to be irreversible. Consumption arcs cannot be associated with both sides of a process as this would prohibit any flow through the process.
+\glyph{Process nodes} are deemed to be reversible if they have \glyph{production} arcs on both ``sides'' of the \glyph{process}. A mixture of \glyph{consumption} and \glyph{production} arcs on the same side of a \glyph{process} is not permitted. Semantically, the \glyph{production} arc can be thought of as allowing a reversible flow of entities between the \glyph{process} and the \glyph{EPN}. A \glyph{consumption} arc only permits an irreversible flow from the \glyph{EPN} to the \glyph{process}. In this way the \glyph{consumption} arc forces the \glyph{process} to be irreversible. \glyph{Consumption} arcs cannot be associated with both sides of a \glyph{process} as this would prohibit any flow through the \glyph{process}.
 
-The semantics of modulation is the same as for irreversible processes, .i.e. the amount of entity in the modulation pool affects the rate of the process.
+The semantics of \glyph{modulation} is the same as for irreversible processes, .i.e. the amount of entity in the modulation pool affects the rate of the process.
 
-Note that a sink cannot be linked to a reversible process as a sink and only received entities, and so would effectively make the process irreversible.
+Note that a sink cannot be linked to a reversible process as it only received entities, and so would effectively make the process irreversible.
 
 \subsection{Submaps}
 
 Submaps are a visual device that allow a map to be split into several
-views. They remain, however, part of the main map and share its
+pieces. The ``content'' of submaps remains, however, part of the main map and share its
 namespace. As a test of validity it should be possible to reintroduced
-a submap into the main map by eliminating the SubMapNode and merging
-the equivalent EntityPoolNodes in both maps.
+a submap into the main map by eliminating the \glyph{submaps} and merging
+the equivalent \glyph{entity pool nodes} in both maps.
 
 \subsubsection{Rules for mapping to submaps}
 
-An EntityPoolNode in the main map can be mapped to one in the submap
-using a TagNode in the submap and SubMapTerminals (see \sect{submap}) in the main map. For a
+An \glyph{entity pool node} in the main map can be mapped to one in the \glyph{submap}
+using a \glyph{tag} in the \glyph{submap} and a submap terminal (see \sect{submap}) in the main map. For a
 mapping between map and submap to exists the following must be true:
 
 \begin{enumerate}
-\item The identifiers in the TagNode and SubMapTerminals must be identical.
-\item The EntityPoolNodes must be identical.
+\item The identifiers in the \glyph{tag} and the submap terminal must be identical.
+\item The \glyph{entity pool nodes} must be identical.
 \end{enumerate}
 
-\subsubsection{Requirement to define a mapping}
-
-If a map and submap both contain the same EntityPoolNode, then a
-mapping between them must be defined as above.
+% \subsubsection{Requirement to define a mapping}
+% 
+% If a map and a submap both contain the same EntityPoolNode, then a
+% mapping between them must be defined as above.
+%% NLN: This is identical to above
 
 \subsubsection{Cloning consistency}
 
-If an EntityPoolNode is cloned in the main map then it must also be
-marked as cloned in the submap even if there is only one copy of the
-EntityPoolNode in the submap. The converse rule also applies where the
-EntityPoolNode is cloned in the submap, but not the main map.
+If an \glyph{entity pool node} is cloned in the main map, then it must also be
+marked as cloned in the \glyph{submap} even if there is only one copy of the \glyph{entity pool node}
+in the \glyph{submap}. The converse rule also applies where the
+\glyph{entity pool node} is cloned in the \glyph{submap}, but not the main map.
 
 \section{Summary of Rules}
 
