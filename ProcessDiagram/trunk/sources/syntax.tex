@@ -3,7 +3,7 @@
 The syntax of the SBGN \PDl is defined in the form of an incidence matrix. 
 An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Input (I) means that the arc can begin at that node. Output (O) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
 
-For simplicity Logical operators are treated as EPNs.
+For simplicity logical operators are treated as process nodes.
 
 \subsection{Entity Pool Nodes connectivity definition}  
 \begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c|c||}
@@ -12,79 +12,79 @@ For simplicity Logical operators are treated as EPNs.
 \raisebox{20pt}{$Arc \backslash EPN$} &\vglyph{macromolecule} & \vglyph{simple chemical} & 
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
 \vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source} & \vglyph{sink} &  
-\vglyph{perturbing agent} &  \vglyph{phenotype} & \vglyph{submap}\\ \hline 
-\glyph{consumption}      & I & I & I & I & I & I &   & I &   &   & & \\ \hline 
-\glyph{production}        & O & O & O & O & O & O &   & & O &   &   & \\ \hline 
-\glyph{modulation}        & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
-\glyph{stimulation}        & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
-\glyph{catalysis}          & I & I & I & I & I &   &   &   & & I & O & \\ \hline 
-\glyph{inhibition}          & I & I & I & I & I & I &   &   & & I & O & \\ \hline 
-\glyph{necessary stimulation} & I & I & I & I & I & I &   &  &  & I & O & \\ \hline 
-\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & & \\ \hline 
-\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &  &  &   &O \\ \hline \hline
+\vglyph{perturbing agent} &  \vglyph{submap}\\ \hline 
+\glyph{consumption}      & I & I & I & I & I & I &   & I &   & & \\ \hline 
+\glyph{production}        & O & O & O & O & O & O &   & & O &  & \\ \hline 
+\glyph{modulation}        & I & I & I & I & I & I &   &   & & I & \\ \hline 
+\glyph{stimulation}        & I & I & I & I & I & I &   &   & & I & \\ \hline 
+\glyph{catalysis}          & I & I & I & I & I &   &   &   & & I & \\ \hline 
+\glyph{inhibition}          & I & I & I & I & I & I &   &   & & I & \\ \hline 
+\glyph{necessary stimulation} & I & I & I & I & I & I &   &  &  & I & \\ \hline 
+\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & \\ \hline 
+\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &  & &O \\ \hline \hline
 \end{tabular}
 
 
 \subsection{Process Nodes connectivity definition}
 
-\begin{tabular}{||c|c|c|c|c|c|c|c|c||}
+\begin{tabular}{||c|c|c|c|c|c|c|c|c|c||}
 \hline
 \hline
 \raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
-\vglyph{uncertain process} & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
+\vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
 \vglyph{or} & \vglyph{not} \\ \hline 
-\glyph{consumption} & O & O & O & O    & O(1) &      &      &      \\ \hline
-\glyph{production}  & I & I & I & I(1) & I    &      &      &      \\ \hline
-\glyph{modulation}  & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{stimulation} & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{catalysis}   & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{inhibition}  & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{necessary stimulation}     & O & O & O &      &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{logic arc}   &   &   &   &      &      & O    & O    & O(1) \\ \hline
-\glyph{equivalence arc} &   &   &  &   &      &      &      &      \\ \hline \hline
+\glyph{consumption} & O & O &  O & & O    & O(1) &      &      &      \\ \hline
+\glyph{production}  & I & I & I & & I(1) & I    &      &      &      \\ \hline
+\glyph{modulation}  & O & O & O & O  &   &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{stimulation} & O & O & O & O &    &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{catalysis}   & O & O & O & O &    &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{inhibition}  & O & O & O &  O &    &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{necessary stimulation}     & O & O & O &  O &    &      & I(1) & I(1) & I(1) \\ \hline
+\glyph{logic arc}   &   &   &   &      & &      & O    & O    & O(1) \\ \hline
+\glyph{equivalence arc} &   &   &  &    & &      &      &      &      \\ \hline \hline
 \end{tabular}
 
 \subsection{Containment definition}
-There are three EPN types allowing containment of other EPN in SBGN: \glyph{compartment} and
-\glyph{complex}. The next table describe relationship between EPN elements of SBGN
-and these three containers. Plus sign means that the element is able to be
+There are two \PD glyph that allow containment of glyphs: \glyph{compartment} and
+\glyph{complex}. The next table describe relationship between \PD glyphs
+and these containers. A plus sign means that the element is able to be
 contained within a container. An empty cell means containment is not allowed.
 
 
 \begin{tabular}{||c|c|c|c||}
 \hline
 \hline
-$EPN \backslash Containers$  & \glyph{complex} & \glyph{compartment} & \glyph{submap} \\ \hline
-\glyph{unspecified entity}    &         +       &          +          &        +       \\ \hline
-\glyph{simple chemical}      &         +       &          +          &        +       \\ \hline
-\glyph{macromolecule}        &         +       &          +          &        +       \\ \hline
-\glyph{nucleic acid feature}   &         +       &          +          &        +       \\ \hline 
-\glyph{multimer}             &         +       &          +          &        +       \\ \hline
-\glyph{source}          &         -       &          +          &        +       \\ \hline 
-\glyph{sink}          &         -       &          +          &        +       \\ \hline 
-\glyph{perturbing agent}          &         -       &          +          &        +       \\ \hline
-\glyph{phenotype}           &         -       &          +          &        +       \\ \hline
-\glyph{tag}                  &         -       &          +          &        +       \\ \hline
-\glyph{complex}              &         +       &          +          &        +       \\ \hline
-\glyph{compartment}          &         -       &          -          &        +       \\ \hline
-\glyph{submap}               &         -       &          +          &        +       \\ \hline
-\glyph{process}             &         -       &          +          &        +       \\ \hline
-\glyph{omitted process}      &         -       &          +          &        +       \\ \hline
-\glyph{uncertain process}    &         -       &          +          &        +       \\ \hline
-\glyph{association}          &         -       &          +          &        +       \\ \hline
-\glyph{dissociation}         &         -       &          +          &        +       \\ \hline
-\glyph{consumption}          &         -       &          +          &        +       \\ \hline
-\glyph{production}           &         -       &          +          &        +       \\ \hline
-\glyph{modulation}           &         -       &          +          &        +       \\ \hline
-\glyph{stimulation}          &         -       &          +          &        +       \\ \hline
-\glyph{catalysis}            &         -       &          +          &        +       \\ \hline
-\glyph{inhibition}           &         -       &          +          &        +       \\ \hline
-\glyph{necessary stimulation}   &         -       &          +          &        +       \\ \hline
-\glyph{logic arc}            &         -       &          +          &        +       \\ \hline
-\glyph{equivalence arc}      &         -       &          +          &        +       \\ \hline
-\glyph{and}                  &         -       &          +          &        +       \\ \hline
-\glyph{or}                   &         -       &          +          &        +       \\ \hline
-\glyph{not}                  &         -       &          +          &        +       \\ \hline
+$Glyph \backslash Containers$  & \glyph{complex} & \glyph{compartment} \\ \hline
+\glyph{unspecified entity}    &         +       &          +         \\ \hline
+\glyph{simple chemical}      &         +       &          +         \\ \hline
+\glyph{macromolecule}        &         +       &          +        \\ \hline
+\glyph{nucleic acid feature}   &         +       &          +      \\ \hline 
+\glyph{multimer}             &         +       &          +         \\ \hline
+\glyph{source}          &         -       &          +          \\ \hline 
+\glyph{sink}          &         -       &          +          \\ \hline 
+\glyph{perturbing agent}          &         -       &          +      \\ \hline
+\glyph{phenotype}           &         -       &          +         \\ \hline
+\glyph{tag}                  &         -       &          +          \\ \hline
+\glyph{complex}              &         +       &          +       \\ \hline
+\glyph{compartment}          &         -       &          -      \\ \hline
+\glyph{submap}               &         -       &          +         \\ \hline
+\glyph{process}             &         -       &          +         \\ \hline
+\glyph{omitted process}      &         -       &          +     \\ \hline
+\glyph{uncertain process}    &         -       &          +        \\ \hline
+\glyph{association}          &         -       &          +         \\ \hline
+\glyph{dissociation}         &         -       &          +         \\ \hline
+\glyph{consumption}          &         -       &          +        \\ \hline
+\glyph{production}           &         -       &          +          \\ \hline
+\glyph{modulation}           &         -       &          +         \\ \hline
+\glyph{stimulation}          &         -       &          +          \\ \hline
+\glyph{catalysis}            &         -       &          +          \\ \hline
+\glyph{inhibition}           &         -       &          +         \\ \hline
+\glyph{necessary stimulation}   &         -       &          +     \\ \hline
+\glyph{logic arc}            &         -       &          +          \\ \hline
+\glyph{equivalence arc}      &         -       &          +      \\ \hline
+\glyph{and}                  &         -       &          +         \\ \hline
+\glyph{or}                   &         -       &          +          \\ \hline
+\glyph{not}                  &         -       &          +         \\ \hline
 \hline
 \end{tabular}
 
@@ -113,8 +113,7 @@ There are additional syntactic rules that must be applied in addition to those d
 
 \subsubsection{\glyph{Process}}
  \begin{enumerate}
-    \item PN should have nonzero number of \glyph{consumption} links.
-    \item PN should have nonzero number of \glyph{production} links.
+   \item PN should have nonzero number of \glyph{production} links.
     \item All substrates of the process should be different. If several 
     copies of the same EPN are involved in the process, cardinality label of 
     \glyph{consumption} arc should be used.

@@ -16,9 +16,9 @@
    inkscape:version="0.46"
    version="1.0"
    sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images"
-   sodipodi:docname="refcard-PD.svg"
+   sodipodi:docname="refcard.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/images/refcard.png"
+   inkscape:export-filename="/Users/smoodie/Documents/sbgn-pd/images/refcard.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -41,16 +41,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568542"
+     inkscape:zoom="1"
      inkscape:cx="966.24921"
      inkscape:cy="161.13106"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1680"
-     inkscape:window-height="1031"
-     inkscape:window-x="-5"
+     inkscape:window-width="1440"
+     inkscape:window-height="878"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -586,51 +586,47 @@
            id="tspan3179">sink</tspan></text>
     </g>
     <g
-       id="g16509"
-       transform="translate(468.93074,-255.78165)">
-      <g
-         transform="translate(0,349.87008)"
-         id="g12221">
-        <path
-           transform="matrix(0.747276,-1.0890006e-3,3.3561651e-4,0.4026207,-59.202527,63.009435)"
-           d="M 194.74566,496.53679 L 220.32443,540.70013 L 194.86724,584.93367 L 143.83128,585.00386 L 118.25251,540.84052 L 143.7097,496.60698 L 194.74566,496.53679 z"
-           inkscape:randomized="0"
-           inkscape:rounded="0"
-           inkscape:flatsided="true"
-           sodipodi:arg2="-0.52497404"
-           sodipodi:arg1="-1.0485729"
-           sodipodi:r2="45.994709"
-           sodipodi:r1="51.036007"
-           sodipodi:cy="540.77032"
-           sodipodi:cx="169.28847"
-           sodipodi:sides="6"
-           id="path2170"
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.27887845;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           sodipodi:type="star" />
-        <text
-           sodipodi:linespacing="125%"
-           id="text10999"
-           y="286.16791"
-           x="48.639114"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-           xml:space="preserve"><tspan
-             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
-             y="286.16791"
-             x="48.639114"
-             id="tspan11001"
-             sodipodi:role="line">LABEL</tspan></text>
-      </g>
+       id="g12221"
+       transform="translate(468.93074,94.08843)">
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.27887845;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path2170"
+         sodipodi:sides="6"
+         sodipodi:cx="169.28847"
+         sodipodi:cy="540.77032"
+         sodipodi:r1="51.036007"
+         sodipodi:r2="45.994709"
+         sodipodi:arg1="-1.0485729"
+         sodipodi:arg2="-0.52497404"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 194.74566,496.53679 L 220.32443,540.70013 L 194.86724,584.93367 L 143.83128,585.00386 L 118.25251,540.84052 L 143.7097,496.60698 L 194.74566,496.53679 z"
+         transform="matrix(0.747276,-1.0890006e-3,3.3561651e-4,0.4026207,-59.202527,63.009435)" />
       <text
-         id="text16341"
-         y="634.11359"
-         x="117.48362"
-         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-         xml:space="preserve"><tspan
-           y="634.11359"
-           x="117.48362"
-           id="tspan16343"
-           sodipodi:role="line">observable</tspan></text>
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="48.639114"
+         y="286.16791"
+         id="text10999"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan11001"
+           x="48.639114"
+           y="286.16791"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans">LABEL</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="586.41437"
+       y="378.33194"
+       id="text16341"><tspan
+         sodipodi:role="line"
+         id="tspan16343"
+         x="586.41437"
+         y="378.33194">phenotype</tspan></text>
     <g
        id="g16517"
        transform="translate(-0.2270888,-264.8642)">
