@@ -96,13 +96,13 @@ There are additional syntactic rules that must be applied in addition to those d
 \subsubsection{EPNs}
 
  \begin{enumerate}
-    \item If \glyph{macromolecule} has more than one \glyph{state variable}, 
+    \item If a \glyph{macromolecule} has more than one \glyph{state variable}, 
     all \glyph{state variables} should have a name;
-    \item All \glyph{state variables} of the \glyph{macromolecule} should have 
+    \item All \glyph{state variables} of a \glyph{macromolecule} should have 
     different names;
-    \item \glyph{Complex} should consists of different EPNs. If two or more 
-    elements of the complex are identical they should be replaced by multimer. 
-    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
+%    \item A \glyph{complex} should consists of different EPNs. If two or more 
+%    elements of the complex are identical they should be replaced by multimer. 
+%    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
   \end{enumerate}
 
 \subsubsection{\glyph{Source} and \glyph{Sink}}
@@ -113,50 +113,50 @@ There are additional syntactic rules that must be applied in addition to those d
 
 \subsubsection{\glyph{Process}}
  \begin{enumerate}
-   \item PN should have nonzero number of \glyph{production} links.
+%   \item PN should have nonzero number of \glyph{production} links.
     \item All substrates of the process should be different. If several 
-    copies of the same EPN are involved in the process, cardinality label of 
+    copies of the same \glyph{EPN} are involved in the process, cardinality label of 
     \glyph{consumption} arc should be used.
     \item All products of the process should be different. If several copies 
-    of the same EPN are produced in the process, cardinality label of 
+    of the same \glyph{EPN} are produced in the process, cardinality label of 
     \glyph{production} arc should be used.
-    \item Once cardinality label set to one arc of the EPN all other arcs should
+    \item Once cardinality label set to one arc of the \glyph{EPN} all other arcs should
     make their cardinality visible, even if it is undefined. In a case
     cardinality is undefined or unknown question mark (``?'') should be placed as cardinality label. 
 %    \item The EPN is not allowed to be a substrate and product of the same 
 %    process. This rule is applicable to cloned EPNs as well.
-    \item PN should have only one \glyph{Catalysis} arc connected to it. If
-    there more than one catalyst known for the process several PNs should be
-    drawn. 
-    \item PN should have only one \glyph{Necessary Stimulation} arc connected to it. If
-    there is more than one EPN acting as a necessary stimulator on a process then several a logic gate should be used.    \end{enumerate}  
+    \item \glyph{PNs} should have only one \glyph{Catalysis} arc connected to them. If
+    there more than one catalyst known to affect the process, several \glyph{PNs} should be
+    drawn or a \glyph{logical operator} used 
+    \item \glyph{PNs} should have only one \glyph{necessary stimulation} arc connected to it. If
+    there is more than one \glyph{EPN} acting as a necessary stimulator on a process, then a \glyph{logic operator} should be used.    \end{enumerate}  
 
 \subsubsection{\glyph{Association}}
 
   \begin{enumerate}
-    \item Composition of the \glyph{complex} or \glyph{multimer} produced by
-    \glyph{association} should be identical to set of \glyph{association} substrates.
-    \item If \glyph{association} produces \glyph{complex}, than number of 
+    \item The composition of the \glyph{complex} or \glyph{multimer} produced by
+    an \glyph{association} should be identical to the set of \glyph{association} substrates.
+    \item If an \glyph{association} produces a \glyph{complex}, the number of 
     \glyph{consumption} arcs should be two or more.
-    \item If \glyph{association} produces \glyph{multimer}, than it can have only one 
-    \glyph{consumption} arc. In that case if substrate is not a
-    \glyph{multimer}, then the number of monomers in a product \glyph{multimer}
-    should be equal to cardinality of that arc. If substrate is another
-    \glyph{multimer}, then cardinality of the consumption arc should be equal to
+    \item If an \glyph{association} produces a \glyph{multimer}, it may have only one 
+    \glyph{consumption} arc. In that case if the substrate is not a
+    \glyph{multimer}, then the number of monomers in the produced \glyph{multimer}
+    should be equal to the cardinality of the \glyph{consumption} arc. If the substrate is another
+    \glyph{multimer}, the cardinality of the \glyph{consumption} arc should be equal to the
     ratio of number of monomers in product and in substrate \glyph{multimers}.
   \end{enumerate}  
 
 \subsubsection{\glyph{Dissociation}}
   \begin{enumerate}
-    \item Composition of \glyph{complex} or \glyph{multimer} consumed by
-    \glyph{dissociation} should be identical to set of products of the process.
-    \item If \glyph{complex} is consumed by the \glyph{dissociation}, than the
-    process should have two or more \glyph{production} arcs.
-    \item If \glyph{multimer} is split by \glyph{dissociation} process, than
-    one \glyph{production} arc could be connected to the process node. In that case if product is not a
-    \glyph{multimer}, then the number of monomers in a substrate \glyph{multimer}
-    should be equal to cardinality of that arc. If product is another
-    \glyph{multimer}, then cardinality of the \glyph{production} arc should be equal to
-    ratio of number of monomers in substrate and in product \glyph{multimers}.
+    \item The composition of the \glyph{complex} or \glyph{multimer} consumed by a
+    \glyph{dissociation} should be identical to the set of products of the \glyph{dissociation}.
+    \item If a \glyph{complex} is consumed by the \glyph{dissociation}, the
+    \glyph{dissociation} should have two or more \glyph{production} arcs.
+    \item If a \glyph{multimer} is split by a \glyph{dissociation} process,
+    a single \glyph{production} arc might be connected to the \glyph{dissociation} node. In that case if the product is not a
+    \glyph{multimer}, the number of monomers in a substrate \glyph{multimer}
+    should be equal to the cardinality of the \glyph{production} arc. If the product is another
+    \glyph{multimer}, the cardinality of the \glyph{production} arc should be equal to the 
+    ratio of the number of monomers in substrate and in product \glyph{multimers}.
   \end{enumerate}  
   
