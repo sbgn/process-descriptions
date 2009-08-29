@@ -3,26 +3,26 @@
 
 \section{Overview}
 
-In this chapter, we describe how the glyphs of SBGN can be combined
-to make a valid SBGN map. To do this, we must at the very least
+In this chapter, we describe how the glyphs of \SBGNPDLone can be combined
+to make a valid SBGN \PDm. To do this, we must at the very least
 define what glyphs can be connected to each other. This is called
 syntax. Next, we must define rules over and above connection rules,
-such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a SBGN map without external help, and a writer is to create one that reflects his understanding of a biological system.
+such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a \PDm without external help, and a writer is to create one that reflects his understanding of a biological system.
 
 In this section we start off by describing the concepts of the
-\PD{} notation. Next a detailed description of the syntax is provided
+\PD{} language. Next a detailed description of the syntax is provided
 followed by a description of the syntactic rules of the notation.
 
 \section{Concepts}
 
-The SBGN \PD{} is more than a collection of symbols. It is a
+The SBGN \PDl{} is more than a collection of symbols. It is a
 visual language that uses specific abstractions to describe the
 biological processes that make up a quantitative model, a signalling pathway or a metabolic network. This abstraction is the
 semantics of SBGN, and to describe it requires more than a definition
 of the symbols and syntax of the language. We first need to define the
 abstractions we are using.
 
-The \PD{} in SBGN describes biological processes involving biological entities. An \glyph{Entity pool node} (\sect{EPNs}), such as a molecule, is converted into other \glyph{EPNs} via a process. 
+A \PD{} in SBGN describes biological processes involving biological entities. An \glyph{Entity pool node} (\sect{EPNs}), such as a molecule, is converted into other \glyph{EPNs} via a \glyph{process}. 
 
 It may be convenient to think of a SBGN \PD{} as describing the
 flow of a fluid. In this analogy, each \glyph{EPN} represents a
@@ -103,7 +103,7 @@ concepts such as Entity types and state variables that are implicit in the Visua
 \end{center}
 \end{figure}
 \end{landscape}
-The Classes shown in the UML model are described in more detail in the
+The classes shown in the UML model are described in more detail in the
 tables below. In particular the tables define the properties that
 uniquely identify each component of the notation. This is important in
 defining the rules for duplication and the submap interface later.
@@ -140,8 +140,8 @@ Name & \multicolumn{2}{|c|}{Attributes} & Glyph & Comment\\\cline{2-3}
 %
 Map & name (I) & Name of the map. & N/A & This is the visualisation of a SBGN map.\\\hline
 %
-Submap & mainMapName (I) & Name of the main map this is a sub-map of.& N/A & \multirow{2}{\commlen}{A SBGN map used to define a SBGN submap}\\
-& name (I) & Name of the sub-map. & & \\\hline
+Submap & mainMapName (I) & Name of the main map this is a submap of.& N/A & \multirow{2}{\commlen}{A SBGN map used to define a SBGN submap}\\
+& name (I) & Name of the submap. & & \\\hline
 %
 BasicEntity\-Node & & & Abstract & The most fundamental node type. Any node that can be drawn on a Map inherits from this.\\\hline
 %
@@ -186,14 +186,14 @@ ComplexNode & As StatefulEntityPoolNode & & Complex & \multirow{3}{\commlen}{} \
  & subunits \{0 \ldots *\} & A list of EPNs that together compose the complex. & & \\
  & subunitStates (I) \{0 \ldots *\} & The set of state descriptions of any Subunits that are StatefulEntityPoolNodes. & & \\\hline
 %
-Multimer\-Macromolecule\-Node & As MacromoleculeNode & & Multimer\-Macromolecule & \multirow{2}{\commlen}{Note that all sub-units have the \emph{same} StateDescription values.} \\
- & numberOfSubunits (I) & The number of identical sub-units of this macromolecule. & & \\\hline
+Multimer\-Macromolecule\-Node & As MacromoleculeNode & & Multimer\-Macromolecule & \multirow{2}{\commlen}{Note that all subunits have the \emph{same} StateDescription values.} \\
+ & numberOfSubunits (I) & The number of identical subunits of this macromolecule. & & \\\hline
 %
 MultimerSimple\-Chemical\-Node & As SimpleChemicalNode & & MultimerSimple\-Chemical & \multirow{2}{\commlen}{} \\
-& numberOfSubunits (I) & The number of identical sub-units of this simple chemical. & & \\\hline
+& numberOfSubunits (I) & The number of identical subunits of this simple chemical. & & \\\hline
 %
-MultimerComplex\-Node & As ComplexNode & & MultimerComplex & \multirow{2}{\commlen}{Note that all sub-units have the \emph{same} StateDescription values.}\\
- & numberOfSubunits (I) & The number of identical sub-units of this complex. & & \\\hline
+MultimerComplex\-Node & As ComplexNode & & MultimerComplex & \multirow{2}{\commlen}{Note that all subunits have the \emph{same} StateDescription values.}\\
+ & numberOfSubunits (I) & The number of identical subunits of this complex. & & \\\hline
 %
 UnitOfInformation & owningEPN (I) & Identity of the owning EntityPoolNode (not displayed, but implied by ``ownership'' of the glyph). & Unit Of Information & \multirow{2}{\commlen}{} \\
 & prefix & Prefix (I) & & \\
@@ -225,7 +225,7 @@ ORNode & As LogicGateNode & & Or & \\\hline
 %
 NOTNode & As LogicGateNode & & Not & \\\hline
 %
-SubMapNode & subMapName (I) & The name of the sub-map it is defining. & Submap & \multirow{2}{\commlen}{} \\
+SubMapNode & subMapName (I) & The name of the submap it is defining. & Submap & \multirow{2}{\commlen}{} \\
  & compartment (R) & If no compartment is specified then this is implicitly defined as the ``default'' compartment. & & \\\hline
 %
 TagNode & subMapName (I) & Name of submap that owns tag. & Tag & \\
