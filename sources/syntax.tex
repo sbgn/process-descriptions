@@ -1,11 +1,10 @@
 \section{Syntax}
 
-The syntax of the SBGN \PDl is defined in the form of an incidence matrix. 
-An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Input (I) means that the arc can begin at that node. Output (O) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
+The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Source (S) means that the arc can begin at that node. Target (T) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
 
-For simplicity logical operators are treated as process nodes.
+\subsection{Entity Pool Nodes connectivity definition}
 
-\subsection{Entity Pool Nodes connectivity definition}  
+\begin{center}
 \begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c|c||}
 \hline
 \hline
@@ -13,44 +12,46 @@ For simplicity logical operators are treated as process nodes.
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
 \vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source} & \vglyph{sink} &  
 \vglyph{perturbing agent} &  \vglyph{submap}\\ \hline 
-\glyph{consumption}      & I & I & I & I & I & I &   & I &   & & \\ \hline 
-\glyph{production}        & O & O & O & O & O & O &   & & O &  & \\ \hline 
-\glyph{modulation}        & I & I & I & I & I & I &   &   & & I & \\ \hline 
-\glyph{stimulation}        & I & I & I & I & I & I &   &   & & I & \\ \hline 
-\glyph{catalysis}          & I & I & I & I & I &   &   &   & & I & \\ \hline 
-\glyph{inhibition}          & I & I & I & I & I & I &   &   & & I & \\ \hline 
-\glyph{necessary stimulation} & I & I & I & I & I & I &   &  &  & I & \\ \hline 
-\glyph{logic arc}          & I & I & I & I & I & I &   &   &   &   & \\ \hline 
-\glyph{equivalence arc}     & I & I & I & I & I & I & O &   &  & &O \\ \hline \hline
+\glyph{consumption}      & S & S & S & S & S & S &   & S(1) &   & & \\ \hline 
+\glyph{production}        & T & T & T & T & T & T &   & & T(1) &  & \\ \hline 
+\glyph{modulation}        & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{stimulation}        & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{catalysis}          & S & S & S & S & S &   &   &   & & S & \\ \hline 
+\glyph{inhibition}          & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{necessary stimulation} & S & S & S & S & S & S &   &  &  & S & \\ \hline 
+\glyph{logic arc}          & S & S & S & S & S & S &   &   &   &   & \\ \hline 
+\glyph{equivalence arc}     & S & S & S & S & S & S & T &   &  & &T \\ \hline \hline
 \end{tabular}
-
+\end{center}
 
 \subsection{Process Nodes connectivity definition}
 
+\begin{center}
 \begin{tabular}{||c|c|c|c|c|c|c|c|c|c||}
 \hline
 \hline
 \raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
 \vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
 \vglyph{or} & \vglyph{not} \\ \hline 
-\glyph{consumption} & O & O &  O & & O    & O(1) &      &      &      \\ \hline
-\glyph{production}  & I & I & I & & I(1) & I    &      &      &      \\ \hline
-\glyph{modulation}  & O & O & O & O  &   &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{stimulation} & O & O & O & O &    &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{catalysis}   & O & O & O & O &    &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{inhibition}  & O & O & O &  O &    &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{necessary stimulation}     & O & O & O &  O &    &      & I(1) & I(1) & I(1) \\ \hline
-\glyph{logic arc}   &   &   &   &      & &      & O    & O    & O(1) \\ \hline
+\glyph{consumption} & T & T &  T & & T    & T(1) &      &      &      \\ \hline
+\glyph{production}  & S & S & S & & S(1) & S    &      &      &      \\ \hline
+\glyph{modulation}  & T & T & T & T  &   &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{stimulation} & T & T & T & T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{catalysis}   & T & T & T & T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{inhibition}  & T & T & T &  T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{necessary stimulation}     & T & T & T &  T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{logic arc}   &   &   &   &      & &      & T    & T    & T(1) \\ \hline
 \glyph{equivalence arc} &   &   &  &    & &      &      &      &      \\ \hline \hline
 \end{tabular}
+\end{center}
 
 \subsection{Containment definition}
 There are two \PD glyph that allow containment of glyphs: \glyph{compartment} and
 \glyph{complex}. The next table describe relationship between \PD glyphs
-and these containers. A plus sign means that the element is able to be
-contained within a container. An empty cell means containment is not allowed.
+and these containers. A $+$ means that the element is able to be
+drawn within a container. A $-$ means containment is not allowed.
 
-
+\begin{center}
 \begin{tabular}{||c|c|c|c||}
 \hline
 \hline
@@ -87,76 +88,4 @@ $Glyph \backslash Containers$  & \glyph{complex} & \glyph{compartment} \\ \hline
 \glyph{not}                  &         -       &          +         \\ \hline
 \hline
 \end{tabular}
-
-
-\subsection{Syntactic rules}
-
-There are additional syntactic rules that must be applied in addition to those defined above.
-
-\subsubsection{EPNs}
-
- \begin{enumerate}
-    \item If a \glyph{macromolecule} has more than one \glyph{state variable}, 
-    all \glyph{state variables} should have a name;
-    \item All \glyph{state variables} of a \glyph{macromolecule} should have 
-    different names;
-%    \item A \glyph{complex} should consists of different EPNs. If two or more 
-%    elements of the complex are identical they should be replaced by multimer. 
-%    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
-  \end{enumerate}
-
-\subsubsection{\glyph{Source} and \glyph{Sink}}
-
- \begin{enumerate}
-    \item Only one arc can be attached to these glyphs (degree 1).
-  \end{enumerate}
-
-\subsubsection{\glyph{Process}}
- \begin{enumerate}
-%   \item PN should have nonzero number of \glyph{production} links.
-    \item All substrates of the process should be different. If several 
-    copies of the same \glyph{EPN} are involved in the process, cardinality label of 
-    \glyph{consumption} arc should be used.
-    \item All products of the process should be different. If several copies 
-    of the same \glyph{EPN} are produced in the process, cardinality label of 
-    \glyph{production} arc should be used.
-    \item Once cardinality label set to one arc of the \glyph{EPN} all other arcs should
-    make their cardinality visible, even if it is undefined. In a case
-    cardinality is undefined or unknown question mark (``?'') should be placed as cardinality label. 
-%    \item The EPN is not allowed to be a substrate and product of the same 
-%    process. This rule is applicable to cloned EPNs as well.
-    \item \glyph{PNs} should have only one \glyph{Catalysis} arc connected to them. If
-    there more than one catalyst known to affect the process, several \glyph{PNs} should be
-    drawn or a \glyph{logical operator} used 
-    \item \glyph{PNs} should have only one \glyph{necessary stimulation} arc connected to it. If
-    there is more than one \glyph{EPN} acting as a necessary stimulator on a process, then a \glyph{logic operator} should be used.    \end{enumerate}  
-
-\subsubsection{\glyph{Association}}
-
-  \begin{enumerate}
-    \item The composition of the \glyph{complex} or \glyph{multimer} produced by
-    an \glyph{association} should be identical to the set of \glyph{association} substrates.
-    \item If an \glyph{association} produces a \glyph{complex}, the number of 
-    \glyph{consumption} arcs should be two or more.
-    \item If an \glyph{association} produces a \glyph{multimer}, it may have only one 
-    \glyph{consumption} arc. In that case if the substrate is not a
-    \glyph{multimer}, then the number of monomers in the produced \glyph{multimer}
-    should be equal to the cardinality of the \glyph{consumption} arc. If the substrate is another
-    \glyph{multimer}, the cardinality of the \glyph{consumption} arc should be equal to the
-    ratio of number of monomers in product and in substrate \glyph{multimers}.
-  \end{enumerate}  
-
-\subsubsection{\glyph{Dissociation}}
-  \begin{enumerate}
-    \item The composition of the \glyph{complex} or \glyph{multimer} consumed by a
-    \glyph{dissociation} should be identical to the set of products of the \glyph{dissociation}.
-    \item If a \glyph{complex} is consumed by the \glyph{dissociation}, the
-    \glyph{dissociation} should have two or more \glyph{production} arcs.
-    \item If a \glyph{multimer} is split by a \glyph{dissociation} process,
-    a single \glyph{production} arc might be connected to the \glyph{dissociation} node. In that case if the product is not a
-    \glyph{multimer}, the number of monomers in a substrate \glyph{multimer}
-    should be equal to the cardinality of the \glyph{production} arc. If the product is another
-    \glyph{multimer}, the cardinality of the \glyph{production} arc should be equal to the 
-    ratio of the number of monomers in substrate and in product \glyph{multimers}.
-  \end{enumerate}  
-  
+\end{center}

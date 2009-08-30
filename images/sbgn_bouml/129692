@@ -1,6 +1,6 @@
 format 67
 "visual" // sbgn::visual
-  revision 20
+  revision 21
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -98,7 +98,7 @@ ${members}};
 	relation 132892 ---|>
 	  a public
 	    classrelation_ref 132892 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
+	  b parent class_ref 132252 // SBGNNode
       end
 
       classrelation 134172 // unitsOfInformation (<association>)
@@ -145,7 +145,7 @@ ${members}};
       end
     end
 
-    class 129436 "ProcessNode"
+    class 129436 "Process"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -165,7 +165,7 @@ ${members}};
 	relation 133020 ---|>
 	  a public
 	    classrelation_ref 133020 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
+	  b parent class_ref 132252 // SBGNNode
       end
 
       classrelation 136604 // produces (ProductionArc)
@@ -209,6 +209,7 @@ ${members}};
 "
 	    classrelation_ref 128429 // <association>
       end
+
     end
 
     class 129564 "ProducableNode"
@@ -286,7 +287,7 @@ ${members}};
       end
     end
 
-    class 129948 "SourceNode"
+    class 129948 "Source"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -311,7 +312,7 @@ ${members}};
       end
     end
 
-    class 130076 "SinkNode"
+    class 130076 "Sink"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -320,13 +321,6 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 129436 // <generalisation>
-	relation 129436 ---|>
-	  a public
-	    classrelation_ref 129436 // <generalisation>
-	  b parent class_ref 129564 // ProducableNode
-      end
-
       classrelation 134061 // <generalisation>
 	relation 132653 ---|>
 	  a public
@@ -334,9 +328,16 @@ ${members}};
 	    classrelation_ref 134061 // <generalisation>
 	  b parent class_ref 129180 // EntityPoolNode
       end
+
+      classrelation 129436 // <generalisation>
+	relation 129436 ---|>
+	  a public
+	    classrelation_ref 129436 // <generalisation>
+	  b parent class_ref 129564 // ProducableNode
+      end
     end
 
-    class 130204 "PhenotypeNode"
+    class 130204 "Phenotype"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -361,9 +362,17 @@ ${members}};
 	python_decl ""
 	idl_decl ""
       end
+
+      classrelation 148397 // <generalisation>
+	relation 146861 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148397 // <generalisation>
+	  b parent class_ref 129436 // Process
+      end
     end
 
-    class 130332 "PerturbingAgentNode"
+    class 130332 "PerturbingAgent"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -379,22 +388,12 @@ ${members}};
 	  b parent class_ref 129820 // ModulatingNode
       end
 
-      classrelation 137116 // <generalisation>
-	relation 135708 ---|>
+      classrelation 147501 // <generalisation>
+	relation 145965 ---|>
 	  a public
 	    java "${type}"
-	    classrelation_ref 137116 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
-      end
-
-      attribute 128290 "name"
-	protected explicit_type "string"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
+	    classrelation_ref 147501 // <generalisation>
+	  b parent class_ref 129180 // EntityPoolNode
       end
     end
 
@@ -414,18 +413,16 @@ ${members}};
 	  b parent class_ref 129820 // ModulatingNode
       end
 
-      attribute 129436 "operatorType"
-	const_attribute private explicit_type ""
-	multiplicity "1"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 136220 // (LogicArc)
 	relation_ref 135196 // LogicArc
+      end
+
+      classrelation 148013 // <generalisation>
+	relation 146477 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148013 // <generalisation>
+	  b parent class_ref 132252 // SBGNNode
       end
     end
 
@@ -438,6 +435,13 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 149933 // <generalisation>
+	relation 148397 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149933 // <generalisation>
+	  b parent class_ref 135213 // SBGNArc
+      end
     end
 
     class 130716 "StatefulEntityPoolNode"
@@ -456,25 +460,6 @@ ${members}};
 	  b parent class_ref 129180 // EntityPoolNode
       end
 
-      attribute 129564 "stateDescription"
-	protected type class_ref 131100 // StateDescription
-	multiplicity "1..*"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 129692 "cloningIdentifier"
-	protected explicit_type "String"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 134812 // <composition>
 	relation 134428 *---
 	  a role_name "" multiplicity "*" protected
@@ -484,7 +469,7 @@ ${members}};
       end
     end
 
-    class 130844 "UnspecifiedEntityNode"
+    class 130844 "UnspecifiedEntity"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -501,7 +486,7 @@ ${members}};
       end
     end
 
-    class 130972 "SimpleChemicalNode"
+    class 130972 "SimpleChemical"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -518,7 +503,7 @@ ${members}};
       end
     end
 
-    class 131100 "StateDescription"
+    class 131100 "StateVariable"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -527,7 +512,7 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 129820 "variableName"
+      attribute 129820 "name"
 	protected explicit_type "String"
 	cpp_decl ""
 	java_decl ""
@@ -536,7 +521,7 @@ ${members}};
 	idl_decl ""
       end
 
-      attribute 129948 "valueDefinition"
+      attribute 129948 "value"
 	protected explicit_type "String"
 	cpp_decl ""
 	java_decl ""
@@ -548,9 +533,17 @@ ${members}};
       classrelation 134940 // <composition>
 	relation_ref 134428 // <composition>
       end
+
+      classrelation 148653 // <generalisation>
+	relation 147117 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148653 // <generalisation>
+	  b parent class_ref 135085 // AuxiliaryUnits
+      end
     end
 
-    class 131228 "ComplexNode"
+    class 131228 "Complex"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -571,7 +564,7 @@ ${members}};
       end
     end
 
-    class 131356 "MacromoleculeNode"
+    class 131356 "Macromolecule"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -631,6 +624,14 @@ ${members}};
       classrelation 128162 // <association>
 	relation_ref 128034 // <association>
       end
+
+      classrelation 148781 // <generalisation>
+	relation 147245 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148781 // <generalisation>
+	  b parent class_ref 135085 // AuxiliaryUnits
+      end
     end
 
     class 131612 "ConsumptionArc"
@@ -642,16 +643,6 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 128206 "stoichiometry"
-	protected explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 128557 // <generalisation>
 	relation 128301 ---|>
 	  a public
@@ -674,16 +665,6 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 128078 "stoichiometry"
-	protected explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 128685 // <generalisation>
 	relation 128429 ---|>
 	  a public
@@ -706,9 +687,16 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 149549 // <generalisation>
+	relation 148013 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149549 // <generalisation>
+	  b parent class_ref 135213 // SBGNArc
+      end
     end
 
-    class 131996 "MapDiagram"
+    class 131996 "Map"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -744,7 +732,7 @@ ${members}};
       end
     end
 
-    class 132124 "CompartmentNode"
+    class 132124 "Compartment"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -757,7 +745,7 @@ ${members}};
 	relation 133404 ---|>
 	  a public
 	    classrelation_ref 133404 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
+	  b parent class_ref 132252 // SBGNNode
       end
 
       classrelation 129629 // <composition>
@@ -770,22 +758,6 @@ ${members}};
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 129757 // <composition>
-      end
-
-      classrelation 129885 // containedCompartments (<composition>)
-	relation 129373 *---
-	  a role_name "containedCompartments" multiplicity "*" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 129885 // containedCompartments (<composition>)
-	  b role_name "" protected
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 130013 // <composition>
-      end
-
-      classrelation 130013 // <composition>
-	relation_ref 129373 // <composition>
       end
 
       classrelation 128034 // <association>
@@ -811,7 +783,7 @@ ${members}};
       end
     end
 
-    class 132252 "BasicEntityNode"
+    class 132252 "SBGNNode"
       abstract visibility package 
       cpp_decl ""
       java_decl ""
@@ -826,6 +798,14 @@ ${members}};
 
       classrelation 129757 // <composition>
 	relation_ref 129245 // <composition>
+      end
+
+      classrelation 147373 // <generalisation>
+	relation 145837 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 147373 // <generalisation>
+	  b parent class_ref 134701 // SBGNGlyph
       end
     end
 
@@ -880,7 +860,7 @@ ${members}};
       end
     end
 
-    class 132764 "DissociationNode"
+    class 132764 "Dissociation"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -893,11 +873,11 @@ ${members}};
 	relation 130972 ---|>
 	  a public
 	    classrelation_ref 130972 // <generalisation>
-	  b parent class_ref 129436 // ProcessNode
+	  b parent class_ref 129436 // Process
       end
     end
 
-    class 132892 "OmittedProcessNode"
+    class 132892 "OmittedProcess"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -910,11 +890,11 @@ ${members}};
 	relation 131100 ---|>
 	  a public
 	    classrelation_ref 131100 // <generalisation>
-	  b parent class_ref 129436 // ProcessNode
+	  b parent class_ref 129436 // Process
       end
     end
 
-    class 133020 "UncertainProcessNode"
+    class 133020 "UncertainProcess"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -927,11 +907,11 @@ ${members}};
 	relation 131228 ---|>
 	  a public
 	    classrelation_ref 131228 // <generalisation>
-	  b parent class_ref 129436 // ProcessNode
+	  b parent class_ref 129436 // Process
       end
     end
 
-    class 133148 "AssociationNode"
+    class 133148 "Association"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -944,7 +924,7 @@ ${members}};
 	relation 131356 ---|>
 	  a public
 	    classrelation_ref 131356 // <generalisation>
-	  b parent class_ref 129436 // ProcessNode
+	  b parent class_ref 129436 // Process
       end
     end
 
@@ -961,7 +941,7 @@ ${members}};
 	relation 131484 ---|>
 	  a public
 	    classrelation_ref 131484 // <generalisation>
-	  b parent class_ref 131996 // MapDiagram
+	  b parent class_ref 131996 // Map
       end
 
       classrelation 135196 // <association>
@@ -977,7 +957,7 @@ ${members}};
       end
     end
 
-    class 133404 "TagNode"
+    class 133404 "Tag"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -995,12 +975,22 @@ ${members}};
 	  a public
 	    java "${type}"
 	    classrelation_ref 128743 // <generalisation>
-	  b parent class_ref 128359 // EquivalenceNode
+	  b parent class_ref 128359 // ReferenceNode
 	  association_type class_ref 128093 // EquivalenceArc
+      end
+
+      attribute 128173 "identifier"
+	protected explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
-    class 133532 "SubMapNode"
+    class 133532 "SubMap"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1009,22 +999,6 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 131612 // <generalisation>
-	relation 131612 ---|>
-	  a public
-	    classrelation_ref 131612 // <generalisation>
-	  b parent class_ref 132252 // BasicEntityNode
-      end
-
-      attribute 130588 "mappingId"
-	protected explicit_type "String"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 128290 // <association>
 	relation 128162 ----
 	  a role_name "" protected
@@ -1036,9 +1010,27 @@ ${members}};
 "
 	    classrelation_ref 128418 // <association>
       end
+
+      classrelation 148269 // <generalisation>
+	relation 146733 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148269 // <generalisation>
+	  b parent class_ref 128359 // ReferenceNode
+      end
+
+      attribute 128045 "name"
+	protected explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
-    class 133660 "MultimerMacromoleculeNode"
+    class 133660 "MultimerMacromolecule"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1051,7 +1043,7 @@ ${members}};
 	relation 131740 ---|>
 	  a public
 	    classrelation_ref 131740 // <generalisation>
-	  b parent class_ref 131356 // MacromoleculeNode
+	  b parent class_ref 131356 // Macromolecule
       end
 
       classrelation 133532 // <generalisation>
@@ -1061,7 +1053,7 @@ ${members}};
 	  b parent class_ref 134044 // MultimerNode
       end
 
-      attribute 128334 "numberOfSubunits"
+      attribute 128334 "cardinality"
 	protected explicit_type "int"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -1072,7 +1064,7 @@ ${members}};
       end
     end
 
-    class 133788 "MultimerSimpleChemicalNode"
+    class 133788 "SimpleChemicalMultimer"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1085,7 +1077,7 @@ ${members}};
 	relation 131868 ---|>
 	  a public
 	    classrelation_ref 131868 // <generalisation>
-	  b parent class_ref 130972 // SimpleChemicalNode
+	  b parent class_ref 130972 // SimpleChemical
       end
 
       classrelation 133660 // <generalisation>
@@ -1095,7 +1087,7 @@ ${members}};
 	  b parent class_ref 134044 // MultimerNode
       end
 
-      attribute 128462 "numberOfSubunits"
+      attribute 128462 "cardinality"
 	protected explicit_type "int"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -1106,7 +1098,7 @@ ${members}};
       end
     end
 
-    class 133916 "MultimerComplexNode"
+    class 133916 "MultimerComplex"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1119,7 +1111,7 @@ ${members}};
 	relation 131996 ---|>
 	  a public
 	    classrelation_ref 131996 // <generalisation>
-	  b parent class_ref 131228 // ComplexNode
+	  b parent class_ref 131228 // Complex
       end
 
       classrelation 133788 // <generalisation>
@@ -1129,7 +1121,7 @@ ${members}};
 	  b parent class_ref 134044 // MultimerNode
       end
 
-      attribute 128590 "numberOfSubunits"
+      attribute 128590 "cardinality"
 	public explicit_type "int"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -1215,20 +1207,7 @@ ${members}};
       size A3-Landscape
     end
 
-    class 128078 "TagArc"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-    end
-
-    class 128206 "NucleicAcidFeatureNode"
+    class 128206 "NucleicAcidFeature"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1246,6 +1225,16 @@ ${members}}
 	    classrelation_ref 128078 // <generalisation>
 	  b parent class_ref 130716 // StatefulEntityPoolNode
       end
+
+      attribute 128429 "conceptualType"
+	protected explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
     class 128093 "EquivalenceArc"
@@ -1259,6 +1248,13 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 149677 // <generalisation>
+	relation 148141 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149677 // <generalisation>
+	  b parent class_ref 135213 // SBGNArc
+      end
     end
 
     class 128034 "SubMapTerminalNode"
@@ -1294,11 +1290,11 @@ ${members}}
 	  a public
 	    java "${type}"
 	    classrelation_ref 128615 // <generalisation>
-	  b parent class_ref 128359 // EquivalenceNode
+	  b parent class_ref 128359 // ReferenceNode
       end
     end
 
-    class 128359 "EquivalenceNode"
+    class 128359 "ReferenceNode"
       abstract visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1309,14 +1305,12 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 128487 "identifier"
-	protected explicit_type "string"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
+      classrelation 148141 // <generalisation>
+	relation 146605 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148141 // <generalisation>
+	  b parent class_ref 132252 // SBGNNode
       end
     end
 
@@ -1352,6 +1346,14 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
+
+      classrelation 149037 // <generalisation>
+	relation 147501 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149037 // <generalisation>
+	  b parent class_ref 135085 // AuxiliaryUnits
+      end
     end
 
     class 128002 "NecessaryStimulationArc"
@@ -1365,12 +1367,12 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 128002 // <generalisation>
-	relation 128002 ---|>
+      classrelation 149421 // <generalisation>
+	relation 147885 ---|>
 	  a public
 	    java "${type}"
-	    classrelation_ref 128002 // <generalisation>
-	  b parent class_ref 132508 // StimulationArc
+	    classrelation_ref 149421 // <generalisation>
+	  b parent class_ref 131868 // ModulationArc
       end
     end
 
@@ -1392,6 +1394,118 @@ ${members}}
       classrelation 128429 // <association>
 	relation_ref 128173 // <association>
       end
+
+      classrelation 149293 // <generalisation>
+	relation 147757 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149293 // <generalisation>
+	  b parent class_ref 135213 // SBGNArc
+      end
+
+      attribute 128557 "stoichiometry"
+	protected explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
+
+    class 134701 "SBGNGlyph"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classdiagram 128045 "Node Taxonomy"
+      draw_all_relations no hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_infonote default shadow default show_stereotype_properties default
+      size A3-Landscape
+    end
+
+    class 134957 "NucleicAcidFeatureMultimer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 148525 // <generalisation>
+	relation 146989 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148525 // <generalisation>
+	  b parent class_ref 128206 // NucleicAcidFeature
+      end
+
+      attribute 128301 "cardinality"
+	protected explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 135085 "AuxiliaryUnits"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 148909 // <generalisation>
+	relation 147373 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 148909 // <generalisation>
+	  b parent class_ref 132252 // SBGNNode
+      end
+    end
+
+    classdiagram 128173 "Arc Taxonomy"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    class 135213 "SBGNArc"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 149165 // <generalisation>
+	relation 147629 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 149165 // <generalisation>
+	  b parent class_ref 134701 // SBGNGlyph
+      end
+    end
+
   end
 end
