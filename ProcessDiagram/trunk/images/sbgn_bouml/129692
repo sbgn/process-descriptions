@@ -1,6 +1,6 @@
 format 67
 "visual" // sbgn::visual
-  revision 19
+  revision 20
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -45,7 +45,7 @@ format 67
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
     class 129180 "EntityPoolNode"
-      abstract visibility package stereotype "interface"
+      abstract visibility package 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
 ${inlines}
@@ -398,7 +398,7 @@ ${members}};
       end
     end
 
-    class 130460 "LogicGateNode"
+    class 130460 "LogicalOperatorNode"
       abstract visibility package 
       cpp_decl ""
       java_decl ""
@@ -1172,7 +1172,7 @@ ${members}};
 	relation 132124 ---|>
 	  a public
 	    classrelation_ref 132124 // <generalisation>
-	  b parent class_ref 130460 // LogicGateNode
+	  b parent class_ref 130460 // LogicalOperatorNode
       end
     end
 
@@ -1189,7 +1189,7 @@ ${members}};
 	relation 132252 ---|>
 	  a public
 	    classrelation_ref 132252 // <generalisation>
-	  b parent class_ref 130460 // LogicGateNode
+	  b parent class_ref 130460 // LogicalOperatorNode
       end
     end
 
@@ -1206,7 +1206,7 @@ ${members}};
 	relation 132380 ---|>
 	  a public
 	    classrelation_ref 132380 // <generalisation>
-	  b parent class_ref 130460 // LogicGateNode
+	  b parent class_ref 130460 // LogicalOperatorNode
       end
     end
 

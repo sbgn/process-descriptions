@@ -1,6 +1,6 @@
 format 67
 "conceptual" // sbgn::conceptual
-  revision 20
+  revision 21
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -1090,7 +1090,7 @@ ${members}}
       end
     end
 
-    class 128103 "LogicGate"
+    class 128103 "LogicalOperator"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {

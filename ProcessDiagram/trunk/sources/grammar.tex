@@ -135,7 +135,6 @@ Name & \multicolumn{2}{|c|}{Attributes} & Glyph & Comment\\\cline{2-3}
   column states the Glyph the class maps to, unless the class is
   purely conceptual and so defined as Abstract.}
 
-
 \begin{supertabular}{|p{3cm}|p{4cm}|p{5.5cm}|p{2.5cm}|p{\commlen}|}\hline
 %
 Map & name (I) & Name of the map. & N/A & This is the visualisation of a SBGN map.\\\hline
@@ -215,15 +214,15 @@ Association\-Node & As Process Node & & Association & \\\hline
 %
 Dissociation\-Node & As Process Node & & Dissociation& \\\hline
 %
-LogicGateNode & gateType (I) & The type of boolean gate. Currently one of OR, AND, NOT. & Abstract & \multirow{3}{\commlen}{Not a glyph but a placeholder for the common behaviour of all logic gates.}\\
+LogicOperatorNode & gateType (I) & The type of boolean gate. Currently one of OR, AND, NOT. & Abstract & \multirow{3}{\commlen}{Not a glyph but a placeholder for the common behaviour of all logic gates.}\\
  & modulatingNodes (I) & The modulating nodes that are the input the Boolean logic operator. They must be linked via a LogicArc. & & \\
- & modulatedNode (I) & A ModulatableNode connected via a Modulation\-Arc or another Logic\-Gate\-Node connected via a LogicArc. & & \\\hline
+ & modulatedNode (I) & A ModulatableNode connected via a Modulation\-Arc or another Logic\-Operator\-Node connected via a LogicArc. & & \\\hline
 %
-ANDNode & As LogicGateNode & & And & \\\hline
+ANDNode & As LogicalOperatorNode & & And & \\\hline
 %
-ORNode & As LogicGateNode & & Or & \\\hline
+ORNode & As LogicalOperatorNode & & Or & \\\hline
 %
-NOTNode & As LogicGateNode & & Not & \\\hline
+NOTNode & As LogicalOperatorNode & & Not & \\\hline
 %
 SubMapNode & subMapName (I) & The name of the submap it is defining. & Submap & \multirow{2}{\commlen}{} \\
  & compartment (R) & If no compartment is specified then this is implicitly defined as the ``default'' compartment. & & \\\hline
@@ -253,7 +252,7 @@ Necessary StimulationArc & As ModulationArc & & Inhibition & \\\hline
 %
 LogicArc & modulatingNode (I) & The ModulatingNode that is the origin of this link. & LogicArc & \multirow{3}{\commlen}{Conceptually this class can be thought of as converting a continuous input (the population of the EntityPool) into a discrete Boolean output (True or False).} \\
  &  &  & & \\
- & logicGate (I) & The logicGateNode that is the target of this link. & & \\\hline
+ & logicalOperator (I) & The logicalOperatorNode that is the target of this link. & & \\\hline
 %
 % TagArc & tag (I) & The tag assigned to with the EPN. & Tag & \multirow{2}{\commlen}{} \\
 %  & taggedEPN (I) & The EPN assigned to the tag. & & \\\hline
@@ -351,11 +350,11 @@ Reversible Flux & As Flux & & & ProductionArc \\ \hline
 %
 Input & As Flux & & Here the flow can only go from the EPN to the Process. & ConsumptionArc \\ \hline
 %
-Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Necessary Stimulation, Catalysis or LogicGate. & & ModulationArc \\\hline
+Control & type (R) & The type of the control. One of Modulation, Stimulation, Inhibition, Necessary Stimulation, Catalysis or LogicalOperator. & & ModulationArc \\\hline
 %
-LogicGate & type (R) & The type of LogicGate. One of AND, OR, NOT. & & LogicGateNode \\\hline
+LogicalOperator & type (R) & The type of LogicalOperator. One of AND, OR, NOT. & & LogicalOperatorNode \\\hline
 %
-LogicAdapter & & & The LogicGate takes a set of Boolean inputs (T or F) from an EntityPool which is a non-Boolean quantity. Conceptually, the adapter converts the continuous quantity into a discrete Boolean quantity. & LogicArc \\\hline
+LogicAdapter & & & The LogicalOperator takes a set of Boolean inputs (T or F) from an EntityPool which is a non-Boolean quantity. Conceptually, the adapter converts the continuous quantity into a discrete Boolean quantity. & LogicArc \\\hline
 %
 Perturbing Agent & name & Name of the perturbing agent. & & Perturbing Agent Node \\\hline
 %
