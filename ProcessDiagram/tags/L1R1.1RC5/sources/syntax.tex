@@ -1,0 +1,99 @@
+\section{Syntax}
+
+The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Source (S) means that the arc can begin at that node. Target (T) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
+
+\subsection{Entity Pool Nodes connectivity definition}
+
+\begin{center}
+\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c|c||}
+\hline
+\hline
+\raisebox{20pt}{$Arc \backslash EPN$} &\vglyph{macromolecule} & \vglyph{simple chemical} & 
+\vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
+\vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{source} & \vglyph{sink} &  
+\vglyph{perturbing agent} &  \vglyph{submap}\\ \hline 
+\glyph{consumption}      & S & S & S & S & S & S &   & S(1) &   & & \\ \hline 
+\glyph{production}        & T & T & T & T & T & T &   & & T(1) &  & \\ \hline 
+\glyph{modulation}        & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{stimulation}        & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{catalysis}          & S & S & S & S & S &   &   &   & & S & \\ \hline 
+\glyph{inhibition}          & S & S & S & S & S & S &   &   & & S & \\ \hline 
+\glyph{necessary stimulation} & S & S & S & S & S & S &   &  &  & S & \\ \hline 
+\glyph{logic arc}          & S & S & S & S & S & S &   &   &   &   & \\ \hline 
+\glyph{equivalence arc}     & S & S & S & S & S & S & T &   &  & &T \\ \hline \hline
+\end{tabular}
+\end{center}
+
+\subsection{Process Nodes connectivity definition}
+
+\begin{center}
+\begin{tabular}{||c|c|c|c|c|c|c|c|c|c||}
+\hline
+\hline
+\raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
+\vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
+\vglyph{or} & \vglyph{not} \\ \hline 
+\glyph{consumption} & T & T &  T & & T    & T(1) &      &      &      \\ \hline
+\glyph{production}  & S & S & S & & S(1) & S    &      &      &      \\ \hline
+\glyph{modulation}  & T & T & T & T  &   &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{stimulation} & T & T & T & T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{catalysis}   & T & T & T & T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{inhibition}  & T & T & T &  T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{necessary stimulation}     & T & T & T &  T &    &      & S(1) & S(1) & S(1) \\ \hline
+\glyph{logic arc}   &   &   &   &      & &      & T    & T    & T(1) \\ \hline
+\glyph{equivalence arc} &   &   &  &    & &      &      &      &      \\ \hline \hline
+\end{tabular}
+\end{center}
+
+\subsection{Containment definition}
+There are two glyphs that allow containment: \glyph{compartment} and
+\glyph{complex}. The next table describes the relationship between \PD glyphs
+and these containers. A $+$ means that the element is able to be
+drawn within a container. A $-$ means containment is not allowed.
+
+\begin{center}
+\tablefirsthead{\hline
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\tablehead{\hline
+\multicolumn{3}{|l|}{\small\sl continued from previous page}\\\hline
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\tabletail{\hline
+\multicolumn{3}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+
+% \topcaption{The Identifying attributes of \PD node glyphs. When a glyph is always unique in a map, this is indicated by the term \emph{instance}. The term \emph{state values} indicates that the values of all the EPN's state variables are used in the definition of its identity.}
+\begin{supertabular}{|c|c|c|}
+\glyph{unspecified entity}    &         +       &          +         \\ \hline
+\glyph{simple chemical}      &         +       &          +         \\ \hline
+\glyph{macromolecule}        &         +       &          +        \\ \hline
+\glyph{nucleic acid feature}   &         +       &          +      \\ \hline 
+\glyph{multimer}             &         +       &          +         \\ \hline
+\glyph{source}          &         -       &          +          \\ \hline 
+\glyph{sink}          &         -       &          +          \\ \hline 
+\glyph{perturbing agent}          &         -       &          +      \\ \hline
+\glyph{phenotype}           &         -       &          +         \\ \hline
+\glyph{tag}                  &         -       &          +          \\ \hline
+\glyph{complex}              &         +       &          +       \\ \hline
+\glyph{compartment}          &         -       &          -      \\ \hline
+\glyph{submap}               &         -       &          +         \\ \hline
+\glyph{process}             &         -       &          +         \\ \hline
+\glyph{omitted process}      &         -       &          +     \\ \hline
+\glyph{uncertain process}    &         -       &          +        \\ \hline
+\glyph{association}          &         -       &          +         \\ \hline
+\glyph{dissociation}         &         -       &          +         \\ \hline
+\glyph{consumption}          &         -       &          +        \\ \hline
+\glyph{production}           &         -       &          +          \\ \hline
+\glyph{modulation}           &         -       &          +         \\ \hline
+\glyph{stimulation}          &         -       &          +          \\ \hline
+\glyph{catalysis}            &         -       &          +          \\ \hline
+\glyph{inhibition}           &         -       &          +         \\ \hline
+\glyph{necessary stimulation}   &         -       &          +     \\ \hline
+\glyph{logic arc}            &         -       &          +          \\ \hline
+\glyph{equivalence arc}      &         -       &          +      \\ \hline
+\glyph{and}                  &         -       &          +         \\ \hline
+\glyph{or}                   &         -       &          +          \\ \hline
+\glyph{not}                  &         -       &          +         \\ \hline
+\hline
+\end{supertabular}
+\end{center}
