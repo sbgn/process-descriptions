@@ -3,10 +3,8 @@
 \subsection{EPNs}
 
  \begin{enumerate}
-    \item If a \glyph{macromolecule} has more than one \glyph{state variable}, 
-    all \glyph{state variables} should have a name;
-    \item All \glyph{state variables} of a \glyph{macromolecule} should have 
-    different names;
+   \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node.
+   \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignore.}.
 %    \item A \glyph{complex} should consists of different EPNs. If two or more 
 %    elements of the complex are identical they should be replaced by multimer. 
 %    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
@@ -53,6 +51,7 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
 \end{enumerate}  
 
 \subsubsection{Modulation}
+\label{sec:mod-semantics}
 
 It is implied, but not defined explicitly itn the SBGN \PDl that a process has a rate at
 which it converts its LHS EPNs to its RHS EPNs (and vice-versa in the case of a reversible process). This concept is

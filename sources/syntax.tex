@@ -46,16 +46,24 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \end{center}
 
 \subsection{Containment definition}
-There are two \PD glyph that allow containment of glyphs: \glyph{compartment} and
-\glyph{complex}. The next table describe relationship between \PD glyphs
+There are two glyphs that allow containment: \glyph{compartment} and
+\glyph{complex}. The next table describes the relationship between \PD glyphs
 and these containers. A $+$ means that the element is able to be
 drawn within a container. A $-$ means containment is not allowed.
 
 \begin{center}
-\begin{tabular}{||c|c|c|c||}
-\hline
-\hline
-$Glyph \backslash Containers$  & \glyph{complex} & \glyph{compartment} \\ \hline
+\tablefirsthead{\hline
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\tablehead{\hline
+\multicolumn{3}{|l|}{\small\sl continued from previous page}\\\hline
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\tabletail{\hline
+\multicolumn{3}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+
+% \topcaption{The Identifying attributes of \PD node glyphs. When a glyph is always unique in a map, this is indicated by the term \emph{instance}. The term \emph{state values} indicates that the values of all the EPN's state variables are used in the definition of its identity.}
+\begin{supertabular}{|c|c|c|}
 \glyph{unspecified entity}    &         +       &          +         \\ \hline
 \glyph{simple chemical}      &         +       &          +         \\ \hline
 \glyph{macromolecule}        &         +       &          +        \\ \hline
@@ -87,5 +95,5 @@ $Glyph \backslash Containers$  & \glyph{complex} & \glyph{compartment} \\ \hline
 \glyph{or}                   &         -       &          +          \\ \hline
 \glyph{not}                  &         -       &          +         \\ \hline
 \hline
-\end{tabular}
+\end{supertabular}
 \end{center}
