@@ -5,33 +5,34 @@
  \begin{enumerate}
    \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node.
    \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignore.}.
+   \item EPNs should not be orphaned (i.e.\, they must be associated with at least one arc.
 %    \item A \glyph{complex} should consists of different EPNs. If two or more 
 %    elements of the complex are identical they should be replaced by multimer. 
-%    \item An EPN that is a subunit of a \glyph{Complex} can only be linked to a modulation arc.
-  \end{enumerate}
+ \end{enumerate}
 
-\subsection{Processes}
+\subsection{Process Node Rules}
 
-As described in \sect{process}, the \glyph{consumption} and \glyph{production} arcs converge before connecting to the process node (fig{process-sidedness}). This defines the EPNs that are the input and outputs of an irreversible process. Since, processes can be reversible in the following rules we refer to these groupings as the ``left-hand-side'' (LHS) and ``right-hand-side'' (RHS) of the process. For convenience we will also collectively refer to the \glyph{consumption} and \glyph{production} arcs as \emph{flux} arcs.
+As described in \sect{process}, the \glyph{consumption} and \glyph{production} arcs converge before connecting to the process node (\fig{process-sidedness}). This defines the EPNs that are the input and outputs of an irreversible process. Since, processes can be reversible in the following rules we refer to these groupings as the ``left-hand-side'' (LHS) and ``right-hand-side'' (RHS) of the process\footnote{Note this designation is purely for grouping and is used even then the sides of the reaction are above and below the process.}. For convenience we will also collectively refer to the \glyph{consumption} and \glyph{production} arcs as \emph{flux} arcs.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.4]{images/process}
-  \caption{The \PD glyph for \glyph{process}.}
+  \includegraphics[scale = 0.4]{images/process_sidedness}
+  \caption{An illustration of the ``sidedness'' of a process. The designation of LHS and RHS is essentially arbitrary.}
   \label{fig:process-sidedness}
 \end{figure}
 
-\subsubsection{Consumption and Production}
+\subsubsection{Flux Arcs}
 
 \begin{enumerate}
-%   \item PN should have nonzero number of \glyph{production} links.
+\item All process nodes (with the exception of \glyph{phenotype}) must have a LHS and RHS.
     \item All EPNs on the LHS of a process must be unique.
     \item All EPNs on the RHS of a process must be unique.
+    \item All \glyph{phenotype} glyphs must be associated with at least one modulation arc.
+    \item The EPNs that make up the LHS of the process should be consistent with the RHS, i.e.\, the process should constitute a    balanced biochemical reaction.
     \item Once the stoichiometry of a flux arc is displayed in a map then all other flux arcs should
     display theit stoichiometry make.
     \item If the stoichiometry is undefined or unknown this should be indicated by the use of a question mark (``?''). 
-    \item The EPNs that make up the LHS of the association should be consistent with the RHS, i.e.\, the association should constitute a balanced biochemical reaction.
-    \item If more than one set of stoichiometries can be applied to the flux arcs of the process then the stoichiometry of the stiochiometry of the flux arcs must be displayed.
+   \item If more than one set of stoichiometries can be applied to the flux arcs of the process then the stoichiometry of the stiochiometry of the flux arcs must be displayed.
 %     \item \glyph{PNs} should have only one \glyph{Catalysis} arc connected to them. If
 %     there more than one catalyst known to affect the process, several \glyph{PNs} should be
 %     drawn or a \glyph{logical operator} used 
@@ -53,7 +54,7 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
 \subsubsection{Modulation}
 \label{sec:mod-semantics}
 
-It is implied, but not defined explicitly itn the SBGN \PDl that a process has a rate at
+As discussed in \sect{concepts}, it is implied, but not defined explicitly that the process has a rate at
 which it converts its LHS EPNs to its RHS EPNs (and vice-versa in the case of a reversible process). This concept is
 important in understanding how the \PDl describes process modulation.
 
@@ -68,8 +69,7 @@ important in understanding how the \PDl describes process modulation.
 \item At most one \glyph{necessary stimulation} can be assigned to a process node. Two \glyph{necessary stimulations}
   would imply an implicit AND or OR operator. For clarity only
   one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
-  explicitly expressed using \glyph{logical operators}.
-\item At most one \glyph{catalysis} can be assigned to a \glyph{process}. A catalysis
+  explicitly expressed using \glyph{logical operators}.  \item At most one \glyph{catalysis} can be assigned to a \glyph{process}. A catalysis arcs
   modulation implies that the exact biochemical mechanism underlying
   the process is known. In this context two \glyph{catalysis} cannot
   be assigned to the same process node as they represent
@@ -82,7 +82,7 @@ important in understanding how the \PDl describes process modulation.
 \subsubsection{Reversible Processes}
 \label{sec: semantics reversible procs}
 
-A process is deemed to be reversible if they have \glyph{production} arcs on both the LHS and RHS of a process node.Semantically, the \glyph{production} arc can be thought of as allowing a reversible flow of entities between the \glyph{process} and the \glyph{EPN}. A \glyph{consumption} arc only permits an irreversible flow from the \glyph{EPN} to the \glyph{process}. In this way the \glyph{consumption} arc forces the \glyph{process} to be irreversible. \glyph{Consumption} arcs cannot be associated with both sides of a \glyph{process} as this would prohibit any flow through the \glyph{process}.
+A process is deemed to be reversible if they have \glyph{production} arcs on both the LHS and RHS of a process node \fig{process-reversibility}. Semantically, the \glyph{production} arc can be thought of as allowing a reversible flow of entities between the \glyph{process} and the \glyph{EPN}. A \glyph{consumption} arc only permits an irreversible flow from the \glyph{EPN} to the \glyph{process}. In this way the \glyph{consumption} arc forces the \glyph{process} to be irreversible. \glyph{Consumption} arcs cannot be associated with both sides of a \glyph{process} as this would prohibit any flow through the \glyph{process}.
 
 \begin{figure}[H]
   \centering
@@ -93,7 +93,7 @@ A process is deemed to be reversible if they have \glyph{production} arcs on bot
  
 \begin{enumerate}
 \item  A mixture of \glyph{consumption} and \glyph{production} arcs on the same side of a \glyph{process} is not permitted.
-\item A \glyph{sink} cannot be linked to a reversible process as it only receives entities, and so would effectively make the process irreversible\footnote{A \glyph{source} can only be associated with a \glyph{consumption} arc so the rule does not apply in this case.}.
+\item A \glyph{sink} cannot be linked to a reversible process as it only receives entities, and so would effectively make the process irreversible\footnote{A \glyph{source} can only be associated with a \glyph{consumption} arc so this rule does not apply in this case.}.
 \item The semantics of \glyph{modulation} is the same as for irreversible processes, .i.e. the amount of entity in the modulation pool affects the rate of the process.
 \end{enumerate}
 
@@ -153,7 +153,7 @@ An \glyph{EPN} cannot \emph{belong} to more than one
 \glyph{compartment}. However, an EPN can be \emph{drawn} over more than one
 \glyph{compartment}. In such cases, the decision on which is the owning
 \glyph{compartment} is deferred to the drawing tool or the
-author. \glyph{Complex} may contain EPNs which belong to different
+author. A \glyph{complex} may contain EPNs which belong to different
 \glyph{compartments} and in this way a \glyph{complex} can be used to describe
 entities that span more than one {compartment}.
 
@@ -180,15 +180,11 @@ behind the current solution see \sect{postponed}.
 
 Submaps are a visual device that allow the detail of an \PD map to be exported into another \PD map and replaced by a \glyph{submap} glyph that acts as a place-holder. This is described and illustrated in \sect{submap}. In the following discussion we will refer to the original map as the \emph{main} map and the map containing the export detail as the submap. 
 
-\subsubsection{Rules for mapping to submaps}
-
-s the following must be true:
-
 \begin{enumerate}
 \item For a valid mapping between an EPN in the map and submap to exist the identifiers in the \glyph{tag} and the submap terminal must be identical and their associated entity pool nodes must be identical.
 \item If the same EPN is present in the map and a submap, then they must be mapped to each other.
 \item Since the main map and submap share the same namespace an EPN that is cloned in the main map must also be
-marked as cloned in the submap --- even if there is only one copy of the EPN in the \glyph{submap}. The converse applies when the EPN in the submap is cloned\footnote{As has the additional benefit of ensuring that main maps and submaps do not need to be modified if the submap is exanded and collapsed by a viewing or editing tool.}.
+marked as cloned in the submap --- even if there is only one copy of the EPN in the submap. The converse applies when the EPN in the submap is cloned\footnote{This has the additional benefit of ensuring that main maps and submaps do not need to be modified if the submap is exanded and collapsed by a viewing or editing tool.}.
 \end{enumerate}
 
 % \section{Summary of Rules}
