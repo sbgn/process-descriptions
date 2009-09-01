@@ -1,6 +1,6 @@
 format 67
 "visual" // sbgn::visual
-  revision 21
+  revision 22
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -209,7 +209,6 @@ ${members}};
 "
 	    classrelation_ref 128429 // <association>
       end
-
     end
 
     class 129564 "ProducableNode"
@@ -1506,6 +1505,5 @@ ${members}}
 	  b parent class_ref 134701 // SBGNGlyph
       end
     end
-
   end
 end
