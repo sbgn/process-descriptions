@@ -32,7 +32,7 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
     \item Once the stoichiometry of a flux arc is displayed in a map then all other flux arcs should
     display theit stoichiometry make.
     \item If the stoichiometry is undefined or unknown this should be indicated by the use of a question mark (``?''). 
-   \item If more than one set of stoichiometries can be applied to the flux arcs of the process then the stoichiometry of the stiochiometry of the flux arcs must be displayed.
+   \item If more than one set of stoichiometries can be applied to the flux arcs of the process then the stoichiometry of the flux arcs must be displayed.
 %     \item \glyph{PNs} should have only one \glyph{Catalysis} arc connected to them. If
 %     there more than one catalyst known to affect the process, several \glyph{PNs} should be
 %     drawn or a \glyph{logical operator} used 
@@ -82,7 +82,7 @@ important in understanding how the \PDl describes process modulation.
 \subsubsection{Reversible Processes}
 \label{sec: semantics reversible procs}
 
-A process is deemed to be reversible if they have \glyph{production} arcs on both the LHS and RHS of a process node \fig{process-reversibility}. Semantically, the \glyph{production} arc can be thought of as allowing a reversible flow of entities between the \glyph{process} and the \glyph{EPN}. A \glyph{consumption} arc only permits an irreversible flow from the \glyph{EPN} to the \glyph{process}. In this way the \glyph{consumption} arc forces the \glyph{process} to be irreversible. \glyph{Consumption} arcs cannot be associated with both sides of a \glyph{process} as this would prohibit any flow through the \glyph{process}.
+A process is deemed to be reversible if it has \glyph{production} arcs on both the LHS and RHS of a process node \fig{process-reversibility}. Semantically, the \glyph{production} arc can be thought of as allowing a reversible flow of entities between the \glyph{process} and the \glyph{EPN}. A \glyph{consumption} arc only permits an irreversible flow from the \glyph{EPN} to the \glyph{process}. In this way, the \glyph{consumption} arc forces the \glyph{process} to be irreversible. \glyph{Consumption} arcs cannot be associated with both sides of a \glyph{process} as this would prohibit any flow through the \glyph{process}.
 
 \begin{figure}[H]
   \centering
@@ -178,12 +178,12 @@ behind the current solution see \sect{postponed}.
 
 \subsection{Submaps}
 
-Submaps are a visual device that allow the detail of an \PD map to be exported into another \PD map and replaced by a \glyph{submap} glyph that acts as a place-holder. This is described and illustrated in \sect{submap}. In the following discussion we will refer to the original map as the \emph{main} map and the map containing the export detail as the submap. 
+The submap is a visual device that allows the detail of an \PD map to be exported into another \PD map and replaced by a \glyph{submap} glyph, which acts as a place-holder. This is described and illustrated in \sect{submap}. In the following discussion we will refer to the original map as the \emph{main} map and the map containing the export detail as the submap. 
 
 \begin{enumerate}
 \item For a valid mapping between an EPN in the map and submap to exist the identifiers in the \glyph{tag} and the submap terminal must be identical and their associated entity pool nodes must be identical.
 \item If the same EPN is present in the map and a submap, then they must be mapped to each other.
-\item Since the main map and submap share the same namespace an EPN that is cloned in the main map must also be
+\item Since the main map and submap share the same namespace, an EPN that is cloned in the main map must also be
 marked as cloned in the submap --- even if there is only one copy of the EPN in the submap. The converse applies when the EPN in the submap is cloned\footnote{This has the additional benefit of ensuring that main maps and submaps do not need to be modified if the submap is exanded and collapsed by a viewing or editing tool.}.
 \end{enumerate}
 
