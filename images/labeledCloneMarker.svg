@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:cc="http://web.resource.org/cc/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,23 +12,16 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.45.1"
+   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images"
    sodipodi:docname="labeledCloneMarker.svg"
    version="1.0"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/images/labelledCloneMarker.png"
-   inkscape:export-xdpi="100"
-   inkscape:export-ydpi="100">
+   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images/labelledCloneMarker.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150">
   <defs
-     id="defs4">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 372.04724 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="1052.3622 : 372.04724 : 1"
-       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
-       id="perspective46" />
-  </defs>
+     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -52,9 +44,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      width="1052.3622px"
-     height="744.09448px"
-     showgrid="false"
-     inkscape:window-maximized="0">
+     height="744.09448px">
     <sodipodi:guide
        orientation="horizontal"
        position="286.88332"
@@ -68,7 +58,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -163,7 +152,7 @@
        transform="matrix(1.1832374,0,0,0.993855,-54.548314,-322.42196)" />
     <text
        xml:space="preserve"
-       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
        x="206.76195"
        y="141.45514"
        id="text2837"
@@ -172,7 +161,7 @@
          id="tspan2839"
          x="206.76195"
          y="141.45514"
-         style="font-size:30.98454857px;font-weight:bold">val@var</tspan></text>
+         style="font-size:30.98454857px;font-weight:bold">var@val</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -283,13 +272,13 @@
        id="text5373"
        y="141.45514"
        x="630.19196"
-       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
        xml:space="preserve"><tspan
          style="font-size:30.98454857px;font-weight:bold"
          y="141.45514"
          x="630.19196"
          id="tspan5375"
-         sodipodi:role="line">val@var</tspan></text>
+         sodipodi:role="line">var@val</tspan></text>
     <path
        sodipodi:type="arc"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.61076021;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -302,7 +291,7 @@
        transform="matrix(1.1832374,0,0,0.993855,752.53757,-324.2502)" />
     <text
        xml:space="preserve"
-       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
        x="1040.2811"
        y="139.68488"
        id="text5379"
@@ -311,6 +300,6 @@
          id="tspan5381"
          x="1040.2811"
          y="139.68488"
-         style="font-size:30.98454857px;font-weight:bold">val@var</tspan></text>
+         style="font-size:30.98454857px;font-weight:bold">var@val</tspan></text>
   </g>
 </svg>
