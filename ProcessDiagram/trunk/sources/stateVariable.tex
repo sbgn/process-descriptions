@@ -11,7 +11,7 @@ SBGN provides a means of associating one or more \glyph{state variables} with an
 
 \glyphSboTerm Not applicable.
 
-\glyphContainer A \glyph{state variable} is represented by an elliptical container, as shown in \novreffig{state-var}.  The ellipse's long axis should be tangent to the border of the glyph of the \glyph{EPN} being modified by the \glyph{state variable}. The center of the bounding box of a \glyph{state of information} should be located on the mid-line of the border of the \glyph{EPN}.
+\glyphContainer A \glyph{state variable} is represented by a ''stadium'' container, that is two hemicercles of same radius joined by parallel segments, as shown in \fig{state-var}.  The parallel segment axis should be tangent to the border of the glyph of the \glyph{EPN} being modified by the \glyph{state variable}. The center of the bounding box of a \glyph{state variable} should be located on the mid-line of the border of the \glyph{EPN}.
 
 \glyphLabel The identification of an instance of a \glyph{state variable} is carried by one or two unbordered boxes, each containing a string of characters.  The characters cannot be distributed on several lines.  One box is mandatory, and contains the value of the \glyph{state variable}.  The value may be empty; an example of a situation where this might arise is an unphosphorylated phosporylation site.  The second box is optional and carries the identification of the \glyph{state variable}.  This identification should be present if confusion is possible between several state varibles (\eg several phosphorylation sites).  The center of the combination of the boxes located in the container box is superposed to the center of this container box.  Optionally, the identification of the \glyph{state variable} can be located outside the \glyph{state variable} container box.  This is \textbf{strongly} discouraged.  See \fig{wrong-state-var} for some examples of problems arising if the identification of a state variable is located outside the state variable.  The style of labeling of \glyph{state variables} encouraged by \SBGNPDLone is to combine a prefix representing the value of the variable with a suffix representing the variable's name.  Prefix and suffix should be separated by the symbol '@', X@Y thus meaning \emph{value X} AT \emph{variable Y}.
 
@@ -33,8 +33,7 @@ The label of a \glyph{state variable} should, if possible, be displayed within t
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.3, trim = 0 0.5in 0 0.75in]{examples/wrongStateVariables}
-  \caption{(Upper part) Examples of incorrect \glyph{state variables}.  (Lower part)
-    Correct version.}
+  \caption{(Upper part) Examples of incorrect \glyph{state variables}.  (Lower part) Correct version.}
   \label{fig:wrong-state-var}
 \end{figure}
 

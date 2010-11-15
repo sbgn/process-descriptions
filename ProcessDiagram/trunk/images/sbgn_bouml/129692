@@ -1,6 +1,6 @@
 format 67
 "visual" // sbgn::visual
-  revision 22
+  revision 23
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -209,6 +209,7 @@ ${members}};
 "
 	    classrelation_ref 128429 // <association>
       end
+
     end
 
     class 129564 "ProducableNode"
@@ -868,11 +869,12 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 130972 // <generalisation>
-	relation 130972 ---|>
+      classrelation 156717 // <generalisation>
+	relation 155181 ---|>
 	  a public
-	    classrelation_ref 130972 // <generalisation>
-	  b parent class_ref 129436 // Process
+	    java "${type}"
+	    classrelation_ref 156717 // <generalisation>
+	  b parent class_ref 141741 // StoichiometricProcess
       end
     end
 
@@ -885,11 +887,12 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 131100 // <generalisation>
-	relation 131100 ---|>
+      classrelation 157101 // <generalisation>
+	relation 155565 ---|>
 	  a public
-	    classrelation_ref 131100 // <generalisation>
-	  b parent class_ref 129436 // Process
+	    java "${type}"
+	    classrelation_ref 157101 // <generalisation>
+	  b parent class_ref 141741 // StoichiometricProcess
       end
     end
 
@@ -902,11 +905,12 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 131228 // <generalisation>
-	relation 131228 ---|>
+      classrelation 156973 // <generalisation>
+	relation 155437 ---|>
 	  a public
-	    classrelation_ref 131228 // <generalisation>
-	  b parent class_ref 129436 // Process
+	    java "${type}"
+	    classrelation_ref 156973 // <generalisation>
+	  b parent class_ref 141741 // StoichiometricProcess
       end
     end
 
@@ -919,11 +923,12 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 131356 // <generalisation>
-	relation 131356 ---|>
+      classrelation 156845 // <generalisation>
+	relation 155309 ---|>
 	  a public
-	    classrelation_ref 131356 // <generalisation>
-	  b parent class_ref 129436 // Process
+	    java "${type}"
+	    classrelation_ref 156845 // <generalisation>
+	  b parent class_ref 141741 // StoichiometricProcess
       end
     end
 
@@ -1503,6 +1508,46 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 149165 // <generalisation>
 	  b parent class_ref 134701 // SBGNGlyph
+      end
+    end
+
+    class 141741 "StoichiometricProcess"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156589 // <generalisation>
+	relation 155053 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 156589 // <generalisation>
+	  b parent class_ref 129436 // Process
+      end
+    end
+
+    class 141869 "ReversibleArc"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 157229 // <generalisation>
+	relation 155693 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 157229 // <generalisation>
+	  b parent class_ref 128045 // FluxArc
       end
     end
   end
