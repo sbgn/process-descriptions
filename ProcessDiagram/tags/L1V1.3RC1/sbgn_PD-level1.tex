@@ -1,0 +1,59 @@
+% =============================================================================
+% $Id$
+% Top-level latex file for the SBGN Process Description specification document.
+%
+% $HeadURL$
+% =============================================================================
+
+\documentclass[11pt,oneside]{book}
+
+%% ----------------------------------------------------------------------------
+%% Layout customizations and macro definitions.
+%% ----------------------------------------------------------------------------
+
+\input{sources/latex-style}
+\input{sources/latex-macros}
+
+
+%% ----------------------------------------------------------------------------
+\begin{document}
+%% ----------------------------------------------------------------------------
+
+\frontmatter
+
+\input{sources/front-page}
+%\input{sources/preface}
+\input{sources/toc}
+
+\mainmatter
+
+\include{sources/introduction}
+\include{sources/glyphs}
+\include{sources/grammar}
+\include{sources/layout}
+
+\include{sources/acknowledgments}
+
+\appendix
+
+\include{sources/examples}
+\include{sources/refcard}
+\include{sources/working}
+\include{sources/revision_history}
+
+\backmatter
+
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{sbgn_PD-level1}
+
+
+%% ----------------------------------------------------------------------------
+\end{document}
+%% ----------------------------------------------------------------------------
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: t
+% End:
