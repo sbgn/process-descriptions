@@ -7,16 +7,6 @@ One of the goals of \SBGNPDLone is to provide a visual description of biological
 
 In addition to understanding the rules of the notation it is also important to understand the underlying model, or abstraction, of the biological world that the \PDl uses. By understanding the abstractions used one can also understand more clearly what the author of a map meant, and also what the author could not say given the limitations of the notation. In the next section, we describe the abstractions and concepts implicit in the SBGN \PDl.
 
-% In this chapter, we describe how the glyphs of \SBGNPDLone can be combined
-% to make a valid SBGN \PDm. To do this, we must at the very least
-% define what glyphs can be connected to each other. This is called
-% syntax. Next, we must define rules over and above connection rules,
-% such as whether duplicate symbols are permitted. In addition, we must define what the notation ``means'' --- how does it represent a biological pathway? This is semantics, and it is essential if a reader is to understand a \PDm without external help, and a writer is to create one that reflects his understanding of a biological system.
-
-% In this section we start off by describing the concepts of the
-% \PD{} language. Next a detailed description of the syntax is provided
-% followed by a description of the syntactic rules of the notation.
-
 \section{Concepts}
 \label{sec:concepts}
 
@@ -25,41 +15,6 @@ The key abstraction of the SBGN \PDl is one of processes that act on pools of en
 It can be helpful to think of the SBGN \PD as describing the flow of a fluid, especially when tying to understand concepts such as stoichiometry, and modulation. In this analogy, each \glyph{EPN} represents a tank of fluid, which may be emptied via a pipe (the consumption arc, \sect{consumption}) that is connected to a valve (the process node, \sect{PNs}), which in turn is connected to other pipes (the production arcs, \sect{production}) that fill other tanks (\glyph{EPNs}). The opening of the valve, and thus the rate of the process can be controlled by the volume of fluid in another tank (this is modulation)\footnote{The precise nature of the relationship between valve opening and amount of fluid determines the nature of the modulation.}. If there are two consumption pipes feeding fluid into the process and one is wider and allows double the flow of the first then the fluid will mix in the process with a 2:1 ratio. This corresponds to the stoichiometry of the \glyph{consumption} and \glyph{production} arcs. Finally, the system needs a source of fluid from one or more external sources (\glyph{source}, section \sect{sourceSink}) and somewhere for it to drain away (the \glyph{sink}).
 
 One can see that this maps very closely to the abstraction described in the \PDl, but it also has an interesting side-effect that it allows us to add quantities to SBGN glyphs. In particular, EPNs have an implicit amount of entities in the entity pool and processes have an implicit rate. Since SBGN \PD is not a modelling language this will not be discussed in any further detail, however, this is an important concept that underpins our understanding of how processes are modulated in \sect{mod-semantics}.
-
-% This analogy can equally apply to an electronic circuit, where the valves may be transistors, the Entity Pool Node capacitors, sources the cathode of a battery and an earth as the sink.
-
-%%  In SBGN modulation takes 3 forms:
-
-%% \begin{enumerate}
-%% \item The rate of fluid flow through the value is opened is related to the amount of fluid in the modulating tank (modulation arc).
-%% \item The rate is directly related to the fluid level in the modulating tank (activation arc).
-%% \item The rate is inversely related to the fluid level in the modulating tank (inhibition arc; note that a catalysis arc is identical to this).
-%% \end{enumerate}
-
-%% A more subtle form of modulatory control is exhibited by special
-%% ```logic'' valves that open based on boolean logic (Logic Gates).
-%% These are as follows:
-
-%% \begin{description}
-%% \item[AND] The valve has more than one input pipe. If water flows in both pipes then the value opens and lets water flow into its output pipe.
-%% \item[OR] This is equivalent to two pipes that flow into one. Fluid from two or more input pipes is directed to the output pipe.
-%% \item[NOT] This value must work in conjunction with another valve and
-%%   has one input and one output pipe. If fluid flows into the valve
-%%   then nothing flows out of it and if there is no flow into it there
-%%   is flow out of it.
-%% \end{description}
-
-%% The input pipe to a logic valve is in turn connected to a
-%% ``pressure-dependent'' value (Existence Arc). This valve only opens at
-%% a specified pressure and so it allows us to determine a threshold
-%% above which water can flow to the logic valve. This is important as it
-%% allows us to convert an analogue value (fluid pressure or in the case
-%% of SBGN the concentration of a chemical Entity Pool Node) into a digital true
-%% or false value required by Boolean logic.
-
-% Finally, the system needs a source of fluid from one or more external sources (\glyph{source}, section \sect{sourceSink}) and somewhere for it to drain away (the \glyph{sink}).
-
-% This analogy can equally apply to an electronic circuit, where the valves may be transistors, the Entity Pool Node capacitors, sources the cathode of a battery and an earth as the sink.
 
 \section{The conceptual model}
 \label{sec:conceptual-model}
@@ -119,7 +74,7 @@ Perturbing agent & Label \\\hline
 Tag & Label \\\hline
 Compartment & Label \\\hline
 Submap & Label \\\hline
-Process & Combination of all EPNs connecting to process. \\\hline
+Process & \emph{instance} \\\hline
 Omitted process & As \glyph{process}. \\\hline
 Uncertain process & As \glyph{process}. \\\hline
 Association & As \glyph{process}. \\\hline
@@ -132,8 +87,12 @@ Phenotype & Label \\\hline
 \paragraph*{Notes}
 
 \begin{enumerate}
+\item \emph{Instance} means that every occurance of a glyph is unique
+  regardless of any label or value that it may carry.
 \item A complex may have a Label or be defined by its subunits. In the case where it has both then all complexes with the same label must also have the same subunit composition.
-\item  Generally process nodes are unique, but if all EPNs associated with a process are cloned, then the \glyph{process} must be a duplicate as well.
+\item  Process nodes are unique. Even if all EPNs associated with a
+  process are cloned, then this will still represent a different
+  process. Processes cannot be duplicated.
 \end{enumerate}
 
 

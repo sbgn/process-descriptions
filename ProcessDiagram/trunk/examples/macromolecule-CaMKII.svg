@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +13,7 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
+   inkscape:version="0.48.0 r9654"
    sodipodi:docname="macromolecule-CaMKII.svg"
    version="1.0"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
@@ -110,17 +110,28 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.0776307"
      inkscape:cx="526.18109"
-     inkscape:cy="372.04724"
+     inkscape:cy="446.28417"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1360"
-     inkscape:window-height="746"
+     inkscape:window-width="1280"
+     inkscape:window-height="1002"
      inkscape:window-x="0"
-     inkscape:window-y="274"
+     inkscape:window-y="0"
      width="1052.3622px"
-     height="744.09448px" />
+     height="744.09448px"
+     showgrid="false"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       orientation="0,1"
+       position="455.62919,521.51447"
+       id="guide7374" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="480.68415,464.9088"
+       id="guide7376" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -156,16 +167,15 @@
          x="385.84274"
          y="377.23438"
          style="font-size:64px">CaMKII</tspan></text>
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.40186882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path3061"
-       sodipodi:cx="274.76151"
-       sodipodi:cy="461.42294"
-       sodipodi:rx="50.833233"
-       sodipodi:ry="34.345188"
-       d="M 325.59474 461.42294 A 50.833233 34.345188 0 1 1  223.92827,461.42294 A 50.833233 34.345188 0 1 1  325.59474 461.42294 z"
-       transform="matrix(1.3031152,0,0,0.9901091,52.542309,-205.57806)" />
+    <rect
+       rx="20.905235"
+       ry="27.540806"
+       y="222.58002"
+       x="340.72906"
+       height="56.655354"
+       width="138.57184"
+       id="rect7372"
+       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <text
        xml:space="preserve"
        style="font-size:11.61901855px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -220,28 +230,6 @@
          x="602.55585"
          id="tspan2147"
          sodipodi:role="line">inhib</tspan></text>
-    <path
-       transform="matrix(1.3031152,0,0,0.9901091,224.54231,-205.57806)"
-       d="M 325.59474 461.42294 A 50.833233 34.345188 0 1 1  223.92827,461.42294 A 50.833233 34.345188 0 1 1  325.59474 461.42294 z"
-       sodipodi:ry="34.345188"
-       sodipodi:rx="50.833233"
-       sodipodi:cy="461.42294"
-       sodipodi:cx="274.76151"
-       id="path3155"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.40186882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="arc" />
-    <text
-       transform="scale(0.9682781,1.0327611)"
-       id="text3157"
-       y="253.27139"
-       x="541.6662"
-       style="font-size:11.61901855px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       xml:space="preserve"><tspan
-         style="font-size:30.98366356px;font-weight:bold"
-         y="253.27139"
-         x="541.6662"
-         id="tspan3159"
-         sodipodi:role="line">P@306</tspan></text>
     <rect
        ry="27.857147"
        rx="0"
@@ -263,5 +251,26 @@
          x="331.97888"
          id="tspan4632"
          sodipodi:role="line">mt:prot</tspan></text>
+    <rect
+       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2392"
+       width="138.57184"
+       height="56.655354"
+       x="519.82568"
+       y="223.01913"
+       ry="27.540806"
+       rx="20.905235" />
+    <text
+       transform="scale(0.96827814,1.0327611)"
+       id="text3157"
+       y="253.27138"
+       x="549.18427"
+       style="font-size:11.61901855px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:30.98366356px;font-weight:bold"
+         y="253.27138"
+         x="549.18427"
+         id="tspan3159"
+         sodipodi:role="line">P@306</tspan></text>
   </g>
 </svg>
