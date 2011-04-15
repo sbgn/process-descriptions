@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -13,9 +14,8 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.48.0 r9654"
    version="1.0"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
    sodipodi:docname="muscle.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/Users/smoodie/Documents/sbgn-pd/examples/muscle.png"
@@ -349,20 +349,21 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0776307"
-     inkscape:cx="584.18671"
-     inkscape:cy="416.90607"
+     inkscape:zoom="3.0479999"
+     inkscape:cx="298.457"
+     inkscape:cy="55.182521"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1440"
-     inkscape:window-height="878"
+     inkscape:window-width="1280"
+     inkscape:window-height="1002"
      inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
-     showgrid="false">
+     showgrid="false"
+     inkscape:window-maximized="0">
     <sodipodi:guide
        orientation="horizontal"
        position="698.23315,343.6358"
@@ -556,14 +557,14 @@
        d="M 591.76459,334.82152 L 596.30162,324.51489 L 587.30796,324.45726 L 591.76459,334.82152 z"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#eb9664;stroke-width:1.84164679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       ry="6.5472422"
-       rx="19.356956"
-       y="351.27191"
-       x="475.81299"
-       height="13.094484"
-       width="40.06921"
-       id="rect3337"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#eb9664;stroke-width:1.74044192;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       rx="6.7917018"
+       ry="6.2293868"
+       y="351.20416"
+       x="473.55338"
+       height="12.814734"
+       width="45.019276"
+       id="rect7372"
+       style="opacity:0.98999999000000005;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#eb9664;stroke-width:1.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <text
        xml:space="preserve"
        style="font-size:4.68290234px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -577,25 +578,25 @@
          style="font-size:8.70220947px;font-weight:normal;text-align:center;text-anchor:middle"
          id="tspan3341">closed</tspan></text>
     <rect
-       ry="6.4065866"
-       rx="19.356956"
-       y="351.32614"
-       x="681.15631"
-       height="13.094484"
-       width="40.06921"
-       id="rect2368"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#eb9664;stroke-width:1.74044192;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#eb9664;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5872"
+       width="45.019276"
+       height="12.814734"
+       x="679.26208"
+       y="351.20416"
+       ry="6.2293868"
+       rx="6.7917018" />
     <text
        id="text3345"
-       y="368.11023"
-       x="685.1059"
-       style="font-size:4.68290234px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       y="369.11758"
+       x="686.06757"
+       style="font-size:4.68290234px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"
        transform="scale(1.023474,0.9770644)"><tspan
          id="tspan3347"
          style="font-size:8.70220947px;font-weight:normal;text-align:center;text-anchor:middle"
-         y="368.11023"
-         x="685.1059"
+         y="369.11758"
+         x="686.06757"
          sodipodi:role="line">open</tspan></text>
     <path
        sodipodi:type="arc"
@@ -831,14 +832,14 @@
        d="M 788.84763,413.95124 L 779.20541,418.28253 L 779.15148,409.6967 L 788.84763,413.95124 z"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#eb9664;stroke-width:1.74044192;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       ry="6.4065866"
-       rx="19.356956"
-       y="653.80536"
-       x="647.06421"
-       height="13.094484"
-       width="40.06921"
-       id="rect2371"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#66cc66;stroke-width:1.74044192000000009;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:0.98999999000000005;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#66cc66;stroke-width:1.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5874"
+       width="45.019276"
+       height="12.814734"
+       x="644.15704"
+       y="653.69757"
+       ry="6.2293868"
+       rx="6.7917018" />
     <text
        xml:space="preserve"
        style="font-size:4.68290234px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -926,14 +927,14 @@
          style="font-size:10.44265175px;font-weight:normal;text-align:center;text-anchor:middle"
          id="tspan7026">actin</tspan></text>
     <rect
-       ry="6.5472422"
-       rx="19.356956"
-       y="645.09796"
-       x="363.31808"
-       height="13.094484"
-       width="40.06921"
-       id="rect2369"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#66cc66;stroke-width:1.74044192000000009;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       rx="6.7917018"
+       ry="6.2293868"
+       y="645.16736"
+       x="360.74625"
+       height="12.814734"
+       width="45.019276"
+       id="rect5876"
+       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#66cc66;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <text
        id="text7030"
        y="669.974"

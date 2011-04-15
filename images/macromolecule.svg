@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +13,7 @@
    height="250.80499"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
-   sodipodi:docbase="D:\workspace-doc\SBGN_trunk\documents\specifications\ProcessDiagram\Level1\images"
+   inkscape:version="0.48.0 r9654"
    sodipodi:docname="macromolecule.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0">
@@ -31,7 +31,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.2607205"
      inkscape:cx="193.21428"
-     inkscape:cy="125.4025"
+     inkscape:cy="160.78945"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -41,7 +41,9 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      width="1052.3622px"
-     height="744.09448px">
+     height="744.09448px"
+     showgrid="false"
+     inkscape:window-maximized="0">
     <sodipodi:guide
        orientation="horizontal"
        position="286.88332"
@@ -91,28 +93,6 @@
          x="400.68329"
          y="256.4744"
          style="font-size:32px;font-weight:bold">INFO</tspan></text>
-    <path
-       sodipodi:type="arc"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2829"
-       sodipodi:cx="274.76151"
-       sodipodi:cy="461.42294"
-       sodipodi:rx="68.690376"
-       sodipodi:ry="34.345188"
-       d="M 343.45188 461.42294 A 68.690376 34.345188 0 1 1  206.07113,461.42294 A 68.690376 34.345188 0 1 1  343.45188 461.42294 z"
-       transform="translate(346.11181,-214.97975)" />
-    <text
-       xml:space="preserve"
-       style="font-size:11.61924267px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="581.76935"
-       y="248.23465"
-       id="text2882"
-       transform="scale(0.9682781,1.0327611)"><tspan
-         sodipodi:role="line"
-         id="tspan2884"
-         x="581.76935"
-         y="248.23465"
-         style="font-size:30.98456001px;font-weight:bold">val@var</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -124,5 +104,30 @@
          x="449.25476"
          y="374.33151"
          style="font-size:64px">LABEL</tspan></text>
+    <g
+       id="g3270"
+       transform="translate(787.18605,63.94651)">
+      <rect
+         rx="25.135319"
+         ry="24.660894"
+         y="158.32697"
+         x="-253.3847"
+         height="50.73098"
+         width="166.61125"
+         id="rect2392"
+         style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         transform="scale(0.96827814,1.0327611)"
+         id="text2837-4"
+         y="187.91116"
+         x="-244.49863"
+         style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:30.98454857px;font-weight:bold"
+           y="187.91116"
+           x="-244.49863"
+           id="tspan2839-9"
+           sodipodi:role="line">val@var</tspan></text>
+    </g>
   </g>
 </svg>

@@ -118,25 +118,26 @@ explicitly marked as such. This is done using a \glyph{clone marker}. The detail
 \hline}
 \tablelasttail{\hline}
 \begin{supertabular}{|l|c|p{4cm}|p{3.5cm}|}\hline
-%  Node & Duplicate? & How & Additional Rules\\\hline
+%  Node & Replicate? & How & Additional Rules\\\hline
 Compartment   & N & & \\\hline
 SimpleChemical & Y & \glyph{Simple clone marker} & \\\hline
 UnspecifiedEntity & Y & \glyph{Simple clone marker} & \\\hline
 Source & N & & \\\hline
 Sink & N & & \\\hline
 Perturbing Agent & Y & \glyph{Simple clone marker} & \\\hline
-Phenotype & Y & \glyph{Simple clone marker} & \\\hline
+Phenotype & N & & \\\hline
 MultimerChemicalEntity & Y & \glyph{Simple clone marker} & \\\hline
 StatefulEntityPool & Y & \glyph{Labeled clone marker} & \\\hline
 Macromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 MultimerMacromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 Nucleic\-Acid\-Feature & Y & \glyph{Labeled clone marker} & \\\hline
 Complex & Y & \glyph{Labeled clone marker} & \\\hline
-Process & Y & None & Duplication is implied when all EPNs linked to the Process are marked as clones.\\\hline
-OmittedProcess & Y & As Process  & \\\hline
-UncertainProcess & Y & As Process  & \\\hline
-Association & Y & As Process  & \\\hline
-Dissociation & Y & As Process  & \\\hline
+Subunit  & N & & \\\hline
+Process & N & & \\\hline
+OmittedProcess & N &  & \\\hline
+UncertainProcess & N & & \\\hline
+Association & N &  & \\\hline
+Dissociation & N &  & \\\hline
 LogicalOperator & Y & None & \\\hline
 AND & Y & None & \\\hline
 OR & Y & None & \\\hline

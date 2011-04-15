@@ -13,7 +13,7 @@
    height="1052.3622"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.0 r9654"
    version="1.0"
    sodipodi:docname="MAPK.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -47,16 +47,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3561118"
-     inkscape:cx="380.23668"
-     inkscape:cy="502.63745"
+     inkscape:zoom="3.8356634"
+     inkscape:cx="378.64456"
+     inkscape:cy="835.53591"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      width="744.09448px"
      height="1052.3622px"
-     inkscape:window-width="1024"
-     inkscape:window-height="749"
-     inkscape:window-x="-5"
+     inkscape:window-width="1280"
+     inkscape:window-height="1002"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -79,7 +79,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -931,16 +931,15 @@
        id="path6615"
        d="M 574.58295,651.74865 L 624.84634,651.74865"
        style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <path
-       transform="matrix(0.4292926,0,0,0.1108178,162.20321,135.82804)"
-       d="m 363.65492,267.30249 a 58.588848,58.588848 0 1 1 -117.1777,0 58.588848,58.588848 0 1 1 117.1777,0 z"
-       sodipodi:ry="58.588848"
-       sodipodi:rx="58.588848"
-       sodipodi:cy="267.30249"
-       sodipodi:cx="305.06607"
-       id="path5526"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:8.54853725;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       sodipodi:type="arc" />
+    <rect
+       rx="6.7917018"
+       ry="6.2293868"
+       y="159.12051"
+       x="270.19437"
+       height="12.814734"
+       width="45.019276"
+       id="rect7372"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.86000024999999991;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <text
        xml:space="preserve"
        style="font-size:5.01682329px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
