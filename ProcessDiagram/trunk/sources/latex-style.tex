@@ -6,6 +6,18 @@
 
 % Warning: more \usepackage commands are used later in this file.
 
+\usepackage{ifpdf}
+
+% Pass options to xcolor. This is called by other packages so an
+% explicit call later leads to an error.
+\ifpdf
+  % Using pdflatex
+  \PassOptionsToPackage {pdftex,rgb,usenames,dvipsnames,svgnames,hyperref,table}{xcolor}
+\else
+  % Case: not using pdflatex
+ \PassOptionsToPackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+\fi
+
 \usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
 \usepackage[utf8]{inputenc} % unicode support
 \usepackage{shadow}
@@ -18,7 +30,6 @@
 \usepackage{array}
 \usepackage{fancybox}
 \usepackage{xspace}
-\usepackage{ifpdf}
 \usepackage{float}
 \usepackage{eso-pic}
 \usepackage[american]{varioref}
@@ -44,7 +55,7 @@
   pdfhighlight=/O,linkcolor={RoyalBlue},citecolor={RoyalBlue},
   pagecolor={RoyalBlue},urlcolor={RoyalBlue}]{hyperref}
 
-  \usepackage[pdftex,rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+%  \usepackage[pdftex,rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
 
 \else
   % Case: not using pdflatex
@@ -53,7 +64,7 @@
   \DeclareGraphicsExtensions{.eps,.png}
 
   \usepackage[breaklinks,plainpages=false,pdfpagelabels]{hyperref}
-  \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+%  \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
 
 \fi
 
@@ -310,11 +321,12 @@
 \newcommand{\glyphSboTerm}{\item[SBO Term:]\mbox{}\newline}
 \newcommand{\glyphContainer}{\item[Container:]\mbox{}\newline}
 \newcommand{\glyphLabel}{\item[Label:]\mbox{}\newline}
-\newcommand{\glyphAux}{\item[Auxiliary items:]\mbox{}\newline}
+\newcommand{\glyphAux}{\item[Permitted Child Glyphs:]\mbox{}\newline}
 \newcommand{\glyphOrigin}{\item[Origin:]\mbox{}\newline}
 \newcommand{\glyphTarget}{\item[Target:]\mbox{}\newline}
 \newcommand{\glyphNode}{\item[Node:]\mbox{}\newline}
 \newcommand{\glyphEndPoint}{\item[End point:]\mbox{}\newline}
+\newcommand{\glyphCloning}{\item[Cloning:]\mbox{}\newline}
 
 
 %% ----------------------------------------------------------------------------
