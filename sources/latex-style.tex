@@ -202,8 +202,13 @@
   {0.8ex}{\slshape\normalsize\bfseries\sffamily}}
 
 \renewcommand{\paragraph}{\@startsection%
-  {paragraph}{4}{0pt}{-1.25ex \@plus -1ex \@minus -.2ex}%
-  {0.5ex}{\slshape\normalsize\sffamily}}
+  {paragraph}{4}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
+  {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
+
+\renewcommand{\subparagraph}{\@startsection%
+  {subparagraph}{5}{-0.75cm}{-1.5ex \@plus -1ex \@minus -.2ex}%
+  {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
+
 
 % Below, we take out the heading embedded by the \tableofcontents
 % command so that we can control where it's put.
