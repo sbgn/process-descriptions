@@ -1,0 +1,1872 @@
+% $HeadURL$
+
+\chapter{Concepts and Glyphs}
+\label{chp:glyphs}
+
+
+\section{Introduction}
+
+Although ultimately defined by its glyphs, \SBGNPDLone these glyphs
+represent concepts that are related to varying degrees and ultimately
+can be organised hierarchically. This provides us with a useful way or
+organising the glyphs and thinking about \PD{}.  Therefore in this
+chapter we describe the conceptual structure of \SBGNPDLone and place
+each glyph within this structure. For each glyph or concept we describe its
+physical appearance and define syntax and other usage rules. An
+overview of this hierarchy is provided in figures
+\ref{fig:sbgn_node_tax} and \ref{fig:sbgn_edge_tax}.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=1.0\linewidth]{images/sbgn_node_taxonomy}
+\caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_node_tax}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb!]
+\begin{center}
+\includegraphics[width=\linewidth]{images/sbgn_edge_taxonomy}
+\caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_edge_tax}
+\end{center}
+\end{figure}
+
+% \begin{description}
+% \item[Process] Transforms entities from one form to another. Note that a process may be used to represent or summarise more than one known process.
+%   \begin{description}
+%   \item[Stoichiometric Process] A process with measurable change in the quantities of entity pools consumed and produced.
+%     \begin{description}
+%     \item[Process Glyph] A generic stoichiometric process
+%     \item[Ommited Process Glyph] Omitted processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony.
+%     \item[Uncertain Process Glyph] One or more processes that may not exist.
+%     \item[Association Glyph] The association of one or more EPNs to form a non-covalent binding of the biological objects represented by those EPNs into a larger complex. This glyph represents a \emph{single} process step.
+%     \item[Dissociation Glyph] The dissociation of an \glyph{EPN} into one or more \glyph{EPNs} represents the rupture of a non-covalent binding between the biological entities represented by those \glyph{EPNs}. This represents a single dissociation step.
+%   \end{description}
+%   \item[Non-Stoichiometric] Process that does not necessarily result in measurable change of entity pools, and which does necessarily have a defined start and end point.
+%     \begin{description}
+%     \item[Phenotype] A biochemical network can generate phenotypes or affect biological
+% processes.  Such processes can take place at different levels and are
+% independent of the biochemical network itself.  To represent these
+% processes in a map, SBGN defines the \glyph{phenotype} glyph.
+%    \item[Submap]
+%     \item[Logical Operators]
+%       \begin{description}
+%         \item[AND Glyph]
+%         \item[OR Glyph]
+%         \item[NOT Glyph]
+%       \end{description}
+%     \end{description}
+%   \end{description}
+% \item[Entity Pool Node]
+%   \begin{description}
+%     \item[Stateless Entity Pool]
+%       \begin{description}
+%       \item[Unspecified Entity Glyph]
+%       \item[Simple Chemical]
+%       \begin{description}
+%         \item[Simple Chemical Monomer Glyph]
+%         \item[Simple Chemical Multimer Glyph]
+%       \end{description}
+%     \item[Empty Set] 
+%       \item[Perturbing Agent]
+%       \end{description}
+%     \item[Stateful Entity Pool]
+%       \begin{description}
+%       \item[Macromolecule]
+%         \begin{description}
+%         \item[Macromolecule Monomer Glyph]
+%         \item[Macromolecule Multimer Glyph]
+%         \end{description}
+%       \item[Nucleic Acid Feature]
+%         \begin{description}
+%         \item[Nucleic Acid Feature Monomer Glyph]
+%         \item[Nucleic Acid Feature Multimer Glyph]
+%         \end{description}
+%       \item[Complex]
+%         \begin{description}
+%         \item[Complex Monomer Glyph]
+%         \item[Complex Multimer Glyph]
+%         \end{description}
+%      \end{description}
+%     \end{description}
+%   \item[Container] Foobar
+%     \begin{description}
+%     \item[Compartment]
+%     \end{description}
+%   \item[Auxiliary Glyphs]
+%     \begin{description}
+%     \item[Unit of Information]
+%     \item[State Variable]
+%  \end{description}
+%   \item[Reference]
+%   \begin{description}
+%     \item[Unit of Information]
+%     \item[State Variable]
+%  \end{description}
+% \end{description}
+
+\section{Definitions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   State nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Entity pool}\label{sec:EPNs}
+
+An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
+
+The \PD contains five glyph types representing classes of material
+entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}),
+\glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+(\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic})
+and \glyph{complex} (\sect{complex}).  (Specific types of
+macromolecules, such as protein, RNA, DNA, polysaccharide, and
+specific simple chemicals are not defined by \PD but may be part of
+future levels of SBGN.)  In addition to the material entities, \PD
+represents three conceptual entities: \glyph{empty set}
+(\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing
+  agent}).
+
+% The \PD contains six glyphs representing classes of material entities:
+% \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple
+%   chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+% (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}),
+% \glyph{multimer} (\sect{multimer}) and \glyph{complex}
+% (\sect{complex}).  (Specific types of macromolecules, such as protein,
+% RNA, DNA, polysaccharide, and specific simple chemicals are not
+% defined by \PD but may be part of future levels of SBGN.)  In addition
+% to the material entities, \PD represents three conceptual entities:
+% \glyph{empty set} (\sect{sourceSink}), and \glyph{perturbing agent}
+% (\sect{perturbing agent}).
+ 
+\subsubsection{Stateless Entity Pool}
+
+This is a pool where the entities do not change `state'. In otherwords
+the entities do not undergo any physical change that is useful to
+record in a \PD diagram. Therefore these glyphs cannot be assigned a state-variable.
+
+\paragraph{Simple chemical}
+\label{sec:simpleChemical}
+
+A simple chemical in SBGN is defined as the opposite of a
+macromolecule (\sect{macromolecule}): it is a chemical compound that
+is \emph{not} formed by the covalent linking of pseudo-identical
+residues.  Examples of simple chemicals are an atom, a monoatomic ion,
+a salt, a radical, a solid metal, a crystal, etc. The complex can be
+represented by a monomeric glyph (\glyph{Simple chemical monomer}) and a multimeric
+glyph (\glyph{Simple chemical multimer}).
+
+
+\begin{glyphDescription}
+% \item[Identifying Attributes:]\mbox{}
+%   \begin{itemize}
+%   \item owning compartment
+%   \item name
+%   \item cardinality
+%   \end{itemize}
+\begin{glyphIdentity}
+  \item owning compartment
+  \item name
+  \item cardinality
+\end{glyphIdentity}
+\glyphRules The mutimer glyph
+  must be used if cardinality is greater than 1.
+\end{glyphDescription}
+
+
+\subparagraph{Glyph: \glyph{Simple chemical monomer}}
+
+This glyph is used to represent a simple chemical with a cardinality
+of one.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000247 ! simple chemical
+
+\glyphContainer A \glyph{simple chemical} is represented by a circular
+container, as depicted in \fig{simpleChemical}. To avoid confusion
+with the Unspecified Entity (\ref{sec:unspecifiedEntity}), this glyph
+must remain a circle and cannot be deformed into an eclipse.
+
+\glyphLabel The identification of the \glyph{simple chemical} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the circular container.  The label is permitted to spill outside the container.
+
+\glyphAux A \glyph{simple chemical} may be decorated with one or more \glyph{units of information} (\sect{unitInfo}).  A particular \glyph{unit of information} describes the material type.  A \glyph{simple chemical} may also carry a \glyph{clone marker} (\sect{cloneMarker}).
+
+\glyphCloning Simple Clone Marker
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleChemical}
+  \caption{The \PD glyph for \glyph{simple chemical}.}
+  \label{fig:simpleChemical}
+\end{figure}
+
+\subparagraph{Glyph: \glyph{Simple chemical multimer}}
+
+This glyph is used to represent a simple chemical with a cardinality
+of one.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000421 ! multimer of simple chemicals
+
+\glyphContainer A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
+
+\glyphLabel A \glyph{multimer} has no identity on its own.  However, the first of the monomers carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{multimer} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a multimer is therefore defined as the vector of all its state variables.  Note that a \glyph{state variable} carried by a multimer actually applies to each of the constituent monomers individually.  If instead the state variables are meant to apply to the whole multimeric assembly, a \glyph{macromolecule} (\sect{macromolecule}) should be used instead of \glyph{multimer}.  An assembly containing some state variables applicable to the components, and others state variable applicable to the assembly (for instance opening of a channel and phosphorylation of each of its subunits) should be represented by a \glyph{complex} (\sect{complex}).
+
+\glyphCloning Simple Clone Marker
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
+  \caption{The \PD glyph for \glyph{multimer}.}
+  \label{fig:multimer}
+\end{figure}
+
+\paragraph{Glyph: \glyph{Unspecified entity}}
+\label{sec:unspecifiedEntity}
+
+The simplest type of EPN is the \glyph{unspecified entity}: one whose type is unknown or simply not relevant to the purposes of the map.  This arises, for example, when the existence of the entity has been inferred indirectly, or when the entity is merely a construct introduced for the needs of a map, without direct biological relevance.  These are examples of situations where the \emph{unspecified entity} glyph is appropriate.  (Conversely, for cases where the identity of the entities composing the pool \emph{is} known, there exist other, more specific glyphs described elsewhere in the specification.)
+
+\begin{glyphDescription}
+
+ \begin{glyphIdentity}
+  \item owning compartment
+  \item name
+  \item cardinality
+  \end{glyphIdentity}
+\glyphRules The cardinality of
+  the unspecified entity is always 1 (there no multimer glyph).
+
+
+\glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
+
+\glyphContainer An \glyph{unspecified entity} is represented by an
+elliptic container, as shown in \ref{fig:unspecified}.  Note that this
+must remain an ellipse to avoid confusion with the Simple Chemical
+glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
+
+\glyphLabel An \glyph{unspecified entity} is identified by a label
+placed in an unbordered box containing a string of characters.  The
+characters can be distributed on several lines to improve readability,
+although this is not mandatory.  The label box must be attached to the
+center of the container.  The label may spill outside of the
+container.
+
+\glyphAux None
+
+\glyphCloning SImple Clone Marker
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=2.5in]{images/unspecified}
+  \caption{The \PD glyph for \glyph{unspecified entity}.}
+  \label{fig:unspecified}
+\end{figure}
+
+\paragraph{Glyph: \glyph{Empty Set}}
+\label{sec:sourceSink}
+
+It is useful to have the ability to represent the creation of an entity or
+a state from an unspecified source, that is, from something that one does
+not need or wish to make precise.  For instance, in a model where the
+production of a protein is represented, it may not be desirable to
+represent all of the amino acids, sugars and other metabolites used, or the
+energy involved in the protein's creation.  Similarly, we may not wish to
+bother representing the details of the destruction or decomposition of some
+biochemical species into a large number of more primitive entities,
+preferring instead to simply say that the species ``disappears into a
+sink''.  Yet another example is that one may need to represent an input
+(respectively, output) into (resp. from) a compartment without explicitly
+representing a transport process from a source (resp. to a target).
+
+For these and other situations, SBGN defines a single glyph to handle
+these situations representing the involvement of an external pool of entities.  The symbol
+used in SBGN is borrowed from the mathematical symbol for ``empty set'',
+but it is important to note that it does not actually represent a true
+absence of everything or a physical void---it represents the absence of the
+corresponding structures in the model, that is, the fact that the
+external pool is conceptually outside the scope of the map.
+
+A frequently asked question is, why bother having an explicit symbol at
+all?  The reason is that one cannot simply use an arc that does not
+terminate on a node, because the dangling end could be mistaken to be
+pointing to another node in the map.  This is specially true if the
+map is rescaled, causing the spacing of elements in the map to
+change.  The availability and use of an explicit symbol for sources and
+sinks is critical.
+
+\begin{glyphDescription}
+
+\item[Identifying Attributes:]\mbox{} All glyphs represent the same
+  pool of external entities.
+
+\item[Special constraints or rules:]\mbox{}\newline None.
+
+\glyphSboTerm SBO:0000291 ! empty set
+
+\glyphContainer Represented by the mathematical symbol for ``empty
+set'', that is, a circle crossed by a bar linking the upper-right and
+lower-left corners of an invisible square drawn around the circle ($\emptyset$).
+\fig{sourceSink} illustrates this.  The symbol should be linked to one
+and only one edge in a map.
+
+\glyphLabel None
+
+\glyphAux None
+
+\glyphCloning All glyphs are identical and therefore clones. No
+special decoration is used to indicate this.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/sourceSink}
+  \caption{The \glyph{empty set} glyph.}
+  \label{fig:sourceSink}
+\end{figure}
+
+\paragraph{Glyph: \glyph{Perturbing agent}}
+\label{sec:perturbing agent}
+ 
+Biochemical networks can be affected by external influences.  Those
+influences can be the effect of well-defined physical perturbing agents, such as a light
+pulse or a change in temperature; they can also be more complex and not
+well-defined phenomena, for instance the outcome of a biological process, an experimental
+setup, or a mutation.  For these situations, SBGN provides the
+\glyph{perturbing agent} glyph. It is an EPN, and represents the amount to perturbing agent applied to a process.  
+
+\begin{glyphDescription}
+
+
+\glyphSboTerm SBO:0000405 ! perturbing agent
+
+\glyphContainer A \glyph{perturbing agent} is represented by a modified hexagon
+having two opposite concave faces, as illustrated in \fig{perturbing agent}.
+
+\glyphLabel A \glyph{perturbing agent} is identified by a label placed in an
+unbordered box containing a string of characters.  The characters can be
+distributed on several lines to improve readability, although this is not
+mandatory.  The label box must be attached to the center of the
+\glyph{perturbing agent} container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{perturbing agent} may carry a \glyph{clone marker}
+(\sect{cloneMarker}).
+
+A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).  A controlled vocaulary is available to describing the physical characteristic of the perturbing agent (see \sect{physical-characteristics-cv}).  
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/perturbing_agent}
+  \caption{The \PD glyph for \glyph{perturbing agent}.}
+  \label{fig:perturbing agent}
+\end{figure}
+
+\subsubsection{Stateful Entity Pool}
+
+Stateful entity pools can undergo physical changes, for example chemical
+modifcation or conformational change, which we wish to record in a \PD
+diagram. They can be assigned one or more state-variables.
+
+\paragraph{Macromolecule}
+\label{sec:macromolecule}
+
+Many biological processes involve \emph{macromolecules}: biochemical substances that are built up from the covalent linking of pseudo-identical units.  Examples of macromolecules include proteins, nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose, starch, etc.).  Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone defines only one glyph for all macromolecules.  The same glyph is to be used for a protein, a nucleic acid, a complex sugar, and so on.  The exact nature of a particular macromolecule in a map is then clarified using its label and decorations, as will become clear below.  (Future levels of SBGN may subclass the \glyph{macromolecule} and introduce different glyphs to differentiate between types of macromolecules.)
+
+\begin{glyphDescription}
+ \begin{glyphIdentity}
+  \item owning compartment
+  \item name
+  \item cardinality
+  \item The set of state values associated with this EPN.
+  \end{glyphIdentity}
+  \glyphRules The mutimer glyph
+  must be used if cardinality is greater than 1.
+\end{glyphDescription}
+
+\subparagraph{Glyph: \glyph{Macromolecule monomer}}
+
+This glyph represents a monomeric macromolecule.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000245 ! macromolecule 
+
+\glyphContainer A macromolecule is represented by a rectangular container with rounded corners, as illustrated in \fig{macromolecule}.
+
+\glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{macromolecule} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a macromolecule is therefore defined as the set of all its state variables. 
+
+A \glyph{macromolecule} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  The units of information can characterize a domain, such as a binding site.  Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a macromolecule.  
+
+\glyphCloning Labeled Clone Marker.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3in]{images/macromolecule}
+  \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
+    unadorned on the left, and with with an additional state variable and a
+    unit of information in the right and the cloned form on the right.}
+  \label{fig:macromolecule}
+\end{figure}
+
+
+\subparagraph{Glyph: \glyph{Macromolecule multimer}}
+
+This glyph represents a multimeric macromolecule.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000420 ! multimer of macromolecules
+
+A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{macromolMultimer} illustrates the glyph.
+
+\glyphLabel As monomer
+
+\glyphAux As monomer.
+
+\glyphCloning Labeled Clone Marker.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3.0in]{images/macromolMultimer}
+  \caption{The \PD glyph for \glyph{macromolecule multimer}, shown plain and
+    unadorned on the left, and with with an additional state variable and a
+    unit of information on the right.}
+  \label{fig:macromolMultimer}
+\end{figure}
+
+
+\paragraph{Nucleic acid feature}
+\label{sec:genetic}
+
+The \emph{Nucleic acid feature} construct in SBGN is meant to represent a fragment of a macromolecule carrying genetic information.  A common use for this construct is to represent a gene or transcript.  The label of this EPN and its \emph{units of information} are often important for making the purpose clear to the reader of a map.
+
+\begin{glyphDescription}
+ \begin{glyphIdentity}
+  \item owning compartment
+  \item name
+  \item cardinality
+  \item The set of state values associated with this EPN.
+  \end{glyphIdentity}
+  \glyphRules None
+\end{glyphDescription}
+
+\subparagraph{Glyph: \glyph{Nucleic acid feature monomer}}
+
+This glyphs represents a monomeric macromolecule.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000354 !  informational molecule segment
+
+\glyphContainer A \glyph{nucleic acid feature} is represented by a rectangular container whose bottom half has rounded corners, as shown in \fig{genetic}. This design reminds that we are fundamentally dealing with a unit of information, but this information is carried by a macromolecule.
+
+\glyphLabel The identity of a particular \glyph{Nucleic acid feature} is established by a label placed in an unordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{nucleic acid feature} can carry state variables (\sect{stateVariable}) that add information about its precise state.  The state of a \glyph{nucleic acid feature} is therefore defined as the vector of all its state variables. 
+
+A \glyph{nucleic acid feature} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  These can characterize a \glyph{nucleic acid feature}'s domain, such as a binding site, or an exon.  Particular \glyph{units of information} carry the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of the \glyph{nucleic acid feature}. 
+
+\glyphCloning Labeled Clone Marker
+
+\end{glyphDescription}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 2.5in]{images/genetic}
+  \caption{The \PD glyph for \glyph{nucleic acid feature monomer}, shown plain and
+    unadorned on the left and with an additional state variable and a
+    unit of information in the middle and the cloned form on the right.} 
+  \label{fig:genetic}
+\end{figure}
+
+\subparagraph{Glyph: \glyph{Nucleic acid feature multimer}}
+
+This glyphs represents a multimeric macromolecule.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000419 ! multimer of informational molecule segments 
+
+\glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
+
+\glyphLabel As monomer glyph.
+
+\glyphAux A \glyph{nucleic acid feature} can carry state variables (\sect{stateVariable}) that add information about its precise state.  The state of a \glyph{nucleic acid feature} is therefore defined as the vector of all its state variables. 
+
+A \glyph{nucleic acid feature} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  These can characterize a \glyph{nucleic acid feature}'s domain, such as a binding site, or an exon.  Particular \glyph{units of information} carry the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of the \glyph{nucleic acid feature}. 
+
+A \glyph{nucleic acid feature} may also carry a \glyph{clone marker}
+(\sect{cloneMarker}).
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 2.5in]{images/genetic}
+  \caption{The \PD glyph for \glyph{nucleic acid feature monomer}, shown plain and
+    unadorned on the left and with an additional state variable and a
+    unit of information in the middle and the cloned form on the right.} 
+  \label{fig:genetic-multimer}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Complex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Complex}\label{sec:complex}
+
+A complex glyph represents a biochemical entity composed of other
+biochemical entities, whether macromolecules, simple chemicals,
+multimers, or other complexes. The composition of a complex can also
+be shown using subunits decorators (see below), but these are optional
+and it is also correct to show a complex without any subunits. The
+complex can be represented by a monomeric glyph (\glyph{Complex monomer}) and a multimeric glyph (\glyph{Complex multimer}).
+
+\begin{glyphDescription}
+\begin{glyphIdentity}
+  \item owning compartment
+  \item name \textbf{or} names of the subunits 
+  \item cardinality
+  \item The set of state values associated with the subunit decorators
+    and the set of state values associated with the Complex.
+  \end{glyphIdentity}
+\glyphRules
+\begin{itemize}
+  \item The mutimer glyph must be used if cardinality is greater than
+    1.
+  \item If no subunits are defined then the complex must have a name.
+  \item The subunits of a complex are not EPNs. The complex itself
+    represents the pool of entities.
+\end{itemize}
+\end{glyphDescription}
+
+
+\subparagraph{\glyph{Complex Monomer}}
+
+This glyph represents a monomeric complex EPN.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000253 ! non-covalent complex
+
+\glyphContainer A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
+
+\glyphLabel The identification of a \glyph{named complex} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the midway between the border of the complex's container box and the border of the components' container boxes.
+
+\glyphAux A \glyph{complex} can carry state variables (see \sect{stateVariable}).  The state of a complex is defined by the set of the all its state variable and all the state variables of all its components.  A \glyph{complex} can also carry one or several \glyph{units of information} (see \sect{unitInfo}). A \glyph{complex} may carry a \glyph{clone marker} (see \sect{cloneMarker}).
+
+\glyphCloning Labeled Clone Marker
+
+\end{glyphDescription}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3.5in]{images/complexGlyph}
+  \caption{The \glyph{complex} glyph.}
+  \label{fig:complex}
+\end{figure}
+
+\subparagraph{\glyph{Complex Multimer}}
+
+This glyph represents a multimeric complex EPN.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000418 ! multimer of complexes
+
+\glyphContainer A \glyph{Complex Multimer} is represented by two
+identical \glyph{Complex} containers shifted horizontally and
+vertically and stacked one on top of the other.  \fig{complexMultimer}
+illustrates the glyph.
+
+\glyphLabel As monomer.
+
+\glyphAux As monomer.
+
+\glyphCloning Labeled Clone Marker
+
+\end{glyphDescription}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3.5in]{images/complexMultimerGlyph}
+  \caption{The \glyph{Complex Multimer} glyph.}
+  \label{fig:complexMultimer}
+\end{figure}
+
+\subparagraph{Subunits}
+
+A complex can optionally be decorated with subunit symbols to describe
+the composition of the complex. The symbols available are equivalent
+to those used by the EPN glyphs including the
+\glyph{complex}. Therefore it is possible to describe complexes within
+complexes. Subunits may contain labels. The following rules apply to
+the use of subunits in a complex:
+
+\begin{itemize}
+\item The subunit can contain any symbol used by an EPN glyph.
+\item Subunits that use the \glyph{Complex} glyph can also contain
+  subunits. There is no limit on such nesting. The namespace rules
+  below apply.
+\item Mutimeric glyphs can also be used a subunits. They should
+  include the cardinality of the mutimer in the manner spercified for
+  the equivalent EPN.
+\item Subunits with the same name can be repeated one or more times.
+\item Subunits may be assigned one or more state variables. Each state
+  variable actually belongs to the Complex.
+\item The subunit defines a namespace for its state variables, e.g.\,
+  subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
+  ``B'' assigned the same state variable can be distinguised as
+  A:P@Ser202 and B:P@Ser202.
+\end{itemize}
+
+The example in figure \fig{complexSubunits} illustrates the use of
+subunits in a complex shows an equivalent compex without
+subunits. This is an import point. For every \glyph{Complex} drawn
+with subunits it will always be possible to drawn an equivalent
+version that does not use contains subunits.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3.0in]{images/complex}
+  \caption{Both these complex glyphs are equivalent. The one on the
+    left is described using subunit decorators, the one on the right
+    describes the same thing without them.}
+  \label{fig:complexSubunits}
+\end{figure}
+
+\subparagraph{Examples of complex EPNs}
+\label{sec:CplxEPNs}
+
+In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
+
+\fig{example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/macromolecule-CaMKII}
+  \caption{An example representation of calcium/calmodulin kinase II.}
+  \label{fig:example-camkii}
+\end{figure}
+
+\fig{example-glur} represents the glutamate receptor in the open state, with both phosphorylation and glycosylation.  The entity carries two functional domains, the ligand-binding domain and the ion pore, and its chemical nature is precided.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/macromolecule-GluR}
+  \caption{An example of a glutamate receptor in the open state.}
+  \label{fig:example-glur}
+\end{figure}
+
+%%%%%%%%%%%%
+% Put the following in the semantics section
+
+% \subsubsection{Attributes}
+
+
+% The complex has the following attributes (those in \emph{italic} identify the complex):
+
+% \begin{description}
+% \item[\emph{name}]
+% \item[\emph{cardinality}] The number of subunits of the complex. If
+%   cardinality $> 1$ then the \glyph{Complex Multimer} must be
+%   drawn. Otherwise a \glyph{Complex} is drawn. The cardinality is an
+%   integer $>0$.
+% \item[\emph{compartment}] The complex must belong to one compartment.
+% \item[state variables] The complex can have zero, one or more state
+%   variables. 
+% \item[clone ID]
+% \end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Process nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Process}\label{sec:PNs}
+
+Process nodes represent processes that transform one or several entity
+pools into one or several entity pools, identical or different. Note
+that a process may be used to represent or summarise more than one
+known process.  \SBGNPDLone defines a generic \glyph{process}
+(\sect{process}), as well as five more specific ones: the
+\glyph{omitted process} (\sect{omitted}), the \glyph{uncertain
+  process} (\sect{uncertain}), the \glyph{association}
+(\sect{association}), the \glyph{dissociation} (\sect{dissociation}),
+and the \glyph{phenotype} (\sect{phenotype}).
+
+\begin{glyphDescription}
+  \begin{glyphIdentity}
+    \item Instance - all entities are unique
+  \end{glyphIdentity}
+
+  \item glyphRules A process cannot be ``orphaned''. It must always
+    be connected to another node by one or more arcs.
+\end{glyphDescription}
+
+
+\subsubsection{Non-stoichiometric process}
+
+ Process that does not necessarily result in measurable change of entity pools, and which does necessarily have a defined start and end point. 
+
+\paragraph{Glyph: \glyph{Phenotype}}
+\label{sec:phenotype}
+
+A biochemical network can generate phenotypes or affect biological
+processes.  Such processes can take place at different levels and are
+independent of the biochemical network itself.  To represent these
+processes in a map, SBGN defines the \glyph{phenotype} glyph.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000358 ! phenotype
+
+\glyphContainer A \glyph{phenotype} is represented by an elongated
+hexagon, as illustrated in \fig{phenotype}.
+
+\glyphLabel A \glyph{phenotype} is identified by a label placed in an
+unbordered box containing a string of characters.  The characters can be
+distributed on several lines to improve readability, although this is not
+mandatory.  The label box must be attached to the center of the
+\glyph{phenotype} container.  The label may spill outside of the container.
+
+\glyphAux A \glyph{phenotype} may carry a \glyph{clone marker}
+(\sect{cloneMarker}).
+
+\end{glyphDescription}
+ 
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/phenotype}
+  \caption{The \PD glyph for \glyph{phenotype}.}
+  \label{fig:phenotype}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Submap
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Submap}}
+\label{sec:submap}
+
+A \glyph{submap} is used to encapsulate processes (including all types of nodes and edges) within one glyph.  The \glyph{submap} hides its content to the users, and display only input terminals (or ports), linked to \glyph{EPNs} (\sect{EPNs}). A \glyph{submap} is not equivalent to an \glyph{omitted process} (see \sect{omitted}).  In the case of an SBGN description that is made available through a software tool, the content of a \glyph{submap} may be available to the tool.  A user could then ask the tool to expand the \glyph{submap}, for instance by clicking on the icon representing the \glyph{submap}.  The tool might then expand and show the \glyph{submap} within the same map (on the same canvas), or it might open it in a different canvas. In the case of an SBGN description made available in a book or a website, the content of the \glyph{submap} may be available on another page, possibly accessible via an hyperlink on the \glyph{submap}.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000395 ! encapsulating process
+
+\glyphContainer The \glyph{submap} is represented as a square box to remind the viewer that it is fundamentally a process.
+
+\glyphLabel The identification of the \glyph{submap} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the container box.
+
+\glyphAux A \glyph{submap} carries labeled terminals.  When the \glyph{submap} is represented folded, those terminals are linked to external \glyph{EPNs} (\sect{EPNs}).  In the unfolded view, exposing the internal structure of the \glyph{submap}, a set of \glyph{tags} point to the corresponding internal \glyph{EPNs} \sect{EPNs}.
+
+\end{glyphDescription}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.22]{images/submap}
+  \caption{The \PD glyph for \glyph{submap}. (Upper part) folded submap. (Lower part) content of the submap.}
+  \label{fig:submap}
+\end{figure}
+
+\fig{submap-folded} represents a \glyph{submap} that transforms glucose into fructose-6-phosphate. The \glyph{submap} carries five terminals, four linked to EPNs and one linked to a \glyph{compartment}.  The latter is particularly important in the case of EPNs present only in a \glyph{compartment} enclosed in a \glyph{submap}, and that are not linked to terminals themselves.  Note that the terminals do not define a ``direction'', such as input or output.  The flux of the reactions is determined by the context.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{examples/submap-folded}
+  \caption{Example of a submap with contents elided.}
+  \label{fig:submap-folded}
+\end{figure}
+
+The map in \fig{submap-unfolded} represents an unfolded version of a \glyph{submap}.  Here, anything outside the \glyph{submap} has disappeared, and the internal \glyph{tags} are not linked to the corresponding external \glyph{terminals}.  Note the tag 5, linking the compartment ``mito'' of the \glyph{submap} to the compartment ``mito'' outside the \glyph{submap}.  The compartment containing Glu6P is implicitly defined as the same as the compartment containing Glu and Fru6P.  There is no ambiguity because if Glu and Fru6P were in different compartments, one of them should have been defined within the \glyph{submap}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.35]{examples/submap-dissociated}
+  \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{submap-folded}.}
+  \label{fig:submap-unfolded}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Logical operators
+%xo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Logical operators}\label{sec:logic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     And
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\color{blue}
+\subparagraph{Glyph: \glyph{And}}\label{sec:and}
+
+The glyph \glyph{and} is used to denote that all the \glyph{EPNs} linked as input are necessary to produce the output.  
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000173 ! and.
+ \glyphOrigin More than one \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
+ \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
+ \glyphNode \glyph{And} is represented by a circle carrying the word ``AND''.
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/and}
+  \caption{The \PD glyph for \glyph{and}. Only two inputs are represented, but more would be allowed.}
+  \label{fig:and}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Or
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subparagraph{Glyph: \glyph{Or}}\label{sec:or}
+
+The glyph \glyph{or} is used to denote that any of the \glyph{EPNs} linked as input is sufficient to produce the output.  
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000174 ! or.
+ \glyphOrigin More than one \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
+ \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
+ \glyphNode \glyph{Or} is represented by a circle carrying the word ``OR''.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/or}
+  \caption{The \PD glyph for \glyph{or}. Only two inputs are represented, but more would be allowed.}
+  \label{fig:or}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Not
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subparagraph{Glyph: \glyph{Not}}\label{sec:not}
+
+The glyph \glyph{not} is used to denote that the \glyph{EPN} linked as input cannot produce the output.  
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000238 ! not.
+ \glyphOrigin One \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
+ \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
+ \glyphNode \glyph{Not} is represented by a circle carrying the word ``NOT''.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/not}
+  \caption{The \PD glyph for \glyph{not}.}
+  \label{fig:not}
+\end{figure}
+
+
+\subsubsection{Stoichiometric process}
+
+A process with measurable change in the quantities of entity pools
+consumed and produced. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Process
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Process}}
+\label{sec:process}
+
+A generic stoichiometric process that transforms a set of entity pools (represented by \glyph{EPNs} in \SBGNPDLone) into another set of entity pools.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:0000375 ! process
+
+\glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
+
+\glyphTarget One or several \glyph{production} arcs (\sect{production}).
+
+\glyphNode A process is represented by a square box linked to two connectors, small arcs attached to the centers of opposite sides. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors. The modulatory arcs (\sect{arcs}) point to the other two sides of the box. A \glyph{process} connected to \glyph{production} arcs on opposite sides is a reversible process. 
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/process}
+  \caption{The \PD glyph for \glyph{process}.}
+  \label{fig:process}
+\end{figure}
+
+A process is the basic process node in SBGN.  It describes a process that transforms a given set of biochemical entities---macromolecules, simple chemicals or unspecified entities---into another set of biochemical entities.  Such a transformation might imply modification of covalent bonds (conversion), modification of the relative position of constituents (conformational process) or movement from one compartment to another (translocation).
+
+A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or \glyph{production} (\sect{production}) arcs to indicate the stoichiometry of the process.  This label becomes a requirement when the exact composition of the number of copies of the inputs or outputs to a reaction are ambiguous in the map.
+
+A process is regarded as reversible if both `sides' of the process are connected to \glyph{production} arcs (see section \ref{sec: semantics reversible procs}).
+
+The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein in a \PD.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-phosphorylation}
+  \caption{Phosphorylation of the protein MAP kinase.}
+  \label{fig:trans-phos}
+\end{figure}
+
+The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-reaction}
+  \caption{Reaction between ATP and fructose-6-phosphate to produce fructose-1,6-biphosphate, ADP and a proton.}
+  \label{fig:trans-react}
+\end{figure}
+
+The example in \fig{trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{compartment}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-translocation}
+  \caption{Translocation of calcium ion out of the endoplasmic reticulum. Note that the \glyph{process} does not have to be located on the boundary of the \glyph{compartment}. A \glyph{process} is not attached to any \glyph{compartment}.}
+  \label{fig:trans-trans}
+\end{figure}
+
+The example in \fig{trans-reverse} illustrates the use of a \glyph{process} node to represent the reversible opening and closing of an ionic channel in a \PD.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-reversible}
+  \caption{Reversible opening and closing of an ionic channel.}
+  \label{fig:trans-reverse}
+\end{figure}
+
+When such a reversible process is asymmetrically modulated, it must be represented by two different processes in a \PD.  \fig{trans-mod} illustrates the use of two \glyph{process} nodes to represent the reversible activation of a G-protein coupled receptor.  In the absence of any effector, an equilibrium exists between the inactive and active forms.  The agonist stabilises the active form, while the inverse agonist stabilises the inactive form.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-modulated}
+  \caption{The reversible activation of a G-protein coupled receptor.}
+  \label{fig:trans-mod}
+\end{figure}
+
+The example in \fig{trans-dim} presents the conversion of two galactoses into a lactose.  Galactoses are represented by only one \glyph{simple chemical}, the cardinality being carried by the \glyph{consumption} arc.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/process-dimerisation}
+  \caption{Conversion of two galactoses into a lactose.}
+  \label{fig:trans-dim}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Omitted Process
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Omitted process}}\label{sec:omitted}
+
+Omitted processes are processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony. A single \glyph{omitted process} can represent any number of actual processes. The \glyph{omitted process} is different from a \glyph{submap}. While a \glyph{submap} references to an explicit content, that is hidden in the main map, the \glyph{omitted process} does not ``hide'' anything within the context of the map, and cannot be ``unfolded''.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000397 - omitted process.
+ \glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
+ \glyphTarget One or several \glyph{production} arcs (\sect{production}).
+
+ \glyphNode An \glyph{omitted process} is represented by a \glyph{process} in which the square box contains a two parallel slanted lines oriented northwest-to-southeast and separated by an empty space.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/omitted}
+  \caption{The \PD glyph for \glyph{omitted process}.}
+  \label{fig:omitted}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Uncertain Process
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Uncertain process}}\label{sec:uncertain}
+
+Uncertain processes are processes that may not exist. A single \glyph{uncertain process} can represent any number of actual processes.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000396 ! uncertain process.
+ \glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
+ \glyphTarget One or several \glyph{production} arcs (\sect{production}).
+ \glyphNode An \glyph{uncertain process} is represented by a \glyph{process} which square box contains a question mark.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/uncertain}
+  \caption{The \PD glyph for an \glyph{uncertain process}.}
+  \label{fig:uncertain}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Association
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Association}}\label{sec:association}
+
+The association between one or more \glyph{EPNs} represents the non-covalent binding of the biological objects represented by those \glyph{EPNs} into a larger complex.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000177 ! non-covalent binding.
+ \glyphOrigin One or more \glyph{consumption} arcs (\sect{consumption}).
+ \glyphTarget  One \glyph{production} arc (\sect{production}).
+ \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors. 
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/association}
+  \caption{The \PD glyph for \glyph{association}.}
+  \label{fig:association}
+\end{figure}
+
+The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2 kinase into the Maturation Promoting Factor.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/association-MPF}
+  \caption{Association of cyclin and CDC2 kinase into the Maturation Promoting Factor.}
+  \label{fig:assoc-cyclin}
+\end{figure}
+
+\fig{assoc-unamed} gives an example illustrating the association of a pentameric macromolecule (a nicotinic acetylcholine receptor) with a simple chemical (the local anesthetic chlorpromazin) in an unnamed complex.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/association-unamed}
+  \caption{The association of a pentameric macromolecule with a simple chemical in an unnamed complex.}
+  \label{fig:assoc-unamed}
+\end{figure}
+
+An association does not necessarily result in the formation of a \glyph{complex}; it can also produce a \glyph{multimer}, or a \glyph{macromolecule} (although the latter case is semantically borderline).  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/association-multimerisation}
+  \caption{Formation of hemoglobin.}
+  \label{fig:assoc-multi}
+\end{figure}
+
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Dissociation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Dissociation}}\label{sec:dissociation}
+
+The dissociation of an \glyph{EPN} into one or more \glyph{EPNs} represents the rupture of a non-covalent binding between the biological entities represented by those \glyph{EPNs}.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000180 ! dissociation.
+ \glyphOrigin One \glyph{consumption} arc (\sect{consumption}).
+ \glyphTarget  One or more \glyph{production} arc (\sect{production}).
+ \glyphNode A \glyph{dissociation} between several entities is represented by two concentric circles. A simple empty disc could be, in some cases, confused with the \glyph{catalysis} (section \sect{catalysis}). Moreover, the existence of two circles reminds the dissociation, by contrast with the filled disc of the \glyph{association} (\sect{association}).
+ \end{glyphDescription}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/dissociation}
+  \caption{The \PD glyph for \glyph{dissociation}.}
+  \label{fig:dissociation}
+\end{figure}
+
+The example in \fig{dissoc-ribo} illustrates the dissociation of the small and large ribosomal subunits from a messenger RNA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/dissociation-ribosome}
+  \caption{Dissociation of the small and large ribosomal subunits from a messenger RNA.}
+  \label{fig:dissoc-ribo}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                  Arcs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Container}
+
+\subsubsection{Canvas}
+
+An \PD diagram has a canvas upon which an SBGN diagram is drawn. It is
+not a glyph in the sense that there is no shape drawn to represent it,
+but \SBGNPDLone has rules about what can be drawn directly on the canvas so
+it is useful to describe it here.
+
+\begin{glyphDescription}
+\item[Identifying Attributes:]\mbox{}
+  \begin{itemize}
+  \item identity
+ \end{itemize}
+\item[Special constraints or rules:]\mbox{}\newline If one
+  \glyph{Compartment} is drawn on the canvas then all EPNs must be
+  drawn in a \glyph{Compartment} and cannot be drawn directly onto the
+  Canvas\footnote{All EPNs must beling to a compartment. When no compartment is drawn then all EPNs can be
+    thought of as belonging to an imaginary ``default''
+    compartment. But when one or more EPNs are assigned to an explicit
+  compartment then for clarity all compartments must be explicity
+  drawn and EPNs assigned to them.}.
+
+\glyphSboTerm Not assigned
+
+\glyphContainer None
+
+\glyphLabel None
+
+\glyphAux The Canvas can have \glyph{Container} glyphs and any EPN,
+Process and Arcs as children. However all Auxiliary glyphs cannot be
+children of the Canvas.
+ 
+\glyphCloning N/A
+
+\end{glyphDescription}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Compartment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Glyph: \glyph{Compartment}}\label{sec:compartment}
+
+A compartment is a logical or physical structure that contains entity pool nodes. An EPN can only belong to one compartment. Therefore, the ``same'' biochemical species located in two different compartments are in fact two different pools.
+
+\begin{glyphDescription}
+
+\glyphSboTerm  SBO:0000290 ! physical compartment 
+
+\glyphContainer A compartment is represented by a surface enclosed in a continuous border or located between continuous borders. These borders should be noticeably thicker than the borders of the EPNs. A compartment can take \textbf{any} geometry. A compartment must always be entirely enclosed.
+
+\glyphLabel The identification of the compartment is carried by an unbordered box containing a string of characters. The characters can be distributed on several lines to improve readability, although this is not mandatory. The label box can be attached anywhere in the container box. Note that the label can spill-over from the container box.
+
+\glyphAux A \glyph{compartment} can carry a certain number of \glyph{units of information}, that will add information for instance about the physical environment, such as pH, temperature or voltage, see \sect{unitInfo}.  The center of the bounding box of a \glyph{unit of information} is located on the mid-line of the border of the compartment.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/compartment}
+  \caption{The \PD glyph for \glyph{compartment}.}
+  \label{fig:compartment}
+\end{figure}
+
+
+To allow more aesthetically pleasing and understandable maps, compartments are allowed to overlap each other visually, but it must be kept in mind that this does not mean the top compartment contains part of the bottom compartment.  \fig{overlap} shows two semantically equivalent placement of compartments:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{examples/compartment_overlapping}
+  \caption{Overlapped compartments are permitted, but the overlap does not imply containment.}
+  \label{fig:overlap}
+\end{figure}
+
+Overlapped (hidden) part of the compartment should not contain any object which could be covered by an overlapping compartment.  \fig{overlap-bad} illustrates the problem using an incorrect map.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.45]{examples/compartment_overlapping_wrong}
+  \caption{Example of an \textbf{incorrect} map.  Overlapped compartments must not obscure other objects.}
+  \label{fig:overlap-bad}
+\end{figure}
+
+% It is important to note that a compartment never contains another compartment, but may surround it.  A key aspect of correctly drawing two ``adjacent'' compartments is that they are not separated by one line, but by \textbf{two} lines.  \fig{two-comp} provides an example of this in which a cell is shown made up of a nucleus surrounded by the cytoplasm.
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale = 0.4]{examples/compartment-cell}
+%  \includegraphics[scale = 0.4]{examples/compartment-cell-wrong}
+%   \caption{Compartments can surround other compartments; in that case, both of the compartment's borders must still be shown, with the result that the separation is drawn as two lines. The left example is correct, with twoo disjoint compartments representing the ``cytoplasm'' and the ``nucleus''. The right example is incorrect. Indeed the compartments ``cell'' and ``nucleus'' would be disjoint, the latter only overlapping the former. As a result, the volume of the nucleus is duplicated.}
+%   \label{fig:two-comp}
+% \end{figure}
+
+% The example diagram in \fig{three-comp} represents three adjacent compartments.  Two of the compartments carry units of information.  Notice that these units of information do not overlap multiple membrane boundaries.
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale = 0.4]{examples/compartment-3comp}
+%   \caption{Illustration of units of information and surrounding compartments.}
+%   \label{fig:three-comp}
+% \end{figure}
+
+\subsection{Auxiliary units}
+
+Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
+
+\subsubsection{Glyph: \glyph{Unit of information}}
+\label{sec:unitInfo}
+
+When representing biological entities, it is often necessary to convey some abstract information about the entity's function that cannot (or does not need to) be easily related to its structure.  The \glyph{unit of information} is a decoration that can be used in this situation to add information to a glyph.  Some example uses include: characterizing a logical part of an entity such as a functional domain (a binding domain, a catalytic site, a promoter, etc.), or the information encoded in the entity (an exon, an open reading frame, etc.).  A \glyph{unit of information} can also convey information about the physical environment, or the specific type of biological entity it is decorating.
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer A unit of information is represented by a rectangle.  The long side of the rectangle should be oriented parallel to the border of the \glyph{EPN} being annotated by the \glyph{unit of information}. The center of the bounding box of a \glyph{state of information} should be located on the mid-line of the border of the \glyph{EPN}.
+
+\glyphLabel A \glyph{unit of information} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+The label defines the information carried by the \glyph{unit of information}.  For certain predefined types of information having controlled vocabularies associated with them, SBGN defines specific prefixes that must be included in the label to indicate the type of information in question.  The controlled vocabularies predefined in \SBGNPDLone are described in \sect{CVs} and summarized in the following list:
+
+\begin{center}
+  \begin{itemize}\setlength{\parskip}{0ex}
+  \item[\texttt{pc}] container physical characteristic
+  \item[\texttt{mt}] entity pool material type
+  \item[\texttt{ct}] entity pool conceptual type
+  \item[\texttt{N}]  multimer cardinality
+  \end{itemize}
+\end{center}
+
+\glyphAux A \glyph{unit of information} does not carry any auxiliary items.  
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/unitInformation}
+  \caption{The \PD glyph for \glyph{unit of information}.}
+  \label{fig:unitInfo}
+\end{figure}
+
+
+\subsubsection{Glyph: \glyph{State variable}}
+\label{sec:stateVariable}
+
+Many biological entities such as molecules can exist in different \emph{states}, meaning different physical or informational configurations.  These states can arise for a variety of reasons.  For example, macromolecules can be subject to post-synthesis modifications, wherein residues of the macromolecules (amino acids, nucleosides, or glucid residues) are modified through covalent linkage to other chemicals.  Other examples of states are alternative conformations as in the closed/open/desensitized conformations of a transmembrane channel, and the active/inactive forms of an enzyme.
+
+SBGN provides a means of associating one or more \glyph{state variables} with an entity; each such variable can be used to represent a dimension along which the state of the overall entity can vary.  When an entity can exist in different states, the state of the whole entity (\ie the SBGN object) can be described by the current values of all its \glyph{state variables}, and the values of the \glyph{state variables} of all its possible components, recursively.
+
+\begin{glyphDescription}
+\item[Identifying Attributes:]\mbox{}
+  \begin{itemize}
+  \item owning EPN
+  \item name (optional)
+  \item value
+ \end{itemize}
+\item[Special constraints or rules:]\mbox{}\newline None.
+\end{glyphDescription}
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer A \glyph{state variable} is represented by a '``stadium'' container, that is two hemicercles of same radius joined by parallel segments, as shown in \fig{state-var}.  The parallel segment axis should be tangent to the border of the glyph of the \glyph{EPN} being modified by the \glyph{state variable}. The center of the bounding box of a \glyph{state variable} should be located on the mid-line of the border of the \glyph{EPN}.
+
+\glyphLabel The identification of an instance of a \glyph{state variable} is carried by one or two unbordered boxes, each containing a string of characters.  The characters cannot be distributed on several lines.  One box is mandatory, and contains the value of the \glyph{state variable}.  The value may be empty; an example of a situation where this might arise is an unphosphorylated phosporylation site.  The second box is optional and carries the identification of the \glyph{state variable}. The center of the combination of the boxes located in the container box is superposed to the center of this container box.  In earier version of the \PD specification, the identification of the \glyph{state variable} could be located outside the \glyph{state variable} container box.  This is now forbidden.  The style of labeling of \glyph{state variables} encouraged by \SBGNPDLone is to combine a prefix representing the value of the variable with a suffix representing the variable's name.  Prefix and suffix should be separated by the symbol '@', X@Y thus meaning \emph{value X} AT \emph{variable Y}. The label of a \glyph{state variable} should, if possible, be displayed within the boundary of the glyph.
+
+\glyphAux A \glyph{state variable} does not carry any auxiliary items.  
+
+\glyphCloning Not cloned.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3, trim = 0 0 0 0.25in]{images/stateVariable}
+  \caption{Examples of the \PD glyph for \glyph{state variable}.}
+  \label{fig:state-var}
+\end{figure}
+
+A \glyph{state variable} does not necessarily have to be Boolean-valued.  For example, an ion channel can possess several conductance states; a receptor can be inactive, active and desensitized; and so on.  As another example, a \glyph{state variable} ``ubiquitin'' could also carry numerical values corresponding to the number of ubiquitin molecules present in the tail.  However, in all cases, a \glyph{state variable} on an EPN can only take \emph{one} defined value.  Further, an EPN's \glyph{state variable} should always be displayed and always set to a value.  An ``empty'' \glyph{state variable} is a \glyph{state variable} that is set to the value ``unset'', it is not a \glyph{state variable} with no value. Note that the value ``unset'' is \emph{not} synonymous to ``any value'' or ``unknown value''.
+
+
+\subsubsection{Glyph: \glyph{Annotation}}
+
+\SBGNPDLone defines a glyph to add additional information to a map, that does not modify the semantic of the the graph. This glyph can be used to add free text, or links to external information.
+
+\begin{glyphDescription}
+
+\glyphSboTerm SBO:NEW
+
+\glyphContainer An \glyph{annotation} is represented by a rectangular container with a folded corner, as illustrated in \fig{annotation}. This container is linked to the annotated element in a way that cannot be mistaken for a relationship, for instance a callout, a thick edge, a dashed line etc. The link ends up on the border of the annotated element.
+
+\glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container. 
+
+\glyphAux An \glyph{annotation} does not carry any auxiliary unit.
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/annotation}
+  \caption{The \PD glyph for \glyph{annotation}.}
+  \label{fig:annotation}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{examples/ex-annotation}
+  \caption{Example of \glyph{annotations} adding information to the description of the trans-phosphorylation of CaMKII. Note that three different types of links are used between annotation nodes and annotated elements. However, it is recommended to use a consistent scheme whithin a map.}
+  \label{fig:ex-annotation}
+\end{figure}
+
+\subsection{Reference nodes}
+
+Reference nodes handle links or relationships between elements of a
+map and sub-map. At present there is only one reference glyph,
+\glyph{tag}, which can be used in a map refered to by a \glyph{submap}
+(\sect{submap}) or as an auxilary unit on the \glyph{submap}. The
+\glyph{clone marker} can also provide additional reference mechanisms
+and is discussed below (\sect{cloneMarker}).
+
+
+\subsubsection{Glyph: \glyph{Tag}}
+\label{sec:tag}
+
+A \glyph{tag} is a named handle, or reference, to another EPN (\sect{EPNs}) or compartment (\sect{compartment}).  \glyph{Tags} are used to identify those elements in \glyph{submaps} (\sect{submap}).
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer A \glyph{tag} is represented by a rectangle fused to an empty arrowhead, as illustrated in \fig{tag}.  The symbol should be linked to one and only one edge (\ie it should reference only one EPN or compartment).
+
+\glyphLabel A \glyph{tag} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
+
+\glyphAux A \glyph{tag} does not carry any auxiliary items. 
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/tag}
+  \caption{The \PD glyph for \glyph{tag}.}
+  \label{fig:tag}
+\end{figure}
+
+\subsection{Arcs}\label{sec:arcs}
+
+Arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
+
+\subsubsection{Process Arcs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Consumption
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Consumption}}
+\label{sec:consumption}
+
+\glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process,
+but is not produced by the process.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000394 ! consumption.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphEndPoint No particular symbol is used to represent a consumption.
+\end{glyphDescription}
+
+
+A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or 
+\glyph{production} (\sect{production}) arcs, indicating the stoichiometry of a process. This label is a number enclosed in a rectangle with one of the long sides adjacent to the consumption arc. The cardinality is 
+required to eliminate ambiguity when the exact composition, or the number of 
+copies, of the inputs or outputs to a reaction are ambiguous from the map. 
+An example is a multimer of 6 subunits dissociating into 2 monomers and 2 
+dimers. Without stoichiometry labels another result, such as 4 monomers and 1 
+dimer could be inferred.
+Once assigned to one arc connecting to a process node, cardinality should be represented on
+all \glyph{consumption} and \glyph{production} arcs connected to that process
+node to avoid misinterpretation.
+
+Omitted cardinality on one edge only should not be treated as cardinality of 1, but
+as an unspecified cardinality. In most cases, the exact value may be derived from the
+context, but unless cardinality is explicitly shown, it should be considered as
+unspecified. In the case where the stoichiometry of some part of the process is not
+known, or undefined, a question mark (?) should be used within the cardinality label
+of the corresponding arcs.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/consumption}
+  \caption{The \PD glyph for \glyph{consumption}.}
+  \label{fig:consumption}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Production
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Production}}\label{sec:production}
+
+\glyph{Production} is the arc used to represent the fact that an entity pool is 
+produced by a process. In the case of a reversible process, the 
+\glyph{production} arc also acts as a \glyph{consumption} arc.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000393 ! production.
+ \glyphOrigin Any \glyph{process node} (\sect{PNs}).
+ \glyphTarget Any \glyph{EPN} (\sect{EPNs}).
+ \glyphEndPoint The target extremity of a \glyph{production} carries a filled arrowhead.
+ \end{glyphDescription}
+
+A cardinality label can be associated with a \glyph{production} arc indicating the stoichiometry of a process.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/production}
+  \caption{The \PD glyph for \glyph{production}.}
+  \label{fig:production}
+\end{figure}
+
+\fig{prod-card} illustrates the use of consumption/production arc cardinality labels to represent the stoichiometry of a process.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.85]{examples/stoichEx1}
+  \caption{Cardinality for production arcs.}
+  \label{fig:prod-card}
+\end{figure}
+
+\subsubsection{Modulation Arcs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Modulation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Modulation}}\label{sec:modulation}
+
+A modulation affects the flux of a process
+represented by the target process. Such a modulation can affect the
+process \textbf{positively or negatively}, or even both ways depending on the
+conditions, for instance the concentration of the intervening
+participants. A \glyph{modulation} can also be used when one does not know the precise direction of the effect.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000168 ! control.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphEndPoint The target extremity of a \glyph{modulation} carries an empty diamond.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/modulation}
+  \caption{The \PD glyph for \glyph{modulation}.}
+  \label{fig:modulation}
+\end{figure}
+
+\fig{modul-nico} represents the effect of nicotine on the process between closed and open states of a nicotinic acetylcholine receptor. High concentrations of nicotine open the receptor while low concentrations can desensitize it without opening. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{examples/modulation-nAChR}
+  \caption{Modulation of nicotinic receptor opening by nicotine.}
+  \label{fig:modul-nico}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Stimulation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Stimulation}}\label{sec:stimulation}
+
+A stimulation affects \textbf{positively} the flux of a process represented by the target process. This stimulation can be for instance a catalysis or a positive allosteric regulation. Note that \glyph{catalysis} exists independently in SBGN, see \sect{catalysis}.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000170 ! stimulation.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any logical operator (\sect{logic}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphEndPoint The target extremity of a \glyph{stimulation} carries an empty arrowhead.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/stimulation}
+  \caption{The \PD glyph for \glyph{stimulation}.}
+  \label{fig:stimulation}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Catalysis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Catalysis}}\label{sec:catalysis}
+
+A catalysis is a particular case of stimulation, where the effector affects
+positively the flux of a process represented by the target process. The positive effect on the process is due to the lowering of the activation energy of a reaction.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000172 ! catalysis.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphNode The target extremity of a \glyph{catalysis} carries an empty circle.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/catalysis}
+  \caption{The \PD glyph for \glyph{catalysis}.}
+  \label{fig:catalysis}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Inhibition
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Inhibition}}\label{sec:inhibition}
+
+An inhibition \textbf{negatively} affects the flux of a process represented by the target process. This inhibition can be for instance a competitive inhibition or an allosteric inhibition. 
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000169 ! inhibition.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphNode The target extremity of an \glyph{inhibition} carries a bar perpendicular to the arc.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/inhibition}
+  \caption{The \PD glyph for \glyph{inhibition}.}
+  \label{fig:inhibition}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Necessary_Stim
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Necessary stimulation}}\label{sec:necessary_stim}
+
+A necessary stimulation, is one that is necessary for a process to take place. A process modulated by a necessary stimulation can only occur when this necessary stimulation is active.
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000171 ! necessary stimulation.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
+ \glyphTarget Any \glyph{process node} (\sect{PNs}).
+ \glyphNode The target extremity of a \glyph{necessary stimulation} carries an open arrow (to remind that it is a \glyph{stimulation}) coming after a larger vertical bar.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/necessary_stim}
+  \caption{The \PD glyph for \glyph{Necessary Stimulation}.}
+  \label{fig:Necessary Stimulation}
+\end{figure}
+
+The example in \fig{necessary_stim-gene} below describes the transcription of a gene~X, that is the creation of a messenger RNA~X triggered by the gene~X.  The creation of the protein~X is then triggered by the mRNA~X.  (Note that the same example could be represented using the gene as reactant and product, although it is semantically different.)
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{examples/necessary_stim-genetic}
+  \caption{The creation of a messenger RNA~X triggered by the gene~X.}
+  \label{fig:necessary_stim-gene}
+\end{figure}
+
+
+The example in \fig{necessary_stim-calcium} below describes the transport of calcium ions out of the endoplasmic reticulum. Without IP3 receptor, there is not calcium flux, therefore, one cannot use a \glyph{stimulation}. The Necessary Stimulation instead represents this absolute stimulation.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/necessary_stim-transport}
+  \caption{The transport of calcium ions out of the endoplasmic reticulum into the cytosol. Note that IP3R crosses both compartment boundaries. This is allowed, but the Macromolecule should only belong to one of the compartments see section \ref{sec: unresolved multi-comp ents} for more discussion of this issue.}
+  \label{fig:necessary_stim-calcium}
+\end{figure}
+
+%others
+\subsubsection{Others}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Logic arc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Logic arc} }\label{sec:logicArc}
+
+\glyph{Logic arc} is used to represent the fact that an entity influences
+the outcome of a logic operator. 
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000398 ! logical relationship.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or \glyph{logical operator} (\sect{logic}).
+ \glyphTarget Any \glyph{logical operator} (\sect{logic}).
+ \glyphEndPoint No particular symbol is used to represent a logic arc.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/logicArc}
+  \caption{The \PD glyph for \glyph{logic arc}.}
+  \label{fig:logicArc}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Equivalence Arc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Glyph: \glyph{Equivalence arc} }\label{sec:equivalenceArc}
+
+\glyph{Equivalence arc} is the arc used to represent the fact that all entities
+marked by a \glyph{tag} are equivalent. 
+
+\begin{glyphDescription}
+ \glyphSboTerm Not applicable.
+ \glyphOrigin Any \glyph{EPN} (\sect{EPNs}).
+ \glyphTarget \glyph{Tag} (\sect{tag}).
+ \glyphEndPoint No particular symbol is used to represent an \glyph{equivalence arc}.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/equivalence}
+  \caption{The \PD glyph for \glyph{Equivalence arc}.}
+  \label{fig:equivalence}
+\end{figure}
+
+\section{Decorators}
+
+\subsection{Glyph: \glyph{Clone marker}}
+\label{sec:cloneMarker}
+
+If an \glyph{EPN} is duplicated on a map, it is necessary to indicate this fact by using the \glyph{clone marker} auxiliary unit.  The purpose of this marker is to provide the reader with a visual indication that this node has been cloned, and that at least one other occurrence of the \glyph{EPN} can be found in the map (or in a submap; see \sect{submap}).  The clone marker takes two forms, simple and labeled, depending on whether the node being cloned can carry state variables (\ie whether it is a stateful EPN). Note that an \glyph{EPN} belongs to a single compartment. If two glyphs labelled ``X'' are located in two different compartments, such as ATP in cytosol and ATP in mitochondrial lumen, they represent different \glyph{EPNs}, and therefore do not need to be marked as cloned.
+
+
+\subsubsection{Simple clone marker}
+
+As mentioned above, the \glyph{simple clone marker} is the unlabeled version of the \glyph{clone marker}.  See below for the labeled version.
+
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer The simple (unlabeled) \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  \fig{simpleCloneMarker} illustrates this.  The \glyph{clone marker} occupies the lower part of the \glyph{EPN}. The filled area must be smaller than the unfilled one.
+
+\glyphLabel Not applicable.
+
+\glyphAux A \glyph{clone marker} does not carry any auxiliary items.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleCloneMarker}
+  \caption{The \PD glyph for \glyph{simple clone marker} applied to a \glyph{simple chemical} and a \glyph{multimer} of \glyph{simple chemicals}.}
+  \label{fig:simpleCloneMarker}
+\end{figure}
+
+
+\subsubsection{Labeled clone marker}
+
+Unlike the \glyph{simple clone marker}, the \glyph{labeled clone marker} includes (unsurprisingly, given its name) an identifying label that can be used to identify equivalent clones elsewhere in the map.  This is particularly useful for stateful \glyph{EPNs}, because these can have a large number of state variables displayed and therefore may be difficult to visually identify as being identical.
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be smaller than the unfilled one, but the be large enough to have a height larger than the \glyph{clone marker}'s label (cf below).  
+
+\glyphLabel A \glyph{clone marker} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container (the portion of the surface of the EPN that has been modified visually).  The font color of the label and the color of the clone marker should contrast with one another.  The label on a \glyph{labeled clone marker} is mandatory.
+
+\glyphAux A \glyph{clone marker} does not carry any auxiliary items.
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/labeledCloneMarker}
+  \caption{The \PD glyph for \glyph{labeled clone marker} applied to a \glyph{macromolecule}, a \glyph{nucleic acid feature} and a \glyph{multimer} of \glyph{macromolecules}.}
+  \label{fig:labeledCloneMarker}
+\end{figure}
+
+\fig{example-cloning} contains an example in which we illustrate the use of \glyph{clone markers} to clone the species ATP and ADP participating in different reactions.  This example also demonstrates the chief drawbacks of using clones: it leads to a kind of dissociation of the overall network and multiplies the number of nodes required, requiring more work on the part of the reader to interpret the result.  Sometimes these disadvantages are offset in larger maps by a reduction in the overall number of line crossings, but not always.  In general, we advise that cloning should be used sparingly.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{examples/cloning}
+  \caption{An example of using cloning, here for the species ATP and ADP.}
+  \label{fig:example-cloning}
+\end{figure}
+
+\section{Controlled vocabularies}\label{sec:CVs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Controlled vocabularies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Some glyphs in SBGN \PDs can contain particular kinds of textual annotations conveying information relevant to the purpose of the glyph.  These annotations are \glyph{units of information} (\sect{unitInfo}) or \glyph{state variable}  (\sect{stateVariable}).  An example is in the case of multimers, which can have a unit of information conveying the number of monomers composing the multimer.  Other cases are described throughout the rest of this chapter.
+
+The text that appears as the unit of information decorating an Entity Pool Node (EPN) must in most cases be prefixed with a controlled vocabulary term indicating the type of information being expressed.  The prefixes are mandatory except in the case of macromolecule covalent modifications (\sect{covalent-mod-cv}).  Without the use of controlled vocabulary prefixes, it would be necessary to have different glyphs to indicate different classes of information; this would lead to an explosion in the number of symbols needed.
+
+In the rest of this section, we describe the controlled vocabularies (CVs) used in \SBGNPDLone.  They cover the following categories of information: an EPN's material type, an EPN's conceptual type, covalent modifications on macromolecules, the physical characteristics of compartments, and cardinality (\eg of multimers).  In each case, some CV terms are predefined by SBGN, but unless otherwise noted, \emph{they are not the only terms permitted}.  Authors may use other CV values not listed here, but in such cases, they should explain the term's meanings in a figure legend or other text accompanying the map.
+
+
+\subsection{Entity pool node material types}
+\label{sec:material-types-cv}
+
+The material type of an EPN indicates its chemical structure.  A list of common material types is shown in \tab{material-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{entity}).  The labels are defined by \SBGNPDLone.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}              & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Non-macromolecular ion     & mt:ion  & SBO:0000327\\
+    Non-macromolecular radical & mt:rad  & SBO:0000328\\
+    Ribonucleic acid           & mt:rna  & SBO:0000250\\
+    Deoxribonucleic acid       & mt:dna  & SBO:0000251\\
+    Protein                    & mt:prot & SBO:0000297\\
+    Polysaccharide             & mt:psac & SBO:0000249\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{material types} controlled
+    vocabulary (\sect{material-types-cv}).}
+  \label{tab:material-types-cv}
+\end{table}
+
+The material types are in contrast to the \emph{conceptual types} (see below).  The distinction is that material types are about physical composition, while conceptual types are about roles.  For example, a strand of RNA is a physical artifact, but its use as messenger RNA is a role.
+
+
+\subsection{Entity pool node conceptual types}
+\label{sec:conceptual-types-cv}
+
+An EPN's \emph{conceptual type} indicates its function within the context of a given \PD.  A list of common conceptual types is shown in \tab{conceptual-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000241} ($\!$\emph{conceptual entity} under \emph{entity}).  The labels are defined by \SBGNPDLone.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}              & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Gene                      & ct:gene   & SBO:0000243\\
+    Transcription start site  & ct:tss    & SBO:0000329\\
+    Gene coding region        & ct:coding & SBO:0000335\\
+    Gene regulatory region    & ct:grr    & SBO:0000369\\
+    Messenger RNA             & ct:mRNA   & SBO:0000278\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{conceptual types} vocabulary
+    (\sect{conceptual-types-cv}).}
+  \label{tab:conceptual-types-cv}
+\end{table}
+
+
+\subsection{Macromolecule covalent modifications}
+\label{sec:covalent-mod-cv}
+
+A common reason for the introduction of state variables (\sect{stateVariable}) on an entity is to allow access to the configuration of possible covalent modification sites on that entity.  For instance, a macromolecule may have one or more sites where a phosphate group may be attached; this change in the site's configuration (\ie being either phosphorylated or not) may factor into whether, and how, the entity can participate in different processes.  Being able to describe such modifications in a consistent fashion is the motivation for the existence of SBGN's covalent modifications controlled vocabulary.  
+
+\tab{covalent-mod-cv} lists a number of common types of covalent modifications.  The most common values are defined by the \sbo in the branch having identifier \sboid{SBO:0000210} (\emph{addition of a chemical group} under \emph{interaction}$\rightarrow$\emph{process}$\rightarrow$\emph{biochemical or transport reaction}$\rightarrow$\\\emph{biochemical reaction}$\rightarrow$\emph{conversion}).  The labels shown in \tab{covalent-mod-cv} are defined by \SBGNPDLone; for all other kinds of modifications not listed here, the author of a \PD must create a new label (and should also describe the meaning of the label in a legend or text accompanying the map).
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Acetylation     & Ac    & SBO:0000215\\
+    Glycosylation   & G     & SBO:0000217\\
+    Hydroxylation   & OH    & SBO:0000233\\
+    Methylation     & Me    & SBO:0000214\\
+    Myristoylation  & My    & SBO:0000219\\
+    Palmytoylation  & Pa    & SBO:0000218\\
+    Phosphorylation & P     & SBO:0000216\\
+    Prenylation     & Pr    & SBO:0000221\\
+    Protonation     & H     & SBO:0000212\\
+    Sulfation       & S     & SBO:0000220\\
+    Ubiquitination  & Ub    & SBO:0000224\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{covalent modifications} vocabulary
+    (\sect{covalent-mod-cv}).}
+  \label{tab:covalent-mod-cv}
+\end{table}
+
+
+\subsection{Physical characteristics}
+\label{sec:physical-characteristics-cv}
+
+\SBGNPDLone defines a special unit of information for describing certain common physical characteristics.  \tab{physical-characteristics-cv} lists the particular values defined by \SBGNPDLone.  %
+%The values correspond to the \sbo branch with identifier \sboid{SBO:0000255} (\emph{physical characteristic} under \emph{quantitative parameter}).
+It is anticipated that these will be used to describe the nature of a \glyph{perturbing agent} (section \ref{sec:perturbing agent}) or a \glyph{phenotype} (section \ref{sec:phenotype}).
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    Temperature   & pc:T  & SBO:0000147\\
+    Voltage       & pc:V  & SBO:0000259\\
+    pH            & pc:pH & SBO:0000304\\
+    \bottomrule
+  \end{tabular}
+  \caption{A sample of values from the \emph{physical
+      characteristics} vocabulary (\sect{physical-characteristics-cv}).}
+  \label{tab:physical-characteristics-cv}
+\end{table}
+
+
+\subsection{Cardinality}
+\label{sec:cardinality-cv}
+
+\SBGNPDLone defines a special unit of information usable on multimers for describing the number of monomers composing the multimer.  \tab{cardinality-cv} shows the way in which the values must be written.  Note that the value is an positive non-zero integer, and not (for example) a range.  There is no provision in \SBGNPDLone for specifying a range in this context because it leads to problems of entity identifiability.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
+    \toprule
+    \textbf{Name}   & \textbf{\rmfamily Label} & \textbf{\rmfamily SBO term} \\
+    \midrule
+    cardinality    & N:\#  & SBO:0000364\\
+    \bottomrule
+  \end{tabular}
+  \caption{The format of the possible values for the
+    \emph{cardinality} unit of information
+    (\sect{cardinality-cv}).  Here, \texttt{\#} stands for the
+    number; for example, ``\texttt{N:5}''.}
+  \label{tab:cardinality-cv}
+\end{table}
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

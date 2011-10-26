@@ -1,0 +1,85 @@
+% $HeadURL$
+
+% =============================================================================
+% introduction
+% =============================================================================
+
+\chapter{Introduction}
+
+The goal of the \textbf{S}ystems \textbf{B}iology \textbf{G}raphical 
+\textbf{N}otation (SBGN) is to standardize the graphical/visual 
+representation of biochemical and cellular processes. SBGN 
+defines comprehensive sets of symbols with precise semantics, together with 
+detailed syntactic rules defining their use.  It also describes the manner 
+in which such graphical information should be interpreted. For a general 
+description of SBGN, one can read:
+
+\begin{quote}
+ Nicolas Le Nov\`{e}re, Michael Hucka, Huaiyu Mi, Stuart Moodie, Falk 
+Schreiber, Anatoly Sorokin, Emek Demir, Katja Wegner, Mirit I Aladjem, 
+Sarala M Wimalaratne, Frank T Bergman, Ralph Gauges, Peter Ghazal, Hideya 
+Kawaji, Lu Li, Yukiko Matsuoka, Alice Vill\'{e}ger, Sarah E Boyd, Laurence 
+Calzone, Melanie Courtot, Ugur Dogrusoz, Tom C Freeman, Akira Funahashi, 
+Samik Ghosh, Akiya Jouraku, Sohyoung Kim, Fedor Kolpakov, Augustin Luna, 
+Sven Sahle, Esther Schmidt, Steven Watterson, Guanming Wu, Igor Goryanin, 
+Douglas B Kell, Chris Sander, Herbert Sauro, Jacky L Snoep, Kurt Kohn  \& 
+Hiroaki Kitano. The Systems Biology Graphical Notation. \emph{Nature 
+Biotechnology} \textbf{27}, 735 - 741 (2009).  \url{http://dx.doi.org/10.1038/nbt.1558}
+\end{quote}
+
+This document defines the \emph{\PD{}} visual language of SBGN. \PDs are 
+one of three views of a biological process offered by SBGN.  It is the 
+product of many hours of discussion and development by many individuals and 
+groups.
+
+\section{SBGN levels and versions}
+\label{sec:sbgn-levels}
+
+It was clear at the outset of SBGN development that it would be impossible 
+to design a perfect and complete notation right from the beginning.  Apart 
+from the prescience this would require (which, sadly, none of the authors 
+possess), it also would likely need a vast language that most newcomers 
+would shun as being too complex.  Thus, the SBGN community followed an idea 
+used in the development of other standards, i.e. stratify language 
+development into levels.
+
+A \emph{level} of one of the SBGN languages represents a set of features 
+deemed to fit together cohesively, constituting a usable set of 
+functionality that the user community agrees is sufficient for a reasonable 
+set of tasks and goals.  Within \emph{levels}, \emph{versions} represent 
+small evolution of a language, that may involve new glyphs, refined 
+semantics, but no fundamental change of the way maps are to be generated 
+and interpreted. Capabilities and features that cannot be agreed upon and 
+are judged insufficiently critical to require inclusion in a given level, 
+are postponed to a higher level or version.  In this way, the development 
+of SBGN languages is envisioned to proceed in stages, with each higher 
+levels adding richness compared to the levels below it.
+
+\section{Developments, discussions, and notifications of updates}
+\label{sec:discussions}
+
+The SBGN website (\url{http://sbgn.org/}) is a portal for all things 
+related to SBGN.  It provides a web forum interface to the SBGN discussion 
+list (\mailto{sbgn-discuss@caltech.edu}) and information about how anyone 
+may subscribe to it.  The easiest and best way to get involved in SBGN 
+discussions is to join the mailing list and participate.
+
+Face-to-face meetings of the SBGN community are announced on the website as 
+well as the mailing list.  Although no set schedule currently exists for 
+workshops and other meetings, we envision holding at least one public 
+workshop per year.  As with other similar efforts, the workshops are likely 
+to be held as satellite workshops of larger conferences, enabling attendees 
+to use their international travel time and money more efficiently.
+
+Notifications of updates to the SBGN specification are also broadcast on 
+the mailing list and announced on the SBGN website.
+
+\section{Note on typographical convention}
+The concept represented by a glyph is written using a normal font, while a 
+\glyph{glyph} means the SBGN visual representation of the concept. For 
+instance ``a biological process is encoded by the SBGN PD \glyph{process}''.
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

@@ -1,0 +1,193 @@
+\chapter{Layout Rules for a Process Description}
+\label{chp:layout}
+
+\section{Introduction}
+
+The previous chapters describe the appearance and meaning of \SBGNPDLone components. Here we describe rules governing the visual appearence and asthetics of the \PDl. The components of a \PD have to be placed in a meaningful way -- a random distribution with spaghetti-like connections will most likely hide the information encoded in the underlying model, whereas an elegant placement of the objects, giving a congenial appearance of the maps, may reveal new insights. The arrangement of components in a map is called a \emph{layout}.
+
+SBGN \PDs should be easily recognisable not only by the
+glyphs used, but also by the general style of the layout. However, the
+arrangement of the components is a complex art in itself, and there is
+no simple rule which can be applied to all cases. Therefore this
+section provides rules for the layout of process description maps, divided
+into two categories:
+\begin{enumerate}
+  \item requirements, i.\,e.~rules which \textbf{must} be fulfilled by a
+  layout, and
+  \item recommendations, i.\,e.~rules which \textbf{should} be followed if
+  possible. 
+\end{enumerate}
+In addition, we provide a list of additional suggestions which may help in producing aesthetically more pleasant layouts, possibly easier to understand.
+
+Those layout rules are independent of the method used to produce
+the map, and apply to both manually drawn maps as well as
+maps produced by an automatic layout algorithm. The rules do
+not deal with interactive aspects (e.\,g.~the effect of zooming). Further information about automatic network layout
+(graph drawing) can be found, for example, in the books of Di Battista and
+co-authors~\cite{DiBattista:1998} and Kaufmann and Wagner~\cite{Kaufmann:2001}.
+
+Please note that the color of objects do not carry any meaning in
+SBGN. Although one can use colors to emphasize part of a map or
+encode additional information, the meaning of the map should not
+depend on the colors. Furthermore, objects can have different sizes
+and size is also meaningless in SBGN. For example, a process node
+may be larger than a protein node. Also the meaning of a graph
+should be conserved upon scaling as far as possible.
+
+\section{Requirements}
+
+Requirements are rules which \textbf{must} be fulfilled by a layout to
+produce a valid \PDm.
+
+\subsection{Node-node overlaps}
+
+Nodes are only allowed to overlap in two cases when they are allowed to contain other nodes --- as described in \chap{glyphs}. Otherwise, nodes are not allowed to overlap (\fig{layout1}). This includes the
+touching of nodes. Touching is not allowed apart from the case where
+it has a specific meaning, e.g.\, two macromolecules touching each
+other within a complex because they form the complex.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-node-node}
+  \caption{Nodes must not overlap.}\label{fig:layout1}
+\end{figure}
+
+\subsection{Node-edge crossing}\label{crosEdNoRe}
+
+Edges must be drawn on the top of a the node (\fig{layout2}). See also recommendation \sect{crosEdNo}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-node-edge}
+  \caption{If an edge crosses a node, the edge must be drawn on top
+  of the node.}\label{fig:layout2}
+\end{figure}
+
+\subsection{Node border-edge overlaps}
+
+Edges are not allowed to overlap the border lines of nodes (\fig{layout3}).
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-node-border-edge}
+  \caption{Edges must not overlap node borders.}\label{fig:layout3}
+\end{figure}
+
+\subsection{Edge-edge overlaps}
+
+Edges are not allowed to overlap (\fig{layout4}). This includes touching of edges.
+Furthermore, an edge is neither allowed to cross itself nor to cross
+a boundary of node more than twice or other edges more than once.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-edge-edge}
+  \caption{Edges must not overlap.}\label{fig:layout4}
+\end{figure}
+
+\subsection{Node orientation}
+
+Nodes have to be drawn horizontally or vertically, any other
+rotation of elements is not allowed (\fig{layout5}).
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-orientation}
+  \caption{The node orientation must be horizontally or
+  vertically.}\label{fig:layout5}
+\end{figure}
+
+\subsection{Node-edge connection}
+
+\begin{enumerate}
+\item The arcs linking the square glyph of a \glyph{process} to the \glyph{consumption} and \glyph{production arcs}
+ are attached to the center of opposite sides (\fig{layout6}).
+\item The modulatory arcs are attached to the other two sides, but not necessarily all to the center, as several modifiers can affect the same process node.
+\end{enumerate}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-connecting-arcs}
+  \caption{Arcs between a \glyph{process}  and the \glyph{consumption} and \glyph{production arcs} must be attached to the center of opposite sides, modulatory
+  arcs must be attached to the other two sides.}\label{fig:layout6}
+\end{figure}
+
+\subsection{Node labels}
+
+At least a part of the label (unbordered box containing a string of characters) has to be placed inside the node it belongs to. Node labels are not allowed to overlap other nodes or other labels (this includes touching of other nodes or labels).
+
+\subsection{Edge labels}
+
+Edge labels are not allowed to overlap nodes. This includes touching
+of nodes.
+
+\subsection{Compartments}
+
+If a process has all participants in the same compartment the process node and all edges/arcs should be drawn in this compartment.  If a process has participants in at least two different compartments, the process node has to be either in a compartment where the process has at least one participant or in the empty space.
+
+\section{Recommendations}
+
+Recommendations are rules which should be followed if possible and generally should improve the clarity of the diagram.
+
+\subsection{Node-edge crossing}
+\label{sec:crosEdNo}
+
+Situations where edges and nodes cross should be avoided. Note that some crossings may be unavoidable, e.\,g.~the crossing between an edge and a compartment border or an edge and a complex (if the edge connects an element inside the complex with something outside).
+
+\subsection{Labels}
+
+Labels should be horizontal. Node labels should be placed completely
+inside the node if possible. Edge labels should be placed close to
+the edge and avoid overlapping the edge as well as other edge
+labels.
+
+\subsection{Avoid edge crossings}
+
+The amount of crossings between edges should be minimized.
+
+\subsection{Branching of \glyph{association} and \glyph{dissociation}}
+
+The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed closed to the symbol of the process, if possible at a distance comparable than, or smaller to, the diameter of the symbol defining the process (\fig{branching}).
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.3]{images/layout-branching}
+  \caption{Branching points should be close to association and dissociation symbols.}\label{fig:branching}
+\end{figure}
+
+\subsection{Units of information}
+
+Units of information should not hide the structure of the
+corresponding node and should not overlap other
+elements (\fig{layout7}).
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.5]{images/layout-unit-information}
+  \caption{Units of information should not overlap with any
+  other element.}\label{fig:layout7}
+\end{figure}
+
+\section{Additional suggestions}
+
+Here is a list of additional layout suggestions which may help improve the asthetics and clarity of \PD maps.
+
+\begin{itemize}
+  \item Angle of edge crossings: If edge crossing cannot be avoided then the edges should cross with an angle close to 90 degrees.
+ \item Drawing area and width/height ratio: The drawing should
+  be compact and the ratio between the width and the height
+  of the drawing should be close to 1.
+  \item Edge length: Long edges should be avoided.
+  \item Number of edge bends: Edges should be drawn with
+  as few bends as possible.
+  \item Similar and symmetric parts: Similar parts of a map
+  should be drawn in a similar way, and symmetric parts
+  should be drawn symmetrically.
+  \item Proximity information: Related elements (e.\,g.~nodes
+  connected by a process or all elements within a compartment)
+  should be drawn close together.
+  \item Directional information: Subsequent processes (e.\,g.~a sequence
+  of reactions) should be drawn in one direction (e.\,g.~from
+  top to bottom or from left to right).
+  \item Compartments: It can help clarity to use a different background shade or color for each compartment.
+\end{itemize}
