@@ -1,0 +1,335 @@
+% $HeadURL$
+
+\chapter{Concepts and Glyphs}
+\label{chp:glyphs}
+
+
+\section{Introduction}
+
+Although ultimately defined by its glyphs, \SBGNPDLone these glyphs
+represent concepts that are related to varying degrees and ultimately
+can be organised hierarchically. This provides us with a useful way or
+organising the glyphs and thinking about \PD{}.  Therefore in this
+chapter we describe the conceptual structure of \SBGNPDLone and place
+each glyph within this structure. For each glyph or concept we describe its
+physical appearance and define syntax and other usage rules. An
+overview of this hierarchy is provided in figures
+\ref{fig:sbgn_node_tax} and \ref{fig:sbgn_edge_tax}.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=1.0\linewidth]{images/sbgn_node_taxonomy}
+\caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_node_tax}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb!]
+\begin{center}
+\includegraphics[width=\linewidth]{images/sbgn_edge_taxonomy}
+\caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_edge_tax}
+\end{center}
+\end{figure}
+
+% \begin{description}
+% \item[Process] Transforms entities from one form to another. Note that a process may be used to represent or summarise more than one known process.
+%   \begin{description}
+%   \item[Stoichiometric Process] A process with measurable change in the quantities of entity pools consumed and produced.
+%     \begin{description}
+%     \item[Process Glyph] A generic stoichiometric process
+%     \item[Ommited Process Glyph] Omitted processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony.
+%     \item[Uncertain Process Glyph] One or more processes that may not exist.
+%     \item[Association Glyph] The association of one or more EPNs to form a non-covalent binding of the biological objects represented by those EPNs into a larger complex. This glyph represents a \emph{single} process step.
+%     \item[Dissociation Glyph] The dissociation of an \glyph{EPN} into one or more \glyph{EPNs} represents the rupture of a non-covalent binding between the biological entities represented by those \glyph{EPNs}. This represents a single dissociation step.
+%   \end{description}
+%   \item[Non-Stoichiometric] Process that does not necessarily result in measurable change of entity pools, and which does necessarily have a defined start and end point.
+%     \begin{description}
+%     \item[Phenotype] A biochemical network can generate phenotypes or affect biological
+% processes.  Such processes can take place at different levels and are
+% independent of the biochemical network itself.  To represent these
+% processes in a map, SBGN defines the \glyph{phenotype} glyph.
+%    \item[Submap]
+%     \item[Logical Operators]
+%       \begin{description}
+%         \item[AND Glyph]
+%         \item[OR Glyph]
+%         \item[NOT Glyph]
+%       \end{description}
+%     \end{description}
+%   \end{description}
+% \item[Entity Pool Node]
+%   \begin{description}
+%     \item[Stateless Entity Pool]
+%       \begin{description}
+%       \item[Unspecified Entity Glyph]
+%       \item[Simple Chemical]
+%       \begin{description}
+%         \item[Simple Chemical Monomer Glyph]
+%         \item[Simple Chemical Multimer Glyph]
+%       \end{description}
+%     \item[Empty Set] 
+%       \item[Perturbing Agent]
+%       \end{description}
+%     \item[Stateful Entity Pool]
+%       \begin{description}
+%       \item[Macromolecule]
+%         \begin{description}
+%         \item[Macromolecule Monomer Glyph]
+%         \item[Macromolecule Multimer Glyph]
+%         \end{description}
+%       \item[Nucleic Acid Feature]
+%         \begin{description}
+%         \item[Nucleic Acid Feature Monomer Glyph]
+%         \item[Nucleic Acid Feature Multimer Glyph]
+%         \end{description}
+%       \item[Complex]
+%         \begin{description}
+%         \item[Complex Monomer Glyph]
+%         \item[Complex Multimer Glyph]
+%         \end{description}
+%      \end{description}
+%     \end{description}
+%   \item[Container] Foobar
+%     \begin{description}
+%     \item[Compartment]
+%     \end{description}
+%   \item[Auxiliary Glyphs]
+%     \begin{description}
+%     \item[Unit of Information]
+%     \item[State Variable]
+%  \end{description}
+%   \item[Reference]
+%   \begin{description}
+%     \item[Unit of Information]
+%     \item[State Variable]
+%  \end{description}
+% \end{description}
+
+\section{Definitions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   State nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Entity pool}\label{sec:EPNs}
+
+An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
+
+The \PD contains five glyph types representing classes of material
+entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}),
+\glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+(\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic})
+and \glyph{complex} (\sect{complex}).  (Specific types of
+macromolecules, such as protein, RNA, DNA, polysaccharide, and
+specific simple chemicals are not defined by \PD but may be part of
+future levels of SBGN.)  In addition to the material entities, \PD
+represents three conceptual entities: \glyph{empty set}
+(\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing
+  agent}).
+
+% The \PD contains six glyphs representing classes of material entities:
+% \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple
+%   chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+% (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}),
+% \glyph{multimer} (\sect{multimer}) and \glyph{complex}
+% (\sect{complex}).  (Specific types of macromolecules, such as protein,
+% RNA, DNA, polysaccharide, and specific simple chemicals are not
+% defined by \PD but may be part of future levels of SBGN.)  In addition
+% to the material entities, \PD represents three conceptual entities:
+% \glyph{empty set} (\sect{sourceSink}), and \glyph{perturbing agent}
+% (\sect{perturbing agent}).
+ 
+\subsubsection{Stateless Entity Pool}
+
+This is a pool where the entities do not change `state'. In otherwords
+the entities do not undergo any physical change that is useful to
+record in a \PD diagram. Therefore these glyphs cannot be assigned a state-variable.
+
+\input{sources/simpleChemical.tex}
+\input{sources/unspecified.tex}
+\input{sources/sourceSink.tex}
+\input{sources/perturbing_agent.tex}
+
+\subsubsection{Stateful Entity Pool}
+
+Stateful entity pools can undergo physical changes, for example chemical
+modifcation or conformational change, which we wish to record in a \PD
+diagram. They can be assigned one or more state-variables.
+
+\input{sources/macromolecule.tex}
+\input{sources/genetic.tex}
+\input{sources/complex.tex}
+%\input{sources/complex-epn-eg.tex}
+%\input{sources/multimer.tex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Process nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Process}\label{sec:PNs}
+
+Process nodes represent processes that transform one or several entity
+pools into one or several entity pools, identical or different. Note
+that a process may be used to represent or summarise more than one
+known process.  \SBGNPDLone defines a generic \glyph{process}
+(\sect{process}), as well as five more specific ones: the
+\glyph{omitted process} (\sect{omitted}), the \glyph{uncertain
+  process} (\sect{uncertain}), the \glyph{association}
+(\sect{association}), the \glyph{dissociation} (\sect{dissociation}),
+and the \glyph{phenotype} (\sect{phenotype}).
+
+\begin{glyphDescription}
+  \begin{glyphIdentity}
+    \item Instance - all entities are unique
+  \end{glyphIdentity}
+
+  \item glyphRules A process cannot be ``orphaned''. It must always
+    be connected to another node by one or more arcs.
+\end{glyphDescription}
+
+
+\subsubsection{Non-stoichiometric process}
+
+ Process that does not necessarily result in measurable change of entity pools, and which does necessarily have a defined start and end point. 
+
+\input{sources/phenotype.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Submap
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sources/submap.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Logical operators
+%xo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Logical operators}\label{sec:logic}
+
+\input{sources/and.tex}
+\input{sources/or.tex}
+\input{sources/not.tex}
+
+\subsubsection{Stoichiometric process}
+
+A process with measurable change in the quantities of entity pools
+consumed and produced. 
+
+
+\input{sources/process.tex}
+\input{sources/omitted.tex}
+\input{sources/uncertain.tex}
+\input{sources/association.tex}
+\input{sources/dissociation.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                  Arcs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Container}
+
+\subsubsection{Canvas}
+
+An \PD diagram has a canvas upon which an SBGN diagram is drawn. It is
+not a glyph in the sense that there is no shape drawn to represent it,
+but \SBGNPDLone has rules about what can be drawn directly on the canvas so
+it is useful to describe it here.
+
+\begin{glyphDescription}
+\item[Identifying Attributes:]\mbox{}
+  \begin{itemize}
+  \item identity
+ \end{itemize}
+\item[Special constraints or rules:]\mbox{}\newline If one
+  \glyph{Compartment} is drawn on the canvas then all EPNs must be
+  drawn in a \glyph{Compartment} and cannot be drawn directly onto the
+  Canvas\footnote{All EPNs must beling to a compartment. When no compartment is drawn then all EPNs can be
+    thought of as belonging to an imaginary ``default''
+    compartment. But when one or more EPNs are assigned to an explicit
+  compartment then for clarity all compartments must be explicity
+  drawn and EPNs assigned to them.}.
+
+\glyphSboTerm Not assigned
+
+\glyphContainer None
+
+\glyphLabel None
+
+\glyphAux The Canvas can have \glyph{Container} glyphs and any EPN,
+Process and Arcs as children. However all Auxiliary glyphs cannot be
+children of the Canvas.
+ 
+\glyphCloning N/A
+
+\end{glyphDescription}
+
+\input{sources/compartment.tex}
+
+\subsection{Auxiliary units}
+
+Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
+
+\input{sources/unitInformation.tex}
+\input{sources/stateVariable.tex}
+\input{sources/annotation.tex}
+
+\subsection{Reference nodes}
+
+Reference nodes handle links or relationships between elements of a
+map and sub-map. At present there is only one reference glyph,
+\glyph{tag}, which can be used in a map refered to by a \glyph{submap}
+(\sect{submap}) or as an auxilary unit on the \glyph{submap}. The
+\glyph{clone marker} can also provide additional reference mechanisms
+and is discussed below (\sect{cloneMarker}).
+
+\input{sources/tag.tex}
+
+\subsection{Arcs}\label{sec:arcs}
+
+Arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
+
+\subsubsection{Process Arcs}
+
+\input{sources/consumption.tex}
+\input{sources/production.tex}
+
+\subsubsection{Modulation Arcs}
+
+\input{sources/modulation.tex}
+\input{sources/stimulation.tex}
+\input{sources/catalysis.tex}
+\input{sources/inhibition.tex}
+\input{sources/necessary_stim.tex}
+
+%others
+\subsubsection{Others}
+
+\input{sources/logicArc.tex}
+\input{sources/equivalenceArc.tex}
+
+\section{Decorators}
+
+\input{sources/cloneMarker.tex}
+
+\section{Controlled vocabularies}\label{sec:CVs}
+
+\input{sources/CVs.tex}
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
