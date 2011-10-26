@@ -7,10 +7,19 @@ The simplest type of EPN is the \glyph{unspecified entity}: one whose type is un
 
 \begin{glyphDescription}
 
+ \begin{glyphIdentity}
+  \item owning compartment
+  \item name
+  \item cardinality
+  \end{glyphIdentity}
+\glyphRules The cardinality of
+  the unspecified entity is always 1 (there no multimer glyph).
+
+
 \glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
 
 \glyphContainer An \glyph{unspecified entity} is represented by an
-elliptic container, as shown in \fig{unspecified}.  Note that this
+elliptic container, as shown in \ref{fig:unspecified}.  Note that this
 must remain an ellipse to avoid confusion with the Simple Chemical
 glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
 
@@ -21,13 +30,15 @@ although this is not mandatory.  The label box must be attached to the
 center of the container.  The label may spill outside of the
 container.
 
-\glyphAux An \glyph{unspecified entity} may carry a \glyph{clone marker} (\sect{cloneMarker}).
+\glyphAux None
+
+\glyphCloning SImple Clone Marker
 
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/unspecified}
+  \includegraphics[width=2.5in]{images/unspecified}
   \caption{The \PD glyph for \glyph{unspecified entity}.}
   \label{fig:unspecified}
 \end{figure}

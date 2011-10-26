@@ -14,15 +14,14 @@ and it is also correct to show a complex without any subunits. The
 complex can be represented by a monomeric glyph (\glyph{Complex monomer}) and a multimeric glyph (\glyph{Complex multimer}).
 
 \begin{glyphDescription}
-\item[Identifying Attributes:]\mbox{}
-  \begin{itemize}
+\begin{glyphIdentity}
   \item owning compartment
   \item name \textbf{or} names of the subunits 
   \item cardinality
   \item The set of state values associated with the subunit decorators
     and the set of state values associated with the Complex.
- \end{itemize}
-\item[Special constraints or rules:]\mbox{}
+  \end{glyphIdentity}
+\glyphRules
 \begin{itemize}
   \item The mutimer glyph must be used if cardinality is greater than
     1.
@@ -126,7 +125,7 @@ version that does not use contains subunits.
   \caption{Both these complex glyphs are equivalent. The one on the
     left is described using subunit decorators, the one on the right
     describes the same thing without them.}
-  \label{fig:complexMultimer}
+  \label{fig:complexSubunits}
 \end{figure}
 
 % Show the available glyphs to be used as subunits.

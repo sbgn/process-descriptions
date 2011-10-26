@@ -15,7 +15,7 @@
   \PassOptionsToPackage {pdftex,rgb,usenames,dvipsnames,svgnames,hyperref,table}{xcolor}
 \else
   % Case: not using pdflatex
- \PassOptionsToPackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+ \PassOptionsToPackage{rgb,dvipsnames,svgnames,hyperref,table}{xcolor}
 \fi
 
 \usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
@@ -32,8 +32,9 @@
 \usepackage{xspace}
 \usepackage{float}
 \usepackage{eso-pic}
-\usepackage[american]{varioref}
+%\usepackage[american]{varioref}
 \usepackage[normalem]{ulem}
+\usepackage[right]{lineno}
 
 % Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
 % that needs to be used if pdflatex is being used.  The following puts
@@ -114,6 +115,7 @@
 % This sets up Helvetica for headings.  The font scaling is
 % because the default Helvetica size is too big.
 
+\RequirePackage{fourier}
 \RequirePackage{helvet}
 \def\Hv@scale{0.87}
 
@@ -323,6 +325,12 @@
   \begin{description}}%
   {\end{description}}
 
+\newenvironment{glyphIdentity}{%
+ % \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
+ \item[Identifying Attributes:]\mbox{}
+ \begin{itemize}}%
+  {\end{itemize}}
+
 \newcommand{\glyphSboTerm}{\item[SBO Term:]\mbox{}\newline}
 \newcommand{\glyphContainer}{\item[Container:]\mbox{}\newline}
 \newcommand{\glyphLabel}{\item[Label:]\mbox{}\newline}
@@ -332,6 +340,7 @@
 \newcommand{\glyphNode}{\item[Node:]\mbox{}\newline}
 \newcommand{\glyphEndPoint}{\item[End point:]\mbox{}\newline}
 \newcommand{\glyphCloning}{\item[Cloning:]\mbox{}\newline}
+\newcommand{\glyphRules}{\item[Special constraints or rules:]\mbox{}\newline}
 
 
 %% ----------------------------------------------------------------------------
