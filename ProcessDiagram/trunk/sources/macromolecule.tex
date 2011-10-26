@@ -6,14 +6,13 @@
 Many biological processes involve \emph{macromolecules}: biochemical substances that are built up from the covalent linking of pseudo-identical units.  Examples of macromolecules include proteins, nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose, starch, etc.).  Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone defines only one glyph for all macromolecules.  The same glyph is to be used for a protein, a nucleic acid, a complex sugar, and so on.  The exact nature of a particular macromolecule in a map is then clarified using its label and decorations, as will become clear below.  (Future levels of SBGN may subclass the \glyph{macromolecule} and introduce different glyphs to differentiate between types of macromolecules.)
 
 \begin{glyphDescription}
-\item[Identifying Attributes:]\mbox{}
-  \begin{itemize}
+ \begin{glyphIdentity}
   \item owning compartment
   \item name
   \item cardinality
   \item The set of state values associated with this EPN.
- \end{itemize}
-\item[Special constraints or rules:]\mbox{}\newline The mutimer glyph
+  \end{glyphIdentity}
+  \glyphRules The mutimer glyph
   must be used if cardinality is greater than 1.
 \end{glyphDescription}
 

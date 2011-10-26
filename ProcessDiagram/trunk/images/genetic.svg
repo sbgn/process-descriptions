@@ -18,7 +18,19 @@
    version="1.0"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
-     id="defs4" />
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4745">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4747"
+         width="442.44681"
+         height="114.14724"
+         x="773.91663"
+         y="130.2426" />
+    </clipPath>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -29,9 +41,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="558.1018"
-     inkscape:cy="227.34269"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="173.27653"
+     inkscape:cy="32.358756"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -46,11 +58,11 @@
      inkscape:window-maximized="0">
     <sodipodi:guide
        orientation="horizontal"
-       position="498.51028"
+       position="-690.94434,-125.25892"
        id="guide2177" />
     <sodipodi:guide
        orientation="vertical"
-       position="323.57143"
+       position="1.4285714,347.14286"
        id="guide2800" />
   </sodipodi:namedview>
   <metadata
@@ -70,12 +82,13 @@
      id="layer1"
      transform="translate(-342.5815,-209.598)">
     <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 345.0815,246.36483 L 345.0815,358.70858 L 345.23775,358.70858 L 345.23775,421.33358 C 345.23775,441.11929 361.17078,457.05231 380.9565,457.05233 L 690.9565,457.05233 C 710.74221,457.05233 726.67528,441.11929 726.67525,421.33358 L 726.67525,282.77108 C 726.67525,281.08977 726.55413,279.42052 726.3315,277.80233 L 726.3315,246.36483 L 345.0815,246.36483 z "
-       id="rect2929" />
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 346.09165,248.86483 0,112.34375 0.15625,0 0,62.625 c 0,19.78571 15.93303,35.71873 35.71875,35.71875 l 310,0 c 19.78571,0 35.71878,-15.93304 35.71875,-35.71875 l 0,-138.5625 c 0,-1.68131 -0.12112,-3.35056 -0.34375,-4.96875 l 0,-31.4375 -381.25,0 z"
+       id="rect2929"
+       inkscape:connector-curvature="0" />
     <g
        id="g6517"
-       transform="translate(-12.121831,0)">
+       transform="translate(-11.111678,2.5000004)">
       <rect
          ry="0"
          y="212.18871"
@@ -98,18 +111,18 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="449.25476"
-       y="374.33151"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="433.46664"
+       y="377.53671"
        id="text2890"><tspan
          sodipodi:role="line"
          id="tspan2892"
-         x="449.25476"
-         y="374.33151"
+         x="433.46664"
+         y="377.53671"
          style="font-size:64px">LABEL</tspan></text>
     <g
        id="g3270"
-       transform="translate(785.40176,61.707535)">
+       transform="translate(786.41191,64.207535)">
       <rect
          rx="25.135319"
          ry="24.660894"
@@ -132,5 +145,103 @@
            id="tspan2839-9"
            sodipodi:role="line">val@var</tspan></text>
     </g>
+    <path
+       id="path4227"
+       d="m -168.07599,248.86483 0,112.34375 0.15625,0 0,62.625 c 0,19.78571 15.93303,35.71873 35.71875,35.71875 l 310,0 c 19.78571,0 35.71878,-15.93304 35.71875,-35.71875 l 0,-138.5625 c 0,-1.68131 -0.12112,-3.35056 -0.34375,-4.96875 l 0,-31.4375 -381.25,0 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text4229"
+       y="377.53671"
+       x="-80.700989"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:64px"
+         y="377.53671"
+         x="-80.700989"
+         id="tspan4231"
+         sodipodi:role="line">LABEL</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4749"
+       d="m 858.09165,248.86483 0,112.34375 0.15625,0 0,62.625 c 0,19.78571 15.93303,35.71873 35.71875,35.71875 l 309.99995,0 c 19.7858,0 35.7188,-15.93304 35.7188,-35.71875 l 0,-138.5625 c 0,-1.68131 -0.1211,-3.35056 -0.3438,-4.96875 l 0,-31.4375 -381.24995,0 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       transform="translate(61.53323,258.59905)"
+       clip-path="url(#clipPath4745)"
+       id="path4771"
+       d="m 796.6197,-9.7342223 0,112.3437523 0.15625,0 0,62.625 c 0,19.78571 15.93303,35.71873 35.71875,35.71875 l 310,0 c 19.7857,0 35.7188,-15.93304 35.7187,-35.71875 l 0,-138.562503 c 0,-1.68131 -0.1211,-3.35056 -0.3437,-4.96875 l 0,-31.4374993 -381.25,0 z"
+       style="fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="translate(500.88832,2.5000004)"
+       id="g4751">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4753"
+         width="108.57143"
+         height="65.714287"
+         x="389.2547"
+         y="212.18871"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="400.68329"
+         y="256.4744"
+         id="text4755"><tspan
+           sodipodi:role="line"
+           id="tspan4757"
+           x="400.68329"
+           y="256.4744"
+           style="font-size:32px;font-weight:bold">INFO</tspan></text>
+    </g>
+    <text
+       id="text4759"
+       y="376.83151"
+       x="945.46667"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:64px"
+         y="376.83151"
+         x="945.46667"
+         id="tspan4761"
+         sodipodi:role="line">LABEL</tspan></text>
+    <g
+       transform="translate(1298.4119,64.207535)"
+       id="g4763">
+      <rect
+         style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4765"
+         width="166.61125"
+         height="50.73098"
+         x="-253.3847"
+         y="158.32697"
+         ry="24.660894"
+         rx="25.135319" />
+      <text
+         xml:space="preserve"
+         style="font-size:11.61923981px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="-244.49863"
+         y="187.91116"
+         id="text4767"
+         transform="scale(0.96827814,1.0327611)"><tspan
+           sodipodi:role="line"
+           id="tspan4769"
+           x="-244.49863"
+           y="187.91116"
+           style="font-size:30.98454857px;font-weight:bold">val@var</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="982.79486"
+       y="437.12592"
+       id="text4775"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4777"
+         x="982.79486"
+         y="437.12592">Marker</tspan></text>
   </g>
 </svg>

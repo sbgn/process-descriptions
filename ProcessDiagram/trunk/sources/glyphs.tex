@@ -118,17 +118,29 @@ overview of this hierarchy is provided in figures
 
 An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
 
-The \PD contains six glyphs representing classes of material entities:
-\glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple
-  chemical} (\sect{simpleChemical}), \glyph{macromolecule}
-(\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}),
-\glyph{multimer} (\sect{multimer}) and \glyph{complex}
-(\sect{complex}).  (Specific types of macromolecules, such as protein,
-RNA, DNA, polysaccharide, and specific simple chemicals are not
-defined by \PD but may be part of future levels of SBGN.)  In addition
-to the material entities, \PD represents three conceptual entities:
-\glyph{empty set} (\sect{sourceSink}), and \glyph{perturbing agent}
-(\sect{perturbing agent}).
+The \PD contains five glyph types representing classes of material
+entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}),
+\glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+(\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic})
+and \glyph{complex} (\sect{complex}).  (Specific types of
+macromolecules, such as protein, RNA, DNA, polysaccharide, and
+specific simple chemicals are not defined by \PD but may be part of
+future levels of SBGN.)  In addition to the material entities, \PD
+represents three conceptual entities: \glyph{empty set}
+(\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing
+  agent}).
+
+% The \PD contains six glyphs representing classes of material entities:
+% \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple
+%   chemical} (\sect{simpleChemical}), \glyph{macromolecule}
+% (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}),
+% \glyph{multimer} (\sect{multimer}) and \glyph{complex}
+% (\sect{complex}).  (Specific types of macromolecules, such as protein,
+% RNA, DNA, polysaccharide, and specific simple chemicals are not
+% defined by \PD but may be part of future levels of SBGN.)  In addition
+% to the material entities, \PD represents three conceptual entities:
+% \glyph{empty set} (\sect{sourceSink}), and \glyph{perturbing agent}
+% (\sect{perturbing agent}).
  
 \subsubsection{Stateless Entity Pool}
 
@@ -173,6 +185,16 @@ known process.  \SBGNPDLone defines a generic \glyph{process}
   process} (\sect{uncertain}), the \glyph{association}
 (\sect{association}), the \glyph{dissociation} (\sect{dissociation}),
 and the \glyph{phenotype} (\sect{phenotype}).
+
+\begin{glyphDescription}
+  \begin{glyphIdentity}
+    \item Instance - all entities are unique
+  \end{glyphIdentity}
+
+  \item glyphRules A process cannot be ``orphaned''. It must always
+    be connected to another node by one or more arcs.
+\end{glyphDescription}
+
 
 \subsubsection{Non-stoichiometric process}
 
