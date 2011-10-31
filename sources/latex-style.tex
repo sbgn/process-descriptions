@@ -31,10 +31,12 @@
 \usepackage{fancybox}
 \usepackage{xspace}
 \usepackage{float}
+\usepackage{framed}
 \usepackage{eso-pic}
 %\usepackage[american]{varioref}
 \usepackage[normalem]{ulem}
 \usepackage[right]{lineno}
+\usepackage[olditem,oldenum]{paralist}
 
 % Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
 % that needs to be used if pdflatex is being used.  The following puts
@@ -94,8 +96,8 @@
 
 % Numbers the paragraph, but does not lists them in the ToC
 
-\setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
 
 % Fix placement of figures & tables.  This keeps latex from shoving big
 % floats to the end of a document when they are somewhat big, which it will
@@ -191,25 +193,25 @@
 
 % The next definitions change the style of the section headings.
 
-\renewcommand{\section}{\@startsection%
-  {section}{1}{0pt}{-3ex \@plus -0.5ex \@minus -.2ex}%
-  {1ex}{\Large\bfseries\sffamily}}
+% \renewcommand{\section}{\@startsection%
+%   {section}{1}{0pt}{-3ex \@plus -0.5ex \@minus -.2ex}%
+%   {1ex}{\Large\bfseries\sffamily}}
 
-\renewcommand{\subsection}{\@startsection%
-  {subsection}{2}{0pt}{-2.5ex \@plus -1ex \@minus -.2ex}%
-  {1ex}{\large\bfseries\sffamily}}
+% \renewcommand{\subsection}{\@startsection%
+%   {subsection}{2}{0pt}{-2.5ex \@plus -1ex \@minus -.2ex}%
+%   {1ex}{\large\bfseries\sffamily}}
 
-\renewcommand{\subsubsection}{\@startsection%
-  {subsubsection}{3}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
-  {0.8ex}{\slshape\normalsize\bfseries\sffamily}}
+% \renewcommand{\subsubsection}{\@startsection%
+%   {subsubsection}{3}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
+%   {0.8ex}{\slshape\normalsize\bfseries\sffamily}}
 
-\renewcommand{\paragraph}{\@startsection%
-  {paragraph}{4}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
-  {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
+% \renewcommand{\paragraph}{\@startsection%
+%   {paragraph}{4}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
+%   {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
 
-\renewcommand{\subparagraph}{\@startsection%
-  {subparagraph}{5}{-0.75cm}{-1.5ex \@plus -1ex \@minus -.2ex}%
-  {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
+% \renewcommand{\subparagraph}{\@startsection%
+%   {subparagraph}{5}{0pt}{-1.5ex \@plus -1ex \@minus -.2ex}%
+%   {0.5ex}{\slshape\normalsize\bfseries\sffamily}}
 
 
 % Below, we take out the heading embedded by the \tableofcontents
@@ -320,27 +322,49 @@
 
 % We define our own description environment for documenting SBGN glyphs.
 
+% \newenvironment{glyphDescription}{%
+%   \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
+%   \begin{description}}%
+%   {\end{description}}
+
+\newcommand{\sbgnclass}[1]{\texttt{#1}}
+\newcommand{\attrib}[1]{\textsf{#1}}
+
 \newenvironment{glyphDescription}{%
-  \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
-  \begin{description}}%
-  {\end{description}}
+%  \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
+%  \mbox{Glyph Specification}%
+%\begin{framed}%
+  \begin{compactdesc}}%
+  {\end{compactdesc}}%\end{framed}}
 
 \newenvironment{glyphIdentity}{%
- % \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
- \item[Identifying Attributes:]\mbox{}
- \begin{itemize}}%
-  {\end{itemize}}
+\item[Identifying Attributes:]\mbox{}
+ \begin{compactitem}}%
+  {\end{compactitem}}
 
-\newcommand{\glyphSboTerm}{\item[SBO Term:]\mbox{}\newline}
-\newcommand{\glyphContainer}{\item[Container:]\mbox{}\newline}
-\newcommand{\glyphLabel}{\item[Label:]\mbox{}\newline}
-\newcommand{\glyphAux}{\item[Permitted Child Glyphs:]\mbox{}\newline}
-\newcommand{\glyphOrigin}{\item[Origin:]\mbox{}\newline}
-\newcommand{\glyphTarget}{\item[Target:]\mbox{}\newline}
-\newcommand{\glyphNode}{\item[Node:]\mbox{}\newline}
-\newcommand{\glyphEndPoint}{\item[End point:]\mbox{}\newline}
-\newcommand{\glyphCloning}{\item[Cloning:]\mbox{}\newline}
-\newcommand{\glyphRules}{\item[Special constraints or rules:]\mbox{}\newline}
+\newcommand{\attitem}[2]{\item[\attrib{#1}:\sbgnclass{#2}]}
+
+\newcommand{\glyphSboTerm}{\item[SBO Term:]}
+\newcommand{\glyphContainer}{\item[Container:]}
+\newcommand{\glyphName}{\item[Name:]}
+\newcommand{\glyphLabel}{\item[Label:]}
+\newcommand{\glyphAux}{\item[Permitted Child Glyphs:]}
+\newcommand{\glyphOrigin}{\item[Origin:]}
+\newcommand{\glyphTarget}{\item[Target:]}
+\newcommand{\glyphNode}{\item[Node:]}
+\newcommand{\glyphEndPoint}{\item[End point:]}
+\newcommand{\glyphCloning}{\item[Cloning:]}
+\newcommand{\glyphRules}{\item[Special constraints or rules:]}
+% \newcommand{\glyphSboTerm}{\item[SBO Term:]\mbox{}\newline}
+% \newcommand{\glyphContainer}{\item[Container:]\mbox{}\newline}
+% \newcommand{\glyphLabel}{\item[Label:]\mbox{}\newline}
+% \newcommand{\glyphAux}{\item[Permitted Child Glyphs:]\mbox{}\newline}
+% \newcommand{\glyphOrigin}{\item[Origin:]\mbox{}\newline}
+% \newcommand{\glyphTarget}{\item[Target:]\mbox{}\newline}
+% \newcommand{\glyphNode}{\item[Node:]\mbox{}\newline}
+% \newcommand{\glyphEndPoint}{\item[End point:]\mbox{}\newline}
+% \newcommand{\glyphCloning}{\item[Cloning:]\mbox{}\newline}
+% \newcommand{\glyphRules}{\item[Special constraints or rules:]\mbox{}\newline}
 
 
 %% ----------------------------------------------------------------------------

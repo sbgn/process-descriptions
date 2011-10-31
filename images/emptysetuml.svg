@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1653" height="847" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="864" y="54" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="828" y="86" width="39" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="824" y="50" width="40" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="844" y="67">Map</text>
+	<line stroke="black" stroke-opacity="1" x1="824" y1="70" x2="864" y2="70" />
+	<line stroke="black" stroke-opacity="1" x1="824" y1="78" x2="864" y2="78" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="921" y="256" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="845" y="288" width="79" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="841" y="252" width="80" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="881" y="269">EmptySet</text>
+	<line stroke="black" stroke-opacity="1" x1="841" y1="272" x2="921" y2="272" />
+	<line stroke="black" stroke-opacity="1" x1="841" y1="280" x2="921" y2="280" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="628" y="255" width="3" height="83" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="514" y="335" width="117" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="510" y="251" width="118" height="84" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="569" y="268">EntityPoolNode</text>
+	<line stroke="black" stroke-opacity="1" x1="510" y1="271" x2="628" y2="271" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="514" y="288">label : string</text>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="514" y="306">cardinality : int</text>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="514" y="324">nature : cv</text>
+	<line stroke="black" stroke-opacity="1" x1="510" y1="327" x2="628" y2="327" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="613" y="149" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="529" y="181" width="87" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="525" y="145" width="88" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="569" y="162">SBGNNode</text>
+	<line stroke="black" stroke-opacity="1" x1="525" y1="165" x2="613" y2="165" />
+	<line stroke="black" stroke-opacity="1" x1="525" y1="173" x2="613" y2="173" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="882" y1="251" x2="882" y2="218" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="571" y1="250" x2="571" y2="218" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="882" y1="218" x2="571" y2="218" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="571" y1="218" x2="571" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="565" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="577" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="565" y1="191" x2="577" y2="191" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="571" y1="218" x2="571" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="565" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="577" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="565" y1="191" x2="577" y2="191" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="617" y="55" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="527" y="87" width="93" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="523" y="51" width="94" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="570" y="68">SBGNGlyph</text>
+	<line stroke="black" stroke-opacity="1" x1="523" y1="71" x2="617" y2="71" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="79" x2="617" y2="79" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="823" y1="70" x2="621" y2="70" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="823,70 817,76 811,70 817,64" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="571" y1="144" x2="571" y2="97" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="91" x2="565" y2="97" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="91" x2="577" y2="97" />
+	<line stroke="black" stroke-opacity="1" x1="565" y1="97" x2="577" y2="97" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="631" y="93">1</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="807" y="93">*</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="726" y="64">owning_map</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="631" y="64">elements</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="465" y="289">epns</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="475" y="318">0..1</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="253" y="318">*</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="253" y="289">owning_compartment</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="239" y="279" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="133" y="311" width="109" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="129" y="275" width="110" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="184" y="292">Compartment</text>
+	<line stroke="black" stroke-opacity="1" x1="129" y1="295" x2="239" y2="295" />
+	<line stroke="black" stroke-opacity="1" x1="129" y1="303" x2="239" y2="303" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="243" y1="295" x2="509" y2="295" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="243,295 249,289 255,295 249,301" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="185" y1="274" x2="185" y2="218" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="185" y1="218" x2="571" y2="218" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="571" y1="218" x2="571" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="565" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="571" y1="185" x2="577" y2="191" />
+	<line stroke="black" stroke-opacity="1" x1="565" y1="191" x2="577" y2="191" />
+</g>
+</svg>
