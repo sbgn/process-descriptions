@@ -15,8 +15,6 @@ all: $(PDF_FILES)
 
 
 clean:
-	-rm *.pdf
-	-rm *.eps
-	-rm *.png
+	-rm -f *.pdf
 
 
