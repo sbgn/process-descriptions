@@ -18,19 +18,19 @@ overview of this hierarchy is provided in figures
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=1.0\linewidth]{images/sbgn_node_taxonomy}
+\includegraphics[width=1.0\linewidth]{images/sbgnumloverview}
 \caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
 \label{fig:sbgn_node_tax}
 \end{center}
 \end{figure}
 
-\begin{figure}[htb!]
-\begin{center}
-\includegraphics[width=\linewidth]{images/sbgn_edge_taxonomy}
-\caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
-\label{fig:sbgn_edge_tax}
-\end{center}
-\end{figure}
+% \begin{figure}[htb!]
+% \begin{center}
+% \includegraphics[width=\linewidth]{images/sbgn_edge_taxonomy}
+% \caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+% \label{fig:sbgn_edge_tax}
+% \end{center}
+% \end{figure}
 
 % \begin{description}
 % \item[Process] Transforms entities from one form to another. Note that a process may be used to represent or summarise more than one known process.
@@ -108,15 +108,92 @@ overview of this hierarchy is provided in figures
 
 \section{Definitions}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   State nodes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SBGNElement}
 
-\subsection{Entity pool}\label{sec:EPNs}
+All the glyphs in \SBGNPDLone inherit from
+\sbgnclass{SBGNElement}. This is an abstract or conceptual class that
+helps organise \PD conceptually. \sbgnclass{SBGNElement} (figure
+\ref{fig:mapuml}) has a single attribute \attrib{id} that is an
+identifying attribute. This means that all SBGN elements defined here,
+which ultimately extend \sbgnclass{SBGNBase}, can all be uniquely
+identified from each other. This makes sense if you think that a glyph
+drawn on a map is distinct from another glyph drawn on the map. The
+\attrib{id} attribute reflects this and is not shown explicitly in a
+\PDm.
 
-An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
+\begin{glyphDescription}
+\glyphName SBGN Element
+\glyphSboTerm Not defined
+\begin{glyphIdentity}
+  \attitem{id}{identity} the implicit identity of an SBGN element ensuring
+    all instances are unique.
+\end{glyphIdentity}
+\glyphAux N/A
+\glyphRules N/A
+\glyphCloning N/A
+\end{glyphDescription}
+
+\subsection{Map}
+
+The \sbgnclass{Map} (figure \ref{fig:mapuml}) is a concrete class the extends the
+\sbgnclass{SBGNElement}. It describes the visible container upon which
+all glyphs are drawn. The map can take any pattern or colour, but as
+SBGN is `colour blind' this does not convey any meaning in itself.
+
+\begin{glyphDescription}
+\glyphName Map
+\glyphSboTerm Not defined
+\begin{glyphIdentity}
+  \attitem{glyphs}{SBGNGlyph} The collection of glyphs held by the map. 
+\end{glyphIdentity}
+\glyphAux All SBGN glyphs that extend \sbgnclass{SBGNGlyph}
+\glyphRules A map is valid if it is empty (although not very useful)
+\glyphCloning N/A
+\end{glyphDescription}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/mapuml}
+  \caption{UML definition of Map and \sbgnclass{SBGNElement}.}
+  \label{fig:mapuml}
+\end{figure}
+
+\subsection{Glyphs, Auxiliary Units, Nodes and Arcs}
+
+In addition to the map elements within SBGN are either descendants of
+\sbgnclass{SBGNGlyph} (glyphs) or \sbgnclass{SBGNAuxiliaryUnit}
+(auxiliary units). See figure \ref{fig:glyphauxuml}. Glyphs are the
+fundamental building blocks of the \PDl and are the only elements that
+can be drawn on a map (\sbgnclass{MAP}). Auxiliary units in contrast
+cannot and are used to adorn glyphs and providing additional
+information that may be useful to the reader. These can provide
+annotation (\glyph{annotation}), state information
+(\glyph{state variable}) or indicate duplication of entity pool nodes
+(\glyph{clone marker}).  Glyphs are further subdivided divided into nodes
+(\sbgnclass{SBGNGlyph}) and edges (\sbgnclass{SBGNArc}) that define
+the graph structure inherent in a \PDm.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/glyphauxuml}
+\caption{UML definition of the glyph, auxiliary unit, nodes and arcs.}
+  \label{fig:glyphauxuml}
+\end{figure}
+
+
+\subsection{Entity pool nodes}\label{sec:EPNs}
+
+An entity pool is a population of entities that cannot be
+distinguished from each other, when it comes to the \SBGNPDLone
+map. For instance all the molecular entities that fulfill the same
+role in a given process form an entity pool. As a result, an entity
+pool can represent different granularity levels, such as all the
+proteins, all the instances of a given protein, only certain forms of
+a given protein. To belong to a different compartment is sufficient to
+belong to different entity pools. Calcium ions in the endoplasmic
+reticulum and calcium ions in the cytosol belong to different entity
+pools when it comes to representing calcium release from the
+endoplasmic reticulum.
 
 The \PD contains five glyph types representing classes of material
 entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}),
@@ -126,156 +203,59 @@ and \glyph{complex} (\sect{complex}).  (Specific types of
 macromolecules, such as protein, RNA, DNA, polysaccharide, and
 specific simple chemicals are not defined by \PD but may be part of
 future levels of SBGN.)  In addition to the material entities, \PD
-represents three conceptual entities: \glyph{empty set}
-(\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing
+represents a conceptual entities: \glyph{perturbing agent} (\sect{perturbing
   agent}).
 
-% The \PD contains six glyphs representing classes of material entities:
-% \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple
-%   chemical} (\sect{simpleChemical}), \glyph{macromolecule}
-% (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}),
-% \glyph{multimer} (\sect{multimer}) and \glyph{complex}
-% (\sect{complex}).  (Specific types of macromolecules, such as protein,
-% RNA, DNA, polysaccharide, and specific simple chemicals are not
-% defined by \PD but may be part of future levels of SBGN.)  In addition
-% to the material entities, \PD represents three conceptual entities:
-% \glyph{empty set} (\sect{sourceSink}), and \glyph{perturbing agent}
-% (\sect{perturbing agent}).
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/epnuml}
+\caption{UML definition of the entity pool node and its descendant glyphs.}
+  \label{fig:epnuml}
+\end{figure}
  
-\subsubsection{Stateless Entity Pool}
+The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the common
+ancestor of all these glyphs and defines attributes that are common to
+all its descendants. It must belong to a compartment (c.f.\, section
+\ref{sec:compartment})  and can contain a clone marker if it is
+cloned. Note that not all EPNs can be cloned.
 
-This is a pool where the entities do not change `state'. In otherwords
-the entities do not undergo any physical change that is useful to
-record in a \PD diagram. Therefore these glyphs cannot be assigned a state-variable.
 
-\paragraph{Simple chemical}
-\label{sec:simpleChemical}
-
-A simple chemical in SBGN is defined as the opposite of a
-macromolecule (\sect{macromolecule}): it is a chemical compound that
-is \emph{not} formed by the covalent linking of pseudo-identical
-residues.  Examples of simple chemicals are an atom, a monoatomic ion,
-a salt, a radical, a solid metal, a crystal, etc. The complex can be
-represented by a monomeric glyph (\glyph{Simple chemical monomer}) and a multimeric
-glyph (\glyph{Simple chemical multimer}).
-
+\subsubsection{EntityPoolNode}
 
 \begin{glyphDescription}
-% \item[Identifying Attributes:]\mbox{}
-%   \begin{itemize}
-%   \item owning compartment
-%   \item name
-%   \item cardinality
-%   \end{itemize}
+\glyphSboTerm Not defined
 \begin{glyphIdentity}
-  \item owning compartment
-  \item name
-  \item cardinality
+  \attitem{label}{string} The name that identifies the entity in the
+  \PDm. EPNs with the same label should be from the same entity. the
+  string cannot be empty and must start and end with a non-space
+  character. Any Unicode character is acceptable.
+  \attitem{cardinality}{int} The number of copies of the entity. Must
+  be a positive non-zero integer.
+  \attitem{nature}{cv} The nature of the entity pool node as defined
+  by a controlled vocabulary.
+  \attitem{owning\_compartment}{\glyph{Compartment}} The compartment
+  that this EPN belongs too.
+  \attitem{clone\_marker}{\sbgnclass{CloneMarker}} The clone marker
+  decorator. See section \ref{sec:cloneMarker} for its use.
+ \attitem{displayed\_attributes}{\sbgnclass{AttributeValue}} One or
+ more decorators used to display attribute values.
 \end{glyphIdentity}
-\glyphRules The mutimer glyph
-  must be used if cardinality is greater than 1.
+\glyphAux \glyph{Annotation}
+\glyphRules%
+\begin{inparaenum}
+\item If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
+  as a multimer.
+\item If the EPN is drawn directly on a \glyph{Map} then
+ \attrib{owning\_compartment} is assigned to an invisible default
+ compartment.
+ \attrib{nature} can only use the material type (section
+ \ref{sec:mt}), conceptual type (section \ref{sec:ct}) or physical
+ characteristics (section \ref{sec:pc}) controlled vocabularies.
+\end{inparaenum}
+\glyphCloning Defined by descendants.
 \end{glyphDescription}
 
-
-\subparagraph{Glyph: \glyph{Simple chemical monomer}}
-
-This glyph is used to represent a simple chemical with a cardinality
-of one.
-
-\begin{glyphDescription}
-
-\glyphSboTerm SBO:0000247 ! simple chemical
-
-\glyphContainer A \glyph{simple chemical} is represented by a circular
-container, as depicted in \fig{simpleChemical}. To avoid confusion
-with the Unspecified Entity (\ref{sec:unspecifiedEntity}), this glyph
-must remain a circle and cannot be deformed into an eclipse.
-
-\glyphLabel The identification of the \glyph{simple chemical} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the circular container.  The label is permitted to spill outside the container.
-
-\glyphAux A \glyph{simple chemical} may be decorated with one or more \glyph{units of information} (\sect{unitInfo}).  A particular \glyph{unit of information} describes the material type.  A \glyph{simple chemical} may also carry a \glyph{clone marker} (\sect{cloneMarker}).
-
-\glyphCloning Simple Clone Marker
-
-\end{glyphDescription}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{images/simpleChemical}
-  \caption{The \PD glyph for \glyph{simple chemical}.}
-  \label{fig:simpleChemical}
-\end{figure}
-
-\subparagraph{Glyph: \glyph{Simple chemical multimer}}
-
-This glyph is used to represent a simple chemical with a cardinality
-of one.
-
-\begin{glyphDescription}
-
-\glyphSboTerm SBO:0000421 ! multimer of simple chemicals
-
-\glyphContainer A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
-
-\glyphLabel A \glyph{multimer} has no identity on its own.  However, the first of the monomers carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
-
-\glyphAux A \glyph{multimer} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a multimer is therefore defined as the vector of all its state variables.  Note that a \glyph{state variable} carried by a multimer actually applies to each of the constituent monomers individually.  If instead the state variables are meant to apply to the whole multimeric assembly, a \glyph{macromolecule} (\sect{macromolecule}) should be used instead of \glyph{multimer}.  An assembly containing some state variables applicable to the components, and others state variable applicable to the assembly (for instance opening of a channel and phosphorylation of each of its subunits) should be represented by a \glyph{complex} (\sect{complex}).
-
-\glyphCloning Simple Clone Marker
-
-\end{glyphDescription}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
-  \caption{The \PD glyph for \glyph{multimer}.}
-  \label{fig:multimer}
-\end{figure}
-
-\paragraph{Glyph: \glyph{Unspecified entity}}
-\label{sec:unspecifiedEntity}
-
-The simplest type of EPN is the \glyph{unspecified entity}: one whose type is unknown or simply not relevant to the purposes of the map.  This arises, for example, when the existence of the entity has been inferred indirectly, or when the entity is merely a construct introduced for the needs of a map, without direct biological relevance.  These are examples of situations where the \emph{unspecified entity} glyph is appropriate.  (Conversely, for cases where the identity of the entities composing the pool \emph{is} known, there exist other, more specific glyphs described elsewhere in the specification.)
-
-\begin{glyphDescription}
-
- \begin{glyphIdentity}
-  \item owning compartment
-  \item name
-  \item cardinality
-  \end{glyphIdentity}
-\glyphRules The cardinality of
-  the unspecified entity is always 1 (there no multimer glyph).
-
-
-\glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
-
-\glyphContainer An \glyph{unspecified entity} is represented by an
-elliptic container, as shown in \ref{fig:unspecified}.  Note that this
-must remain an ellipse to avoid confusion with the Simple Chemical
-glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
-
-\glyphLabel An \glyph{unspecified entity} is identified by a label
-placed in an unbordered box containing a string of characters.  The
-characters can be distributed on several lines to improve readability,
-although this is not mandatory.  The label box must be attached to the
-center of the container.  The label may spill outside of the
-container.
-
-\glyphAux None
-
-\glyphCloning SImple Clone Marker
-
-\end{glyphDescription}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=2.5in]{images/unspecified}
-  \caption{The \PD glyph for \glyph{unspecified entity}.}
-  \label{fig:unspecified}
-\end{figure}
-
-\paragraph{Glyph: \glyph{Empty Set}}
+\subsection{Empty Set}
 \label{sec:sourceSink}
 
 It is useful to have the ability to represent the creation of an entity or
@@ -290,6 +270,8 @@ preferring instead to simply say that the species ``disappears into a
 sink''.  Yet another example is that one may need to represent an input
 (respectively, output) into (resp. from) a compartment without explicitly
 representing a transport process from a source (resp. to a target).
+
+
 
 For these and other situations, SBGN defines a single glyph to handle
 these situations representing the involvement of an external pool of entities.  The symbol
@@ -307,40 +289,187 @@ map is rescaled, causing the spacing of elements in the map to
 change.  The availability and use of an explicit symbol for sources and
 sinks is critical.
 
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/emptysetuml}
+  \caption{The UML definition of the \glyph{EmptySet} and its context
+    in relation to other elements of the \PDl.}
+  \label{fig:emptysetuml}
+\end{figure}
+
+
+The definition of the \glyph{Empty Set} is shown in figure
+\ref{fig:emptysetuml}. The empty set is not an EPN as it does not
+represent a single pool of entities and does not share any of the
+other attributes of an EPN, nor does it belong to a particular
+compartment.
+
+\subsubsection{Glyph: \glyph{Empty Set}}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.1\textwidth]{images/sourceSink}
+  \caption{The \glyph{empty set} glyph.}
+  \label{fig:sourceSink}
+\end{figure}
+
 \begin{glyphDescription}
-
-\item[Identifying Attributes:]\mbox{} All glyphs represent the same
-  pool of external entities.
-
-\item[Special constraints or rules:]\mbox{}\newline None.
-
 \glyphSboTerm SBO:0000291 ! empty set
+\glyphAux None
+\glyphRules
+\glyphCloning All instances of \glyph{Empty Set} can be regarded as identical
+therefore not special decoration is used to indicate replication on the map.
+\end{glyphDescription}
 
-\glyphContainer Represented by the mathematical symbol for ``empty
+\paragraph{Container}
+
+Represented by the mathematical symbol for ``empty
 set'', that is, a circle crossed by a bar linking the upper-right and
 lower-left corners of an invisible square drawn around the circle ($\emptyset$).
 \fig{sourceSink} illustrates this.  The symbol should be linked to one
 and only one edge in a map.
 
-\glyphLabel None
+\paragraph{Label}
 
-\glyphAux None
+None
 
-\glyphCloning All glyphs are identical and therefore clones. No
-special decoration is used to indicate this.
+\subsection{Stateless Entity Pool}
 
+The \sbgnclass{StatelessEPN} (figure \ref{fig:statelessepnuml})
+represents a pool where the entities do not change `state'. In
+other-words the entities do not undergo any physical change that is
+useful to record in a \PDm. Therefore these glyphs cannot be assigned
+a state-variable.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/statelessepnuml}
+\caption{UML definition of the stateless entity pool node and its descendant glyphs.}
+  \label{fig:statelessepnuml}
+\end{figure}
+
+\subsubsection{StatelessEPN}
+
+\begin{glyphDescription}
+\glyphSboTerm Not defined
+\glyphAux
+\glyphRules%
+\begin{inparaenum}
+\item if a clone marker is used it must be of type \sbgnclass{SimpleCloneMarker}.
+\end{inparaenum}
+\glyphCloning Defined by descendants.
 \end{glyphDescription}
+
+\subsection{Simple chemical}
+\label{sec:simpleChemical}
+
+A simple chemical in SBGN is defined as the opposite of a
+macromolecule (\sect{macromolecule}): it is a chemical compound that
+is \emph{not} formed by the covalent linking of pseudo-identical
+residues.  Examples of simple chemicals are an atom, a monoatomic ion,
+a salt, a radical, a solid metal, a crystal, etc. The complex can be
+represented by a monomeric glyph (\glyph{Simple chemical monomer}) and a multimeric
+glyph (\glyph{Simple chemical multimer}).
+
+\subsubsection{Glyph: \glyph{Simple chemical monomer}}
+
+\begin{glyphDescription}
+\glyphSboTerm SBO:0000247 ! simple chemical
+\glyphAux 
+\glyphRules%
+\begin{inparaenum}
+\end{inparaenum}
+\glyphCloning Yes.
+\end{glyphDescription}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleChemical}
+  \caption{The \PD glyph for \glyph{simple chemical}.}
+  \label{fig:simpleChemical}
+\end{figure}
+
+\paragraph{Container}
+A \glyph{simple chemical} is represented by a circular
+container, as depicted in \fig{simpleChemical}. To avoid confusion
+with the Unspecified Entity (\ref{sec:unspecifiedEntity}), this glyph
+must remain a circle and cannot be deformed into an eclipse.
+
+\paragraph{Label}
+
+ The identification of the \glyph{simple chemical} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the circular container.  The label is permitted to spill outside the container.
+
+\subsubsection{Glyph: \glyph{Simple chemical multimer}}
+
+\begin{glyphDescription}
+\glyphSboTerm SBO:0000421 ! multimer of simple chemicals
+\glyphAux 
+\glyphRules%
+\begin{inparaenum}
+\end{inparaenum}
+\glyphCloning Yes.
+\end{glyphDescription}
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
+  \caption{The \PD glyph for \glyph{multimer}.}
+  \label{fig:multimer}
+\end{figure}
+
+\paragraph{Container}
+
+ A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
+
+\paragraph{Label}
+
+A \glyph{multimer} has no identity on its own.  However, the first of the monomers carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
+
+\subsection{Unspecified entity}
+\label{sec:unspecifiedEntity}
+
+The simplest type of EPN is the \glyph{unspecified entity}: one whose type is unknown or simply not relevant to the purposes of the map.  This arises, for example, when the existence of the entity has been inferred indirectly, or when the entity is merely a construct introduced for the needs of a map, without direct biological relevance.  These are examples of situations where the \emph{unspecified entity} glyph is appropriate.  (Conversely, for cases where the identity of the entities composing the pool \emph{is} known, there exist other, more specific glyphs described elsewhere in the specification.)
+
+\subsubsection{Glyph: \glyph{Unspecified entity}}
+
+\begin{glyphDescription}
+\glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
+\glyphAux 
+\glyphRules%
+\begin{inparaenum}
+\item The cardinality of
+  the unspecified entity is always 1, \ie (there is no multimer glyph.
+\end{inparaenum}
+\glyphCloning Yes
+\end{glyphDescription}
+
+\paragraph{Container}
+
+An \glyph{unspecified entity} is represented by an
+elliptic container, as shown in \ref{fig:unspecified}.  Note that this
+must remain an ellipse to avoid confusion with the Simple Chemical
+glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
+
+\paragraph{Label}
+
+An \glyph{unspecified entity} is identified by a label
+placed in an unbordered box containing a string of characters.  The
+characters can be distributed on several lines to improve readability,
+although this is not mandatory.  The label box must be attached to the
+center of the container.  The label may spill outside of the
+container.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/sourceSink}
-  \caption{The \glyph{empty set} glyph.}
-  \label{fig:sourceSink}
+  \includegraphics[width=2.5in]{images/unspecified}
+  \caption{The \PD glyph for \glyph{unspecified entity}.}
+  \label{fig:unspecified}
 \end{figure}
 
-\paragraph{Glyph: \glyph{Perturbing agent}}
+\subsection{Perturbing Agent}
 \label{sec:perturbing agent}
- 
+
 Biochemical networks can be affected by external influences.  Those
 influences can be the effect of well-defined physical perturbing agents, such as a light
 pulse or a change in temperature; they can also be more complex and not
@@ -348,26 +477,7 @@ well-defined phenomena, for instance the outcome of a biological process, an exp
 setup, or a mutation.  For these situations, SBGN provides the
 \glyph{perturbing agent} glyph. It is an EPN, and represents the amount to perturbing agent applied to a process.  
 
-\begin{glyphDescription}
-
-
-\glyphSboTerm SBO:0000405 ! perturbing agent
-
-\glyphContainer A \glyph{perturbing agent} is represented by a modified hexagon
-having two opposite concave faces, as illustrated in \fig{perturbing agent}.
-
-\glyphLabel A \glyph{perturbing agent} is identified by a label placed in an
-unbordered box containing a string of characters.  The characters can be
-distributed on several lines to improve readability, although this is not
-mandatory.  The label box must be attached to the center of the
-\glyph{perturbing agent} container.  The label may spill outside of the container.
-
-\glyphAux A \glyph{perturbing agent} may carry a \glyph{clone marker}
-(\sect{cloneMarker}).
-
-A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).  A controlled vocaulary is available to describing the physical characteristic of the perturbing agent (see \sect{physical-characteristics-cv}).  
-
-\end{glyphDescription}
+\subsubsection{Glyph: \glyph{Perturbing agent}}
 
 \begin{figure}[H]
   \centering
@@ -376,47 +486,91 @@ A \glyph{perturbing agent} can optionally carry one or more \glyph{units of info
   \label{fig:perturbing agent}
 \end{figure}
 
-\subsubsection{Stateful Entity Pool}
+\begin{glyphDescription}
+\glyphSboTerm SBO:0000405 ! perturbing agent
+\glyphAux A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).
+\glyphRules%
+\begin{inparaenum}
+\item A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).  A controlled vocaulary is available to describing the physical characteristic of the perturbing agent (see \sect{physical-characteristics-cv}).  
+\end{inparaenum}
+\glyphCloning Yes
+\end{glyphDescription}
 
-Stateful entity pools can undergo physical changes, for example chemical
-modifcation or conformational change, which we wish to record in a \PD
-diagram. They can be assigned one or more state-variables.
+\paragraph{Container}
 
-\paragraph{Macromolecule}
+A \glyph{perturbing agent} is represented by a modified hexagon
+having two opposite concave faces, as illustrated in \fig{perturbing agent}.
+
+\paragraph{Label}
+
+A \glyph{perturbing agent} is identified by a label placed in an
+unbordered box containing a string of characters.  The characters can be
+distributed on several lines to improve readability, although this is not
+mandatory.  The label box must be attached to the center of the
+\glyph{perturbing agent} container.  The label may spill outside of the container.
+
+\subsection{Stateful Entity Pool}
+
+Stateful entity pools can undergo physical changes, for example
+chemical modifcation or conformational change, which we wish to record
+in a \PDm. This information is captured via the
+\sbgnclass{StateVariable}, as can be seen in figure
+\ref{fig:statefulepnuml}). Replicated \sbgnclass{StatefulEPS}s are
+indicated by the \glyph{Labelled Clone Marker} decoration. Note that
+not all glyphs that are descendants of \sbgnclass{StatefulEPN} can be
+cloned at all.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/statefulepnuml}
+\caption{UML definition of the stateful entity pool node and its
+  descendant glyphs and its association with state variables.}
+  \label{fig:statefulepnuml}
+\end{figure}
+
+\subsubsection{StatefulEPN}
+
+\begin{glyphDescription}
+\glyphSboTerm Not defined
+\begin{glyphIdentity}
+  \attitem{states}{\sbgnclass{StateVariable}} The state variables
+  associated with this EPN.
+\end{glyphIdentity}
+\glyphAux It can contain one or more \glyph{StateVariable} glyphs
+associated with it.
+\glyphRules%
+\begin{inparaenum}
+\item Two or more state variables with the same name are
+  permitted.
+\item State variables with no name set are permitted.
+\item A \sbgnclass{LabelledCloneMaker} must be used to indicate
+  cloning.
+\item \sbgnclass{StatefulEPN}s that are identical and so decorated
+  with a \sbgnclass{LabelledCloneMarker} must use the same 
+  label to indicate that they are part of the same `clone'.
+\end{inparaenum}
+\glyphCloning
+\end{glyphDescription}
+
+\subsection{Macromolecule}
 \label{sec:macromolecule}
 
-Many biological processes involve \emph{macromolecules}: biochemical substances that are built up from the covalent linking of pseudo-identical units.  Examples of macromolecules include proteins, nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose, starch, etc.).  Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone defines only one glyph for all macromolecules.  The same glyph is to be used for a protein, a nucleic acid, a complex sugar, and so on.  The exact nature of a particular macromolecule in a map is then clarified using its label and decorations, as will become clear below.  (Future levels of SBGN may subclass the \glyph{macromolecule} and introduce different glyphs to differentiate between types of macromolecules.)
+Many biological processes involve \emph{macromolecules}: biochemical
+substances that are built up from the covalent linking of
+pseudo-identical units.  Examples of macromolecules include proteins,
+nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose,
+starch, etc.).  Attempting to define a separate glyph for all of these
+different molecules would lead to an explosion of symbols in SBGN, so
+instead, \SBGNPDLone defines only one glyph for all macromolecules.
+The same glyph is to be used for a protein, a nucleic acid, a complex
+sugar, and so on.  The exact nature of a particular macromolecule in a
+map is then clarified using its label and decorations, as will become
+clear below.  (Future levels of SBGN may subclass the
+\glyph{macromolecule} and introduce different glyphs to differentiate
+between types of macromolecules). This has two associated glyphs. One
+where 
 
-\begin{glyphDescription}
- \begin{glyphIdentity}
-  \item owning compartment
-  \item name
-  \item cardinality
-  \item The set of state values associated with this EPN.
-  \end{glyphIdentity}
-  \glyphRules The mutimer glyph
-  must be used if cardinality is greater than 1.
-\end{glyphDescription}
-
-\subparagraph{Glyph: \glyph{Macromolecule monomer}}
-
-This glyph represents a monomeric macromolecule.
-
-\begin{glyphDescription}
-
-\glyphSboTerm SBO:0000245 ! macromolecule 
-
-\glyphContainer A macromolecule is represented by a rectangular container with rounded corners, as illustrated in \fig{macromolecule}.
-
-\glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
-
-\glyphAux A \glyph{macromolecule} can carry state variables that can add information about its state (\sect{stateVariable}).  The state of a macromolecule is therefore defined as the set of all its state variables. 
-
-A \glyph{macromolecule} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  The units of information can characterize a domain, such as a binding site.  Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a macromolecule.  
-
-\glyphCloning Labeled Clone Marker.
-
-\end{glyphDescription}
+\subsubsection{Glyph: \glyph{Macromolecule monomer}}
 
 \begin{figure}[H]
   \centering
@@ -428,23 +582,26 @@ A \glyph{macromolecule} can also carry one or several \glyph{units of informatio
 \end{figure}
 
 
-\subparagraph{Glyph: \glyph{Macromolecule multimer}}
-
-This glyph represents a multimeric macromolecule.
-
-\begin{glyphDescription}
-
-\glyphSboTerm SBO:0000420 ! multimer of macromolecules
-
-A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{macromolMultimer} illustrates the glyph.
-
-\glyphLabel As monomer
-
-\glyphAux As monomer.
-
-\glyphCloning Labeled Clone Marker.
-
+ \begin{glyphDescription}
+\glyphSboTerm SBO:0000245 ! macromolecule 
+\glyphAux 
+\glyphRules%
+\begin{inparaenum}
+\item \attrib{cardinality} must equal 1.
+\end{inparaenum}
+\glyphCloning Yes.
 \end{glyphDescription}
+
+\paragraph{Container}
+
+A macromolecule is represented by a rectangular container with rounded
+corners, as illustrated in \fig{macromolecule}.
+
+\paragraph{Label}
+
+A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+\subsubsection{Glyph: \glyph{Macromolecule multimer}}
 
 \begin{figure}[H]
   \centering
@@ -455,23 +612,34 @@ A \glyph{multimer} is represented by two identical containers shifted horizontal
   \label{fig:macromolMultimer}
 \end{figure}
 
-
-\paragraph{Nucleic acid feature}
-\label{sec:genetic}
-
-The \emph{Nucleic acid feature} construct in SBGN is meant to represent a fragment of a macromolecule carrying genetic information.  A common use for this construct is to represent a gene or transcript.  The label of this EPN and its \emph{units of information} are often important for making the purpose clear to the reader of a map.
-
 \begin{glyphDescription}
- \begin{glyphIdentity}
-  \item owning compartment
-  \item name
-  \item cardinality
-  \item The set of state values associated with this EPN.
-  \end{glyphIdentity}
-  \glyphRules None
+\glyphSboTerm SBO:0000420 ! multimer of macromolecules
+\glyphAux 
+\glyphRules%
+\begin{inparaenum}
+\item \attrib{cardinality} must be greater than 1.
+\end{inparaenum}
+\glyphCloning Yes.
 \end{glyphDescription}
 
-\subparagraph{Glyph: \glyph{Nucleic acid feature monomer}}
+\paragraph{Container}
+
+A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{macromolMultimer} illustrates the glyph.
+
+\paragraph{Label}
+
+As monomer
+
+\subsection{Nucleic acid feature}
+\label{sec:genetic}
+
+The \emph{Nucleic acid feature} construct in SBGN is meant to
+represent a fragment of a macromolecule carrying genetic information.
+A common use for this construct is to represent a gene or transcript.
+The label of this EPN and its \attrib{nature} are often
+important for making the purpose clear to the reader of a map.
+
+\subsubsection{Glyph: \glyph{Nucleic acid feature monomer}}
 
 This glyphs represents a monomeric macromolecule.
 
@@ -501,7 +669,7 @@ A \glyph{nucleic acid feature} can also carry one or several \glyph{units of inf
   \label{fig:genetic}
 \end{figure}
 
-\subparagraph{Glyph: \glyph{Nucleic acid feature multimer}}
+\subsubsection{Glyph: \glyph{Nucleic acid feature multimer}}
 
 This glyphs represents a multimeric macromolecule.
 
@@ -536,52 +704,51 @@ A \glyph{nucleic acid feature} may also carry a \glyph{clone marker}
 %%%%                   Complex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Complex}\label{sec:complex}
+\subsection{Complex}\label{sec:complex}
 
-A complex glyph represents a biochemical entity composed of other
-biochemical entities, whether macromolecules, simple chemicals,
-multimers, or other complexes. The composition of a complex can also
-be shown using subunits decorators (see below), but these are optional
-and it is also correct to show a complex without any subunits. The
-complex can be represented by a monomeric glyph (\glyph{Complex monomer}) and a multimeric glyph (\glyph{Complex multimer}).
+A \sbgnclass{Complex} represents a biochemical entity composed of
+other biochemical entities, whether macromolecules, simple chemicals,
+multimers, or other complexes (figure
+\ref{fig:complexsubunituml}). The \sbgnclass{Complex} can described
+its composition by the set of \sbgnclass{Subunit}s it contains (see
+figure \ref{sec:subunits}). This description is entirely optional and
+is their to assist the user with a visual shorthand about the
+composition of the complex.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width = 0.65\textwidth]{images/complexsubunituml}
+  \caption{The UML definition of the \sbgnclass{Complex} and its
+    associated \sbgnclass{subunit}s. In particular this describes organisation
+   of the state variables that belong to both the subunit, but also
+   the complex.}
+  \label{fig:complexsubunituml}
+\end{figure}
+
+subsubsection{Definition}
 
 \begin{glyphDescription}
+\glyphName \sbgnclass{Complex}
+\glyphSboTerm Not defined
 \begin{glyphIdentity}
-  \item owning compartment
-  \item name \textbf{or} names of the subunits 
-  \item cardinality
-  \item The set of state values associated with the subunit decorators
-    and the set of state values associated with the Complex.
-  \end{glyphIdentity}
+  \attitem{subunits}{'sbgnclass{subunit}} The subunits that describe
+  the composition of this complex.
+ \end{glyphIdentity}
 \glyphRules
 \begin{itemize}
-  \item The mutimer glyph must be used if cardinality is greater than
-    1.
-  \item If no subunits are defined then the complex must have a name.
-  \item The subunits of a complex are not EPNs. The complex itself
-    represents the pool of entities.
+  \item Once a set of subunits are defined then they are always
+    defined.
 \end{itemize}
 \end{glyphDescription}
 
+subsubsection{Visual Appearance}
 
-\subparagraph{\glyph{Complex Monomer}}
+The Complex is represented by two glyphs, the \glyph{Complex Monomer}
+which represents a \sbgnclass{Complex} where the \attrib{cardinality}
+is one and the \glyph{Complex Multimer} where the cardinality is
+greater than that.
 
-This glyph represents a monomeric complex EPN.
-
-\begin{glyphDescription}
-
-\glyphSboTerm SBO:0000253 ! non-covalent complex
-
-\glyphContainer A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
-
-\glyphLabel The identification of a \glyph{named complex} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the midway between the border of the complex's container box and the border of the components' container boxes.
-
-\glyphAux A \glyph{complex} can carry state variables (see \sect{stateVariable}).  The state of a complex is defined by the set of the all its state variable and all the state variables of all its components.  A \glyph{complex} can also carry one or several \glyph{units of information} (see \sect{unitInfo}). A \glyph{complex} may carry a \glyph{clone marker} (see \sect{cloneMarker}).
-
-\glyphCloning Labeled Clone Marker
-
-\end{glyphDescription}
-
+\subsubsection{\glyph{Complex Monomer}}
 
 \begin{figure}[H]
   \centering
@@ -590,26 +757,22 @@ This glyph represents a monomeric complex EPN.
   \label{fig:complex}
 \end{figure}
 
-\subparagraph{\glyph{Complex Multimer}}
-
-This glyph represents a multimeric complex EPN.
-
 \begin{glyphDescription}
-
-\glyphSboTerm SBO:0000418 ! multimer of complexes
-
-\glyphContainer A \glyph{Complex Multimer} is represented by two
-identical \glyph{Complex} containers shifted horizontally and
-vertically and stacked one on top of the other.  \fig{complexMultimer}
-illustrates the glyph.
-
-\glyphLabel As monomer.
-
-\glyphAux As monomer.
-
+\glyphSboTerm SBO:0000253 ! non-covalent complex
+\glyphAux A \glyph{complex} can carry state variables (see \sect{stateVariable}).  The state of a complex is defined by the set of the all its state variable and all the state variables of all its components.  A \glyph{complex} can also carry one or several \glyph{units of information} (see \sect{unitInfo}). A \glyph{complex} may carry a \glyph{clone marker} (see \sect{cloneMarker}).
 \glyphCloning Labeled Clone Marker
-
 \end{glyphDescription}
+
+\paragraph{Container}
+
+A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
+
+\paragraph{Label}
+
+The identification of a \glyph{named complex} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the midway between the border of the complex's container box and the border of the components' container boxes.
+
+\subsubsection{\glyph{Complex Multimer}}
+
 
 
 \begin{figure}[H]
@@ -619,31 +782,64 @@ illustrates the glyph.
   \label{fig:complexMultimer}
 \end{figure}
 
-\subparagraph{Subunits}
+ \begin{glyphDescription}
+\glyphSboTerm SBO:0000418 ! multimer of complexes
+\glyphAux As monomer.
+\glyphCloning Labeled Clone Marker
+\end{glyphDescription}
 
-A complex can optionally be decorated with subunit symbols to describe
-the composition of the complex. The symbols available are equivalent
-to those used by the EPN glyphs including the
+\paragraph{Container}
+
+A \glyph{Complex Multimer} is represented by two
+identical \glyph{Complex} containers shifted horizontally and
+vertically and stacked one on top of the other.  \fig{complexMultimer}
+illustrates the glyph.
+
+\paragraph{Label}
+
+As monomer.
+
+
+\subsection{Subunits}
+
+A complex can optionally be decorated with subunit symbols
+(\sbgnclass{Subunit} see figure \ref{fig:complexsubunituml}) to
+describe the composition of the complex. The symbols available are
+equivalent to those used by the EPN glyphs including the
 \glyph{complex}. Therefore it is possible to describe complexes within
-complexes. Subunits may contain labels. The following rules apply to
-the use of subunits in a complex:
+complexes. Subunits may contain labels. 
 
-\begin{itemize}
-\item The subunit can contain any symbol used by an EPN glyph.
-\item Subunits that use the \glyph{Complex} glyph can also contain
-  subunits. There is no limit on such nesting. The namespace rules
+\subsubsection{\sbgnclass{Subunit}}
+
+\begin{glyphDescription}
+\glyphSboTerm Not defined
+\begin{glyphIdentity}
+  \attitem{owning\_complex}{Complex} The complex that owns the subunit.
+  \attitem{cardinality}{int} The number of copies of the subunit.
+  \attitem{name}{string} The name of the subunit.
+  \attitem{subunit\_type}{enum} The type of the subunit, for example
+  macromolecule, simple chemical etc. One type must be chosen from an
+  enumerated set of types (see section \ref{sec:subtypesenum}).
+  \attitem{states}{SubunitStateVariable} The state variables assigned
+  to this subunit.
+\end{glyphIdentity}
+\glyphAux It can contain zero, one or more \glyph{SubunitStateVariable}s.
+\glyphRules%
+\begin{inparaenum}
+\item Two or more state variables with the same name are
+  permitted.
+\item State variables with no name set are permitted.
+\item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
   below apply.
-\item Mutimeric glyphs can also be used a subunits. They should
-  include the cardinality of the mutimer in the manner spercified for
-  the equivalent EPN.
-\item Subunits with the same name can be repeated one or more times.
-\item Subunits may be assigned one or more state variables. Each state
-  variable actually belongs to the Complex.
+\item Each state variable actually belongs to the Complex.
 \item The subunit defines a namespace for its state variables, e.g.\,
   subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
   ``B'' assigned the same state variable can be distinguised as
   A:P@Ser202 and B:P@Ser202.
-\end{itemize}
+\end{inparaenum}
+\glyphCloning No
+\end{glyphDescription}
+
 
 The example in figure \fig{complexSubunits} illustrates the use of
 subunits in a complex shows an equivalent compex without
@@ -660,7 +856,7 @@ version that does not use contains subunits.
   \label{fig:complexSubunits}
 \end{figure}
 
-\subparagraph{Examples of complex EPNs}
+\subsubsection{Examples of complex EPNs}
 \label{sec:CplxEPNs}
 
 In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
@@ -1136,10 +1332,6 @@ The example in \fig{dissoc-ribo} illustrates the dissociation of the small and l
 
 \subsubsection{Canvas}
 
-An \PD diagram has a canvas upon which an SBGN diagram is drawn. It is
-not a glyph in the sense that there is no shape drawn to represent it,
-but \SBGNPDLone has rules about what can be drawn directly on the canvas so
-it is useful to describe it here.
 
 \begin{glyphDescription}
 \item[Identifying Attributes:]\mbox{}

@@ -74,3 +74,68 @@ The essence of the \PDs is \emph{change}: it shows how different entities in the
 % An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
 
 % The \PD contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN.)  In addition to the material entities, \PD represents three conceptual entities: \glyph{source}, \glyph{sink} (\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing agent}).  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
+
+
+\section{Definitions and Nomenclature}
+
+\subsection{Language versus notation}
+
+SBGN specifications propose symbols, ways to organise them, but also semantic rules to analyse the resulting representations. SBGN "drawings" can be translated into English, but also into computer readable formats. Those specifications really propose true languages. SBGN is therefore made up of three languages.
+
+\subsection{What are the languages?}
+
+\textbf{PD} is a language that permits the description of all the processes taking place in a biological system. The ensemble of all these processes constitute a Description. \textbf{ER} is a language that permits the description of all the relations involving the entities of a biological system. The ensemble of all these relations constitute a Relationship.\textbf{ AF} is a language that permits the description of the flow of activity in a biological system.
+
+\subsection{Nomenclature}
+
+The three languages of SBGN should be referred to as:
+
+\begin{compactitem}
+\item the Process Description language.
+\item the Entity Relationship language.
+\item the Activity Flow language.
+\end{compactitem}
+
+\mbox{}\\
+Abbreviated as:
+
+\begin{compactitem}
+\item the PD language.
+\item the ER language.
+\item the AF language.
+\end{compactitem}
+
+\mbox{}\\
+A specific representation of a biological system in one of the SBGN languages should be referred to as:
+
+\begin{compactitem}
+\item a Process Description map.
+\item an Entity Relationship map.
+\item an Activity Flow map.
+\end{compactitem}
+
+\mbox{}\\
+Abbreviated as:
+
+\begin{compactitem}
+\item a PD map.
+\item an ER map.
+\item an AF map.
+\end{compactitem}
+
+\mbox{}\\
+The corpus of all SBGN representations should be referred to as:
+
+\begin{compactitem}
+\item Process Descriptions.
+\item Entity Relationships.
+\item Activity Flows.
+\end{compactitem}
+
+\mbox{}\\
+ The capitalization is important. PD, ER and AF are names of languages. As such they must be capitalized in English. This is not the case of the accompanying noun (language or map).
+
+\subsection{Graph, diagram or map?}
+
+A graph is a very technical term that belongs to mathematics and is uncommon in biology. Diagram is a concept that encompasses more than just graph. Examples are Venn diagrams for instance. Therefore, we recommend using the term map for SBGN representations. Those representations effectively permit users to travel and orient themselves in a biological system. Map is also the term most frequently used by the different communities, whether in metabolism, signaling or genomics.
+
