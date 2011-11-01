@@ -1,11 +1,11 @@
 window_sizes 2002 1093 337 1659 898 136
 diagrams
   classdiagram_ref 134701 // MapView
-    1327 718 100 18 0 0
+    1327 718 100 18 12 0
   classdiagram_ref 134829 // GlyphAuxView
     1327 718 100 18 0 0
-  classdiagram_ref 128173 // MainView
-    1327 718 100 14 0 0
+  active  classdiagram_ref 128173 // MainView
+    1327 718 100 14 240 909
   classdiagram_ref 135085 // StatelessEPNView
     1655 878 100 18 0 0
   classdiagram_ref 141613 // StatefulEPNView
@@ -14,19 +14,22 @@ diagrams
     1327 718 100 14 0 0
   classdiagram_ref 141741 // EmptySetView
     1327 718 100 18 0 0
-  active  classdiagram_ref 141869 // ComplexView
+  classdiagram_ref 141869 // ComplexView
     1655 878 100 18 0 0
 end
 show_stereotypes
-selected classdiagram_ref 141869 // ComplexView
+selected classdiagram_ref 128173 // MainView
 open
   class_ref 128173 // SBGNGlyph
   class_ref 128301 // SBGNNode
   class_ref 128429 // SBGNArc
   class_ref 128685 // EntityPoolNode
+  class_ref 129325 // Map
   class_ref 129453 // Compartment
+  class_ref 135981 // SBGNElement
   class_ref 136109 // StatefulEPN
   class_ref 136237 // StateVariable
+  class_ref 136365 // SBGNAuxiliaryUnit
   class_ref 138413 // LabelledCloneMarker
   class_ref 144941 // AttributeValue
   attribute_ref 142509 // name

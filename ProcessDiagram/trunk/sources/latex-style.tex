@@ -338,17 +338,18 @@
   {\end{compactdesc}}%\end{framed}}
 
 \newenvironment{glyphIdentity}{%
-\item[Identifying Attributes:]\mbox{}
+\item[Attributes:]\mbox{}
  \begin{compactitem}}%
   {\end{compactitem}}
 
 \newcommand{\attitem}[2]{\item[\attrib{#1}:\sbgnclass{#2}]}
+\newcommand{\associtem}[3]{\item[\attrib{#1}:\sbgnclass{#2} (#3)]}
 
 \newcommand{\glyphSboTerm}{\item[SBO Term:]}
 \newcommand{\glyphContainer}{\item[Container:]}
 \newcommand{\glyphName}{\item[Name:]}
 \newcommand{\glyphLabel}{\item[Label:]}
-\newcommand{\glyphAux}{\item[Permitted Child Glyphs:]}
+\newcommand{\glyphAux}{\item[Auxiliary Items:]}
 \newcommand{\glyphOrigin}{\item[Origin:]}
 \newcommand{\glyphTarget}{\item[Target:]}
 \newcommand{\glyphNode}{\item[Node:]}

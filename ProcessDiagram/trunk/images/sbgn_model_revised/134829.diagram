@@ -59,13 +59,13 @@ end
 relationcanvas 129453 relation_ref 136749 // <composition>
   from ref 129325 z 3006 to ref 128045
   role_a_pos 745 305 3000 role_b_pos 887 305 3000
-  multiplicity_a_pos 745 334 3000 multiplicity_b_pos 968 334 3000
+  multiplicity_a_pos 745 334 3000 multiplicity_b_pos 966 334 3000
 end
-relationcanvas 129581 relation_ref 136877 // <generalisation>
+relationcanvas 131373 relation_ref 156077 // <generalisation>
   geometry VHV
-  from ref 128813 z 3006 to point 508 220
-  line 130989 z 3006 to point 1005 220
-  line 131117 z 3006 to ref 129325
+  from ref 129325 z 3006 to point 1005 220
+  line 131501 z 3006 to point 508 220
+  line 131629 z 3006 to ref 128813
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

@@ -121,35 +121,23 @@ drawn on a map is distinct from another glyph drawn on the map. The
 \attrib{id} attribute reflects this and is not shown explicitly in a
 \PDm.
 
-\begin{glyphDescription}
-\glyphName SBGN Element
-\glyphSboTerm Not defined
-\begin{glyphIdentity}
-  \attitem{id}{identity} the implicit identity of an SBGN element ensuring
-    all instances are unique.
-\end{glyphIdentity}
-\glyphAux N/A
-\glyphRules N/A
-\glyphCloning N/A
-\end{glyphDescription}
+
+\subsubsection{Generalisation}
+
+None
+
+\subsubsection{Attributes}
+
+\begin{attributes}
+  \attitem{id}{identifier} uniquely identified all SBGN elements in
+  the same namespace.
+\end{attributes}
+
+\subsubsection{Changes from Previous Version}
+
+Not defined in the previous version.
 
 \subsection{Map}
-
-The \sbgnclass{Map} (figure \ref{fig:mapuml}) is a concrete class the extends the
-\sbgnclass{SBGNElement}. It describes the visible container upon which
-all glyphs are drawn. The map can take any pattern or colour, but as
-SBGN is `colour blind' this does not convey any meaning in itself.
-
-\begin{glyphDescription}
-\glyphName Map
-\glyphSboTerm Not defined
-\begin{glyphIdentity}
-  \attitem{glyphs}{SBGNGlyph} The collection of glyphs held by the map. 
-\end{glyphIdentity}
-\glyphAux All SBGN glyphs that extend \sbgnclass{SBGNGlyph}
-\glyphRules A map is valid if it is empty (although not very useful)
-\glyphCloning N/A
-\end{glyphDescription}
 
 \begin{figure}[h!]
   \centering
@@ -157,6 +145,139 @@ SBGN is `colour blind' this does not convey any meaning in itself.
   \caption{UML definition of Map and \sbgnclass{SBGNElement}.}
   \label{fig:mapuml}
 \end{figure}
+
+ The \sbgnclass{Map} (figure \ref{fig:mapuml}) is a concrete class the extends the
+\sbgnclass{SBGNElement}. It describes the visible container upon which
+all glyphs are drawn.
+
+
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{SBGNElement}
+\end{itemize}
+
+\subsubsection{Attributes}
+
+No additional attributes
+
+\subsubsection{Associations}
+
+\begin{attributes}
+\associtem{elements}{SBGNGlyph}{*} The collection of glyphs held by the map. 
+\end{attributes}
+
+\subsubsection{Rules and Constraints}
+
+\begin{itemize}
+\item A map is valid if it is empty (although not very useful).
+\end{itemize}
+
+\subsubsection{Notation}
+
+The map is the canvas upon which the \PDl is drawn. It's only visible
+feature is its colour. It can take any pattern or colour (or be
+transparent for that matter), but as SBGN is `colour blind' this does
+not convey any meaning in itself.
+
+\subsubsection{Changes from Previous Version}
+
+Not defined explicitly in previous versions.
+
+\subsection{SBGNGlyph}
+
+Glyphs are the fundamental building blocks of the \PDl and are the
+only elements that can be drawn directly on a map (\sbgnclass{Map}).
+
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{SBGNElement}
+\end{itemize}
+
+\subsubsection{Attributes}
+
+No additional attributes.
+
+\subsubsection{Associations}
+
+\begin{attributes}
+\associtem{owning\_map}{Map}{1} The map that contains this class.
+\end{attributes}
+
+\subsubsection{Rules and Constraints}
+
+No additional rules and constraints.
+
+\subsubsection{Changes from Previous Version}
+
+Not defined in  previous version.
+
+
+\subsection{AuxiliaryUnit}
+
+The \sbgnclass{AuxiliaryUnit} represents symbols that may be used to
+adorn glyphs. In doing so they change the meaning of the glyph and/or provide
+additional information about it.
+
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{SBGNElement}
+\end{itemize}
+
+\subsubsection{Attributes}
+
+No additional attributes.
+
+\subsubsection{Associations}
+
+No additional associations.
+
+\subsubsection{Rules and Constraints}
+
+No additional rules and constraints.
+
+\subsubsection{Changes from Previous Version}
+
+Not defined in previous version.
+
+
+\subsection{SBGNNode}
+
+The \sbgnclass{SBGNNode} represents the nodes in the graph structure
+that is the core representation within \PDl. The nodes are connected
+to glyphs descended from \sbgnclass{SBGNArc} for form a direct graph.
+
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{SBGNGlyph}
+\end{itemize}
+
+\subsubsection{Attributes}
+
+No additional attributes.
+
+\subsubsection{Associations}
+
+No additional associations.
+
+\subsubsection{Rules and Constraints}
+
+No additional rules and constraints.
+
+\subsubsection{Changes from Previous Version}
+
+Not defined in previous version.
+
+\subsection{SBGNArc}
+
+The \sbgnclass{SBGNArc} represents the arcs (also know as edges) in
+the graph structure that is the core representation within \PDl. The
+arc is connected to two nodes descended from \sbgnclass{SBGNNode}, one
+at each end.
+
 
 \subsection{Glyphs, Auxiliary Units, Nodes and Arcs}
 
@@ -704,6 +825,11 @@ A \glyph{nucleic acid feature} may also carry a \glyph{clone marker}
 %%%%                   Complex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\classref}[1]{\sbgnclass{#1} (see section \ref{defn:#1})}
+\newenvironment{attributes}{%
+\begin{compactitem}}%
+  {\end{compactitem}}
+
 \subsection{Complex}\label{sec:complex}
 
 A \sbgnclass{Complex} represents a biochemical entity composed of
@@ -725,30 +851,55 @@ composition of the complex.
   \label{fig:complexsubunituml}
 \end{figure}
 
-subsubsection{Definition}
+\subsubsection{Generalisations}
 
-\begin{glyphDescription}
-\glyphName \sbgnclass{Complex}
-\glyphSboTerm Not defined
-\begin{glyphIdentity}
-  \attitem{subunits}{'sbgnclass{subunit}} The subunits that describe
-  the composition of this complex.
- \end{glyphIdentity}
-\glyphRules
 \begin{itemize}
-  \item Once a set of subunits are defined then they are always
-    defined.
+\item \classref{EntityPoolNode} 
 \end{itemize}
-\end{glyphDescription}
 
-subsubsection{Visual Appearance}
+\subsubsection{Attributes}
+
+No additional attributes 
+
+\subsubsection{Associations}
+
+\begin{attributes}
+  \associtem{subunits}{\sbgnclass{Subunit}}{*} The subunits that describe
+  the composition of this complex.
+ \end{attributes}
+
+
+\subsubsection{Special Rules and Constraints}
+
+\begin{itemize}
+\item Once a set of subunits are defined then they are always defined.
+\item The set of subunits in the Complex does not identify it. One or
+  more Complexes that contain the same set of subunits, but have
+  different labels are \textbf{not} identical.
+\end{itemize}
+
+% \begin{glyphDescription}
+% \glyphName \sbgnclass{Complex}
+% \glyphSboTerm Not defined
+% \begin{glyphIdentity}
+%   \attitem{subunits}{\sbgnclass{Subunit}} The subunits that describe
+%   the composition of this complex.
+%  \end{glyphIdentity}
+% \glyphRules
+% \begin{itemize}
+%   \item Once a set of subunits are defined then they are always
+%     defined.
+% \end{itemize}
+% \end{glyphDescription}
+
+\subsubsection{Notation}
 
 The Complex is represented by two glyphs, the \glyph{Complex Monomer}
 which represents a \sbgnclass{Complex} where the \attrib{cardinality}
 is one and the \glyph{Complex Multimer} where the cardinality is
 greater than that.
 
-\subsubsection{\glyph{Complex Monomer}}
+\paragraph{\glyph{Complex Monomer}}
 
 \begin{figure}[H]
   \centering
@@ -761,19 +912,19 @@ greater than that.
 \glyphSboTerm SBO:0000253 ! non-covalent complex
 \glyphAux A \glyph{complex} can carry state variables (see \sect{stateVariable}).  The state of a complex is defined by the set of the all its state variable and all the state variables of all its components.  A \glyph{complex} can also carry one or several \glyph{units of information} (see \sect{unitInfo}). A \glyph{complex} may carry a \glyph{clone marker} (see \sect{cloneMarker}).
 \glyphCloning Labeled Clone Marker
+\glyphContainer A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
+\glyphLabel The identification of a \glyph{named complex} is carried
+by an unbordered box containing a string of characters.  The
+characters may be distributed on several lines to improve readability,
+although this is not mandatory.  Ideally the label box should be
+attached to the midway between the border of the complex's container
+box and the border of the components' container boxes. However, if the
+Complex contains Subunit glyphs then the label may be positions to
+optimise the clarity and avoid overlapping.
 \end{glyphDescription}
 
-\paragraph{Container}
 
-A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
-
-\paragraph{Label}
-
-The identification of a \glyph{named complex} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the midway between the border of the complex's container box and the border of the components' container boxes.
-
-\subsubsection{\glyph{Complex Multimer}}
-
-
+\paragraph{\glyph{Complex Multimer}}
 
 \begin{figure}[H]
   \centering
@@ -786,77 +937,14 @@ The identification of a \glyph{named complex} is carried by an unbordered box co
 \glyphSboTerm SBO:0000418 ! multimer of complexes
 \glyphAux As monomer.
 \glyphCloning Labeled Clone Marker
-\end{glyphDescription}
-
-\paragraph{Container}
-
-A \glyph{Complex Multimer} is represented by two
+\glyphContainer A \glyph{Complex Multimer} is represented by two
 identical \glyph{Complex} containers shifted horizontally and
 vertically and stacked one on top of the other.  \fig{complexMultimer}
 illustrates the glyph.
-
-\paragraph{Label}
-
-As monomer.
-
-
-\subsection{Subunits}
-
-A complex can optionally be decorated with subunit symbols
-(\sbgnclass{Subunit} see figure \ref{fig:complexsubunituml}) to
-describe the composition of the complex. The symbols available are
-equivalent to those used by the EPN glyphs including the
-\glyph{complex}. Therefore it is possible to describe complexes within
-complexes. Subunits may contain labels. 
-
-\subsubsection{\sbgnclass{Subunit}}
-
-\begin{glyphDescription}
-\glyphSboTerm Not defined
-\begin{glyphIdentity}
-  \attitem{owning\_complex}{Complex} The complex that owns the subunit.
-  \attitem{cardinality}{int} The number of copies of the subunit.
-  \attitem{name}{string} The name of the subunit.
-  \attitem{subunit\_type}{enum} The type of the subunit, for example
-  macromolecule, simple chemical etc. One type must be chosen from an
-  enumerated set of types (see section \ref{sec:subtypesenum}).
-  \attitem{states}{SubunitStateVariable} The state variables assigned
-  to this subunit.
-\end{glyphIdentity}
-\glyphAux It can contain zero, one or more \glyph{SubunitStateVariable}s.
-\glyphRules%
-\begin{inparaenum}
-\item Two or more state variables with the same name are
-  permitted.
-\item State variables with no name set are permitted.
-\item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
-  below apply.
-\item Each state variable actually belongs to the Complex.
-\item The subunit defines a namespace for its state variables, e.g.\,
-  subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
-  ``B'' assigned the same state variable can be distinguised as
-  A:P@Ser202 and B:P@Ser202.
-\end{inparaenum}
-\glyphCloning No
+\glyphLabel As monomer
 \end{glyphDescription}
 
-
-The example in figure \fig{complexSubunits} illustrates the use of
-subunits in a complex shows an equivalent compex without
-subunits. This is an import point. For every \glyph{Complex} drawn
-with subunits it will always be possible to drawn an equivalent
-version that does not use contains subunits.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 3.0in]{images/complex}
-  \caption{Both these complex glyphs are equivalent. The one on the
-    left is described using subunit decorators, the one on the right
-    describes the same thing without them.}
-  \label{fig:complexSubunits}
-\end{figure}
-
-\subsubsection{Examples of complex EPNs}
+\paragraph{Examples of complex EPNs}
 \label{sec:CplxEPNs}
 
 In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
@@ -878,6 +966,122 @@ In this section, we provide examples of Entity Pool Node representations drawn u
   \caption{An example of a glutamate receptor in the open state.}
   \label{fig:example-glur}
 \end{figure}
+
+
+\subsubsection{Layout Rules and Guidelines}
+
+\begin{itemize}
+\item The subunits inside the complex must not overlap.
+\item The subunits should sit above the clone marker so that they are
+  not obscured by it.
+\item The label should not be obscured by subunits or obscure them.
+\end{itemize}
+
+
+\subsubsection{Changes from Previous Version}
+
+\begin{itemize}
+\item Clarified that complex must have a label and the label
+  identifies the complex irrespective of its subunit composition.
+\item The label positioning does not need to be at the centre of the
+  Complex glyph.
+\end{itemize}
+
+\subsection{Subunits}
+
+A complex can optionally be decorated with subunit symbols
+(\sbgnclass{Subunit} see figure \ref{fig:complexsubunituml}) to
+describe the composition of the complex. The symbols available are
+equivalent to those used by the EPN glyphs including the
+\glyph{complex}. Therefore it is possible to describe complexes within
+complexes. Subunits may contain labels. 
+
+\begin{center}
+\tablecaption{Mapping between the subunit types and the glyphs used to
+  represent it. These are essentially the EPN glyphs describe in this document.}
+\label{tab:subunit types}
+\begin{footnotesize}
+\tablefirsthead{\hline
+  Subunit type & Monomer Glyph & Multimer Glyph\\\hline}
+\tablehead{\hline
+\multicolumn{3}{|l|}{\small\sl continued from previous page}\\
+\hline\hline
+  Subunit type & Monomer Glyph & Multimer Glyph\\\hline\hline}
+\tabletail{\hline
+\multicolumn{3}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+\begin{supertabular}{|l|l|l|}\hline
+SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
+  Chemical Multimer}\\\hline
+UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\\hline
+PerturbingAgent & \glyph{Perturbing Agent} & None\\\hline
+Macromolecule & \glyph{Macromolecule Monomer} &
+\glyph{Macromolecule Multimer}\\\hline
+Nucleic\-Acid\-Feature & \glyph{Nucleic Acid Feature Monomer} & \glyph{Nucleic Acid Feature Multimer}\\\hline
+Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\\hline
+\end{supertabular}
+\end{footnotesize}
+\end{center}
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{EntityPoolNode} 
+\end{itemize}
+
+\subsubsection{Attributes}
+
+\begin{attributes}
+  \attitem{cardinality}{int} The number of copies of the subunit.
+  \attitem{name}{string} The name of the subunit.
+  \attitem{subunit\_type}{enum} The type of the subunit. It can have
+  one of the following values that correspond to the equivalent EPN
+  class: \sbgnclass{SimpleChemical}, \sbgnclass{UnspecifiedEntity},
+  \sbgnclass{PerturbingAgent}, \sbgnclass{Macromolecule},
+  \sbgnclass{NucleicAcidFeature}, \sbgnclass{Complex}.
+\end{attributes}
+
+\subsubsection{Associations}
+
+\begin{attributes}
+  \associtem{owning\_complex}{Complex}{1} The complex that owns the subunit.
+  \associtem{states}{SubunitStateVariable}{*} The state variables assigned
+  to this subunit.
+\end{attributes}
+
+\subsubsection{Rules and Constraints}
+
+\begin{itemize}
+\item Two or more state variables with the same name are
+  permitted.
+\item State variables with no name set are permitted.
+\item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
+  below apply.
+\item Each state variable actually belongs to the Complex.
+\item The subunit defines a namespace for its state variables, e.g.\,
+  subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
+  ``B'' assigned the same state variable can be distinguised as
+  A:P@Ser202 and B:P@Ser202.
+\end{itemize}
+
+\subsubsection{Notation}
+
+The example in figure \fig{complexSubunits} illustrates the use of
+subunits in a complex shows an equivalent compex without
+subunits. This is an import point. For every \glyph{Complex} drawn
+with subunits it will always be possible to drawn an equivalent
+version that does not use contains subunits.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3.0in]{images/complex}
+  \caption{Both these complex glyphs are equivalent. The one on the
+    left is described using subunit decorators, the one on the right
+    describes the same thing without them.}
+  \label{fig:complexSubunits}
+\end{figure}
+
+\subsubsection{Changes from Previous Version}
 
 %%%%%%%%%%%%
 % Put the following in the semantics section
