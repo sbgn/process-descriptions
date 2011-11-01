@@ -1,6 +1,6 @@
 format 75
 "sbgn_model_revised"
-  revision 1
+  revision 2
   modified_by 45 "smoodie"
 
 
@@ -38,5 +38,7 @@ format 75
 
   mark_for_import
   
+  ncouples 1
+  key "html dir" value "/Users/smoodie/Documents/testdoc/"
   package_ref 128173 // org.sbgn.level1
 end

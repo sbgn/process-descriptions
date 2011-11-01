@@ -56,7 +56,7 @@ end
 relationcanvas 129325 relation_ref 136749 // <composition>
   from ref 128685 z 2013 to ref 129197
   role_a_pos 631 49 3000 role_b_pos 726 49 3000
-  multiplicity_a_pos 631 78 3000 multiplicity_b_pos 807 78 3000
+  multiplicity_a_pos 631 78 3000 multiplicity_b_pos 805 78 3000
 end
 relationcanvas 129453 relation_ref 128173 // <generalisation>
   from ref 128301 z 2013 to ref 129197

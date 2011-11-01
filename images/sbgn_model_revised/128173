@@ -1,6 +1,6 @@
 format 75
 "org.sbgn.level1" // org.sbgn.level1
-  revision 3
+  revision 4
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -26,6 +26,7 @@ format 75
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
+  class_color white 
   classview 128173 "Class View"
     //class diagram settings
     draw_all_relations yes hide_attributes no hide_operations default hide_getset_operations default show_members_full_definition yes show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers yes member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language uml show_context_mode default auto_label_position yes show_relation_modifiers yes show_relation_visibility default show_infonote default shadow yes show_stereotype_properties default
@@ -58,7 +59,7 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 137517 // <composition>
+      classrelation 137517 // owning_map (<composition>)
 	relation_ref 136749 // <composition>
       end
 
@@ -264,14 +265,22 @@ ${members}}
       
       classrelation 137389 // elements (<composition>)
 	relation 136749 *---
-	  a role_name "elements" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 137389 // elements (<composition>)
-	  b role_name "owning_map" multiplicity "*" private
+	  a role_name "elements" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 137517 // <composition>
+	    classrelation_ref 137389 // elements (<composition>)
+	  b role_name "owning_map" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137517 // owning_map (<composition>)
+      end
+
+      classrelation 159021 // <generalisation>
+	relation 156077 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 159021 // <generalisation>
+	  b parent class_ref 135981 // SBGNElement
       end
     end
 
@@ -318,14 +327,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 137645 // <generalisation>
-	relation 136877 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 137645 // <generalisation>
-	  b parent class_ref 129325 // Map
-      end
-
       attribute 134701 "id"
 	private explicit_type "identifier"
 	cpp_decl ""
@@ -335,6 +336,7 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
+
     end
 
     class 136109 "StatefulEPN"
@@ -420,7 +422,6 @@ ${members}}
 	    classrelation_ref 138797 // <generalisation>
 	  b parent class_ref 136365 // SBGNAuxiliaryUnit
       end
-
     end
 
     class 136365 "SBGNAuxiliaryUnit"
@@ -697,12 +698,12 @@ ${members}}
     end
 
     classdiagram 134701 "MapView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4-Landscape
     end
 
     classdiagram 134829 "GlyphAuxView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4-Landscape
     end
 
