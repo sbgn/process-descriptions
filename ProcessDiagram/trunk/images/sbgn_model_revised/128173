@@ -1,6 +1,6 @@
 format 75
 "org.sbgn.level1" // org.sbgn.level1
-  revision 4
+  revision 12
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -48,6 +48,150 @@ format 75
       size A0-Landscape
     end
 
+    classdiagram 175021 "StoichiometricProcess"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 168109 "AuxiliaryUnitView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 174893 "LogicalOperatorView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 168365 "SubmapNodeView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 134701 "MapView"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 134829 "GlyphAuxView"
+      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 134957 "EntityPoolNodeView"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A0-Landscape
+    end
+
+    classdiagram 135085 "StatelessEPNView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 141613 "StatefulEPNView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 141741 "EmptySetView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 141869 "ComplexView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 148397 "ProcessView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 154925 "NonStoichiometricProcessView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 161453 "SBGNArcsView"
+      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 168237 "CrossreferenceView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 175149 "CompartmentView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 181677 "AttributeValueView"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    classdiagram 188205 "StateVariableView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    class 135981 "SBGNElement"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 134701 "id"
+	private explicit_type "identifier"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 129325 "Map"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 137389 // elements (<composition>)
+	relation 136749 *---
+	  a role_name "elements" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 137389 // elements (<composition>)
+	  b role_name "owning_map" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137517 // owning_map (<composition>)
+      end
+
+      classrelation 159021 // <generalisation>
+	relation 156077 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 159021 // <generalisation>
+	  b parent class_ref 135981 // SBGNElement
+      end
+    end
+
     class 128173 "SBGNGlyph"
       abstract visibility package 
       cpp_decl ""
@@ -90,6 +234,14 @@ ${members}}
 	    classrelation_ref 128173 // <generalisation>
 	  b parent class_ref 128173 // SBGNGlyph
       end
+
+      classrelation 165805 // <association>
+	relation_ref 162733 // <association>
+      end
+
+      classrelation 166061 // <association>
+	relation_ref 162861 // <association>
+      end
     end
 
     class 128429 "SBGNArc"
@@ -109,6 +261,30 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 128301 // <generalisation>
 	  b parent class_ref 128173 // SBGNGlyph
+      end
+
+      classrelation 165677 // out_node (<association>)
+	relation 162733 ----
+	  a role_name "out_node" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 165677 // out_node (<association>)
+	  b role_name "out_arcs" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 165805 // <association>
+      end
+
+      classrelation 165933 // in_node (<association>)
+	relation 162861 ----
+	  a role_name "in_node" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 165933 // in_node (<association>)
+	  b role_name "in_arcs" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 166061 // <association>
       end
     end
 
@@ -131,7 +307,7 @@ ${members}}
 	  b parent class_ref 128301 // SBGNNode
       end
 
-      attribute 128173 "label"
+      attribute 128173 "name"
 	private explicit_type "string"
 	multiplicity "1"
 	cpp_decl ""
@@ -153,14 +329,6 @@ ${members}}
 	idl_decl ""
       end
 
-      classrelation 140461 // <generalisation>
-	relation 139181 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 140461 // <generalisation>
-	  b parent class_ref 137133 // Quantity
-      end
-
       classrelation 142765 // <composition>
 	relation_ref 140589 // <composition>
       end
@@ -177,26 +345,24 @@ ${members}}
 	    classrelation_ref 143533 // owning_epn (<composition>)
       end
 
-      attribute 141741 "nature"
+      attribute 141741 "natures"
 	private explicit_type "cv"
+	multiplicity "*"
 	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
 	php_decl ""
 	python_decl ""
 	idl_decl ""
       end
 
-      classrelation 150573 // displayed_attributes (<composition>)
-	relation 148269 *---
+      classrelation 150573 // displayed_attributes (<directional composition>)
+	relation 148269 *-->
 	  a role_name "displayed_attributes" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 150573 // displayed_attributes (<composition>)
-	  b role_name "owning_epn" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 150701 // owning_epn (<composition>)
+	    classrelation_ref 150573 // displayed_attributes (<directional composition>)
+	  b multiplicity "1" parent class_ref 144941 // AttributeValue
       end
     end
 
@@ -252,38 +418,6 @@ ${members}}
       end
     end
 
-    class 129325 "Map"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 137389 // elements (<composition>)
-	relation 136749 *---
-	  a role_name "elements" multiplicity "*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 137389 // elements (<composition>)
-	  b role_name "owning_map" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 137517 // owning_map (<composition>)
-      end
-
-      classrelation 159021 // <generalisation>
-	relation 156077 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 159021 // <generalisation>
-	  b parent class_ref 135981 // SBGNElement
-      end
-    end
-
     class 129453 "Compartment"
       visibility package 
       cpp_decl ""
@@ -297,38 +431,27 @@ ${members}}
       
       classrelation 142637 // epns (<composition>)
 	relation 140589 *---
-	  a role_name "epns" multiplicity "0..1" private
+	  a role_name "epns" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
 	    classrelation_ref 142637 // epns (<composition>)
-	  b role_name "owning_compartment" multiplicity "*" private
+	  b role_name "owning_compartment" multiplicity "0..1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
 	    classrelation_ref 142765 // <composition>
       end
 
-      classrelation 142893 // <generalisation>
-	relation 140717 ---|>
+      classrelation 195885 // <generalisation>
+	relation 192045 ---|>
 	  a public
 	    java "${type}"
-	    classrelation_ref 142893 // <generalisation>
-	  b parent class_ref 128301 // SBGNNode
+	    classrelation_ref 195885 // <generalisation>
+	  b parent class_ref 128173 // SBGNGlyph
       end
-    end
 
-    class 135981 "SBGNElement"
-      abstract visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      attribute 134701 "id"
-	private explicit_type "identifier"
+      attribute 155949 "name"
+	private explicit_type "string"
+	multiplicity "1"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -337,6 +460,25 @@ ${members}}
 	idl_decl ""
       end
 
+      attribute 156077 "natures"
+	private explicit_type "cv"
+	multiplicity "*"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 209069 // displayed_attributes (<directional composition>)
+	relation 205229 *-->
+	  a role_name "displayed_attributes" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 209069 // displayed_attributes (<directional composition>)
+	  b parent class_ref 144941 // AttributeValue
+      end
     end
 
     class 136109 "StatefulEPN"
@@ -465,7 +607,7 @@ ${members}}
 
       classrelation 144045 // <dependency>
 	relation 141741 -_->
-	  a default
+	  a package
 	    classrelation_ref 144045 // <dependency>
 	  b parent class_ref 138285 // SimpleCloneMarker
       end
@@ -510,40 +652,29 @@ ${members}}
 	  b parent class_ref 136621 // ProcessNode
       end
 
-      classrelation 139437 // lhsides (<association>)
-	relation 138541 ----
-	  a role_name "lhsides" multiplicity "1..*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+      attribute 155821 "process_type"
+	private explicit_type "enum"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 139437 // lhsides (<association>)
-	  b role_name "lhs" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 139565 // lhs (<association>)
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
 
-      classrelation 139693 // rhsides (<association>)
-	relation 138669 ----
-	  a role_name "rhsides" multiplicity "1..*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 139693 // rhsides (<association>)
-	  b role_name "rhs" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 139821 // rhs (<association>)
+      classrelation 195629 // <dependency>
+	relation 191789 -_->
+	  a default
+	    classrelation_ref 195629 // <dependency>
+	  b parent class_ref 137005 // ModulationArc
       end
 
-      classrelation 140717 // modulator (<association>)
-	relation 139437 ----
-	  a role_name "modulator" multiplicity "*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 140717 // modulator (<association>)
-	  b role_name "modulated_process" multiplicity "0..1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 140845 // modulated_process (<association>)
+      classrelation 195757 // <dependency>
+	relation 191917 -_->
+	  a default
+	    classrelation_ref 195757 // <dependency>
+	  b parent class_ref 136877 // FluxArc
       end
     end
 
@@ -565,14 +696,6 @@ ${members}}
 	    classrelation_ref 139309 // <generalisation>
 	  b parent class_ref 128429 // SBGNArc
       end
-
-      classrelation 139565 // lhs (<association>)
-	relation_ref 138541 // <association>
-      end
-
-      classrelation 139821 // rhs (<association>)
-	relation_ref 138669 // <association>
-      end
     end
 
     class 137005 "ModulationArc"
@@ -593,51 +716,9 @@ ${members}}
 	    classrelation_ref 140077 // <generalisation>
 	  b parent class_ref 128429 // SBGNArc
       end
-
-      classrelation 140845 // modulated_process (<association>)
-	relation_ref 139437 // <association>
-      end
-
-      classrelation 141357 // input_quantity (<association>)
-	relation 139693 ----
-	  a role_name "input_quantity" multiplicity "*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 141357 // input_quantity (<association>)
-	  b role_name "modulation" multiplicity "1" private
-	    classrelation_ref 141485 // modulation (<association>)
-      end
     end
 
-    class 137133 "Quantity"
-      abstract visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 141485 // modulation (<association>)
-	relation_ref 139693 // <association>
-      end
-
-      classrelation 141869 // logic_arcs (<association>)
-	relation 139949 ----
-	  a role_name "logic_arcs" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 141869 // logic_arcs (<association>)
-	  b role_name "input_quantity" multiplicity "*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 141997 // input_quantity (<association>)
-      end
-    end
-
-    class 137261 "LogicGate"
+    class 137261 "LogicalOperator"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -648,24 +729,37 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 140589 // <generalisation>
-	relation 139309 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 140589 // <generalisation>
-	  b parent class_ref 137133 // Quantity
+      attribute 155693 "operator_type"
+	private explicit_type "enum"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
 
-      classrelation 140973 // inputs (<association>)
-	relation 139565 ----
-	  a role_name "inputs" multiplicity "1..*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 140973 // inputs (<association>)
-	  b role_name "boolean_value" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 141613 // boolean_value (<association>)
+      classrelation 194989 // <generalisation>
+	relation 191149 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 194989 // <generalisation>
+	  b parent class_ref 151981 // NonStoichiometricProcess
+      end
+
+      classrelation 195117 // <dependency>
+	relation 191277 -_->
+	  a default
+	    classrelation_ref 195117 // <dependency>
+	  b parent class_ref 137389 // LogicArc
+      end
+
+      classrelation 195245 // <dependency>
+	relation 191405 -_->
+	  a default
+	    classrelation_ref 195245 // <dependency>
+	  b parent class_ref 137005 // ModulationArc
       end
     end
 
@@ -680,10 +774,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 141613 // boolean_value (<association>)
-	relation_ref 139565 // <association>
-      end
-
       classrelation 141741 // <generalisation>
 	relation 139821 ---|>
 	  a public
@@ -691,25 +781,6 @@ ${members}}
 	    classrelation_ref 141741 // <generalisation>
 	  b parent class_ref 128429 // SBGNArc
       end
-
-      classrelation 141997 // input_quantity (<association>)
-	relation_ref 139949 // <association>
-      end
-    end
-
-    classdiagram 134701 "MapView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
-    end
-
-    classdiagram 134829 "GlyphAuxView"
-      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
-    end
-
-    classdiagram 134957 "EntityPoolNodeView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A0-Landscape
     end
 
     class 137517 "EmptySet"
@@ -729,14 +800,6 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 142125 // <generalisation>
 	  b parent class_ref 128301 // SBGNNode
-      end
-
-      classrelation 150829 // <generalisation>
-	relation 148397 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 150829 // <generalisation>
-	  b parent class_ref 137133 // Quantity
       end
     end
 
@@ -835,12 +898,12 @@ ${members}}
 	relation_ref 141229 // <composition>
       end
 
-      classrelation 143917 // <generalisation>
-	relation 141613 ---|>
+      classrelation 188461 // <generalisation>
+	relation 184621 ---|>
 	  a public
 	    java "${type}"
-	    classrelation_ref 143917 // <generalisation>
-	  b parent class_ref 135981 // SBGNElement
+	    classrelation_ref 188461 // <generalisation>
+	  b parent class_ref 136365 // SBGNAuxiliaryUnit
       end
     end
 
@@ -895,16 +958,6 @@ ${members}}
       end
     end
 
-    classdiagram 135085 "StatelessEPNView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
-    end
-
-    classdiagram 141613 "StatefulEPNView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
-    end
-
     class 144941 "AttributeValue"
       visibility package 
       cpp_decl ""
@@ -916,10 +969,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 150701 // owning_epn (<composition>)
-	relation_ref 148269 // <composition>
-      end
-
       attribute 141869 "code"
 	private explicit_type "string"
 	multiplicity "1"
@@ -941,16 +990,15 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
-    end
 
-    classdiagram 141741 "EmptySetView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
-    end
+      classrelation 188333 // <generalisation>
+	relation 184493 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 188333 // <generalisation>
+	  b parent class_ref 136365 // SBGNAuxiliaryUnit
+      end
 
-    classdiagram 141869 "ComplexView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4-Landscape
     end
 
     class 145069 "Subunit"
@@ -983,10 +1031,11 @@ ${members}}
 	idl_decl ""
       end
 
-      attribute 142509 "name"
-	private explicit_type "string"
+      attribute 142509 "natures"
+	private explicit_type "cv"
+	multiplicity "*"
 	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
 	php_decl ""
 	python_decl ""
@@ -1019,40 +1068,23 @@ ${members}}
 	relation_ref 149165 // <composition>
       end
 
-      classrelation 152365 // children (<unidirectional association>)
-	relation 149421 --->
+      classrelation 152365 // children (<directional composition>)
+	relation 149421 *-->
 	  a role_name "children" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 152365 // children (<unidirectional association>)
+	    classrelation_ref 152365 // children (<directional composition>)
 	  b multiplicity "1" parent class_ref 145069 // Subunit
       end
-    end
 
-    class 145197 "StatefulSubunit"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
+      classrelation 208941 // displayed_attributes (<directional composition>)
+	relation 205101 *-->
+	  a role_name "displayed_attributes" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-    end
-
-    class 145325 "StatelessSubunit"
-      visibility package 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
+	    classrelation_ref 208941 // displayed_attributes (<directional composition>)
+	  b parent class_ref 144941 // AttributeValue
+      end
     end
 
     class 145453 "SubunitStateVariable"
@@ -1076,6 +1108,273 @@ ${members}}
 
       classrelation 151725 // owning_subunit (<aggregation>)
 	relation_ref 149037 // <aggregation>
+      end
+    end
+
+    class 151981 "NonStoichiometricProcess"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 166189 // <generalisation>
+	relation 162989 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 166189 // <generalisation>
+	  b parent class_ref 136621 // ProcessNode
+      end
+    end
+
+    class 158509 "SubmapNode"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 172717 // <generalisation>
+	relation 169517 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 172717 // <generalisation>
+	  b parent class_ref 151981 // NonStoichiometricProcess
+      end
+
+      classrelation 179757 // submap (<unidirectional association>)
+	relation 176557 --->
+	  a role_name "submap" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 179757 // submap (<unidirectional association>)
+	  b parent class_ref 129325 // Map
+      end
+
+      classrelation 180013 // terminals (<composition>)
+	relation 176685 *---
+	  a role_name "terminals" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 180013 // terminals (<composition>)
+	  b role_name "owning_submap_node" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 180141 // owning_submap_node (<composition>)
+      end
+
+      attribute 155565 "name"
+	private explicit_type "string"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 158637 "Phenotype"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 172845 // <generalisation>
+	relation 169645 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 172845 // <generalisation>
+	  b parent class_ref 151981 // NonStoichiometricProcess
+      end
+
+      classrelation 179629 // <dependency>
+	relation 176429 -_->
+	  a default
+	    classrelation_ref 179629 // <dependency>
+	  b parent class_ref 137005 // ModulationArc
+      end
+    end
+
+    class 165165 "ProductionArc"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 179501 // <generalisation>
+	relation 176301 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 179501 // <generalisation>
+	  b parent class_ref 136877 // FluxArc
+      end
+    end
+
+    class 165293 "ConsumptionArc"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 179373 // <generalisation>
+	relation 176173 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 179373 // <generalisation>
+	  b parent class_ref 136877 // FluxArc
+      end
+    end
+
+    class 165421 "SubmapTerminal"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 180141 // owning_submap_node (<composition>)
+	relation_ref 176685 // <composition>
+      end
+
+      classrelation 181293 // <generalisation>
+	relation 177581 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 181293 // <generalisation>
+	  b parent class_ref 136365 // SBGNAuxiliaryUnit
+      end
+
+      classrelation 181421 // <generalisation>
+	relation 177709 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 181421 // <generalisation>
+	  b parent class_ref 165805 // CrossReference
+      end
+    end
+
+    class 165549 "EquivalenceArc"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 180653 // <generalisation>
+	relation 177069 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 180653 // <generalisation>
+	  b parent class_ref 128173 // SBGNGlyph
+      end
+
+      classrelation 180781 // ref_epn (<unidirectional association>)
+	relation 177197 --->
+	  a role_name "ref_epn" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 180781 // ref_epn (<unidirectional association>)
+	  b multiplicity "*" parent class_ref 128685 // EntityPoolNode
+      end
+
+      classrelation 181805 // <association>
+	relation_ref 177965 // <association>
+      end
+    end
+
+    class 165677 "Tag"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 181037 // <generalisation>
+	relation 177325 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 181037 // <generalisation>
+	  b parent class_ref 128173 // SBGNGlyph
+      end
+
+      classrelation 181549 // <generalisation>
+	relation 177837 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 181549 // <generalisation>
+	  b parent class_ref 165805 // CrossReference
+      end
+    end
+
+    class 165805 "CrossReference"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 149037 "reference_id"
+	private explicit_type "string"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 181677 // equivalence (<association>)
+	relation 177965 ----
+	  a role_name "equivalence" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 181677 // equivalence (<association>)
+	  b role_name "crossref" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 181805 // <association>
       end
     end
   end

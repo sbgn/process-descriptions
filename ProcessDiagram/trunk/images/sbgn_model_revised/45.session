@@ -1,37 +1,45 @@
-window_sizes 2002 1093 337 1659 898 136
+window_sizes 1401 908 262 1133 849 0
 diagrams
   classdiagram_ref 134701 // MapView
-    1327 718 100 18 12 0
-  classdiagram_ref 134829 // GlyphAuxView
     1327 718 100 18 0 0
-  active  classdiagram_ref 128173 // MainView
-    1327 718 100 14 240 909
-  classdiagram_ref 135085 // StatelessEPNView
-    1655 878 100 18 0 0
+  classdiagram_ref 128173 // MainView
+    1169 982 100 14 0 0
+  classdiagram_ref 168365 // SubmapNodeView
+    938 801 100 18 0 0
+  classdiagram_ref 174893 // LogicalOperatorView
+    938 801 100 18 0 0
+  classdiagram_ref 154925 // NonStoichiometricProcessView
+    938 801 100 18 0 0
+  classdiagram_ref 148397 // ProcessView
+    938 801 100 18 0 0
+  classdiagram_ref 175021 // StoichiometricProcess
+    938 801 100 18 0 0
   classdiagram_ref 141613 // StatefulEPNView
-    1327 718 100 18 0 0
-  classdiagram_ref 134957 // EntityPoolNodeView
-    1327 718 100 14 0 0
-  classdiagram_ref 141741 // EmptySetView
-    1327 718 100 18 0 0
+    938 801 100 18 0 0
+  classdiagram_ref 175149 // CompartmentView
+    938 801 100 18 0 0
+  classdiagram_ref 134829 // GlyphAuxView
+    938 801 100 18 0 0
+  classdiagram_ref 168109 // AuxiliaryUnitView
+    1332 836 100 18 0 0
+  active  classdiagram_ref 181677 // AttributeValueView
+    1129 829 90 18 0 0
   classdiagram_ref 141869 // ComplexView
-    1655 878 100 18 0 0
+    1332 836 100 18 0 0
+  classdiagram_ref 188205 // StateVariableView
+    1332 836 100 18 0 0
 end
 show_stereotypes
-selected classdiagram_ref 128173 // MainView
+selected classdiagram_ref 181677 // AttributeValueView
 open
-  class_ref 128173 // SBGNGlyph
-  class_ref 128301 // SBGNNode
-  class_ref 128429 // SBGNArc
-  class_ref 128685 // EntityPoolNode
-  class_ref 129325 // Map
-  class_ref 129453 // Compartment
-  class_ref 135981 // SBGNElement
-  class_ref 136109 // StatefulEPN
-  class_ref 136237 // StateVariable
-  class_ref 136365 // SBGNAuxiliaryUnit
-  class_ref 138413 // LabelledCloneMarker
-  class_ref 144941 // AttributeValue
-  attribute_ref 142509 // name
+  classdiagram_ref 175021 // StoichiometricProcess
+  classdiagram_ref 174893 // LogicalOperatorView
+  classdiagram_ref 134701 // MapView
+  classdiagram_ref 134957 // EntityPoolNodeView
+  classdiagram_ref 141613 // StatefulEPNView
+  classdiagram_ref 148397 // ProcessView
+  classdiagram_ref 154925 // NonStoichiometricProcessView
+  classdiagram_ref 161453 // SBGNArcsView
+  classdiagram_ref 168237 // CrossreferenceView
 end
 end

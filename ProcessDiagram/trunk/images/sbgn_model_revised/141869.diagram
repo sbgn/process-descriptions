@@ -73,7 +73,7 @@ relationcanvas 131117 relation_ref 149165 // <composition>
   role_a_pos 277 436 3000 role_b_pos 614 436 3000
   multiplicity_a_pos 277 465 3000 multiplicity_b_pos 721 465 3000
 end
-relationcanvas 132013 relation_ref 149421 // <unidirectional association>
+relationcanvas 132013 relation_ref 149421 // <directional composition>
   from ref 129197 z 2001 to point 188 518
   line 132141 z 2001 to point 32 518
   line 132397 z 2001 to point 32 432

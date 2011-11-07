@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="895.75616"
+   height="332.92151"
    id="svg18713"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="compartment_overlapping.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples/compartment_overlapping.png"
    inkscape:export-xdpi="150"
-   inkscape:export-ydpi="150">
+   inkscape:export-ydpi="150"
+   version="1.1">
   <defs
      id="defs18715" />
   <sodipodi:namedview
@@ -31,15 +32,21 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6474528"
-     inkscape:cx="729.93541"
-     inkscape:cy="743.71473"
+     inkscape:zoom="0.79650668"
+     inkscape:cx="720.93526"
+     inkscape:cy="148.71953"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1360"
      inkscape:window-height="1020"
-     inkscape:window-x="32"
-     inkscape:window-y="0" />
+     inkscape:window-x="1812"
+     inkscape:window-y="58"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata18718">
     <rdf:RDF>
@@ -54,9 +61,10 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-9.000149,-124.44548)">
     <rect
-       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect18724"
        width="311.13718"
        height="234.84435"
@@ -68,7 +76,7 @@
        id="text18726"
        y="368.62329"
        x="532.95361"
-       style="font-size:29.1721611px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:29.1721611px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"
        sodipodi:linespacing="125%"
        transform="scale(1.0237215,0.9768282)"><tspan
@@ -77,7 +85,7 @@
          x="532.95361"
          y="368.62329">cyto</tspan></text>
     <rect
-       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect18736"
        width="206.27425"
        height="158.6447"
@@ -89,7 +97,7 @@
        id="text18738"
        y="349.1756"
        x="391.08167"
-       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"><tspan
          id="tspan18740"
          style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
@@ -97,7 +105,7 @@
          x="391.08167"
          sodipodi:role="line">mito</tspan></text>
     <rect
-       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3520"
        width="206.27425"
        height="158.6447"
@@ -109,7 +117,7 @@
        id="text18749"
        y="435.7197"
        x="46.268887"
-       style="font-size:29.1721611px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:29.1721611px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"
        sodipodi:linespacing="125%"
        transform="scale(1.0237215,0.9768282)"><tspan
@@ -118,15 +126,16 @@
          x="46.268887"
          y="435.7197">cyto</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 13.933279,422.42827 C 13.714839,448.25895 31.659919,454.3296 56.782879,452.59149 L 262.53663,452.30607 C 278.30228,452.34407 294.81258,454.17555 298.77322,425.78122 L 299.41842,378.38392 C 299.41842,378.38392 195.79218,380.22435 195.0986,365.63759 C 193.69165,336.04791 193.77283,231.95108 196.07382,202.99328 C 196.75712,194.39405 298.56118,194.95863 298.56118,194.95863 L 298.98526,156.44359 C 299.74731,137.9691 285.17536,127.95813 250.53752,129.02249 L 64.234969,129.02249 C 28.378779,128.09409 16.306309,144.66882 13.500149,168.06289 L 13.933279,422.42827 z "
+       style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 13.933279,422.42827 c -0.21844,25.83068 17.72664,31.90133 42.8496,30.16322 l 205.753751,-0.28542 c 15.76565,0.038 32.27595,1.86948 36.23659,-26.52485 l 0.6452,-47.3973 c 0,0 -103.62624,1.84043 -104.31982,-12.74633 -1.40695,-29.58968 -1.32577,-133.68651 0.97522,-162.64431 0.6833,-8.59923 102.48736,-8.03465 102.48736,-8.03465 l 0.42408,-38.51504 c 0.76205,-18.47449 -13.8099,-28.48546 -48.44774,-27.4211 l -186.302551,0 c -35.85619,-0.9284 -47.92866,15.64633 -50.73482,39.0404 l 0.43313,254.36538 z"
        id="path18753"
-       sodipodi:nodetypes="cccccsscccccc" />
+       sodipodi:nodetypes="cccccsscccccc"
+       inkscape:connector-curvature="0" />
     <text
        id="text22634"
        y="429.54825"
        x="853.74799"
-       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"><tspan
          id="tspan22636"
          style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
@@ -134,7 +143,7 @@
          x="853.74799"
          sodipodi:role="line">mito</tspan></text>
     <rect
-       style="opacity:0.98800001;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3262"
        width="82.832512"
        height="24.243662"
@@ -143,7 +152,7 @@
        transform="matrix(0,-1,1,0,0,0)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="-326.03162"
        y="235.65161"
        id="text3264"
@@ -154,12 +163,13 @@
          y="235.65161"
          style="font-size:16px">info mito</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#7d7d7d;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 838.5649,287.96094 L 838.35958,368.58465 C 837.05949,378.53484 823.94214,386.79314 784.21987,391.25432 L 693.5141,391.68098"
+       style="fill:none;stroke:#7d7d7d;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 838.5649,287.96094 -0.20532,80.62371 c -1.30009,9.95019 -14.41744,18.20849 -54.13971,22.66967 l -90.70577,0.42666"
        id="path32920"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0" />
     <rect
-       style="opacity:0.98800001;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.98800001;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect31945"
        width="82.832512"
        height="24.243662"
@@ -168,7 +178,7 @@
        transform="matrix(0,-1,1,0,0,0)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="-403.25009"
        y="700.64618"
        id="text31947"
@@ -179,7 +189,7 @@
          y="700.64618"
          style="font-size:16px">info mito</tspan></text>
     <rect
-       style="opacity:0.98800001;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect33892"
        width="82.832512"
        height="24.243662"
@@ -188,7 +198,7 @@
        transform="matrix(0,1,-1,0,0,0)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="260.36392"
        y="-192.1138"
        id="text33894"
@@ -199,7 +209,7 @@
          y="-192.1138"
          style="font-size:16px">info cyto</tspan></text>
     <rect
-       style="opacity:0.98800001;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect33907"
        width="82.832512"
        height="24.243662"
@@ -208,7 +218,7 @@
        transform="matrix(0,1,-1,0,0,0)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="203.21693"
        y="-837.00647"
        id="text33909"

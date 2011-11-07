@@ -43,7 +43,7 @@ end
 relationcanvas 128941 relation_ref 140589 // <composition>
   from ref 128813 z 3006 to ref 128173
   role_a_pos 465 274 3000 role_b_pos 253 274 3000
-  multiplicity_a_pos 475 303 3000 multiplicity_b_pos 253 303 3000
+  multiplicity_a_pos 493 303 3000 multiplicity_b_pos 253 303 3000
 end
 relationcanvas 129069 relation_ref 140717 // <generalisation>
   geometry VHV unfixed

@@ -327,7 +327,7 @@
 %   \begin{description}}%
 %   {\end{description}}
 
-\newcommand{\sbgnclass}[1]{\texttt{#1}}
+\newcommand{\sbgnclass}[1]{\textsf{#1}}
 \newcommand{\attrib}[1]{\textsf{#1}}
 
 \newenvironment{glyphDescription}{%
@@ -340,6 +340,11 @@
 \newenvironment{glyphIdentity}{%
 \item[Attributes:]\mbox{}
  \begin{compactitem}}%
+  {\end{compactitem}}
+
+\newcommand{\classref}[1]{\sbgnclass{#1} (see section \ref{defn:#1})}
+\newenvironment{attributes}{%
+\begin{compactitem}}%
   {\end{compactitem}}
 
 \newcommand{\attitem}[2]{\item[\attrib{#1}:\sbgnclass{#2}]}

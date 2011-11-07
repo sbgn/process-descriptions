@@ -5,7 +5,7 @@
 # $HeadURL$
 # =============================================================================
 
-.PHONY: clean, dist_clean, images, examples
+.PHONY: clean, dist_clean
 
 MAIN   = sbgn_PD-level1
 
@@ -13,20 +13,16 @@ LATEX  = pdflatex
 BIBTEX = bibtex
 
 all default: images examples
+	$(MAKE) -C examples
+	$(MAKE) -C images
 	$(LATEX) $(MAIN).tex
 	$(LATEX) $(MAIN).tex
 	$(BIBTEX) $(MAIN)
 	$(LATEX) $(MAIN).tex
 
-images:
-	$(MAKE) -C images
-
-examples:
-	$(MAKE) -C images
-
-
 clean:
 	$(MAKE) -C images clean
+	$(MAKE) -C examples clean
 	-rm -f *.bbl
 	-rm -f *.blg
 	-rm -f *.out
