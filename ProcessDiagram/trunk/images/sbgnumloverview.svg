@@ -1,727 +1,698 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Bouml (http://bouml.free.fr/) -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="2252" height="909" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1069" y="219" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="979" y="251" width="93" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="975" y="215" width="94" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1022" y="232">SBGNGlyph</text>
-	<line stroke="black" stroke-opacity="1" x1="975" y1="235" x2="1069" y2="235" />
-	<line stroke="black" stroke-opacity="1" x1="975" y1="243" x2="1069" y2="243" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="674" y="273" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="590" y="305" width="87" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="586" y="269" width="88" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="630" y="286">SBGNNode</text>
-	<line stroke="black" stroke-opacity="1" x1="586" y1="289" x2="674" y2="289" />
-	<line stroke="black" stroke-opacity="1" x1="586" y1="297" x2="674" y2="297" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1574" y="377" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1502" y="409" width="75" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1498" y="373" width="76" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1536" y="390">SBGNArc</text>
-	<line stroke="black" stroke-opacity="1" x1="1498" y1="393" x2="1574" y2="393" />
-	<line stroke="black" stroke-opacity="1" x1="1498" y1="401" x2="1574" y2="401" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="795" y="420" width="3" height="83" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="681" y="500" width="117" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="677" y="416" width="118" height="84" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="736" y="433">EntityPoolNode</text>
-	<line stroke="black" stroke-opacity="1" x1="677" y1="436" x2="795" y2="436" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="681" y="453">name : string</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="681" y="471">cardinality : int</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="681" y="489">natures : cv</text>
-	<line stroke="black" stroke-opacity="1" x1="677" y1="492" x2="795" y2="492" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="597" y="771" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="527" y="803" width="73" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="523" y="767" width="74" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="560" y="784">Complex</text>
-	<line stroke="black" stroke-opacity="1" x1="523" y1="787" x2="597" y2="787" />
-	<line stroke="black" stroke-opacity="1" x1="523" y1="795" x2="597" y2="795" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="456" y="772" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="340" y="804" width="119" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="336" y="768" width="120" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="396" y="785">Macromolecule</text>
-	<line stroke="black" stroke-opacity="1" x1="336" y1="788" x2="456" y2="788" />
-	<line stroke="black" stroke-opacity="1" x1="336" y1="796" x2="456" y2="796" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1604" y="225" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1568" y="257" width="39" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1564" y="221" width="40" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1584" y="238">Map</text>
-	<line stroke="black" stroke-opacity="1" x1="1564" y1="241" x2="1604" y2="241" />
-	<line stroke="black" stroke-opacity="1" x1="1564" y1="249" x2="1604" y2="249" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1076" y="21" width="3" height="47" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="972" y="65" width="107" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="968" y="17" width="108" height="48" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1022" y="34">SBGNElement</text>
-	<line stroke="black" stroke-opacity="1" x1="968" y1="37" x2="1076" y2="37" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="972" y="54">id : identifier</text>
-	<line stroke="black" stroke-opacity="1" x1="968" y1="57" x2="1076" y2="57" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="765" y="627" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="677" y="659" width="91" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="673" y="623" width="92" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="719" y="640">StatefulEPN</text>
-	<line stroke="black" stroke-opacity="1" x1="673" y1="643" x2="765" y2="643" />
-	<line stroke="black" stroke-opacity="1" x1="673" y1="651" x2="765" y2="651" />
-</g>
-<g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="450" y="608" width="3" height="65" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="348" y="670" width="105" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="344" y="604" width="106" height="66" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="397" y="621">StateVariable</text>
-	<line stroke="black" stroke-opacity="1" x1="344" y1="624" x2="450" y2="624" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="348" y="641">name : string</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="348" y="659">value : string</text>
-	<line stroke="black" stroke-opacity="1" x1="344" y1="662" x2="450" y2="662" />
+<svg width="2090" height="831" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1442" y="132" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1358" y="160" width="86" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1355" y="129" width="87" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1399" y="144">SBGNGlyph</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1408" y="254" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1328" y="282" width="82" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1325" y="251" width="83" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1367" y="266">SBGNNode</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1981" y="254" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1915" y="282" width="68" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1912" y="251" width="69" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1947" y="266">SBGNArc</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1016" y="372" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="906" y="400" width="112" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="903" y="369" width="113" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="960" y="384">EntityPoolNode</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="662" y="578" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="596" y="606" width="68" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="593" y="575" width="69" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="628" y="590">Complex</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="831" y="580" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="717" y="608" width="116" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="714" y="577" width="117" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="773" y="592">Macromolecule</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="713" y="129" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="575" y="161" width="141" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="571" y="125" width="142" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="642" y="142">SBGNAuxiliaryUnit</text>
-	<line stroke="black" stroke-opacity="1" x1="571" y1="145" x2="713" y2="145" />
-	<line stroke="black" stroke-opacity="1" x1="571" y1="153" x2="713" y2="153" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1039" y="128" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1005" y="156" width="36" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1002" y="125" width="37" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1021" y="140">Map</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1012" y="541" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="914" y="573" width="101" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="910" y="537" width="102" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="961" y="554">StatelessEPN</text>
-	<line stroke="black" stroke-opacity="1" x1="910" y1="557" x2="1012" y2="557" />
-	<line stroke="black" stroke-opacity="1" x1="910" y1="565" x2="1012" y2="565" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1070" y="31" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="972" y="59" width="100" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="969" y="28" width="101" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1020" y="43">SBGNElement</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1445" y="792" width="3" height="76" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1273" y="865" width="175" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1269" y="788" width="176" height="77" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1357" y="805">StoichiometricProcess</text>
-	<line stroke="black" stroke-opacity="1" x1="1269" y1="808" x2="1445" y2="808" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1273" y="825">process_type : enum</text>
-	<line stroke="black" stroke-opacity="1" x1="1269" y1="828" x2="1445" y2="828" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="816" y="448" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="732" y="476" width="86" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="729" y="445" width="87" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="773" y="460">StatefulEPN</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1460" y="555" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1402" y="587" width="61" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1398" y="551" width="62" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1429" y="568">FluxArc</text>
-	<line stroke="black" stroke-opacity="1" x1="1398" y1="571" x2="1460" y2="571" />
-	<line stroke="black" stroke-opacity="1" x1="1398" y1="579" x2="1460" y2="579" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="164" y="256" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="64" y="284" width="102" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="61" y="253" width="103" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="113" y="268">StateVariable</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1760" y="681" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1648" y="713" width="115" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1644" y="677" width="116" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1702" y="694">ModulationArc</text>
-	<line stroke="black" stroke-opacity="1" x1="1644" y1="697" x2="1760" y2="697" />
-	<line stroke="black" stroke-opacity="1" x1="1644" y1="705" x2="1760" y2="705" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="591" y="132" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="499" y="160" width="94" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="496" y="129" width="95" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="544" y="144">AuxiliaryUnit</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1955" y="661" width="3" height="47" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1803" y="705" width="155" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1799" y="657" width="156" height="48" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1877" y="674">LogicalOperator</text>
-	<line stroke="black" stroke-opacity="1" x1="1799" y1="677" x2="1955" y2="677" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1803" y="694">operator_type : enum</text>
-	<line stroke="black" stroke-opacity="1" x1="1799" y1="697" x2="1955" y2="697" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1178" y="622" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1084" y="650" width="96" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1081" y="619" width="97" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1130" y="634">StatelessEPN</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="2236" y="558" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="2164" y="590" width="75" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="2160" y="554" width="76" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="2198" y="571">LogicArc</text>
-	<line stroke="black" stroke-opacity="1" x1="2160" y1="574" x2="2236" y2="574" />
-	<line stroke="black" stroke-opacity="1" x1="2160" y1="582" x2="2236" y2="582" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1440" y="605" width="2" height="32" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1270" y="635" width="172" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1267" y="602" width="173" height="33" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1354" y="617">StoichiometricProcess</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1313" y="398" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1237" y="430" width="79" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1233" y="394" width="80" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1273" y="411">EmptySet</text>
-	<line stroke="black" stroke-opacity="1" x1="1233" y1="414" x2="1313" y2="414" />
-	<line stroke="black" stroke-opacity="1" x1="1233" y1="422" x2="1313" y2="422" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1834" y="390" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1778" y="418" width="58" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1775" y="387" width="59" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1805" y="402">FluxArc</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="329" y="405" width="3" height="47" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="171" y="449" width="161" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="167" y="401" width="162" height="48" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="248" y="418">LabelledCloneMarker</text>
-	<line stroke="black" stroke-opacity="1" x1="167" y1="421" x2="329" y2="421" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="171" y="438">label : string</text>
-	<line stroke="black" stroke-opacity="1" x1="167" y1="441" x2="329" y2="441" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1976" y="389" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1868" y="417" width="110" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1865" y="386" width="111" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1921" y="401">ModulationArc</text>
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="202" y="327" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="54" y="359" width="151" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="50" y="323" width="152" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="126" y="340">SimpleCloneMarker</text>
-	<line stroke="black" stroke-opacity="1" x1="50" y1="343" x2="202" y2="343" />
-	<line stroke="black" stroke-opacity="1" x1="50" y1="351" x2="202" y2="351" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1723" y="786" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1603" y="814" width="122" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1600" y="783" width="123" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1662" y="798">LogicalOperator</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="145" x2="1024" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="69" x2="1018" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="69" x2="1030" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1018" y1="75" x2="1030" y2="75" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="2075" y="388" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="2007" y="416" width="70" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="2004" y="385" width="71" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="2040" y="400">LogicArc</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1586" y1="145" x2="1024" y2="145" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1304" y="373" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1232" y="401" width="74" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1229" y="370" width="75" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1267" y="385">EmptySet</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1586" y1="220" x2="1586" y2="145" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="493" y="394" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="339" y="422" width="156" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="336" y="391" width="157" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="415" y="406">LabelledCloneMarker</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="308" y1="453" x2="310" y2="460" />
-	<line stroke="black" stroke-opacity="1" x1="308" y1="453" x2="315" y2="450" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="678" y1="622" x2="308" y2="453" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="309" y="394" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="167" y="422" width="144" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="164" y="391" width="145" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="237" y="406">SimpleCloneMarker</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="206" y1="343" x2="212" y2="349" />
-	<line stroke="black" stroke-opacity="1" x1="206" y1="343" x2="212" y2="337" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="558" y1="343" x2="206" y2="343" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="520" y="256" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="414" y="284" width="108" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="411" y="253" width="109" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="466" y="268">AttributeValue</text>
 </g>
 <g>
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="558" y1="557" x2="558" y2="343" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="93" x2="1021" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1015" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1027" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1015" y1="68" x2="1027" y2="68" />
 </g>
 <g>
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="909" y1="557" x2="558" y2="557" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="124" x2="1021" y2="93" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="735" y1="520" x2="735" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="735" y1="504" x2="729" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="735" y1="504" x2="741" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="729" y1="510" x2="741" y2="510" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="250" x2="1368" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="963" y1="520" x2="735" y2="520" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="207" x2="1397" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="963" y1="536" x2="963" y2="520" />
+	<line stroke="black" stroke-opacity="1" x1="1397" y1="207" x2="1397" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="163" x2="1391" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="163" x2="1403" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1391" y1="168" x2="1403" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="631" y1="351" x2="631" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="631" y1="309" x2="625" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="631" y1="309" x2="637" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="625" y1="315" x2="637" y2="315" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="250" x2="1947" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1274" y1="351" x2="631" y2="351" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="207" x2="1398" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1274" y1="393" x2="1274" y2="351" />
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="207" x2="1398" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1392" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1404" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1392" y1="168" x2="1404" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1569" y1="483" x2="1569" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1569" y1="413" x2="1563" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1569" y1="413" x2="1575" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1563" y1="419" x2="1575" y2="419" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="128" x2="1399" y2="95" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="2176" y1="483" x2="1569" y2="483" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="368" x2="961" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="2176" y1="553" x2="2176" y2="483" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="327" x2="1368" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1555" y1="545" x2="1555" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1555" y1="413" x2="1549" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1555" y1="413" x2="1561" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1549" y1="419" x2="1561" y2="419" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="327" x2="1368" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1362" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1374" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1362" y1="291" x2="1374" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1703" y1="545" x2="1555" y2="545" />
+	<line stroke="black" stroke-opacity="1" x1="628" y1="574" x2="628" y2="527" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1703" y1="676" x2="1703" y2="545" />
+	<line stroke="black" stroke-opacity="1" x1="628" y1="527" x2="773" y2="527" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1538" y1="482" x2="1538" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1538" y1="413" x2="1532" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1538" y1="413" x2="1544" y2="419" />
-	<line stroke="black" stroke-opacity="1" x1="1532" y1="419" x2="1544" y2="419" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="527" x2="773" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="767" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="779" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="767" y1="485" x2="779" y2="485" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1430" y1="482" x2="1538" y2="482" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="576" x2="773" y2="527" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1430" y1="550" x2="1430" y2="482" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="527" x2="773" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="767" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="779" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="767" y1="485" x2="779" y2="485" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="644" y1="384" x2="644" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="644" y1="165" x2="638" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="644" y1="165" x2="650" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="638" y1="171" x2="650" y2="171" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="444" x2="773" y2="424" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="398" y1="384" x2="644" y2="384" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="128" x2="544" y2="95" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="398" y1="603" x2="398" y2="384" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="95" x2="1021" y2="95" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="97" x2="1023" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="69" x2="1017" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="69" x2="1029" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1017" y1="75" x2="1029" y2="75" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="95" x2="1021" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1015" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1027" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1015" y1="68" x2="1027" y2="68" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="644" y1="97" x2="1023" y2="97" />
+	<line stroke="black" stroke-opacity="1" x1="113" y1="252" x2="113" y2="208" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="644" y1="124" x2="644" y2="97" />
+	<line stroke="black" stroke-opacity="1" x1="113" y1="208" x2="544" y2="208" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="563" y1="639" x2="454" y2="639" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="208" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="563" y1="643" x2="563" y2="639" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="386" x2="1806" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="672" y1="643" x2="563" y2="643" />
-	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="672,643 666,649 660,643 666,637" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="335" x2="1947" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="737" y1="563" x2="737" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="737" y1="504" x2="731" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="737" y1="504" x2="743" y2="510" />
-	<line stroke="black" stroke-opacity="1" x1="731" y1="510" x2="743" y2="510" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="335" x2="1947" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1941" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1953" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1941" y1="291" x2="1953" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="720" y1="563" x2="737" y2="563" />
+	<line stroke="black" stroke-opacity="1" x1="1922" y1="385" x2="1922" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="720" y1="622" x2="720" y2="563" />
+	<line stroke="black" stroke-opacity="1" x1="1922" y1="335" x2="1947" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="720" y1="715" x2="720" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="714" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="726" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="714" y1="669" x2="726" y2="669" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="335" x2="1947" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1941" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1953" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1941" y1="291" x2="1953" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="397" y1="715" x2="720" y2="715" />
+	<line stroke="black" stroke-opacity="1" x1="2040" y1="384" x2="2040" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="397" y1="767" x2="397" y2="715" />
+	<line stroke="black" stroke-opacity="1" x1="2040" y1="335" x2="1947" y2="335" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="720" y1="715" x2="720" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="714" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="726" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="714" y1="669" x2="726" y2="669" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="335" x2="1947" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1941" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1947" y1="285" x2="1953" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1941" y1="291" x2="1953" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="561" y1="715" x2="720" y2="715" />
+	<line stroke="black" stroke-opacity="1" x1="1267" y1="369" x2="1266" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="561" y1="766" x2="561" y2="715" />
+	<line stroke="black" stroke-opacity="1" x1="1266" y1="327" x2="1368" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="632" y1="362" x2="632" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="632" y1="309" x2="626" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="632" y1="309" x2="638" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="626" y1="315" x2="638" y2="315" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="327" x2="1368" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1362" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1374" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1362" y1="291" x2="1374" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="738" y1="362" x2="632" y2="362" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="618" x2="1130" y2="424" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="738" y1="415" x2="738" y2="362" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="424" x2="961" y2="424" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="214" x2="1024" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="69" x2="1018" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="69" x2="1030" y2="75" />
-	<line stroke="black" stroke-opacity="1" x1="1018" y1="75" x2="1030" y2="75" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="424" x2="961" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="403" x2="955" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="403" x2="967" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="955" y1="409" x2="967" y2="409" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1318" y1="235" x2="1073" y2="235" />
+	<line stroke="black" stroke-opacity="1" x1="467" y1="252" x2="467" y2="208" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1318" y1="240" x2="1318" y2="235" />
+	<line stroke="black" stroke-opacity="1" x1="467" y1="208" x2="544" y2="208" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1563" y1="240" x2="1318" y2="240" />
-	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="1563,240 1557,246 1551,240 1557,234" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="95" x2="1021" y2="95" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="314" x2="1023" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="255" x2="1017" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="255" x2="1029" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1017" y1="261" x2="1029" y2="261" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="424" x2="961" y2="424" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1537" y1="314" x2="1023" y2="314" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1556" y="373" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1462" y="401" width="96" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1459" y="370" width="97" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1508" y="385">ProcessNode</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="629" y1="268" x2="629" y2="262" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="424" x2="961" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="403" x2="955" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="961" y1="403" x2="967" y2="409" />
+	<line stroke="black" stroke-opacity="1" x1="955" y1="409" x2="967" y2="409" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="629" y1="262" x2="1023" y2="262" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="95" x2="1021" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1015" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1021" y1="62" x2="1027" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="1015" y1="68" x2="1027" y2="68" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="262" x2="1023" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="255" x2="1017" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1023" y1="255" x2="1029" y2="261" />
-	<line stroke="black" stroke-opacity="1" x1="1017" y1="261" x2="1029" y2="261" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="208" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1537" y1="372" x2="1537" y2="314" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1787" y="492" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1679" y="520" width="110" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1676" y="489" width="111" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1732" y="504">ProductionArc</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="2159" y1="586" x2="2151" y2="582" />
-	<line stroke="black" stroke-opacity="1" x1="2159" y1="586" x2="2155" y2="593" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1951" y1="656" x2="2159" y2="586" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1957" y="493" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1831" y="521" width="128" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1828" y="490" width="129" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1893" y="505">ConsumptionArc</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1644" y1="717" x2="1636" y2="713" />
-	<line stroke="black" stroke-opacity="1" x1="1644" y1="717" x2="1640" y2="724" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1449" y1="792" x2="1644" y2="717" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1579" y="786" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1497" y="814" width="84" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1494" y="783" width="85" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1537" y="798">Phenotype</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1764" y1="691" x2="1770" y2="696" />
-	<line stroke="black" stroke-opacity="1" x1="1764" y1="691" x2="1769" y2="684" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1798" y1="689" x2="1764" y2="691" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1004" y="579" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="860" y="607" width="146" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="857" y="576" width="147" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="931" y="591">NucleicAcidFeature</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1497" y1="381" x2="1088" y2="381" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1196" y="788" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1066" y="816" width="132" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1063" y="785" width="133" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1130" y="800">UnspecifiedEntity</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1088" y1="381" x2="1088" y2="277" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1105" y="738" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="985" y="766" width="122" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="982" y="735" width="123" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1044" y="750">PerturbingAgent</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1088" y1="277" x2="678" y2="277" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1616" y="255" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1516" y="283" width="102" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1513" y="252" width="103" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1565" y="267">Compartment</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1497" y1="404" x2="1089" y2="404" />
+	<line stroke="black" stroke-opacity="1" x1="1509" y1="369" x2="1509" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1089" y1="404" x2="1089" y2="300" />
+	<line stroke="black" stroke-opacity="1" x1="1355" y1="601" x2="1355" y2="503" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1089" y1="300" x2="678" y2="300" />
+	<line stroke="black" stroke-opacity="1" x1="1355" y1="503" x2="1508" y2="503" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1424" y1="591" x2="1416" y2="595" />
-	<line stroke="black" stroke-opacity="1" x1="1424" y1="591" x2="1428" y2="598" />
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1369" y1="787" x2="1424" y2="591" />
+	<line stroke="black" stroke-opacity="1" x1="1508" y1="503" x2="1508" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1508" y1="404" x2="1502" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1508" y1="404" x2="1514" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1502" y1="410" x2="1514" y2="410" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1244" y="505" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1146" y="537" width="101" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1142" y="501" width="102" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="1193" y="518">ProcessNode</text>
-	<line stroke="black" stroke-opacity="1" x1="1142" y1="521" x2="1244" y2="521" />
-	<line stroke="black" stroke-opacity="1" x1="1142" y1="529" x2="1244" y2="529" />
+	<line stroke="black" stroke-opacity="1" x1="1893" y1="489" x2="1892" y2="454" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1194" y1="664" x2="1194" y2="547" />
-	<line stroke="black" stroke-opacity="1" x1="1194" y1="541" x2="1188" y2="547" />
-	<line stroke="black" stroke-opacity="1" x1="1194" y1="541" x2="1200" y2="547" />
-	<line stroke="black" stroke-opacity="1" x1="1188" y1="547" x2="1200" y2="547" />
+	<line stroke="black" stroke-opacity="1" x1="1732" y1="488" x2="1731" y2="454" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1358" y1="664" x2="1194" y2="664" />
+	<line stroke="black" stroke-opacity="1" x1="1397" y1="207" x2="1397" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="163" x2="1391" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="163" x2="1403" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1391" y1="168" x2="1403" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1358" y1="787" x2="1358" y2="664" />
+	<line stroke="black" stroke-opacity="1" x1="1566" y1="207" x2="1397" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="631" y1="385" x2="631" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="631" y1="309" x2="625" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="631" y1="309" x2="637" y2="315" />
-	<line stroke="black" stroke-opacity="1" x1="625" y1="315" x2="637" y2="315" />
+	<line stroke="black" stroke-opacity="1" x1="1566" y1="251" x2="1566" y2="207" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1194" y1="385" x2="631" y2="385" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="692" x2="1130" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1124" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1136" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1124" y1="659" x2="1136" y2="659" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1194" y1="500" x2="1194" y2="385" />
+	<line stroke="black" stroke-opacity="1" x1="1044" y1="692" x2="1130" y2="692" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="801" y="771" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="655" y="803" width="149" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="651" y="767" width="150" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="726" y="784">NucleicAcidFeature</text>
-	<line stroke="black" stroke-opacity="1" x1="651" y1="787" x2="801" y2="787" />
-	<line stroke="black" stroke-opacity="1" x1="651" y1="795" x2="801" y2="795" />
+	<line stroke="black" stroke-opacity="1" x1="1044" y1="734" x2="1044" y2="692" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="976" y="806" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="844" y="838" width="135" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="840" y="802" width="136" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="908" y="819">UnspecifiedEntity</text>
-	<line stroke="black" stroke-opacity="1" x1="840" y1="822" x2="976" y2="822" />
-	<line stroke="black" stroke-opacity="1" x1="840" y1="830" x2="976" y2="830" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="718" x2="1130" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1124" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1136" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1124" y1="659" x2="1136" y2="659" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1071" y="861" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="947" y="893" width="127" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="943" y="857" width="128" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1007" y="874">PerturbingAgent</text>
-	<line stroke="black" stroke-opacity="1" x1="943" y1="877" x2="1071" y2="877" />
-	<line stroke="black" stroke-opacity="1" x1="943" y1="885" x2="1071" y2="885" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="784" x2="1130" y2="718" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1145" y="445" width="3" height="65" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1039" y="507" width="109" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1035" y="441" width="110" height="66" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1090" y="458">Compartment</text>
-	<line stroke="black" stroke-opacity="1" x1="1035" y1="461" x2="1145" y2="461" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1039" y="478">name : string</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1039" y="496">natures : cv</text>
-	<line stroke="black" stroke-opacity="1" x1="1035" y1="499" x2="1145" y2="499" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="527" x2="773" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="767" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="773" y1="479" x2="779" y2="485" />
+	<line stroke="black" stroke-opacity="1" x1="767" y1="485" x2="779" y2="485" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1034" y1="473" x2="799" y2="462" />
-	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="1034,473 1027,478 1022,472 1028,466" />
+	<line stroke="black" stroke-opacity="1" x1="931" y1="527" x2="773" y2="527" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="963" y1="717" x2="963" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="957" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="969" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="957" y1="583" x2="969" y2="583" />
+	<line stroke="black" stroke-opacity="1" x1="931" y1="575" x2="931" y2="527" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1008" y1="717" x2="963" y2="717" />
+	<line stroke="black" stroke-opacity="1" x1="1509" y1="327" x2="1368" y2="327" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1008" y1="856" x2="1008" y2="717" />
+	<line stroke="black" stroke-opacity="1" x1="1892" y1="454" x2="1806" y2="454" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="963" y1="689" x2="963" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="957" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="969" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="957" y1="583" x2="969" y2="583" />
+	<line stroke="black" stroke-opacity="1" x1="1731" y1="454" x2="1806" y2="454" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="909" y1="689" x2="963" y2="689" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="327" x2="1368" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1362" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1368" y1="285" x2="1374" y2="291" />
+	<line stroke="black" stroke-opacity="1" x1="1362" y1="291" x2="1374" y2="291" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="909" y1="801" x2="909" y2="689" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="454" x2="1806" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="421" x2="1800" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="421" x2="1812" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1800" y1="427" x2="1812" y2="427" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="720" y1="715" x2="720" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="714" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="720" y1="663" x2="726" y2="669" />
-	<line stroke="black" stroke-opacity="1" x1="714" y1="669" x2="726" y2="669" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="454" x2="1806" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="421" x2="1800" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1806" y1="421" x2="1812" y2="427" />
+	<line stroke="black" stroke-opacity="1" x1="1800" y1="427" x2="1812" y2="427" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="728" y1="715" x2="720" y2="715" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1301" y="739" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1183" y="767" width="120" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1180" y="736" width="121" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1241" y="751">SimpleChemical</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="728" y1="766" x2="728" y2="715" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="694" x2="1130" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1124" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="653" x2="1136" y2="659" />
+	<line stroke="black" stroke-opacity="1" x1="1124" y1="659" x2="1136" y2="659" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1081" y1="440" x2="1030" y2="260" />
-	<line stroke="black" stroke-opacity="1" x1="1029" y1="255" x2="1024" y2="262" />
-	<line stroke="black" stroke-opacity="1" x1="1029" y1="255" x2="1036" y2="259" />
-	<line stroke="black" stroke-opacity="1" x1="1024" y1="262" x2="1036" y2="259" />
+	<line stroke="black" stroke-opacity="1" x1="1241" y1="694" x2="1130" y2="694" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1160" y="805" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1036" y="837" width="127" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1032" y="801" width="128" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1096" y="818">SimpleChemical</text>
-	<line stroke="black" stroke-opacity="1" x1="1032" y1="821" x2="1160" y2="821" />
-	<line stroke="black" stroke-opacity="1" x1="1032" y1="829" x2="1160" y2="829" />
+	<line stroke="black" stroke-opacity="1" x1="1241" y1="735" x2="1241" y2="694" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="963" y1="689" x2="963" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="957" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="963" y1="577" x2="969" y2="583" />
-	<line stroke="black" stroke-opacity="1" x1="957" y1="583" x2="969" y2="583" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="382" y="256" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="292" y="284" width="92" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="289" y="253" width="93" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="336" y="268">CloneMarker</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1098" y1="689" x2="963" y2="689" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="236" y="256" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="178" y="284" width="60" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="175" y="253" width="61" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="206" y="268">Subunit</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="1098" y1="800" x2="1098" y2="689" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="689" y="254" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="605" y="282" width="86" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="602" y="251" width="87" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="646" y="266">Annotation</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="504" y="803">1</text>
+	<line stroke="black" stroke-opacity="1" x1="646" y1="250" x2="645" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="397" y="774">owning_complex</text>
+	<line stroke="black" stroke-opacity="1" x1="544" y1="208" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="330" y="757">*</text>
+	<line stroke="black" stroke-opacity="1" x1="338" y1="208" x2="544" y2="208" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="330" y="728">subunits</text>
+	<line stroke="black" stroke-opacity="1" x1="337" y1="252" x2="338" y2="208" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="153" y="732">*</text>
+	<line stroke="black" stroke-opacity="1" x1="207" y1="252" x2="207" y2="208" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="151" y="711">1</text>
+	<line stroke="black" stroke-opacity="1" x1="415" y1="390" x2="415" y2="338" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="106" y="703">children</text>
+	<line stroke="black" stroke-opacity="1" x1="415" y1="338" x2="338" y2="338" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1000" y="496">0..1</text>
+	<line stroke="black" stroke-opacity="1" x1="338" y1="338" x2="337" y2="292" />
+	<line stroke="black" stroke-opacity="1" x1="337" y1="287" x2="331" y2="293" />
+	<line stroke="black" stroke-opacity="1" x1="337" y1="287" x2="343" y2="292" />
+	<line stroke="black" stroke-opacity="1" x1="331" y1="293" x2="343" y2="292" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="809" y="485">*</text>
+	<line stroke="black" stroke-opacity="1" x1="238" y1="390" x2="238" y2="338" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="877" y="467">owning_compartment</text>
+	<line stroke="black" stroke-opacity="1" x1="238" y1="338" x2="337" y2="338" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="809" y="456">epns</text>
+	<line stroke="black" stroke-opacity="1" x1="337" y1="338" x2="337" y2="293" />
+	<line stroke="black" stroke-opacity="1" x1="337" y1="287" x2="331" y2="293" />
+	<line stroke="black" stroke-opacity="1" x1="337" y1="287" x2="343" y2="293" />
+	<line stroke="black" stroke-opacity="1" x1="331" y1="293" x2="343" y2="293" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="584" y="427">owning_epn</text>
+	<line stroke="black" stroke-opacity="1" x1="207" y1="208" x2="544" y2="208" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="346" y="288">0..1</text>
+	<line stroke="black" stroke-opacity="1" x1="645" y1="207" x2="544" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="658" y="456">1</text>
+	<line stroke="black" stroke-opacity="1" x1="544" y1="208" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="346" y="259">clone_marker</text>
+	<line stroke="black" stroke-opacity="1" x1="544" y1="207" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="580" y="637">owning_epn</text>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="926" y="253" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="892" y="281" width="36" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="889" y="250" width="37" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="908" y="265">Tag</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="464" y="662">*</text>
+	<line stroke="black" stroke-opacity="1" x1="921" y1="249" x2="921" y2="206" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="654" y="666">1</text>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1262" y="254" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1146" y="282" width="118" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1143" y="251" width="119" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1203" y="266">EquivalenceArc</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="464" y="633">states</text>
+	<line stroke="black" stroke-opacity="1" x1="1204" y1="250" x2="1204" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1466" y="234">owning_map</text>
+	<line stroke="black" stroke-opacity="1" x1="921" y1="206" x2="1399" y2="206" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1083" y="258">*</text>
+	<line stroke="black" stroke-opacity="1" x1="1204" y1="207" x2="1398" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1545" y="263">1</text>
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="206" x2="1399" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1393" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1405" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1393" y1="169" x2="1405" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1083" y="229">elements</text>
+	<line stroke="black" stroke-opacity="1" x1="1398" y1="207" x2="1398" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1392" y2="168" />
+	<line stroke="black" stroke-opacity="1" x1="1399" y1="163" x2="1404" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="1392" y1="168" x2="1404" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="688" y="271">out_node</text>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="893" y="132" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="781" y="160" width="114" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="778" y="129" width="115" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="836" y="144">CrossReference</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1428" y="375">out_arcs</text>
+	<line stroke="black" stroke-opacity="1" x1="896" y1="249" x2="896" y2="206" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="688" y="300">1</text>
+	<line stroke="black" stroke-opacity="1" x1="896" y1="206" x2="837" y2="206" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1481" y="404">*</text>
+	<line stroke="black" stroke-opacity="1" x1="837" y1="206" x2="837" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="837" y1="163" x2="831" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="837" y1="163" x2="843" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="831" y1="169" x2="843" y2="169" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="688" y="294">in_node</text>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="820" y="254" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="698" y="282" width="124" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="695" y="251" width="125" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="758" y="266">SubmapTerminal</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1438" y="398">in_arcs</text>
+	<line stroke="black" stroke-opacity="1" x1="758" y1="250" x2="757" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="688" y="323">1</text>
+	<line stroke="black" stroke-opacity="1" x1="759" y1="250" x2="759" y2="207" />
 </g>
 <g>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="1481" y="427">*</text>
+	<line stroke="black" stroke-opacity="1" x1="759" y1="207" x2="544" y2="207" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="340" y="225" width="3" height="35" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="246" y="257" width="97" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="242" y="221" width="98" height="36" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="291" y="238">CloneMarker</text>
-	<line stroke="black" stroke-opacity="1" x1="242" y1="241" x2="340" y2="241" />
-	<line stroke="black" stroke-opacity="1" x1="242" y1="249" x2="340" y2="249" />
+	<line stroke="black" stroke-opacity="1" x1="757" y1="207" x2="837" y2="207" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="316" y="677" width="3" height="83" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="174" y="757" width="145" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="170" y="673" width="146" height="84" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="243" y="690">Subunit</text>
-	<line stroke="black" stroke-opacity="1" x1="170" y1="693" x2="316" y2="693" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="174" y="710">cardinality : int</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="174" y="728">name : string</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="174" y="746">subunit_type : Enum</text>
-	<line stroke="black" stroke-opacity="1" x1="170" y1="749" x2="316" y2="749" />
+	<line stroke="black" stroke-opacity="1" x1="837" y1="207" x2="837" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="837" y1="163" x2="831" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="837" y1="163" x2="843" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="831" y1="169" x2="843" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="522" y1="778" x2="320" y2="732" />
-	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="522,778 514,782 510,775 517,770" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="207" x2="544" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="538" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="544" y1="163" x2="550" y2="169" />
+	<line stroke="black" stroke-opacity="1" x1="538" y1="169" x2="550" y2="169" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="169" y1="708" x2="163" y2="701" />
-	<line stroke="black" stroke-opacity="1" x1="169" y1="708" x2="162" y2="713" />
-	<line stroke="black" stroke-opacity="1" x1="142" y1="705" x2="169" y2="708" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1654" y="607" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1456" y="635" width="200" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1453" y="604" width="201" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1554" y="619">NonStoichiometricProcess</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="142" y1="675" x2="142" y2="705" />
+	<line stroke="black" stroke-opacity="1" x1="1538" y1="782" x2="1538" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="169" y1="685" x2="142" y2="675" />
+	<line stroke="black" stroke-opacity="1" x1="1662" y1="782" x2="1662" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="644" y1="419" x2="644" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="644" y1="165" x2="638" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="644" y1="165" x2="650" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="638" y1="171" x2="650" y2="171" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="603" x2="1554" y2="503" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="245" y1="419" x2="644" y2="419" />
+	<line stroke="black" stroke-opacity="1" x1="1538" y1="709" x2="1554" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="245" y1="672" x2="245" y2="419" />
+	<line stroke="black" stroke-opacity="1" x1="1662" y1="709" x2="1554" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="676" y1="429" x2="336" y2="261" />
-	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="676,429 667,431 665,423 673,420" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="503" x2="1509" y2="503" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="293" y1="292" x2="293" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="293" y1="261" x2="287" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="293" y1="261" x2="299" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="287" y1="267" x2="299" y2="267" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="709" x2="1554" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1548" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1560" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1548" y1="644" x2="1560" y2="644" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="128" y1="292" x2="293" y2="292" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="709" x2="1554" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1548" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1560" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1548" y1="644" x2="1560" y2="644" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="128" y1="322" x2="128" y2="292" />
+	<line stroke="black" stroke-opacity="1" x1="1509" y1="503" x2="1509" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1509" y1="404" x2="1503" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1509" y1="404" x2="1515" y2="410" />
+	<line stroke="black" stroke-opacity="1" x1="1503" y1="410" x2="1515" y2="410" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="293" y1="331" x2="293" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="293" y1="261" x2="287" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="293" y1="261" x2="299" y2="267" />
-	<line stroke="black" stroke-opacity="1" x1="287" y1="267" x2="299" y2="267" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1471" y="786" width="2" height="30" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="1371" y="814" width="102" height="2" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="1368" y="783" width="103" height="31" />
+	<text font-family="Helvetica" font-size="14" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1420" y="798">SubmapNode</text>
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="249" y1="331" x2="293" y2="331" />
+	<line stroke="black" stroke-opacity="1" x1="1420" y1="782" x2="1420" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="249" y1="400" x2="249" y2="331" />
+	<line stroke="black" stroke-opacity="1" x1="1420" y1="709" x2="1554" y2="709" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="344" y1="226" x2="564" y2="165" />
-	<line stroke="black" stroke-opacity="1" x1="570" y1="164" x2="562" y2="159" />
-	<line stroke="black" stroke-opacity="1" x1="570" y1="164" x2="565" y2="171" />
-	<line stroke="black" stroke-opacity="1" x1="562" y1="159" x2="565" y2="171" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="709" x2="1554" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1548" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1554" y1="638" x2="1560" y2="644" />
+	<line stroke="black" stroke-opacity="1" x1="1548" y1="644" x2="1560" y2="644" />
 </g>
 </svg>

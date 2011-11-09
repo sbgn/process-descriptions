@@ -1,25 +1,16 @@
 format 75
 
-classcanvas 128045 class_ref 136749 // StoichiometricProcess
+classcanvas 128045 class_ref 172333 // Annotation
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 266 156 2000
+  xyz 117 123 2000
 end
-classcanvas 128173 class_ref 136621 // ProcessNode
+classcanvas 128173 class_ref 128173 // SBGNGlyph
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 304 55 2006
+  xyz 470 129 2005
 end
-classcanvas 129197 class_ref 137005 // ModulationArc
-  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 40 161 2000
-end
-relationcanvas 128301 relation_ref 138285 // <generalisation>
-  from ref 128045 z 2007 to ref 128173
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 131245 relation_ref 218669 // <dependency>
-  from ref 129197 z 2001 to ref 128045
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
+relationcanvas 128557 relation_ref 211885 // <unidirectional association>
+  from ref 128045 z 2006 to ref 128173
+  role_a_pos 344 128 3000 no_role_b
+  multiplicity_a_pos 451 157 3000 multiplicity_b_pos 291 157 3000
 end
 end

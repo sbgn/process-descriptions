@@ -44,7 +44,7 @@ classcanvas 130605 class_ref 165293 // ConsumptionArc
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
   xyz 910 425 2000
 end
-classcanvas 130989 class_ref 137261 // LogicGate
+classcanvas 130989 class_ref 137261 // LogicalOperator
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
   xyz 48 234 3011
 end
@@ -54,7 +54,7 @@ classcanvas 131245 class_ref 137389 // LogicArc
 end
 classcanvas 131629 class_ref 165549 // EquivalenceArc
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 930 583 2000
+  xyz 783 447 2000
 end
 classcanvas 133421 class_ref 165421 // SubmapTerminal
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
@@ -79,12 +79,18 @@ relationcanvas 128429 relation_ref 162861 // <association>
   multiplicity_a_pos 339 143 3000 multiplicity_b_pos 793 143 3000
 end
 relationcanvas 128941 relation_ref 169645 // <generalisation>
-  from ref 128813 z 2007 to ref 128685
+  geometry VHV
+  from ref 128813 z 2007 to point 373 433
+  line 136237 z 2007 to point 274 433
+  line 136365 z 2007 to ref 128685
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129197 relation_ref 169517 // <generalisation>
-  from ref 129069 z 2007 to ref 128685
+  geometry VHV
+  from ref 129069 z 2007 to point 179 433
+  line 136493 z 2007 to point 274 433
+  line 136621 z 2007 to ref 128685
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
@@ -105,7 +111,7 @@ relationcanvas 129837 relation_ref 138285 // <generalisation>
 end
 relationcanvas 130093 relation_ref 138925 // <generalisation>
   geometry VHV
-  from ref 129965 z 2007 to point 651 312
+  from ref 129965 z 2007 to point 678 312
   line 132141 z 2007 to point 848 312
   line 132269 z 2007 to ref 128045
   no_role_a no_role_b
@@ -113,7 +119,7 @@ relationcanvas 130093 relation_ref 138925 // <generalisation>
 end
 relationcanvas 130349 relation_ref 138413 // <generalisation>
   geometry VHV
-  from ref 130221 z 2012 to point 1041 208
+  from ref 130221 z 2012 to point 1072 208
   line 132909 z 2012 to point 848 208
   line 133037 z 2012 to ref 128045
   no_role_a no_role_b
@@ -121,22 +127,17 @@ relationcanvas 130349 relation_ref 138413 // <generalisation>
 end
 relationcanvas 130733 relation_ref 176173 // <generalisation>
   geometry VHV
-  from ref 130605 z 2012 to point 976 368
-  line 132397 z 2012 to point 1041 368
+  from ref 130605 z 2012 to point 976 374
+  line 132397 z 2012 to point 1072 374
   line 132525 z 2012 to ref 130221
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 130861 relation_ref 176301 // <generalisation>
   geometry VHV
-  from ref 130477 z 2012 to point 1121 368
-  line 132653 z 2012 to point 1041 368
+  from ref 130477 z 2012 to point 1121 374
+  line 132653 z 2012 to point 1072 374
   line 132781 z 2012 to ref 130221
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 131117 relation_ref 162605 // <generalisation>
-  from ref 130989 z 3012 to ref 128173
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
@@ -175,7 +176,35 @@ relationcanvas 134317 relation_ref 128173 // <generalisation>
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134957 relation_ref 177069 // <generalisation>
-  from ref 131629 z 3012 to ref 134061
+  geometry VHV
+  from ref 131629 z 3012 to point 844 247
+  line 135981 z 3012 to point 587 247
+  line 136109 z 3012 to ref 134061
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135085 relation_ref 191149 // <generalisation>
+  from ref 130989 z 3012 to ref 128685
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135213 relation_ref 191277 // <dependency>
+  from ref 130989 z 3012 to ref 131245
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135341 relation_ref 191405 // <dependency>
+  from ref 130989 z 3012 to ref 129965
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135469 relation_ref 219053 // <dependency>
+  from ref 131245 z 3012 to ref 130989
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135597 relation_ref 218669 // <dependency>
+  from ref 129965 z 3018 to ref 129709
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
