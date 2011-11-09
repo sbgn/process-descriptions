@@ -6,28 +6,28 @@ classcanvas 128045 class_ref 151981 // NonStoichiometricProcess
 end
 classcanvas 128173 class_ref 158509 // SubmapNode
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 347 284 2000
+  xyz 347 232 2000
 end
 classcanvas 128301 class_ref 158637 // Phenotype
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 589 283 2000
+  xyz 588 232 2000
 end
 classcanvas 129197 class_ref 137005 // ModulationArc
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 789 284 2000
+  xyz 749 227 2000
 end
 relationcanvas 128429 relation_ref 169517 // <generalisation>
   geometry VHV
-  from ref 128173 z 2001 to point 402 213
-  line 128685 z 2001 to point 508 213
+  from ref 128173 z 2001 to point 402 187
+  line 128685 z 2001 to point 508 187
   line 128813 z 2001 to ref 128045
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 128557 relation_ref 169645 // <generalisation>
   geometry VHV
-  from ref 128301 z 2001 to point 632 213
-  line 128941 z 2001 to point 508 213
+  from ref 128301 z 2001 to point 631 187
+  line 128941 z 2001 to point 508 187
   line 129069 z 2001 to ref 128045
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b

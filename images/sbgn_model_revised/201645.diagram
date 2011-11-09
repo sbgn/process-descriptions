@@ -1,47 +1,43 @@
 format 75
 
-classcanvas 128045 class_ref 144941 // AttributeValue
+classcanvas 128045 class_ref 137005 // ModulationArc
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  color lightmediumgreen
-  xyz 482 265 2000
+  xyz 344 235 2000
 end
-classcanvas 128173 class_ref 128685 // EntityPoolNode
+classcanvas 128173 class_ref 128429 // SBGNArc
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 928.6 256.8 2006
+  xyzwh 393 85 2006 81 77
 end
-classcanvas 128429 class_ref 145069 // Subunit
+classcanvas 128429 class_ref 136749 // StoichiometricProcess
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 114.8 256 2010
+  xyz 661 236 2006
 end
-classcanvas 129197 class_ref 129453 // Compartment
+classcanvas 128685 class_ref 128301 // SBGNNode
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 483.9 73.5 2012
+  xyzwh 95 85 3005 95 77
 end
-relationcanvas 128301 relation_ref 148269 // <directional composition>
-  geometry HVH
-  from ref 128173 z 2007 to point 761 297
-  line 129837 z 2007 to point 761 297
-  line 129965 z 2007 to ref 128045
-  role_a_pos 613 277 3000 no_role_b
-  multiplicity_a_pos 614 307 3000 multiplicity_b_pos 904 307 3000
+relationcanvas 128301 relation_ref 138925 // <generalisation>
+  from ref 128045 z 2007 to ref 128173
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 128557 relation_ref 149421 // <directional composition>
-  decenter_begin 94
-  from ref 128429 z 2011 to point 125.2 201
-  line 128941 z 2011 to point 25.2 201
-  line 128685 z 2011 to point 25.2 297.3
-  line 128813 z 2011 to ref 128429
-  role_a_pos 47 277 3000 no_role_b
-  multiplicity_a_pos 95 307 3000 multiplicity_b_pos 107 235 3000
+relationcanvas 128557 relation_ref 218669 // <dependency>
+  from ref 128045 z 2007 to ref 128429
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 129453 relation_ref 205101 // <directional composition>
-  from ref 128429 z 2011 to ref 128045
-  role_a_pos 328 279 3000 no_role_b
-  multiplicity_a_pos 459 309 3000 no_multiplicity_b
+relationcanvas 128813 relation_ref 162733 // <association>
+  decenter_begin 880
+  decenter_end 883
+  from ref 128173 z 3006 to ref 128685
+  role_a_pos 199 131 3000 role_b_pos 323 131 3000
+  multiplicity_a_pos 199 160 3000 multiplicity_b_pos 376 160 3000
 end
-relationcanvas 130093 relation_ref 205229 // <directional composition>
-  from ref 129197 z 2013 to ref 128045
-  role_a_pos 551 244 3000 no_role_b
-  multiplicity_a_pos 523 244 3000 no_multiplicity_b
+relationcanvas 128941 relation_ref 162861 // <association>
+  decenter_begin 116
+  decenter_end 116
+  from ref 128173 z 3006 to ref 128685
+  role_a_pos 199 72 3000 role_b_pos 333 72 3000
+  multiplicity_a_pos 199 101 3000 multiplicity_b_pos 376 101 3000
 end
 end

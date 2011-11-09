@@ -54,7 +54,7 @@ classcanvas 134829 class_ref 138413 // LabelledCloneMarker
 end
 classcanvas 135725 class_ref 129453 // Compartment
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 1212 134 2013
+  xyz 1212 119 2013
 end
 classcanvas 136365 class_ref 144941 // AttributeValue
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
@@ -157,26 +157,18 @@ relationcanvas 135085 relation_ref 141485 // <generalisation>
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 135853 relation_ref 140717 // <generalisation>
-  geometry VHV unfixed
-  from ref 135725 z 2014 to point 1267 80
-  line 136109 z 2014 to point 1092 80
-  line 136237 z 2014 to ref 131629
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
 relationcanvas 135981 relation_ref 140589 // <composition>
   from ref 135725 z 2014 to ref 128045
   role_a_pos 968 132 3000 role_b_pos 1054 132 3000
   multiplicity_a_pos 968 161 3000 multiplicity_b_pos 1177 161 3000
 end
-relationcanvas 136493 relation_ref 148269 // <composition>
+relationcanvas 136493 relation_ref 148269 // <directional composition>
   geometry HVH unfixed
   decenter_begin 134
   from ref 128045 z 2001 to point 619 118
   line 136621 z 2001 to point 619 87
   line 136749 z 2001 to ref 136365
-  role_a_pos 520 68 3000 role_b_pos 743 99 3000
+  role_a_pos 520 68 3000 no_role_b
   multiplicity_a_pos 520 97 3000 multiplicity_b_pos 817 128 3000
 end
 end
