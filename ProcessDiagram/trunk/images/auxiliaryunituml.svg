@@ -3,15 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="1108" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="691" y="390" width="3" height="47" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="535" y="434" width="159" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="531" y="386" width="160" height="48" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="611" y="403">Annotation</text>
-	<line stroke="black" stroke-opacity="1" x1="531" y1="406" x2="691" y2="406" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="535" y="423">annotation_text : string</text>
-	<line stroke="black" stroke-opacity="1" x1="531" y1="426" x2="691" y2="426" />
-</g>
-<g>
 	<rect fill="#808080" stroke="none" stroke-opacity="1" x="775" y="266" width="3" height="35" />
 	<rect fill="#808080" stroke="none" stroke-opacity="1" x="647" y="298" width="131" height="3" />
 	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="643" y="262" width="132" height="36" />
@@ -28,12 +19,24 @@
 	<line stroke="black" stroke-opacity="1" x1="994" y1="291" x2="1092" y2="291" />
 </g>
 <g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="691" y="390" width="3" height="47" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="535" y="434" width="159" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="531" y="386" width="160" height="48" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="611" y="403">Annotation</text>
+	<line stroke="black" stroke-opacity="1" x1="531" y1="406" x2="691" y2="406" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="535" y="423">annotation_text : string</text>
+	<line stroke="black" stroke-opacity="1" x1="531" y1="426" x2="691" y2="426" />
+</g>
+<g>
 	<rect fill="#808080" stroke="none" stroke-opacity="1" x="661" y="86" width="3" height="35" />
 	<rect fill="#808080" stroke="none" stroke-opacity="1" x="567" y="118" width="97" height="3" />
-	<rect fill="#90e990" stroke="black" stroke-width="1" stroke-opacity="1" x="563" y="82" width="98" height="36" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="563" y="82" width="98" height="36" />
 	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="612" y="99">AuxiliaryUnit</text>
 	<line stroke="black" stroke-opacity="1" x1="563" y1="102" x2="661" y2="102" />
 	<line stroke="black" stroke-opacity="1" x1="563" y1="110" x2="661" y2="110" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="710" y1="261" x2="710" y2="192" />
 </g>
 <g>
 	<line stroke="black" stroke-opacity="1" x1="710" y1="192" x2="613" y2="192" />
@@ -45,9 +48,6 @@
 	<line stroke="black" stroke-opacity="1" x1="607" y1="128" x2="619" y2="128" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="710" y1="261" x2="710" y2="192" />
-</g>
-<g>
 	<line stroke="black" stroke-opacity="1" x1="613" y1="385" x2="613" y2="254" />
 </g>
 <g>
@@ -57,14 +57,13 @@
 	<line stroke="black" stroke-opacity="1" x1="607" y1="128" x2="619" y2="128" />
 </g>
 <g>
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="945" y="267" width="3" height="65" />
-	<rect fill="#808080" stroke="none" stroke-opacity="1" x="843" y="329" width="105" height="3" />
-	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="839" y="263" width="106" height="66" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="945" y="267" width="3" height="47" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="843" y="311" width="105" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="839" y="263" width="106" height="48" />
 	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="892" y="280">StateVariable</text>
 	<line stroke="black" stroke-opacity="1" x1="839" y1="283" x2="945" y2="283" />
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="843" y="300">name : string</text>
-	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="843" y="318">value : string</text>
-	<line stroke="black" stroke-opacity="1" x1="839" y1="321" x2="945" y2="321" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="843" y="300">value : string</text>
+	<line stroke="black" stroke-opacity="1" x1="839" y1="303" x2="945" y2="303" />
 </g>
 <g>
 	<rect fill="#808080" stroke="none" stroke-opacity="1" x="579" y="266" width="3" height="65" />

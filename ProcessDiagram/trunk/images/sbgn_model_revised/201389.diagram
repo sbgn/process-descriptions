@@ -58,24 +58,24 @@ relationcanvas 129069 relation_ref 141741 // <dependency>
 end
 relationcanvas 129325 relation_ref 141229 // <composition>
   geometry HVH
-  from ref 129197 z 2024 to point 630 224
+  from ref 129197 z 2024 to point 630 207
   line 129965 z 2024 to point 630 224
   line 130093 z 2024 to ref 128045
-  role_a_pos 469 205 3000 role_b_pos 712 205 3000
-  multiplicity_a_pos 469 234 3000 multiplicity_b_pos 786 234 3000
+  role_a_pos 469 205 3000 role_b_pos 712 188 3000
+  multiplicity_a_pos 469 234 3000 multiplicity_b_pos 786 217 3000
 end
 relationcanvas 129453 relation_ref 140205 // <generalisation>
   geometry VHV
-  from ref 128941 z 2024 to point 754 310
-  line 130221 z 2024 to point 864 310
+  from ref 128941 z 2024 to point 754 292
+  line 130221 z 2024 to point 864 292
   line 130349 z 2024 to ref 129197
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129581 relation_ref 137517 // <generalisation>
   geometry VHV
-  from ref 128685 z 2024 to point 975 310
-  line 132013 z 2024 to point 864 310
+  from ref 128685 z 2024 to point 975 292
+  line 132013 z 2024 to point 864 292
   line 132141 z 2024 to ref 129197
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
