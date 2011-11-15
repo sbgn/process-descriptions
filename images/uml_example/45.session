@@ -1,0 +1,14 @@
+window_sizes 1551 1194 262 1283 1135 0
+diagrams
+  active  classdiagram_ref 128173 // MainView
+    1026 908 100 18 0 0
+end
+show_stereotypes
+selected 
+package_ref 129 // uml_example
+open
+  class_ref 128173 // A
+  class_ref 128429 // C
+  class_ref 128941 // G
+end
+end

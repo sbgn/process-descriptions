@@ -22,7 +22,7 @@ classcanvas 129325 class_ref 165421 // SubmapTerminal
 end
 classcanvas 130861 class_ref 128685 // EntityPoolNode
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 89 236 3005
+  xyz 86 256 3005
 end
 relationcanvas 128429 relation_ref 177069 // <generalisation>
   geometry VHV
@@ -32,14 +32,10 @@ relationcanvas 128429 relation_ref 177069 // <generalisation>
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 128813 relation_ref 177965 // <association>
-  from ref 128685 z 3006 to ref 128045
-  role_a_pos 501 260 3000 role_b_pos 596 260 3000
-  multiplicity_a_pos 501 289 3000 multiplicity_b_pos 644 289 3000
-end
 relationcanvas 129069 relation_ref 177325 // <generalisation>
   geometry VHV unfixed
-  from ref 128941 z 3012 to point 865 172
+  decenter_begin 755
+  from ref 128941 z 3012 to point 877 172
   line 129581 z 3012 to point 686 172
   line 129709 z 3012 to ref 128301
   no_role_a no_role_b
@@ -47,7 +43,8 @@ relationcanvas 129069 relation_ref 177325 // <generalisation>
 end
 relationcanvas 129197 relation_ref 177837 // <generalisation>
   geometry VHV
-  from ref 128941 z 3012 to point 865 353
+  decenter_begin 200
+  from ref 128941 z 3012 to point 853 353
   line 129837 z 3012 to point 733 353
   line 129965 z 3012 to ref 128685
   no_role_a no_role_b
@@ -63,7 +60,12 @@ relationcanvas 129453 relation_ref 177709 // <generalisation>
 end
 relationcanvas 130989 relation_ref 177197 // <unidirectional association>
   from ref 128045 z 3006 to ref 130861
-  role_a_pos 221 259 3000 no_role_b
-  multiplicity_a_pos 221 288 3000 multiplicity_b_pos 348 288 3000
+  role_a_pos 218 260 3000 no_role_b
+  multiplicity_a_pos 218 289 3000 multiplicity_b_pos 348 289 3000
+end
+relationcanvas 131117 relation_ref 238893 // <aggregation>
+  from ref 128045 z 3006 to ref 128685
+  role_a_pos 596 260 3000 role_b_pos 501 260 3000
+  multiplicity_a_pos 644 289 3000 multiplicity_b_pos 501 289 3000
 end
 end

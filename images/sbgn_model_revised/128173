@@ -1,6 +1,6 @@
 format 75
 "org.sbgn.level1" // org.sbgn.level1
-  revision 15
+  revision 19
   modified_by 45 "smoodie"
   // class settings
   //class diagram settings
@@ -178,6 +178,11 @@ format 75
       size A4-Landscape
     end
 
+    classdiagram 214957 "SBGNNodeView"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
     class 135981 "SBGNElement"
       abstract visibility package 
       cpp_decl ""
@@ -229,6 +234,18 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 159021 // <generalisation>
 	  b parent class_ref 135981 // SBGNElement
+      end
+
+      classrelation 249773 // cross_references (<aggregation>)
+	relation 239021 o---
+	  a role_name "cross_references" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 249773 // cross_references (<aggregation>)
+	  b role_name "owning_map" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 249901 // owning_map (<aggregation>)
       end
     end
 
@@ -347,17 +364,6 @@ ${members}}
 	  b parent class_ref 128301 // SBGNNode
       end
 
-      attribute 128173 "name"
-	private explicit_type "string"
-	multiplicity "1"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       attribute 135085 "cardinality"
 	private explicit_type "int"
 	multiplicity "1"
@@ -385,17 +391,6 @@ ${members}}
 	    classrelation_ref 143533 // owning_epn (<composition>)
       end
 
-      attribute 141741 "natures"
-	private explicit_type "cv"
-	multiplicity "*"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 150573 // displayed_attributes (<directional composition>)
 	relation 148269 *-->
 	  a role_name "displayed_attributes" multiplicity "*" private
@@ -403,6 +398,16 @@ ${members}}
 "
 	    classrelation_ref 150573 // displayed_attributes (<directional composition>)
 	  b multiplicity "1" parent class_ref 144941 // AttributeValue
+      end
+
+      classrelation 236077 // entity_type (<aggregation>)
+	relation 232109 o---
+	  a role_name "entity_type" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 236077 // entity_type (<aggregation>)
+	  b role_name "pools" multiplicity "1..*" private
+	    classrelation_ref 242733 // pools (<aggregation>)
       end
     end
 
@@ -575,17 +580,6 @@ ${members}}
 	relation_ref 137645 // <composition>
       end
 
-      attribute 134829 "name"
-	private explicit_type "string"
-	multiplicity "1"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       attribute 134957 "value"
 	private explicit_type "string"
 	multiplicity "1"
@@ -603,6 +597,15 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 138797 // <generalisation>
 	  b parent class_ref 136365 // AuxiliaryUnit
+      end
+
+      classrelation 236205 // definition (<directional aggregation>)
+	relation 232237 o-->
+	  a role_name "definition" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 236205 // definition (<directional aggregation>)
+	  b multiplicity "1..*" parent class_ref 179117 // StateVariableDefinition
       end
     end
 
@@ -1276,6 +1279,17 @@ ${members}}
 	    classrelation_ref 179629 // <dependency>
 	  b parent class_ref 137005 // ModulationArc
       end
+
+      attribute 182573 "name"
+	private explicit_type "string"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
     class 165165 "ProductionArc"
@@ -1378,8 +1392,16 @@ ${members}}
 	  b multiplicity "*" parent class_ref 128685 // EntityPoolNode
       end
 
-      classrelation 181805 // <association>
-	relation_ref 177965 // <association>
+      classrelation 249517 // crossref (<aggregation>)
+	relation 238893 o---
+	  a role_name "crossref" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 249517 // crossref (<aggregation>)
+	  b role_name "equivalence" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 249645 // equivalence (<aggregation>)
       end
     end
 
@@ -1433,16 +1455,12 @@ ${members}}
 	idl_decl ""
       end
 
-      classrelation 181677 // equivalence (<association>)
-	relation 177965 ----
-	  a role_name "equivalence" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 181677 // equivalence (<association>)
-	  b role_name "crossref" multiplicity "1" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 181805 // <association>
+      classrelation 249645 // equivalence (<aggregation>)
+	relation_ref 238893 // <aggregation>
+      end
+
+      classrelation 249901 // owning_map (<aggregation>)
+	relation_ref 239021 // <aggregation>
       end
     end
 
@@ -1529,6 +1547,10 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 229549 // owning_entity_type (<composition>)
+      end
+
+      classrelation 242733 // pools (<aggregation>)
+	relation_ref 232109 // <aggregation>
       end
     end
 

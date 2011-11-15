@@ -3,7 +3,7 @@ diagrams
   classdiagram_ref 134701 // MapView
     1327 718 100 18 0 0
   classdiagram_ref 128173 // MainView
-    1169 982 93 16 0 0
+    1169 982 93 16 0 356
   classdiagram_ref 168365 // SubmapNodeView
     938 801 100 18 0 0
   classdiagram_ref 174893 // LogicalOperatorView
@@ -12,7 +12,7 @@ diagrams
     938 801 100 18 0 0
   classdiagram_ref 148397 // ProcessView
     938 801 100 18 0 0
-  active  classdiagram_ref 175021 // StoichiometricProcessView
+  classdiagram_ref 175021 // StoichiometricProcessView
     1279 1115 100 18 0 0
   classdiagram_ref 141613 // StatefulEPNView
     938 801 100 18 0 0
@@ -26,8 +26,6 @@ diagrams
     1129 829 90 18 0 0
   classdiagram_ref 141869 // ComplexView
     1332 836 100 18 0 0
-  classdiagram_ref 188205 // StateVariableView
-    1332 836 100 18 35 0
   classdiagram_ref 194733 // AnnotationView
     906 679 100 18 12 0
   classdiagram_ref 168237 // CrossreferenceView
@@ -35,29 +33,31 @@ diagrams
   classdiagram_ref 194861 // TagView
     906 679 100 18 0 0
   classdiagram_ref 134957 // EntityPoolNodeView
-    906 679 100 14 0 343
+    906 679 100 14 0 200
   classdiagram_ref 201389 // CloneMarkerView
     906 679 100 18 0 0
-  classdiagram_ref 201517 // FluxArcView
-    906 679 100 18 0 0
+  active  classdiagram_ref 201517 // FluxArcView
+    1279 1115 100 18 0 0
   classdiagram_ref 201645 // ModulationArcView
     906 679 100 18 0 0
   classdiagram_ref 201773 // LogicArcView
     1279 1115 100 18 0 0
-  classdiagram_ref 208301 // EquivalenceArcView
-    1026 908 100 18 0 0
   classdiagram_ref 161453 // SBGNArcsView
     1833 1028 100 18 0 0
   classdiagram_ref 208429 // EntityDefinitionView
     1026 908 100 18 0 0
+  classdiagram_ref 214957 // SBGNNodeView
+    1026 908 100 18 0 0
+  classdiagram_ref 135085 // StatelessEPNView
+    1026 908 100 18 0 0
+  classdiagram_ref 188205 // StateVariableView
+    1026 908 100 18 0 0
 end
 show_stereotypes
-selected classdiagram_ref 175021 // StoichiometricProcessView
+selected classdiagram_ref 201517 // FluxArcView
 open
   classdiagram_ref 134701 // MapView
-  classdiagram_ref 141613 // StatefulEPNView
-  class_ref 165549 // EquivalenceArc
+  class_ref 158637 // Phenotype
   class_ref 178861 // EntityType
-  class_ref 179117 // StateVariableDefinition
 end
 end

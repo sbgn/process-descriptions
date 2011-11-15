@@ -1,75 +1,241 @@
 % $HeadURL$
 
-\chapter{Concepts and Glyphs}
+\chapter{Language Elements}
 \label{chp:glyphs}
 
 
 \section{Introduction}
 
-Although ultimately defined by its glyphs, \SBGNPDLone these glyphs
-represent concepts that are related to varying degrees and ultimately
-can be organised hierarchically. This provides us with a useful way or
-organising the glyphs and thinking about \PD{}.  Therefore in this
-chapter we describe the conceptual structure of \SBGNPDLone and place
-each glyph within this structure. For each glyph or concept we describe its
-physical appearance and define syntax and other usage rules. An
-overview of this hierarchy is provided in figure
-\ref{fig:sbgn_node_tax}.
+In this chapter we aim to describe the \PDl by describing its elements
+and underlying concepts in detail. The challenge in doing this is to
+provide enough detail to minimise ambiguity, but to also make the
+rules understandable to the users of the specification. An additional
+goal is to minimise duplication or rules as much as possible, which
+makes the specification more difficult to update in the future. To
+achieve this we took our lead from other successful standards: the
+Unified Modelling Language (UML) \cite{umlspec} which is a graphical
+language that has been used by tens of thousands of software
+developers for over decade to describe and software system; and the
+Systems Biology Markup Language (SBML) Level 3 Core specification
+\cite{sbmll3core} which is the ``original'' computational systems
+biological standard and after 10 years is firmly embedded in the
+scientific community it serves. In both these specifications the
+language is modelled in UML where each language element is described
+as an UML class. The specification defines each class in turn and in
+so doing describes how the language elements fit together (syntax) and
+how they are applied and their rules (semantics).  Since UML is a
+graphical language, the class definition also includes, where
+applicable to the language element, a description of description of
+the symbols used and guidelines about how the symbols should be drawn
+or laid out.
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=1.0\linewidth]{images/sbgnumloverview}
-\caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
-\label{fig:sbgn_node_tax}
-\end{center}
-\end{figure}
+Based on these specifications we will follow the following conventions
+in this chapter:
 
+\begin{itemize}
+\item The language will be described by a UML class model, a language
+  element of language concept being represented as a class.
+\item Each class will be defined in detail. The definition will
+  describe parent classes, attributes, interactions with other classes and any rules
+  the apply to that class.
+\item Where classes correspond to glyphs, or where appropriate, a
+detailed description of the glyph will be given.
+\item Any rules or concepts that apply to the language as a whole are
+  defined after the individual class definitions.
+\end{itemize}
+
+\section{Note on typographical convention}
+The concept represented by a glyph is written using a normal font,
+while a \glyph{glyph} means the SBGN visual representation of the
+concept. For instance ``a biological process is encoded by the SBGN PD
+\glyph{process}''. A UML class name is written in camel case and
+presented as \sbgnclass{CamelCaseClassName}. Attributes and
+associations are written in lower case, using the underscore to
+separate words: \attrib{an\_attribute}.
 
 \section{How to read the Language Specification}
 
-\begin{itemize}
-\item Organised alphabetically.
-\item use UML to describe the language elements.
-\item Some language elements decribe concepts and rules, some
-  describe elements that are represented by glyphs, other both.
-\item Class represent concepts.
-\item Classes have attributes which are required (R), optional (O), or can be
-  a collection of a number of values. In the latter case the permitted
-  of range is specified as:
+Here will describe the elements of the class definitions that are the
+core of the language specification. Each definition starts with an
+introduction describing the purpose of the class and what it
+represents conceptually or physically. It's context within the UML
+\PDl is then described by a detailed figure showing the class, its
+associations and its interaction with other key classes to help
+understand its context and any rules that are part of the
+definition.
+
+A number of terms are used within the specification that
+for clarity we define here:
+\begin{description}
+\item[class] A class describes a set of objects that share the same
+  specifications of features, constraints, and semantics (from the UML
+  specification \cite{umlspec}).
+\item[subclass] A class that inherits attributes, behaviour and
+  associations from another class. For example in figure
+  \ref{fig:umlexample} ``class C is a subclass of class A''.
+\item[superclass] A class that is an ancestor of another class. For
+  example in figure \ref{fig:umlexample} ``class A is a superclass of class B'''.
+\item[generalisation] A relationship in UML that defines a
+  subclass/superclass relationship.
+\item[association] A semantic relationship between two
+  classes. Typically at least one, but often both classes require the
+  other class to complete its definition.
+\item[instance] An instance is equivalent to an object --- a single
+  example or realisation of a class.
+\item[role] The role describes the nature of an association from the
+  perspective of one of the classes in that relationship.
+\item[cardinality] In the case of an attribute the number of separate
+  values the attribute can hold and for an association the number of
+  instances of each class that can be associated with each other. The
+  permitted cardinality values are:
   \begin{description}
-  \item[*] any number
-  \item[1..*] 1 or more
+  \item[R] Required (attributes only).
+  \item[O] Optional (attributes only).
+  \item[1] required - only one instance is permitted (association only).
+  \item[0..1] optional -  zero or one instance ir permitted (association only).
+  \item[1..*] at least 1 instance is required.
+  \item[*] any number of instances are permitted.
   \end{description}
-\item Associations are indicated by solid lines. If there is a black
-  diamont then this means the class the diamond is closest to contains
-  the other class. This means the contained class cannot exist without
-  the parent class, \ie if the containing class instance is destroyed
-  then the contained is too.
-\item open diamonds are a referencing association, the referenced
-  class can exist without the refernecing class.
-\item dependency indicates that there is an indirect association
-  between these classes.
-\item direction containment or referencing means that one side see the
-  other, but the other does not see the refernecing class.
-\item cardinality on the edges of the class refer to the distrant
-  class and indicate the follwoing:
-  \begin{description}
-  \item[1] mandatory that one instance is associated.
-  \item[*] optional - any number of instances permited in association
-  \item[1..*] mandatroy that at least 1 is associated
-  \item[0..1] Optional. instance is optional.
-  \end{description}
-  \item class defines all possible cases
-  \item instance is a single case of the class with attributes and
-    associates set. In SBGN case a glyph is an instance of a class.
-  \item Idea is that UML defines language elements and then the
-    notation sections specifies the graphical
-    representation. Equivalent to the grammar of a language and the
-    letters used to write it.
-  \item aim is to minimise duplication of rules as much as possible to
-    improve maintainability. Compromised between that and readability
-    and ease of understanding spec.
-\end{itemize}
+\item[type] A type constrains the values represented by an
+  attribute. For example an attribute of type \sbgnclass{int} must have a
+  value that is a integer.
+\end{description}
+
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{images/exampleuml}
+\caption{An example of the UML elements used in this
+  specification. The diagram is explained more fully in the text.}
+\label{fig:umlexample}
+\end{center}
+\end{figure}
+
+The UML class diagrams used will look something like the examples in
+figure \ref{fig:umlexample}. The UML elements in this diagram are the
+only ones used in this specification and again as an aid to
+understanding their meanings are described below:
+\begin{description}
+\item[class] See above for definition. The class symbol displays each
+  attribute and its type using the convention: ``attribute : type''.
+\item[generalisation (open triangle arrowhead)] Defines an inheritance
+  relationship where class C inherits the attributes, associations and
+  semantics of class A. This means that C also has attributes
+  \attrib{attrib1} and \attrib{attrib2} as well as an association
+called \attrib{container} to class B.
+\item[composite aggregation (black diamond)] The aggregating class
+  (A) is the one adjacent to the diamond and at the other end is the
+  contained class (B). This represents a whole/part
+  relationship where class B is part of class A and B cannot exist
+  independently of A. The cardinality and role of a given class are
+  shown at the opposite end of the association to it.
+\item[shared aggregation (open diamond)] The aggregating class (C) is
+  adjacent to the diamond and is connected to the other class (D) via
+  a solid line. Here there is a whole/part relationship, but there the
+  part (class D) can be shared with another class and can exists
+  independently of C.
+\item[navigability (black diamond anchor arrowhead)] If the association ends in an arrow, this
+  indicates the direction of the association. Here this should be
+  taken to mean that only one aside of the association (G) is `aware' of the relationship.
+\item[dependency] Indicates that the dependent class (E) requires the
+  other class adjacent to the arrow head (F) to satisfy its
+  specification or implementation.
+\end{description}
+
+The specification uses a number of primitive types that are used in
+attribute definitions. These are:
+\begin{description}
+\item[int] An integer.
+\item[string] A string of UniCode characters.
+\item[boolean] A Boolean value that can be either True or False.
+\item[object] A type that can be any value.
+\item[cv] A controlled vocabulary (see \ref{sec:CVs}).
+\item[enum] A value that must be chosen from on of an enumerated set
+  of predefined values.
+\end{description}
+
+
+\subsection{An example definition}
+
+Here we will provide an example specification. In this section is an
+overview of the class and its concepts.
+
+\subsubsection{Generalisation}
+
+This section defines the inheritance relationship(s) between this
+class and any other classes.
+
+\subsubsection{Attributes}
+
+Here any attributes specific to this class are defined and their
+meaning or purpose described. Attributes from superclasses are part of
+this classes definition but are not defined here explicitly.
+
+\subsubsection{Associations}
+
+Any associations are defined and described. Again associations from
+superclasses are not included here, but are part of this classes definition.
+
+\subsubsection{Notation}
+
+If the class corresponds to one or more glyphs then each glyph is
+described here. The glyph is described in words and graphically. In
+cases where several glyphs combine in complex ways usage examples are
+provided.
+
+\subsubsection{Layout Rules and Guidelines}
+
+In some cases the graphical layout of a glyph and is more complicated
+and requires some additional explanation. If this is the case this
+will be provided here.
+
+\subsubsection{Rules and Constraints}
+
+The semantics of the class are defined here in the form of itemised
+rules and constraints on the behaviour of the class. The scope of this
+section is ideally restricted to rules and behaviours the related to
+the class itself or classes it has some form of immediate relationship
+with (an association or dependency). In the later case the rules
+should relate to that relationship.
+
+\subsubsection{Changes from Previous Version}
+
+In order to help track changes between versions of the specification
+this section documents where this class definition differs from
+that in previous versions. Where appropriate ticket numbers for bugs
+or issues addressed in this version should be included.
+
+\begin{sidewaysfigure}
+% \begin{figure}[htb]
+% \begin{center}
+% \begin{sideways}
+\includegraphics[width=\textheight]{images/sbgnumloverview}
+%\end{sideways}
+\caption{A view of the UML model describing \PDl. This diagram shows
+  the classes and their inheritance relationships. No attributes or
+  associations between classes are shown to simplify the
+  diagram. These details are provided in the UML class diagrams
+  associated with most class definitions.}
+\label{fig:sbgnoverviewuml}
+% \end{center}
+% \end{figure}
+\end{sidewaysfigure}
+
+\section{Overview}
+
+The UML model describing the \PDl is summarised in figure
+\ref{fig:sbgnoverviewuml}. The model has a root class
+\sbgnclass{SBGNElement} for all language elements and care has been
+taken keep the model as simple as possible. This includes minimising
+the use of multiple inheritance and reflecting the directed graph
+structure inherent in the language with the \sbgnclass{SBGNNode} and
+\sbgnclass{SBGNArc} classes. All graphical elements that can be drawn
+directly onto a \PDm are glyphs (\sbgnclass{SBGNGlyph}) and all those
+that decorate glyphs are auxiliary units
+(\sbgnclass{AuxiliaryUnit}). There are a number of language rules that
+the model and the individual class specification cannot capture and
+these are dealt with later in the chapter after the class definitions
+in section \ref{sec:definitions}.
 
 \section{Definitions}
 \label{sec:definitions}
@@ -96,7 +262,7 @@ None
 \subsubsection{Attributes}
 
 \begin{attributes}
-  \attitem{id}{identifier}{R} uniquely identified all SBGN elements in
+  \attitem{id}{identifier}{R} uniquely identifies all SBGN elements in
   the same namespace.
 \end{attributes}
 
@@ -110,20 +276,17 @@ Not defined in the previous version.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/mapuml}
+  \includegraphics[width=0.55\textwidth]{images/mapuml}
   \caption{UML definition of Map and \sbgnclass{SBGNElement}.}
   \label{fig:mapuml}
 \end{figure}
 
 The \sbgnclass{Map} (figure \ref{fig:mapuml}) is a container that
-holds all the glyphs drawn in a \PDm. A \sbgnclass{Map} may contain a
-\classref{SubmapNode} in which case some of the detail is summarised
-in another \PDm. In this case the former is referred to as the ``Main
-Map'' and the latter the ``Submap''. A Main Map shares the same
-namespace as its Submap and uses the \classref{CrossReference}
-identify the interface between both maps. The details of Main Map and
-Submap linking semantics are described in more detail in section
-\ref{sec:submaplinkingsemantics}.
+holds all the glyphs (\classref{SBGNGlyph}) drawn in a \PDm. A map may
+represent a submap or a supermap and should comply with the rules set
+out in section \ref{sec:mapsubmaps}. The \attrib{elements} held should be
+logically unique and conform to the identity rules in section
+\ref{sec:uniquenessdefinition}.
 
 
 \subsubsection{Generalisation}
@@ -166,13 +329,14 @@ Not defined explicitly in previous versions.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/glyphauxuml}
-\caption{UML definition of the Auxiliary Unit and its subclasses.}
+  \includegraphics[width=0.9\textwidth]{images/glyphauxuml}
+\caption{UML definition of the \sbgnclass{SBGNGlyph} and its subclasses.}
   \label{fig:glyphauxuml}
 \end{figure}
 
- Glyphs are the fundamental building blocks of the \PDl and are the
-only elements that can be drawn directly on a map (\sbgnclass{Map}).
+The \sbgnclass{SBGNGlyph} is the fundamental building blocks of the
+\PDl. It is the only element that can be drawn directly on a map
+(\classref{Map}).
 
 \subsubsection{Generalisation}
 
@@ -239,9 +403,18 @@ Not defined in previous version.
 \subsection{SBGNNode}
 \label{defn:SBGNNode}
 
-The \sbgnclass{SBGNNode} (figure \ref{fig:glyphauxuml}) represents the nodes in the graph structure
-that is the core representation within \PDl. The nodes are connected
-to glyphs descended from \sbgnclass{SBGNArc} for form a direct graph.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.55\textwidth]{images/sbgnnodearcuml}
+\caption{UML definition of the \sbgnclass{SBGNNode} and
+  \sbgnclass{SBGNArc} classes.}
+  \label{fig:sbgnnodearcuml}
+\end{figure}
+ 
+The \sbgnclass{SBGNNode} (figure \ref{fig:sbgnnodearcuml}) represents
+the nodes in the graph structure that is the core representation
+within the \PDl. The nodes are connected to glyphs descended from
+\sbgnclass{SBGNArc} for form a direct graph.
 
 \subsubsection{Generalisation}
 
@@ -262,7 +435,12 @@ No additional attributes.
  
 \subsubsection{Rules and Constraints}
 
-No additional rules and constraints.
+\begin{itemize}
+\item The set of \sbgnclass{SBGNNode}s linked to this node via a
+  \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
+  different entity pools (as defined by \sbgnclass{EntityPoolNode})
+  and cannot include more than one clone of the same entity pool. 
+\end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
@@ -271,13 +449,14 @@ Not defined in the previous version.
 \subsection{SBGNArc}
 \label{defn:SBGNArc}
 
-The \sbgnclass{SBGNArc} (figure \ref{fig:glyphauxuml}) represents the arcs (also know as edges) in
-the graph structure that is the core representation within \PDl. The
-arc is connected to two nodes descended from \sbgnclass{SBGNNode}, one
-at each end. As the arc has a direction (directed arc) these nodes are
-by convention designated the \emph{out node} to indicate the arc is
-leaving the node and \emph{in node} to indicate that it is entering
-the node.
+The \sbgnclass{SBGNArc} (figure \ref{fig:sbgnnodearcuml}) represents
+the directed arcs (also know as directed edges) in the directed graph
+structure that is the core representation within \PDl. The arc is
+connected to two nodes descended from \sbgnclass{SBGNNode}, one at
+each end. As the arc has a direction these nodes are by convention
+designated the \attrib{out\_node} to indicate the nodes that the arc
+is leaving and \attrib{in\_node} to indicate the node that it is
+entering.
 
 \subsubsection{Generalisation}
 
@@ -305,6 +484,110 @@ No additional rules and constraints.
 Not defined in the previous version.
 
 
+\subsection{EntityType}
+\label{defn:EntityType}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/entitytypeuml}
+\caption{UML definition of the entity type and the state variable
+  definition. The diagram shows how these classes interact with the
+  entity pool, state variable and so influence
+  \sbgnclass{EntityPoolNode} logical identity.}
+  \label{fig:entitytypeuml}
+\end{figure}
+ 
+The \sbgnclass{EntityType} is one of the code concepts in the \PDl. It
+defines the type of entity that is instantiated by one or more
+entity pools in a \PDm. The \sbgnclass{EntityType} has associated
+state variable definitions (see figure \ref{fig:entitytypeuml}) and
+this enforces one of the core rules in the \PDl that once a state is
+associated with an entity type is must be used by all entity pools of
+that type.
+
+
+\subsubsection{Generalisation}
+
+None.
+
+\subsubsection{Attributes}
+
+\begin{attributes}
+  \attitem{name}{string}{R} The name that identifies the entity in the
+  \PDm. EPNs with the same label should be from the same entity. the
+  string cannot be empty and must start and end with a non-space
+  character. Any Unicode character is acceptable.
+  \attitem{natures}{cv}{*} The nature of the entity pool node as defined
+  by a controlled vocabulary. Zero, one or more values may be set, but
+  each one must belong to a different controlled vocabulary (see
+  section \ref{sec:CVs}).
+\end{attributes}
+
+
+\subsubsection{Associations}
+
+\begin{attributes}
+  \associtem{state\_definitions}{StateVariableDefintion}{*} The state
+  definitions associated with this type. They must be unique, but the
+  definitions may contain duplicate \attrib{name}s.
+\associtem{pools}{EntityPoolNode}{1..*} The entity pool nodes that
+used this type.
+\end{attributes}
+
+\subsubsection{Rule and Constraints}
+
+\begin{itemize}
+\item All instances of \sbgnclass{EntityPoolNode} associated with a
+  particular \sbgnclass{EntityType} must be of the same class.
+\item If an instance of \sbgnclass{EntityType} contains one or more
+  instances of \sbgnclass{StateVariableDefinition} then the
+  \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
+  \sbgnclass{StatefulEPN}.
+\end{itemize}
+
+\subsubsection{Changes from Previous Version}
+
+Although not defined explicitly in the previous version, this concept
+and the associated rules did exist in the language.
+
+\subsection{StateVariableDefinition}
+
+The \sbgnclass{StateVariableDefinition} defines the state variables
+used by an \sbgnclass{EntityType} and therefore those state variables
+that must exists in an \sbgnclass{EntityPoolNode} (see figure
+\ref{fig:entitytypeuml}).
+
+\subsubsection{Generalisation}
+
+None.
+
+\subsubsection{Attributes}
+
+\begin{attributes}
+  \attitem{name}{string}{O} The name that of the state variable. This
+  is optional, but if defined cannot be an empty string or just white
+  space characters. It should also start with an alpha-numeric
+  character and  end with a non-space character. It should not contain
+  a `@' character.
+\end{attributes}
+
+
+\subsubsection{Associations}
+
+\begin{attributes}
+  \associtem{owning\_entity\_type}{EntityType}{1} The
+  \sbgnclass{EntityType} that owns this definition.
+\end{attributes}
+
+\subsubsection{Rule and Constraints}
+
+None.
+
+\subsubsection{Changes from Previous Version}
+
+Although not defined explicitly in the previous version, arguably this
+concept did exist in the language.
+
 \subsection{EntityPoolNode}
 \label{sec:EPNs}\label{defn:EntityPoolNode}\label{sec:EPN}
 
@@ -320,17 +603,6 @@ reticulum and calcium ions in the cytosol belong to different entity
 pools when it comes to representing calcium release from the
 endoplasmic reticulum.
 
-% The \PD contains five glyph types representing classes of material
-% entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}),
-% \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule}
-% (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic})
-% and \glyph{complex} (\sect{complex}).  (Specific types of
-% macromolecules, such as protein, RNA, DNA, polysaccharide, and
-% specific simple chemicals are not defined by \PD but may be part of
-% future levels of SBGN.)  In addition to the material entities, \PD
-% represents a conceptual entities: \glyph{perturbing agent} (\sect{perturbing
-%   agent}).
-
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.85\textwidth]{images/epnuml}
@@ -338,11 +610,16 @@ endoplasmic reticulum.
   \label{fig:epnuml}
 \end{figure}
  
-The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the common
-ancestor of all these glyphs and defines attributes that are common to
-all its descendants. It must belong to a compartment (c.f.\, section
-\ref{sec:compartment})  and can contain a clone marker if it is
-cloned. Note that not all EPNs can be cloned.
+The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the
+definition of the entity pool and it shares an \sbgnclass{EntityType}
+with other identical entities. An instance of an entity pools is
+therefore distinguished from other pools with the same entity type by
+its \attrib{cardinality}, its \attrib{owning\_compartment} and the
+\attrib{value}s of its \sbgnclass{SatteVariable}s (where
+appropriate). It must belong to a compartment or be associated with
+the map (c.f.\, section \ref{sec:compartment}) and can contain a clone
+marker if it is cloned (see section \ref{sec:epnuniqueness})--- note
+that not all EPNs can be cloned.
 
 \subsubsection{Generalisation}
 
@@ -353,15 +630,8 @@ cloned. Note that not all EPNs can be cloned.
 \subsubsection{Attributes}
 
 \begin{attributes}
-  \attitem{label}{string}{R} The name that identifies the entity in the
-  \PDm. EPNs with the same label should be from the same entity. the
-  string cannot be empty and must start and end with a non-space
-  character. Any Unicode character is acceptable.
   \attitem{cardinality}{int}{R} The number of copies of the entity. Must
   be a positive non-zero integer.
-  \attitem{natures}{cv}{O} The nature of the entity pool node as defined
-  by a controlled vocabulary. Zero, one or more values may be set, but
-  each one must belong to a different controlled vocabulary.
 \end{attributes}
 
 \subsubsection{Associations}
@@ -390,23 +660,29 @@ cloned. Note that not all EPNs can be cloned.
 \item If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
   as a multimer.
 \item If the EPN is drawn directly on a \glyph{Map} then
- \attrib{owning\_compartment} is assigned to an invisible default
- compartment.
- \attrib{nature} can only use the material type (section
+  \attrib{owning\_compartment} is not set. We interpret this as
+  belonging to an invisible default compartment.
+ \item \attrib{natures} can only use the material type (section
  \ref{sec:material-types-cv}), conceptual type (section \ref{sec:conceptual-types-cv}) or physical
  characteristics (section \ref{sec:physical-characteristics-cv}) controlled vocabularies.
 \item The appropriate subclass of \sbgnclass{CloneMarker} must be used
   to distinguish logically identical instances of this class.
+\item the \sbgnclass{EntityPoolNode} must be associated with at least
+  one \classref{SBGNArc} (degree $> 0$).
+\item All \sbgnclass{StateVariableDefinition}s associated with the
+  \sbgnclass{EntityType} must have an associated
+  \sbgnclass{StateVariable}.
 \end{itemize}
 
 \subsubsection{Notation}
 
-Although there is no direct graphical representation of this class
-this class does affect the appearance of the
-\sbgnclass{AttributeValue} and its associated glyph the \glyph{Unit of
-  Information}. The \glyph{Unit of Information} can be used to present
-the \attrib{cardinality} and \attrib{natures} attributes. These used
-the following codes to indicate which attribute is being presented''
+Although there is no direct graphical representation of this class the
+appearance of the \sbgnclass{AttributeValue} and its associated glyph
+the \glyph{Unit of Information} us common to all subclasses so it is
+convenient to describe it here. The \sbgnclass{AttributeValue} can be
+used to present the \attrib{cardinality} and \attrib{natures} of an
+EPN subclasses. These used the following codes to indicate which attribute
+is being presented:
 
 \begin{center}
   \begin{itemize}\setlength{\parskip}{0ex}
@@ -420,7 +696,11 @@ the following codes to indicate which attribute is being presented''
 
 \subsubsection{Changes from Previous Version}
 
-Not defined in the previous version.
+Not defined explicitly in the previous version, but the concept of the
+EPN and its semantics existed. The main change to previous semantics
+is that of the \attrib{natures}, which didn't formally exist before,
+but which now must contain a unique set of controlled vocabularies and
+is part of the logical key of the \sbgnclass{EntityPoolNode}.
 
 \subsection{Empty Set}
 \label{sec:sourceSink}
@@ -439,12 +719,13 @@ sink''.  Yet another example is that one may need to represent an input
 representing a transport process from a source (resp. to a target).
 
 For these and other situations, SBGN defines a single glyph to handle
-these situations representing the involvement of an external pool of entities.  The symbol
-used in SBGN is borrowed from the mathematical symbol for ``empty set'',
-but it is important to note that it does not actually represent a true
-absence of everything or a physical void---it represents the absence of the
-corresponding structures in the model, that is, the fact that the
-external pool is conceptually outside the scope of the map.
+these situations representing the involvement of an external pool of
+entities.  The symbol used in SBGN is borrowed from the mathematical
+symbol for ``empty set'', but it is important to note that it does not
+actually represent a true absence of everything or a physical
+void---it represents the absence of the corresponding structures in
+the model, that is, the fact that the external pool is conceptually
+outside the scope of the map.
 
 A frequently asked question is, why bother having an explicit symbol at
 all?  The reason is that one cannot simply use an arc that does not
@@ -463,9 +744,9 @@ sinks is critical.
 \end{figure}
 
 The definition of the \glyph{Empty Set} is shown in figure
-\ref{fig:emptysetuml}. The empty set is not an EPN as it does not
+\ref{fig:emptysetuml}. The empty set is not a subclass of \sbgnclass{EntityPoolNode} as it does not
 represent a single pool of entities and does not share any of the
-other attributes of an EPN, nor does it belong to a particular
+other attributes of an \sbgnclass{EntityPoolNode}, nor does it belong to a particular
 compartment.
 
 \subsubsection{Generalisation}
@@ -488,22 +769,16 @@ No additional associations.
 \item  All instances of \glyph{Empty Set} can be regarded as identical
 therefore not special decoration is used to indicate replication on
 the map.
+\item the \sbgnclass{EmptySet} must be associated with at least
+  one \classref{SBGNArc} (degree $> 0$).
 \end{itemize}
 
 \subsubsection{Notation}
 
 \paragraph{Glyph: \glyph{Empty Set}}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 0.1\textwidth]{images/sourceSink}
-  \caption{The \glyph{empty set} glyph.}
-  \label{fig:sourceSink}
-\end{figure}
-
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000291 ! empty set
-\glyphAux None
 \glyphContainer Represented by the mathematical symbol for ``empty
 set'', that is, a circle crossed by a bar linking the upper-right and
 lower-left corners of an invisible square drawn around the circle ($\emptyset$).
@@ -512,12 +787,20 @@ and only one edge in a map.
 \glyphLabel None
 \end{glyphDescription}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.1\textwidth]{images/sourceSink}
+  \caption{The \glyph{empty set} glyph.}
+  \label{fig:sourceSink}
+\end{figure}
+
 \subsubsection{Changes from Previous Version}
 
-The \sbgnclass{EmptySet} and \glyph{Empty Set} glyph has replaced the \glyph{Source} and
-\glyph{Sink} glyphs. This symbols used remains the same, but the
-underlying concept has changed. The \glyph{Source} and \glyph{Sink}
-glyphs where types of EPN.
+The \sbgnclass{EmptySet} and \glyph{Empty Set} glyph has replaced the
+\glyph{Source} and \glyph{Sink} glyphs. This symbols used remains the
+same, but the underlying concept has changed. The \glyph{Source} and
+\glyph{Sink} glyphs where types of EPN, representing single entity
+pools, while the \sbgnclass{EmptySet} is not.
 
 \subsection{StatelessEPN}
 \label{defn:StatelessEPN}
@@ -525,13 +808,14 @@ glyphs where types of EPN.
 The \sbgnclass{StatelessEPN} (figure \ref{fig:statelessepnuml})
 represents a pool where the entities do not change `state'. In
 other-words the entities do not undergo any physical change that is
-useful to record in a \PDm. Therefore these glyphs cannot be assigned
+useful to record in a \PDm. Therefore they cannot be assigned
 a state-variable.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.75\textwidth]{images/statelessepnuml}
-\caption{UML definition of the stateless entity pool node and its descendant glyphs.}
+  \caption{UML definition of the stateless entity pool node and its
+    descendant glyphs.}
   \label{fig:statelessepnuml}
 \end{figure}
 
@@ -562,13 +846,11 @@ Not defined in the previous version.
 \subsection{Simple chemical}
 \label{sec:simpleChemical}
 
-A simple chemical in SBGN is defined as the opposite of a
-macromolecule (\sect{macromolecule}): it is a chemical compound that
-is \emph{not} formed by the covalent linking of pseudo-identical
-residues.  Examples of simple chemicals are an atom, a monoatomic ion,
-a salt, a radical, a solid metal, a crystal, etc. The complex can be
-represented by a monomeric glyph (\glyph{Simple chemical monomer}) and
-a multimeric glyph (\glyph{Simple chemical multimer}).
+A \sbgnclass{SimpleChemical} is the `opposite' of a macromolecule
+(\sect{macromolecule}): it is a chemical compound that is \emph{not}
+formed by the covalent linking of pseudo-identical residues.  Examples
+of simple chemicals are an atom, a monoatomic ion, a salt, a radical,
+a solid metal, a crystal, etc.
 
 \subsubsection{Generalisation}
 
@@ -590,59 +872,75 @@ No additional rules and constraints.
 
 \subsubsection{Notation}
 
+There are two glyphs associated with \sbgnclass{SimpleChemical}. The
+first \glyph{simple chemical monomer} is used when \attrib{cardinality} $= 1$
+and the second \glyph{simple chemical multimer} is used when
+\attrib{cardinality} $> 1$.
+
 \paragraph{Glyph: \glyph{Simple chemical monomer}}
 
-\begin{figure}[htb]
+\begin{glyphDescription}
+  \glyphSboTerm SBO:0000247 ! simple chemical \glyphContainer A
+  \glyph{simple chemical} is represented by a `stadium' symbol: a
+  circle split in two with a rectangle inserted between them (see
+  figure \ref{fig:simpleChemical}). If desired the rectangle can have
+  zero length and the symbol is then identical to a circle
+  (\fig{simpleChemical}). To avoid confusion with the Unspecified
+  Entity (\ref{sec:unspecifiedEntity}), this form of the glyph must remain a
+  circle and cannot be deformed into an eclipse.
+
+  \glyphLabel The identification of the \glyph{simple chemical} is
+  carried by an unbordered box containing a string of characters.  The
+  characters may be distributed on several lines to improve
+  readability, although this is not mandatory.  The label box has to
+  be attached to the center of the circular container.  The label is
+  permitted to spill outside the container.
+\end{glyphDescription}
+
+\begin{figure}[H]
   \centering
   \includegraphics[scale = 0.3]{images/simpleChemical}
-  \caption{The \PD glyph for \glyph{simple chemical}.}
+  \caption{The \PD glyph for \glyph{simple chemical monomer}. The stadium
+    form and circular forms are shown, as are the cloned forms of the glyph.}
   \label{fig:simpleChemical}
 \end{figure}
 
-\begin{glyphDescription}
-\glyphSboTerm SBO:0000247 ! simple chemical
-\glyphContainer A \glyph{simple chemical} is represented by a circular
-container, as depicted in \fig{simpleChemical}. To avoid confusion
-with the Unspecified Entity (\ref{sec:unspecifiedEntity}), this glyph
-must remain a circle and cannot be deformed into an eclipse.
-\glyphLabel The identification of the \glyph{simple chemical} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the circular container.  The label is permitted to spill outside the container.
-\glyphAux 
-\end{glyphDescription}
-
 \paragraph{Glyph: \glyph{Simple chemical multimer}}
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
-  \caption{The \PD glyph for \glyph{multimer}.}
-  \label{fig:multimer}
-\end{figure}
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000421 ! multimer of simple chemicals
-\glyphContainer  A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
-\glyphLabel A \glyph{multimer} has no identity on its own.  However, the first of the monomers carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
-\glyphAux 
+\glyphContainer  A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{simpleChemicalMultimer} illustrates the glyph.
+\glyphLabel The multimer carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
 \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
+  \caption{The \PD glyph for \glyph{simple chemical multimer}. The
+    figures show the stadium and circular forms, and their cloned variants.}
+  \label{fig:simpleChemicalMultimer}
+\end{figure}
 
 \subsubsection{Changes from Previous Version}
 
-The glyphs used for the \sbgnclass{SimpleChemical} have been
-changed. Previously the glyph was a circle.
+The glyphs used for the \sbgnclass{SimpleChemical} have been changed
+to the stadium glyph. Previously the glyph was a circle. To maintain
+compatibility with previous versions the stadium symbol can be drawn
+without straight horizontal elements so that it becomes a circle.
 
 \subsection{UnspecifiedEntity}
 \label{sec:unspecifiedEntity}
 
-The simplest type of EPN is the \sbgnclass{UnspecifiedEntity}: one whose
-type is unknown or simply not relevant to the purposes of the map.
-This arises, for example, when the existence of the entity has been
-inferred indirectly, or when the entity is merely a construct
-introduced for the needs of a map, without direct biological
-relevance.  These are examples of situations where the
-\sbgnclass{UnspecifiedEntity} is appropriate.  (Conversely, for
-cases where the identity of the entities composing the pool \emph{is}
-known, there exist other, more specific glyphs described elsewhere in
-the specification.)
+The simplest type of \sbgnclass{EntityPoolNode} is the
+\sbgnclass{UnspecifiedEntity} --- one whose type is unknown or simply
+not relevant to the purposes of the map.  This arises, for example,
+when the existence of the entity has been inferred indirectly, or when
+the entity is merely a construct introduced for the needs of a map,
+without direct biological relevance.  These are examples of situations
+where the \sbgnclass{UnspecifiedEntity} is appropriate.  (Conversely,
+for cases where the identity of the entities composing the pool
+\emph{is} known, there exist other, more specific glyphs described
+elsewhere in the specification.)
 
 \subsubsection{Generalisation}
 
@@ -662,7 +960,8 @@ No additional associations.
 
 \begin{itemize}
 \item The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
-  1$. This means there is no multimer glyph.
+  1$\query. This means there is no multimer glyph.
+\item It cannot have a natures\query, therefore \attrib{natures} must \textbf{not} be set.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -731,13 +1030,6 @@ No additional attributes.
 
 \paragraph{Glyph: \glyph{Perturbing agent}}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{images/perturbing_agent}
-  \caption{The \PD glyph for \glyph{perturbing agent}.}
-  \label{fig:perturbing agent}
-\end{figure}
-
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000405 ! perturbing agent
 \glyphContainer A \glyph{perturbing agent} is represented by a modified hexagon
@@ -747,13 +1039,14 @@ unbordered box containing a string of characters.  The characters can be
 distributed on several lines to improve readability, although this is not
 mandatory.  The label box must be attached to the center of the
 \glyph{perturbing agent} container.  The label may spill outside of the container.
-% \glyphAux A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).
-% \glyphRules%
-% \begin{inparaenum}
-% \item A \glyph{perturbing agent} can optionally carry one or more \glyph{units of information} (\sect{unitInfo}).  A controlled vocaulary is available to describing the physical characteristic of the perturbing agent (see \sect{physical-characteristics-cv}).  
-% \end{inparaenum}
-% \glyphCloning Yes
 \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/perturbing_agent}
+  \caption{The \PD glyph for \glyph{perturbing agent}.}
+  \label{fig:perturbing agent}
+\end{figure}
 
 \subsubsection{Changes from Previous Version}
 
@@ -765,17 +1058,15 @@ No changes from pervious version.
 Stateful entity pools can undergo physical changes, for example
 chemical modifcation or conformational change, which we wish to record
 in a \PDm. This information is captured via the
-\sbgnclass{StateVariable}, as can be seen in figure
-\ref{fig:statefulepnuml}). Replicated \sbgnclass{StatefulEPS}s are
-indicated by the \glyph{Labelled Clone Marker} decoration. Note that
-not all glyphs that are descendants of \sbgnclass{StatefulEPN} can be
-cloned at all.
+\sbgnclass{StateVariable} (as can be seen in figure
+\ref{fig:statefulepnuml}). The \sbgnclass{LabellecCloneMarker} must be
+used to indicated that the \sbgnclass{StatefulEPN} is cloned.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.75\textwidth]{images/statefulepnuml}
-\caption{UML definition of the stateful entity pool node and its
-  descendant glyphs and its association with state variables.}
+\caption{UML definition of the stateful entity pool node: showing its
+  descendants and its association with state variables.}
   \label{fig:statefulepnuml}
 \end{figure}
 
@@ -793,25 +1084,22 @@ No additional attributes.
 
 \begin{itemize}
 \associtem{states}{StateVariable}{*} The state variables
-  associated with this EPN.
+  that belong to this class.
 \end{itemize}
 
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
-\item Two or more state variables with the same name are
-  permitted.
-\item State variables with no name set are permitted.
-\item A \sbgnclass{LabelledCloneMaker} must be used to indicate
-  cloning.
-\item \sbgnclass{StatefulEPN}s that are identical and so decorated
-  with a \sbgnclass{LabelledCloneMarker} must use the same 
-  label to indicate that they are part of the same `clone'.
+\item State variables do not need to be logically unique, therefore
+  two or more state variables with the same name are permitted.
+\item The \sbgnclass{LabelledCloneMarker} must be used to indicate
+  cloning for instances of \sbgnclass{StatefulEPN} and its subclasses,
+  with a must use the same 
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
-Not defined in the previous version.
+Not defined explicitly in the previous version.
 
 \subsection{Macromolecule}
 \label{sec:macromolecule}
@@ -826,10 +1114,7 @@ instead, \SBGNPDLone defines only one glyph for all macromolecules.
 The same glyph is to be used for a protein, a nucleic acid, a complex
 sugar, and so on.  The exact nature of a particular macromolecule in a
 map is then clarified using its label and decorations, as will become
-clear below.  (Future levels of SBGN may subclass the
-\glyph{macromolecule} and introduce different glyphs to differentiate
-between types of macromolecules). This has two associated glyphs. One
-where 
+clear below.
 
 \subsubsection{Generalisation}
 
@@ -858,15 +1143,6 @@ and the second \glyph{Macromolecule multimer} is used when
 
 \paragraph{Glyph: \glyph{Macromolecule monomer}}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 3in]{images/macromolecule}
-  \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
-    unadorned on the left, and with with an additional state variable and a
-    unit of information in the right and the cloned form on the right.}
-  \label{fig:macromolecule}
-\end{figure}
-
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000245 ! macromolecule 
 \glyphContainer A macromolecule is represented by a rectangular container with rounded
@@ -874,22 +1150,55 @@ corners, as illustrated in \fig{macromolecule}.
 \glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 \end{glyphDescription}
 
-\paragraph{Glyph: \glyph{Macromolecule multimer}}
-
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 3.0in]{images/macromolMultimer}
-  \caption{The \PD glyph for \glyph{macromolecule multimer}, shown plain and
-    unadorned on the left, and with with an additional state variable and a
-    unit of information on the right.}
-  \label{fig:macromolMultimer}
+  \includegraphics[width = 3.5in]{images/macromolecule}
+  \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
+    unadorned on the left, and with an additional state variable and a
+    unit of information in the middle and the cloned form on the right.}
+  \label{fig:macromolecule}
 \end{figure}
+
+\paragraph{Glyph: \glyph{Macromolecule multimer}}
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000420 ! multimer of macromolecules
 \glyphContainer A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{macromolMultimer} illustrates the glyph.
 \glyphLabel As monomer
 \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 3.5in]{images/macromolMultimer}
+  \caption{The \PD glyph for \glyph{macromolecule multimer}, shown plain and
+    unadorned on the left, and with an additional state variable and a
+    unit of information in the right and the cloned form on the right.}
+  \label{fig:macromolMultimer}
+\end{figure}
+
+\paragraph{Usage Examples}
+\label{sec:CplxEPNs}
+
+In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
+
+\fig{example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/macromolecule-CaMKII}
+  \caption{An example representation of calcium/calmodulin kinase II.}
+  \label{fig:example-camkii}
+\end{figure}
+
+\fig{example-glur} represents the glutamate receptor in the open state, with both phosphorylation and glycosylation.  The entity carries two functional domains, the ligand-binding domain and the ion pore, and its chemical nature is precided.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{examples/macromolecule-GluR}
+  \caption{An example of a glutamate receptor in the open state.}
+  \label{fig:example-glur}
+\end{figure}
+
 
 \subsubsection{Changes from Previous Version}
 
@@ -898,10 +1207,11 @@ No changes from the previous version.
 \subsection{NucleicAcidFeature}
 \label{sec:genetic}
 
-The \sbgnclass{NucleicAcidFeature} represents a fragment of a macromolecule carrying genetic information.
-A common use for this construct is to represent a gene or transcript.
-The label of this EPN and its \attrib{nature} are often
-important for making the purpose clear to the reader of a map.
+The \sbgnclass{NucleicAcidFeature} represents a fragment of a
+macromolecule carrying genetic information.  A common use for this
+construct is to represent a gene or transcript.  The label of this EPN
+and its \attrib{natures} are often important for making the purpose
+clear to the reader of a map.
 
 \subsubsection{Generalisation}
 
@@ -934,20 +1244,14 @@ This glyphs represents a monomeric macromolecule.
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000354 !  informational molecule segment
-\glyphContainer A \glyph{nucleic acid feature} is represented by a rectangular container whose bottom half has rounded corners, as shown in \fig{genetic}. This design reminds that we are fundamentally dealing with a unit of information, but this information is carried by a macromolecule.
+\glyphContainer A \glyph{nucleic acid feature} is represented by a rectangular container whose bottom half has rounded corners, as shown in \fig{genetic}.
 \glyphLabel The identity of a particular \glyph{Nucleic acid feature} is established by a label placed in an unordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
-%\glyphAux A \glyph{nucleic acid feature} can carry state variables (\sect{stateVariable}) that add information about its precise state.  The state of a \glyph{nucleic acid feature} is therefore defined as the vector of all its state variables. 
-
-%A \glyph{nucleic acid feature} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  These can characterize a \glyph{nucleic acid feature}'s domain, such as a binding site, or an exon.  Particular \glyph{units of information} carry the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of the \glyph{nucleic acid feature}. 
-
-%\glyphCloning Labeled Clone Marker
-
 \end{glyphDescription}
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 3in]{images/genetic}
+  \includegraphics[width = 3.5in]{images/genetic}
   \caption{The \PD glyph for \glyph{nucleic acid feature monomer}, shown plain and
     unadorned on the left and with an additional state variable and a
     unit of information in the middle and the cloned form on the right.} 
@@ -962,22 +1266,15 @@ This glyphs represents a multimeric macromolecule.
 
 \glyphSboTerm SBO:0000419 ! multimer of informational molecule segments 
 
-\glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{multimer} illustrates the glyph.
+\glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{genetic-multimer} illustrates the glyph.
 
 \glyphLabel As monomer glyph.
-
-%\glyphAux A \glyph{nucleic acid feature} can carry state variables (\sect{stateVariable}) that add information about its precise state.  The state of a \glyph{nucleic acid feature} is therefore defined as the vector of all its state variables. 
-
-%A \glyph{nucleic acid feature} can also carry one or several \glyph{units of information} (\sect{unitInfo}).  These can characterize a \glyph{nucleic acid feature}'s domain, such as a binding site, or an exon.  Particular \glyph{units of information} carry the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of the \glyph{nucleic acid feature}. 
-
-%A \glyph{nucleic acid feature} may also carry a \glyph{clone marker}
-%(\sect{cloneMarker}).
 
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 3in]{images/geneticMultimer}
+  \includegraphics[width = 3.5in]{images/geneticMultimer}
   \caption{The \PD glyph for \glyph{nucleic acid feature multimer}, shown plain and
     unadorned on the left and with an additional state variable and a
     unit of information in the middle and the cloned form on the right.} 
@@ -1006,7 +1303,7 @@ composition of the complex.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.65\textwidth]{images/complexsubunituml}
+  \includegraphics[width = 0.75\textwidth]{images/complexsubunituml}
   \caption{The UML definition of the \sbgnclass{Complex} and its
     associated \sbgnclass{subunit}s. In particular this describes organisation
    of the state variables that belong to both the subunit, but also
@@ -1035,25 +1332,13 @@ No additional attributes
 \subsubsection{Special Rules and Constraints}
 
 \begin{itemize}
-\item Once a set of subunits are defined then they are always defined.
+\item Once a set of subunits are defined for an \sbgnclass{Complex}
+  with a given \sbgnclass{EntityType}, then they must be used by every
+  instance using that entity type.\query.
 \item The set of subunits in the Complex does not identify it. One or
   more Complexes that contain the same set of subunits, but have
   different labels are \textbf{not} identical.
 \end{itemize}
-
-% \begin{glyphDescription}
-% \glyphName \sbgnclass{Complex}
-% \glyphSboTerm Not defined
-% \begin{glyphIdentity}
-%   \attitem{subunits}{\sbgnclass{Subunit}} The subunits that describe
-%   the composition of this complex.
-%  \end{glyphIdentity}
-% \glyphRules
-% \begin{itemize}
-%   \item Once a set of subunits are defined then they are always
-%     defined.
-% \end{itemize}
-% \end{glyphDescription}
 
 \subsubsection{Notation}
 
@@ -1064,17 +1349,8 @@ greater than that.
 
 \paragraph{\glyph{Complex Monomer}}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=3.5in]{images/complexGlyph}
-  \caption{The \glyph{complex} glyph.}
-  \label{fig:complex}
-\end{figure}
-
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000253 ! non-covalent complex
-\glyphAux A \glyph{complex} can carry state variables (see \sect{stateVariable}).  The state of a complex is defined by the set of the all its state variable and all the state variables of all its components.  A \glyph{complex} can also carry one or several \glyph{units of information} (see \sect{unitInfo}). A \glyph{complex} may carry a \glyph{clone marker} (see \sect{cloneMarker}).
-\glyphCloning Labeled Clone Marker
 \glyphContainer A \glyph{complex} possesses its own container box surrounding the juxtaposed container boxes of its components.  This container box is a rectangle with cut-corners (an octagonal box with sides of two different lengths).  The size of the cut-corners are adjusted so that there is no overlap between the container and the components.  The container boxes of the components must not overlap.
 \glyphLabel The identification of a \glyph{named complex} is carried
 by an unbordered box containing a string of characters.  The
@@ -1086,20 +1362,18 @@ Complex contains Subunit glyphs then the label may be positions to
 optimise the clarity and avoid overlapping.
 \end{glyphDescription}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3.5in]{images/complexGlyph}
+  \caption{The \glyph{complex} glyph.}
+  \label{fig:complex}
+\end{figure}
+
 
 \paragraph{\glyph{Complex Multimer}}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 3.5in]{images/complexMultimerGlyph}
-  \caption{The \glyph{Complex Multimer} glyph.}
-  \label{fig:complexMultimer}
-\end{figure}
-
  \begin{glyphDescription}
 \glyphSboTerm SBO:0000418 ! multimer of complexes
-\glyphAux As monomer.
-\glyphCloning Labeled Clone Marker
 \glyphContainer A \glyph{Complex Multimer} is represented by two
 identical \glyph{Complex} containers shifted horizontally and
 vertically and stacked one on top of the other.  \fig{complexMultimer}
@@ -1107,29 +1381,12 @@ illustrates the glyph.
 \glyphLabel As monomer
 \end{glyphDescription}
 
-\paragraph{Examples of complex EPNs}
-\label{sec:CplxEPNs}
-
-In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
-
-\fig{example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
-
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{examples/macromolecule-CaMKII}
-  \caption{An example representation of calcium/calmodulin kinase II.}
-  \label{fig:example-camkii}
+  \includegraphics[width = 3.5in]{images/complexMultimerGlyph}
+  \caption{The \glyph{Complex Multimer} glyph.}
+  \label{fig:complexMultimer}
 \end{figure}
-
-\fig{example-glur} represents the glutamate receptor in the open state, with both phosphorylation and glycosylation.  The entity carries two functional domains, the ligand-binding domain and the ion pore, and its chemical nature is precided.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{examples/macromolecule-GluR}
-  \caption{An example of a glutamate receptor in the open state.}
-  \label{fig:example-glur}
-\end{figure}
-
 
 \subsubsection{Layout Rules and Guidelines}
 
@@ -1153,40 +1410,16 @@ In this section, we provide examples of Entity Pool Node representations drawn u
 \subsection{Subunit}
 \label{defn:Subunit}\label{sec:subunits}
 
-A complex can optionally be decorated with subunit symbols
-(\sbgnclass{Subunit} see figure \ref{fig:complexsubunituml}) to
-describe the composition of the complex. The symbols available are
-equivalent to those used by the EPN glyphs including the
-\glyph{complex}. Therefore it is possible to describe complexes within
-complexes. Subunits may contain labels. 
-
-\begin{center}
-\tablecaption{Mapping between the subunit types and the glyphs used to
-  represent it. These are essentially the EPN glyphs described in this document.}
-\label{tab:subunit types}
-\begin{footnotesize}
-\tablefirsthead{\hline
-  Subunit type & Monomer Glyph & Multimer Glyph\\\hline}
-\tablehead{\hline
-\multicolumn{3}{|l|}{\small\sl continued from previous page}\\
-\hline\hline
-  Subunit type & Monomer Glyph & Multimer Glyph\\\hline\hline}
-\tabletail{\hline
-\multicolumn{3}{|r|}{\small\sl continued on next page}\\
-\hline}
-\tablelasttail{\hline}
-\begin{supertabular}{|l|l|l|}\hline
-SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
-  Chemical Multimer}\\\hline
-UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\\hline
-PerturbingAgent & \glyph{Perturbing Agent} & None\\\hline
-Macromolecule & \glyph{Macromolecule Monomer} &
-\glyph{Macromolecule Multimer}\\\hline
-Nucleic\-Acid\-Feature & \glyph{Nucleic Acid Feature Monomer} & \glyph{Nucleic Acid Feature Multimer}\\\hline
-Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\\hline
-\end{supertabular}
-\end{footnotesize}
-\end{center}
+The \sbgnclass{Subunit} is used to describe the composition of the
+\classref{Complex}. A complex can optionally be decorated with one or
+more subunits, which represent the types of \classref{EntityPoolNode}
+that may aggregate to form a complex. As we can see from the UML
+representation (figure \ref{fig:complexsubunituml}) the
+\sbgnclass{Subunit} is an auxiliary unit that decorates the
+\sbgnclass{Complex} and does not represent an entity pool directly. In
+addition it does not mimic the \sbgnclass{EntityPoolNode} class
+hierarchy (\sbgnclass{Subunit}, but rather uses the
+\attrib{subunit\_type} attribute to indicate the type of subunit.
 
 \subsubsection{Generalisation}
 
@@ -1223,7 +1456,6 @@ Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\\hline
 \item State variables with no name set are permitted.
 \item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
   below apply.
-\item Each state variable actually belongs to the Complex.
 \item The subunit defines a namespace for its state variables, e.g.\,
   subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
   ``B'' assigned the same state variable can be distinguised as
@@ -1233,16 +1465,56 @@ Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\\hline
 \item If the subunit has a cardinality $>1$ then this should be
   displayed by the \classref{AttributeValue}.
 \item If \attrib{natures} contains one or more instances then these
-  must be displayed via a \sbgnclass{AttributeValue}.
+  must be displayed via an \sbgnclass{AttributeValue}.
 \end{itemize}
 
 \subsubsection{Notation}
 
-The example in figure \fig{complexSubunits} illustrates the use of
-subunits in a complex shows an equivalent compex without
+The subunit symbol used for the \glyph{subunit} glyph varies depending
+on the \attrib{subunit\_type} and \attrib{cardinality}. The symbols
+available are equivalent to those used by the EPN glyphs including the
+\glyph{complex}. Therefore it is possible to describe complexes within
+complexes. The mapping between these and the symbol used is shown
+table \ref{tab:subunit types}. Not that subunits may contain labels
+corresponding to their \attrib{name}.
+
+\begin{center}
+  \tablecaption{Mapping between the \attrib{subunit\_type},
+    \attrib{cardinality} values of \sbgnclass{Subunit} and the glyphs
+    used to represent it. These are essentially the EPN glyphs
+    described in this document.}
+\label{tab:subunit types}
+%\begin{footnotesize}
+\tablefirsthead{\toprule
+  \attrib{subunit\_type} & \attrib{cardinality} $=0$ & \attrib{cardinality} $>0$ \\\midrule}
+\tablehead{
+\multicolumn{3}{|l|}{\small\sl continued from previous page}\\
+\toprule
+  \attrib{subunit\_type}  & \attrib{cardinality} $=0$ &
+  \attrib{cardinality} $>0$ \\\midrule}
+\tabletail{\bottomrule
+\multicolumn{3}{|r|}{\small\sl continued on next page}\\
+}
+\tablelasttail{\bottomrule}
+ \rowcolors{2}{white}{gray!25}
+\begin{supertabular}{ l l l}
+SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
+  Chemical Multimer}\\
+UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\
+PerturbingAgent & \glyph{Perturbing Agent} & None\\
+Macromolecule & \glyph{Macromolecule Monomer} &
+\glyph{Macromolecule Multimer}\\
+Nucleic\-Acid\-Feature & \glyph{Nucleic Acid Feature Monomer} & \glyph{Nucleic Acid Feature Multimer}\\
+Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
+\end{supertabular}
+%\end{footnotesize}
+\end{center}
+
+The example in figure \ref{fig:complexSubunits} illustrates the use of
+subunits in a complex.  It also shows an equivalent compex without
 subunits. This is an import point. For every \glyph{Complex} drawn
 with subunits it will always be possible to drawn an equivalent
-version that does not use contains subunits.
+version that does not use contains subunits\query.
 
 \begin{figure}[H]
   \centering
@@ -1255,45 +1527,19 @@ version that does not use contains subunits.
 
 \subsubsection{Changes from Previous Version}
 
-%%%%%%%%%%%%
-% Put the following in the semantics section
-
-% \subsubsection{Attributes}
-
-
-% The complex has the following attributes (those in \emph{italic} identify the complex):
-
-% \begin{description}
-% \item[\emph{name}]
-% \item[\emph{cardinality}] The number of subunits of the complex. If
-%   cardinality $> 1$ then the \glyph{Complex Multimer} must be
-%   drawn. Otherwise a \glyph{Complex} is drawn. The cardinality is an
-%   integer $>0$.
-% \item[\emph{compartment}] The complex must belong to one compartment.
-% \item[state variables] The complex can have zero, one or more state
-%   variables. 
-% \item[clone ID]
-% \end{description}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Process nodes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In previous version of the spec the subunits of a \sbgnclass{Complex}
+were regarded as an EPN. This however, is incorrect as it implies
+there are pools within pools, which breaks one of the fundamental
+paradigms of the \PDl. This is corrected in the current version and
+subunits are now adornments of the \sbgnclass{Complex}.
 
 \subsection{ProcessNode}\label{sec:PNs}
 \label{defn:ProcessNode}
 
-The \sbgnclass{Process} (figure \ref{fig:processumlview}) represents a process that transforms one or
-more entity pools into one or more entity pools, that are identical or
-different. A process may be used to represent or summarise more than
-one known process.  \SBGNPDLone defines a generic \glyph{process}
-(\sect{process}), as well as five more specific ones: the
-\glyph{omitted process} (\sect{omitted}), the \glyph{uncertain
-  process} (\sect{uncertain}), the \glyph{association}
-(\sect{association}), the \glyph{dissociation} (\sect{dissociation}),
-and the \glyph{phenotype} (\sect{phenotype}).
+The \sbgnclass{Process} (figure \ref{fig:processumlview}) represents a
+process that transforms one or more entity pools into one or more
+entity pools, that are identical or different. A process may be used
+to represent or summarise more than one known process.
 
 \begin{figure}[htb]
   \centering
@@ -1391,18 +1637,28 @@ processes in a map, SBGN defines the \sbgnclass{Phenotype} (figure \ref{fig:nons
 
 \subsubsection{Attributes}
 
-No additional attributes.
+\begin{attributes}
+  \attitem{name}{string}{R} The name of the phenotype.
+\end{attributes}
 
 \subsubsection{Associations}
 
 No additional associations.
 
+\subsubsection{Logical Identity}
+
+\begin{logicalkey}
+\item \attrib{owning\_map}
+\item \attrib{name}
+\end{logicalkey}
+
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
-\item The \sbgnclass{Phenotype} can only be modulated.
-\item The \sbgnclass{Phenotype} must be connected to at least one
-  modulating arc.
+\item The number of \attrib{in\_arcs} must be $>0$.
+\item \attrib{in\_arc} can only contain instances of
+\classref{ModulationArc} and its subclasses.
+\item \attrib{out\_arcs} must be empty.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -1434,14 +1690,15 @@ mandatory.  The label box must be attached to the center of the
 
 \subsubsection{Changes from Previous Version}
 
-Clarified that the \sbgnclass{Phenotype} cannot be cloned as it is now
-a subclass of \sbgnclass{Process}, which is always unique.
+This definition clarifies that the \sbgnclass{Phenotype} cannot be
+cloned as it is now a subclass of \sbgnclass{Process}, which is always
+unique.
 
 
 \subsection{SubmapNode}
 \label{sec:submap}\label{defn:SubmapNode}
 
-The \sbgnclass{SubmapNode} ( figure \ref{fig:submapnodeuml} ) is a
+The \sbgnclass{SubmapNode} (figure \ref{fig:submapnodeuml}) is a
 placeholder for another process and is used when one wishes to hide
 the detail of this process from the \PDm, but make it available to the
 reader as a separate related map. The \sbgnclass{Submap} is not
@@ -1482,11 +1739,20 @@ reference between the EPNs in the Main Map and those in the submap,
 which are identified by a \sbgnclass{Tag}.
 \end{attributes}
 
+\subsection{Logical Identity}
+
+\begin{logicalkey}
+  \item \attrib{owning\_map}
+  \item \attrib{name}
+\end{logicalkey}
+
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
 \item All instances of \classref{SubmapTerminal} held by this class
-  must be unique.
+  must be logically unique.
+\item attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie,
+  degree $=0$).
 \end{itemize}
 
 \subsubsection{Notation}
@@ -1501,15 +1767,17 @@ which are identified by a \sbgnclass{Tag}.
 
 \glyphLabel The identification of the \glyph{submap} is carried by an unbordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box has to be attached to the center of the container box.
 
-\glyphAux A \glyph{submap} carries labeled terminals.  When the \glyph{submap} is represented folded, those terminals are linked to external \glyph{EPNs} (\sect{EPNs}).  In the unfolded view, exposing the internal structure of the \glyph{submap}, a set of \glyph{tags} point to the corresponding internal \glyph{EPNs} \sect{EPNs}.
-
 \end{glyphDescription}
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.22]{images/submap}
-  \caption{The \PD glyph for \glyph{submap}. (Upper part) folded submap. (Lower part) content of the submap.}
+  \includegraphics[scale = 0.22]{images/submapglyph}
+  \caption{The \PD glyph for \glyph{submap}. (a) the basic glyph
+    symbol, without the \glyph{submap terminal} auxiliary units that
+    would normally be associated with it. (b) The glyph as it would
+    typically be used within a map --- associated with EPN glyphs and
+    containing \glyph{submap terminals}.}
   \label{fig:submap}
 \end{figure}
 
@@ -1585,16 +1853,13 @@ No additional associations.
 
 \subsubsection{Notation}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     And
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\color{blue}
+Three glyphs are used to represent the different operator types. The
+glyphs are names after the corresponding type.
+
 \paragraph{Glyph: \glyph{And}}\label{sec:and}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000173 ! and.
- \glyphOrigin More than one \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
- \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
  \glyphNode \glyph{And} is represented by a circle carrying the word ``AND''.
 \end{glyphDescription}
 
@@ -1606,15 +1871,10 @@ No additional associations.
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     Or
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Glyph: \glyph{Or}}\label{sec:or}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000174 ! or.
- \glyphOrigin More than one \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
- \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
  \glyphNode \glyph{Or} is represented by a circle carrying the word ``OR''.
  \end{glyphDescription}
 
@@ -1626,15 +1886,10 @@ No additional associations.
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     Not
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Glyph: \glyph{Not}}\label{sec:not}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000238 ! not.
- \glyphOrigin One \glyph{EPN} (section~\ref{sec:EPNs}) or \glyph{logical operator} (section~\ref{sec:logic}).
- \glyphTarget  One modulation (section~\ref{sec:modulation}), stimulation (section~\ref{sec:stimulation}), catalysis (section~\ref{sec:catalysis}), inhibition (section~\ref{sec:inhibition}) or necessary stimulation (section~\ref{sec:necessary_stim}) arc.
  \glyphNode \glyph{Not} is represented by a circle carrying the word ``NOT''.
  \end{glyphDescription}
 
@@ -1656,22 +1911,42 @@ the previous version the semantics and glyphs are unchanged.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.65\textwidth]{images/stoichprocessuml}
+  \includegraphics[width = 0.45\textwidth]{images/stoichprocessuml}
   \caption{The UML definition of the
     \sbgnclass{StiochiometricProcess}. The class interacts with
     subclasses of \sbgnclass{FluxArc} and \sbgnclass{ModulationArc}.}
   \label{fig:stoichprocessuml}
 \end{figure}
  
-A process that produces a measurable change in the quantities of
-entity pools consumed and produced. In \PDl this is represented by the
-\sbgnclass{StoichiometricProcess}. This type of process can be though
-of as having a basal rate of governing the change in EPN quantities,
-that is changed by other influences described by instances of
-\classref{ModulationArc}. \sbgnclass{StoichiometricProcess} can be one
-of several different types, which indicate the amount that is known
-about the process or in some cases the nature of the process, for
-example association and dissociation. The permitted values for
+A stoichiometric process produces a measurable change in the
+quantities of entity pools consumed and produced. This might imply
+modification of covalent bonds (conversion), modification of the
+relative position of constituents (conformational process) or movement
+from one compartment to another (translocation). Such a process will
+have a basal rate at which this change occurs, which can be affected
+positively or negatively by the other entity pools, which 'modulate'
+the process. Examples of this include stimulation, inhibition and
+catalysis. In an irreversible process the entity pools interacting
+with it can be grouped into inputs and outputs. However, a
+stoichiometric process can also be reversible and so for convenience
+we refer to these groupings as the ``left-hand-side'' (LHS) and
+``right-hand-side'' (RHS) of the process\footnote{Note this
+  designation is purely for grouping and is used even then the sides
+  of the reaction are above and below the process.}  (figure
+\ref{fig:process-sidedness}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/process_sidedness}
+  \caption{An illustration of the ``sidedness'' of a process. The designation of LHS and RHS is essentially arbitrary.}
+  \label{fig:process-sidedness}
+\end{figure}
+
+In the \PDl this is represented by the
+\sbgnclass{StoichiometricProcess} (figure \ref{fig:stoichprocessuml}). It
+can be one of several different types, which indicate the amount that
+is known about the process or in some cases the nature of the process,
+for example association and dissociation. The permitted values for
 \attrib{process\_type} are described in the following table:
 
 \begin{tabular}[c]{l p{12cm}}
@@ -1684,17 +1959,43 @@ dissociation & The dissociation of an \glyph{EPN} into one or more \glyph{EPNs} 
 \bottomrule\\
 \end{tabular}\\
 
+Since this process is stoichiometric the relative quantities of the
+entity pools participating the process must be specified. For this
+reason the \classref{FluxArc} has an \attrib{stoichiometry} attribute
+and each \classref{EntityPoolNode} has a cardinality, which should be
+balanced in a valid \PDm. This is especially important where there is
+potential ambiguity in the stoichiometry of the process (figure \ref{fig:prod-card}).
 
-The \sbgnclass{StoichiometricProcess} describes a process that transforms a given set of biochemical entities---macromolecules, simple chemicals or unspecified entities---into another set of biochemical entities.  Such a transformation might imply modification of covalent bonds (conversion), modification of the relative position of constituents (conformational process) or movement from one compartment to another (translocation).
 
-A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or \glyph{production} (\sect{production}) arcs to indicate the stoichiometry of the process.  This label becomes a requirement when the exact composition of the number of copies of the inputs or outputs to a reaction are ambiguous in the map.
 
-A process is regarded as reversible if both `sides' of the process are
-connected to \glyph{production} arcs (see section \ref{sec: semantics
-  reversible procs}).The semantics of \glyph{modulation} is the same
-as for irreversible processes, .i.e. the amount of entity in the
-modulation pool affects the rate of the process.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.6\textwidth]{examples/stoichEx1}
+  \caption{The figure illustrates why for the stoichiometry label is
+    required to clarify potentially ambiguous stoichiometry. In the
+    top example there is more than one possible solution, which can
+    only be made clear using the stoichiometry labels in the bottom examples.}
+  \label{fig:prod-card}
+\end{figure}
 
+
+
+\label{sec: semantics reversible procs}
+
+A stoichiometric process is deemed to be reversible its
+\attrib{in\_arcs} are \sbgnclass{FluxArc}s of type `reversible' (see
+figure \ref{fig:process-reversibility}).  Semantically, this permits a
+reversible flow of entities through the process.  Modulation of a
+reversible process affects the rate of flux through the process, but
+does not directly affect the direction of that flow.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/reversible_process}
+  \caption{A valid reversible process. A process is reversible if its LHS and RHS contain only \glyph{production} arcs.}
+  \label{fig:process-reversibility}
+\end{figure}
+ 
 \subsubsection{Generalisation}
 
 \begin{itemize}
@@ -1716,23 +2017,26 @@ No additional associations.
 
 \begin{itemize}
 \item The \attrib{in\_arc} must contain one or more
-  \sbgnclass{FluxArc} of the same type, \ie all \sbgnclass{FluxArc}s be of class
-  \sbgnclass{ConsumptionArc} or all of class
-  \sbgnclass{ProductionArc}.
+  \sbgnclass{FluxArc}s containing the same \attrib{flux\_type} value.
+\item The \attrib{in\_arc} may only contains \sbgnclass{FluxArc}
+  instances with a \attrib{flux\_type} of `consumption', or `reversible'.
 \item In addition the \attrib{in\_arc} may contain zero, one or more
   instances of \sbgnclass{ModulationArc}.
 \item The \attrib{out\_arc} must contain one or more
- instances of \sbgnclass{ProductionArc}.
-\item If \attrib{process\_type} is association then the
-  \attrib{in\_arc} must only contain arcs of type
-  \sbgnclass{ConsumptionArc} and \attrib{out\_arc} can only contain
-  one \sbgnclass{ProductionArc}.
-\item If \attrib{process\_type} is dissociation then the
-  \attrib{in\_arc} can contain only one \sbgnclass{ConsumptionArc}
-  instance.
-\item If a \sbgnclass{StoichiometricProcess} only contains in and out
-  arcs of class \sbgnclass{ProductionArc} then it is regarded as
-  reversible.
+ instances of \sbgnclass{FluxArc} with a \attrib{flux\_type} or `production'.
+\item If \attrib{process\_type} is `association' or `dissociation' then the process
+  cannot be reversible.
+\item If \attrib{in\_arcs}  contains one or more \sbgnclass{FluxArc}s
+  of type `reversible' this process reversible.
+\item The \sbgnclass{EntityPoolNode}s that make up the LHS of the
+  process should be consistent with the RHS, i.e.\, the process should
+ be stoichiometrically balanced.\query
+\item If at least one \sbgnclass{FluxArc} associated with a
+  \sbgnclass{StoichiometricProcess} displays its stoichiometry via a
+  \glyph{stoichiometry label} then all must.\query
+\item If more than one set of stoichiometries can be applied to the
+  flux arcs of the process then the stoichiometry of the flux arcs
+  must be displayed.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -1744,15 +2048,16 @@ No additional associations.
 
 \glyphSboTerm SBO:0000375 ! process
 
-\glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
-
-\glyphTarget One or several \glyph{production} arcs (\sect{production}).
-
 \glyphNode A process is represented by a square box linked to two
-connectors, small arcs attached to the centers of opposite sides. The
-consumption (\sect{consumption}) and production (\sect{production})
-arcs are linked to the extremities of those connectors. The modulatory
-arcs (section \ref{sec:modulation}) point to the other two sides of the box. A \glyph{process} connected to \glyph{production} arcs on opposite sides is a reversible process. 
+connectors: small arcs attached to the centers of opposite sides and
+referred to here as `lugs'\query. The flux arcs arcs are linked to the
+ends of the lugs as shown in figure \ref{fig:process}. The lug's
+purpose is to 'gather' the flux arcs together before meeting the
+process node proper and in doing so they emphasis the 'sides' of the
+reaction. Therefore the lug must have a visually appreciable length\query
+and must be placed on opposite sides of the process square. The
+modulatory arcs (section \ref{sec:modulation}) point to the other two
+sides of the box.
 
 \end{glyphDescription}
 
@@ -1828,8 +2133,6 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000397 - omitted process.
- \glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
- \glyphTarget One or several \glyph{production} arcs (\sect{production}).
 
  \glyphNode An \glyph{omitted process} is represented by a \glyph{process} in which the square box contains a two parallel slanted lines oriented northwest-to-southeast and separated by an empty space.
  \end{glyphDescription}
@@ -1850,8 +2153,6 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000396 ! uncertain process.
- \glyphOrigin One or several \glyph{consumption} arcs (\sect{consumption}) or one or several \glyph{production} arcs (\sect{production}).
- \glyphTarget One or several \glyph{production} arcs (\sect{production}).
  \glyphNode An \glyph{uncertain process} is represented by a \glyph{process} which square box contains a question mark.
  \end{glyphDescription}
 
@@ -1872,8 +2173,6 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000177 ! non-covalent binding.
- \glyphOrigin One or more \glyph{consumption} arcs (\sect{consumption}).
- \glyphTarget  One \glyph{production} arc (\sect{production}).
  \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors. 
  \end{glyphDescription}
 
@@ -1902,7 +2201,10 @@ The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2
   \label{fig:assoc-unamed}
 \end{figure}
 
-An association does not necessarily result in the formation of a \glyph{complex}; it can also produce a \glyph{multimer}, or a \glyph{macromolecule} (although the latter case is semantically borderline).  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
+An association does not necessarily result in the formation of a
+\glyph{complex}; it can also produce a multimer, or a
+\glyph{macromolecule} (although the latter case is semantically
+borderline) \query.  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
 
 \begin{figure}[H]
   \centering
@@ -1915,8 +2217,6 @@ An association does not necessarily result in the formation of a \glyph{complex}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000180 ! dissociation.
- \glyphOrigin One \glyph{consumption} arc (\sect{consumption}).
- \glyphTarget  One or more \glyph{production} arc (\sect{production}).
  \glyphNode A \glyph{dissociation} between several entities is represented by two concentric circles. A simple empty disc could be, in some cases, confused with the \glyph{catalysis} (section \sect{catalysis}). Moreover, the existence of two circles reminds the dissociation, by contrast with the filled disc of the \glyph{association} (\sect{association}).
  \end{glyphDescription}
 
@@ -1981,6 +2281,13 @@ located in two different compartments are in fact two different pools.
   \sbgnclass{EntityPoolNode}s contained by this compartment.
 \end{attributes}
 
+\subsection{Logical Identity}
+
+\begin{logicalkey}
+  \item \attrib{owning\_map}
+  \item \attrib{name}
+\end{logicalkey}
+
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
@@ -2003,8 +2310,6 @@ located in two different compartments are in fact two different pools.
 \glyphContainer A compartment is represented by a surface enclosed in a continuous border or located between continuous borders. These borders should be noticeably thicker than the borders of the EPNs. A compartment can take \textbf{any} geometry. A compartment must always be entirely enclosed.
 
 \glyphLabel The identification of the compartment is carried by an unbordered box containing a string of characters. The characters can be distributed on several lines to improve readability, although this is not mandatory. The label box can be attached anywhere in the container box. Note that the label can spill-over from the container box.
-
-\glyphAux A \glyph{compartment} can carry a certain number of \glyph{units of information}, that will add information for instance about the physical environment, such as pH, temperature or voltage, see \sect{unitInfo}.  The center of the bounding box of a \glyph{unit of information} is located on the mid-line of the border of the compartment.
 
 \end{glyphDescription}
 
@@ -2055,7 +2360,12 @@ Overlapped (hidden) part of the compartment should not contain any object which 
 
 \subsubsection{Changes from Previous Version}
 
-No changes from previous the version.
+The use \sbgnclass{Compartment} has a set of natures, which previously
+were less well specified and handled as notation provided by the
+\glyph{unit of information}.  In some cases, where the CVs used are
+not distinct or if the \glyph{unit of information} contains arbitrary
+text as annotation then maps containing these features will be invalid
+according to the current specification.
 
 \subsection{AttributeValue}
 \label{defn:AttributeValue}
@@ -2130,14 +2440,13 @@ entity it is decorating.
 \glyphLabel A \glyph{unit of information} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 
 
-%\glyphAux A \glyph{unit of information} does not carry any auxiliary items.  
-
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.3]{images/unitInformation}
-  \caption{The \PD glyph for \glyph{unit of information}.}
+  \caption{The \PD glyph for \glyph{unit of information}. (a) The
+    glyph. (b) An example of its usage with a \glyph{macromolecule}.}
   \label{fig:unitInfo}
 \end{figure}
 
@@ -2168,24 +2477,24 @@ to other chemicals.  Other examples of states are alternative
 conformations as in the closed/open/desensitized conformations of a
 transmembrane channel, and the active/inactive forms of an enzyme.
 
-SBGN provides a means of associating one or more
-\sbgnclass{StateVariable} with an entity (figure
-\ref{fig:statevariableviewuml}); each such variable can be used to
-represent a dimension along which the state of the overall entity can
-vary.  When an entity can exist in different states, the state of the
-whole entity (\ie the SBGN object) can be described by the set of
-\sbgnclass{StateVariable} instances it contains. Note that this is
-true for the \classref{Complex} where any state variables are
-associated visually with subunits (c.f \classref{Subunit}), but
-actually belong to the complex (figure
-\ref{fig:statevariableviewuml}).
+In the \PDl these states are defined by the
+\sbgnclass{StateVariableDefinition}s associated with the
+\sbgnclass{EntityType}, but the specific values of the variables are
+define by the \sbgnclass{StateVariable} (figure
+\ref{fig:statevariableviewuml}) associated with the
+\sbgnclass{EntityPoolNode}. For every
+\sbgnclass{StateVariableDefinition} associated with an
+\sbgnclass{EntityType} there should be a corresponding
+\sbgnclass{StateVariable} associated with the instance of
+\sbgnclass{EntityPoolNode} using that type. This enforces one of the
+fundamental rules of the language that once a state variable has been
+displayed for a given entity type, then it must always be displayed.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width = 0.5\textwidth]{images/statevariableviewuml}
   \caption{The UML definition of the \sbgnclass{StateVariable} showing
-    its relationship to \sbgnclass{StatefulEPN}, \sbgnclass{Complex}
-    and \sbgnclass{Subunit}.}
+    its relationship to \sbgnclass{StatefulEPN} and \sbgnclass{StateVariableDefinition}.}
   \label{fig:statevariableviewuml}
 \end{figure}
 
@@ -2198,10 +2507,10 @@ actually belong to the complex (figure
 \subsubsection{Attributes}
 
 \begin{attributes}
-  \attitem{name}{string}{O} The name of the state variable. This value is
-  optional.
   \attitem{value}{string}{R} The value of the state variable. This is
-  optional, but cannot be an empty string.
+  optional, but cannot be an empty string, should start with a
+  non-space character and end with a non-space character. It should
+  also not include the `@' character\query.
 \end{attributes}
 
 \subsubsection{Associations}
@@ -2209,13 +2518,13 @@ actually belong to the complex (figure
 \begin{attributes}
   \associtem{owning\_epn}{StatefulEPN}{1}  The stateful EPN that owns
   the state variable.
+  \associtem{definition}{StateVariableDefinition}{1} The definition of
+  this state variable.
 \end{attributes}
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The symbols in the 
-\end{itemize}
+No additional rules and constraints.
 
 \subsubsection{Notation}
 
@@ -2259,14 +2568,13 @@ should not use this notation.
 
 % The identification of an instance of a \glyph{state variable} is carried by one or two unbordered boxes, each containing a string of characters.  The characters cannot be distributed on several lines.  One box is mandatory, and contains the value of the \glyph{state variable}.  The value may be empty; an example of a situation where this might arise is an unphosphorylated phosporylation site.  The second box is optional and carries the identification of the \glyph{state variable}. The center of the combination of the boxes located in the container box is superposed to the center of this container box.  In earier version of the \PD specification, the identification of the \glyph{state variable} could be located outside the \glyph{state variable} container box.  This is now forbidden.  The style of labeling of \glyph{state variables} encouraged by \SBGNPDLone is to combine a prefix representing the value of the variable with a suffix representing the variable's name.  Prefix and suffix should be separated by the symbol '@', X@Y thus meaning \emph{value X} AT \emph{variable Y}. The label of a \glyph{state variable} should, if possible, be displayed within the boundary of the glyph.
 
-\glyphAux A \glyph{state variable} does not carry any auxiliary items.  
-
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3, trim = 0 0 0 0.25in]{images/stateVariable}
-  \caption{Examples of the \PD glyph for \glyph{state variable}.}
+  \includegraphics[width=\textwidth]{images/stateVariable}
+  \caption{Examples of the \PD glyph for \glyph{state
+      variable}. Included are the older forms of glyph, which are now deprecated.}
   \label{fig:state-var}
 \end{figure}
 
@@ -2352,7 +2660,6 @@ overlap with the object it is annotating.
 
 \glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container. 
 
-\glyphAux An \glyph{annotation} does not carry any auxiliary unit.
 \end{glyphDescription}
 
 \begin{figure}[H]
@@ -2471,8 +2778,6 @@ be distributed on several lines to improve readability, although this
 is not mandatory.  The label box must be attached to the center of the
 container. The label may spill outside of the container.
 
-\glyphAux A \glyph{tag} does not carry any auxiliary items. 
-
 \end{glyphDescription}
 
 \begin{figure}[H]
@@ -2528,8 +2833,6 @@ No additional associations.
 
 \glyphLabel A \glyph{tag} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
 
-\glyphAux A \glyph{tag} does not carry any auxiliary items. 
-
 \end{glyphDescription}
 
 \begin{figure}[H]
@@ -2557,9 +2860,25 @@ only instances of \sbgnclass{EntityPoolNode}.
 The \sbgnclass{FluxArc} permits a quantity of entities to flow through
 the arc and in doing so connects a stoichiometric process
 (\classref{StoichiometricProcess}) and an EPN
-(\classref{EntityPoolNode}). The arc has a stoichiometry which affects
-the flow through the arc. So for example a stoichiometry of $2n$
-permits twice as many entities through as one of $n$.
+(\classref{EntityPoolNode}). The \sbgnclass{FluxArc} has a
+stoichiometry which is used to indicate the stoichiometry of a
+process. It is required to eliminate ambiguity when the exact
+composition, or the number of copies, of the inputs or outputs to a
+reaction are ambiguous from the map (see figure
+\ref{fig:stoichlabellayout} for an example). The \sbgnclass{FluxArc}
+has three forms determined by its \attrib{flux\_type}:
+
+\begin{description}
+\item[consumption] Links an entity pool to a process that will
+  consumed it (an input to the process).
+\item[production] Links an entity pool to a process that will be
+produced by a process (an output from the process). It may also
+links entities on the ``right-hand-side'' of a reversible process (see
+section \ref{sec: semantics reversible procs} for more details about the
+reversible process).
+\item[reversible] Links a process to an entity pool that is the
+  ``left-hand-side'' of a process (see section  \ref{sec: semantics reversible procs}).
+\end{description}
 
 \subsubsection{Generalisation}
 
@@ -2572,6 +2891,8 @@ permits twice as many entities through as one of $n$.
 \begin{attributes}
   \attitem{stoichiometry}{int}{R} The stoichiometry of this
   \classref{FluxArc}. This must be a non-zero positive integer.
+  \attrib{flux\_type}{enum}{R} The type of the flux arc. One of the
+  following: consumption, production and reversible.
 \end{attributes}
 
 No additional attributes.
@@ -2583,34 +2904,86 @@ No additional associations.
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
+\item if the \attrib{stoichiometry} is not displayed then it is
+assumes to be 1\query.
 \item If the \attrib{stoichiometry} $>1$ then the stoichiometry must
-  be displayed. \fig{prod-card} illustrates the use of
-  consumption/production arc stoichiometry labels to represent the stoichiometry of a process.
-\item All process nodes (with the exception of \glyph{phenotype}) must have a LHS and RHS.
-\item The \sbgnclass{EntityPoolNode}s that make up the LHS of the
-  process should be consistent with the RHS, i.e.\, the process should
-  constitute a balanced biochemical reaction.
-\item Once the stoichiometry of a \sbgnclass{FluxArc} is displayed in a map then
-  all other \sbgnclass{FluxArc}s should display their stoichiometry label.
+  be displayed.\query
 \item If the stoichiometry is undefined or unknown this should be
-  indicated by the use of a question mark (``?'').
-\item If more than one set of stoichiometries can be applied to the
-  flux arcs of the process then the stoichiometry of the flux arcs
-  must be displayed.
+  indicated by the use of a question mark (``?'')\query.
+\item if \attrib{flux\_type} $=$ `consumption' or 'reversible' then:
+  \begin{itemize}
+  \item The \attrib{in\_node} must be an instance of
+    \classref{EntityPoolNode}.
+  \item The \attrib{out\_node} must be an instance of
+    \classref{StoichiometricProcess}.
+  \end{itemize}
+\item if \attrib{flux\_type} $=$ `production' then:
+  \begin{itemize}
+  \item The \attrib{in\_node} must be an instance of \classref{StoichiometricProcess}.
+  \item The \attrib{out\_node} must be an instance of
+    \classref{EntityPoolNode}.
+  \end{itemize}
 \end{itemize}
 
+\subsubsection{Notation}
 
-\begin{figure}[htb]
+The \sbgnclass{FluxArc} is represented by three glyphs depending on
+its \attrib{flux\_type}:
+
+\begin{description}
+\item[consumption] \glyph{consumption arc}.
+\item[production] \glyph{production arc}.
+\item[reversible] \glyph{reversible arc}.
+\end{description}
+
+These are defined below. In addition the \attrib{stoichiometry} is
+displayed by the \glyph{stoichiometry label}. Its appearance and
+layout in relation to the flux arc is also described here.
+
+\paragraph{Glyph: \glyph{Consumption}}
+\label{sec:consumption}
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000394 ! consumption.
+ \glyphEndPoint No particular symbol is used to represent a consumption.
+\end{glyphDescription}
+
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{examples/stoichEx1}
-  \caption{The figure illustrates why for the stoichiometry label is
-    required to clarify potentially ambiguous stoichiometry. In the
-    top example there is more than one possible solution, which can
-    only be made clear using the stoichiometry labels in the bottom examples.}
-  \label{fig:prod-card}
+  \includegraphics[scale = 0.4]{images/consumption}
+  \caption{The \PD glyph for \glyph{consumption}.}
+  \label{fig:consumption}
 \end{figure}
 
-\subsubsection{Notation}
+\paragraph{Glyph: \glyph{Production}}\label{sec:production}
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000393 ! production.
+ \glyphEndPoint The target extremity of a \glyph{production} carries a filled arrowhead.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/production}
+  \caption{The \PD glyph for \glyph{production}.}
+  \label{fig:production}
+\end{figure}
+
+\paragraph{Glyph: \glyph{Reversible}}\label{sec:reversible}
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000393 ! production.
+ \glyphEndPoint The origin extremity of a \glyph{reversible} carries a filled arrowhead.
+ \end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/reversible}
+  \caption{The \PD glyph for \glyph{reversible}.}
+  \label{fig:reversible}
+\end{figure}
+
 
 \paragraph{Stoichiometry Label}
 
@@ -2649,134 +3022,135 @@ a normal font, \ie not bold or italic.
 
 \subsubsection{Changes from Previous Version}
 
-Not defined explicitly in the previous version.
+The \glyph{reversible arc} has been added to ensure the correct syntax
+is observed for a reversible process\query --- using the
+\glyph{production arc} for this was syntactically forbidden in the
+previous version of the specification. There is no change to semantics from
+previous version, but layout rules for placement of stoichiometry
+label have been clarified.
 
-\subsection{ConsumptionArc}
+% \subsection{ConsumptionArc}
 
-\subsubsection{Generalisation}
+% \subsubsection{Generalisation}
 
-\begin{itemize}
-\item \classref{FluxArc}
-\end{itemize}
+% \begin{itemize}
+% \item \classref{FluxArc}
+% \end{itemize}
 
-\subsubsection{Attributes}
+% \subsubsection{Attributes}
 
-No additional attributes.
+% No additional attributes.
 
-\subsubsection{Associations}
+% \subsubsection{Associations}
 
-No additional associations.
+% No additional associations.
 
-\subsubsection{Rules and Constraints}
+% \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The \attrib{in\_node} must be an instance of
-  \classref{EntityPoolNode}.
-\item The \attrib{out\_node} must be an instance of \classref{StoichiometricProcess}.
-\end{itemize}
+% \begin{itemize}
+% \item The \attrib{in\_node} must be an instance of
+%   \classref{EntityPoolNode}.
+% \item The \attrib{out\_node} must be an instance of \classref{StoichiometricProcess}.
+% \end{itemize}
 
-\subsubsection{Notation}
+% \subsubsection{Notation}
 
-\paragraph{Glyph: \glyph{Consumption}}
-\label{sec:consumption}
+% \paragraph{Glyph: \glyph{Consumption}}
+% \label{sec:consumption}
 
-\glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process,
-but is not produced by the process.
+% \glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process,
+% but is not produced by the process.
 
-\begin{glyphDescription}
- \glyphSboTerm SBO:0000394 ! consumption.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
- \glyphEndPoint No particular symbol is used to represent a consumption.
-\end{glyphDescription}
-
-
-A cardinality label may be associated with \glyph{consumption}
-(\sect{consumption}) or \glyph{production} (\sect{production}) arcs,
-indicating the stoichiometry of a process. This label is a number
-enclosed in a rectangle with one of the long sides adjacent to the
-consumption arc. The cardinality is required to eliminate ambiguity
-when the exact composition, or the number of copies, of the inputs or
-outputs to a reaction are ambiguous from the map.  An example is a
-multimer of 6 subunits dissociating into 2 monomers and 2
-dimers. Without stoichiometry labels another result, such as 4
-monomers and 1 dimer could be inferred.  Once assigned to one arc
-connecting to a process node, cardinality should be represented on all
-\glyph{consumption} and \glyph{production} arcs connected to that
-process node to avoid misinterpretation.
-
-Omitted cardinality on one edge only should not be treated as cardinality of 1, but
-as an unspecified cardinality. In most cases, the exact value may be derived from the
-context, but unless cardinality is explicitly shown, it should be considered as
-unspecified. In the case where the stoichiometry of some part of the process is not
-known, or undefined, a question mark (?) should be used within the cardinality label
-of the corresponding arcs.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.4]{images/consumption}
-  \caption{The \PD glyph for \glyph{consumption}.}
-  \label{fig:consumption}
-\end{figure}
+% \begin{glyphDescription}
+%  \glyphSboTerm SBO:0000394 ! consumption.
+%  \glyphEndPoint No particular symbol is used to represent a consumption.
+% \end{glyphDescription}
 
 
-\subsubsection{Changes from Previous Version}
+% A cardinality label may be associated with \glyph{consumption}
+% (\sect{consumption}) or \glyph{production} (\sect{production}) arcs,
+% indicating the stoichiometry of a process. This label is a number
+% enclosed in a rectangle with one of the long sides adjacent to the
+% consumption arc. The cardinality is required to eliminate ambiguity
+% when the exact composition, or the number of copies, of the inputs or
+% outputs to a reaction are ambiguous from the map.  An example is a
+% multimer of 6 subunits dissociating into 2 monomers and 2
+% dimers. Without stoichiometry labels another result, such as 4
+% monomers and 1 dimer could be inferred.  Once assigned to one arc
+% connecting to a process node, cardinality should be represented on all
+% \glyph{consumption} and \glyph{production} arcs connected to that
+% process node to avoid misinterpretation.
 
-No changes from previous version.
+% Omitted cardinality on one edge only should not be treated as cardinality of 1, but
+% as an unspecified cardinality. In most cases, the exact value may be derived from the
+% context, but unless cardinality is explicitly shown, it should be considered as
+% unspecified. In the case where the stoichiometry of some part of the process is not
+% known, or undefined, a question mark (?) should be used within the cardinality label
+% of the corresponding arcs.
 
-\subsection{ProductionArc}
-
-\subsubsection{Generalisation}
-
-\begin{itemize}
-\item \classref{FluxArc}
-\end{itemize}
-
-\subsubsection{Attributes}
-
-No additional attributes.
-
-\subsubsection{Associations}
-
-No additional associations.
-
-\subsubsection{Rules and Constraints}
-
-\begin{itemize}
-\item The \attrib{in\_node} must be an instance of \classref{StoichiometricProcess}.
-\item The \attrib{out\_node} must be an instance of
-  \classref{EntityPoolNode}.
-\end{itemize}
-
-\subsubsection{Notation}
-
-\paragraph{Glyph: \glyph{Production}}\label{sec:production}
-
-\glyph{Production} is the arc used to represent the fact that an entity pool is 
-produced by a process. In the case of a reversible process, the 
-\glyph{production} arc also acts as a \glyph{consumption} arc.
-
-\begin{glyphDescription}
- \glyphSboTerm SBO:0000393 ! production.
- \glyphOrigin Any \glyph{process node} (\sect{PNs}).
- \glyphTarget Any \glyph{EPN} (\sect{EPNs}).
- \glyphEndPoint The target extremity of a \glyph{production} carries a filled arrowhead.
- \end{glyphDescription}
-
-A cardinality label can be associated with a \glyph{production} arc indicating the stoichiometry of a process.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.4]{images/production}
-  \caption{The \PD glyph for \glyph{production}.}
-  \label{fig:production}
-\end{figure}
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale = 0.4]{images/consumption}
+%   \caption{The \PD glyph for \glyph{consumption}.}
+%   \label{fig:consumption}
+% \end{figure}
 
 
-\subsubsection{Changes from Previous Version}
+% \subsubsection{Changes from Previous Version}
 
-No changes from previous versions. \textbf{Do we need to put a
-  Reversible arc to handle the reversible side of the consumption arc?}
+% No changes from previous version.
+
+% \subsection{ProductionArc}
+
+% \subsubsection{Generalisation}
+
+% \begin{itemize}
+% \item \classref{FluxArc}
+% \end{itemize}
+
+% \subsubsection{Attributes}
+
+% No additional attributes.
+
+% \subsubsection{Associations}
+
+% No additional associations.
+
+% \subsubsection{Rules and Constraints}
+
+% \begin{itemize}
+% \item The \attrib{in\_node} must be an instance of \classref{StoichiometricProcess}.
+% \item The \attrib{out\_node} must be an instance of
+%   \classref{EntityPoolNode}.
+% \end{itemize}
+
+% \subsubsection{Notation}
+
+% \paragraph{Glyph: \glyph{Production}}\label{sec:production}
+
+% \glyph{Production} is the arc used to represent the fact that an entity pool is 
+% produced by a process. In the case of a reversible process, the 
+% \glyph{production} arc also acts as a \glyph{consumption} arc.
+
+% \begin{glyphDescription}
+%  \glyphSboTerm SBO:0000393 ! production.
+%  \glyphEndPoint The target extremity of a \glyph{production} carries a filled arrowhead.
+%  \end{glyphDescription}
+
+% A cardinality label can be associated with a \glyph{production} arc indicating the stoichiometry of a process.
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale = 0.4]{images/production}
+%   \caption{The \PD glyph for \glyph{production}.}
+%   \label{fig:production}
+% \end{figure}
+
+
+% \subsubsection{Changes from Previous Version}
+
+% No changes from previous versions. \textbf{Do we need to put a
+%   Reversible arc to handle the reversible side of the consumption arc?}
 
 \subsection{ModulationArc}
 \label{defn:ModulationArc}
@@ -2878,8 +3252,6 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000168 ! control.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
  \glyphEndPoint The target extremity of a \glyph{modulation} carries an empty diamond.
  \end{glyphDescription}
 
@@ -2905,8 +3277,6 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000170 ! stimulation.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any logical operator (\sect{logic}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
  \glyphEndPoint The target extremity of a \glyph{stimulation} carries an empty arrowhead.
  \end{glyphDescription}
 
@@ -2923,8 +3293,6 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000172 ! catalysis.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
  \glyphNode The target extremity of a \glyph{catalysis} carries an empty circle.
  \end{glyphDescription}
 
@@ -2941,8 +3309,6 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000169 ! inhibition.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
  \glyphNode The target extremity of an \glyph{inhibition} carries a bar perpendicular to the arc.
  \end{glyphDescription}
 
@@ -2959,8 +3325,6 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000171 ! necessary stimulation.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or any \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
  \glyphNode The target extremity of a \glyph{necessary stimulation} carries an open arrow (to remind that it is a \glyph{stimulation}) coming after a larger vertical bar.
  \end{glyphDescription}
 
@@ -3061,8 +3425,6 @@ the outcome of a logic operator.
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000398 ! logical relationship.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{logical operator} (\sect{logic}).
  \glyphEndPoint No particular symbol is used to represent a logic arc.
  \end{glyphDescription}
 
@@ -3121,8 +3483,6 @@ No additional rules and constraints.
 
 \begin{glyphDescription}
  \glyphSboTerm Not applicable.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}).
- \glyphTarget \glyph{Tag} (\sect{tag}).
  \glyphEndPoint No particular symbol is used to represent an \glyph{equivalence arc}.
  \end{glyphDescription}
 
@@ -3237,8 +3597,6 @@ smaller than the unfilled one.
 
 \glyphLabel Not applicable.
 
-\glyphAux A \glyph{clone marker} does not carry any auxiliary items.
-
 \end{glyphDescription}
 
 \begin{figure}[H]
@@ -3312,8 +3670,6 @@ labelled clone markers.
 \glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be smaller than the unfilled one, but the be large enough to have a height larger than the \glyph{clone marker}'s label (cf below).  
 
 \glyphLabel A \glyph{clone marker} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container (the portion of the surface of the EPN that has been modified visually).  The font color of the label and the color of the clone marker should contrast with one another.  The label on a \glyph{labeled clone marker} is mandatory.
-
-\glyphAux A \glyph{clone marker} does not carry any auxiliary items.
 
 \end{glyphDescription}
 
@@ -3541,6 +3897,23 @@ a map. For example since all processes are unique, two \glyph{Process}
 glyphs connected to the same input and output indicates that the same
 ``reaction'' can be carried out by two distinct processes, with
 potentially different mechanisms.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\textwidth]{images/cloningrules-eg}
+  \caption{This fictitious example illustrates the correct cloning semantics in
+    the \PDl. The diagram shows the association of the phosphorylated
+    macromolecule A (A[P]) and simple chemical B into a complex. Two
+    copies of B are consumed and these are shown as separate subunits
+    in the complex (note that no clone marker is used). The complex
+    then dissociates into the same components that formed it which
+    requires an appropriate clone marker to be applied. A[P] is
+    translocated into compartment 2 where A[P] is not cloned as it
+    does not have a duplicate. The unphosphorylated from of A
+    dimerised, but again this does not require a clone marker as these
+    are regarded as separate entity pools.}
+  \label{fig:cloningrules-eg}
+\end{figure}
 
 \section{Map and Submap Linking}
 \label{sec:mapsubmaps}

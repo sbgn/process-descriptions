@@ -66,8 +66,8 @@ relationcanvas 129069 relation_ref 137133 // <generalisation>
 end
 relationcanvas 129453 relation_ref 136749 // <composition>
   from ref 129325 z 3006 to ref 128045
-  role_a_pos 662 234 3000 role_b_pos 810 234 3000
-  multiplicity_a_pos 662 263 3000 multiplicity_b_pos 888 263 3000
+  role_a_pos 664 234 3000 role_b_pos 806 234 3000
+  multiplicity_a_pos 664 263 3000 multiplicity_b_pos 885 263 3000
 end
 relationcanvas 131373 relation_ref 156077 // <generalisation>
   geometry VHV
