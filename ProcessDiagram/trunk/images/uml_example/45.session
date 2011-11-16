@@ -5,7 +5,7 @@ diagrams
 end
 show_stereotypes
 selected 
-package_ref 129 // uml_example
+  package_ref 129 // uml_example
 open
   class_ref 128173 // A
   class_ref 128429 // C
