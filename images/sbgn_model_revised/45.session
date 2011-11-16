@@ -32,11 +32,9 @@ diagrams
     906 679 100 18 0 0
   classdiagram_ref 194861 // TagView
     906 679 100 18 0 0
-  classdiagram_ref 134957 // EntityPoolNodeView
-    906 679 100 14 0 200
   classdiagram_ref 201389 // CloneMarkerView
     906 679 100 18 0 0
-  active  classdiagram_ref 201517 // FluxArcView
+  classdiagram_ref 201517 // FluxArcView
     1279 1115 100 18 0 0
   classdiagram_ref 201645 // ModulationArcView
     906 679 100 18 0 0
@@ -44,17 +42,19 @@ diagrams
     1279 1115 100 18 0 0
   classdiagram_ref 161453 // SBGNArcsView
     1833 1028 100 18 0 0
-  classdiagram_ref 208429 // EntityDefinitionView
-    1026 908 100 18 0 0
+  active  classdiagram_ref 208429 // EntityDefinitionView
+    1279 1115 100 18 0 0
   classdiagram_ref 214957 // SBGNNodeView
     1026 908 100 18 0 0
   classdiagram_ref 135085 // StatelessEPNView
     1026 908 100 18 0 0
   classdiagram_ref 188205 // StateVariableView
     1026 908 100 18 0 0
+  classdiagram_ref 134957 // EntityPoolNodeView
+    1026 908 100 14 0 0
 end
 show_stereotypes
-selected classdiagram_ref 201517 // FluxArcView
+selected classdiagram_ref 208429 // EntityDefinitionView
 open
   classdiagram_ref 134701 // MapView
   class_ref 158637 // Phenotype

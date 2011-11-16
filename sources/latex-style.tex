@@ -38,6 +38,9 @@
 \usepackage[normalem]{ulem}
 \usepackage[right]{lineno}
 \usepackage[olditem,oldenum]{paralist}
+\usepackage{fourier}
+\usepackage{layouts}
+
 
 % Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
 % that needs to be used if pdflatex is being used.  The following puts
@@ -79,10 +82,13 @@
 % Booktabs for sharp-looking \toprule, \midrule, \bottomrule in tables.
 
 \usepackage{booktabs}
-\usepackage{rotating}
 \setlength{\cmidrulewidth}{0.3 pt}
 \setlength{\lightrulewidth}{0.3 pt}
 \setlength{\heavyrulewidth}{0.9 pt}
+% \setlength{\marginparwidth}{3cm}
+% \setlength{\textwidth}{360pt}
+% \setlength{\oddsidemargin}{3cm}
+% \setlength{\evensidemargin}{3cm}
 
 
 %% ----------------------------------------------------------------------------
@@ -369,6 +375,13 @@
 %\newcommand{\glyphCloning}{\item[Cloning:]}
 %\newcommand{\glyphRules}{\item[Special constraints or rules:]}
 
+%\newcommand{\query}{\marginpar{\hspace*{34pt}\raisebox{-0.5ex}{\Large?}}}
+
+%\newcommand{\query}[1]{\reversemarginpar\marginpar{\hspace*{34pt}\raisebox{-0.5ex}{\Large\textxswdown}}\footnote{#1}}
+%\newcommand{\query}[1]{\reversemarginpar\marginpar{{\Large\textxswdown}\raggedright\footnotesize#1}}
+\newcommand{\query}[1]{\reversemarginpar\marginpar{{\danger}\\\raggedright\footnotesize
+  See footnote.}\footnote{#1}}
+    
 
 %% ----------------------------------------------------------------------------
 %% The end.

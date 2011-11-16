@@ -53,6 +53,14 @@ presented as \sbgnclass{CamelCaseClassName}. Attributes and
 associations are written in lower case, using the underscore to
 separate words: \attrib{an\_attribute}.
 
+Note that in drafts of this document the margin-note\query{The
+  footnote contains a description of why this part of the
+  specification is contentious, may require
+  further discussion, or should be noted by the reviewer of the
+  document.} is used to indicate that this part of the document may
+require special attention from the reader as it may contain material
+that is new or potentially contentious.
+
 \section{How to read the Language Specification}
 
 Here will describe the elements of the class definitions that are the
@@ -104,7 +112,7 @@ for clarity we define here:
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{images/exampleuml}
+\includegraphics[width=0.9\textwidth]{images/exampleuml}
 \caption{An example of the UML elements used in this
   specification. The diagram is explained more fully in the text.}
 \label{fig:umlexample}
@@ -244,7 +252,7 @@ in section \ref{sec:definitions}.
 \label{defn:SBGNElement}
 
 All the glyphs in \SBGNPDLone inherit from
-\sbgnclass{SBGNElement}. This is an abstract or conceptual class that
+\sbgnclass{SBGNElement}\query{A new concept}. This is an abstract or conceptual class that
 helps organise \PD conceptually. \sbgnclass{SBGNElement} (figure
 \ref{fig:mapuml}) has a single attribute \attrib{id} that is an
 identifying attribute. This means that all SBGN elements defined here,
@@ -263,7 +271,9 @@ None
 
 \begin{attributes}
   \attitem{id}{identifier}{R} uniquely identifies all SBGN elements in
-  the same namespace.
+  the same namespace\query{Not defined previously, but doesn't change
+    \PD semantics. reinforces the idea of instance identity that
+    exists for all glyphs.}.
 \end{attributes}
 
 \subsubsection{Changes from Previous Version}
@@ -281,7 +291,9 @@ Not defined in the previous version.
   \label{fig:mapuml}
 \end{figure}
 
-The \sbgnclass{Map} (figure \ref{fig:mapuml}) is a container that
+The \sbgnclass{Map}\query{Defining this explicitly is new, but the
+  concept of the map as a container of glyphs has always existed in
+  the \PDl} (figure \ref{fig:mapuml}) is a container that
 holds all the glyphs (\classref{SBGNGlyph}) drawn in a \PDm. A map may
 represent a submap or a supermap and should comply with the rules set
 out in section \ref{sec:mapsubmaps}. The \attrib{elements} held should be
@@ -497,7 +509,11 @@ Not defined in the previous version.
   \label{fig:entitytypeuml}
 \end{figure}
  
-The \sbgnclass{EntityType} is one of the code concepts in the \PDl. It
+The \sbgnclass{EntityType}\query{The concept of an entity pool's type
+  has been there implicitly in previous versions and comes up in
+  discussions. This class aims to formalise that concept and the rules
+associated with it and enable us to formalise rules associated with
+EPNs.} is one of the code concepts in the \PDl. It
 defines the type of entity that is instantiated by one or more
 entity pools in a \PDm. The \sbgnclass{EntityType} has associated
 state variable definitions (see figure \ref{fig:entitytypeuml}) and
@@ -516,11 +532,13 @@ None.
   \attitem{name}{string}{R} The name that identifies the entity in the
   \PDm. EPNs with the same label should be from the same entity. the
   string cannot be empty and must start and end with a non-space
-  character. Any Unicode character is acceptable.
+  character. Any Unicode character is acceptable\query{Not discussed
+    or defined anywhere, but would make sense to define this explicitly.}.
   \attitem{natures}{cv}{*} The nature of the entity pool node as defined
   by a controlled vocabulary. Zero, one or more values may be set, but
   each one must belong to a different controlled vocabulary (see
-  section \ref{sec:CVs}).
+  section \ref{sec:CVs})\query{This has been discussed on the mailing
+    list where this seems to be the consensus solution}.
 \end{attributes}
 
 
@@ -528,11 +546,17 @@ None.
 
 \begin{attributes}
   \associtem{state\_definitions}{StateVariableDefintion}{*} The state
-  definitions associated with this type. They must be unique, but the
-  definitions may contain duplicate \attrib{name}s.
+  definitions associated with this type.
 \associtem{pools}{EntityPoolNode}{1..*} The entity pool nodes that
 used this type.
 \end{attributes}
+
+\subsubsection{Logical Identity}
+
+\begin{logicalkey}
+  \item \attrib{name}
+  \item \attrib{natures}
+\end{logicalkey}
 
 \subsubsection{Rule and Constraints}
 
@@ -552,7 +576,9 @@ and the associated rules did exist in the language.
 
 \subsection{StateVariableDefinition}
 
-The \sbgnclass{StateVariableDefinition} defines the state variables
+The \sbgnclass{StateVariableDefinition}\query{As with EntityType this
+  is new and aims to formalise the concept that an entity pool must
+  preserve the same state variables whenever it is used.} defines the state variables
 used by an \sbgnclass{EntityType} and therefore those state variables
 that must exists in an \sbgnclass{EntityPoolNode} (see figure
 \ref{fig:entitytypeuml}).
@@ -568,7 +594,8 @@ None.
   is optional, but if defined cannot be an empty string or just white
   space characters. It should also start with an alpha-numeric
   character and  end with a non-space character. It should not contain
-  a `@' character.
+  a `@' character\query{No rule defined previously, but this would
+   seem to make sense.}.
 \end{attributes}
 
 
@@ -612,10 +639,11 @@ endoplasmic reticulum.
  
 The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the
 definition of the entity pool and it shares an \sbgnclass{EntityType}
-with other identical entities. An instance of an entity pools is
+with other identical entities\query{Although this concept is discussed
+it is not explicitly defined previously.}. An instance of an entity pools is
 therefore distinguished from other pools with the same entity type by
 its \attrib{cardinality}, its \attrib{owning\_compartment} and the
-\attrib{value}s of its \sbgnclass{SatteVariable}s (where
+\attrib{value}s of its \sbgnclass{StateVariable}s (where
 appropriate). It must belong to a compartment or be associated with
 the map (c.f.\, section \ref{sec:compartment}) and can contain a clone
 marker if it is cloned (see section \ref{sec:epnuniqueness})--- note
@@ -639,19 +667,23 @@ that not all EPNs can be cloned.
 \begin{attributes}
  \associtem{owning\_compartment}{Compartment}{0..1} The compartment
   that this EPN belongs too.
+\associtem{entity\_type}{EntityType}{1} The type of this entity pool.
   \associtem{clone\_marker}{CloneMarker}{0..1} The clone marker
   decorator. See section \ref{sec:cloneMarker} for its use.
  \associtem{displayed\_attributes}{AttributeValue}{*} One or
- more decorators used to display attribute values.
+ more decorators used to display attribute values\query{This is an
+   alternate way of using the Unit of Information to display
+   information, but to constrain it so that it presents attributes of
+   the EPN not general annotation. See the AttributeValue class for
+   more information.}.
 \end{attributes}
 
 \subsubsection{Logical Identity}
 
 \begin{logicalkey}
 \item \attrib{owning\_compartment}
-\item \attrib{name}
+\item \attrib{entity\_type}
 \item \attrib{cardinality}
-\item \attrib{natures}
 \end{logicalkey}
 
 \subsubsection{Rules and Constraints}
@@ -747,7 +779,8 @@ The definition of the \glyph{Empty Set} is shown in figure
 \ref{fig:emptysetuml}. The empty set is not a subclass of \sbgnclass{EntityPoolNode} as it does not
 represent a single pool of entities and does not share any of the
 other attributes of an \sbgnclass{EntityPoolNode}, nor does it belong to a particular
-compartment.
+compartment\query{This is a significant change to the semantics from
+  v1.3 since it is no longer an EPN.}.
 
 \subsubsection{Generalisation}
 
@@ -960,8 +993,9 @@ No additional associations.
 
 \begin{itemize}
 \item The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
-  1$\query. This means there is no multimer glyph.
-\item It cannot have a natures\query, therefore \attrib{natures} must \textbf{not} be set.
+  1$. This means there is no multimer glyph.
+\item It cannot have a natures\query{Not explicitly discussed, but
+    natures don't make sense here.}, therefore \attrib{natures} must \textbf{not} be set.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -1082,10 +1116,10 @@ No additional attributes.
 
 \subsubsection{Associations}
 
-\begin{itemize}
+\begin{attributes}
 \associtem{states}{StateVariable}{*} The state variables
   that belong to this class.
-\end{itemize}
+\end{attributes}
 
 \subsubsection{Rules and Constraints}
 
@@ -1334,7 +1368,7 @@ No additional attributes
 \begin{itemize}
 \item Once a set of subunits are defined for an \sbgnclass{Complex}
   with a given \sbgnclass{EntityType}, then they must be used by every
-  instance using that entity type.\query.
+  instance using that entity type.\query{New rule.}.
 \item The set of subunits in the Complex does not identify it. One or
   more Complexes that contain the same set of subunits, but have
   different labels are \textbf{not} identical.
@@ -1410,7 +1444,9 @@ illustrates the glyph.
 \subsection{Subunit}
 \label{defn:Subunit}\label{sec:subunits}
 
-The \sbgnclass{Subunit} is used to describe the composition of the
+The \sbgnclass{Subunit}\query{The principles of the subunit have been
+  agreed, but the details of this implementation should be
+  reviewed. In particular the rules about state variables.} is used to describe the composition of the
 \classref{Complex}. A complex can optionally be decorated with one or
 more subunits, which represent the types of \classref{EntityPoolNode}
 that may aggregate to form a complex. As we can see from the UML
@@ -1514,7 +1550,10 @@ The example in figure \ref{fig:complexSubunits} illustrates the use of
 subunits in a complex.  It also shows an equivalent compex without
 subunits. This is an import point. For every \glyph{Complex} drawn
 with subunits it will always be possible to drawn an equivalent
-version that does not use contains subunits\query.
+version that does not use contains subunits\query{Not discussed in
+  detail. This must be true if states can be drawn on subunits, but
+  actually belong to the complex. Either this or we enforce a rule
+  that all state vars must be named uniquely.}.
 
 \begin{figure}[H]
   \centering
@@ -1584,13 +1623,13 @@ No additional rules and constraints.
 \subsection{NonStoichiometricProcess}
 \label{defn:NonStoichiometricProcess}
 
-The \sbgnclass{NonStoichiometricProcess} (figure
-\ref{fig:nonstoichprocessuml}) is a type of process. It does not
-necessarily result in a measurable change of entity pools, nor does it
-necessarily have a defined start and end point. In many cases the
-process is not well defined. This may because it is not well
-understood or because the detail is not important or is being
-summarised.
+The \sbgnclass{NonStoichiometricProcess}\query{This has been discussed
+  and agreed in past meetings} (figure \ref{fig:nonstoichprocessuml})
+is a type of process. It does not necessarily result in a measurable
+change of entity pools, nor does it necessarily have a defined start
+and end point. In many cases the process is not well defined. This may
+because it is not well understood or because the detail is not
+important or is being summarised.
 
 \begin{figure}[htb]
   \centering
@@ -1698,7 +1737,9 @@ unique.
 \subsection{SubmapNode}
 \label{sec:submap}\label{defn:SubmapNode}
 
-The \sbgnclass{SubmapNode} (figure \ref{fig:submapnodeuml}) is a
+The \sbgnclass{SubmapNode}\query{This name change has not been
+  discussed at the time of writing. The aim is to provide clarity
+  between the submap and this glyph.} (figure \ref{fig:submapnodeuml}) is a
 placeholder for another process and is used when one wishes to hide
 the detail of this process from the \PDm, but make it available to the
 reader as a separate related map. The \sbgnclass{Submap} is not
@@ -1739,7 +1780,7 @@ reference between the EPNs in the Main Map and those in the submap,
 which are identified by a \sbgnclass{Tag}.
 \end{attributes}
 
-\subsection{Logical Identity}
+\subsubsection{Logical Identity}
 
 \begin{logicalkey}
   \item \attrib{owning\_map}
@@ -1918,7 +1959,12 @@ the previous version the semantics and glyphs are unchanged.
   \label{fig:stoichprocessuml}
 \end{figure}
  
-A stoichiometric process produces a measurable change in the
+A stoichiometric process\query{New concept, but discussed in previous
+  meetings. The semantics of the process being stoichiometrically
+  balanced has not been discussed in detail for the stoichiometric
+  process, and this is the subject of a tracker query. The spec
+  previously stated that the process should be balanced and this is
+  therefore consistent with that.} produces a measurable change in the
 quantities of entity pools consumed and produced. This might imply
 modification of covalent bonds (conversion), modification of the
 relative position of constituents (conformational process) or movement
@@ -2015,6 +2061,8 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
+\paragraph{General}
+
 \begin{itemize}
 \item The \attrib{in\_arc} must contain one or more
   \sbgnclass{FluxArc}s containing the same \attrib{flux\_type} value.
@@ -2024,19 +2072,50 @@ No additional associations.
   instances of \sbgnclass{ModulationArc}.
 \item The \attrib{out\_arc} must contain one or more
  instances of \sbgnclass{FluxArc} with a \attrib{flux\_type} or `production'.
-\item If \attrib{process\_type} is `association' or `dissociation' then the process
-  cannot be reversible.
 \item If \attrib{in\_arcs}  contains one or more \sbgnclass{FluxArc}s
   of type `reversible' this process reversible.
 \item The \sbgnclass{EntityPoolNode}s that make up the LHS of the
   process should be consistent with the RHS, i.e.\, the process should
- be stoichiometrically balanced.\query
+ be stoichiometrically balanced.\query{Tracker issue 329060. If the
+   process is stoichiometric this must make sense. The previous spec
+   states this so this is consistent with it.}
 \item If at least one \sbgnclass{FluxArc} associated with a
   \sbgnclass{StoichiometricProcess} displays its stoichiometry via a
-  \glyph{stoichiometry label} then all must.\query
+  \glyph{stoichiometry label} then all must.\query{Take from previous
+    spec, but that said if one displays stoichiometry in a map which
+    is too restrictive.}
 \item If more than one set of stoichiometries can be applied to the
   flux arcs of the process then the stoichiometry of the flux arcs
   must be displayed.
+\end{itemize}
+
+
+\paragraph{Association}
+
+These rules apply if the \attrib{process\_type} is `association'.
+
+\begin{itemize}
+\item The process must be irreversible.
+\item There can only be one `production' \sbgnclass{FluxArc}, with
+  \attrib{stoichiometry} $= 1$.
+\item If a \sbgnclass{Complex} is on the RHS of the association then
+  there must be at least 2 EPNS on the LHS.\glyph{Is this too
+    restrictive? It prevents multimers being represented as a complex
+    of 2 identical subunits. It is taken from v1.0 of the spec and got lost in
+    later versions.}
+\end{itemize}
+
+\paragraph{Dissociation}
+
+These rules apply if the \attrib{process\_type} is `dissociation'.
+
+\begin{itemize}
+\item The process must be irreversible.
+\item There can only be one `consumption \sbgnclass{FluxArc}, with
+  \attrib{stoichiometry} $= 1$.
+\item If a \sbgnclass{Complex} is on the LHS of the dissociation then
+  there must be at least 2 EPNS on the RHS.\glyph{see comment in
+    association rules}.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -2050,14 +2129,19 @@ No additional associations.
 
 \glyphNode A process is represented by a square box linked to two
 connectors: small arcs attached to the centers of opposite sides and
-referred to here as `lugs'\query. The flux arcs arcs are linked to the
-ends of the lugs as shown in figure \ref{fig:process}. The lug's
-purpose is to 'gather' the flux arcs together before meeting the
-process node proper and in doing so they emphasis the 'sides' of the
-reaction. Therefore the lug must have a visually appreciable length\query
-and must be placed on opposite sides of the process square. The
-modulatory arcs (section \ref{sec:modulation}) point to the other two
-sides of the box.
+referred to here as `lugs'\query{The term lugs is used in
+  discussion. We haven't discussed this in detail or at least come to
+  a consensus on it. In particular does the lug need to be
+  perpendicular to the process and does it need to be a straight line?
+  How should it be used when the arc connecting to it is curved.}. The
+flux arcs arcs are linked to the ends of the lugs as shown in figure
+\ref{fig:process}. The lug's purpose is to 'gather' the flux arcs
+together before meeting the process node proper and in doing so they
+emphasis the 'sides' of the reaction. Therefore the lug must have a
+visually appreciable length\query{Undefined previously, but if we
+  define it then it should be visible.} and must be placed on opposite sides
+of the process square. The modulatory arcs (section
+\ref{sec:modulation}) point to the other two sides of the box.
 
 \end{glyphDescription}
 
@@ -2201,17 +2285,18 @@ The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2
   \label{fig:assoc-unamed}
 \end{figure}
 
-An association does not necessarily result in the formation of a
-\glyph{complex}; it can also produce a multimer, or a
-\glyph{macromolecule} (although the latter case is semantically
-borderline) \query.  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
+% An association does not necessarily result in the formation of a
+% \glyph{complex}; it can also produce a multimer, or a
+% \glyph{macromolecule} (although the latter case is semantically
+% borderline) \query{This is \textbf{wrong} and should be removed. It
+%   hould be handled by a process}.  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{examples/association-multimerisation}
-  \caption{Formation of hemoglobin.}
-  \label{fig:assoc-multi}
-\end{figure}
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale = 0.3]{examples/association-multimerisation}
+%   \caption{Formation of hemoglobin.}
+%   \label{fig:assoc-multi}
+% \end{figure}
 
 \paragraph{Glyph: \glyph{Dissociation}}\label{sec:dissociation}
 
@@ -2269,7 +2354,11 @@ located in two different compartments are in fact two different pools.
 
 \begin{attributes}
   \attitem{name}{string}{R} The name of the compartment.
-  \attitem{natures}{cv}{*} A set of controlled vocabularies that describes
+  \attitem{natures}{cv}{*} A set of controlled vocabularies\query{This
+ reconciles the use of the Unit of Information to represent the nature
+of an EPN by using to present similar information for the
+compartment. This is consistent with previous usage, but not with the
+usage of the UofI for annotation.} that describes
   a characteristic of the compartment. Zero, one or more values may be
   set, but each one must belong to a different controlled vocabulary.
 \end{attributes}
@@ -2378,14 +2467,19 @@ according to the current specification.
   \label{fig:attributevalueuml}
 \end{figure}
 
- The \sbgnclass{AttributeValue} is used to present the values of
- certain attributes held by other SBGN elements. It is typically
- contained and owned by the class containing the attribute (or its
- descendants). It contains two values, one is a \attrib{code} to indicate the
- attribute that is defined and the other is the\attrib{ value} itself. The \attrib{code}
- and the presentation format of the \attrib{value} are defined by the
- SBGN element that contains the \sbgnclass{AttributeValue}, currently
- \classref{Compartment}, \classref{EntityPoolNode}, and \classref{Subunit}.
+The \sbgnclass{AttributeValue}\query{A new concept, that modifies the
+  behaviour of the Unit of Information in previous versions with the
+  need to use it to present the nature and cardinality of an EPN. The
+  glyph retains its original name, but the class has been names to
+  reflect it purpose.} is used to present the values of certain
+attributes held by other SBGN elements. It is typically contained and
+owned by the class containing the attribute (or its descendants). It
+contains two values, one is a \attrib{code} to indicate the attribute
+that is defined and the other is the\attrib{ value} itself. The
+\attrib{code} and the presentation format of the \attrib{value} are
+defined by the SBGN element that contains the
+\sbgnclass{AttributeValue}, currently \classref{Compartment},
+\classref{EntityPoolNode}, and \classref{Subunit}.
 
 
 \subsubsection{Generalisation}
@@ -2510,7 +2604,8 @@ displayed for a given entity type, then it must always be displayed.
   \attitem{value}{string}{R} The value of the state variable. This is
   optional, but cannot be an empty string, should start with a
   non-space character and end with a non-space character. It should
-  also not include the `@' character\query.
+  also not include the `@' character\query{Not specified is previous
+    spec, but seems essential if we are to avoid ambiguity.}.
 \end{attributes}
 
 \subsubsection{Associations}
@@ -2519,7 +2614,9 @@ displayed for a given entity type, then it must always be displayed.
   \associtem{owning\_epn}{StatefulEPN}{1}  The stateful EPN that owns
   the state variable.
   \associtem{definition}{StateVariableDefinition}{1} The definition of
-  this state variable.
+  this state variable\query{New concept. It aims to ensure that all
+    state variables are defined in all EPNS of the same
+    type.}.
 \end{attributes}
 
 \subsubsection{Rules and Constraints}
@@ -2694,8 +2791,9 @@ This is a new language element and an not previous versions of the \PDl.
 \end{figure}
 
 
-\sbgnclass{CrossReference} handles links or relationships between elements of a
-map and su-map. At present there is only one reference glyph,
+\sbgnclass{CrossReference}\query{A new concept required for
+  consistency between tags ans submap terminals.} handles links or relationships between elements of a
+map and sub-map. At present there is only one reference glyph,
 \glyph{tag}, which can be used in a map refered to by a \glyph{submap}
 (\sect{submap}) or as an auxilary unit on the \glyph{submap}. The
 \glyph{clone marker} can also provide additional reference mechanisms
@@ -2735,7 +2833,9 @@ Not defined in the previous version.
  \subsection{SubmapTerminal}
 \label{defn:SubmapTerminal}
 
-A \sbgnclass{SubmapTerminal} (figure \ref{fig:submapnodeuml}) is a named reference that is part of a
+A \sbgnclass{SubmapTerminal}\query{Not properly defined in previous
+  versions of the spec. The rules described here are consistent with
+  accepted usage.} (figure \ref{fig:submapnodeuml}) is a named reference that is part of a
 \classref{SubmapNode}. It provides the reference that is the link to a
 tag in the submap that the \sbgnclass{SubmapNode} refers to.
 
@@ -2905,11 +3005,15 @@ No additional associations.
 
 \begin{itemize}
 \item if the \attrib{stoichiometry} is not displayed then it is
-assumes to be 1\query.
+assumes to be 1\query{The previous version said that the stoichiometry
+  was unspecified, but this was before the stoichiometric process was
+  specified. In addition since cardinality is defined explicitly the
+  stoichiometry can often be implied.}
 \item If the \attrib{stoichiometry} $>1$ then the stoichiometry must
-  be displayed.\query
-\item If the stoichiometry is undefined or unknown this should be
-  indicated by the use of a question mark (``?'')\query.
+  be displayed.\query{See above comment.}
+%\item If the stoichiometry is undefined or unknown this should be
+ % indicated by the use of a question mark (``?'')\query{This is
+  %  inconsistent with balanced stoichiometry. It should be removed IMHO.}.
 \item if \attrib{flux\_type} $=$ `consumption' or 'reversible' then:
   \begin{itemize}
   \item The \attrib{in\_node} must be an instance of
@@ -2933,7 +3037,9 @@ its \attrib{flux\_type}:
 \begin{description}
 \item[consumption] \glyph{consumption arc}.
 \item[production] \glyph{production arc}.
-\item[reversible] \glyph{reversible arc}.
+\item[reversible] \glyph{reversible arc}\query{The reversible arc is
+    introduced here to fix syntax problems in previous spec. The
+    change is visually neutral on previous \PD maps.}.
 \end{description}
 
 These are defined below. In addition the \attrib{stoichiometry} is
@@ -2985,7 +3091,7 @@ layout in relation to the flux arc is also described here.
 \end{figure}
 
 
-\paragraph{Stoichiometry Label}
+\paragraph{Glyph: \glyph{Stoichiometry Label}}
 
 The stoichiometry label is part of the \glyph{consumption arc} and
 \glyph{production arc} glyphs see below (sections
@@ -3010,7 +3116,8 @@ is described here.
 
 The label is a node that must be drawn above the flux arc. This node
 is attached to the arc where it intersects the arc with its bottom
-corners (see figure \ref{fig:stoichlabellayout}.).
+corners (see figure \ref{fig:stoichlabellayout}.)\query{These layout
+  rules were agreed at COMBINE 2010, but have not been voted on.}.
 
 \begin{glyphDescription}
 \glyphSboTerm None
@@ -3023,11 +3130,14 @@ a normal font, \ie not bold or italic.
 \subsubsection{Changes from Previous Version}
 
 The \glyph{reversible arc} has been added to ensure the correct syntax
-is observed for a reversible process\query --- using the
-\glyph{production arc} for this was syntactically forbidden in the
-previous version of the specification. There is no change to semantics from
-previous version, but layout rules for placement of stoichiometry
-label have been clarified.
+is observed for a reversible process\query{New glyph. We need it to
+  ensure the correct syntax as we have a directed graph and we need to
+  prevent the production arc pointing towards the process. It looks
+  the same as the previous situation.} --- using the \glyph{production
+  arc} for this was syntactically forbidden in the previous version of
+the specification. There is no change to semantics from previous
+version, but layout rules for placement of stoichiometry label have
+been clarified.
 
 % \subsection{ConsumptionArc}
 
@@ -3185,7 +3295,8 @@ necessary\_stim & A necessary stimulation, is one that is necessary for a proces
 
 As discussed in \chap{concepts}, it is implied, but not defined explicitly that the process has a rate at
 which it converts its LHS EPNs to its RHS EPNs (and vice-versa in the case of a reversible process). This concept is
-important in understanding how the \PDl describes process modulation.
+important in understanding how the \PDl describes process
+modulation\query{This is taken from the grammar section of the previous specification.}.
 
 \begin{enumerate}
 \item A \glyph{process} with no modulations has an underlying ``basal rate''
@@ -3220,13 +3331,16 @@ No additional attributes.
 \item At most one \glyph{necessary stimulation} can be assigned to a process node. Two \glyph{necessary stimulations}
   would imply an implicit AND or OR operator. For clarity only
   one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
-  explicitly expressed using \glyph{logical operators}. 
+  explicitly expressed using \glyph{logical operators}\query{Taken
+    from the grammar section of the previous specification.}. 
 \item At most one \glyph{catalysis} can be assigned to a
   \glyph{process}. Modulation by a catalysis arc implies that the exact biochemical mechanism underlying
   the process is known. In this context two \glyph{catalysis} cannot
   be assigned to the same process node as they represent
   independent reactions. Other EPNs can be assigned to the same process as a catalysis, such as modulators, stimulators, and
-  inhibitors, and will have a multiplicative modulation on the reaction rate defined by the catalysis.
+  inhibitors, and will have a multiplicative modulation on the
+  reaction rate defined by the catalysis\query{Taken from the grammar
+    section of the previous specification.}.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -3466,12 +3580,12 @@ No additional attributes.
 
 \subsubsection{Associations}
 
-\begin{itemize}
+\begin{attributes}
 \associtem{cross\_ref}{CrossReference}{1} The cross reference
 associated to be associated with an EPN by this class.
 \associtem{ref\_epn}{EntityPoolNode}{1} The EPN that the
 cross-reference refers to.
-\end{itemize}
+\end{attributes}
 
 \subsubsection{Rules and Constraints}
 
@@ -3708,7 +3822,9 @@ covalent modifications on macromolecules and the physical
 characteristics. These controlled vocabularies are \emph{closed} in
 the sense that only the values defined for each CV can be used in a
 valid \PDm and also closed because only the controlled vocabularies
-defined in this specification can be used in a valid \PDm. We
+defined in this specification can be used in a valid \PDm\query{The
+  previous version was a bit vaque but implied that the CVs were
+  open. This has been changed after discussion on the list.}. We
 understand that this is of necessity restrictive, but in closing these
 definitions it means we can be clear about the meaning of all CV terms
 used in the specification. Updates to the CV terms and the CVs used
@@ -3871,7 +3987,9 @@ others (\sbgnclass{EntityPoolNode}) it is not, but requires
 special decoration (the clone marker) to indicate that the information
 is replicated on the map. We define this type of identity and
 ``logical identity'' and the attributes that so discriminate between
-elements as the ``logical key''.
+elements as the ``logical key''\query{This is recapitulation of
+  the rules as defined in the previous version of the specification
+  and as it is understood in discussions.}.
 
 Clearly it is therefore important that we define the logical key for
 all the elements in the map and that we do this for the class definitions
@@ -3919,77 +4037,44 @@ potentially different mechanisms.
 \label{sec:mapsubmaps}
 \label{sec:submaplinkingsemantics}
 
-Rules.
-
-\begin{itemize}
-\item Same namespace for map and submaps. Recursive so submaps of
-  submaps share top-most map's namespace. \textbf{Do we want to allow this?}
-\item Compartment's logical key is it's name. Compartment's can be
-  replicated across submaps and they all refer to the same
-  compartment.
-\item EPNs replicated in both map and immediate submap must be
-  associated with a cross-reference (terminal for main map, tag for
-  submap).
-\item EPN replication is allowed between submaps separated by one or more other
-  submaps, i.e. those not affected by the above rule.
-\item All \attrib{reference\_id}s used must be unique within a given
-  map and it's immediate super-map and its immediate sub-map.
-\item submap folding: all tagged nodes in submap merge with those
-  linked to terminals in super-map. If either node is cloned then all
-  equivalent nodes in merged map must share the appropriate clone
-  marker.
-\end{itemize}
-
 The submap is a visual device that allows the detail of an \PD map to
-be exported into another \PD map and replaced by a \glyph{submap}
-glyph, which acts as a place-holder. This is described and illustrated
-in \sect{submap}. In the following discussion we will refer to the
-original map as the \emph{main} map and the map containing the export
-detail as the submap.
+be exported into another \PD map and replaced by a
+\classref{SubmapNode}, which acts as a place-holder. In the case of an
+SBGN description that is made available through a software tool, the
+content of a \sbgnclass{SubmapNode} may be available to the tool.  A
+user could then ask the tool to expand it, for instance by clicking on
+the \glyph{submap node} glyph.  The tool might then expand and show
+its submap within the same map, or it might display it as a separate
+map. In the case of an SBGN description made available in a book or a
+website, the content of the \glyph{submap node} may be available on another
+page, possibly accessible via a hyperlink.\query{Currently we can't
+  name a map so linking between supermaps and submaps is problematic.}
 
-\begin{enumerate}
-\item For a valid mapping between an EPN in the map and submap to
-  exist the identifiers in the \glyph{tag} and the submap terminal
-  must be identical and their associated entity pool nodes must be
-  identical.
-\item If the same EPN is present in the map and a submap, then they
-  must be mapped to each other.
-\item Since the main map and submap share the same namespace, an EPN
-  that is cloned in the main map must also be marked as cloned in the
-  submap --- even if there is only one copy of the EPN in the
-  submap. The converse applies when the EPN in the submap is
-  cloned\footnote{This has the additional benefit of ensuring that
-    main maps and submaps do not need to be modified if the submap is
-    exanded and collapsed by a viewing or editing tool.}.
-\end{enumerate}
+As you can see the rules relating to the submap concept range wider
+than those applying to the \sbgnclass{SubmapNode} so we will detail
+these rules here. The concepts and nomenclature here can get confusing, so we will use
+ the following nomenclature in the rest of this section\query{This
+   nomenclature has not been used previously. The previous
+   nomenclature was a bit confusing and didn't capture the hierarchy
+   of maps well.}:
+\begin{description}
+\item[supermap] The map that owns the submap and so contains the submap glyph referring to it.
+\item[submap] The map that contains the detail summarised by the submap glyph in the super-map.
+\item[\attrib{reference\_id}] the value displayed by the tag and
+  submap terminal. These must be the same to indicate equivalence
+  between map and submap.
+\end{description}
 
-
-
-A \sbgnclass{Submap} is used to encapsulate processes (including all
-types of nodes and edges) one glyph.  The \glyph{submap} hides its
-content to the users, and display only input terminals (or ports),
-linked to \glyph{EPNs} (\sect{EPNs}).  A \glyph{submap} is not
-equivalent to an \glyph{omitted process} (see \sect{omitted}).  In the
-case of an SBGN description that is made available through a software
-tool, the content of a \glyph{submap} may be available to the tool.  A
-user could then ask the tool to expand the \glyph{submap}, for
-instance by clicking on the icon representing the \glyph{submap}.  The
-tool might then expand and show the \glyph{submap} within the same map
-(on the same canvas), or it might open it in a different canvas. In
-the case of an SBGN description made available in a book or a website,
-the content of the \glyph{submap} may be available on another page,
-possibly accessible via an hyperlink on the \glyph{submap}.
-
-\fig{submap-folded} represents a \glyph{submap} that transforms
-glucose into fructose-6-phosphate. The \glyph{submap} carries five
+\fig{submap-folded} represents a \glyph{submap node} that transforms
+glucose into fructose-6-phosphate. The \glyph{submap node} carries five
 terminals, four linked to EPNs and one linked to a
 \glyph{compartment}.  The latter is particularly important in the case
 of EPNs present only in a \glyph{compartment} enclosed in a
-\glyph{submap}, and that are not linked to terminals themselves.  Note
+\glyph{submap node}, and that are not linked to terminals themselves.  Note
 that the terminals do not define a ``direction'', such as input or
 output.  The flux of the reactions is determined by the context.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{examples/submap-folded}
   \caption{Example of a submap with contents elided.}
@@ -3997,22 +4082,61 @@ output.  The flux of the reactions is determined by the context.
 \end{figure}
 
 The map in \fig{submap-unfolded} represents an unfolded version of a
-\glyph{submap}.  Here, anything outside the \glyph{submap} has
+\glyph{submap}.  Here, anything outside the \glyph{submap node} has
 disappeared, and the internal \glyph{tags} are not linked to the
-corresponding external \glyph{terminals}.  Note the tag 5, linking the
-compartment ``mito'' of the \glyph{submap} to the compartment ``mito''
-outside the \glyph{submap}.  The compartment containing Glu6P is
-implicitly defined as the same as the compartment containing Glu and
-Fru6P.  There is no ambiguity because if Glu and Fru6P were in
-different compartments, one of them should have been defined within
-the \glyph{submap}.
+corresponding external \glyph{submap terminals}.\query{This example
+in the previous version fo the spec  included compartment
+tagging. This has been removed, but the example may need refinement as
+a result.}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.35]{examples/submap-dissociated}
   \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{submap-folded}.}
   \label{fig:submap-unfolded}
 \end{figure}
+
+\subsection{Namespace and the relationship between maps}
+
+The following rules apply to the use of the \sbgnclass{SubmapNode} and
+submaps in the \PDl\query{These rules are taken from the previous
+ version of the spec, but rules about the depth of submap `recursion',
+ the uniqueness of reference\_id values and cloning between maps are not}. 
+
+
+\begin{itemize}
+\item Submaps can contain \sbgnclass{SubmapNode} instances so submaps
+  can contain submaps - there is no limit on the depth of this.
+\item Submaps share the same namespace as their supermap. Therefore submaps of
+  submaps share the top-most map's namespace.
+\item Compartment's can be replicated across submaps and they all
+  refer to the same compartment if they share the same name.
+\item Subclasses of \sbgnclass{EntityPoolNode} replicated in both map
+  and its immediate submap must be
+  associated with a subclass of \sbgnclass{CrossReference}
+  (\sbgnclass{SubmapTerminal} for the supermap and \sbgnclass{Tag} for
+ the submap).
+\item Subclasses of \sbgnclass{EntityPoolNode} may be replicated
+  between submaps separated by one or more other submaps, i.e. those
+  not affected by the above rule.
+\item All \attrib{reference\_id}s used must be unique within a given
+  map namespace.
+\item submap folding: all tagged nodes in submap merge with those
+  linked to terminals in super-map. If either node is cloned then all
+  equivalent nodes in merged map must share the appropriate clone
+  marker.
+\item For a valid mapping between subclasses of \sbgnclass{EntityPoolNode} in a supermap and submap to
+  exist, the \sbgnclass{EntityPoolNode} subclasses must be logically
+  identical and the \attrib{reference\_id} in their associated \sbgnclass{CrossReference} must be identical.
+  identical.
+\item A \sbgnclass{SubmapNode} which do not have a corresponding
+  submap is valid.
+\item Submaps without a corresponding supermap are invalid\query{We
+  need to sort out mapping between super and sub maps to get this
+  working. I propose naming the maps}.
+\item Subclasses of \sbgnclass{EntityPoolNode} with the same name must
+  share the same \sbgnclass{EntityType}.
+\end{itemize}
 
 \subsection{Compartment spanning}
 
