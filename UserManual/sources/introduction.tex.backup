@@ -1,0 +1,71 @@
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/ProcessDiagram/trunk/sources/introduction.tex $
+
+% =============================================================================
+% introduction
+% =============================================================================
+
+\chapter{Introduction}
+
+%Here put a general but short introduction to the needs of standardizing the representation of pathways.
+
+The goal of the \textbf{S}ystems \textbf{B}iology \textbf{G}raphical 
+\textbf{N}otation (SBGN) is to standardize the graphical/visual 
+representation of biochemical and cellular processes. SBGN 
+defines comprehensive sets of symbols with precise semantics, together with 
+detailed syntactic rules defining their use.  It also describes the manner 
+in which such graphical information should be interpreted \cite{LeNovere:2009p1}. 
+
+% Brief introduction to the three languages.
+
+This document describes the graphical elements composing the \emph{\PDl{}} of SBGN. 
+
+% Here put a brief version of the introduction present in the glyph section of the PD specification.
+%
+%\section{Overview}
+%
+%\input{sources/pd-overview.tex}
+
+\section{SBGN levels and versions}
+\label{sec:sbgn-levels}
+
+It was clear at the outset of SBGN development that it would be impossible 
+to design a perfect and complete notation right from the beginning.  Apart 
+from the prescience this would require (which, sadly, none of the authors 
+possess), it also would likely need a vast language that most newcomers 
+would shun as being too complex.  Thus, the SBGN community followed an idea 
+used in the development of other standards, i.e. stratify language 
+development into levels.
+
+A \emph{level} of one of the SBGN languages represents a set of
+features deemed to fit together cohesively, constituting a usable set
+of functionality that the user community agrees is sufficient for a
+reasonable set of tasks and goals.  Within \emph{levels},
+\emph{versions} represent small evolution of a language, that may
+involve new glyphs, refined semantics, but no fundamental change of
+the way maps are to be generated and interpreted. In addition new
+versions should be backwards compatible, \ie \PD maps that conform to
+an earlier version of the \PDl within the same level should still be
+valid.  This does not apply to a new levels. 
+
+Capabilities and features that cannot be agreed upon and are judged
+insufficiently critical to require inclusion in a given level, are
+postponed to a higher level or version.  In this way, the development
+of SBGN languages is envisioned to proceed in stages, with each higher
+levels adding richness compared to the levels below it.
+
+\section{How to get more information}
+\label{sec:info}
+
+% Normative specification
+
+The SBGN website (\url{http://sbgn.org/}) is a portal for all things 
+related to SBGN.  
+% Description of the website content
+
+SBGN discussion list (\mailto{sbgn-discuss@caltech.edu}).  The easiest and best way to get involved in SBGN 
+discussions is to join the mailing list and participate.
+
+SBGN announce list
+
+Face-to-face meetings of the SBGN community are announced on the website as 
+well as the mailing list.  
