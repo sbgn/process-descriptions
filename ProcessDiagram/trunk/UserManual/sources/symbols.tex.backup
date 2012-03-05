@@ -3,38 +3,37 @@
 
 % Refactor the structure of this chapter. We need less sections and a simpler structure. For instance, auxiliary units must be defined in the EPN section. 
 
-An SBGN \PDm is mainly is bipartite graph, i.e. it is made up of two types of nodes that connect in an alternate way (some exceptions are described below, e.g. when \glyph{logical operators} or \glyph{tag} are used). The nodes are the \glyph{entity pools nodes}, representing the things that are modified by processes and the \glyph{process nodes}. The two types of nodes are connected by arcs. In addition, the \glyph{entity pools nodes} can be contained in \glyph{compartments}. 
+An SBGN \PDm is mainly is bipartite graph, i.e. it is made up of two types of nodes that connect in an alternate way (some exceptions are described below, e.g. when \glyph{logical operators} or \glyph{tag} are used). The two types of nodes are the \glyph{process nodes} and the \glyph{entity pools nodes}, representing the things that are modified by processes. These nodes are connected by arcs. In addition, the \glyph{entity pools nodes} can be contained in \glyph{compartments}. 
 
 \section{Entity pool nodes}\label{sec:EPNs}
 
-% An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular  entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. To belong to a different compartment is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
-% 
-% The \PD contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN.)  In addition to the material entities, \PD represents three conceptual entities: \glyph{source}, \glyph{sink} (\sect{sourceSink}), and \glyph{perturbing agent} (\sect{perturbing agent}).  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
-% 
-% \input{sources/unspecified.tex}
-% \input{sources/simpleChemical.tex}
-% \input{sources/macromolecule.tex}
+An entity pool is a population of entities that cannot be distinguished from each other, when it comes to the \SBGNPDLone map. For instance all the molecular entities that fulfill the same role in a given process form an entity pool. As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein. It really depends on what we want to represent. To belong to different compartments is sufficient to belong to different entity pools. Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
+
+The \PDl contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), and \glyph{complex} (\sect{complex}).  (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN). In addition to the material entities, the \PDl represents two conceptual entities: An absorbing pool, called \glyph{source and sink} (\sect{sourceSink}), and a \glyph{perturbing agent} (\sect{perturbing agent}).  Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
+
+\input{sources/unspecified.tex}
+ \input{sources/macromolecule.tex}
+\input{sources/simpleChemical.tex}
 % \input{sources/genetic.tex}
-% \input{sources/multimer.tex}
 % \input{sources/complex.tex}
 % \input{sources/sourceSink.tex}
 % \input{sources/perturbing_agent.tex}
 % 
-% \section{Auxiliary Units}
+% \section{Modification of the entity pool nodes}
+
+% \subsection{Auxiliary Units}
 % 
 % Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
 % 
 % \input{sources/unitInformation.tex}
 % \input{sources/stateVariable.tex}
 % \input{sources/cloneMarker.tex}
+
 % \input{sources/CVs.tex}
-% 
-% \section{Referring to other Nodes}
-% 
-% Reference nodes handle links or relationships between elements of a map and sub-map. At present there is only one reference glyph, \glyph{tag}, which can be used in a map refered to by a \glyph{submap} (\sect{submap}) or as an auxilary unit on the \glyph{submap}. The \glyph{clone marker} can also provide additional reference mechanisms and is discussed below (\sect{cloneMarker}).
-% 
-% \input{sources/tag.tex}
-% 
+
+% \input{sources/multimer.tex}
+
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%                   Containers
@@ -54,6 +53,13 @@ An SBGN \PDm is mainly is bipartite graph, i.e. it is made up of two types of no
 % 
 % \section{Submaps}
 % \input{sources/submap.tex}
+
+% \section{Referring to other Nodes}
+% 
+% Reference nodes handle links or relationships between elements of a map and sub-map. At present there is only one reference glyph, \glyph{tag}, which can be used in a map refered to by a \glyph{submap} (\sect{submap}) or as an auxilary unit on the \glyph{submap}. The \glyph{clone marker} can also provide additional reference mechanisms and is discussed below (\sect{cloneMarker}).
+% 
+% \input{sources/tag.tex}
+% 
 % 
 % 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

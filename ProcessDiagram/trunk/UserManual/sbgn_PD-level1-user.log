@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.28)  31 JAN 2012 09:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.28)  5 MAR 2012 19:46
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -866,7 +866,7 @@ les
          `rotating' package detected
          `float' package detected
 ) (./sources/latex-macros.tex) (./sbgn_PD-level1-user.aux
-(./sources/introduction.aux) (./sources/symbols.aux))
+(./sources/introduction.aux) (./sources/symbols.aux) (./sources/refcard.aux))
 \openout1 = `sbgn_PD-level1-user.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1027,169 +1027,136 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 21.64548pt on input line 6.
+
+LaTeX Warning: Citation `Moodie2011' on page 1 undefined on input line 12.
+
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.52792pt on input line 17.
+(Font)              scaled to size 12.52792pt on input line 14.
 <images/MAPK-only.pdf, id=9, 345.29pt x 337.26pt>
 File: images/MAPK-only.pdf Graphic file (type pdf)
  <use images/MAPK-only.pdf>
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.69995pt on input line 30.
+(Font)              scaled to size 8.69995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 30.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 30.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 8.69995pt on input line 30.
+(Font)              scaled to size 8.69995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.69995pt on input line 30.
+(Font)              scaled to size 8.69995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 30.
-
-
-LaTeX Warning: Reference `sec:macromolecule' on page 1 undefined on input line 
-30.
-
-
-LaTeX Warning: Reference `sec:simpleChemical' on page 1 undefined on input line
- 30.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
 
 
 LaTeX Warning: Reference `sec:stateVariable' on page 1 undefined on input line 
-30.
+24.
 
 
-LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
 
 
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 30
+LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
 .
 
 
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
 
 
 
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
 
 
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 30
+LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 24
 .
-
-
-LaTeX Warning: Reference `sec:macromolecule' on page 1 undefined on input line 
-30.
-
-
-LaTeX Warning: Reference `sec:simpleChemical' on page 1 undefined on input line
- 30.
 
 
 LaTeX Warning: Reference `sec:stateVariable' on page 1 undefined on input line 
-30.
+24.
 
 
-LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
 
 
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 30
+LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
 .
 
 
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
 
 
 
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 30.
+LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
 
 
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 30
+LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 24
 .
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 34
+LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 28
 .
 
 
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 34.
+LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 28.
 
 
 
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 34.
+LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 28.
 
 
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 34
+LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 28
 .
 
 [1
 
 
 
-]
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 69.
- (/usr/share/texmf-texlive/tex/latex/txfonts/t1txtt.fd
+] [2 <./images/MAPK-only.pdf>]
+
+LaTeX Warning: Citation `Moodie2011' on page 3 undefined on input line 42.
+
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 42.
+(/usr/share/texmf-texlive/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 69
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 42
 .
 
 (/usr/share/texmf-texlive/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 69.
+(Font)              scaled to size 10.07397pt on input line 42.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 69.
+(Font)              scaled to size 7.63599pt on input line 42.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 69.
+(Font)              scaled to size 5.51999pt on input line 42.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 69.
+(Font)              scaled to size 10.07397pt on input line 42.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 69.
+(Font)              scaled to size 7.63599pt on input line 42.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 69.
- [2 <./images/MAPK-only.pdf>]) [3]
+(Font)              scaled to size 5.51999pt on input line 42.
+)
+Overfull \hbox (13.03523pt too wide) in paragraph at lines 44--22
+[]\T1/futs/m/n/10.95 The eas-i-est and best way to get in-volved in SBGN dis-cu
+s-sions is to join the sbgn-discuss@caltech.edu
+ []
+
+[3]
 \openout2 = `sources/symbols.aux'.
 
  (./sources/symbols.tex
 Chapter 2.
-
-LaTeX Warning: Reference `sec:unspecifiedEntity' on page 4 undefined on input l
-ine 12.
-
-
-LaTeX Warning: Reference `sec:simpleChemical' on page 4 undefined on input line
- 12.
-
-
-LaTeX Warning: Reference `sec:macromolecule' on page 4 undefined on input line 
-12.
-
-
-LaTeX Warning: Reference `sec:genetic' on page 4 undefined on input line 12.
-
-
-LaTeX Warning: Reference `sec:complex' on page 4 undefined on input line 12.
-
-
-LaTeX Warning: Reference `sec:sourceSink' on page 4 undefined on input line 12.
-
-
-
-LaTeX Warning: Reference `sec:perturbing agent' on page 4 undefined on input li
-ne 12.
-
-
-LaTeX Warning: Reference `sec:unitInfo' on page 4 undefined on input line 12.
-
 
 LaTeX Warning: Reference `sec:stateVariable' on page 4 undefined on input line 
 12.
@@ -1198,38 +1165,105 @@ LaTeX Warning: Reference `sec:stateVariable' on page 4 undefined on input line
 LaTeX Warning: Reference `sec:cloneMarker' on page 4 undefined on input line 12
 .
 
-) [4
+(./sources/unspecified.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 10.43994pt on input line 1.
+
+<images/unspecified.pdf, id=31, 308.15125pt x 175.65625pt>
+File: images/unspecified.pdf Graphic file (type pdf)
+
+<use images/unspecified.pdf> [4
 
 
 
-] (./sbgn_PD-level1-user.bbl) [5
+]) (./sources/macromolecule.tex
+<images/macromolecule-plain.pdf, id=36, 311.1625pt x 172.645pt>
+File: images/macromolecule-plain.pdf Graphic file (type pdf)
+
+<use images/macromolecule-plain.pdf>) (./sources/simpleChemical.tex
+<images/simpleChemical.pdf, id=37, 174.6525pt x 176.66pt>
+File: images/simpleChemical.pdf Graphic file (type pdf)
+
+<use images/simpleChemical.pdf>) (./sources/genetic.tex
+
+LaTeX Warning: Reference `unitInformation' on page 5 undefined on input line 6.
+
+
+<images/genetic.pdf, id=38, 311.1625pt x 174.6525pt>
+File: images/genetic.pdf Graphic file (type pdf)
+ <use images/genetic.pdf>)
+(./sources/complex.tex [5 <./images/unspecified.pdf> <./images/macromolecule-pl
+ain.pdf> <./images/simpleChemical.pdf>]
+<images/complex.pdf, id=60, 694.595pt x 476.78125pt>
+File: images/complex.pdf Graphic file (type pdf)
+ <use images/complex.pdf>)
+(./sources/sourceSink.tex <images/sourceSink.pdf, id=61, 172.645pt x 176.66pt>
+File: images/sourceSink.pdf Graphic file (type pdf)
+
+<use images/sourceSink.pdf> [6 <./images/genetic.pdf> <./images/complex.pdf>])
+(./sources/perturbing_agent.tex
+<images/perturbing_agent.pdf, id=83, 265.99374pt x 110.4125pt>
+File: images/perturbing_agent.pdf Graphic file (type pdf)
+
+<use images/perturbing_agent.pdf>) (./sources/unitInformation.tex
+
+LaTeX Warning: Reference `sec:CVs' on page 7 undefined on input line 8.
+
+<images/unitInformation.pdf, id=84, 269.005pt x 108.405pt>
+File: images/unitInformation.pdf Graphic file (type pdf)
+
+<use images/unitInformation.pdf>)) [7 <./images/sourceSink.pdf> <./images/pertu
+rbing_agent.pdf> <./images/unitInformation.pdf>]
+\openout2 = `sources/refcard.aux'.
+
+ (./sources/refcard.tex
+Appendix A.
+<images/refcard.pdf, id=112, 798.985pt x 575.14874pt>
+File: images/refcard.pdf Graphic file (type pdf)
+ <use images/refcard.pdf>)
+Overfull \hbox (7.15172pt too wide) in paragraph at lines 4--29
+[] 
+ []
+
+[8
+
+
+
+] [9 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [10
 
 
 
 
-] (./sbgn_PD-level1-user.aux
-(./sources/introduction.aux) (./sources/symbols.aux))
+]
+(./sbgn_PD-level1-user.aux (./sources/introduction.aux) (./sources/symbols.aux)
+(./sources/refcard.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4543 strings out of 495061
- 59298 string characters out of 1182620
- 137980 words of memory out of 3000000
- 7550 multiletter control sequences out of 15000+50000
- 106111 words of font info for 78 fonts, out of 3000000 for 9000
+ 4633 strings out of 495061
+ 61255 string characters out of 1182620
+ 139447 words of memory out of 3000000
+ 7602 multiletter control sequences out of 15000+50000
+ 110908 words of font info for 85 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  32i,7n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/ad
-obe/utopia/putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a
-.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share
-/texmf-texlive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/f
-onts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (6 pages, 202841 bytes).
+ve/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/adobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/
+putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/
+share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
+urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
+o8a.pfb>
+Output written on sbgn_PD-level1-user.pdf (11 pages, 862515 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
