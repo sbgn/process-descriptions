@@ -2,11 +2,13 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: sbgn_PD-level1-user.aux
 A level-1 auxiliary file: sources/introduction.aux
 A level-1 auxiliary file: sources/symbols.aux
+A level-1 auxiliary file: sources/refcard.aux
 The style file: unsrt.bst
 Database file #1: sbgn_PD-level1-user.bib
+Warning--I didn't find a database entry for "Moodie2011"
 You've used 1 entry,
             1791 wiz_defined-function locations,
-            456 strings with 4402 characters,
+            459 strings with 4441 characters,
 and the built_in function-call counts, 750 in all, are:
 = -- 26
 > -- 119
@@ -45,3 +47,4 @@ warning$ -- 0
 while$ -- 3
 width$ -- 2
 write$ -- 15
+(There was 1 warning)
