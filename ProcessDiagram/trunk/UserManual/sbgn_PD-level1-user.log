@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.28)  5 MAR 2012 19:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  4 MAY 2012 18:21
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
 (./sbgn_PD-level1-user.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/bk11.clo
@@ -47,7 +53,8 @@ Package ifvtex Info: VTeX not detected.
 \Gm@odd@mp=\dimen105
 \Gm@even@mp=\dimen106
 \Gm@dimlist=\toks15
-)
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
 (/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
@@ -1055,10 +1062,6 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
 
 
-LaTeX Warning: Reference `sec:stateVariable' on page 1 undefined on input line 
-24.
-
-
 LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
 
 
@@ -1073,14 +1076,6 @@ LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
 LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
 
 
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 24
-.
-
-
-LaTeX Warning: Reference `sec:stateVariable' on page 1 undefined on input line 
-24.
-
-
 LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
 
 
@@ -1093,10 +1088,6 @@ LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
 
 
 LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 24
-.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1111,10 +1102,6 @@ LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 28.
 
 
 LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 28.
-
-
-LaTeX Warning: Reference `sec:cloneMarker' on page 1 undefined on input line 28
-.
 
 [1
 
@@ -1157,14 +1144,6 @@ s-sions is to join the sbgn-discuss@caltech.edu
 
  (./sources/symbols.tex
 Chapter 2.
-
-LaTeX Warning: Reference `sec:stateVariable' on page 4 undefined on input line 
-12.
-
-
-LaTeX Warning: Reference `sec:cloneMarker' on page 4 undefined on input line 12
-.
-
 (./sources/unspecified.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 1.
@@ -1213,27 +1192,49 @@ File: images/perturbing_agent.pdf Graphic file (type pdf)
 
 LaTeX Warning: Reference `sec:CVs' on page 7 undefined on input line 8.
 
-<images/unitInformation.pdf, id=84, 269.005pt x 108.405pt>
+<images/unitInformation.pdf, id=84, 263.98625pt x 109.40875pt>
 File: images/unitInformation.pdf Graphic file (type pdf)
 
-<use images/unitInformation.pdf>)) [7 <./images/sourceSink.pdf> <./images/pertu
-rbing_agent.pdf> <./images/unitInformation.pdf>]
+<use images/unitInformation.pdf>) (./sources/stateVariable.tex [7 <./images/sou
+rceSink.pdf> <./images/perturbing_agent.pdf> <./images/unitInformation.pdf>]
+<images/stateVariable.pdf, id=109, 263.98625pt x 111.41624pt>
+File: images/stateVariable.pdf Graphic file (type pdf)
+
+<use images/stateVariable.pdf>) (./sources/cloneMarker.tex
+
+LaTeX Warning: Reference `sec:submap' on page 8 undefined on input line 5.
+
+<images/simpleCloneMarker.pdf, id=110, 170.6375pt x 171.64125pt>
+File: images/simpleCloneMarker.pdf Graphic file (type pdf)
+
+<use images/simpleCloneMarker.pdf> [8 <./images/stateVariable.pdf>]
+Overfull \hbox (0.13669pt too wide) in paragraph at lines 16--17
+[]\T1/futs/m/n/10.95 Unlike the \T1/futs/m/it/10.95 sim-ple clone marker\T1/fut
+s/m/n/10.95 , the \T1/futs/m/it/10.95 la-beled clone marker \T1/futs/m/n/10.95 
+in-cludes (un-sur-pris-ingly, given its name)
+ []
+
+<images/labeledCloneMarker.pdf, id=120, 323.2075pt x 215.80624pt>
+File: images/labeledCloneMarker.pdf Graphic file (type pdf)
+
+<use images/labeledCloneMarker.pdf>)) [9 <./images/simpleCloneMarker.pdf> <./im
+ages/labeledCloneMarker.pdf>]
 \openout2 = `sources/refcard.aux'.
 
  (./sources/refcard.tex
 Appendix A.
-<images/refcard.pdf, id=112, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=140, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 4--29
 [] 
  []
 
-[8
+[10
 
 
 
-] [9 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [10
+] [11 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [12
 
 
 
@@ -1246,12 +1247,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4633 strings out of 495061
- 61255 string characters out of 1182620
- 139447 words of memory out of 3000000
- 7602 multiletter control sequences out of 15000+50000
+ 4660 strings out of 493848
+ 62052 string characters out of 1152824
+ 140498 words of memory out of 3000000
+ 7717 multiletter control sequences out of 15000+50000
  110908 words of font info for 85 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
+ 714 hyphenation exceptions out of 8191
  32i,7n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/ty
@@ -1261,9 +1262,9 @@ share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
 o8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (11 pages, 862515 bytes).
+Output written on sbgn_PD-level1-user.pdf (13 pages, 888985 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
