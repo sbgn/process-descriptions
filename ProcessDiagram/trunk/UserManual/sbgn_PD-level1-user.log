@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  4 MAY 2012 18:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  20 MAY 2012 08:09
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -1062,9 +1062,6 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
 
 
-LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
-
-
 LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
 .
 
@@ -1074,9 +1071,6 @@ LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
 
 
 LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `sec:process' on page 1 undefined on input line 24.
 
 
 LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
@@ -1188,53 +1182,104 @@ File: images/sourceSink.pdf Graphic file (type pdf)
 <images/perturbing_agent.pdf, id=83, 265.99374pt x 110.4125pt>
 File: images/perturbing_agent.pdf Graphic file (type pdf)
 
-<use images/perturbing_agent.pdf>) (./sources/unitInformation.tex
-
-LaTeX Warning: Reference `sec:CVs' on page 7 undefined on input line 8.
-
-<images/unitInformation.pdf, id=84, 263.98625pt x 109.40875pt>
+<use images/perturbing_agent.pdf>) (./sources/multimer.tex
+<images/multimer.pdf, id=84, 329.23pt x 217.81375pt>
+File: images/multimer.pdf Graphic file (type pdf)
+ <use images/multimer.pdf>) (./sources/unitInformation.tex [7 <./images/sourceS
+ink.pdf> <./images/perturbing_agent.pdf> <./images/multimer.pdf>]
+<images/unitInformation.pdf, id=113, 263.98625pt x 109.40875pt>
 File: images/unitInformation.pdf Graphic file (type pdf)
 
-<use images/unitInformation.pdf>) (./sources/stateVariable.tex [7 <./images/sou
-rceSink.pdf> <./images/perturbing_agent.pdf> <./images/unitInformation.pdf>]
-<images/stateVariable.pdf, id=109, 263.98625pt x 111.41624pt>
+<use images/unitInformation.pdf>) (./sources/stateVariable.tex
+<images/stateVariable.pdf, id=114, 263.98625pt x 111.41624pt>
 File: images/stateVariable.pdf Graphic file (type pdf)
 
 <use images/stateVariable.pdf>) (./sources/cloneMarker.tex
 
 LaTeX Warning: Reference `sec:submap' on page 8 undefined on input line 5.
 
-<images/simpleCloneMarker.pdf, id=110, 170.6375pt x 171.64125pt>
+[8 <./images/unitInformation.pdf> <./images/stateVariable.pdf>]
+<images/simpleCloneMarker.pdf, id=130, 170.6375pt x 171.64125pt>
 File: images/simpleCloneMarker.pdf Graphic file (type pdf)
 
-<use images/simpleCloneMarker.pdf> [8 <./images/stateVariable.pdf>]
+<use images/simpleCloneMarker.pdf>
 Overfull \hbox (0.13669pt too wide) in paragraph at lines 16--17
 []\T1/futs/m/n/10.95 Unlike the \T1/futs/m/it/10.95 sim-ple clone marker\T1/fut
 s/m/n/10.95 , the \T1/futs/m/it/10.95 la-beled clone marker \T1/futs/m/n/10.95 
 in-cludes (un-sur-pris-ingly, given its name)
  []
 
-<images/labeledCloneMarker.pdf, id=120, 323.2075pt x 215.80624pt>
+<images/labeledCloneMarker.pdf, id=131, 323.2075pt x 215.80624pt>
 File: images/labeledCloneMarker.pdf Graphic file (type pdf)
 
-<use images/labeledCloneMarker.pdf>)) [9 <./images/simpleCloneMarker.pdf> <./im
-ages/labeledCloneMarker.pdf>]
+<use images/labeledCloneMarker.pdf>) (./sources/CVs.tex [9 <./images/simpleClon
+eMarker.pdf> <./images/labeledCloneMarker.pdf>] [10]
+
+LaTeX Warning: Reference `sec:phenotype' on page 11 undefined on input line 99.
+
+
+LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 135.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+LaTeX Warning: Reference `sec:association' on page 11 undefined on input line 4
+4.
+
+
+LaTeX Warning: Reference `sec:dissociation' on page 11 undefined on input line 
+44.
+
+
+LaTeX Warning: Reference `sec:phenotype' on page 11 undefined on input line 44.
+
+
+[11] (./sources/process.tex
+
+LaTeX Warning: Reference `sec:consumption' on page 12 undefined on input line 8
+.
+
+
+LaTeX Warning: Reference `sec:production' on page 12 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `sec:arcs' on page 12 undefined on input line 8.
+
+<images/process.pdf, id=157, 244.915pt x 84.315pt>
+File: images/process.pdf Graphic file (type pdf)
+ <use images/process.pdf>)
+(./sources/omitted.tex
+
+LaTeX Warning: Reference `sec:submap' on page 12 undefined on input line 7.
+
+<images/omitted.pdf, id=158, 244.915pt x 84.315pt>
+File: images/omitted.pdf Graphic file (type pdf)
+ <use images/omitted.pdf>)
+(./sources/uncertain.tex [12 <./images/process.pdf> <./images/omitted.pdf>]
+<images/uncertain.pdf, id=168, 244.915pt x 84.315pt>
+File: images/uncertain.pdf Graphic file (type pdf)
+
+<use images/uncertain.pdf>)) [13 <./images/uncertain.pdf>]
 \openout2 = `sources/refcard.aux'.
 
- (./sources/refcard.tex
+
+(./sources/refcard.tex
 Appendix A.
-<images/refcard.pdf, id=140, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=178, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 4--29
 [] 
  []
 
-[10
+[14
 
 
 
-] [11 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [12
+] [15 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [16
 
 
 
@@ -1247,24 +1292,24 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4660 strings out of 493848
- 62052 string characters out of 1152824
- 140498 words of memory out of 3000000
- 7717 multiletter control sequences out of 15000+50000
- 110908 words of font info for 85 fonts, out of 3000000 for 9000
+ 4720 strings out of 493848
+ 63167 string characters out of 1152824
+ 142739 words of memory out of 3000000
+ 7759 multiletter control sequences out of 15000+50000
+ 112722 words of font info for 88 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 32i,7n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/adobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/
 putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/
 share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
-urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
-o8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (13 pages, 888985 bytes).
+public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
+b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+Output written on sbgn_PD-level1-user.pdf (17 pages, 926607 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 229 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
