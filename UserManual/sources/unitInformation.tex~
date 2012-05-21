@@ -1,0 +1,46 @@
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/ProcessDiagram/tags/L1V1.3Full/sources/unitInformation.tex $
+
+\subsection{Glyph: \glyph{Unit of information}}
+\label{sec:unitInfo}
+
+When representing biological entities, it is often necessary to convey some abstract information about the entity's function that cannot (or does not need to) be easily related to its structure.  The \glyph{unit of information} is a decoration that can be used in this situation to add information to a glyph.  Some example uses include: characterizing a logical part of an entity such as a functional domain (a binding domain, a catalytic site, a promoter, etc.), or the information encoded in the entity (an exon, an open reading frame, etc.).  A \glyph{unit of information} can also convey information about the physical environment, or the specific type of biological entity it is decorating.
+
+\begin{glyphDescription}
+
+\glyphSboTerm Not applicable.
+
+\glyphContainer A unit of information is represented by a rectangle.  The long side of the rectangle should be oriented parallel to the border of the \glyph{EPN} being annotated by the \glyph{unit of information}. The center of the bounding box of a \glyph{state of information} should be located on the mid-line of the border of the \glyph{EPN}.
+
+\glyphLabel A \glyph{unit of information} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
+
+The label defines the information carried by the \glyph{unit of information}.  For certain predefined types of information having controlled vocabularies associated with them, SBGN defines specific prefixes that must be included in the label to indicate the type of information in question.  The controlled vocabularies predefined in \SBGNPDLone are described in \sect{CVs} and summarized in the following list:
+
+\begin{center}
+  \begin{itemize}\setlength{\parskip}{0ex}
+  \item[\texttt{pc}] container physical characteristic
+  \item[\texttt{mt}] entity pool material type
+  \item[\texttt{ct}] entity pool conceptual type
+  \item[\texttt{N}]  multimer cardinality
+  \end{itemize}
+\end{center}
+
+\glyphAux A \glyph{unit of information} does not carry any auxiliary items.  
+
+\end{glyphDescription}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/unitInformation}
+  \caption{The \PD glyph for \glyph{unit of information}.}
+  \label{fig:unitInfo}
+\end{figure}
+
+
+
+
+% The following is for [X]Emacs users.   Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
+
+

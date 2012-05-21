@@ -1,0 +1,15 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     Logic arc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\color{blue}
+\subsection{Glyph: \glyph{Logic arc} }\label{sec:logicArc}
+
+\glyph{Logic arc} is used to represent the fact that an entity influences
+the outcome of a logic operator. A \glyph{logic arc} is represented by a simple line without particular symbols at its extremities.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.4]{images/logicArc}
+  \caption{The \PD glyph for \glyph{logic arc}.}
+  \label{fig:logicArc}
+\end{figure}
