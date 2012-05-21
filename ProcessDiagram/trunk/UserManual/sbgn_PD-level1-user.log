@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  20 MAY 2012 08:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  21 MAY 2012 11:13
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -1058,44 +1058,9 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.69995pt on input line 24.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
-
-
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
-.
-
-
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
-
-
-
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 24
-.
-
-
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 24.
-
-
-
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 24.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `sec:consumption' on page 1 undefined on input line 28
-.
-
-
-LaTeX Warning: Reference `sec:production' on page 1 undefined on input line 28.
-
-
-
-LaTeX Warning: Reference `sec:catalysis' on page 1 undefined on input line 28.
 
 [1
 
@@ -1214,40 +1179,13 @@ File: images/labeledCloneMarker.pdf Graphic file (type pdf)
 
 <use images/labeledCloneMarker.pdf>) (./sources/CVs.tex [9 <./images/simpleClon
 eMarker.pdf> <./images/labeledCloneMarker.pdf>] [10]
-
-LaTeX Warning: Reference `sec:phenotype' on page 11 undefined on input line 99.
-
-
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
 (Font)              Font shape `T1/txtt/m/sl' tried instead on input line 135.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
-
-LaTeX Warning: Reference `sec:association' on page 11 undefined on input line 4
-4.
-
-
-LaTeX Warning: Reference `sec:dissociation' on page 11 undefined on input line 
-44.
-
-
-LaTeX Warning: Reference `sec:phenotype' on page 11 undefined on input line 44.
-
-
-[11] (./sources/process.tex
-
-LaTeX Warning: Reference `sec:consumption' on page 12 undefined on input line 8
-.
-
-
-LaTeX Warning: Reference `sec:production' on page 12 undefined on input line 8.
-
-
-
-LaTeX Warning: Reference `sec:arcs' on page 12 undefined on input line 8.
-
+) [11] (./sources/process.tex
 <images/process.pdf, id=157, 244.915pt x 84.315pt>
 File: images/process.pdf Graphic file (type pdf)
  <use images/process.pdf>)
@@ -1262,24 +1200,86 @@ File: images/omitted.pdf Graphic file (type pdf)
 <images/uncertain.pdf, id=168, 244.915pt x 84.315pt>
 File: images/uncertain.pdf Graphic file (type pdf)
 
-<use images/uncertain.pdf>)) [13 <./images/uncertain.pdf>]
+<use images/uncertain.pdf>) (./sources/association.tex
+<images/association.pdf, id=169, 181.67876pt x 84.315pt>
+File: images/association.pdf Graphic file (type pdf)
+
+<use images/association.pdf>) (./sources/dissociation.tex
+<images/dissociation.pdf, id=170, 179.67125pt x 84.315pt>
+File: images/dissociation.pdf Graphic file (type pdf)
+
+<use images/dissociation.pdf>) (./sources/phenotype.tex
+<images/phenotype.pdf, id=171, 227.85126pt x 107.40125pt>
+File: images/phenotype.pdf Graphic file (type pdf)
+
+<use images/phenotype.pdf> [13 <./images/uncertain.pdf> <./images/association.p
+df> <./images/dissociation.pdf>]) (./sources/consumption.tex
+<images/consumption.pdf, id=185, 252.945pt x 81.30376pt>
+File: images/consumption.pdf Graphic file (type pdf)
+
+<use images/consumption.pdf>) (./sources/production.tex
+<images/production.pdf, id=186, 264.99pt x 80.3pt>
+File: images/production.pdf Graphic file (type pdf)
+ <use images/production.pdf>) (./sources/modulation.tex
+<images/modulation.pdf, id=187, 199.74625pt x 60.225pt>
+File: images/modulation.pdf Graphic file (type pdf)
+
+<use images/modulation.pdf>) (./sources/stimulation.tex [14 <./images/phenotype
+.pdf> <./images/consumption.pdf> <./images/production.pdf>]
+<images/stimulation.pdf, id=217, 202.7575pt x 60.225pt>
+File: images/stimulation.pdf Graphic file (type pdf)
+
+<use images/stimulation.pdf>) (./sources/catalysis.tex
+<images/catalysis.pdf, id=218, 204.765pt x 60.225pt>
+File: images/catalysis.pdf Graphic file (type pdf)
+
+<use images/catalysis.pdf>) (./sources/inhibition.tex
+<images/inhibition.pdf, id=219, 205.76875pt x 60.225pt>
+File: images/inhibition.pdf Graphic file (type pdf)
+
+<use images/inhibition.pdf>) (./sources/necessary_stim.tex
+<images/necessary_stim.pdf, id=220, 203.76125pt x 60.225pt>
+File: images/necessary_stim.pdf Graphic file (type pdf)
+
+<use images/necessary_stim.pdf>) (./sources/logicArc.tex [15 <./images/modulati
+on.pdf> <./images/stimulation.pdf> <./images/catalysis.pdf> <./images/inhibitio
+n.pdf>] <images/logicArc.pdf, id=248, 395.4775pt x 81.30376pt>
+File: images/logicArc.pdf Graphic file (type pdf)
+
+<use images/logicArc.pdf>) (./sources/equivalenceArc.tex
+<images/equivalence.pdf, id=249, 415.5525pt x 81.30376pt>
+File: images/equivalence.pdf Graphic file (type pdf)
+
+<use images/equivalence.pdf>) (./sources/and.tex
+<images/and.pdf, id=250, 162.6075pt x 69.25874pt>
+File: images/and.pdf Graphic file (type pdf)
+ <use images/and.pdf>)
+(./sources/or.tex <images/or.pdf, id=251, 162.6075pt x 69.25874pt>
+File: images/or.pdf Graphic file (type pdf)
+
+<use images/or.pdf>) (./sources/not.tex
+<images/not.pdf, id=252, 158.5925pt x 69.25874pt>
+File: images/not.pdf Graphic file (type pdf)
+ <use images/not.pdf> [16 <./images/necessary_stim.pdf> <./images/logicArc.pdf>
+ <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf>])) [17 <./imag
+es/not.pdf>]
 \openout2 = `sources/refcard.aux'.
 
 
 (./sources/refcard.tex
 Appendix A.
-<images/refcard.pdf, id=178, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=295, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 4--29
 [] 
  []
 
-[14
+[18
 
 
 
-] [15 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [16
+] [19 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [20
 
 
 
@@ -1292,11 +1292,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4720 strings out of 493848
- 63167 string characters out of 1152824
- 142739 words of memory out of 3000000
- 7759 multiletter control sequences out of 15000+50000
- 112722 words of font info for 88 fonts, out of 3000000 for 9000
+ 4844 strings out of 493848
+ 65832 string characters out of 1152824
+ 143136 words of memory out of 3000000
+ 7842 multiletter control sequences out of 15000+50000
+ 108192 words of font info for 85 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  32i,8n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
@@ -1307,9 +1307,9 @@ share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
 public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
 b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (17 pages, 926607 bytes).
+Output written on sbgn_PD-level1-user.pdf (21 pages, 1009025 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
+ 347 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
