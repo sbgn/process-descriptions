@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  21 MAY 2012 11:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  23 MAY 2012 14:35
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -1261,25 +1261,27 @@ File: images/or.pdf Graphic file (type pdf)
 <images/not.pdf, id=252, 158.5925pt x 69.25874pt>
 File: images/not.pdf Graphic file (type pdf)
  <use images/not.pdf> [16 <./images/necessary_stim.pdf> <./images/logicArc.pdf>
- <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf>])) [17 <./imag
-es/not.pdf>]
+ <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf>]) (./sources/c
+ompartment.tex
+<images/compartment.pdf, id=286, 451.6875pt x 319.1925pt>
+File: images/compartment.pdf Graphic file (type pdf)
+
+<use images/compartment.pdf>)) [17 <./images/not.pdf> <./images/compartment.pdf
+>]
 \openout2 = `sources/refcard.aux'.
 
-
-(./sources/refcard.tex
-Appendix A.
-<images/refcard.pdf, id=295, 798.985pt x 575.14874pt>
+ (./sources/refcard.tex
+<images/refcard.pdf, id=306, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
-Overfull \hbox (7.15172pt too wide) in paragraph at lines 4--29
+Overfull \hbox (7.15172pt too wide) in paragraph at lines 1--27
 [] 
  []
 
 [18
 
 
-
-] [19 <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [20
+ <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [19
 
 
 
@@ -1292,10 +1294,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4844 strings out of 493848
- 65832 string characters out of 1152824
- 143136 words of memory out of 3000000
- 7842 multiletter control sequences out of 15000+50000
+ 4853 strings out of 493848
+ 66036 string characters out of 1152824
+ 143162 words of memory out of 3000000
+ 7848 multiletter control sequences out of 15000+50000
  108192 words of font info for 85 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  32i,8n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1307,9 +1309,9 @@ share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
 public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
 b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (21 pages, 1009025 bytes).
+Output written on sbgn_PD-level1-user.pdf (20 pages, 1016944 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
+ 355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
