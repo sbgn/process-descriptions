@@ -513,12 +513,12 @@ The \sbgnclass{EntityType}\query{The concept of an entity pool's type
   has been there implicitly in previous versions and comes up in
   discussions. This class aims to formalise that concept and the rules
 associated with it and enable us to formalise rules associated with
-EPNs.} is one of the code concepts in the \PDl. It
+EPNs.} is one of the core concepts in the \PDl. It
 defines the type of entity that is instantiated by one or more
 entity pools in a \PDm. The \sbgnclass{EntityType} has associated
 state variable definitions (see figure \ref{fig:entitytypeuml}) and
 this enforces one of the core rules in the \PDl that once a state is
-associated with an entity type is must be used by all entity pools of
+associated with an entity type it must be used by all entity pools of
 that type.
 
 
@@ -530,7 +530,7 @@ None.
 
 \begin{attributes}
   \attitem{name}{string}{R} The name that identifies the entity in the
-  \PDm. EPNs with the same label should be from the same entity. the
+  \PDm. EPNs with the same label should be from the same entity. The
   string cannot be empty and must start and end with a non-space
   character. Any Unicode character is acceptable\query{Not discussed
     or defined anywhere, but would make sense to define this explicitly.}.
@@ -575,6 +575,7 @@ Although not defined explicitly in the previous version, this concept
 and the associated rules did exist in the language.
 
 \subsection{StateVariableDefinition}
+\label{defn:StateVariableDefinition}
 
 The \sbgnclass{StateVariableDefinition}\query{As with EntityType this
   is new and aims to formalise the concept that an entity pool must
@@ -3840,7 +3841,7 @@ The material type of an EPN indicates its chemical structure.  A list
 of common material types is shown in \tab{material-types-cv}, but
 others are possible.  The values are to be taken from the \sbo
 (\sbourl), specifically from the branch having identifier
-\sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{entity}).
+\sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{physical entity representation}).
 The labels are defined by \SBGNPDLone.
 
 \begin{table}[h]
@@ -3865,7 +3866,7 @@ The labels are defined by \SBGNPDLone.
 The material types are in contrast to the \emph{conceptual types} (see
 below).  The distinction is that material types are about physical
 composition, while conceptual types are about roles.  For example, a
-strand of RNA is a physical artifact, but its use as messenger RNA is
+strand of RNA is a physical artefact, but its use as messenger RNA is
 a role.
 
 
@@ -3876,8 +3877,8 @@ An EPN's \emph{conceptual type} indicates its function within the
 context of a given \PD.  A list of common conceptual types is shown in
 \tab{conceptual-types-cv}, but others are possible.  The values are to
 be taken from the \sbo (\sbourl), specifically from the branch having
-identifier \sboid{SBO:0000241} ($\!$\emph{conceptual entity} under
-\emph{entity}).  The labels are defined by \SBGNPDLone.
+identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
+\emph{physical entity representation}).  The labels are defined by \SBGNPDLone.
 
 \begin{table}[h]
   \centering
