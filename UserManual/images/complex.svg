@@ -13,7 +13,7 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="complex.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -37,11 +37,11 @@
      inkscape:cx="124.82537"
      inkscape:cy="455.6171"
      inkscape:document-units="px"
-     inkscape:current-layer="g5955"
+     inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="779"
+     inkscape:window-width="1680"
+     inkscape:window-height="1029"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
      width="1052.3622px"
@@ -73,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -131,7 +131,7 @@
          id="tspan2892"
          x="645.61523"
          y="324.81619"
-         style="font-size:64px">NAMEy</tspan></text>
+         style="font-size:56px">NAMEy</tspan></text>
     <g
        id="g5955"
        transform="translate(6,8)"
@@ -149,12 +149,12 @@
       <text
          id="text2850"
          y="537.67035"
-         x="700.0882"
+         x="708.0882"
          style="font-size:12px;font-style:normal;font-weight:normal;fill:#ffffc8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
          xml:space="preserve"><tspan
-           style="font-size:64px;fill:#000000;fill-opacity:1"
+           style="font-size:56px;fill:#000000;fill-opacity:1"
            y="537.67035"
-           x="700.0882"
+           x="708.0882"
            id="tspan2852"
            sodipodi:role="line">NAMEz</tspan></text>
     </g>
@@ -164,19 +164,35 @@
        width="381.42856"
        height="210"
        x="129.34163"
-       y="291.32175"
+       y="413.32175"
        ry="35.714287"
        rx="35.714287" />
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="224.19879"
-       y="417.75021"
+       y="539.75024"
        id="text4560"><tspan
          sodipodi:role="line"
          id="tspan4562"
          x="224.19879"
-         y="417.75021"
-         style="font-size:64px">NAMEx</tspan></text>
+         y="539.75024"
+         style="font-size:56px">NAMEx</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="253.1534"
+       y="246.32001"
+       id="text4560-5"><tspan
+         sodipodi:role="line"
+         id="tspan4562-3"
+         x="253.1534"
+         y="246.32001"
+         style="font-size:64px">NAME</tspan><tspan
+         sodipodi:role="line"
+         x="253.1534"
+         y="326.32001"
+         style="font-size:64px"
+         id="tspan3022">cplx</tspan></text>
   </g>
 </svg>

@@ -40,7 +40,7 @@
 \usepackage[olditem,oldenum]{paralist}
 \usepackage{fourier}
 \usepackage{layouts}
-
+\usepackage{url}
 
 % Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
 % that needs to be used if pdflatex is being used.  The following puts
