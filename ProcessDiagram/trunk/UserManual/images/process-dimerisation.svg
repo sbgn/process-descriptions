@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,11 +13,13 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.48.3.1 r9886"
    version="1.0"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/examples"
-   sodipodi:docname="transition-dimerisation.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   sodipodi:docname="process-dimerisation.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/UserManual/images/process-dimerisation.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <defs
      id="defs4">
     <marker
@@ -56,19 +59,21 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.9137028"
-     inkscape:cx="533.58916"
+     inkscape:zoom="2.060299"
+     inkscape:cx="447.19393"
      inkscape:cy="463.59516"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1392"
+     inkscape:window-width="1568"
      inkscape:window-height="1020"
      inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     showgrid="false"
+     inkscape:window-maximized="0">
     <sodipodi:guide
        orientation="vertical"
        position="301.42857"
@@ -82,6 +87,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -90,15 +96,25 @@
      id="layer2"
      inkscape:label="final"
      style="opacity:1">
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.98800001000000004;fill:#ffffc8;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       id="path5309"
+       sodipodi:cx="776.55475"
+       sodipodi:cy="291.29361"
+       sodipodi:rx="58.336308"
+       sodipodi:ry="58.336308"
+       d="m 834.89106,291.29361 a 58.336308,58.336308 0 1 1 -116.67262,0 58.336308,58.336308 0 1 1 116.67262,0 z"
+       transform="translate(-411.2899,-2.04061)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="361.41544"
-       y="298.12769"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="365.41544"
+       y="296.12769"
        id="text5899"><tspan
          sodipodi:role="line"
-         x="361.41544"
-         y="298.12769"
+         x="365.41544"
+         y="296.12769"
          style="font-size:28px;font-weight:normal;text-align:center;text-anchor:middle"
          id="tspan5154">GAL</tspan></text>
     <path
@@ -120,7 +136,7 @@
        height="23.946562"
        width="25.598154"
        id="rect2829"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;fill:#96ffc8;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5156"
@@ -141,35 +157,25 @@
          y="285.60651"
          style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial">2</tspan></text>
     <path
-       sodipodi:type="arc"
-       style="opacity:0.98800001;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path5309"
-       sodipodi:cx="776.55475"
-       sodipodi:cy="291.29361"
-       sodipodi:rx="58.336308"
-       sodipodi:ry="58.336308"
-       d="M 834.89106 291.29361 A 58.336308 58.336308 0 1 1  718.21844,291.29361 A 58.336308 58.336308 0 1 1  834.89106 291.29361 z"
-       transform="translate(-415.2899,-4.061e-2)" />
-    <path
-       transform="translate(-81.2899,-4.061e-2)"
-       d="M 834.89106 291.29361 A 58.336308 58.336308 0 1 1  718.21844,291.29361 A 58.336308 58.336308 0 1 1  834.89106 291.29361 z"
+       transform="translate(-85.2899,-0.04061)"
+       d="m 834.89106,291.29361 a 58.336308,58.336308 0 1 1 -116.67262,0 58.336308,58.336308 0 1 1 116.67262,0 z"
        sodipodi:ry="58.336308"
        sodipodi:rx="58.336308"
        sodipodi:cy="291.29361"
        sodipodi:cx="776.55475"
        id="path6204"
-       style="opacity:0.98800001;fill:white;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.98800001000000004;fill:#ffffc8;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:type="arc" />
     <text
        id="text6200"
        y="300.12769"
-       x="697.41541"
-       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="693.41541"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        xml:space="preserve"><tspan
          id="tspan6202"
          style="font-size:28px;font-weight:normal;text-align:center;text-anchor:middle"
          y="300.12769"
-         x="697.41541"
+         x="693.41541"
          sodipodi:role="line">LAC</tspan></text>
     <rect
        y="263.86426"
