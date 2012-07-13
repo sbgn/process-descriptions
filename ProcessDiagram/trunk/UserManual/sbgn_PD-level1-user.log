@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  13 JUL 2012 14:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  13 JUL 2012 14:55
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -1239,75 +1239,98 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) [11] (./sources/process.tex
 <images/process.pdf, id=157, 244.915pt x 84.315pt>
 File: images/process.pdf Graphic file (type pdf)
- <use images/process.pdf>)
-(./sources/omitted.tex <images/omitted.pdf, id=158, 244.915pt x 84.315pt>
-File: images/omitted.pdf Graphic file (type pdf)
+ <use images/process.pdf>
+<images/process-phosphorylation.pdf, id=158, 422.57875pt x 110.4125pt>
+File: images/process-phosphorylation.pdf Graphic file (type pdf)
 
-<use images/omitted.pdf>) (./sources/uncertain.tex [12 <./images/process.pdf> <
-./images/omitted.pdf>] <images/uncertain.pdf, id=168, 244.915pt x 84.315pt>
+<use images/process-phosphorylation.pdf>
+<images/process-reaction.pdf, id=159, 380.42125pt x 304.13625pt>
+File: images/process-reaction.pdf Graphic file (type pdf)
+
+<use images/process-reaction.pdf>
+Underfull \hbox (badness 5548) in paragraph at lines 31--31
+ []\T1/phv/b/n/10 Figure 2.15: \T1/futs/m/it/10 Re-ac-tion be-tween ATP and fru
+ctose-6-phosphate to pro-duce fructose-1,6- 
+ []
+
+[12 <./images/process.pdf> <./images/process-phosphorylation.pdf>]
+<images/process-translocation.pdf, id=176, 489.83pt x 269.005pt>
+File: images/process-translocation.pdf Graphic file (type pdf)
+
+<use images/process-translocation.pdf>
+<images/process-dimerisation.pdf, id=177, 365.365pt x 97.36375pt>
+File: images/process-dimerisation.pdf Graphic file (type pdf)
+
+<use images/process-dimerisation.pdf>) (./sources/omitted.tex
+<images/omitted.pdf, id=178, 244.915pt x 84.315pt>
+File: images/omitted.pdf Graphic file (type pdf)
+ <use images/omitted.pdf>)
+(./sources/uncertain.tex [13 <./images/process-reaction.pdf> <./images/process-
+translocation.pdf> <./images/process-dimerisation.pdf> <./images/omitted.pdf>]
+<images/uncertain.pdf, id=204, 244.915pt x 84.315pt>
 File: images/uncertain.pdf Graphic file (type pdf)
 
 <use images/uncertain.pdf>) (./sources/association.tex
-<images/association.pdf, id=169, 181.67876pt x 84.315pt>
+<images/association.pdf, id=205, 181.67876pt x 84.315pt>
 File: images/association.pdf Graphic file (type pdf)
 
 <use images/association.pdf>) (./sources/dissociation.tex
-<images/dissociation.pdf, id=170, 179.67125pt x 84.315pt>
+<images/dissociation.pdf, id=206, 179.67125pt x 84.315pt>
 File: images/dissociation.pdf Graphic file (type pdf)
 
 <use images/dissociation.pdf>) (./sources/phenotype.tex
-<images/phenotype.pdf, id=171, 227.85126pt x 107.40125pt>
+<images/phenotype.pdf, id=207, 227.85126pt x 107.40125pt>
 File: images/phenotype.pdf Graphic file (type pdf)
 
-<use images/phenotype.pdf> [13 <./images/uncertain.pdf> <./images/association.p
+<use images/phenotype.pdf> [14 <./images/uncertain.pdf> <./images/association.p
 df> <./images/dissociation.pdf>]) (./sources/consumption.tex
-<images/consumption.pdf, id=185, 252.945pt x 81.30376pt>
+<images/consumption.pdf, id=221, 252.945pt x 81.30376pt>
 File: images/consumption.pdf Graphic file (type pdf)
 
 <use images/consumption.pdf>) (./sources/production.tex
-<images/production.pdf, id=186, 264.99pt x 80.3pt>
+<images/production.pdf, id=222, 264.99pt x 80.3pt>
 File: images/production.pdf Graphic file (type pdf)
  <use images/production.pdf>) (./sources/modulation.tex
-<images/modulation.pdf, id=187, 199.74625pt x 60.225pt>
+<images/modulation.pdf, id=223, 199.74625pt x 60.225pt>
 File: images/modulation.pdf Graphic file (type pdf)
 
-<use images/modulation.pdf>) (./sources/stimulation.tex [14 <./images/phenotype
+<use images/modulation.pdf>) (./sources/stimulation.tex [15 <./images/phenotype
 .pdf> <./images/consumption.pdf> <./images/production.pdf>]
-<images/stimulation.pdf, id=217, 202.7575pt x 60.225pt>
+<images/stimulation.pdf, id=253, 202.7575pt x 60.225pt>
 File: images/stimulation.pdf Graphic file (type pdf)
 
 <use images/stimulation.pdf>) (./sources/catalysis.tex
-<images/catalysis.pdf, id=218, 204.765pt x 60.225pt>
+<images/catalysis.pdf, id=254, 204.765pt x 60.225pt>
 File: images/catalysis.pdf Graphic file (type pdf)
 
 <use images/catalysis.pdf>) (./sources/inhibition.tex
-<images/inhibition.pdf, id=219, 205.76875pt x 60.225pt>
+<images/inhibition.pdf, id=255, 205.76875pt x 60.225pt>
 File: images/inhibition.pdf Graphic file (type pdf)
 
 <use images/inhibition.pdf>) (./sources/necessary_stim.tex
-<images/necessary_stim.pdf, id=220, 203.76125pt x 60.225pt>
+<images/necessary_stim.pdf, id=256, 203.76125pt x 60.225pt>
 File: images/necessary_stim.pdf Graphic file (type pdf)
 
-<use images/necessary_stim.pdf>) (./sources/logicArc.tex [15 <./images/modulati
+<use images/necessary_stim.pdf>) (./sources/logicArc.tex [16 <./images/modulati
 on.pdf> <./images/stimulation.pdf> <./images/catalysis.pdf> <./images/inhibitio
-n.pdf>] <images/logicArc.pdf, id=248, 395.4775pt x 81.30376pt>
+n.pdf>] <images/logicArc.pdf, id=284, 395.4775pt x 81.30376pt>
 File: images/logicArc.pdf Graphic file (type pdf)
 
 <use images/logicArc.pdf>) (./sources/equivalenceArc.tex
-<images/equivalence.pdf, id=249, 415.5525pt x 81.30376pt>
+<images/equivalence.pdf, id=285, 415.5525pt x 81.30376pt>
 File: images/equivalence.pdf Graphic file (type pdf)
 
 <use images/equivalence.pdf>) (./sources/and.tex
-<images/and.pdf, id=250, 162.6075pt x 69.25874pt>
+<images/and.pdf, id=286, 162.6075pt x 69.25874pt>
 File: images/and.pdf Graphic file (type pdf)
  <use images/and.pdf>)
-(./sources/or.tex <images/or.pdf, id=251, 162.6075pt x 69.25874pt>
+(./sources/or.tex <images/or.pdf, id=287, 162.6075pt x 69.25874pt>
 File: images/or.pdf Graphic file (type pdf)
 
 <use images/or.pdf>) (./sources/not.tex
-<images/not.pdf, id=252, 158.5925pt x 69.25874pt>
+<images/not.pdf, id=288, 158.5925pt x 69.25874pt>
 File: images/not.pdf Graphic file (type pdf)
- <use images/not.pdf> [16 <./images/necessary_stim.pdf> <./images/logicArc.pdf>
+ <use images/not.pdf> [17 <./images/necessary_stim.pdf> <./images/logicArc.pdf>
  <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf>]) (./sources/c
 ompartment.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <14.4> not available
@@ -1317,34 +1340,34 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 12.52792pt on input line 5.
 
-<images/compartment.pdf, id=286, 451.6875pt x 319.1925pt>
+<images/compartment.pdf, id=322, 451.6875pt x 319.1925pt>
 File: images/compartment.pdf Graphic file (type pdf)
 
 <use images/compartment.pdf>) (./sources/submap.tex
-<images/submap.pdf, id=287, 798.985pt x 515.9275pt>
+<images/submap.pdf, id=323, 798.985pt x 515.9275pt>
 File: images/submap.pdf Graphic file (type pdf)
  <use images/submap.pdf>
-[17 <./images/not.pdf> <./images/compartment.pdf>]
+[18 <./images/not.pdf> <./images/compartment.pdf>]
 Overfull \hbox (6.09357pt too wide) in paragraph at lines 16--17
-[]\T1/futs/m/n/10.95 The left part of Fig-ure 2.33[] rep-re-sents a \T1/futs/m/
+[]\T1/futs/m/n/10.95 The left part of Fig-ure 2.37[] rep-re-sents a \T1/futs/m/
 it/10.95 submap \T1/futs/m/n/10.95 that trans-forms glu-cose into fructose-6-ph
 osphate.
  []
 
-<images/submap-folded.pdf, id=307, 491.8375pt x 369.38pt>
+<images/submap-folded.pdf, id=344, 491.8375pt x 369.38pt>
 File: images/submap-folded.pdf Graphic file (type pdf)
 
 <use images/submap-folded.pdf>
-<images/submap-unfolded.pdf, id=308, 606.265pt x 429.605pt>
+<images/submap-unfolded.pdf, id=345, 606.265pt x 429.605pt>
 File: images/submap-unfolded.pdf Graphic file (type pdf)
 
-<use images/submap-unfolded.pdf>)) [18 <./images/submap.pdf> <./images/submap-f
+<use images/submap-unfolded.pdf>)) [19 <./images/submap.pdf> <./images/submap-f
 olded.pdf> <./images/submap-unfolded.pdf>]
 \openout2 = `sources/build.aux'.
 
  (./sources/build.tex
 Chapter 3.
-) [19
+) [20
 
 
 
@@ -1353,7 +1376,7 @@ Chapter 3.
 
  (./sources/interpret.tex
 Chapter 4.
-) [20
+) [21
 
 
 
@@ -1361,17 +1384,17 @@ Chapter 4.
 \openout2 = `sources/refcard.aux'.
 
  (./sources/refcard.tex
-<images/refcard.pdf, id=332, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=368, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 1--27
 [] 
  []
 
-[21
+[22
 
 
- <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [22
+ <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [23
 
 
 
@@ -1380,10 +1403,10 @@ Overfull \hbox (7.15172pt too wide) in paragraph at lines 1--27
 (./sbgn_PD-level1-user.aux (./sources/introduction.aux) (./sources/symbols.aux)
 (./sources/build.aux) (./sources/interpret.aux) (./sources/refcard.aux)) ) 
 Here is how much of TeX's memory you used:
- 5474 strings out of 493848
- 73366 string characters out of 1152824
- 154160 words of memory out of 3000000
- 8433 multiletter control sequences out of 15000+50000
+ 5497 strings out of 493848
+ 74078 string characters out of 1152824
+ 154196 words of memory out of 3000000
+ 8452 multiletter control sequences out of 15000+50000
  111048 words of font info for 87 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  32i,8n,32p,1395b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1396,9 +1419,9 @@ exmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texlive/fon
 ts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/public/
 txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb
 ></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (23 pages, 1685255 bytes).
+Output written on sbgn_PD-level1-user.pdf (24 pages, 1704013 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
+ 416 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
