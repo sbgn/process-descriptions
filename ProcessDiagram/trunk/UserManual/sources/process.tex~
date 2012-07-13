@@ -14,7 +14,16 @@ A process is the basic process node in SBGN.  It describes a process that transf
   \label{fig:process}
 \end{figure}
 
-The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein in a \PD.
+The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products. The stoichiometry for each entity pool involved is 1, and therefore can be omitted.  
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/process-reaction}
+  \caption{Reaction between ATP and fructose-6-phosphate to produce fructose-1,6-biphosphate, ADP and a proton.}
+  \label{fig:trans-react}
+\end{figure}
+
+The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein. 
 
 \begin{figure}[H]
   \centering
@@ -23,14 +32,6 @@ The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to
   \label{fig:trans-phos}
 \end{figure}
 
-The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale = 0.3]{images/process-reaction}
-  \caption{Reaction between ATP and fructose-6-phosphate to produce fructose-1,6-biphosphate, ADP and a proton.}
-  \label{fig:trans-react}
-\end{figure}
 
 The example in \fig{trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{compartment}).
 
