@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  23 MAY 2012 14:35
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  13 JUL 2012 14:38
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -272,62 +272,118 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen107
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks19
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks20
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/shadow.sty
 Package: shadow 2003/02/19 v1.3 shadow boxes (M.O.)
-\txtwdth=\dimen107
-\sht=\dimen108
-\shw=\dimen109
-\shbox=\box26
-\sboxsep=\dimen110
-\sboxrule=\dimen111
-\sdim=\dimen112
+\txtwdth=\dimen116
+\sht=\dimen117
+\shw=\dimen118
+\shbox=\box28
+\sboxsep=\dimen119
+\sboxrule=\dimen120
+\sdim=\dimen121
 )
 (/usr/share/texmf-texlive/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count91
-\ST@wd=\dimen113
-\ST@rightskip=\skip43
-\ST@leftskip=\skip44
-\ST@parfillskip=\skip45
-\ST@pageleft=\dimen114
-\ST@headht=\dimen115
-\ST@tailht=\dimen116
-\ST@pagesofar=\dimen117
-\ST@pboxht=\dimen118
-\ST@lineht=\dimen119
-\ST@stretchht=\dimen120
-\ST@prevht=\dimen121
-\ST@toadd=\dimen122
-\ST@dimen=\dimen123
-\ST@pbox=\box27
+\c@tracingst=\count103
+\ST@wd=\dimen122
+\ST@rightskip=\skip46
+\ST@leftskip=\skip47
+\ST@parfillskip=\skip48
+\ST@pageleft=\dimen123
+\ST@headht=\dimen124
+\ST@tailht=\dimen125
+\ST@pagesofar=\dimen126
+\ST@pboxht=\dimen127
+\ST@lineht=\dimen128
+\ST@stretchht=\dimen129
+\ST@prevht=\dimen130
+\ST@toadd=\dimen131
+\ST@dimen=\dimen132
+\ST@pbox=\box29
 )
 (/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen124
+\bigstrutjot=\dimen133
 )
 (/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
 Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count92
-\mult@box=\box28
-\multicol@leftmargin=\dimen125
-\c@unbalance=\count93
-\c@collectmore=\count94
-\doublecol@number=\count95
-\multicoltolerance=\count96
-\multicolpretolerance=\count97
-\full@width=\dimen126
-\page@free=\dimen127
-\premulticols=\dimen128
-\postmulticols=\dimen129
-\multicolsep=\skip46
-\multicolbaselineskip=\skip47
-\partial@page=\box29
-\last@line=\box30
-\mult@rightbox=\box31
-\mult@grightbox=\box32
-\mult@gfirstbox=\box33
-\mult@firstbox=\box34
-\@tempa=\box35
-\@tempa=\box36
+\c@tracingmulticols=\count104
+\mult@box=\box30
+\multicol@leftmargin=\dimen134
+\c@unbalance=\count105
+\c@collectmore=\count106
+\doublecol@number=\count107
+\multicoltolerance=\count108
+\multicolpretolerance=\count109
+\full@width=\dimen135
+\page@free=\dimen136
+\premulticols=\dimen137
+\postmulticols=\dimen138
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box31
+\last@line=\box32
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
 \@tempa=\box37
 \@tempa=\box38
 \@tempa=\box39
@@ -343,20 +399,22 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \@tempa=\box49
 \@tempa=\box50
 \@tempa=\box51
-\c@columnbadness=\count98
-\c@finalcolumnbadness=\count99
-\last@try=\dimen130
-\multicolovershoot=\dimen131
-\multicolundershoot=\dimen132
-\mult@nat@firstbox=\box52
-\colbreak@box=\box53
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count110
+\c@finalcolumnbadness=\count111
+\last@try=\dimen139
+\multicolovershoot=\dimen140
+\multicolundershoot=\dimen141
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
 )
 (/usr/share/texmf-texlive/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2009/05/18 v2.2 Customized lists
-\enit@toks=\toks18
-\labelindent=\skip48
-\enit@outerparindent=\dimen133
-\enitdp@desc=\count100
+\enit@toks=\toks23
+\labelindent=\skip51
+\enit@outerparindent=\dimen142
+\enitdp@desc=\count112
 )
 (/usr/share/texmf-texlive/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
@@ -374,61 +432,61 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
-\Gread@gobject=\count101
+\Gread@gobject=\count113
 )))
 (/usr/share/texmf-texlive/tex/latex/tools/layout.sty
 Package: layout 2000/09/25 v1.2c Show layout parameters
-\oneinch=\count102
-\cnt@paperwidth=\count103
-\cnt@paperheight=\count104
-\cnt@hoffset=\count105
-\cnt@voffset=\count106
-\cnt@textheight=\count107
-\cnt@textwidth=\count108
-\cnt@topmargin=\count109
-\cnt@oddsidemargin=\count110
-\cnt@evensidemargin=\count111
-\cnt@headheight=\count112
-\cnt@headsep=\count113
-\cnt@marginparsep=\count114
-\cnt@marginparwidth=\count115
-\cnt@marginparpush=\count116
-\cnt@footskip=\count117
-\fheight=\count118
-\ref@top=\count119
-\ref@hoffset=\count120
-\ref@voffset=\count121
-\ref@head=\count122
-\ref@body=\count123
-\ref@foot=\count124
-\ref@margin=\count125
-\ref@marginwidth=\count126
-\ref@marginpar=\count127
-\Interval=\count128
-\ExtraYPos=\count129
-\PositionX=\count130
-\PositionY=\count131
-\ArrowLength=\count132
+\oneinch=\count114
+\cnt@paperwidth=\count115
+\cnt@paperheight=\count116
+\cnt@hoffset=\count117
+\cnt@voffset=\count118
+\cnt@textheight=\count119
+\cnt@textwidth=\count120
+\cnt@topmargin=\count121
+\cnt@oddsidemargin=\count122
+\cnt@evensidemargin=\count123
+\cnt@headheight=\count124
+\cnt@headsep=\count125
+\cnt@marginparsep=\count126
+\cnt@marginparwidth=\count127
+\cnt@marginparpush=\count128
+\cnt@footskip=\count129
+\fheight=\count130
+\ref@top=\count131
+\ref@hoffset=\count132
+\ref@voffset=\count133
+\ref@head=\count134
+\ref@body=\count135
+\ref@foot=\count136
+\ref@margin=\count137
+\ref@marginwidth=\count138
+\ref@marginpar=\count139
+\Interval=\count140
+\ExtraYPos=\count141
+\PositionX=\count142
+\PositionY=\count143
+\ArrowLength=\count144
 )
 (/usr/share/texmf-texlive/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen134
-\extrarowheight=\dimen135
-\NC@list=\toks19
-\extratabsurround=\skip49
-\backup@length=\skip50
+\col@sep=\dimen143
+\extrarowheight=\dimen144
+\NC@list=\toks24
+\extratabsurround=\skip52
+\backup@length=\skip53
 )
 (/usr/share/texmf-texlive/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2000/09/19 1.3
 
 Style option: `fancybox' v1.3 <2000/09/19> (tvz)
-\@fancybox=\box54
-\shadowsize=\dimen136
-\@Sbox=\box55
-\do@VerbBox=\toks20
-\the@fancyput=\toks21
-\this@fancyput=\toks22
-\EndVerbatimTokens=\toks23
+\@fancybox=\box56
+\shadowsize=\dimen145
+\@Sbox=\box57
+\do@VerbBox=\toks25
+\the@fancyput=\toks26
+\this@fancyput=\toks27
+\EndVerbatimTokens=\toks28
 \Verbatim@Outfile=\write3
 \Verbatim@Infile=\read1
 ) (/usr/share/texmf-texlive/tex/latex/tools/xspace.sty
@@ -436,18 +494,18 @@ Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
 )
 (/usr/share/texmf-texlive/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count133
-\float@exts=\toks24
-\float@box=\box56
-\@float@everytoks=\toks25
-\@floatcapt=\box57
+\c@float@type=\count145
+\float@exts=\toks29
+\float@box=\box58
+\@float@everytoks=\toks30
+\@floatcapt=\box59
 )
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/framed.sty
 Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
-\fb@frw=\dimen137
-\fb@frh=\dimen138
-\FrameRule=\dimen139
-\FrameSep=\dimen140
+\fb@frw=\dimen146
+\fb@frh=\dimen147
+\FrameRule=\dimen148
+\FrameSep=\dimen149
 )
 (/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
@@ -459,23 +517,23 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/ulem.sty
-\UL@box=\box58
-\UL@hyphenbox=\box59
-\UL@skip=\skip51
-\UL@hook=\toks26
-\UL@pe=\count134
-\UL@pixel=\dimen141
-\ULC@box=\box60
+\UL@box=\box60
+\UL@hyphenbox=\box61
+\UL@skip=\skip54
+\UL@hook=\toks31
+\UL@pe=\count146
+\UL@pixel=\dimen150
+\ULC@box=\box62
 Package: ulem 2000/05/26
-\ULdepth=\dimen142
+\ULdepth=\dimen151
 )
 (/usr/share/texmf-texlive/tex/latex/paralist/paralist.sty
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
-\pltopsep=\skip52
-\plpartopsep=\skip53
-\plitemsep=\skip54
-\plparsep=\skip55
-\pl@lab=\toks27
+\pltopsep=\skip55
+\plpartopsep=\skip56
+\plitemsep=\skip57
+\plparsep=\skip58
+\pl@lab=\toks32
 )
 (/usr/share/texmf-texlive/tex/latex/fourier/fourier.sty
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
@@ -711,6 +769,10 @@ LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 186.
 LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 187.
 LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 210.
 LaTeX Font Info:    Redeclaring math delimiter \vert on input line 215.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 217.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 219.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 221.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 223.
 LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 225.
 LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 227.
 LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 229.
@@ -735,145 +797,146 @@ LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 )
 (/usr/share/texmf-texlive/tex/latex/layouts/layouts.sty
 Package: layouts 2009/09/02 v2.6d graphical depiction of document elements
-\l@ylen=\skip56
-\layoutsbox=\box61
-\l@youtunitlength=\skip57
-\l@youtlinethick=\skip58
-\l@youtlinethickii=\skip59
-\l@ysetupparskip=\skip60
-\l@ysetupbaselineskip=\skip61
-\l@yonem=\skip62
-\l@yonex=\skip63
-\l@ylmarg=\skip64
-\l@yrmarg=\skip65
-\l@yitmindent=\skip66
-\l@ylblwidth=\skip67
-\l@ylblsep=\skip68
-\l@ylparindent=\skip69
-\l@ytsep=\skip70
-\l@ypskip=\skip71
-\l@yptsep=\skip72
-\l@ypsep=\skip73
-\l@yitmsep=\skip74
-\l@ytok=\toks28
-\l@youtpw=\count135
-\l@youtph=\count136
-\l@youthpi=\count137
-\l@youthpii=\count138
-\l@youthpiii=\count139
-\l@youthpiv=\count140
-\l@youthpv=\count141
-\l@youthpvi=\count142
-\l@youthpvii=\count143
-\l@youtparskip=\count144
-\l@youtvpi=\count145
-\l@youtvpii=\count146
-\l@youtvpiii=\count147
-\l@youtvpiv=\count148
-\l@youtvpv=\count149
-\l@youtvpvi=\count150
-\l@youtvpvii=\count151
-\l@youthdo=\count152
-\l@youthdi=\count153
-\l@youthdii=\count154
-\l@youthdiii=\count155
-\l@youthdiv=\count156
-\l@youthdv=\count157
-\l@youthdvi=\count158
-\l@youthdvii=\count159
-\l@youtvdo=\count160
-\l@youtvdi=\count161
-\l@youtvdii=\count162
-\l@youtvdiii=\count163
-\l@youtvdiv=\count164
-\l@youtvdv=\count165
-\l@youtvdvi=\count166
-\l@youtvdvii=\count167
-\l@youtvdviii=\count168
-\l@youtxci=\count169
-\l@youtxcii=\count170
-\l@youtxciii=\count171
-\l@youtxciv=\count172
-\l@youtxcv=\count173
-\l@youtxcvi=\count174
-\l@youtyci=\count175
-\l@youtycii=\count176
-\l@youtyciii=\count177
-\l@youtyciv=\count178
-\l@youtycv=\count179
-\l@youtycvi=\count180
-\l@youtycvii=\count181
-\l@youtycviii=\count182
-\l@youtxco=\count183
-\l@youtyco=\count184
-\l@ytempdima=\skip75
-\stockwidth=\skip76
-\stockheight=\skip77
-\trimedge=\skip78
-\trimtop=\skip79
-\uppermargin=\skip80
-\spinemargin=\skip81
+\l@ylen=\skip59
+\layoutsbox=\box63
+\l@youtunitlength=\skip60
+\l@youtlinethick=\skip61
+\l@youtlinethickii=\skip62
+\l@ysetupparskip=\skip63
+\l@ysetupbaselineskip=\skip64
+\l@yonem=\skip65
+\l@yonex=\skip66
+\l@ylmarg=\skip67
+\l@yrmarg=\skip68
+\l@yitmindent=\skip69
+\l@ylblwidth=\skip70
+\l@ylblsep=\skip71
+\l@ylparindent=\skip72
+\l@ytsep=\skip73
+\l@ypskip=\skip74
+\l@yptsep=\skip75
+\l@ypsep=\skip76
+\l@yitmsep=\skip77
+\l@ytok=\toks33
+\l@youtpw=\count147
+\l@youtph=\count148
+\l@youthpi=\count149
+\l@youthpii=\count150
+\l@youthpiii=\count151
+\l@youthpiv=\count152
+\l@youthpv=\count153
+\l@youthpvi=\count154
+\l@youthpvii=\count155
+\l@youtparskip=\count156
+\l@youtvpi=\count157
+\l@youtvpii=\count158
+\l@youtvpiii=\count159
+\l@youtvpiv=\count160
+\l@youtvpv=\count161
+\l@youtvpvi=\count162
+\l@youtvpvii=\count163
+\l@youthdo=\count164
+\l@youthdi=\count165
+\l@youthdii=\count166
+\l@youthdiii=\count167
+\l@youthdiv=\count168
+\l@youthdv=\count169
+\l@youthdvi=\count170
+\l@youthdvii=\count171
+\l@youtvdo=\count172
+\l@youtvdi=\count173
+\l@youtvdii=\count174
+\l@youtvdiii=\count175
+\l@youtvdiv=\count176
+\l@youtvdv=\count177
+\l@youtvdvi=\count178
+\l@youtvdvii=\count179
+\l@youtvdviii=\count180
+\l@youtxci=\count181
+\l@youtxcii=\count182
+\l@youtxciii=\count183
+\l@youtxciv=\count184
+\l@youtxcv=\count185
+\l@youtxcvi=\count186
+\l@youtyci=\count187
+\l@youtycii=\count188
+\l@youtyciii=\count189
+\l@youtyciv=\count190
+\l@youtycv=\count191
+\l@youtycvi=\count192
+\l@youtycvii=\count193
+\l@youtycviii=\count194
+\l@youtxco=\count195
+\l@youtyco=\count196
+\l@ytempdima=\skip78
+\stockwidth=\skip79
+\stockheight=\skip80
+\trimedge=\skip81
+\trimtop=\skip82
+\uppermargin=\skip83
+\spinemargin=\skip84
 )
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen143
-\Gin@req@width=\dimen144
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
 )
 (/usr/share/texmf-texlive/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count185
-\rotFPtop=\skip82
-\rotFPbot=\skip83
-\rot@float@box=\box62
-\rot@mess@toks=\toks29
+\c@r@tfl@t=\count197
+\rotFPtop=\skip85
+\rotFPbot=\skip86
+\rot@float@box=\box64
+\rot@mess@toks=\toks34
 )
 (/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen145
-\lightrulewidth=\dimen146
-\cmidrulewidth=\dimen147
-\belowrulesep=\dimen148
-\belowbottomsep=\dimen149
-\aboverulesep=\dimen150
-\abovetopsep=\dimen151
-\cmidrulesep=\dimen152
-\cmidrulekern=\dimen153
-\defaultaddspace=\dimen154
-\@cmidla=\count186
-\@cmidlb=\count187
-\@aboverulesep=\dimen155
-\@belowrulesep=\dimen156
-\@thisruleclass=\count188
-\@lastruleclass=\count189
-\@thisrulewidth=\dimen157
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count198
+\@cmidlb=\count199
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count200
+\@lastruleclass=\count201
+\@thisrulewidth=\dimen166
 )
 (/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 132.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 132.
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 132.
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 133.
+(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 134.
 
 (/usr/share/texmf-texlive/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-\captionmargin=\skip84
-\as@captionbox=\box63
-\as@captionwidth=\skip85
+\captionmargin=\skip87
+\as@captionbox=\box65
+\as@captionwidth=\skip88
 
          `rotating' package detected
          `float' package detected
 ) (./sources/latex-macros.tex) (./sbgn_PD-level1-user.aux
-(./sources/introduction.aux) (./sources/symbols.aux) (./sources/refcard.aux))
+(./sources/introduction.aux) (./sources/symbols.aux) (./sources/build.aux)
+(./sources/interpret.aux) (./sources/refcard.aux))
 \openout1 = `sbgn_PD-level1-user.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -967,16 +1030,16 @@ driver: pdftex
 -----------------------
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count190
-\scratchdimen=\dimen158
-\scratchbox=\box64
-\nofMPsegments=\count191
-\nofMParguments=\count192
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count193
-\MPscratchDim=\dimen159
-\MPnumerator=\count194
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count202
+\scratchdimen=\dimen167
+\scratchbox=\box66
+\nofMPsegments=\count203
+\nofMParguments=\count204
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count205
+\MPscratchDim=\dimen168
+\MPnumerator=\count206
+\everyMPtoPDFconversion=\toks36
 ) ABD: EveryShipout initializing macros
 (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -1034,9 +1097,6 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 21.64548pt on input line 6.
-
-LaTeX Warning: Citation `Moodie2011' on page 1 undefined on input line 12.
-
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1045,19 +1105,19 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 File: images/MAPK-only.pdf Graphic file (type pdf)
  <use images/MAPK-only.pdf>
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.69995pt on input line 24.
+(Font)              scaled to size 8.69995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 8.69995pt on input line 24.
+(Font)              scaled to size 8.69995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.69995pt on input line 24.
+(Font)              scaled to size 8.69995pt on input line 26.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1067,33 +1127,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [2 <./images/MAPK-only.pdf>]
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 45.
 
-LaTeX Warning: Citation `Moodie2011' on page 3 undefined on input line 42.
-
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 42.
 (/usr/share/texmf-texlive/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 42
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 45
 .
 
 (/usr/share/texmf-texlive/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 42.
+(Font)              scaled to size 10.07397pt on input line 45.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 42.
+(Font)              scaled to size 7.63599pt on input line 45.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 42.
+(Font)              scaled to size 5.51999pt on input line 45.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 42.
+(Font)              scaled to size 10.07397pt on input line 45.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 42.
+(Font)              scaled to size 7.63599pt on input line 45.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 42.
+(Font)              scaled to size 5.51999pt on input line 45.
 )
-Overfull \hbox (13.03523pt too wide) in paragraph at lines 44--22
+Overfull \hbox (13.03523pt too wide) in paragraph at lines 47--22
 []\T1/futs/m/n/10.95 The eas-i-est and best way to get in-volved in SBGN dis-cu
 s-sions is to join the sbgn-discuss@caltech.edu
  []
@@ -1127,10 +1185,6 @@ File: images/macromolecule-plain.pdf Graphic file (type pdf)
 File: images/simpleChemical.pdf Graphic file (type pdf)
 
 <use images/simpleChemical.pdf>) (./sources/genetic.tex
-
-LaTeX Warning: Reference `unitInformation' on page 5 undefined on input line 6.
-
-
 <images/genetic.pdf, id=38, 311.1625pt x 174.6525pt>
 File: images/genetic.pdf Graphic file (type pdf)
  <use images/genetic.pdf>)
@@ -1159,11 +1213,8 @@ File: images/unitInformation.pdf Graphic file (type pdf)
 <images/stateVariable.pdf, id=114, 263.98625pt x 111.41624pt>
 File: images/stateVariable.pdf Graphic file (type pdf)
 
-<use images/stateVariable.pdf>) (./sources/cloneMarker.tex
-
-LaTeX Warning: Reference `sec:submap' on page 8 undefined on input line 5.
-
-[8 <./images/unitInformation.pdf> <./images/stateVariable.pdf>]
+<use images/stateVariable.pdf>) (./sources/cloneMarker.tex [8 <./images/unitInf
+ormation.pdf> <./images/stateVariable.pdf>]
 <images/simpleCloneMarker.pdf, id=130, 170.6375pt x 171.64125pt>
 File: images/simpleCloneMarker.pdf Graphic file (type pdf)
 
@@ -1189,15 +1240,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/process.pdf, id=157, 244.915pt x 84.315pt>
 File: images/process.pdf Graphic file (type pdf)
  <use images/process.pdf>)
-(./sources/omitted.tex
-
-LaTeX Warning: Reference `sec:submap' on page 12 undefined on input line 7.
-
-<images/omitted.pdf, id=158, 244.915pt x 84.315pt>
+(./sources/omitted.tex <images/omitted.pdf, id=158, 244.915pt x 84.315pt>
 File: images/omitted.pdf Graphic file (type pdf)
- <use images/omitted.pdf>)
-(./sources/uncertain.tex [12 <./images/process.pdf> <./images/omitted.pdf>]
-<images/uncertain.pdf, id=168, 244.915pt x 84.315pt>
+
+<use images/omitted.pdf>) (./sources/uncertain.tex [12 <./images/process.pdf> <
+./images/omitted.pdf>] <images/uncertain.pdf, id=168, 244.915pt x 84.315pt>
 File: images/uncertain.pdf Graphic file (type pdf)
 
 <use images/uncertain.pdf>) (./sources/association.tex
@@ -1263,55 +1310,95 @@ File: images/not.pdf Graphic file (type pdf)
  <use images/not.pdf> [16 <./images/necessary_stim.pdf> <./images/logicArc.pdf>
  <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf>]) (./sources/c
 ompartment.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 5.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 5.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 12.52792pt on input line 5.
+
 <images/compartment.pdf, id=286, 451.6875pt x 319.1925pt>
 File: images/compartment.pdf Graphic file (type pdf)
 
-<use images/compartment.pdf>)) [17 <./images/not.pdf> <./images/compartment.pdf
->]
+<use images/compartment.pdf>) (./sources/submap.tex
+<images/submap.pdf, id=287, 798.985pt x 515.9275pt>
+File: images/submap.pdf Graphic file (type pdf)
+ <use images/submap.pdf>
+[17 <./images/not.pdf> <./images/compartment.pdf>]
+Overfull \hbox (6.09357pt too wide) in paragraph at lines 16--17
+[]\T1/futs/m/n/10.95 The left part of Fig-ure 2.33[] rep-re-sents a \T1/futs/m/
+it/10.95 submap \T1/futs/m/n/10.95 that trans-forms glu-cose into fructose-6-ph
+osphate.
+ []
+
+<images/submap-folded.pdf, id=307, 491.8375pt x 369.38pt>
+File: images/submap-folded.pdf Graphic file (type pdf)
+
+<use images/submap-folded.pdf>
+<images/submap-unfolded.pdf, id=308, 606.265pt x 429.605pt>
+File: images/submap-unfolded.pdf Graphic file (type pdf)
+
+<use images/submap-unfolded.pdf>)) [18 <./images/submap.pdf> <./images/submap-f
+olded.pdf> <./images/submap-unfolded.pdf>]
+\openout2 = `sources/build.aux'.
+
+ (./sources/build.tex
+Chapter 3.
+) [19
+
+
+
+]
+\openout2 = `sources/interpret.aux'.
+
+ (./sources/interpret.tex
+Chapter 4.
+) [20
+
+
+
+]
 \openout2 = `sources/refcard.aux'.
 
  (./sources/refcard.tex
-<images/refcard.pdf, id=306, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=332, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 1--27
 [] 
  []
 
-[18
+[21
 
 
- <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [19
+ <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [22
 
 
 
 
 ]
 (./sbgn_PD-level1-user.aux (./sources/introduction.aux) (./sources/symbols.aux)
-(./sources/refcard.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./sources/build.aux) (./sources/interpret.aux) (./sources/refcard.aux)) ) 
 Here is how much of TeX's memory you used:
- 4853 strings out of 493848
- 66036 string characters out of 1152824
- 143162 words of memory out of 3000000
- 7848 multiletter control sequences out of 15000+50000
- 108192 words of font info for 85 fonts, out of 3000000 for 9000
+ 5474 strings out of 493848
+ 73366 string characters out of 1152824
+ 154160 words of memory out of 3000000
+ 8433 multiletter control sequences out of 15000+50000
+ 111048 words of font info for 87 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 32i,8n,32p,1530b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/adobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/
-putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/
-share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
-public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
-b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (20 pages, 1016944 bytes).
+ 32i,8n,32p,1395b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr
+/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/font
+s/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/type1/ado
+be/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.
+pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/t
+exmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/public/
+txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb
+></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+Output written on sbgn_PD-level1-user.pdf (23 pages, 1685255 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
+ 380 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
