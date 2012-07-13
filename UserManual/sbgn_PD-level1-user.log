@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  13 JUL 2012 19:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  14 JUL 2012 00:09
 entering extended mode
  %&-line parsing enabled.
 **sbgn_PD-level1-user.tex
@@ -1250,7 +1250,7 @@ Underfull \hbox (badness 5548) in paragraph at lines 22--22
 ctose-6-phosphate to pro-duce fructose-1,6- 
  []
 
-<images/process-phosphorylation.pdf, id=156, 421.575pt x 111.41624pt>
+<images/process-phosphorylation.pdf, id=156, 416.55624pt x 111.41624pt>
 File: images/process-phosphorylation.pdf Graphic file (type pdf)
 
 <use images/process-phosphorylation.pdf> [12 <./images/process.pdf> <./images/p
@@ -1265,90 +1265,116 @@ File: images/process-dimerisation.pdf Graphic file (type pdf)
 <use images/process-dimerisation.pdf>) (./sources/omitted.tex
 <images/omitted.pdf, id=172, 244.915pt x 84.315pt>
 File: images/omitted.pdf Graphic file (type pdf)
- <use images/omitted.pdf>)
-(./sources/uncertain.tex <images/uncertain.pdf, id=173, 244.915pt x 84.315pt>
+ <use images/omitted.pdf>
+[13 <./images/process-phosphorylation.pdf> <./images/process-translocation.pdf>
+ <./images/process-dimerisation.pdf>]) (./sources/uncertain.tex
+<images/uncertain.pdf, id=191, 244.915pt x 84.315pt>
 File: images/uncertain.pdf Graphic file (type pdf)
 
-<use images/uncertain.pdf> [13 <./images/process-phosphorylation.pdf> <./images
-/process-translocation.pdf> <./images/process-dimerisation.pdf> <./images/omitt
-ed.pdf>]) (./sources/association.tex
-<images/association.pdf, id=194, 181.67876pt x 84.315pt>
+<use images/uncertain.pdf>) (./sources/association.tex
+<images/association.pdf, id=192, 181.67876pt x 84.315pt>
 File: images/association.pdf Graphic file (type pdf)
 
 <use images/association.pdf>
-<images/association-MPF.pdf, id=195, 439.6425pt x 286.06876pt>
+<images/association-MPF.pdf, id=193, 439.6425pt x 286.06876pt>
 File: images/association-MPF.pdf Graphic file (type pdf)
 
 <use images/association-MPF.pdf>
-<images/association-unamed.pdf, id=196, 434.62375pt x 287.0725pt>
+<images/association-unamed.pdf, id=194, 434.62375pt x 287.0725pt>
 File: images/association-unamed.pdf Graphic file (type pdf)
 
-<use images/association-unamed.pdf>
+<use images/association-unamed.pdf> [14 <./images/omitted.pdf> <./images/uncert
+ain.pdf> <./images/association.pdf> <./images/association-MPF.pdf>]
 Overfull \hbox (2.08383pt too wide) in paragraph at lines 34--35
 \T1/futs/m/it/10.95 mul-ti-mer\T1/futs/m/n/10.95 . Fig-ure 2.23[] gives an ex-a
 m-ple of us-ing the suc-ces-sive for-ma-tion of an hemoglobin monomer
  []
 
-[14 <./images/uncertain.pdf> <./images/association.pdf> <./images/association-M
-PF.pdf> <./images/association-unamed.pdf>]
-<images/association-multimerisation.pdf, id=224, 735.74875pt x 271.0125pt>
+<images/association-multimerisation.pdf, id=214, 735.74875pt x 271.0125pt>
 File: images/association-multimerisation.pdf Graphic file (type pdf)
 
 <use images/association-multimerisation.pdf>) (./sources/dissociation.tex
-<images/dissociation.pdf, id=225, 179.67125pt x 84.315pt>
+<images/dissociation.pdf, id=215, 179.67125pt x 84.315pt>
 File: images/dissociation.pdf Graphic file (type pdf)
 
 <use images/dissociation.pdf>) (./sources/phenotype.tex
-<images/phenotype.pdf, id=226, 227.85126pt x 107.40125pt>
+<images/phenotype.pdf, id=216, 227.85126pt x 107.40125pt>
 File: images/phenotype.pdf Graphic file (type pdf)
 
-<use images/phenotype.pdf>) (./sources/consumption.tex [15 <./images/associatio
-n-multimerisation.pdf> <./images/dissociation.pdf> <./images/phenotype.pdf>]
-<images/consumption.pdf, id=244, 252.945pt x 81.30376pt>
+<use images/phenotype.pdf> [15 <./images/association-unamed.pdf> <./images/asso
+ciation-multimerisation.pdf> <./images/dissociation.pdf>])
+(./sources/consumption.tex
+<images/consumption.pdf, id=238, 252.945pt x 81.30376pt>
 File: images/consumption.pdf Graphic file (type pdf)
 
 <use images/consumption.pdf>) (./sources/production.tex
-<images/production.pdf, id=245, 264.99pt x 80.3pt>
+<images/production.pdf, id=239, 264.99pt x 80.3pt>
 File: images/production.pdf Graphic file (type pdf)
  <use images/production.pdf>) (./sources/modulation.tex
-<images/modulation.pdf, id=246, 199.74625pt x 60.225pt>
+<images/modulation.pdf, id=240, 199.74625pt x 60.225pt>
 File: images/modulation.pdf Graphic file (type pdf)
 
-<use images/modulation.pdf>) (./sources/stimulation.tex
-<images/stimulation.pdf, id=247, 202.7575pt x 60.225pt>
+<use images/modulation.pdf> [16 <./images/phenotype.pdf> <./images/consumption.
+pdf> <./images/production.pdf>]
+<images/modulation-nAChR.pdf, id=270, 279.0425pt x 376.40625pt>
+File: images/modulation-nAChR.pdf Graphic file (type pdf)
+
+<use images/modulation-nAChR.pdf>) (./sources/stimulation.tex
+<images/stimulation.pdf, id=271, 202.7575pt x 60.225pt>
 File: images/stimulation.pdf Graphic file (type pdf)
 
-<use images/stimulation.pdf> [16 <./images/consumption.pdf> <./images/productio
-n.pdf> <./images/modulation.pdf>]) (./sources/catalysis.tex
-<images/catalysis.pdf, id=277, 204.765pt x 60.225pt>
+<use images/stimulation.pdf>) (./sources/catalysis.tex
+<images/catalysis.pdf, id=272, 204.765pt x 60.225pt>
 File: images/catalysis.pdf Graphic file (type pdf)
 
-<use images/catalysis.pdf>) (./sources/inhibition.tex
-<images/inhibition.pdf, id=278, 205.76875pt x 60.225pt>
+<use images/catalysis.pdf>) (./sources/inhibition.tex [17 <./images/modulation.
+pdf> <./images/modulation-nAChR.pdf> <./images/stimulation.pdf> <./images/catal
+ysis.pdf>] <images/inhibition.pdf, id=300, 205.76875pt x 60.225pt>
 File: images/inhibition.pdf Graphic file (type pdf)
 
 <use images/inhibition.pdf>) (./sources/necessary_stim.tex
-<images/necessary_stim.pdf, id=279, 203.76125pt x 60.225pt>
+<images/necessary_stim.pdf, id=301, 203.76125pt x 60.225pt>
 File: images/necessary_stim.pdf Graphic file (type pdf)
 
-<use images/necessary_stim.pdf>) (./sources/logicArc.tex
-<images/logicArc.pdf, id=280, 395.4775pt x 81.30376pt>
+<use images/necessary_stim.pdf>
+<images/necessary_stim-genetic.pdf, id=302, 488.82625pt x 378.41376pt>
+File: images/necessary_stim-genetic.pdf Graphic file (type pdf)
+
+<use images/necessary_stim-genetic.pdf>
+<images/necessary_stim-transport.pdf, id=303, 581.17125pt x 431.6125pt>
+File: images/necessary_stim-transport.pdf Graphic file (type pdf)
+
+<use images/necessary_stim-transport.pdf>
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 32.
+
+
+LaTeX Warning: Reference `sec: unresolved multi-comp ents' on page 18 undefined
+ on input line 32.
+
+
+LaTeX Warning: Reference `sec: unresolved multi-comp ents' on page 18 undefined
+ on input line 32.
+
+) (./sources/logicArc.tex [18 <./images/inhibition.pdf> <./images/necessary_sti
+m.pdf> <./images/necessary_stim-genetic.pdf>]
+<images/logicArc.pdf, id=326, 395.4775pt x 81.30376pt>
 File: images/logicArc.pdf Graphic file (type pdf)
 
 <use images/logicArc.pdf>) (./sources/equivalenceArc.tex
-<images/equivalence.pdf, id=281, 415.5525pt x 81.30376pt>
+<images/equivalence.pdf, id=327, 415.5525pt x 81.30376pt>
 File: images/equivalence.pdf Graphic file (type pdf)
 
-<use images/equivalence.pdf> [17 <./images/stimulation.pdf> <./images/catalysis
-.pdf> <./images/inhibition.pdf> <./images/necessary_stim.pdf> <./images/logicAr
-c.pdf>]) (./sources/and.tex <images/and.pdf, id=315, 162.6075pt x 69.25874pt>
+<use images/equivalence.pdf>) (./sources/and.tex
+<images/and.pdf, id=328, 162.6075pt x 69.25874pt>
 File: images/and.pdf Graphic file (type pdf)
-
-<use images/and.pdf>) (./sources/or.tex
-<images/or.pdf, id=316, 162.6075pt x 69.25874pt>
+ <use images/and.pdf>)
+(./sources/or.tex [19 <./images/necessary_stim-transport.pdf> <./images/logicAr
+c.pdf> <./images/equivalence.pdf>]
+<images/or.pdf, id=350, 162.6075pt x 69.25874pt>
 File: images/or.pdf Graphic file (type pdf)
  <use images/or.pdf>)
-(./sources/not.tex <images/not.pdf, id=317, 158.5925pt x 69.25874pt>
+(./sources/not.tex <images/not.pdf, id=351, 158.5925pt x 69.25874pt>
 File: images/not.pdf Graphic file (type pdf)
 
 <use images/not.pdf>) (./sources/compartment.tex
@@ -1358,36 +1384,35 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 12.52792pt on input line 5.
- [18 <./images/equivalence.pdf> <./images/and.pdf> <./images/or.pdf> <./images/
-not.pdf>]
-<images/compartment.pdf, id=346, 451.6875pt x 319.1925pt>
+
+<images/compartment.pdf, id=352, 451.6875pt x 319.1925pt>
 File: images/compartment.pdf Graphic file (type pdf)
 
-<use images/compartment.pdf>) (./sources/submap.tex
-<images/submap.pdf, id=347, 798.985pt x 515.9275pt>
+<use images/compartment.pdf>) (./sources/submap.tex [20 <./images/and.pdf> <./i
+mages/or.pdf> <./images/not.pdf> <./images/compartment.pdf>]
+<images/submap.pdf, id=384, 798.985pt x 515.9275pt>
 File: images/submap.pdf Graphic file (type pdf)
  <use images/submap.pdf>
 Overfull \hbox (6.09357pt too wide) in paragraph at lines 16--17
-[]\T1/futs/m/n/10.95 The left part of Fig-ure 2.40[] rep-re-sents a \T1/futs/m/
+[]\T1/futs/m/n/10.95 The left part of Fig-ure 2.43[] rep-re-sents a \T1/futs/m/
 it/10.95 submap \T1/futs/m/n/10.95 that trans-forms glu-cose into fructose-6-ph
 osphate.
  []
 
-[19 <./images/compartment.pdf> <./images/submap.pdf>]
-<images/submap-folded.pdf, id=368, 491.8375pt x 369.38pt>
+<images/submap-folded.pdf, id=385, 491.8375pt x 369.38pt>
 File: images/submap-folded.pdf Graphic file (type pdf)
 
 <use images/submap-folded.pdf>
-<images/submap-unfolded.pdf, id=369, 606.265pt x 429.605pt>
+<images/submap-unfolded.pdf, id=386, 606.265pt x 429.605pt>
 File: images/submap-unfolded.pdf Graphic file (type pdf)
 
-<use images/submap-unfolded.pdf>)) [20 <./images/submap-folded.pdf> <./images/s
-ubmap-unfolded.pdf>]
+<use images/submap-unfolded.pdf> [21 <./images/submap.pdf>])) [22 <./images/sub
+map-folded.pdf> <./images/submap-unfolded.pdf>]
 \openout2 = `sources/build.aux'.
 
  (./sources/build.tex
 Chapter 3.
-) [21
+) [23
 
 
 
@@ -1396,7 +1421,7 @@ Chapter 3.
 
  (./sources/interpret.tex
 Chapter 4.
-) [22
+) [24
 
 
 
@@ -1404,44 +1429,47 @@ Chapter 4.
 \openout2 = `sources/refcard.aux'.
 
  (./sources/refcard.tex
-<images/refcard.pdf, id=385, 798.985pt x 575.14874pt>
+<images/refcard.pdf, id=413, 798.985pt x 575.14874pt>
 File: images/refcard.pdf Graphic file (type pdf)
  <use images/refcard.pdf>)
 Overfull \hbox (7.15172pt too wide) in paragraph at lines 1--27
 [] 
  []
 
-[23
+[25
 
 
- <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [24
+ <./images/refcard.pdf>] (./sbgn_PD-level1-user.bbl) [26
 
 
 
 
 ]
 (./sbgn_PD-level1-user.aux (./sources/introduction.aux) (./sources/symbols.aux)
-(./sources/build.aux) (./sources/interpret.aux) (./sources/refcard.aux)) ) 
+(./sources/build.aux) (./sources/interpret.aux) (./sources/refcard.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5515 strings out of 493848
- 74632 string characters out of 1152824
- 154232 words of memory out of 3000000
- 8467 multiletter control sequences out of 15000+50000
- 111048 words of font info for 87 fonts, out of 3000000 for 9000
+ 5538 strings out of 493848
+ 75296 string characters out of 1152824
+ 154268 words of memory out of 3000000
+ 8485 multiletter control sequences out of 15000+50000
+ 115578 words of font info for 90 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  32i,8n,32p,1395b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr
-/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/font
-s/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/type1/ado
-be/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.
-pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/t
-exmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/public/
-txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb
-></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on sbgn_PD-level1-user.pdf (25 pages, 1791889 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/adobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/
+putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/
+share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/
+public/txfonts/t1xtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
+b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+Output written on sbgn_PD-level1-user.pdf (27 pages, 1814948 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
+ 461 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 
