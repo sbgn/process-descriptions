@@ -17,7 +17,7 @@ The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/association-MPF}
+  \includegraphics[scale = 0.4]{images/association-MPF}
   \caption{Association of cyclin and CDC2 kinase into the Maturation Promoting Factor.}
   \label{fig:assoc-cyclin}
 \end{figure}
@@ -26,7 +26,7 @@ An \glyph{association} does not necessarily involve components of the same natur
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/association-unamed}
+  \includegraphics[scale = 0.4]{images/association-unamed}
   \caption{The association of a pentameric macromolecule with a simple chemical in an unnamed complex.}
   \label{fig:assoc-unamed}
 \end{figure}
@@ -35,7 +35,7 @@ An association does not necessarily result in the formation of a \glyph{complex}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/association-multimerisation}
+  \includegraphics[scale = 0.4]{images/association-multimerisation}
   \caption{Formation of hemoglobin.}
   \label{fig:assoc-multi}
 \end{figure}
