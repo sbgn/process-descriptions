@@ -18,7 +18,7 @@ The example in \fig{trans-react} illustrates the use of a \glyph{process} node t
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/process-reaction}
+  \includegraphics[scale = 0.4]{images/process-reaction}
   \caption{Reaction between ATP and fructose-6-phosphate to produce fructose-1,6-biphosphate, ADP and a proton.}
   \label{fig:trans-react}
 \end{figure}
@@ -27,7 +27,7 @@ The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/process-phosphorylation}
+  \includegraphics[scale = 0.4]{images/process-phosphorylation}
   \caption{Phosphorylation of the protein MAP kinase.}
   \label{fig:trans-phos}
 \end{figure}
@@ -37,7 +37,7 @@ The example in \fig{trans-trans} illustrates the use of a \glyph{process} node t
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/process-translocation}
+  \includegraphics[scale = 0.4]{images/process-translocation}
   \caption{Translocation of calcium ion out of the endoplasmic reticulum. Note that the \glyph{process} does not have to be located on the boundary of the \glyph{compartment}. A \glyph{process} is not attached to any \glyph{compartment}.}
   \label{fig:trans-trans}
 \end{figure}
@@ -46,7 +46,7 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/process-dimerisation}
+  \includegraphics[scale = 0.4]{images/process-dimerisation}
   \caption{Conversion of two galactoses into a lactose.}
   \label{fig:trans-dim}
 \end{figure}
