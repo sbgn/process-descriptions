@@ -64,7 +64,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -120,7 +120,7 @@
          y="260.62094"
          x="913.72729"
          id="tspan2198"
-         sodipodi:role="line">LABEL</tspan></text>
+         sodipodi:role="line">NAME</tspan></text>
     <path
        style="fill:#646464;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 1218.2987,299.0389 0,27.43927 c 0,19.7857 -15.9286,35.71428 -35.7143,35.71428 l -309.99996,10e-6 c -19.78571,-10e-6 -35.71428,-15.92859 -35.71428,-35.7143 l 0,-27.43927"

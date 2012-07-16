@@ -7,44 +7,46 @@ A level-1 auxiliary file: sources/interpret.aux
 A level-1 auxiliary file: sources/refcard.aux
 The style file: unsrt.bst
 Database file #1: sbgn_PD-level1-user.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "courtot:2011"
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            465 strings with 4670 characters,
-and the built_in function-call counts, 936 in all, are:
-= -- 38
-> -- 136
+            475 strings with 5584 characters,
+and the built_in function-call counts, 1699 in all, are:
+= -- 59
+> -- 267
 < -- 0
-+ -- 46
-- -- 44
-* -- 108
-:= -- 195
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 2
++ -- 90
+- -- 87
+* -- 209
+:= -- 354
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 17
-empty$ -- 39
-format.name$ -- 44
-if$ -- 167
+cite$ -- 3
+duplicate$ -- 26
+empty$ -- 63
+format.name$ -- 87
+if$ -- 301
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 14
-num.names$ -- 2
-pop$ -- 3
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 19
+num.names$ -- 3
+pop$ -- 4
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 9
 stack$ -- 0
-substring$ -- 25
-swap$ -- 2
+substring$ -- 46
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 25
+while$ -- 6
+width$ -- 4
+write$ -- 36
+(There was 1 warning)

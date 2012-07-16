@@ -28,7 +28,7 @@ The example in \fig{necessary_stim-calcium} below describes the transport of cal
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/necessary_stim-transport}
+  \includegraphics[scale = 0.4]{images/necessary_stim-transport}
   \caption{The transport of calcium ions out of the endoplasmic reticulum into the cytosol. Note that IP3R crosses both compartment boundaries. This is allowed, but the Macromolecule should only belong to one of the compartments see section \ref{sec: unresolved multi-comp ents} for more discussion of this issue.}
   \label{fig:necessary_stim-calcium}
 \end{figure}
