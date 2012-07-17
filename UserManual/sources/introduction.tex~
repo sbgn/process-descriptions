@@ -30,6 +30,8 @@ phosphorylated. The small circles on the nodes for RAF and other entity pools re
 The essence of the \PDs is \emph{change}: it shows how different entities in the system process from one form to another.  The entities themselves can be many different things.  In the example of \fig{eg1}, they are either pools of macromolecules or pools of simple chemicals, but as will become clear later in this chapter, they can be other conceptual and material constructs as well.  Note also that we speak of \emph{entity pools} rather than individuals; this is because in biochemical network models, one does not focus on single molecules, but rather collections of molecules of the same kind.  The molecules in a given pool are considered indistinguishable from each other.  The way in which one type of entity is transformed into another is conveyed by a \emph{process node} and arcs between entity pool nodes and process nodes indicate an influence by the entities on the processes.  In the case of \fig{eg1}, those arcs describe consumption \sect{consumption}, production \sect{production} and catalysis 
 \sect{catalysis}, but others are possible.  Finally, nodes in \PDs are usually not repeated; if they do need to be repeated, they are marked with \emph{clone markers}---specific modifications to the appearance of the node (\sect{cloneMarker}). The details of this and other aspects of \PD notation are explained in the rest of this chapter.
 
+A reference card depicting all the symbols of \SBGNPDLone is present at the end of this document.
+
 \section{SBGN levels and versions}
 \label{sec:sbgn-levels}
 
@@ -41,6 +43,8 @@ Capabilities and features that cannot be agreed upon and are judged insufficient
 
 \section{How to get more information}
 \label{sec:info}
+
+The present user manual will present the various symbols used by \SBGNPDLone (\chap{symbols}), and provide guidance to design SBGN \PDms (\chap{build}).
 
 The normative description of the language is the technical specification \cite{Moodie:2011}. It is available from the SBGN website (\url{http://sbgn.org/}). This website is a portal for all things to the notation. In addition to the specifications, there are examples of maps, FAQs, and informations on part and forthcoming meetings.  
 
