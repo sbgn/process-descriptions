@@ -8,10 +8,18 @@ Many biological processes involve \emph{macromolecules}: biochemical substances 
 \begin{figure}[H]
   \centering
   \includegraphics[width = 1.25in]{images/macromolecule-plain}
-  \caption{The \PD glyph for \glyph{macromolecule}}
+  \caption{The \PD glyph for \glyph{macromolecule}.}
   \label{fig:macromolecule}
 \end{figure}
 
+Examples of \glyph{macromolecules} are presented in \fig{macromolecule-examples}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/macromolecule-examples}
+  \caption{blah blah.}
+  \label{fig:macromolecule-examples}
+\end{figure}
 
 
 

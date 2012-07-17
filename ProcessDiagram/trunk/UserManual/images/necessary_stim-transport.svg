@@ -67,7 +67,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7071068"
-     inkscape:cx="596.96973"
+     inkscape:cx="345.23972"
      inkscape:cy="445.63071"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
@@ -94,7 +94,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -104,25 +104,25 @@
      inkscape:label="final"
      style="opacity:1">
     <rect
-       rx="35.714287"
+       rx="31.485468"
        ry="35.714287"
        y="241.7366"
-       x="198.82405"
+       x="243.42041"
        height="327.27026"
-       width="376.63647"
+       width="332.0401"
        id="rect1875"
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="214.13864"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="274.13864"
        y="288.3927"
        id="text2890"><tspan
          sodipodi:role="line"
          id="tspan2892"
-         x="214.13864"
+         x="274.13864"
          y="288.3927"
-         style="font-size:48px">ER</tspan></text>
+         style="font-size:36px">ER</tspan></text>
     <path
        transform="matrix(-0.6974023,0,0,0.6974023,639.91798,300.29343)"
        d="M 363.65492,267.30249 A 58.588848,58.588848 0 1 1 246.47722,267.30249 A 58.588848,58.588848 0 1 1 363.65492,267.30249 z"
@@ -247,24 +247,24 @@
          id="tspan12844"
          sodipodi:role="line">2+</tspan></text>
     <rect
-       rx="67.789009"
-       ry="57.567596"
-       y="100.33222"
-       x="128.89224"
-       height="527.52454"
-       width="714.89075"
+       rx="64.487785"
+       ry="51.801022"
+       y="153.17462"
+       x="163.70638"
+       height="474.68213"
+       width="680.0766"
        id="rect3960"
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="158.85715"
-       y="160.59058"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="208.85715"
+       y="210.59058"
        id="text3962"><tspan
          sodipodi:role="line"
          id="tspan3964"
-         x="158.85715"
-         y="160.59058"
-         style="font-size:48px">Cytosol</tspan></text>
+         x="208.85715"
+         y="210.59058"
+         style="font-size:36px">Cytosol</tspan></text>
   </g>
 </svg>
