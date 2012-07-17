@@ -1,4 +1,3 @@
-% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/ProcessDiagram/tags/L1V1.3Full/sources/complex.tex $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%                   Complex
@@ -11,13 +10,16 @@ A \glyph{complex} node represents a biochemical entity composed of other biochem
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.3]{images/complex}
-  \caption{An example \PD glyph for \glyph{complex}.}
+  \caption{The \PD glyph for \glyph{complex}.}
   \label{fig:complex}
 \end{figure}
 
 
+Examples of \glyph{complexes} are presented in \fig{complex-examples}.
 
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.5]{images/complex-examples}
+  \caption{Examples of \glyph{NucAcidFeat-examples}. From left to right: gene coding for the 18S ribosomal RNA, gene coding for $\alpha$1-globin, messenger RNA coding for $\alpha$-globin, nuclear factor 1 binding site on the promoter of $\alpha$1-globin gene.}
+  \label{fig:complex-examples}
+\end{figure}
