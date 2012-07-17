@@ -17,6 +17,6 @@ Examples of \glyph{nucleic acid features} are presented in \fig{NucAcidFeat-exam
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.5]{images/NucAcidFeat-examples}
-  \caption{Examples of \glyph{NucAcidFeat-examples}. From left to right:.}
+  \caption{Examples of \glyph{NucAcidFeat-examples}. From left to right: gene coding for the 18S ribosomal RNA, gene coding for $\alpha$1-globin, messenger RNA coding for $\alpha$-globin, nuclear factor 1 binding site on the promoter of $\alpha$1-globin gene.}
   \label{fig:NucAcidFeat-examples}
 \end{figure}
