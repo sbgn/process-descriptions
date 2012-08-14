@@ -1,7 +1,7 @@
 \chapter{Symbols used in SBGN Process Descriptions}
 \label{chp:symbols}
 
-An SBGN \PDm is mainly is bipartite graph, i.e. it is made up of two types of nodes that connect in an alternate way (some exceptions are described below, e.g. when \glyph{logical operators} or \glyph{tag} are used). The two types of nodes are the \glyph{process nodes} and the \glyph{entity pools nodes}, representing the things that are modified by processes. These nodes are connected by arcs. In addition, the \glyph{entity pools nodes} can be contained in \glyph{compartments}. 
+An SBGN \PDm is mainly a bipartite graph, i.e. it is made up of two types of nodes that connect in an alternate way (some exceptions are described below, e.g. when \hyperref[sec:logic]{\glyph{logical operators}} or \glyph{tag} are used). The two types of nodes are the \hyperref[sec:PNs]{\glyph{process nodes}} and the \hyperref[sec:EPNs]{\glyph{entity pools nodes}}, representing the things that are modified by processes. These nodes are connected by arcs. In addition, the \glyph{entity pools nodes} can be contained in  \hyperref[sec:compartment]{\glyph{compartments}}. % and decorated with other glyphs providing additional information... should these be mentioned here too? [!]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,7 +26,7 @@ The \PDl contains six glyphs representing classes of material entities: \glyph{u
 
 \section{Decorations of the entity pool nodes}\label{sec:decorations}
 
-SBGN \PD provides glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\glyph{unit of information}), state information (\glyph{state variable}) or indicate duplication of entity pool nodes (\glyph{clone marker}).
+SBGN \PD provides glyphs that decorate other glyphs, providing additional information that may be useful to the reader. These can provide annotation (\hyperref[sec:unitInfo]{\glyph{unit of information}}), state information (\hyperref[sec:stateVariable]{\glyph{state variable}}) or indicate duplication of entity pool nodes (\hyperref[sec:cloneMarker]{\glyph{clone marker}}).
 
 \input{sources/unitInformation.tex}
 \input{sources/stateVariable.tex}
