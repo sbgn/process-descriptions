@@ -1,0 +1,110 @@
+% $HeadURL$
+
+% ----------------------------------------------------------------
+% Definitions that change with releases of the document.
+% ----------------------------------------------------------------
+
+\newcommand{\sbgndate}{14 February, 2010}
+
+% ----------------------------------------------------------------
+% Common commands when writing.
+% ----------------------------------------------------------------
+
+\newcommand{\SBGNPDLone}{SBGN \PD Level~1\xspace}
+
+\newcommand{\PD}{Process Description\xspace}
+\newcommand{\PDs}{Process Descriptions\xspace}
+\newcommand{\PDm}{Process Description map\xspace}
+\newcommand{\PDms}{Process Description maps\xspace}
+\newcommand{\PDl}{Process Description language\xspace}
+
+\newcommand{\ER}{Entity Relationship\xspace}
+\newcommand{\ERs}{Entity Relationships\xspace}
+\newcommand{\ERm}{Entity Relationship map\xspace}
+\newcommand{\ERms}{Entity Relationship maps\xspace}
+\newcommand{\ERl}{Entity Relationship language\xspace}
+
+\newcommand{\AF}{Activity Flow\xspace}
+\newcommand{\AFs}{Activity Flows\xspace}
+\newcommand{\AFm}{Activity Flow map\xspace}
+\newcommand{\AFms}{Activity Flow maps\xspace}
+\newcommand{\AFl}{Activity Flow language\xspace}
+
+% The name of a glyph is emphasized. Note that this is only the
+% case when we talk about the glyph, not the biological concept
+% represented by the glyph.
+
+\newcommand{\glyph}[1]    {\emph{#1}} 
+\newcommand{\vglyph}[1]   {\begin{sideways}\emph{#1}\end{sideways}}
+
+\newcommand{\ERonly}      {\shabox{\textbf{ER only}}} 
+\newcommand{\STonly}      {\shabox{\textbf{ST only}}} 
+\newcommand{\AFonly}      {\shabox{\textbf{AF only}}} 
+\newcommand{\NotER}       {\shabox{\textbf{Not ER. AF and ST only}}} 
+\newcommand{\NotAF}       {\shabox{\textbf{Not AF. ST and ER only}}} 
+
+\newcommand{\sbo}         {Systems Biology Ontology\xspace}
+\newcommand{\sbourl}      {\url{http://www.ebi.ac.uk/sbo/}\xspace}
+\newcommand{\sboid}[1]    {\texttt{#1}}
+
+\newcommand{\lenov}       {Le~Nov\`{e}re\xspace}
+\newcommand{\D}           {\displaystyle}
+\newcommand{\tm}          {\textsuperscript{\tiny{\texttrademark}}}
+
+\newcommand{\literalFont}[1]{\textup{\texttt{#1}}}
+\newcommand{\figureFont}[1]{\textsf{\textbf{#1}}}
+
+\newcommand{\link}[2]     {\literalFont{\href{#1}{#2}}}
+\newcommand{\mailto}[1]   {\link{mailto:#1}{#1}}
+
+\newcommand{\chap}[1]     {Chapter~\protect\ref{chp:#1}\xspace}
+\newcommand{\sect}[1]     {Section~\protect\ref{sec:#1}\xspace}
+\newcommand{\fig}[1]      {Figure~\protect\ref{fig:#1}\xspace}
+\newcommand{\novreffig}[1]      {Figure~\protect\ref{fig:#1}\xspace}
+\newcommand{\tab}[1]      {Table~\protect\ref{tab:#1}\xspace}
+\newcommand{\eg}          {e.g.,\xspace}
+\newcommand{\ie}          {i.e.,\xspace}
+
+% \AddToShipoutPicture{\resizebox{0.9\pdfpagewidth}{0.9\pdfpageheight}% 
+% {\rotatebox{60}{\color[gray]{0.8}\hspace*{5mm}\textsc{Working draft}}}}
+
+% ----------------------------------------------------------------
+% Commands for internal comments.
+% ----------------------------------------------------------------
+
+\newcommand\question[2]{{\color{red}[#1]}\marginpar{\color{red}\small\emph{#1: #2}}}
+\newcommand\comment[2]{\footnote{{\color{blue}[#2] #1}}}
+
+% Uncomment the definitions below to hide questions & comments.
+
+% \renewcommand\question[2]{}
+% \renewcommand\comment[2]{}
+
+
+% ----------------------------------------------------------------
+% SBGN logo.
+% ----------------------------------------------------------------
+
+\newcommand{\logofilebasename}{sbgn-logo-rgb}
+
+\ifpdf
+  % When creating PDFs, request the JPG format specifically,
+  % because the resulting quality in the PDF final output is best
+  % that way.
+  \newcommand{\SBGNLogoFile}{\logofilebasename.jpg}
+\else
+  \newcommand{\SBGNLogoFile}{\logofilebasename.eps}
+\fi
+
+% Graphics path adjustments to get the logo.  The path setup is so
+% that the \includegraphics can find the logo file no matter where
+% the document is located (but obviously, it only works for
+% certain path combinations -- it's a total hack).
+
+\graphicspath{{.}{./images/}{../images/}}
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:
