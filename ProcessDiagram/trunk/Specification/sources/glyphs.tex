@@ -1,3 +1,6 @@
+% WinEdt modes
+% -*- TeX -*- -*- EN -*- -*- UK -*-
+
 % $HeadURL$
 
 \chapter{Language Elements}
@@ -314,7 +317,7 @@ No additional attributes
 \subsubsection{Associations}
 
 \begin{attributes}
-\associtem{elements}{SBGNGlyph}{*} The collection of glyphs held by the map. 
+\associtem{elements}{SBGNGlyph}{*} The collection of glyphs held by the map.
 \end{attributes}
 
 \subsubsection{Rules and Constraints}
@@ -422,7 +425,7 @@ Not defined in previous version.
   \sbgnclass{SBGNArc} classes.}
   \label{fig:sbgnnodearcuml}
 \end{figure}
- 
+
 The \sbgnclass{SBGNNode} (figure \ref{fig:sbgnnodearcuml}) represents
 the nodes in the graph structure that is the core representation
 within the \PDl. The nodes are connected to glyphs descended from
@@ -444,14 +447,14 @@ No additional attributes.
   \associtem{out\_arcs}{SBGNArc}{*} The arcs that are leaving this node.
   \associtem{in\_arcs}{SBGNArc}{*} The arcs that are entering this node.
 \end{attributes}
- 
+
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
 \item The set of \sbgnclass{SBGNNode}s linked to this node via a
   \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
   different entity pools (as defined by \sbgnclass{EntityPoolNode})
-  and cannot include more than one clone of the same entity pool. 
+  and cannot include more than one clone of the same entity pool.
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
@@ -508,7 +511,7 @@ Not defined in the previous version.
   \sbgnclass{EntityPoolNode} logical identity.}
   \label{fig:entitytypeuml}
 \end{figure}
- 
+
 The \sbgnclass{EntityType}\query{The concept of an entity pool's type
   has been there implicitly in previous versions and comes up in
   discussions. This class aims to formalise that concept and the rules
@@ -637,7 +640,7 @@ endoplasmic reticulum.
 \caption{UML definition of the entity pool node and its descendant glyphs.}
   \label{fig:epnuml}
 \end{figure}
- 
+
 The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the
 definition of the entity pool and it shares an \sbgnclass{EntityType}
 with other identical entities\query{Although this concept is discussed
@@ -1004,7 +1007,7 @@ No additional associations.
 \paragraph{Glyph: \glyph{Unspecified entity}}
 
 \begin{glyphDescription}
-\glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
+\glyphSboTerm SBO:0000285 ! material entity of unspecified nature
 \glyphContainer An \glyph{unspecified entity} is represented by an
 elliptic container, as shown in \ref{fig:unspecified}.  Note that this
 must remain an ellipse to avoid confusion with the Simple Chemical
@@ -1129,7 +1132,7 @@ No additional attributes.
   two or more state variables with the same name are permitted.
 \item The \sbgnclass{LabelledCloneMarker} must be used to indicate
   cloning for instances of \sbgnclass{StatefulEPN} and its subclasses,
-  with a must use the same 
+  with a must use the same
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
@@ -1179,7 +1182,7 @@ and the second \glyph{Macromolecule multimer} is used when
 \paragraph{Glyph: \glyph{Macromolecule monomer}}
 
 \begin{glyphDescription}
-\glyphSboTerm SBO:0000245 ! macromolecule 
+\glyphSboTerm SBO:0000245 ! macromolecule
 \glyphContainer A macromolecule is represented by a rectangular container with rounded
 corners, as illustrated in \fig{macromolecule}.
 \glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
@@ -1214,7 +1217,7 @@ corners, as illustrated in \fig{macromolecule}.
 \paragraph{Usage Examples}
 \label{sec:CplxEPNs}
 
-In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above. 
+In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above.
 
 \fig{example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
 
@@ -1289,7 +1292,7 @@ This glyphs represents a monomeric macromolecule.
   \includegraphics[width = 3.5in]{images/genetic}
   \caption{The \PD glyph for \glyph{nucleic acid feature monomer}, shown plain and
     unadorned on the left and with an additional state variable and a
-    unit of information in the middle and the cloned form on the right.} 
+    unit of information in the middle and the cloned form on the right.}
   \label{fig:genetic}
 \end{figure}
 
@@ -1299,7 +1302,7 @@ This glyphs represents a multimeric macromolecule.
 
 \begin{glyphDescription}
 
-\glyphSboTerm SBO:0000419 ! multimer of informational molecule segments 
+\glyphSboTerm SBO:0000419 ! multimer of informational molecule segments
 
 \glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{genetic-multimer} illustrates the glyph.
 
@@ -1312,7 +1315,7 @@ This glyphs represents a multimeric macromolecule.
   \includegraphics[width = 3.5in]{images/geneticMultimer}
   \caption{The \PD glyph for \glyph{nucleic acid feature multimer}, shown plain and
     unadorned on the left and with an additional state variable and a
-    unit of information in the middle and the cloned form on the right.} 
+    unit of information in the middle and the cloned form on the right.}
   \label{fig:genetic-multimer}
 \end{figure}
 
@@ -1349,12 +1352,12 @@ composition of the complex.
 \subsubsection{Generalisations}
 
 \begin{itemize}
-\item \classref{EntityPoolNode} 
+\item \classref{EntityPoolNode}
 \end{itemize}
 
 \subsubsection{Attributes}
 
-No additional attributes 
+No additional attributes
 
 \subsubsection{Associations}
 
@@ -1461,7 +1464,7 @@ hierarchy (\sbgnclass{Subunit}, but rather uses the
 \subsubsection{Generalisation}
 
 \begin{itemize}
-\item \classref{EntityPoolNode} 
+\item \classref{EntityPoolNode}
 \end{itemize}
 
 \subsubsection{Attributes}
@@ -1719,7 +1722,7 @@ distributed on several lines to improve readability, although this is not
 mandatory.  The label box must be attached to the center of the
 \glyph{phenotype} container.  The label may spill outside of the container.
 \end{glyphDescription}
- 
+
 \begin{figure}[H]
   \centering
   \includegraphics[scale = 0.3]{images/phenotype}
@@ -1959,7 +1962,7 @@ the previous version the semantics and glyphs are unchanged.
     subclasses of \sbgnclass{FluxArc} and \sbgnclass{ModulationArc}.}
   \label{fig:stoichprocessuml}
 \end{figure}
- 
+
 A stoichiometric process\query{New concept, but discussed in previous
   meetings. The semantics of the process being stoichiometrically
   balanced has not been discussed in detail for the stoichiometric
@@ -2042,7 +2045,7 @@ does not directly affect the direction of that flow.
   \caption{A valid reversible process. A process is reversible if its LHS and RHS contain only \glyph{production} arcs.}
   \label{fig:process-reversibility}
 \end{figure}
- 
+
 \subsubsection{Generalisation}
 
 \begin{itemize}
@@ -2163,7 +2166,7 @@ The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to
   \label{fig:trans-phos}
 \end{figure}
 
-The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products. 
+The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products.
 
 \begin{figure}[H]
   \centering
@@ -2258,7 +2261,7 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000177 ! non-covalent binding.
- \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors. 
+ \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors.
  \end{glyphDescription}
 
 \begin{figure}[H]
@@ -2327,7 +2330,7 @@ The example in \fig{dissoc-ribo} illustrates the dissociation of the small and l
 
 Although the \sbgnclass{NonStoichiometricProcess} was not explicitly defined in
 the previous version the semantics and glyphs are unchanged.
- 
+
 \subsection{Compartment}
 \label{defn:Compartment}
 
@@ -2395,7 +2398,7 @@ usage of the UofI for annotation.} that describes
 
 \begin{glyphDescription}
 
-\glyphSboTerm  SBO:0000290 ! physical compartment 
+\glyphSboTerm  SBO:0000290 ! physical compartment
 
 \glyphContainer A compartment is represented by a surface enclosed in a continuous border or located between continuous borders. These borders should be noticeably thicker than the borders of the EPNs. A compartment can take \textbf{any} geometry. A compartment must always be entirely enclosed.
 
@@ -2756,7 +2759,7 @@ container with a folded corner, as illustrated in
 via a callout (see figure \ref{fig:ex-annotation}. The callout should
 overlap with the object it is annotating.
 
-\glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container. 
+\glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
 
 \end{glyphDescription}
 
@@ -2871,7 +2874,7 @@ No additional rules and constraints.
 an empty arrowhead.  The
 flat edge opposite the arrowhead should be aligned to the edge of the
 \glyph{Submap} glyph and the connecting should connect to the middle
-of this face (see figure \ref{fig:submapterminal}). 
+of this face (see figure \ref{fig:submapterminal}).
 
 \glyphLabel A \glyph{tag} is identified by a label placed in an
 unbordered box containing a string of characters.  The characters can
@@ -2957,7 +2960,7 @@ only instances of \sbgnclass{EntityPoolNode}.
   \caption{The UML definition of the \sbgnclass{FluxArc} and its subclasses.}
   \label{fig:fluxarcuml}
 \end{figure}
- 
+
 The \sbgnclass{FluxArc} permits a quantity of entities to flow through
 the arc and in doing so connects a stoichiometric process
 (\classref{StoichiometricProcess}) and an EPN
@@ -3239,8 +3242,8 @@ been clarified.
 
 % \paragraph{Glyph: \glyph{Production}}\label{sec:production}
 
-% \glyph{Production} is the arc used to represent the fact that an entity pool is 
-% produced by a process. In the case of a reversible process, the 
+% \glyph{Production} is the arc used to represent the fact that an entity pool is
+% produced by a process. In the case of a reversible process, the
 % \glyph{production} arc also acts as a \glyph{consumption} arc.
 
 % \begin{glyphDescription}
@@ -3273,7 +3276,7 @@ been clarified.
     subclasses of \sbgnclass{StoichiometricProcess}.}
   \label{fig:modulationarcuml}
 \end{figure}
- 
+
 The \sbgnclass{ModulationArc} (figure \ref{fig:modulationarcuml})
 affects the flux of a process represented by the target process. Such
 a modulation can affect the process \textbf{positively or negatively},
@@ -3333,7 +3336,7 @@ No additional attributes.
   would imply an implicit AND or OR operator. For clarity only
   one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
   explicitly expressed using \glyph{logical operators}\query{Taken
-    from the grammar section of the previous specification.}. 
+    from the grammar section of the previous specification.}.
 \item At most one \glyph{catalysis} can be assigned to a
   \glyph{process}. Modulation by a catalysis arc implies that the exact biochemical mechanism underlying
   the process is known. In this context two \glyph{catalysis} cannot
@@ -3377,7 +3380,7 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
   \label{fig:modulation}
 \end{figure}
 
-\fig{modul-nico} represents the effect of nicotine on the process between closed and open states of a nicotinic acetylcholine receptor. High concentrations of nicotine open the receptor while low concentrations can desensitize it without opening. 
+\fig{modul-nico} represents the effect of nicotine on the process between closed and open states of a nicotinic acetylcholine receptor. High concentrations of nicotine open the receptor while low concentrations can desensitize it without opening.
 
 \begin{figure}[H]
   \centering
@@ -3536,7 +3539,7 @@ No additional associations.
 \paragraph{Glyph: \glyph{Logic arc} }\label{sec:logicArc}
 
 \glyph{Logic arc} is used to represent the fact that an entity influences
-the outcome of a logic operator. 
+the outcome of a logic operator.
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000398 ! logical relationship.
@@ -3782,7 +3785,7 @@ labelled clone markers.
 
 \glyphSboTerm Not applicable.
 
-\glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be smaller than the unfilled one, but the be large enough to have a height larger than the \glyph{clone marker}'s label (cf below).  
+\glyphContainer The labeled \glyph{clone marker} is a portion of the surface of an \glyph{EPN} that has been modified visually through the use of a different shade, texture, or color.  The \glyph{clone marker} occupies the lower part of the EPN glyph. The filled area must be smaller than the unfilled one, but the be large enough to have a height larger than the \glyph{clone marker}'s label (cf below).
 
 \glyphLabel A \glyph{clone marker} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container (the portion of the surface of the EPN that has been modified visually).  The font color of the label and the color of the clone marker should contrast with one another.  The label on a \glyph{labeled clone marker} is mandatory.
 
@@ -4102,7 +4105,7 @@ a result.}
 The following rules apply to the use of the \sbgnclass{SubmapNode} and
 submaps in the \PDl\query{These rules are taken from the previous
  version of the spec, but rules about the depth of submap `recursion',
- the uniqueness of reference\_id values and cloning between maps are not}. 
+ the uniqueness of reference\_id values and cloning between maps are not}.
 
 
 \begin{itemize}
