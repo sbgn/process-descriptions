@@ -1,49 +1,7 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
-The top-level auxiliary file: sbgn_PD-level1-user.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: sbgn_PD-level1-user.aux
 A level-1 auxiliary file: sources/introduction.aux
 A level-1 auxiliary file: sources/symbols.aux
 A level-1 auxiliary file: sources/build.aux
 A level-1 auxiliary file: sources/refcard.aux
 The style file: unsrt.bst
 Database file #1: sbgn_PD-level1-user.bib
-You've used 4 entries,
-            1791 wiz_defined-function locations,
-            480 strings with 5858 characters,
-and the built_in function-call counts, 1971 in all, are:
-= -- 72
-> -- 302
-< -- 0
-+ -- 102
-- -- 98
-* -- 236
-:= -- 409
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 4
-chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 34
-empty$ -- 78
-format.name$ -- 98
-if$ -- 353
-int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 24
-num.names$ -- 4
-pop$ -- 5
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 13
-stack$ -- 0
-substring$ -- 46
-swap$ -- 4
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 7
-width$ -- 5
-write$ -- 47
