@@ -2374,7 +2374,7 @@ usage of the UofI for annotation.} that describes
   \sbgnclass{EntityPoolNode}s contained by this compartment.
 \end{attributes}
 
-\subsection{Logical Identity}
+\subsubsection{Logical Identity}
 
 \begin{logicalkey}
   \item \attrib{owning\_map}
@@ -2385,7 +2385,7 @@ usage of the UofI for annotation.} that describes
 
 \begin{itemize}
 \item \attrib{name} must not be used by another instance of
-  \sbgnclass{Container} contained by the same instance of
+  \sbgnclass{Compartment} contained by the same instance of
   \sbgnclass{Map}.
 \item \attrib{epns} must contain a unique set of
   \sbgnclass{EntityPoolNodes}. See section \ref{sec:epnuniqueness} for
@@ -3694,8 +3694,8 @@ No additional associations.
 \subsubsection{Rules and Constraints}
 
 \begin{itemize}
-\item Only subclasses of \classref{StatefulEPN} can contain
-labelled clone markers.
+\item Only subclasses of \classref{StatelessEPN} can contain
+\sbgnclass{SimpleCloneMarker}s.
 \end{itemize}
 
 \subsubsection{Notation}
