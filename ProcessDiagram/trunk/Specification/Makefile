@@ -15,6 +15,7 @@ BIBTEX = bibtex
 all default: images examples
 	$(MAKE) -C examples
 	$(MAKE) -C images
+	$(MAKE) -C le_images
 	$(LATEX) $(MAIN).tex
 	$(LATEX) $(MAIN).tex
 	$(BIBTEX) $(MAIN)
