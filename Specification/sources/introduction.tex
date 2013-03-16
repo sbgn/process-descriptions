@@ -6,31 +6,71 @@
 
 \chapter{Introduction}
 
-The goal of the \textbf{S}ystems \textbf{B}iology \textbf{G}raphical 
-\textbf{N}otation (SBGN) is to standardize the graphical/visual 
-representation of biochemical and cellular processes. SBGN 
-defines comprehensive sets of symbols with precise semantics, together with 
-detailed syntactic rules defining their use.  It also describes the manner 
-in which such graphical information should be interpreted. For a general 
-description of SBGN, one can read:
+%Here put a general but short introduction to the needs of standardizing the representation of pathways.
+With the rise of systems and synthetic biology, the use of graphical
+representations of pathways and networks to describe biological
+systems has become pervasive. It was therefore important to use a
+consistent notation that would allow people to interpret those maps
+easily and quickly, without the need of extensive
+legends. Furthermore, distributed investigation of biological systems
+in different labs as well as activities like synthetic biology, that
+reconstruct biological systems, need to exchange their descriptions
+unambiguously, as engineers exchange circuit diagrams.
 
-\begin{quote}
- Nicolas Le Nov\`{e}re, Michael Hucka, Huaiyu Mi, Stuart Moodie, Falk 
-Schreiber, Anatoly Sorokin, Emek Demir, Katja Wegner, Mirit I Aladjem, 
-Sarala M Wimalaratne, Frank T Bergman, Ralph Gauges, Peter Ghazal, Hideya 
-Kawaji, Lu Li, Yukiko Matsuoka, Alice Vill\'{e}ger, Sarah E Boyd, Laurence 
-Calzone, Melanie Courtot, Ugur Dogrusoz, Tom C Freeman, Akira Funahashi, 
-Samik Ghosh, Akiya Jouraku, Sohyoung Kim, Fedor Kolpakov, Augustin Luna, 
-Sven Sahle, Esther Schmidt, Steven Watterson, Guanming Wu, Igor Goryanin, 
-Douglas B Kell, Chris Sander, Herbert Sauro, Jacky L Snoep, Kurt Kohn  \& 
-Hiroaki Kitano. The Systems Biology Graphical Notation. \emph{Nature 
-Biotechnology} \textbf{27}, 735 - 741 (2009).  \url{http://dx.doi.org/10.1038/nbt.1558}
-\end{quote}
-
-This document defines the \emph{\PD{}} visual language of SBGN. \PDs are 
-one of three views of a biological process offered by SBGN.  It is the 
-product of many hours of discussion and development by many individuals and 
+The goal of the Systems Biology Graphical Notation (SBGN) is to
+standardize the graphical/visual representation of biochemical and
+cellular processes. SBGN defines comprehensive sets of symbols with
+precise semantics, together with detailed syntactic rules defining
+their use. It also describes the manner in which such graphical
+information should be interpreted. SBGN is made up of three different
+and complementary languages \cite{LeNovere:2009p1}. This document
+defines the \emph{\PD} visual language of SBGN. \PDs are one of three
+views of a biological process offered by SBGN.  It is the product of
+many hours of discussion and development by many individuals and
 groups.
+ 
+\subsection{What are the languages?}
+
+\textbf{PD} is a language that permits the description of all the processes taking place in a biological system. The ensemble of all these processes constitute a Description. \textbf{ER} is a language that permits the description of all the relations involving the entities of a biological system. The ensemble of all these relations constitute a Relationship.\textbf{ AF} is a language that permits the description of the flow of activity in a biological system.
+
+\subsection{Nomenclature}
+
+The three languages of SBGN should be referred to as:
+\begin{compactitem}
+\item the Process Description language.
+\item the Entity Relationship language.
+\item the Activity Flow language.
+\end{compactitem}
+
+Abbreviated as:
+\begin{compactitem}
+\item the PD language.
+\item the ER language.
+\item the AF language.
+\end{compactitem}
+
+A specific representation of a biological system in one of the SBGN languages should be referred to as:
+\begin{compactitem}
+\item a Process Description map.
+\item an Entity Relationship map.
+\item an Activity Flow map.
+\end{compactitem}
+
+Abbreviated as:
+\begin{compactitem}
+\item a PD map.
+\item an ER map.
+\item an AF map.
+\end{compactitem}
+
+The corpus of all SBGN representations should be referred to as:
+\begin{compactitem}
+\item Process Descriptions.
+\item Entity Relationships.
+\item Activity Flows.
+\end{compactitem}
+
+ The capitalization is important. PD, ER and AF are names of languages. As such they must be capitalized in English. This is not the case of the accompanying noun (language or map).
 
 \section{SBGN levels and versions}
 \label{sec:sbgn-levels}
@@ -47,7 +87,7 @@ A \emph{level} of one of the SBGN languages represents a set of
 features deemed to fit together cohesively, constituting a usable set
 of functionality that the user community agrees is sufficient for a
 reasonable set of tasks and goals.  Within \emph{levels},
-\emph{versions} represent small evolution of a language, that may
+\emph{versions} represent evolutions of a language, that may
 involve new glyphs, refined semantics, but no fundamental change of
 the way maps are to be generated and interpreted. In addition new
 versions should be backwards compatible, \ie \PD maps that conform to
@@ -78,6 +118,48 @@ to use their international travel time and money more efficiently.
 
 Notifications of updates to the SBGN specification are also broadcast on 
 the mailing list and announced on the SBGN website.
+
+\section{How to read this document}
+
+SBGN is a visual language aimed at biologists and those working in
+the life sciences in general. While you could use pen and paper to
+draw diagram in \PD we expect that most of you will use specialist
+software tools most of the time. Often software tools will be
+developed by software engineers who do not have a deep understanding
+of biology and biological systems. Therefore, the challenge for us in
+drafting this specification is to satisfy both readerships, biologists
+and software engineers. Our answer to this dilemma has been to provide
+a number of examples that we explain in detail. By working through the
+examples the fine detail of \PD will become clear to all. Finally we
+provide a technical reference at the end of this document that
+provides a detailed and unambiguous specification of the language. To
+help you get started, we have come up with the following
+advice on how each readership could read this specification.
+
+You may be a user, for example a life-scientist who is interested
+mainly in using \PDl. In addition, you may want to understand what it
+can do for and also suggest ways that the language can be improved. In
+either case we recommend that you start with the language overview in
+chapter \ref{chap:lang-overview} on page
+\pageref{chap:lang-overview}. From there you should move onto the
+examples in chapter \ref{chap:worked-egs} (page
+\pageref{chap:worked-egs}). Once you are confident with the material
+in the examples, you may want to dip in and out of the technical
+reference (Part \ref{part:techref} on page
+\pageref{part:techref}), but this is not essential.
+
+If you are a software engineer then we recommend that you start with
+the language overview in chapter \ref{chap:lang-overview} on page
+\pageref{chap:lang-overview}. After this, work through the examples in
+chapter \ref{chap:worked-egs} on page \pageref{chap:worked-egs} and
+try to understand the language features in this way. Finally, when it
+comes to implementing \PDl support you will find the technical
+reference (Part \ref{part:techref} on page \pageref{part:techref})
+very important, but only after you have an understanding of \PD
+from this primer.
+
+
+
 
 % The following is for [X]Emacs users.  Please leave in place.
 % Local Variables:

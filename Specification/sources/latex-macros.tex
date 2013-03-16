@@ -72,8 +72,8 @@
 % Commands for internal comments.
 % ----------------------------------------------------------------
 
-\newcommand\question[2]{{\color{red}[#1]}\marginpar{\color{red}\small\emph{#1: #2}}}
-\newcommand\comment[2]{\footnote{{\color{blue}[#2] #1}}}
+%\newcommand\question[2]{{\color{red}[#1]}\marginpar{\color{red}\small\emph{#1: #2}}}
+%\newcommand\comment[2]{\footnote{{\color{blue}[#2] #1}}}
 
 % Uncomment the definitions below to hide questions & comments.
 
@@ -103,6 +103,48 @@
 
 \graphicspath{{.}{./images/}{../images/}}
 
+\newcommand{\sbgnclass}[1]{\textsf{#1}}
+\newcommand{\attrib}[1]{\textsf{#1}}
+
+\newenvironment{glyphDescription}{%
+%  \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textsf{\textbf{##1}}}%
+%  \mbox{Glyph Specification}%
+%\begin{framed}%
+  \begin{compactdesc}}%
+  {\end{compactdesc}}%\end{framed}}
+
+\newenvironment{logicalkey}{%
+\mbox{Logical Key:}
+ \begin{compactitem}}%
+  {\end{compactitem}}
+
+\newcommand{\classref}[1]{\sbgnclass{#1} (see section \ref{defn:#1})}
+\newenvironment{attributes}{%
+\begin{compactitem}}%
+  {\end{compactitem}}
+
+\newcommand{\attitem}[3]{\item[\attrib{#1}:
+  \sbgnclass{#2}\ifthenelse{\equal{#3}{R}\or\equal{#3}{O}}{\textbf{ (#3)}}{(#3)}]}
+\newcommand{\associtem}[3]{\item[\attrib{#1}:\sbgnclass{#2} (#3)]}
+
+\newcommand{\glyphSboTerm}{\item[SBO Term:]}
+\newcommand{\glyphContainer}{\item[Container:]}
+%\newcommand{\glyphName}{\item[Name:]}
+\newcommand{\glyphLabel}{\item[Label:]}
+%\newcommand{\glyphAux}{\item[Auxiliary Items:]}
+%\newcommand{\glyphOrigin}{\item[Origin:]}
+%\newcommand{\glyphTarget}{\item[Target:]}
+\newcommand{\glyphNode}{\item[Node:]}
+\newcommand{\glyphEndPoint}{\item[End point:]}
+%\newcommand{\glyphCloning}{\item[Cloning:]}
+%\newcommand{\glyphRules}{\item[Special constraints or rules:]}
+
+%\newcommand{\query}{\marginpar{\hspace*{34pt}\raisebox{-0.5ex}{\Large?}}}
+
+%\newcommand{\query}[1]{\reversemarginpar\marginpar{\hspace*{34pt}\raisebox{-0.5ex}{\Large\textxswdown}}\footnote{#1}}
+%\newcommand{\query}[1]{\reversemarginpar\marginpar{{\Large\textxswdown}\raggedright\footnotesize#1}}
+\newcommand{\query}[1]{\reversemarginpar\marginpar{{\danger}\\\raggedright\footnotesize
+  See footnote.}\footnote{#1}}
 
 % The following is for [X]Emacs users.  Please leave in place.
 % Local Variables:

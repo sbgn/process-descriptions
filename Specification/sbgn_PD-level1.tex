@@ -5,14 +5,60 @@
 % $HeadURL$
 % =============================================================================
 
-\documentclass[11pt,oneside]{book}
+\documentclass[a4paper,11pt,oneside]{memoir}
+\usepackage[utf8]{inputenc} % unicode support
+\RequirePackage[T1]{fontenc}
+\RequirePackage{pifont}
+\RequirePackage{times}
+\usepackage[pdftex,rgb,usenames,svgnames,table]{xcolor}
+\usepackage{shadow}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{lscape}
+\usepackage{layout}
+\usepackage{array}
+\usepackage{fancybox}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{eso-pic}
+\usepackage{ifthen}
+%\usepackage[american]{varioref}
+\usepackage[normalem]{ulem}
+\usepackage[right,pagewise,modulo]{lineno}
+\usepackage[olditem,oldenum]{paralist}
+\usepackage{fourier}
+%\usepackage{layouts}
+
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png}
+
+
+ \usepackage[pdftex]{hyperref}
+
+\usepackage{rotating}
+
+% Booktabs for sharp-looking \toprule, \midrule, \bottomrule in tables.
+
+\usepackage{booktabs}
+
+\pagestyle{ruled}
+\chapterstyle{madsen}
+\setsecheadstyle{\Large\bfseries\raggedright\sffamily}
+\setsubsecheadstyle{\large\bfseries\raggedright\sffamily}
+\setsubsubsecheadstyle{\bfseries\raggedright\sffamily}
+\setparaheadstyle{\bfseries\raggedright}
+\setsubparaheadstyle{\bfseries\itshape\raggedright}
+\setsubparaindent{0cm}
 
 
 %% ----------------------------------------------------------------------------
 %% Layout customizations and macro definitions.
 %% ----------------------------------------------------------------------------
 
-\input{sources/latex-style}
+%\input{sources/latex-style}
 \input{sources/latex-macros}
 
 
@@ -23,14 +69,23 @@
 \frontmatter
 
 \input{sources/front-page}
-\input{sources/toc}
+%\input{sources/toc}
+
+\tableofcontents
 
 \mainmatter
 \linenumbers
 
+\part{SBGN Primer}
+
 \include{sources/introduction}
 \include{sources/concepts}
-\include{sources/primer}
+\include{sources/language_overview}
+%\include{sources/primer}
+
+\include{sources/worked_examples}
+
+\part{Technical Reference}
 
 \include{sources/glyphs}
 \include{sources/layout}
