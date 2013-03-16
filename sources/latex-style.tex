@@ -1,4 +1,4 @@
-% $HeadURL$
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/ProcessDiagram/trunk/sources/latex-style.tex $
 
 %% ----------------------------------------------------------------------------
 %% Load up packages we need.
@@ -20,6 +20,7 @@
 
 \usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
 \usepackage[utf8]{inputenc} % unicode support
+\usepackage{amsmath}
 \usepackage{shadow}
 \usepackage{supertabular}
 \usepackage{multirow}
@@ -36,11 +37,11 @@
 \usepackage{ifthen}
 %\usepackage[american]{varioref}
 \usepackage[normalem]{ulem}
-\usepackage[right]{lineno}
+%\usepackage[right]{lineno}
 \usepackage[olditem,oldenum]{paralist}
 \usepackage{fourier}
 \usepackage{layouts}
-
+\usepackage{url}
 
 % Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
 % that needs to be used if pdflatex is being used.  The following puts
@@ -57,12 +58,34 @@
   % hyperref so that its macros are defined (and we don't have to redefine
   % everything that uses hyperref).  So:
 
-  \usepackage[pdftex,breaklinks=true,colorlinks=true,plainpages=false,
-  pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,
-  pdfhighlight=/O,linkcolor={RoyalBlue},citecolor={RoyalBlue},
-  pagecolor={RoyalBlue},urlcolor={RoyalBlue}]{hyperref}
-
-%  \usepackage[pdftex,rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+% [!] FIXME [!]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Trying to fix the bug with RoyalBlue not compiling, attempt 1
+% Define the link colour directly in RGB
+%
+%\definecolor{NavigationBlue}{RGB}{65,105,225}
+%\usepackage[pdftex,breaklinks=true,colorlinks=true,plainpages=false,pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,pdfhighlight=/O,linkcolor={NavigationBlue},citecolor={NavigationBlue},pagecolor={NavigationBlue},urlcolor={NavigationBlue}]{hyperref}
+%
+% if this fail, try to add \usepackage{color} somewhere relevant
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Trying to fix the bug with RoyalBlue not compiling, attempt 2
+% Use a simpler colour name which should be more readily recognised
+\usepackage[pdftex,breaklinks=true,colorlinks=true,plainpages=false,pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,pdfhighlight=/O,linkcolor={blue},citecolor={blue},pagecolor={blue},urlcolor={blue}]{hyperref}
+%
+% if this fail, try to add \usepackage{color} somewhere relevant
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Trying to fix the bug with RoyalBlue not compiling, attempt 3
+% Keep the original line but make sure the xcolor package is actually called
+%
+% comment out the following line if there seems to be a conflict later on (package called twice)
+%  \usepackage[pdftex,rgb,usenames,dvipsnames,svgnames,hyperref,table]{xcolor}
+% Maybe replace with \PassOptionsToPackage, cf start of file?
+%
+% This line should now work if the xcolor package has been imported alright
+%\usepackage[pdftex,breaklinks=true,colorlinks=true,plainpages=false,pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,pdfhighlight=/O,linkcolor={RoyalBlue},citecolor={RoyalBlue},pagecolor={RoyalBlue},urlcolor={RoyalBlue}]{hyperref}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%/ [!] FIXME [!]
 
 \else
   % Case: not using pdflatex
@@ -71,7 +94,10 @@
   \DeclareGraphicsExtensions{.eps,.png}
 
   \usepackage[breaklinks,plainpages=false,pdfpagelabels]{hyperref}
-%  \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+
+% comment out the following line if there seems to be a conflict later on (package called twice)
+  \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
+% Maybe replace with \PassOptionsToPackage, cf start of file?
 
 \fi
 
