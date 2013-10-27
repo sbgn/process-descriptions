@@ -83,9 +83,9 @@ for clarity we define here:
   specification \cite{umlspec}).
 \item[subclass] A class that inherits attributes, behaviour and
   associations from another class. For example in figure
-  \ref{fig:umlexample} ``class C is a subclass of class A''.
+  \ref{fig:techref:umlexample} ``class C is a subclass of class A''.
 \item[superclass] A class that is an ancestor of another class. For
-  example in figure \ref{fig:umlexample} ``class A is a superclass of class B'''.
+  example in figure \ref{fig:techref:umlexample} ``class A is a superclass of class B'''.
 \item[generalisation] A relationship in UML that defines a
   subclass/superclass relationship.
 \item[association] A semantic relationship between two
@@ -118,12 +118,12 @@ for clarity we define here:
 \includegraphics[width=0.9\textwidth]{images/exampleuml}
 \caption{An example of the UML elements used in this
   specification. The diagram is explained more fully in the text.}
-\label{fig:umlexample}
+\label{fig:techref:umlexample}
 \end{center}
 \end{figure}
 
 The UML class diagrams used will look something like the examples in
-figure \ref{fig:umlexample}. The UML elements in this diagram are the
+figure \ref{fig:techref:umlexample}. The UML elements in this diagram are the
 only ones used in this specification and again as an aid to
 understanding their meanings are described below:
 \begin{description}
@@ -160,7 +160,7 @@ attribute definitions. These are:
 \item[string] A string of UniCode characters.
 \item[boolean] A Boolean value that can be either True or False.
 \item[object] A type that can be any value.
-\item[cv] A controlled vocabulary (see \ref{sec:CVs}).
+\item[cv] A controlled vocabulary (see \ref{sec:techref:CVs}).
 \item[enum] A value that must be chosen from on of an enumerated set
   of predefined values.
 \end{description}
@@ -227,7 +227,7 @@ or issues addressed in this version should be included.
   associations between classes are shown to simplify the
   diagram. These details are provided in the UML class diagrams
   associated with most class definitions.}
-\label{fig:sbgnoverviewuml}
+\label{fig:techref:sbgnoverviewuml}
 % \end{center}
 % \end{figure}
 \end{sidewaysfigure}
@@ -235,7 +235,7 @@ or issues addressed in this version should be included.
 \section{Overview}
 
 The UML model describing the \PDl is summarised in figure
-\ref{fig:sbgnoverviewuml}. The model has a root class
+\ref{fig:techref:sbgnoverviewuml}. The model has a root class
 \sbgnclass{SBGNElement} for all language elements and care has been
 taken keep the model as simple as possible. This includes minimising
 the use of multiple inheritance and reflecting the directed graph
@@ -246,10 +246,10 @@ that decorate glyphs are auxiliary units
 (\sbgnclass{AuxiliaryUnit}). There are a number of language rules that
 the model and the individual class specification cannot capture and
 these are dealt with later in the chapter after the class definitions
-in section \ref{sec:definitions}.
+in section \ref{sec:techref:definitions}.
 
 \section{Definitions}
-\label{sec:definitions}
+\label{sec:techref:definitions}
 
 \subsection{SBGNElement}
 \label{defn:SBGNElement}
@@ -257,7 +257,7 @@ in section \ref{sec:definitions}.
 All the glyphs in \SBGNPDLone inherit from
 \sbgnclass{SBGNElement}\query{A new concept}. This is an abstract or conceptual class that
 helps organise \PD conceptually. \sbgnclass{SBGNElement} (figure
-\ref{fig:mapuml}) has a single attribute \attrib{id} that is an
+\ref{fig:techref:mapuml}) has a single attribute \attrib{id} that is an
 identifying attribute. This means that all SBGN elements defined here,
 which ultimately extend \sbgnclass{SBGNBase}, can all be uniquely
 identified from each other. This makes sense if you think that a glyph
@@ -284,24 +284,24 @@ None
 Not defined in the previous version.
 
 \subsection{Map}
-\label{defn:Map}\label{sec:map}
+\label{defn:Map}\label{sec:techref:map}
 
 
-\begin{figure}[h!]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=0.55\textwidth]{images/mapuml}
   \caption{UML definition of Map and \sbgnclass{SBGNElement}.}
-  \label{fig:mapuml}
+  \label{fig:techref:mapuml}
 \end{figure}
 
 The \sbgnclass{Map}\query{Defining this explicitly is new, but the
   concept of the map as a container of glyphs has always existed in
-  the \PDl} (figure \ref{fig:mapuml}) is a container that
+  the \PDl} (figure \ref{fig:techref:mapuml}) is a container that
 holds all the glyphs (\classref{SBGNGlyph}) drawn in a \PDm. A map may
 represent a submap or a supermap and should comply with the rules set
-out in section \ref{sec:mapsubmaps}. The \attrib{elements} held should be
+out in section \ref{sec:techref:mapsubmaps}. The \attrib{elements} held should be
 logically unique and conform to the identity rules in section
-\ref{sec:uniquenessdefinition}.
+\ref{sec:techref:uniquenessdefinition}.
 
 
 \subsubsection{Generalisation}
@@ -325,7 +325,7 @@ No additional attributes
 \begin{itemize}
 \item A map is valid if it is empty (although not very useful).
 \item All instances of \classref{SBGNGlyph} must be unique (see
-  section \ref{sec:uniquenessdefinition}).
+  section \ref{sec:techref:uniquenessdefinition}).
 \end{itemize}
 
 \subsubsection{Notation}
@@ -346,7 +346,7 @@ Not defined explicitly in previous versions.
   \centering
   \includegraphics[width=0.9\textwidth]{images/glyphauxuml}
 \caption{UML definition of the \sbgnclass{SBGNGlyph} and its subclasses.}
-  \label{fig:glyphauxuml}
+  \label{fig:techref:glyphauxuml}
 \end{figure}
 
 The \sbgnclass{SBGNGlyph} is the fundamental building blocks of the
@@ -385,10 +385,10 @@ Not defined in  previous version.
   \centering
   \includegraphics[width=0.75\textwidth]{images/auxiliaryunituml}
 \caption{UML definition of the Auxiliary Unit and its subclasses.}
-  \label{fig:auxiliaryunituml}
+  \label{fig:techref:auxiliaryunituml}
 \end{figure}
 
- The \sbgnclass{AuxiliaryUnit} (figure \ref{fig:auxiliaryunituml}) represents symbols that may be used to
+ The \sbgnclass{AuxiliaryUnit} (figure \ref{fig:techref:auxiliaryunituml}) represents symbols that may be used to
 adorn glyphs. In doing so they change the meaning of the glyph and/or provide
 additional information about it.
 
@@ -423,10 +423,10 @@ Not defined in previous version.
   \includegraphics[width=0.55\textwidth]{images/sbgnnodearcuml}
 \caption{UML definition of the \sbgnclass{SBGNNode} and
   \sbgnclass{SBGNArc} classes.}
-  \label{fig:sbgnnodearcuml}
+  \label{fig:techref:sbgnnodearcuml}
 \end{figure}
 
-The \sbgnclass{SBGNNode} (figure \ref{fig:sbgnnodearcuml}) represents
+The \sbgnclass{SBGNNode} (figure \ref{fig:techref:sbgnnodearcuml}) represents
 the nodes in the graph structure that is the core representation
 within the \PDl. The nodes are connected to glyphs descended from
 \sbgnclass{SBGNArc} for form a direct graph.
@@ -464,7 +464,7 @@ Not defined in the previous version.
 \subsection{SBGNArc}
 \label{defn:SBGNArc}
 
-The \sbgnclass{SBGNArc} (figure \ref{fig:sbgnnodearcuml}) represents
+The \sbgnclass{SBGNArc} (figure \ref{fig:techref:sbgnnodearcuml}) represents
 the directed arcs (also know as directed edges) in the directed graph
 structure that is the core representation within \PDl. The arc is
 connected to two nodes descended from \sbgnclass{SBGNNode}, one at
@@ -509,7 +509,7 @@ Not defined in the previous version.
   definition. The diagram shows how these classes interact with the
   entity pool, state variable and so influence
   \sbgnclass{EntityPoolNode} logical identity.}
-  \label{fig:entitytypeuml}
+  \label{fig:techref:entitytypeuml}
 \end{figure}
 
 The \sbgnclass{EntityType}\query{The concept of an entity pool's type
@@ -519,7 +519,7 @@ associated with it and enable us to formalise rules associated with
 EPNs.} is one of the core concepts in the \PDl. It
 defines the type of entity that is instantiated by one or more
 entity pools in a \PDm. The \sbgnclass{EntityType} has associated
-state variable definitions (see figure \ref{fig:entitytypeuml}) and
+state variable definitions (see figure \ref{fig:techref:entitytypeuml}) and
 this enforces one of the core rules in the \PDl that once a state is
 associated with an entity type it must be used by all entity pools of
 that type.
@@ -540,7 +540,7 @@ None.
   \attitem{natures}{cv}{*} The nature of the entity pool node as defined
   by a controlled vocabulary. Zero, one or more values may be set, but
   each one must belong to a different controlled vocabulary (see
-  section \ref{sec:CVs})\query{This has been discussed on the mailing
+  section \ref{sec:techref:CVs})\query{This has been discussed on the mailing
     list where this seems to be the consensus solution}.
 \end{attributes}
 
@@ -585,7 +585,7 @@ The \sbgnclass{StateVariableDefinition}\query{As with EntityType this
   preserve the same state variables whenever it is used.} defines the state variables
 used by an \sbgnclass{EntityType} and therefore those state variables
 that must exists in an \sbgnclass{EntityPoolNode} (see figure
-\ref{fig:entitytypeuml}).
+\ref{fig:techref:entitytypeuml}).
 
 \subsubsection{Generalisation}
 
@@ -620,7 +620,7 @@ Although not defined explicitly in the previous version, arguably this
 concept did exist in the language.
 
 \subsection{EntityPoolNode}
-\label{sec:EPNs}\label{defn:EntityPoolNode}\label{sec:EPN}
+\label{sec:techref:EPNs}\label{defn:EntityPoolNode}\label{sec:techref:EPN}
 
 An entity pool is a population of entities that cannot be
 distinguished from each other, when it comes to the \SBGNPDLone
@@ -638,10 +638,10 @@ endoplasmic reticulum.
   \centering
   \includegraphics[width=0.85\textwidth]{images/epnuml}
 \caption{UML definition of the entity pool node and its descendant glyphs.}
-  \label{fig:epnuml}
+  \label{fig:techref:epnuml}
 \end{figure}
 
-The \sbgnclass{EntityPoolNode} (figure \ref{fig:epnuml}) is the
+The \sbgnclass{EntityPoolNode} (figure \ref{fig:techref:epnuml}) is the
 definition of the entity pool and it shares an \sbgnclass{EntityType}
 with other identical entities\query{Although this concept is discussed
 it is not explicitly defined previously.}. An instance of an entity pools is
@@ -649,8 +649,8 @@ therefore distinguished from other pools with the same entity type by
 its \attrib{cardinality}, its \attrib{owning\_compartment} and the
 \attrib{value}s of its \sbgnclass{StateVariable}s (where
 appropriate). It must belong to a compartment or be associated with
-the map (c.f.\, section \ref{sec:compartment}) and can contain a clone
-marker if it is cloned (see section \ref{sec:epnuniqueness})--- note
+the map (c.f.\, section \ref{sec:techref:compartment}) and can contain a clone
+marker if it is cloned (see section \ref{sec:techref:epnuniqueness})--- note
 that not all EPNs can be cloned.
 
 \subsubsection{Generalisation}
@@ -673,7 +673,7 @@ that not all EPNs can be cloned.
   that this EPN belongs too.
 \associtem{entity\_type}{EntityType}{1} The type of this entity pool.
   \associtem{clone\_marker}{CloneMarker}{0..1} The clone marker
-  decorator. See section \ref{sec:cloneMarker} for its use.
+  decorator. See section \ref{sec:techref:cloneMarker} for its use.
  \associtem{displayed\_attributes}{AttributeValue}{*} One or
  more decorators used to display attribute values\query{This is an
    alternate way of using the Unit of Information to display
@@ -699,8 +699,8 @@ that not all EPNs can be cloned.
   \attrib{owning\_compartment} is not set. We interpret this as
   belonging to an invisible default compartment.
  \item \attrib{natures} can only use the material type (section
- \ref{sec:material-types-cv}), conceptual type (section \ref{sec:conceptual-types-cv}) or physical
- characteristics (section \ref{sec:physical-characteristics-cv}) controlled vocabularies.
+ \ref{sec:techref:material-types-cv}), conceptual type (section \ref{sec:techref:conceptual-types-cv}) or physical
+ characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.
 \item The appropriate subclass of \sbgnclass{CloneMarker} must be used
   to distinguish logically identical instances of this class.
 \item the \sbgnclass{EntityPoolNode} must be associated with at least
@@ -739,7 +739,7 @@ but which now must contain a unique set of controlled vocabularies and
 is part of the logical key of the \sbgnclass{EntityPoolNode}.
 
 \subsection{Empty Set}
-\label{sec:sourceSink}
+\label{sec:techref:sourceSink}
 
 It is useful to have the ability to represent the creation of an entity or
 a state from an unspecified source, that is, from something that one does
@@ -776,11 +776,11 @@ sinks is critical.
   \includegraphics[width=0.75\textwidth]{images/emptysetuml}
   \caption{The UML definition of the \glyph{EmptySet} and its context
     in relation to other elements of the \PDl.}
-  \label{fig:emptysetuml}
+  \label{fig:techref:emptysetuml}
 \end{figure}
 
 The definition of the \glyph{Empty Set} is shown in figure
-\ref{fig:emptysetuml}. The empty set is not a subclass of \sbgnclass{EntityPoolNode} as it does not
+\ref{fig:techref:emptysetuml}. The empty set is not a subclass of \sbgnclass{EntityPoolNode} as it does not
 represent a single pool of entities and does not share any of the
 other attributes of an \sbgnclass{EntityPoolNode}, nor does it belong to a particular
 compartment\query{This is a significant change to the semantics from
@@ -819,16 +819,16 @@ the map.
 \glyphContainer Represented by the mathematical symbol for ``empty
 set'', that is, a circle crossed by a bar linking the upper-right and
 lower-left corners of an invisible square drawn around the circle ($\emptyset$).
-\fig{sourceSink} illustrates this.  The symbol should be linked to one
+\fig{techref:sourceSink} illustrates this.  The symbol should be linked to one
 and only one edge in a map.
 \glyphLabel None
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 0.1\textwidth]{images/sourceSink}
   \caption{The \glyph{empty set} glyph.}
-  \label{fig:sourceSink}
+  \label{fig:techref:sourceSink}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -842,7 +842,7 @@ pools, while the \sbgnclass{EmptySet} is not.
 \subsection{StatelessEPN}
 \label{defn:StatelessEPN}
 
-The \sbgnclass{StatelessEPN} (figure \ref{fig:statelessepnuml})
+The \sbgnclass{StatelessEPN} (figure \ref{fig:techref:statelessepnuml})
 represents a pool where the entities do not change `state'. In
 other-words the entities do not undergo any physical change that is
 useful to record in a \PDm. Therefore they cannot be assigned
@@ -853,7 +853,7 @@ a state-variable.
   \includegraphics[width=0.75\textwidth]{images/statelessepnuml}
   \caption{UML definition of the stateless entity pool node and its
     descendant glyphs.}
-  \label{fig:statelessepnuml}
+  \label{fig:techref:statelessepnuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -881,7 +881,7 @@ No additional associations.
 Not defined in the previous version.
 
 \subsection{Simple chemical}
-\label{sec:simpleChemical}
+\label{sec:techref:simpleChemical}
 
 A \sbgnclass{SimpleChemical} is the `opposite' of a macromolecule
 (\sect{macromolecule}): it is a chemical compound that is \emph{not}
@@ -920,10 +920,10 @@ and the second \glyph{simple chemical multimer} is used when
   \glyphSboTerm SBO:0000247 ! simple chemical \glyphContainer A
   \glyph{simple chemical} is represented by a `stadium' symbol: a
   circle split in two with a rectangle inserted between them (see
-  figure \ref{fig:simpleChemical}). If desired the rectangle can have
+  figure \ref{fig:techref:simpleChemical}). If desired the rectangle can have
   zero length and the symbol is then identical to a circle
-  (\fig{simpleChemical}). To avoid confusion with the Unspecified
-  Entity (\ref{sec:unspecifiedEntity}), this form of the glyph must remain a
+  (\fig{techref:simpleChemical}). To avoid confusion with the Unspecified
+  Entity (\ref{sec:techref:unspecifiedEntity}), this form of the glyph must remain a
   circle and cannot be deformed into an eclipse.
 
   \glyphLabel The identification of the \glyph{simple chemical} is
@@ -934,28 +934,28 @@ and the second \glyph{simple chemical multimer} is used when
   permitted to spill outside the container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/simpleChemical}
   \caption{The \PD glyph for \glyph{simple chemical monomer}. The stadium
     form and circular forms are shown, as are the cloned forms of the glyph.}
-  \label{fig:simpleChemical}
+  \label{fig:techref:simpleChemical}
 \end{figure}
 
 \paragraph{Glyph: \glyph{Simple chemical multimer}}
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000421 ! multimer of simple chemicals
-\glyphContainer  A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{simpleChemicalMultimer} illustrates the glyph.
+\glyphContainer  A \glyph{simple chemical multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{techref:simpleChemicalMultimer} illustrates the glyph.
 \glyphLabel The multimer carries an identifying label.  The label is placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the top monomer's container.  The label may spill outside of the container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/simpleChemicalMultimer}
   \caption{The \PD glyph for \glyph{simple chemical multimer}. The
     figures show the stadium and circular forms, and their cloned variants.}
-  \label{fig:simpleChemicalMultimer}
+  \label{fig:techref:simpleChemicalMultimer}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -966,7 +966,7 @@ compatibility with previous versions the stadium symbol can be drawn
 without straight horizontal elements so that it becomes a circle.
 
 \subsection{UnspecifiedEntity}
-\label{sec:unspecifiedEntity}
+\label{sec:techref:unspecifiedEntity}
 
 The simplest type of \sbgnclass{EntityPoolNode} is the
 \sbgnclass{UnspecifiedEntity} --- one whose type is unknown or simply
@@ -1009,9 +1009,9 @@ No additional associations.
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000285 ! material entity of unspecified nature
 \glyphContainer An \glyph{unspecified entity} is represented by an
-elliptic container, as shown in \ref{fig:unspecified}.  Note that this
+elliptic container, as shown in \ref{fig:techref:unspecified}.  Note that this
 must remain an ellipse to avoid confusion with the Simple Chemical
-glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
+glyph, which is a circle (c.f.\, \ref{sec:techref:simpleChemical}).
 \glyphLabel An \glyph{unspecified entity} is identified by a label
 placed in an unbordered box containing a string of characters.  The
 characters can be distributed on several lines to improve readability,
@@ -1020,11 +1020,11 @@ center of the container.  The label may spill outside of the
 container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=2.5in]{images/unspecified}
   \caption{The \PD glyph for \glyph{unspecified entity}.}
-  \label{fig:unspecified}
+  \label{fig:techref:unspecified}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1032,7 +1032,7 @@ container.
 No changes from the previous version.
 
 \subsection{Perturbing Agent}
-\label{sec:perturbing agent}
+\label{sec:techref:perturbing agent}
 
 Biochemical networks can be affected by external influences.  Those
 influences can be the effect of well-defined physical perturbing
@@ -1071,7 +1071,7 @@ No additional attributes.
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000405 ! perturbing agent
 \glyphContainer A \glyph{perturbing agent} is represented by a modified hexagon
-having two opposite concave faces, as illustrated in \fig{perturbing agent}.
+having two opposite concave faces, as illustrated in \fig{techref:perturbing agent}.
 \glyphLabel A \glyph{perturbing agent} is identified by a label placed in an
 unbordered box containing a string of characters.  The characters can be
 distributed on several lines to improve readability, although this is not
@@ -1079,11 +1079,11 @@ mandatory.  The label box must be attached to the center of the
 \glyph{perturbing agent} container.  The label may spill outside of the container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/perturbing_agent}
   \caption{The \PD glyph for \glyph{perturbing agent}.}
-  \label{fig:perturbing agent}
+  \label{fig:techref:perturbing agent}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1097,7 +1097,7 @@ Stateful entity pools can undergo physical changes, for example
 chemical modifcation or conformational change, which we wish to record
 in a \PDm. This information is captured via the
 \sbgnclass{StateVariable} (as can be seen in figure
-\ref{fig:statefulepnuml}). The \sbgnclass{LabellecCloneMarker} must be
+\ref{fig:techref:statefulepnuml}). The \sbgnclass{LabellecCloneMarker} must be
 used to indicated that the \sbgnclass{StatefulEPN} is cloned.
 
 \begin{figure}[htb]
@@ -1105,7 +1105,7 @@ used to indicated that the \sbgnclass{StatefulEPN} is cloned.
   \includegraphics[width=0.75\textwidth]{images/statefulepnuml}
 \caption{UML definition of the stateful entity pool node: showing its
   descendants and its association with state variables.}
-  \label{fig:statefulepnuml}
+  \label{fig:techref:statefulepnuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -1140,7 +1140,7 @@ No additional attributes.
 Not defined explicitly in the previous version.
 
 \subsection{Macromolecule}
-\label{sec:macromolecule}
+\label{sec:techref:macromolecule}
 
 Many biological processes involve \emph{macromolecules}: biochemical
 substances that are built up from the covalent linking of
@@ -1184,57 +1184,57 @@ and the second \glyph{Macromolecule multimer} is used when
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000245 ! macromolecule
 \glyphContainer A macromolecule is represented by a rectangular container with rounded
-corners, as illustrated in \fig{macromolecule}.
+corners, as illustrated in \fig{techref:macromolecule}.
 \glyphLabel A \glyph{macromolecule} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.5in]{images/macromolecule}
   \caption{The \PD glyph for \glyph{macromolecule}, shown plain and
     unadorned on the left, and with an additional state variable and a
     unit of information in the middle and the cloned form on the right.}
-  \label{fig:macromolecule}
+  \label{fig:techref:macromolecule}
 \end{figure}
 
 \paragraph{Glyph: \glyph{Macromolecule multimer}}
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000420 ! multimer of macromolecules
-\glyphContainer A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{macromolMultimer} illustrates the glyph.
+\glyphContainer A \glyph{multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{techref:macromolMultimer} illustrates the glyph.
 \glyphLabel As monomer
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.5in]{images/macromolMultimer}
   \caption{The \PD glyph for \glyph{macromolecule multimer}, shown plain and
     unadorned on the left, and with an additional state variable and a
     unit of information in the right and the cloned form on the right.}
-  \label{fig:macromolMultimer}
+  \label{fig:techref:macromolMultimer}
 \end{figure}
 
 \paragraph{Usage Examples}
-\label{sec:CplxEPNs}
+\label{sec:techref:CplxEPNs}
 
 In this section, we provide examples of Entity Pool Node representations drawn using the \SBGNPDLone glyphs described above.
 
-\fig{example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
+\fig{techref:example-camkii} represents calcium/calmodulin kinase II, with phosphorylation on the sites threonine 286 and 306, as well as catalytic and autoinhibitory domains.  Note the use of \emph{units of information} and \emph{state variables}.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/macromolecule-CaMKII}
   \caption{An example representation of calcium/calmodulin kinase II.}
-  \label{fig:example-camkii}
+  \label{fig:techref:example-camkii}
 \end{figure}
 
-\fig{example-glur} represents the glutamate receptor in the open state, with both phosphorylation and glycosylation.  The entity carries two functional domains, the ligand-binding domain and the ion pore, and its chemical nature is precided.
+\fig{techref:example-glur} represents the glutamate receptor in the open state, with both phosphorylation and glycosylation.  The entity carries two functional domains, the ligand-binding domain and the ion pore, and its chemical nature is precided.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/macromolecule-GluR}
   \caption{An example of a glutamate receptor in the open state.}
-  \label{fig:example-glur}
+  \label{fig:techref:example-glur}
 \end{figure}
 
 
@@ -1243,7 +1243,7 @@ In this section, we provide examples of Entity Pool Node representations drawn u
 No changes from the previous version.
 
 \subsection{NucleicAcidFeature}
-\label{sec:genetic}
+\label{sec:techref:genetic}
 
 The \sbgnclass{NucleicAcidFeature} represents a fragment of a
 macromolecule carrying genetic information.  A common use for this
@@ -1282,18 +1282,18 @@ This glyphs represents a monomeric macromolecule.
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000354 !  informational molecule segment
-\glyphContainer A \glyph{nucleic acid feature} is represented by a rectangular container whose bottom half has rounded corners, as shown in \fig{genetic}.
+\glyphContainer A \glyph{nucleic acid feature} is represented by a rectangular container whose bottom half has rounded corners, as shown in \fig{techref:genetic}.
 \glyphLabel The identity of a particular \glyph{Nucleic acid feature} is established by a label placed in an unordered box containing a string of characters.  The characters may be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container.  The label may spill outside of the container.
 \end{glyphDescription}
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.5in]{images/genetic}
   \caption{The \PD glyph for \glyph{nucleic acid feature monomer}, shown plain and
     unadorned on the left and with an additional state variable and a
     unit of information in the middle and the cloned form on the right.}
-  \label{fig:genetic}
+  \label{fig:techref:genetic}
 \end{figure}
 
 \paragraph{Glyph: \glyph{Nucleic acid feature multimer}}
@@ -1304,19 +1304,19 @@ This glyphs represents a multimeric macromolecule.
 
 \glyphSboTerm SBO:0000419 ! multimer of informational molecule segments
 
-\glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{genetic-multimer} illustrates the glyph.
+\glyphContainer A \glyph{Nucleic acid feature multimer} is represented by two identical containers shifted horizontally and vertically and stacked one on top of the other.  \fig{techref:genetic-multimer} illustrates the glyph.
 
 \glyphLabel As monomer glyph.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.5in]{images/geneticMultimer}
   \caption{The \PD glyph for \glyph{nucleic acid feature multimer}, shown plain and
     unadorned on the left and with an additional state variable and a
     unit of information in the middle and the cloned form on the right.}
-  \label{fig:genetic-multimer}
+  \label{fig:techref:genetic-multimer}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1327,15 +1327,15 @@ No changes from the previous version.
 %%%%                   Complex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Complex}\label{sec:complex}
+\subsection{Complex}\label{sec:techref:complex}
 \label{defn:Complex}
 
 A \sbgnclass{Complex} represents a biochemical entity composed of
 other biochemical entities, whether macromolecules, simple chemicals,
 multimers, or other complexes (figure
-\ref{fig:complexsubunituml}). The \sbgnclass{Complex} can described
+\ref{fig:techref:complexsubunituml}). The \sbgnclass{Complex} can described
 its composition by the set of \sbgnclass{Subunit}s it contains (see
-figure \ref{sec:subunits}). This description is entirely optional and
+figure \ref{sec:techref:subunits}). This description is entirely optional and
 is their to assist the user with a visual shorthand about the
 composition of the complex.
 
@@ -1346,7 +1346,7 @@ composition of the complex.
     associated \sbgnclass{subunit}s. In particular this describes organisation
    of the state variables that belong to both the subunit, but also
    the complex.}
-  \label{fig:complexsubunituml}
+  \label{fig:techref:complexsubunituml}
 \end{figure}
 
 \subsubsection{Generalisations}
@@ -1400,11 +1400,11 @@ Complex contains Subunit glyphs then the label may be positions to
 optimise the clarity and avoid overlapping.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=3.5in]{images/complexGlyph}
   \caption{The \glyph{complex} glyph.}
-  \label{fig:complex}
+  \label{fig:techref:complex}
 \end{figure}
 
 
@@ -1414,16 +1414,16 @@ optimise the clarity and avoid overlapping.
 \glyphSboTerm SBO:0000418 ! multimer of complexes
 \glyphContainer A \glyph{Complex Multimer} is represented by two
 identical \glyph{Complex} containers shifted horizontally and
-vertically and stacked one on top of the other.  \fig{complexMultimer}
+vertically and stacked one on top of the other.  \fig{techref:complexMultimer}
 illustrates the glyph.
 \glyphLabel As monomer
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.5in]{images/complexMultimerGlyph}
   \caption{The \glyph{Complex Multimer} glyph.}
-  \label{fig:complexMultimer}
+  \label{fig:techref:complexMultimer}
 \end{figure}
 
 \subsubsection{Layout Rules and Guidelines}
@@ -1446,7 +1446,7 @@ illustrates the glyph.
 \end{itemize}
 
 \subsection{Subunit}
-\label{defn:Subunit}\label{sec:subunits}
+\label{defn:Subunit}\label{sec:techref:subunits}
 
 The \sbgnclass{Subunit}\query{The principles of the subunit have been
   agreed, but the details of this implementation should be
@@ -1454,7 +1454,7 @@ The \sbgnclass{Subunit}\query{The principles of the subunit have been
 \classref{Complex}. A complex can optionally be decorated with one or
 more subunits, which represent the types of \classref{EntityPoolNode}
 that may aggregate to form a complex. As we can see from the UML
-representation (figure \ref{fig:complexsubunituml}) the
+representation (figure \ref{fig:techref:complexsubunituml}) the
 \sbgnclass{Subunit} is an auxiliary unit that decorates the
 \sbgnclass{Complex} and does not represent an entity pool directly. In
 addition it does not mimic the \sbgnclass{EntityPoolNode} class
@@ -1515,7 +1515,7 @@ on the \attrib{subunit\_type} and \attrib{cardinality}. The symbols
 available are equivalent to those used by the EPN glyphs including the
 \glyph{complex}. Therefore it is possible to describe complexes within
 complexes. The mapping between these and the symbol used is shown
-table \ref{tab:subunit types}. Not that subunits may contain labels
+table \ref{tab:techref:subunit types}. Not that subunits may contain labels
 corresponding to their \attrib{name}.
 
 \begin{center}
@@ -1523,7 +1523,7 @@ corresponding to their \attrib{name}.
     \attrib{cardinality} values of \sbgnclass{Subunit} and the glyphs
     used to represent it. These are essentially the EPN glyphs
     described in this document.}
-\label{tab:subunit types}
+\label{tab:techref:subunit types}
 %\begin{footnotesize}
 \tablefirsthead{\toprule
   \attrib{subunit\_type} & \attrib{cardinality} $=0$ & \attrib{cardinality} $>0$ \\\midrule}
@@ -1550,7 +1550,7 @@ Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
 %\end{footnotesize}
 \end{center}
 
-The example in figure \ref{fig:complexSubunits} illustrates the use of
+The example in figure \ref{fig:techref:complexSubunits} illustrates the use of
 subunits in a complex.  It also shows an equivalent compex without
 subunits. This is an import point. For every \glyph{Complex} drawn
 with subunits it will always be possible to drawn an equivalent
@@ -1559,13 +1559,13 @@ version that does not use contains subunits\query{Not discussed in
   actually belong to the complex. Either this or we enforce a rule
   that all state vars must be named uniquely.}.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width = 3.0in]{images/complex}
   \caption{Both these complex glyphs are equivalent. The one on the
     left is described using subunit decorators, the one on the right
     describes the same thing without them.}
-  \label{fig:complexSubunits}
+  \label{fig:techref:complexSubunits}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1576,10 +1576,10 @@ there are pools within pools, which breaks one of the fundamental
 paradigms of the \PDl. This is corrected in the current version and
 subunits are now adornments of the \sbgnclass{Complex}.
 
-\subsection{ProcessNode}\label{sec:PNs}
+\subsection{ProcessNode}\label{sec:techref:PNs}
 \label{defn:ProcessNode}
 
-The \sbgnclass{Process} (figure \ref{fig:processumlview}) represents a
+The \sbgnclass{Process} (figure \ref{fig:techref:processumlview}) represents a
 process that transforms one or more entity pools into one or more
 entity pools, that are identical or different. A process may be used
 to represent or summarise more than one known process.
@@ -1591,7 +1591,7 @@ to represent or summarise more than one known process.
     associated subclasses. Note that the \sbgnclass{Process} extends
     \sbgnclass{SBGNNode} so all its descendants can potentially be
     nodes in a directed graph.}
-  \label{fig:processumlview}
+  \label{fig:techref:processumlview}
 \end{figure}
 
 
@@ -1618,7 +1618,7 @@ No additional rules and constraints.
 \item This was not explicitly defined in the previous version, but
   this version did define a glyph called \glyph{Process}. To avoid
   ambiguity this glyph has now been renamed \glyph{Stoichiometric
-    Process} (see section \ref{sec:stoichiometricprocess}).
+    Process} (see section \ref{sec:techref:stoichiometricprocess}).
 \item Previous specifications stated that processed could be
   duplicated when all associated EPNs were cloned. This behaviour has
   been changed the current status where all processes are unique in a \PDm.
@@ -1628,7 +1628,7 @@ No additional rules and constraints.
 \label{defn:NonStoichiometricProcess}
 
 The \sbgnclass{NonStoichiometricProcess}\query{This has been discussed
-  and agreed in past meetings} (figure \ref{fig:nonstoichprocessuml})
+  and agreed in past meetings} (figure \ref{fig:techref:nonstoichprocessuml})
 is a type of process. It does not necessarily result in a measurable
 change of entity pools, nor does it necessarily have a defined start
 and end point. In many cases the process is not well defined. This may
@@ -1640,7 +1640,7 @@ important or is being summarised.
   \includegraphics[width = 0.45\textwidth]{images/nonstoichprocessuml}
   \caption{The UML definition of the \sbgnclass{NonStoichiometricProcess} and its
     associated subclasses.}
-  \label{fig:nonstoichprocessuml}
+  \label{fig:techref:nonstoichprocessuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -1670,7 +1670,7 @@ Not defined in the previous version.
 A biochemical network can generate phenotypes or affect biological
 processes.  Such processes can take place at different levels and are
 independent of the biochemical network itself.  To represent these
-processes in a map, SBGN defines the \sbgnclass{Phenotype} (figure \ref{fig:nonstoichprocessuml}).
+processes in a map, SBGN defines the \sbgnclass{Phenotype} (figure \ref{fig:techref:nonstoichprocessuml}).
 
 \subsubsection{Generalisation}
 
@@ -1707,14 +1707,14 @@ No additional associations.
 \subsubsection{Notation}
 
 \paragraph{Glyph: \glyph{Phenotype}}
-\label{sec:phenotype}
+\label{sec:techref:phenotype}
 
 \begin{glyphDescription}
 
 \glyphSboTerm SBO:0000358 ! phenotype
 
 \glyphContainer A \glyph{phenotype} is represented by an elongated
-hexagon, as illustrated in \fig{phenotype}.
+hexagon, as illustrated in \fig{techref:phenotype}.
 
 \glyphLabel A \glyph{phenotype} is identified by a label placed in an
 unbordered box containing a string of characters.  The characters can be
@@ -1723,11 +1723,11 @@ mandatory.  The label box must be attached to the center of the
 \glyph{phenotype} container.  The label may spill outside of the container.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/phenotype}
   \caption{The \PD glyph for \glyph{phenotype}.}
-  \label{fig:phenotype}
+  \label{fig:techref:phenotype}
 \end{figure}
 
 
@@ -1739,27 +1739,27 @@ unique.
 
 
 \subsection{SubmapNode}
-\label{sec:submap}\label{defn:SubmapNode}
+\label{sec:techref:submap}\label{defn:SubmapNode}
 
 The \sbgnclass{SubmapNode}\query{This name change has not been
   discussed at the time of writing. The aim is to provide clarity
-  between the submap and this glyph.} (figure \ref{fig:submapnodeuml}) is a
+  between the submap and this glyph.} (figure \ref{fig:techref:submapnodeuml}) is a
 placeholder for another process and is used when one wishes to hide
 the detail of this process from the \PDm, but make it available to the
 reader as a separate related map. The \sbgnclass{Submap} is not
 equivalent to an \sbgnclass{OmittedProcess} (section
-\ref{sec:omitted}). The \sbgnclass{Submap} allows the detail of
+\ref{sec:techref:omitted}). The \sbgnclass{Submap} allows the detail of
 section of the \PDm to be exported to another \PDm and replaced by the
 \sbgnclass{SubmapNode}, which acts as a place-holder.  This is
-described in section \ref{sec:map} and the semantics of submap linking
-is defined in section \ref{sec:submaplinkingsemantics}.
+described in section \ref{sec:techref:map} and the semantics of submap linking
+is defined in section \ref{sec:techref:submaplinkingsemantics}.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width = 0.65\textwidth]{images/submapnodeuml}
   \caption{The UML definition of the \sbgnclass{SubmapNode} and its
    relationship to its submap, tags etc.}
-  \label{fig:submapnodeuml}
+  \label{fig:techref:submapnodeuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -1815,7 +1815,7 @@ which are identified by a \sbgnclass{Tag}.
 \end{glyphDescription}
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.22]{images/submapglyph}
   \caption{The \PD glyph for \glyph{submap}. (a) the basic glyph
@@ -1823,7 +1823,7 @@ which are identified by a \sbgnclass{Tag}.
     would normally be associated with it. (b) The glyph as it would
     typically be used within a map --- associated with EPN glyphs and
     containing \glyph{submap terminals}.}
-  \label{fig:submap}
+  \label{fig:techref:submap}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1833,17 +1833,17 @@ specification. This is confusing when talking about the Submap itself
 so this glyph is now referred to as the SubmapNode to distinguish it.
 
 \subsection{LogicalOperator}
-\label{sec:logic}
+\label{sec:techref:logic}
 \label{defn:LogicalOperator}
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width = 0.5\textwidth]{images/logicaloperatoruml}
   \caption{The UML definition of the \sbgnclass{LogicalOperator}.}
-  \label{fig:logicaloperatoruml}
+  \label{fig:techref:logicaloperatoruml}
 \end{figure}
 
- The \sbgnclass{LogicalOperator} (figure \ref{fig:logicaloperatoruml} performs a Boolean operation on one or
+ The \sbgnclass{LogicalOperator} (figure \ref{fig:techref:logicaloperatoruml} performs a Boolean operation on one or
 more inputs to give a binary output. The input must be a Boolean
 value, and are obtained from the \classref{LogicArc} connected to the
 \sbgnclass{LogicOperator}. The output a two-value quantity,  0 for False and positive
@@ -1901,48 +1901,48 @@ No additional associations.
 Three glyphs are used to represent the different operator types. The
 glyphs are names after the corresponding type.
 
-\paragraph{Glyph: \glyph{And}}\label{sec:and}
+\paragraph{Glyph: \glyph{And}}\label{sec:techref:and}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000173 ! and.
  \glyphNode \glyph{And} is represented by a circle carrying the word ``AND''.
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/and}
   \caption{The \PD glyph for \glyph{and}. Only two inputs are represented, but more would be allowed.}
-  \label{fig:and}
+  \label{fig:techref:and}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Or}}\label{sec:or}
+\paragraph{Glyph: \glyph{Or}}\label{sec:techref:or}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000174 ! or.
  \glyphNode \glyph{Or} is represented by a circle carrying the word ``OR''.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/or}
   \caption{The \PD glyph for \glyph{or}. Only two inputs are represented, but more would be allowed.}
-  \label{fig:or}
+  \label{fig:techref:or}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Not}}\label{sec:not}
+\paragraph{Glyph: \glyph{Not}}\label{sec:techref:not}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000238 ! not.
  \glyphNode \glyph{Not} is represented by a circle carrying the word ``NOT''.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/not}
   \caption{The \PD glyph for \glyph{not}.}
-  \label{fig:not}
+  \label{fig:techref:not}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -1952,7 +1952,7 @@ the previous version the semantics and glyphs are unchanged.
 
 
 \subsection{StoichiometricProcess}
-\label{defn:StoichiometricProcess}\label{sec:stoichiometricprocess}
+\label{defn:StoichiometricProcess}\label{sec:techref:stoichiometricprocess}
 
 \begin{figure}[htb]
   \centering
@@ -1960,7 +1960,7 @@ the previous version the semantics and glyphs are unchanged.
   \caption{The UML definition of the
     \sbgnclass{StiochiometricProcess}. The class interacts with
     subclasses of \sbgnclass{FluxArc} and \sbgnclass{ModulationArc}.}
-  \label{fig:stoichprocessuml}
+  \label{fig:techref:stoichprocessuml}
 \end{figure}
 
 A stoichiometric process\query{New concept, but discussed in previous
@@ -1983,17 +1983,17 @@ we refer to these groupings as the ``left-hand-side'' (LHS) and
 ``right-hand-side'' (RHS) of the process\footnote{Note this
   designation is purely for grouping and is used even then the sides
   of the reaction are above and below the process.}  (figure
-\ref{fig:process-sidedness}).
+\ref{fig:techref:process-sidedness}).
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/process_sidedness}
   \caption{An illustration of the ``sidedness'' of a process. The designation of LHS and RHS is essentially arbitrary.}
-  \label{fig:process-sidedness}
+  \label{fig:techref:process-sidedness}
 \end{figure}
 
 In the \PDl this is represented by the
-\sbgnclass{StoichiometricProcess} (figure \ref{fig:stoichprocessuml}). It
+\sbgnclass{StoichiometricProcess} (figure \ref{fig:techref:stoichprocessuml}). It
 can be one of several different types, which indicate the amount that
 is known about the process or in some cases the nature of the process,
 for example association and dissociation. The permitted values for
@@ -2014,7 +2014,7 @@ entity pools participating the process must be specified. For this
 reason the \classref{FluxArc} has an \attrib{stoichiometry} attribute
 and each \classref{EntityPoolNode} has a cardinality, which should be
 balanced in a valid \PDm. This is especially important where there is
-potential ambiguity in the stoichiometry of the process (figure \ref{fig:prod-card}).
+potential ambiguity in the stoichiometry of the process (figure \ref{fig:techref:prod-card}).
 
 
 
@@ -2025,25 +2025,25 @@ potential ambiguity in the stoichiometry of the process (figure \ref{fig:prod-ca
     required to clarify potentially ambiguous stoichiometry. In the
     top example there is more than one possible solution, which can
     only be made clear using the stoichiometry labels in the bottom examples.}
-  \label{fig:prod-card}
+  \label{fig:techref:prod-card}
 \end{figure}
 
 
 
-\label{sec: semantics reversible procs}
+\label{sec:techref: semantics reversible procs}
 
 A stoichiometric process is deemed to be reversible its
 \attrib{in\_arcs} are \sbgnclass{FluxArc}s of type `reversible' (see
-figure \ref{fig:process-reversibility}).  Semantically, this permits a
+figure \ref{fig:techref:process-reversibility}).  Semantically, this permits a
 reversible flow of entities through the process.  Modulation of a
 reversible process affects the rate of flux through the process, but
 does not directly affect the direction of that flow.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/reversible_process}
   \caption{A valid reversible process. A process is reversible if its LHS and RHS contain only \glyph{production} arcs.}
-  \label{fig:process-reversibility}
+  \label{fig:techref:process-reversibility}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -2125,7 +2125,7 @@ These rules apply if the \attrib{process\_type} is `dissociation'.
 \subsubsection{Notation}
 
 \paragraph{Glyph: \glyph{Process}}
-\label{sec:process}
+\label{sec:techref:process}
 
 \begin{glyphDescription}
 
@@ -2139,76 +2139,76 @@ referred to here as `lugs'\query{The term lugs is used in
   perpendicular to the process and does it need to be a straight line?
   How should it be used when the arc connecting to it is curved.}. The
 flux arcs arcs are linked to the ends of the lugs as shown in figure
-\ref{fig:process}. The lug's purpose is to 'gather' the flux arcs
+\ref{fig:techref:process}. The lug's purpose is to 'gather' the flux arcs
 together before meeting the process node proper and in doing so they
 emphasis the 'sides' of the reaction. Therefore the lug must have a
 visually appreciable length\query{Undefined previously, but if we
   define it then it should be visible.} and must be placed on opposite sides
 of the process square. The modulatory arcs (section
-\ref{sec:modulation}) point to the other two sides of the box.
+\ref{sec:techref:modulation}) point to the other two sides of the box.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/process}
   \caption{The \PD glyph for \glyph{process}.}
-  \label{fig:process}
+  \label{fig:techref:process}
 \end{figure}
 
 
-The example in \fig{trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein in a \PD.
+The example in \fig{techref:trans-phos} illustrates the use of a \glyph{process} node to represent the phosphorylation of a protein in a \PD.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-phosphorylation}
   \caption{Phosphorylation of the protein MAP kinase.}
-  \label{fig:trans-phos}
+  \label{fig:techref:trans-phos}
 \end{figure}
 
-The example in \fig{trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products.
+The example in \fig{techref:trans-react} illustrates the use of a \glyph{process} node to represent a reaction between two reactants that generates three products.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-reaction}
   \caption{Reaction between ATP and fructose-6-phosphate to produce fructose-1,6-biphosphate, ADP and a proton.}
-  \label{fig:trans-react}
+  \label{fig:techref:trans-react}
 \end{figure}
 
-The example in \fig{trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{compartment}).
+The example in \fig{techref:trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{compartment}).
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-translocation}
   \caption{Translocation of calcium ion out of the endoplasmic reticulum. Note that the \glyph{process} does not have to be located on the boundary of the \glyph{compartment}. A \glyph{process} is not attached to any \glyph{compartment}.}
-  \label{fig:trans-trans}
+  \label{fig:techref:trans-trans}
 \end{figure}
 
-The example in \fig{trans-reverse} illustrates the use of a \glyph{process} node to represent the reversible opening and closing of an ionic channel in a \PD.
+The example in \fig{techref:trans-reverse} illustrates the use of a \glyph{process} node to represent the reversible opening and closing of an ionic channel in a \PD.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-reversible}
   \caption{Reversible opening and closing of an ionic channel.}
-  \label{fig:trans-reverse}
+  \label{fig:techref:trans-reverse}
 \end{figure}
 
-When such a reversible process is asymmetrically modulated, it must be represented by two different processes in a \PD.  \fig{trans-mod} illustrates the use of two \glyph{process} nodes to represent the reversible activation of a G-protein coupled receptor.  In the absence of any effector, an equilibrium exists between the inactive and active forms.  The agonist stabilises the active form, while the inverse agonist stabilises the inactive form.
+When such a reversible process is asymmetrically modulated, it must be represented by two different processes in a \PD.  \fig{techref:trans-mod} illustrates the use of two \glyph{process} nodes to represent the reversible activation of a G-protein coupled receptor.  In the absence of any effector, an equilibrium exists between the inactive and active forms.  The agonist stabilises the active form, while the inverse agonist stabilises the inactive form.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-modulated}
   \caption{The reversible activation of a G-protein coupled receptor.}
-  \label{fig:trans-mod}
+  \label{fig:techref:trans-mod}
 \end{figure}
 
-The example in \fig{trans-dim} presents the conversion of two galactoses into a lactose.  Galactoses are represented by only one \glyph{simple chemical}, the cardinality being carried by the \glyph{consumption} arc.
+The example in \fig{techref:trans-dim} presents the conversion of two galactoses into a lactose.  Galactoses are represented by only one \glyph{simple chemical}, the cardinality being carried by the \glyph{consumption} arc.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/process-dimerisation}
   \caption{Conversion of two galactoses into a lactose.}
-  \label{fig:trans-dim}
+  \label{fig:techref:trans-dim}
 \end{figure}
 
 
@@ -2216,7 +2216,7 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 %%                     Omitted Process
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Glyph: \glyph{Omitted process}}\label{sec:omitted}
+\paragraph{Glyph: \glyph{Omitted process}}\label{sec:techref:omitted}
 
 
 \begin{glyphDescription}
@@ -2225,11 +2225,11 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
  \glyphNode An \glyph{omitted process} is represented by a \glyph{process} in which the square box contains a two parallel slanted lines oriented northwest-to-southeast and separated by an empty space.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/omitted}
   \caption{The \PD glyph for \glyph{omitted process}.}
-  \label{fig:omitted}
+  \label{fig:techref:omitted}
 \end{figure}
 
 
@@ -2237,18 +2237,18 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 %%                     Uncertain Process
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Glyph: \glyph{Uncertain process}}\label{sec:uncertain}
+\paragraph{Glyph: \glyph{Uncertain process}}\label{sec:techref:uncertain}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000396 ! uncertain process.
  \glyphNode An \glyph{uncertain process} is represented by a \glyph{process} which square box contains a question mark.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/uncertain}
   \caption{The \PD glyph for an \glyph{uncertain process}.}
-  \label{fig:uncertain}
+  \label{fig:techref:uncertain}
 \end{figure}
 
 
@@ -2256,7 +2256,7 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
 %%                     Association
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Glyph: \glyph{Association}}\label{sec:association}
+\paragraph{Glyph: \glyph{Association}}\label{sec:techref:association}
 
 
 \begin{glyphDescription}
@@ -2264,45 +2264,45 @@ The example in \fig{trans-dim} presents the conversion of two galactoses into a 
  \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/association}
   \caption{The \PD glyph for \glyph{association}.}
-  \label{fig:association}
+  \label{fig:techref:association}
 \end{figure}
 
-The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2 kinase into the Maturation Promoting Factor.
+The example in \fig{techref:assoc-cyclin} illustrates the association of cyclin and CDC2 kinase into the Maturation Promoting Factor.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/association-MPF}
   \caption{Association of cyclin and CDC2 kinase into the Maturation Promoting Factor.}
-  \label{fig:assoc-cyclin}
+  \label{fig:techref:assoc-cyclin}
 \end{figure}
 
-\fig{assoc-unamed} gives an example illustrating the association of a pentameric macromolecule (a nicotinic acetylcholine receptor) with a simple chemical (the local anesthetic chlorpromazin) in an unnamed complex.
+\fig{techref:assoc-unamed} gives an example illustrating the association of a pentameric macromolecule (a nicotinic acetylcholine receptor) with a simple chemical (the local anesthetic chlorpromazin) in an unnamed complex.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/association-unamed}
   \caption{The association of a pentameric macromolecule with a simple chemical in an unnamed complex.}
-  \label{fig:assoc-unamed}
+  \label{fig:techref:assoc-unamed}
 \end{figure}
 
 % An association does not necessarily result in the formation of a
 % \glyph{complex}; it can also produce a multimer, or a
 % \glyph{macromolecule} (although the latter case is semantically
 % borderline) \query{This is \textbf{wrong} and should be removed. It
-%   hould be handled by a process}.  \ref{fig:assoc-multi} gives an example of this, using the formation of hemoglobin.
+%   hould be handled by a process}.  \ref{fig:techref:assoc-multi} gives an example of this, using the formation of hemoglobin.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %   \centering
 %   \includegraphics[scale = 0.3]{examples/association-multimerisation}
 %   \caption{Formation of hemoglobin.}
-%   \label{fig:assoc-multi}
+%   \label{fig:techref:assoc-multi}
 % \end{figure}
 
-\paragraph{Glyph: \glyph{Dissociation}}\label{sec:dissociation}
+\paragraph{Glyph: \glyph{Dissociation}}\label{sec:techref:dissociation}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000180 ! dissociation.
@@ -2310,20 +2310,20 @@ The example in \fig{assoc-cyclin} illustrates the association of cyclin and CDC2
  \end{glyphDescription}
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/dissociation}
   \caption{The \PD glyph for \glyph{dissociation}.}
-  \label{fig:dissociation}
+  \label{fig:techref:dissociation}
 \end{figure}
 
-The example in \fig{dissoc-ribo} illustrates the dissociation of the small and large ribosomal subunits from a messenger RNA.
+The example in \fig{techref:dissoc-ribo} illustrates the dissociation of the small and large ribosomal subunits from a messenger RNA.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/dissociation-ribosome}
   \caption{Dissociation of the small and large ribosomal subunits from a messenger RNA.}
-  \label{fig:dissoc-ribo}
+  \label{fig:techref:dissoc-ribo}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -2339,7 +2339,7 @@ the previous version the semantics and glyphs are unchanged.
   \includegraphics[width = 0.5\textwidth]{images/compartmentuml}
   \caption{The UML definition of the \sbgnclass{Compartment} showing
     how it containment of \sbgnclass{EntityPoolNode}.}
-  \label{fig:compartmentuml}
+  \label{fig:techref:compartmentuml}
 \end{figure}
 
 The \sbgnclass{Compartment} is a logical or physical structure that
@@ -2388,13 +2388,13 @@ usage of the UofI for annotation.} that describes
   \sbgnclass{Compartment} contained by the same instance of
   \sbgnclass{Map}.
 \item \attrib{epns} must contain a unique set of
-  \sbgnclass{EntityPoolNodes}. See section \ref{sec:epnuniqueness} for
+  \sbgnclass{EntityPoolNodes}. See section \ref{sec:techref:epnuniqueness} for
   the definition of \sbgnclass{EntityPoolNode} uniqueness.
 \end{itemize}
 
 \subsubsection{Notation}
 
-\paragraph{Glyph: \glyph{Compartment}}\label{sec:compartment}
+\paragraph{Glyph: \glyph{Compartment}}\label{sec:techref:compartment}
 
 \begin{glyphDescription}
 
@@ -2406,49 +2406,49 @@ usage of the UofI for annotation.} that describes
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/compartment}
   \caption{The \PD glyph for \glyph{compartment}.}
-  \label{fig:compartment}
+  \label{fig:techref:compartment}
 \end{figure}
 
 
-To allow more aesthetically pleasing and understandable maps, compartments are allowed to overlap each other visually, but it must be kept in mind that this does not mean the top compartment contains part of the bottom compartment.  \fig{overlap} shows two semantically equivalent placement of compartments:
+To allow more aesthetically pleasing and understandable maps, compartments are allowed to overlap each other visually, but it must be kept in mind that this does not mean the top compartment contains part of the bottom compartment.  \fig{techref:overlap} shows two semantically equivalent placement of compartments:
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{examples/compartment_overlapping}
   \caption{Overlapped compartments are permitted, but the overlap does not imply containment.}
-  \label{fig:overlap}
+  \label{fig:techref:overlap}
 \end{figure}
 
-Overlapped (hidden) part of the compartment should not contain any object which could be covered by an overlapping compartment.  \fig{overlap-bad} illustrates the problem using an incorrect map.
+Overlapped (hidden) part of the compartment should not contain any object which could be covered by an overlapping compartment.  \fig{techref:overlap-bad} illustrates the problem using an incorrect map.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.45]{examples/compartment_overlapping_wrong}
   \caption{Example of an \textbf{incorrect} map.  Overlapped compartments must not obscure other objects.}
-  \label{fig:overlap-bad}
+  \label{fig:techref:overlap-bad}
 \end{figure}
 
-% It is important to note that a compartment never contains another compartment, but may surround it.  A key aspect of correctly drawing two ``adjacent'' compartments is that they are not separated by one line, but by \textbf{two} lines.  \fig{two-comp} provides an example of this in which a cell is shown made up of a nucleus surrounded by the cytoplasm.
+% It is important to note that a compartment never contains another compartment, but may surround it.  A key aspect of correctly drawing two ``adjacent'' compartments is that they are not separated by one line, but by \textbf{two} lines.  \fig{techref:two-comp} provides an example of this in which a cell is shown made up of a nucleus surrounded by the cytoplasm.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %   \centering
 %   \includegraphics[scale = 0.4]{examples/compartment-cell}
 %  \includegraphics[scale = 0.4]{examples/compartment-cell-wrong}
 %   \caption{Compartments can surround other compartments; in that case, both of the compartment's borders must still be shown, with the result that the separation is drawn as two lines. The left example is correct, with twoo disjoint compartments representing the ``cytoplasm'' and the ``nucleus''. The right example is incorrect. Indeed the compartments ``cell'' and ``nucleus'' would be disjoint, the latter only overlapping the former. As a result, the volume of the nucleus is duplicated.}
-%   \label{fig:two-comp}
+%   \label{fig:techref:two-comp}
 % \end{figure}
 
-% The example diagram in \fig{three-comp} represents three adjacent compartments.  Two of the compartments carry units of information.  Notice that these units of information do not overlap multiple membrane boundaries.
+% The example diagram in \fig{techref:three-comp} represents three adjacent compartments.  Two of the compartments carry units of information.  Notice that these units of information do not overlap multiple membrane boundaries.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %   \centering
 %   \includegraphics[scale = 0.4]{examples/compartment-3comp}
 %   \caption{Illustration of units of information and surrounding compartments.}
-%   \label{fig:three-comp}
+%   \label{fig:techref:three-comp}
 % \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -2468,7 +2468,7 @@ according to the current specification.
   \includegraphics[width = 0.5\textwidth]{images/attributevalueuml}
   \caption{The UML definition of the \sbgnclass{AttributeValue} and
     its usage by other classes.}
-  \label{fig:attributevalueuml}
+  \label{fig:techref:attributevalueuml}
 \end{figure}
 
 The \sbgnclass{AttributeValue}\query{A new concept, that modifies the
@@ -2515,7 +2515,7 @@ For historical reasons the \sbgnclass{AttributeValue} is represented
 graphically by the glyph \glyph{Unit of Information}.
 
 \paragraph{Glyph: \glyph{Unit of information}}
-\label{sec:unitInfo}
+\label{sec:techref:unitInfo}
 
 When representing biological entities, it is often necessary to convey
 some abstract information about the entity's function that cannot (or
@@ -2540,12 +2540,12 @@ entity it is decorating.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/unitInformation}
   \caption{The \PD glyph for \glyph{unit of information}. (a) The
     glyph. (b) An example of its usage with a \glyph{macromolecule}.}
-  \label{fig:unitInfo}
+  \label{fig:techref:unitInfo}
 \end{figure}
 
 
@@ -2579,7 +2579,7 @@ In the \PDl these states are defined by the
 \sbgnclass{StateVariableDefinition}s associated with the
 \sbgnclass{EntityType}, but the specific values of the variables are
 define by the \sbgnclass{StateVariable} (figure
-\ref{fig:statevariableviewuml}) associated with the
+\ref{fig:techref:statevariableviewuml}) associated with the
 \sbgnclass{EntityPoolNode}. For every
 \sbgnclass{StateVariableDefinition} associated with an
 \sbgnclass{EntityType} there should be a corresponding
@@ -2593,7 +2593,7 @@ displayed for a given entity type, then it must always be displayed.
   \includegraphics[width = 0.5\textwidth]{images/statevariableviewuml}
   \caption{The UML definition of the \sbgnclass{StateVariable} showing
     its relationship to \sbgnclass{StatefulEPN} and \sbgnclass{StateVariableDefinition}.}
-  \label{fig:statevariableviewuml}
+  \label{fig:techref:statevariableviewuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -2631,7 +2631,7 @@ No additional rules and constraints.
 
 
 \paragraph{Glyph: \glyph{State variable}}
-\label{sec:stateVariable}
+\label{sec:techref:stateVariable}
 
 
 \begin{glyphDescription}
@@ -2640,7 +2640,7 @@ No additional rules and constraints.
 
 \glyphContainer A \glyph{state variable} is represented by a
 ``stadium'' container, that is two hemicercles of same radius joined
-by parallel segments, as shown in \fig{state-var}.  The parallel
+by parallel segments, as shown in \fig{techref:state-var}.  The parallel
 segment axis should be tangent to the border of the glyph of the
 \glyph{EPN} being modified by the \glyph{state variable}. The center
 of the bounding box of a \glyph{state variable} should be located on
@@ -2671,12 +2671,12 @@ should not use this notation.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=\textwidth]{images/stateVariable}
   \caption{Examples of the \PD glyph for \glyph{state
       variable}. Included are the older forms of glyph, which are now deprecated.}
-  \label{fig:state-var}
+  \label{fig:techref:state-var}
 \end{figure}
 
 A \glyph{state variable} does not necessarily have to be
@@ -2699,7 +2699,7 @@ the value ``unset'' is \emph{not} synonymous to ``any value'' or
 The \sbgnclass{StateVariable} class was not explicitly defined in
 previous versions of the specification, however the \glyph{state
   variable} was. Some aspects of its notation have been deprecated and
-these are detailed above (section \ref{sec:stateVariable}).
+these are detailed above (section \ref{sec:techref:stateVariable}).
 
 \subsection{Annotation}
 \label{defn:Annotation}
@@ -2755,26 +2755,26 @@ No additional rules and constraints.
 
 \glyphContainer An \glyph{annotation} is represented by a rectangular
 container with a folded corner, as illustrated in
-\fig{annotation}. This container is linked to the annotated element
-via a callout (see figure \ref{fig:ex-annotation}. The callout should
+\fig{techref:annotation}. This container is linked to the annotated element
+via a callout (see figure \ref{fig:techref:ex-annotation}. The callout should
 overlap with the object it is annotating.
 
 \glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/annotation}
   \caption{The \PD glyph for \glyph{annotation}.}
-  \label{fig:annotation}
+  \label{fig:techref:annotation}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{examples/ex-annotation}
   \caption{Example of \glyph{annotations} adding information to the description of the trans-phosphorylation of CaMKII. Note that three different types of links are used between annotation nodes and annotated elements. However, it is recommended to use a consistent scheme whithin a map.}
-  \label{fig:ex-annotation}
+  \label{fig:techref:ex-annotation}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -2791,7 +2791,7 @@ This is a new language element and an not previous versions of the \PDl.
   \caption{The UML definition of the \sbgnclass{Crossreference} showing
     its subclasses \sbgnclass{Tag} and \sbgnclass{SubmapTerminal} and
     its association with other elements in the \PDl.}
-  \label{fig:crossreferenceuml}
+  \label{fig:techref:crossreferenceuml}
 \end{figure}
 
 
@@ -2827,7 +2827,7 @@ None
 \begin{itemize}
 \item  Two or more instances of \sbgnclass{CrossReference} with the
   same \attrib{reference\_id} value are pointing to the same element.
-\item The above rules applies within a \PDm's namespace (see section \ref{sec:mapsubmaps}).
+\item The above rules applies within a \PDm's namespace (see section \ref{sec:techref:mapsubmaps}).
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
@@ -2839,7 +2839,7 @@ Not defined in the previous version.
 
 A \sbgnclass{SubmapTerminal}\query{Not properly defined in previous
   versions of the spec. The rules described here are consistent with
-  accepted usage.} (figure \ref{fig:submapnodeuml}) is a named reference that is part of a
+  accepted usage.} (figure \ref{fig:techref:submapnodeuml}) is a named reference that is part of a
 \classref{SubmapNode}. It provides the reference that is the link to a
 tag in the submap that the \sbgnclass{SubmapNode} refers to.
 
@@ -2874,7 +2874,7 @@ No additional rules and constraints.
 an empty arrowhead.  The
 flat edge opposite the arrowhead should be aligned to the edge of the
 \glyph{Submap} glyph and the connecting should connect to the middle
-of this face (see figure \ref{fig:submapterminal}).
+of this face (see figure \ref{fig:techref:submapterminal}).
 
 \glyphLabel A \glyph{tag} is identified by a label placed in an
 unbordered box containing a string of characters.  The characters can
@@ -2884,12 +2884,12 @@ container. The label may spill outside of the container.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/submapterminal}
   \caption{The \PD glyph for \glyph{Submap Terminal}. This shows the
     basic glyph and its correct usage within a \glyph{Submap} glyph.}
-  \label{fig:submapterminal}
+  \label{fig:techref:submapterminal}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -2927,23 +2927,23 @@ No additional associations.
 \subsubsection{Notation}
 
 \paragraph{Glyph: \glyph{Tag}}
-\label{sec:tag}
+\label{sec:techref:tag}
 
 \begin{glyphDescription}
 
 \glyphSboTerm Not applicable.
 
-\glyphContainer A \glyph{tag} is represented by a rectangle fused to an empty arrowhead, as illustrated in \fig{tag}.  The symbol should be linked to one and only one edge (\ie it should reference only one EPN or compartment).
+\glyphContainer A \glyph{tag} is represented by a rectangle fused to an empty arrowhead, as illustrated in \fig{techref:tag}.  The symbol should be linked to one and only one edge (\ie it should reference only one EPN or compartment).
 
 \glyphLabel A \glyph{tag} is identified by a label placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/tag}
   \caption{The \PD glyph for \glyph{tag}.}
-  \label{fig:tag}
+  \label{fig:techref:tag}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -2958,7 +2958,7 @@ only instances of \sbgnclass{EntityPoolNode}.
   \centering
   \includegraphics[width = 0.5\textwidth]{images/fluxarcuml}
   \caption{The UML definition of the \sbgnclass{FluxArc} and its subclasses.}
-  \label{fig:fluxarcuml}
+  \label{fig:techref:fluxarcuml}
 \end{figure}
 
 The \sbgnclass{FluxArc} permits a quantity of entities to flow through
@@ -2969,7 +2969,7 @@ stoichiometry which is used to indicate the stoichiometry of a
 process. It is required to eliminate ambiguity when the exact
 composition, or the number of copies, of the inputs or outputs to a
 reaction are ambiguous from the map (see figure
-\ref{fig:stoichlabellayout} for an example). The \sbgnclass{FluxArc}
+\ref{fig:techref:stoichlabellayout} for an example). The \sbgnclass{FluxArc}
 has three forms determined by its \attrib{flux\_type}:
 
 \begin{description}
@@ -2978,10 +2978,10 @@ has three forms determined by its \attrib{flux\_type}:
 \item[production] Links an entity pool to a process that will be
 produced by a process (an output from the process). It may also
 links entities on the ``right-hand-side'' of a reversible process (see
-section \ref{sec: semantics reversible procs} for more details about the
+section \ref{sec:techref: semantics reversible procs} for more details about the
 reversible process).
 \item[reversible] Links a process to an entity pool that is the
-  ``left-hand-side'' of a process (see section  \ref{sec: semantics reversible procs}).
+  ``left-hand-side'' of a process (see section  \ref{sec:techref: semantics reversible procs}).
 \end{description}
 
 \subsubsection{Generalisation}
@@ -3051,7 +3051,7 @@ displayed by the \glyph{stoichiometry label}. Its appearance and
 layout in relation to the flux arc is also described here.
 
 \paragraph{Glyph: \glyph{Consumption}}
-\label{sec:consumption}
+\label{sec:techref:consumption}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000394 ! consumption.
@@ -3059,39 +3059,39 @@ layout in relation to the flux arc is also described here.
 \end{glyphDescription}
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/consumption}
   \caption{The \PD glyph for \glyph{consumption}.}
-  \label{fig:consumption}
+  \label{fig:techref:consumption}
 \end{figure}
 
-\paragraph{Glyph: \glyph{Production}}\label{sec:production}
+\paragraph{Glyph: \glyph{Production}}\label{sec:techref:production}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000393 ! production.
  \glyphEndPoint The target extremity of a \glyph{production} carries a filled arrowhead.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/production}
   \caption{The \PD glyph for \glyph{production}.}
-  \label{fig:production}
+  \label{fig:techref:production}
 \end{figure}
 
-\paragraph{Glyph: \glyph{Reversible}}\label{sec:reversible}
+\paragraph{Glyph: \glyph{Reversible}}\label{sec:techref:reversible}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000393 ! production.
  \glyphEndPoint The origin extremity of a \glyph{reversible} carries a filled arrowhead.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/reversible}
   \caption{The \PD glyph for \glyph{reversible}.}
-  \label{fig:reversible}
+  \label{fig:techref:reversible}
 \end{figure}
 
 
@@ -3099,11 +3099,11 @@ layout in relation to the flux arc is also described here.
 
 The stoichiometry label is part of the \glyph{consumption arc} and
 \glyph{production arc} glyphs see below (sections
-\ref{sec:consumption} and \ref{sec:production}). However, as their use
+\ref{sec:techref:consumption} and \ref{sec:techref:production}). However, as their use
 is common to all subclasses of \sbgnclass{FluxArc} their presentation
 is described here.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=0.6\textwidth]{images/stoichlabellayout}
   \caption{Examples of stoichiometry label layout. In figure (a) the
@@ -3115,12 +3115,12 @@ is described here.
     (d). Note that in (d) the covered part of the arc is shown for
     clarity, but normally the box is opaque and so the arc is not
     visible.}
-  \label{fig:stoichlabellayout}
+  \label{fig:techref:stoichlabellayout}
 \end{figure}
 
 The label is a node that must be drawn above the flux arc. This node
 is attached to the arc where it intersects the arc with its bottom
-corners (see figure \ref{fig:stoichlabellayout}.)\query{These layout
+corners (see figure \ref{fig:techref:stoichlabellayout}.)\query{These layout
   rules were agreed at COMBINE 2010, but have not been voted on.}.
 
 \begin{glyphDescription}
@@ -3170,7 +3170,7 @@ been clarified.
 % \subsubsection{Notation}
 
 % \paragraph{Glyph: \glyph{Consumption}}
-% \label{sec:consumption}
+% \label{sec:techref:consumption}
 
 % \glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process,
 % but is not produced by the process.
@@ -3202,11 +3202,11 @@ been clarified.
 % known, or undefined, a question mark (?) should be used within the cardinality label
 % of the corresponding arcs.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %   \centering
 %   \includegraphics[scale = 0.4]{images/consumption}
 %   \caption{The \PD glyph for \glyph{consumption}.}
-%   \label{fig:consumption}
+%   \label{fig:techref:consumption}
 % \end{figure}
 
 
@@ -3240,7 +3240,7 @@ been clarified.
 
 % \subsubsection{Notation}
 
-% \paragraph{Glyph: \glyph{Production}}\label{sec:production}
+% \paragraph{Glyph: \glyph{Production}}\label{sec:techref:production}
 
 % \glyph{Production} is the arc used to represent the fact that an entity pool is
 % produced by a process. In the case of a reversible process, the
@@ -3253,11 +3253,11 @@ been clarified.
 
 % A cardinality label can be associated with a \glyph{production} arc indicating the stoichiometry of a process.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %   \centering
 %   \includegraphics[scale = 0.4]{images/production}
 %   \caption{The \PD glyph for \glyph{production}.}
-%   \label{fig:production}
+%   \label{fig:techref:production}
 % \end{figure}
 
 
@@ -3274,10 +3274,10 @@ been clarified.
   \includegraphics[width = 0.65\textwidth]{images/modulationarcuml}
   \caption{The UML definition of the \sbgnclass{ModulationArc}. The class interacts with
     subclasses of \sbgnclass{StoichiometricProcess}.}
-  \label{fig:modulationarcuml}
+  \label{fig:techref:modulationarcuml}
 \end{figure}
 
-The \sbgnclass{ModulationArc} (figure \ref{fig:modulationarcuml})
+The \sbgnclass{ModulationArc} (figure \ref{fig:techref:modulationarcuml})
 affects the flux of a process represented by the target process. Such
 a modulation can affect the process \textbf{positively or negatively},
 or even both ways depending on the conditions, for instance the
@@ -3366,31 +3366,31 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
 \end{tabular}\\
 \end{center}
 
-\paragraph{Glyph: \glyph{Modulation}}\label{sec:modulation}
+\paragraph{Glyph: \glyph{Modulation}}\label{sec:techref:modulation}
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000168 ! control.
  \glyphEndPoint The target extremity of a \glyph{modulation} carries an empty diamond.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/modulation}
   \caption{The \PD glyph for \glyph{modulation}.}
-  \label{fig:modulation}
+  \label{fig:techref:modulation}
 \end{figure}
 
-\fig{modul-nico} represents the effect of nicotine on the process between closed and open states of a nicotinic acetylcholine receptor. High concentrations of nicotine open the receptor while low concentrations can desensitize it without opening.
+\fig{techref:modul-nico} represents the effect of nicotine on the process between closed and open states of a nicotinic acetylcholine receptor. High concentrations of nicotine open the receptor while low concentrations can desensitize it without opening.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{examples/modulation-nAChR}
   \caption{Modulation of nicotinic receptor opening by nicotine.}
-  \label{fig:modul-nico}
+  \label{fig:techref:modul-nico}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Stimulation}}\label{sec:stimulation}
+\paragraph{Glyph: \glyph{Stimulation}}\label{sec:techref:stimulation}
 
 
 \begin{glyphDescription}
@@ -3398,15 +3398,15 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
  \glyphEndPoint The target extremity of a \glyph{stimulation} carries an empty arrowhead.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/stimulation}
   \caption{The \PD glyph for \glyph{stimulation}.}
-  \label{fig:stimulation}
+  \label{fig:techref:stimulation}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Catalysis}}\label{sec:catalysis}
+\paragraph{Glyph: \glyph{Catalysis}}\label{sec:techref:catalysis}
 
 
 \begin{glyphDescription}
@@ -3414,15 +3414,15 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
  \glyphNode The target extremity of a \glyph{catalysis} carries an empty circle.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/catalysis}
   \caption{The \PD glyph for \glyph{catalysis}.}
-  \label{fig:catalysis}
+  \label{fig:techref:catalysis}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Inhibition}}\label{sec:inhibition}
+\paragraph{Glyph: \glyph{Inhibition}}\label{sec:techref:inhibition}
 
 
 \begin{glyphDescription}
@@ -3430,15 +3430,15 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
  \glyphNode The target extremity of an \glyph{inhibition} carries a bar perpendicular to the arc.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/inhibition}
   \caption{The \PD glyph for \glyph{inhibition}.}
-  \label{fig:inhibition}
+  \label{fig:techref:inhibition}
 \end{figure}
 
 
-\paragraph{Glyph: \glyph{Necessary stimulation}}\label{sec:necessary_stim}
+\paragraph{Glyph: \glyph{Necessary stimulation}}\label{sec:techref:necessary_stim}
 
 
 \begin{glyphDescription}
@@ -3446,46 +3446,46 @@ necessary\_stim & \glyph{Necessary Stimulation}\\
  \glyphNode The target extremity of a \glyph{necessary stimulation} carries an open arrow (to remind that it is a \glyph{stimulation}) coming after a larger vertical bar.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{images/necessary_stim}
   \caption{The \PD glyph for \glyph{Necessary Stimulation}.}
-  \label{fig:Necessary Stimulation}
+  \label{fig:techref:Necessary Stimulation}
 \end{figure}
 
 \paragraph{Examples}
 
-The example in \fig{necessary_stim-gene} below describes the
+The example in \fig{techref:necessary_stim-gene} below describes the
 transcription of a gene~X, that is the creation of a messenger RNA~X
 triggered by the gene~X.  The creation of the protein~X is then
 triggered by the mRNA~X.  (Note that the same example could be
 represented using the gene as reactant and product, although it is
 semantically different.)
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{examples/necessary_stim-genetic}
   \caption{The creation of a messenger RNA~X triggered by the gene~X.}
-  \label{fig:necessary_stim-gene}
+  \label{fig:techref:necessary_stim-gene}
 \end{figure}
 
 
-The example in \fig{necessary_stim-calcium} below describes the
+The example in \fig{techref:necessary_stim-calcium} below describes the
 transport of calcium ions out of the endoplasmic reticulum. Without
 IP3 receptor, there is not calcium flux, therefore, one cannot use a
 \glyph{stimulation}. The Necessary Stimulation instead represents this
 absolute stimulation.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{examples/necessary_stim-transport}
   \caption{The transport of calcium ions out of the endoplasmic
     reticulum into the cytosol. Note that IP3R crosses both
     compartment boundaries. This is allowed, but the Macromolecule
     should only belong to one of the compartments see section
-    \ref{sec: unresolved multi-comp ents} for more discussion of this
+    \ref{sec:techref:unresolved_multi-comp_ents} for more discussion of this
     issue.}
-  \label{fig:necessary_stim-calcium}
+  \label{fig:techref:necessary_stim-calcium}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -3497,7 +3497,7 @@ semantics in this version.
 \subsection{LogicArc}
 \label{defn:LogicArc}
 
-The \sbgnclass{LogicArc} (figure \ref{fig:logicarcuml}) takes a quantity from either a
+The \sbgnclass{LogicArc} (figure \ref{fig:techref:logicarcuml}) takes a quantity from either a
 \classref{LogicalOperator} or an \classref{EntityPoolNode} and
 converts it into a Boolean output, which serves as an input for a
 \classref{LogicalOperator}. How this is done is not defined, but one
@@ -3508,7 +3508,7 @@ the output is True.
   \centering
   \includegraphics[width = 0.7\textwidth]{images/logicarcuml}
   \caption{The UML definition of the \sbgnclass{LogicArc} and its context.}
-  \label{fig:logicarcuml}
+  \label{fig:techref:logicarcuml}
 \end{figure}
 
 \subsubsection{Generalisation}
@@ -3536,7 +3536,7 @@ No additional associations.
 
 \subsubsection{Notation}
 
-\paragraph{Glyph: \glyph{Logic arc} }\label{sec:logicArc}
+\paragraph{Glyph: \glyph{Logic arc} }\label{sec:techref:logicArc}
 
 \glyph{Logic arc} is used to represent the fact that an entity influences
 the outcome of a logic operator.
@@ -3546,11 +3546,11 @@ the outcome of a logic operator.
  \glyphEndPoint No particular symbol is used to represent a logic arc.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/logicArc}
   \caption{The \PD glyph for \glyph{logic arc}.}
-  \label{fig:logicArc}
+  \label{fig:techref:logicArc}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -3564,11 +3564,11 @@ No changes from the previous version.
   \centering
   \includegraphics[width = 0.7\textwidth]{images/equivalencearcuml}
   \caption{The UML definition of the \sbgnclass{EquivalenceArc} and its context.}
-  \label{fig:equivalencearcuml}
+  \label{fig:techref:equivalencearcuml}
 \end{figure}
 
 
-\sbgnclass{EquivalenceArc} (figure \ref{fig:equivalencearcuml}) is the arc used to link a cross-reference
+\sbgnclass{EquivalenceArc} (figure \ref{fig:techref:equivalencearcuml}) is the arc used to link a cross-reference
 to an EPN in another \PDm (represented by \classref{CrossReference})
 with an EPN (\classref{EntityPoolNode}) in this map.
 
@@ -3597,18 +3597,18 @@ No additional rules and constraints.
 
 \subsubsection{Notation}
 
-\paragraph{Glyph: \glyph{Equivalence arc} }\label{sec:equivalenceArc}
+\paragraph{Glyph: \glyph{Equivalence arc} }\label{sec:techref:equivalenceArc}
 
 \begin{glyphDescription}
  \glyphSboTerm Not applicable.
  \glyphEndPoint No particular symbol is used to represent an \glyph{equivalence arc}.
  \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.4]{images/equivalence}
   \caption{The \PD glyph for \glyph{Equivalence arc}.}
-  \label{fig:equivalence}
+  \label{fig:techref:equivalence}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -3619,7 +3619,7 @@ specification and has been clarified here.
 
 \subsection{CloneMarker}
 \label{defn:CloneMarker}
-\label{sec:cloneMarker}
+\label{sec:techref:cloneMarker}
 
 \begin{figure}[htb]
   \centering
@@ -3627,12 +3627,12 @@ specification and has been clarified here.
   \caption{The UML definition of the \sbgnclass{StateVariable} showing
     its relationship to \sbgnclass{StatefulEPN}, \sbgnclass{Complex}
     and \sbgnclass{Subunit}.}
-  \label{fig:clonemarkeruml}
+  \label{fig:techref:clonemarkeruml}
 \end{figure}
 
 If an \classref{EntityPoolNode} is duplicated on a map, it is
 necessary to indicate this fact by the \sbgnclass{CloneMarker}
-auxiliary unit (figure \ref{fig:clonemarkeruml}).  The purpose of this
+auxiliary unit (figure \ref{fig:techref:clonemarkeruml}).  The purpose of this
 marker is to provide the reader with a visual indication that this
 node has been cloned, and that at least one other occurrence of the
 \sbgnclass{EntityPoolNode} can be found in the map (or in a submap;
@@ -3672,7 +3672,7 @@ Not defined in previous version.
 
 \subsection{SimpleCloneMarker}
 
-The \sbgnclass{SimpleCloneMarker} (figure \ref{fig:clonemarkeruml}) is
+The \sbgnclass{SimpleCloneMarker} (figure \ref{fig:techref:clonemarkeruml}) is
 the unlabelled subclass \sbgnclass{CloneMarker}. All duplicated
 instances of \sbgnclass{StatelessEPN} must contain an instance of this
 class.
@@ -3709,7 +3709,7 @@ No additional associations.
 \glyphContainer The simple (unlabeled) \glyph{clone marker} is a
 portion of the surface of an \glyph{EPN} that has been modified
 visually through the use of a different shade, texture, or color.
-\fig{simpleCloneMarker} illustrates this.  The \glyph{clone marker}
+\fig{techref:simpleCloneMarker} illustrates this.  The \glyph{clone marker}
 occupies the lower part of the \glyph{EPN}. The filled area must be
 smaller than the unfilled one.
 
@@ -3717,20 +3717,20 @@ smaller than the unfilled one.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/simpleCloneMarker}
   \caption{The \PD glyph for \glyph{simple clone marker} applied to a \glyph{simple chemical} and a \glyph{multimer} of \glyph{simple chemicals}.}
-  \label{fig:simpleCloneMarker}
+  \label{fig:techref:simpleCloneMarker}
 \end{figure}
 
-\fig{example-cloning} contains an example in which we illustrate the use of \glyph{clone markers} to clone the species ATP and ADP participating in different reactions.  This example also demonstrates the chief drawbacks of using clones: it leads to a kind of dissociation of the overall network and multiplies the number of nodes required, requiring more work on the part of the reader to interpret the result.  Sometimes these disadvantages are offset in larger maps by a reduction in the overall number of line crossings, but not always.  In general, we advise that cloning should be used sparingly.
+\fig{techref:example-cloning} contains an example in which we illustrate the use of \glyph{clone markers} to clone the species ATP and ADP participating in different reactions.  This example also demonstrates the chief drawbacks of using clones: it leads to a kind of dissociation of the overall network and multiplies the number of nodes required, requiring more work on the part of the reader to interpret the result.  Sometimes these disadvantages are offset in larger maps by a reduction in the overall number of line crossings, but not always.  In general, we advise that cloning should be used sparingly.
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{examples/cloning}
   \caption{An example of using cloning, here for the species ATP and ADP.}
-  \label{fig:example-cloning}
+  \label{fig:techref:example-cloning}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
@@ -3742,7 +3742,7 @@ No change from previous version.
 \label{defn:LabelledCloneMarker}
 
 Unlike the classref{SimpleCloneMarker}, the
-\sbgnclass{LabeledCloneMarker} (figure \ref{fig:clonemarkeruml})
+\sbgnclass{LabeledCloneMarker} (figure \ref{fig:techref:clonemarkeruml})
 includes (unsurprisingly, given its name) an identifying label that
 can be used to identify equivalent clones elsewhere in the map.  This
 is particularly useful for subclasses of \classref{StatefulEPN},
@@ -3791,18 +3791,18 @@ labelled clone markers.
 
 \end{glyphDescription}
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.3]{images/labeledCloneMarker}
   \caption{The \PD glyph for \glyph{labeled clone marker} applied to a \glyph{macromolecule}, a \glyph{nucleic acid feature} and a \glyph{multimer} of \glyph{macromolecules}.}
-  \label{fig:labeledCloneMarker}
+  \label{fig:techref:labeledCloneMarker}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
 
 No changes from previous version.
 
-\section{Controlled vocabularies}\label{sec:CVs}
+\section{Controlled vocabularies}\label{sec:techref:CVs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%                   Controlled vocabularies
@@ -3838,7 +3838,7 @@ specification.
 
 
 \subsection{Entity pool node material types}
-\label{sec:material-types-cv}
+\label{sec:techref:material-types-cv}
 
 The material type of an EPN indicates its chemical structure.  A list
 of common material types is shown in \tab{material-types-cv}, but
@@ -3847,7 +3847,7 @@ others are possible.  The values are to be taken from the \sbo
 \sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{physical entity representation}).
 The labels are defined by \SBGNPDLone.
 
-\begin{table}[h]
+\begin{table}[htb]
   \centering
   \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
     \toprule
@@ -3863,7 +3863,7 @@ The labels are defined by \SBGNPDLone.
   \end{tabular}
   \caption{A sample of values from the \emph{material types} controlled
     vocabulary (\sect{material-types-cv}).}
-  \label{tab:material-types-cv}
+  \label{tab:techref:material-types-cv}
 \end{table}
 
 The material types are in contrast to the \emph{conceptual types} (see
@@ -3874,7 +3874,7 @@ a role.
 
 
 \subsection{Entity pool node conceptual types}
-\label{sec:conceptual-types-cv}
+\label{sec:techref:conceptual-types-cv}
 
 An EPN's \emph{conceptual type} indicates its function within the
 context of a given \PD.  A list of common conceptual types is shown in
@@ -3883,7 +3883,7 @@ be taken from the \sbo (\sbourl), specifically from the branch having
 identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
 \emph{physical entity representation}).  The labels are defined by \SBGNPDLone.
 
-\begin{table}[h]
+\begin{table}[htb]
   \centering
   \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
     \toprule
@@ -3898,12 +3898,12 @@ identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
   \end{tabular}
   \caption{A sample of values from the \emph{conceptual types} vocabulary
     (\sect{conceptual-types-cv}).}
-  \label{tab:conceptual-types-cv}
+  \label{tab:techref:conceptual-types-cv}
 \end{table}
 
 
 \subsection{Macromolecule covalent modifications}
-\label{sec:covalent-mod-cv}
+\label{sec:techref:covalent-mod-cv}
 
 A common reason for the introduction of state variables
 (\sect{stateVariable}) on an entity is to allow access to the
@@ -3928,7 +3928,7 @@ of modifications not listed here, the author of a \PD must create a
 new label (and should also describe the meaning of the label in a
 legend or text accompanying the map).
 
-\begin{table}[h]
+\begin{table}[htb]
   \centering
   \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
     \toprule
@@ -3949,12 +3949,12 @@ legend or text accompanying the map).
   \end{tabular}
   \caption{A sample of values from the \emph{covalent modifications} vocabulary
     (\sect{covalent-mod-cv}).}
-  \label{tab:covalent-mod-cv}
+  \label{tab:techref:covalent-mod-cv}
 \end{table}
 
 
 \subsection{Physical characteristics}
-\label{sec:physical-characteristics-cv}
+\label{sec:techref:physical-characteristics-cv}
 
 \SBGNPDLone defines a special unit of information for describing
 certain common physical characteristics.
@@ -3962,7 +3962,7 @@ certain common physical characteristics.
 by \SBGNPDLone.
 
 
-\begin{table}[h]
+\begin{table}[htb]
   \centering
   \begin{tabular}{l>{\ttfamily}l>{\ttfamily}l}
     \toprule
@@ -3975,12 +3975,12 @@ by \SBGNPDLone.
   \end{tabular}
   \caption{A sample of values from the \emph{physical
       characteristics} vocabulary (\sect{physical-characteristics-cv}).}
-  \label{tab:physical-characteristics-cv}
+  \label{tab:techref:physical-characteristics-cv}
 \end{table}
 
 \section{Entity Pool Node Identity and Cloning}
-\label{sec:epnuniqueness}
-\label{sec:uniquenessdefinition}
+\label{sec:techref:epnuniqueness}
+\label{sec:techref:uniquenessdefinition}
 
 All elements in an SBGN \PDm have an implicit identify defined by the
 \attrib{id} attribute in \classref{SBGNElement} so in that respect all
@@ -3997,7 +3997,7 @@ elements as the ``logical key''\query{This is recapitulation of
 
 Clearly it is therefore important that we define the logical key for
 all the elements in the map and that we do this for the class definitions
-(section \ref{sec:definitions}). The conventions used for this is as
+(section \ref{sec:techref:definitions}). The conventions used for this is as
 follows:
 
 \begin{itemize}
@@ -4013,7 +4013,7 @@ follows:
   only the logical key can be used when determining uniqueness.
 \end{itemize}
 
-\fig{cloningrules-eg} illustrates how the above rules are applied in
+\fig{techref:cloningrules-eg} illustrates how the above rules are applied in
 practise in the \PDm. They also affect our understanding when reading
 a map. For example since all processes are unique, two \glyph{Process}
 glyphs connected to the same input and output indicates that the same
@@ -4034,12 +4034,12 @@ potentially different mechanisms.
     does not have a duplicate. The unphosphorylated from of A
     dimerised, but again this does not require a clone marker as these
     are regarded as separate entity pools.}
-  \label{fig:cloningrules-eg}
+  \label{fig:techref:cloningrules-eg}
 \end{figure}
 
 \section{Map and Submap Linking}
-\label{sec:mapsubmaps}
-\label{sec:submaplinkingsemantics}
+\label{sec:techref:mapsubmaps}
+\label{sec:techref:submaplinkingsemantics}
 
 The submap is a visual device that allows the detail of an \PD map to
 be exported into another \PD map and replaced by a
@@ -4069,7 +4069,7 @@ these rules here. The concepts and nomenclature here can get confusing, so we wi
   between map and submap.
 \end{description}
 
-\fig{submap-folded} represents a \glyph{submap node} that transforms
+\fig{techref:submap-folded} represents a \glyph{submap node} that transforms
 glucose into fructose-6-phosphate. The \glyph{submap node} carries five
 terminals, four linked to EPNs and one linked to a
 \glyph{compartment}.  The latter is particularly important in the case
@@ -4082,10 +4082,10 @@ output.  The flux of the reactions is determined by the context.
   \centering
   \includegraphics[scale = 0.4]{examples/submap-folded}
   \caption{Example of a submap with contents elided.}
-  \label{fig:submap-folded}
+  \label{fig:techref:submap-folded}
 \end{figure}
 
-The map in \fig{submap-unfolded} represents an unfolded version of a
+The map in \fig{techref:submap-unfolded} represents an unfolded version of a
 \glyph{submap}.  Here, anything outside the \glyph{submap node} has
 disappeared, and the internal \glyph{tags} are not linked to the
 corresponding external \glyph{submap terminals}.\query{This example
@@ -4096,8 +4096,8 @@ a result.}
 \begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.35]{examples/submap-dissociated}
-  \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{submap-folded}.}
-  \label{fig:submap-unfolded}
+  \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{techref:submap-folded}.}
+  \label{fig:techref:submap-unfolded}
 \end{figure}
 
 \subsection{Namespace and the relationship between maps}
