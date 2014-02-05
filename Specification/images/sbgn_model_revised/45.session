@@ -42,7 +42,7 @@ diagrams
     1279 1115 100 18 0 0
   classdiagram_ref 161453 // SBGNArcsView
     1833 1028 100 18 0 0
-  active  classdiagram_ref 208429 // EntityDefinitionView
+  classdiagram_ref 208429 // EntityDefinitionView
     1279 1115 100 18 0 0
   classdiagram_ref 214957 // SBGNNodeView
     1026 908 100 18 0 0
@@ -50,11 +50,11 @@ diagrams
     1026 908 100 18 0 0
   classdiagram_ref 188205 // StateVariableView
     1026 908 100 18 0 0
-  classdiagram_ref 134957 // EntityPoolNodeView
-    1026 908 100 14 0 0
+  active  classdiagram_ref 134957 // EntityPoolNodeView
+    1279 1115 100 14 0 0
 end
 show_stereotypes
-selected classdiagram_ref 208429 // EntityDefinitionView
+selected classdiagram_ref 134957 // EntityPoolNodeView
 open
   classdiagram_ref 134701 // MapView
   class_ref 158637 // Phenotype
