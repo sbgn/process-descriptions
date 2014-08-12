@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1002" height="413" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="815" y="200" width="3" height="47" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="711" y="244" width="107" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="707" y="196" width="108" height="48" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="761" y="213">SBGNElement</text>
+	<line stroke="black" stroke-opacity="1" x1="707" y1="216" x2="815" y2="216" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="711" y="233">id : identifier</text>
+	<line stroke="black" stroke-opacity="1" x1="707" y1="236" x2="815" y2="236" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="986" y="364" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="950" y="396" width="39" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="946" y="360" width="40" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="966" y="377">Map</text>
+	<line stroke="black" stroke-opacity="1" x1="946" y1="380" x2="986" y2="380" />
+	<line stroke="black" stroke-opacity="1" x1="946" y1="388" x2="986" y2="388" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="968" y1="359" x2="968" y2="304" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="968" y1="304" x2="762" y2="304" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="762" y1="304" x2="762" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="762" y1="248" x2="756" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="762" y1="248" x2="768" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="756" y1="254" x2="768" y2="254" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="927" y="403">1</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="612" y="403">*</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="848" y="374">owning_map</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="612" y="374">elements</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="598" y="364" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="508" y="396" width="93" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="504" y="360" width="94" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="551" y="377">SBGNGlyph</text>
+	<line stroke="black" stroke-opacity="1" x1="504" y1="380" x2="598" y2="380" />
+	<line stroke="black" stroke-opacity="1" x1="504" y1="388" x2="598" y2="388" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="945" y1="380" x2="602" y2="380" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="945,380 939,386 933,380 939,374" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="762" y1="304" x2="762" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="762" y1="248" x2="756" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="762" y1="248" x2="768" y2="254" />
+	<line stroke="black" stroke-opacity="1" x1="756" y1="254" x2="768" y2="254" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="553" y1="304" x2="762" y2="304" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="553" y1="359" x2="553" y2="304" />
+</g>
+</svg>

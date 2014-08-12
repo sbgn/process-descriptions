@@ -1,0 +1,36 @@
+format 75
+
+classinstancecanvas 128045 classinstance_ref 128301 // mainmap
+  xyz 141 85 2000
+end
+classinstancecanvas 128173 classinstance_ref 128429 // submap
+  xyz 559 79 2000
+end
+classinstancecanvas 129069 classinstance_ref 128557 // epn1
+  xyz 126 189 2000
+end
+classinstancecanvas 129197 classinstance_ref 128685 // term1
+  xyz 119 446 2000
+end
+classinstancecanvas 129581 classinstance_ref 128813 // tag1
+  xyz 548 448 2000
+end
+classinstancecanvas 129965 classinstance_ref 128941 // ea1
+  xyz 129 305 2005
+end
+classinstancecanvas 130477 classinstance_ref 129069 // ea2
+  xyz 551 303 2005
+end
+classinstancecanvas 131117 classinstance_ref 129197 // epn2
+  xyz 549 189 2000
+end
+objectlinkcanvas 130093 rel relation_ref 177965 // <association>
+  from ref 129197 z 2006 to ref 129965
+  role_a_pos 214 337 3000 role_b_pos 214 424 3000
+objectlinkcanvas 130733 rel relation_ref 177197 // <unidirectional association>
+  from ref 129965 z 2006 to ref 129069
+  role_a_pos 214 279 3000 no_role_b
+objectlinkcanvas 130861 rel relation_ref 177965 // <association>
+  from ref 129581 z 2006 to ref 130477
+  role_a_pos 636 335 3000 role_b_pos 636 426 3000
+end
