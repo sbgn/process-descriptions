@@ -3,7 +3,7 @@
 
 % $HeadURL$
 
-\chapter{Language Elements}
+\chapter{Language Specification}
 \label{chp:glyphs}
 
 
@@ -20,31 +20,34 @@ Unified Modelling Language (UML) \cite{umlspec} which is a graphical
 language that has been used by tens of thousands of software
 developers for over decade to describe and software system; and the
 Systems Biology Markup Language (SBML) Level 3 Core specification
-\cite{sbmll3core} which is the ``original'' computational systems
-biological standard and after 10 years is firmly embedded in the
-scientific community it serves. In both these specifications the
-language is modelled in UML where each language element is described
-as an UML class. The specification defines each class in turn and in
-so doing describes how the language elements fit together (syntax) and
-how they are applied and their rules (semantics).  Since UML is a
-graphical language, the class definition also includes, where
-applicable to the language element, a description of description of
-the symbols used and guidelines about how the symbols should be drawn
-or laid out.
+\cite{sbmll3core} which is the ``daddy'' of computational systems
+biological standards and over 10 years after its inception is firmly
+embedded in the scientific community it serves. In both these
+specifications the language is modelled in UML where each language
+element is described as an UML class. The specification defines each
+class in turn and in so doing describes how the language elements fit
+together (syntax) and how they are applied and their rules
+(semantics).  Since UML is a graphical language, the class definition
+also includes, where applicable to the language element, a description
+of description of the symbols used and guidelines about how the
+symbols should be drawn or laid out.
 
 Based on these specifications we will follow the following conventions
 in this chapter:
 
 \begin{itemize}
-\item The language will be described by a UML class model, a language
-  element of language concept being represented as a class.
-\item Each class will be defined in detail. The definition will
-  describe parent classes, attributes, interactions with other classes and any rules
-  the apply to that class.
-\item Where classes correspond to glyphs, or where appropriate, a
-detailed description of the glyph will be given.
-\item Any rules or concepts that apply to the language as a whole are
-  defined after the individual class definitions.
+\item The language will be described by a UML class model:
+  \begin{itemize}
+  \item each language element or concept being represented as a
+    class.
+  \item the syntax being represented by the cardinality of
+      associations between classes.
+  \end{itemize}
+\item Each class is defined in detail, including a description of the concept or
+  element represented, parent classes, attributes, interactions with
+  other classes and any semantic rules not captured in UML.
+\item Where classes correspond to a glyph, the symbol representing it
+  is described and appropriate illustrations provided.
 \end{itemize}
 
 \section{Note on typographical convention}
@@ -66,17 +69,15 @@ that is new or potentially contentious.
 
 \section{How to read the Language Specification}
 
-Here will describe the elements of the class definitions that are the
-core of the language specification. Each definition starts with an
+Here we will describe the elements of the class definitions that are
+the core of the language specification. Each definition starts with an
 introduction describing the purpose of the class and what it
 represents conceptually or physically. It's context within the UML
 \PDl is then described by a detailed figure showing the class, its
 associations and its interaction with other key classes to help
 understand its context and any rules that are part of the
-definition.
-
-A number of terms are used within the specification that
-for clarity we define here:
+definition. In these descriptions we will use a number of terms for
+which it makes sense to provide a brief glossary here:
 \begin{description}
 \item[class] A class describes a set of objects that share the same
   specifications of features, constraints, and semantics (from the UML
@@ -111,8 +112,8 @@ for clarity we define here:
   attribute. For example an attribute of type \sbgnclass{int} must have a
   value that is a integer.
 \end{description}
-
-
+%
+%
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/exampleuml}
@@ -121,10 +122,9 @@ for clarity we define here:
 \label{fig:techref:umlexample}
 \end{center}
 \end{figure}
-
-The UML class diagrams used will look something like the examples in
-figure \ref{fig:techref:umlexample}. The UML elements in this diagram are the
-only ones used in this specification and again as an aid to
+%
+The UML class diagrams look like the examples in
+figure \ref{fig:techref:umlexample}. Again as an aid to
 understanding their meanings are described below:
 \begin{description}
 \item[class] See above for definition. The class symbol displays each
@@ -152,7 +152,7 @@ called \attrib{container} to class B.
   other class adjacent to the arrow head (F) to satisfy its
   specification or implementation.
 \end{description}
-
+%
 The specification uses a number of primitive types that are used in
 attribute definitions. These are:
 \begin{description}
@@ -166,55 +166,42 @@ attribute definitions. These are:
 \end{description}
 
 
-\subsection{An example definition}
+\subsection{Definition format}
 
-Here we will provide an example specification. In this section is an
-overview of the class and its concepts.
+To help you read the definitions each one follows a standard format
+which each section found in the same order.  Sections that are not
+relevant are omitted.
 
-\subsubsection{Generalisation}
-
-This section defines the inheritance relationship(s) between this
+\begin{description}
+\item[Generalisation]  This section defines the inheritance relationship(s) between this
 class and any other classes.
-
-\subsubsection{Attributes}
-
-Here any attributes specific to this class are defined and their
+\item[Attributes] Here any attributes specific to this class are defined and their
 meaning or purpose described. Attributes from superclasses are part of
 this classes definition but are not defined here explicitly.
-
-\subsubsection{Associations}
-
-Any associations are defined and described. Again associations from
-superclasses are not included here, but are part of this classes definition.
-
-\subsubsection{Notation}
-
-If the class corresponds to one or more glyphs then each glyph is
+\item[Associations] Any associations are defined and described. Again associations from
+superclasses are not included here, but are part of this classes
+definition.
+\item[Unique Key] The attributes that together uniquely identify the
+  \PD element or concept. If this is ommited then there is no unique
+  key. See section~\ref{sec:techref:uniquenessdefinition} for more
+  information about identity and uniqueness.
+\item[Rules and Constraints] The semantics of the class are defined
+  here in the form of itemised rules and constraints on the behaviour
+  of the class that are not expressed in the UML definition or other
+  parts of the definition.
+\item[Notation] If the class corresponds to one or more glyphs then each glyph is
 described here. The glyph is described in words and graphically. In
 cases where several glyphs combine in complex ways usage examples are
 provided.
-
-\subsubsection{Layout Rules and Guidelines}
-
-In some cases the graphical layout of a glyph and is more complicated
+\item[Layout Rules and Guidelines] In some cases the graphical layout of a glyph and is more complicated
 and requires some additional explanation. If this is the case this
 will be provided here.
-
-\subsubsection{Rules and Constraints}
-
-The semantics of the class are defined here in the form of itemised
-rules and constraints on the behaviour of the class. The scope of this
-section is ideally restricted to rules and behaviours the related to
-the class itself or classes it has some form of immediate relationship
-with (an association or dependency). In the later case the rules
-should relate to that relationship.
-
-\subsubsection{Changes from Previous Version}
-
-In order to help track changes between versions of the specification
+\item[Changes from Previous Version] In order to help track changes between versions of the specification
 this section documents where this class definition differs from
 that in previous versions. Where appropriate ticket numbers for bugs
 or issues addressed in this version should be included.
+\end{description}
+
 
 \begin{sidewaysfigure}
 % \begin{figure}[htb]
@@ -232,21 +219,33 @@ or issues addressed in this version should be included.
 % \end{figure}
 \end{sidewaysfigure}
 
-\section{Overview}
+\section{Overview of UML Description}
 
-The UML model describing the \PDl is summarised in figure
-\ref{fig:techref:sbgnoverviewuml}. The model has a root class
-\sbgnclass{SBGNElement} for all language elements and care has been
-taken keep the model as simple as possible. This includes minimising
-the use of multiple inheritance and reflecting the directed graph
-structure inherent in the language with the \sbgnclass{SBGNNode} and
-\sbgnclass{SBGNArc} classes. All graphical elements that can be drawn
-directly onto a \PDm are glyphs (\sbgnclass{SBGNGlyph}) and all those
-that decorate glyphs are auxiliary units
-(\sbgnclass{AuxiliaryUnit}). There are a number of language rules that
-the model and the individual class specification cannot capture and
-these are dealt with later in the chapter after the class definitions
-in section \ref{sec:techref:definitions}.
+The complete UML model describing the \PDl is shown in figure
+\ref{fig:techref:sbgnoverviewuml}. Care has been taken to try and
+represent the key concepts on the \PDl while keeping the model as
+simple as possible, for example by minimising the use of multiple
+inheritance.
+
+The model has a root class, \sbgnclass{SBGNElement}, that all language
+elements inherit from. The nodes and arcs (edges) of the graph
+structure inherent in the language are represent by the
+\sbgnclass{SBGNNode} and \sbgnclass{SBGNArc} classes. All graphical
+elements that can be drawn directly onto a \PDm are glyphs
+(\sbgnclass{SBGNGlyph}) and all those that decorate glyphs are
+auxiliary units (\sbgnclass{AuxiliaryUnit}). From there the model
+captures the organisation of glyphs in to the Entity Pool Nodes
+(\sbgnclass{EntityPoolNode}) and Process Nodes
+(\sbgnclass{ProcessNode}) familiar in previous versions of the \PDl
+specification.  In most cases 'leaf' classes (those without any
+subclasses) correspond to the glyphs of the language and in all cases
+non-leaf classes are concepts the define the syntax and semantics of
+one or more glyphs.
+
+% There are a number of
+% language rules that the model and the individual class specification
+% cannot capture and these are dealt with later in the chapter after the
+% class definitions in section \ref{sec:techref:definitions}.
 
 \section{Definitions}
 \label{sec:techref:definitions}
@@ -264,7 +263,6 @@ identified from each other. This makes sense if you think that a glyph
 drawn on a map is distinct from another glyph drawn on the map. The
 \attrib{id} attribute reflects this and is not shown explicitly in a
 \PDm.
-
 
 \subsubsection{Generalisation}
 
@@ -418,6 +416,11 @@ Not defined in previous version.
 \subsection{SBGNNode}
 \label{defn:SBGNNode}
 
+The \sbgnclass{SBGNNode} (figure \ref{fig:techref:sbgnnodearcuml}) represents
+the nodes in the graph structure that is the core representation
+within the \PDl. The nodes are connected to glyphs descended from
+\sbgnclass{SBGNArc} for form a direct graph.
+
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.55\textwidth]{images/sbgnnodearcuml}
@@ -425,11 +428,6 @@ Not defined in previous version.
   \sbgnclass{SBGNArc} classes.}
   \label{fig:techref:sbgnnodearcuml}
 \end{figure}
-
-The \sbgnclass{SBGNNode} (figure \ref{fig:techref:sbgnnodearcuml}) represents
-the nodes in the graph structure that is the core representation
-within the \PDl. The nodes are connected to glyphs descended from
-\sbgnclass{SBGNArc} for form a direct graph.
 
 \subsubsection{Generalisation}
 
@@ -444,8 +442,8 @@ No additional attributes.
 \subsubsection{Associations}
 
 \begin{attributes}
-  \associtem{out\_arcs}{SBGNArc}{*} The arcs that are leaving this node.
-  \associtem{in\_arcs}{SBGNArc}{*} The arcs that are entering this node.
+  \associtem{out\_arcs}{SBGNArc}{*} The arcs leaving this node.
+  \associtem{in\_arcs}{SBGNArc}{*} The arcs entering this node.
 \end{attributes}
 
 \subsubsection{Rules and Constraints}
@@ -453,8 +451,7 @@ No additional attributes.
 \begin{itemize}
 \item The set of \sbgnclass{SBGNNode}s linked to this node via a
   \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
-  different entity pools (as defined by \sbgnclass{EntityPoolNode})
-  and cannot include more than one clone of the same entity pool.
+  different entity pools (as defined by \sbgnclass{EntityPoolNode}).
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
@@ -486,8 +483,8 @@ No additional attributes.
 \subsubsection{Associations}
 
 \begin{attributes}
-  \associtem{out\_node}{SBGNNode}{1} The node that this arc is leaving.
-  \associtem{in\_node}{SBGNNode}{1} The node that this arc is entering.
+  \associtem{out\_node}{SBGNNode}{1} The node this arc is leaving.
+  \associtem{in\_node}{SBGNNode}{1} The node this arc is entering.
 \end{attributes}
 
 \subsubsection{Rules and Constraints}
@@ -515,11 +512,10 @@ Not defined in the previous version.
 The \sbgnclass{EntityType}\query{The concept of an entity pool's type
   has been there implicitly in previous versions and comes up in
   discussions. This class aims to formalise that concept and the rules
-associated with it and enable us to formalise rules associated with
-EPNs.} is one of the core concepts in the \PDl. It
-defines the type of entity that is instantiated by one or more
-entity pools in a \PDm. The \sbgnclass{EntityType} has associated
-state variable definitions (see figure \ref{fig:techref:entitytypeuml}) and
+  associated with it and enable us to formalise rules associated with
+  EPNs.} defines the type of entity instantiated by one or more Entity
+Pools in a \PDm. The \sbgnclass{EntityType} has associated state
+variable definitions (see figure \ref{fig:techref:entitytypeuml}) and
 this enforces one of the core rules in the \PDl that once a state is
 associated with an entity type it must be used by all entity pools of
 that type.
@@ -554,7 +550,7 @@ None.
 used this type.
 \end{attributes}
 
-\subsubsection{Logical Identity}
+\subsubsection{Unique Key}
 
 \begin{logicalkey}
   \item \attrib{name}
@@ -571,6 +567,34 @@ used this type.
   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
   \sbgnclass{StatefulEPN}.
 \end{itemize}
+
+\subsubsection{Notation}
+
+Although there is no direct graphical representation of this class,
+other classes that have a composite aggregation with it will need to
+represented the \attrib{natures} of the type graphically. Because this
+attribute is of class \sbgnclass{AttributeValue} each nature is shown
+as a separate \glyph{Unit of Information}. 
+
+% It is shown as a 
+% \sbgnclass{AttributeValue} is 
+% appearance of the \sbgnclass{AttributeValue} and its associated glyph
+% the \glyph{Unit of Information} us common to all subclasses so it is
+% convenient to describe it here. The \sbgnclass{AttributeValue} can be
+% used to present the \attrib{cardinality} and \attrib{natures} of an
+% EPN subclasses. These used the following codes to indicate which attribute
+% is being presented:
+
+% \begin{center}
+%   \begin{itemize}\setlength{\parskip}{0ex}
+%   \item[\texttt{pc}] container physical characteristic
+%   \item[\texttt{mt}] entity pool material type
+%   \item[\texttt{ct}] entity pool conceptual type
+%   \item[\texttt{N}]  multimer cardinality
+%   \end{itemize}
+% \end{center}
+
+
 
 \subsubsection{Changes from Previous Version}
 
@@ -682,7 +706,7 @@ that not all EPNs can be cloned.
    more information.}.
 \end{attributes}
 
-\subsubsection{Logical Identity}
+\subsubsection{Unique Key}
 
 \begin{logicalkey}
 \item \attrib{owning\_compartment}
@@ -703,31 +727,32 @@ that not all EPNs can be cloned.
  characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.
 \item The appropriate subclass of \sbgnclass{CloneMarker} must be used
   to distinguish logically identical instances of this class.
-\item the \sbgnclass{EntityPoolNode} must be associated with at least
-  one \classref{SBGNArc} (degree $> 0$).
 \item All \sbgnclass{StateVariableDefinition}s associated with the
   \sbgnclass{EntityType} must have an associated
   \sbgnclass{StateVariable}.
 \end{itemize}
 
-\subsubsection{Notation}
+% \subsubsection{Notation}
 
-Although there is no direct graphical representation of this class the
-appearance of the \sbgnclass{AttributeValue} and its associated glyph
-the \glyph{Unit of Information} us common to all subclasses so it is
-convenient to describe it here. The \sbgnclass{AttributeValue} can be
-used to present the \attrib{cardinality} and \attrib{natures} of an
-EPN subclasses. These used the following codes to indicate which attribute
-is being presented:
+% Although there is no direct graphical representation of this class,
+% its subclasses all share the same rules for how the cardinality is
+% represented graphically. It is shown as a 
+% \sbgnclass{AttributeValue} is 
+% appearance of the \sbgnclass{AttributeValue} and its associated glyph
+% the \glyph{Unit of Information} us common to all subclasses so it is
+% convenient to describe it here. The \sbgnclass{AttributeValue} can be
+% used to present the \attrib{cardinality} and \attrib{natures} of an
+% EPN subclasses. These used the following codes to indicate which attribute
+% is being presented:
 
-\begin{center}
-  \begin{itemize}\setlength{\parskip}{0ex}
-  \item[\texttt{pc}] container physical characteristic
-  \item[\texttt{mt}] entity pool material type
-  \item[\texttt{ct}] entity pool conceptual type
-  \item[\texttt{N}]  multimer cardinality
-  \end{itemize}
-\end{center}
+% \begin{center}
+%   \begin{itemize}\setlength{\parskip}{0ex}
+%   \item[\texttt{pc}] container physical characteristic
+%   \item[\texttt{mt}] entity pool material type
+%   \item[\texttt{ct}] entity pool conceptual type
+%   \item[\texttt{N}]  multimer cardinality
+%   \end{itemize}
+% \end{center}
 
 
 \subsubsection{Changes from Previous Version}
@@ -804,7 +829,7 @@ No additional associations.
 
 \begin{itemize}
 \item  All instances of \glyph{Empty Set} can be regarded as identical
-therefore not special decoration is used to indicate replication on
+therefore no special decoration is used to indicate replication on
 the map.
 \item the \sbgnclass{EmptySet} must be associated with at least
   one \classref{SBGNArc} (degree $> 0$).
@@ -884,7 +909,7 @@ Not defined in the previous version.
 \label{sec:techref:simpleChemical}
 
 A \sbgnclass{SimpleChemical} is the `opposite' of a macromolecule
-(\sect{macromolecule}): it is a chemical compound that is \emph{not}
+(\sect{techref:macromolecule}): it is a chemical compound that is \emph{not}
 formed by the covalent linking of pseudo-identical residues.  Examples
 of simple chemicals are an atom, a monoatomic ion, a salt, a radical,
 a solid metal, a crystal, etc.
@@ -998,8 +1023,6 @@ No additional associations.
 \begin{itemize}
 \item The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
   1$. This means there is no multimer glyph.
-\item It cannot have a natures\query{Not explicitly discussed, but
-    natures don't make sense here.}, therefore \attrib{natures} must \textbf{not} be set.
 \end{itemize}
 
 \subsubsection{Notation}
@@ -1515,29 +1538,12 @@ on the \attrib{subunit\_type} and \attrib{cardinality}. The symbols
 available are equivalent to those used by the EPN glyphs including the
 \glyph{complex}. Therefore it is possible to describe complexes within
 complexes. The mapping between these and the symbol used is shown
-table \ref{tab:techref:subunit types}. Not that subunits may contain labels
+in the table below. Not that subunits may contain labels
 corresponding to their \attrib{name}.
+% \ref{tab:techref:subunit types}
 
 \begin{center}
-  \tablecaption{Mapping between the \attrib{subunit\_type},
-    \attrib{cardinality} values of \sbgnclass{Subunit} and the glyphs
-    used to represent it. These are essentially the EPN glyphs
-    described in this document.}
-\label{tab:techref:subunit types}
-%\begin{footnotesize}
-\tablefirsthead{\toprule
-  \attrib{subunit\_type} & \attrib{cardinality} $=0$ & \attrib{cardinality} $>0$ \\\midrule}
-\tablehead{
-\multicolumn{3}{|l|}{\small\slshape continued from previous page}\\
-\toprule
-  \attrib{subunit\_type}  & \attrib{cardinality} $=0$ &
-  \attrib{cardinality} $>0$ \\\midrule}
-\tabletail{\bottomrule
-\multicolumn{3}{|r|}{\small\slshape continued on next page}\\
-}
-\tablelasttail{\bottomrule}
- \rowcolors{2}{white}{gray!25}
-\begin{supertabular}{ l l l}
+\begin{tabular}[c]{l l l}\toprule\\
 SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
   Chemical Multimer}\\
 UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\
@@ -1546,18 +1552,51 @@ Macromolecule & \glyph{Macromolecule Monomer} &
 \glyph{Macromolecule Multimer}\\
 Nucleic\-Acid\-Feature & \glyph{Nucleic Acid Feature Monomer} & \glyph{Nucleic Acid Feature Multimer}\\
 Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
-\end{supertabular}
-%\end{footnotesize}
+\bottomrule%
+\end{tabular}
 \end{center}
+
+% \begin{center}
+%   \tablecaption{Mapping between the \attrib{subunit\_type},
+%     \attrib{cardinality} values of \sbgnclass{Subunit} and the glyphs
+%     used to represent it. These are essentially the EPN glyphs
+%     described in this document.}
+% \label{tab:techref:subunit types}
+% \begin{footnotesize}
+% \tablefirsthead{\toprule
+%   \attrib{subunit\_type} & \attrib{cardinality} $=0$ & \attrib{cardinality} $>0$ \\\midrule}
+% \tablehead{
+% \multicolumn{3}{l}{\small\slshape continued from previous page}\\
+% \toprule
+%   \attrib{subunit\_type}  & \attrib{cardinality} $=0$ &
+%   \attrib{cardinality} $>0$ \\\midrule}
+% \tabletail{\bottomrule
+% \multicolumn{3}{r}{\small\slshape continued on next page}\\
+% }
+% \tablelasttail{\bottomrule}
+%  \rowcolors{2}{white}{gray!25}
+% \begin{supertabular}{ l l l}
+% SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
+%   Chemical Multimer}\\
+% UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\
+% PerturbingAgent & \glyph{Perturbing Agent} & None\\
+% Macromolecule & \glyph{Macromolecule Monomer} &
+% \glyph{Macromolecule Multimer}\\
+% Nucleic\-Acid\-Feature & \glyph{Nucleic Acid Feature Monomer} & \glyph{Nucleic Acid Feature Multimer}\\
+% Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
+% \end{supertabular}
+% \end{footnotesize}
+% \end{center}
 
 The example in figure \ref{fig:techref:complexSubunits} illustrates the use of
 subunits in a complex.  It also shows an equivalent compex without
-subunits. This is an import point. For every \glyph{Complex} drawn
-with subunits it will always be possible to drawn an equivalent
-version that does not use contains subunits\query{Not discussed in
-  detail. This must be true if states can be drawn on subunits, but
-  actually belong to the complex. Either this or we enforce a rule
-  that all state vars must be named uniquely.}.
+subunits.
+%  This is an import point. For every \glyph{Complex} drawn
+% with subunits it will always be possible to drawn an equivalent
+% version that does not use contains subunits\query{Not discussed in
+%   detail. This must be true if states can be drawn on subunits, but
+%   actually belong to the complex. Either this or we enforce a rule
+%   that all state vars must be named uniquely.}.
 
 \begin{figure}[htb]
   \centering
@@ -1688,7 +1727,7 @@ processes in a map, SBGN defines the \sbgnclass{Phenotype} (figure \ref{fig:tech
 
 No additional associations.
 
-\subsubsection{Logical Identity}
+\subsubsection{Unique Key}
 
 \begin{logicalkey}
 \item \attrib{owning\_map}
@@ -1784,7 +1823,7 @@ reference between the EPNs in the Main Map and those in the submap,
 which are identified by a \sbgnclass{Tag}.
 \end{attributes}
 
-\subsubsection{Logical Identity}
+\subsubsection{Unique Key}
 
 \begin{logicalkey}
   \item \attrib{owning\_map}
@@ -1796,7 +1835,7 @@ which are identified by a \sbgnclass{Tag}.
 \begin{itemize}
 \item All instances of \classref{SubmapTerminal} held by this class
   must be logically unique.
-\item attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie,
+\item attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
   degree $=0$).
 \end{itemize}
 
@@ -1999,7 +2038,7 @@ is known about the process or in some cases the nature of the process,
 for example association and dissociation. The permitted values for
 \attrib{process\_type} are described in the following table:
 
-\begin{tabular}[c]{l p{12cm}}
+\begin{tabular}[c]{l p{10cm}}
 \\\toprule
 generic & A generic stoichiometric process that transforms a set of entity pools into another set of entity pools.\\
 omitted & Omitted processes are processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony. A single \glyph{omitted process} can represent any number of actual processes. The \glyph{omitted process} is different from a \glyph{submap}. While a \glyph{submap} references to an explicit content, that is hidden in the main map, the \glyph{omitted process} does not ``hide'' anything within the context of the map, and cannot be ``unfolded''.\\
@@ -2175,7 +2214,7 @@ The example in \fig{techref:trans-react} illustrates the use of a \glyph{process
   \label{fig:techref:trans-react}
 \end{figure}
 
-The example in \fig{techref:trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{compartment}).
+The example in \fig{techref:trans-trans} illustrates the use of a \glyph{process} node to represent a translocation. The large round-cornered rectangle represents a compartment border (see \sect{techref:compartment}).
 
 \begin{figure}[htb]
   \centering
@@ -2261,7 +2300,7 @@ The example in \fig{techref:trans-dim} presents the conversion of two galactoses
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000177 ! non-covalent binding.
- \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{consumption}) and production (\sect{production}) arcs are linked to the extremities of those connectors.
+ \glyphNode An \glyph{association} between several entities is represented by a filled disc linked to two connectors, small arcs attached on point separated by 180 degrees. The consumption (\sect{techref:consumption}) and production (\sect{techref:production}) arcs are linked to the extremities of those connectors.
  \end{glyphDescription}
 
 \begin{figure}[htb]
@@ -2306,7 +2345,7 @@ The example in \fig{techref:assoc-cyclin} illustrates the association of cyclin 
 
 \begin{glyphDescription}
  \glyphSboTerm SBO:0000180 ! dissociation.
- \glyphNode A \glyph{dissociation} between several entities is represented by two concentric circles. A simple empty disc could be, in some cases, confused with the \glyph{catalysis} (section \sect{catalysis}). Moreover, the existence of two circles reminds the dissociation, by contrast with the filled disc of the \glyph{association} (\sect{association}).
+ \glyphNode A \glyph{dissociation} between several entities is represented by two concentric circles. A simple empty disc could be, in some cases, confused with the \glyph{catalysis} (section \sect{techref:catalysis}). Moreover, the existence of two circles reminds the dissociation, by contrast with the filled disc of the \glyph{association} (\sect{techref:association}).
  \end{glyphDescription}
 
 
@@ -2332,6 +2371,7 @@ Although the \sbgnclass{NonStoichiometricProcess} was not explicitly defined in
 the previous version the semantics and glyphs are unchanged.
 
 \subsection{Compartment}
+\label{sec:techrefcompartment}
 \label{defn:Compartment}
 
 \begin{figure}[htb]
@@ -2374,7 +2414,7 @@ usage of the UofI for annotation.} that describes
   \sbgnclass{EntityPoolNode}s contained by this compartment.
 \end{attributes}
 
-\subsubsection{Logical Identity}
+\subsubsection{Unique Key}
 
 \begin{logicalkey}
   \item \attrib{owning\_map}
@@ -2799,9 +2839,9 @@ This is a new language element and an not previous versions of the \PDl.
   consistency between tags ans submap terminals.} handles links or relationships between elements of a
 map and sub-map. At present there is only one reference glyph,
 \glyph{tag}, which can be used in a map refered to by a \glyph{submap}
-(\sect{submap}) or as an auxilary unit on the \glyph{submap}. The
+(\sect{techref:submap}) or as an auxilary unit on the \glyph{submap}. The
 \glyph{clone marker} can also provide additional reference mechanisms
-and is discussed below (\sect{cloneMarker}).
+and is discussed below (\sect{techref:cloneMarker}).
 
 \subsubsection{Generalisation}
 
@@ -2900,7 +2940,7 @@ only instances of \sbgnclass{EntityPoolNode}.
 \subsection{Tag}
 \label{defn:Tag}
 
-A \sbgnclass{Tag} is a named handle, or reference, to another \sbgnclass{EntityPoolNode}.  \glyph{Tags} are used to identify those elements in \glyph{submaps} (\sect{submap}).
+A \sbgnclass{Tag} is a named handle, or reference, to another \sbgnclass{EntityPoolNode}.  \glyph{Tags} are used to identify those elements in \glyph{submaps} (\sect{techref:submap}).
 
 \subsubsection{Generalisation}
 
@@ -3289,7 +3329,7 @@ for \attrib{process\_type} are described in the following table:
 modulation & A general modulation where the exact nature of the
 modulation is not specified or not known. Modulation can be used when one does not know the precise
 direction of the effect.\\
-stimulation & A stimulation affects \textbf{positively} the flux of a process represented by the target process. This stimulation can be for instance a catalysis or a positive allosteric regulation. Note that \glyph{catalysis} exists independently in SBGN, see \sect{catalysis}.\\
+stimulation & A stimulation affects \textbf{positively} the flux of a process represented by the target process. This stimulation can be for instance a catalysis or a positive allosteric regulation. Note that \glyph{catalysis} exists independently in SBGN, see \sect{techref:catalysis}.\\
 catalysis & A particular case of stimulation, where the effector affects
 positively the flux of a process represented by the target process. The positive effect on the process is due to the lowering of the activation energy of a reaction.\\
 inhibition & An inhibition \textbf{negatively} affects the flux of a process represented by the target process. This inhibition can be for instance a competitive inhibition or an allosteric inhibition.\\
@@ -3636,7 +3676,7 @@ auxiliary unit (figure \ref{fig:techref:clonemarkeruml}).  The purpose of this
 marker is to provide the reader with a visual indication that this
 node has been cloned, and that at least one other occurrence of the
 \sbgnclass{EntityPoolNode} can be found in the map (or in a submap;
-see \sect{submap}).  The clone marker takes two forms, simple and
+see \sect{techref:submap}).  The clone marker takes two forms, simple and
 labeled, depending on whether the node being cloned can carry state
 variables (\ie whether it is a stateful EPN). Note that an
 \sbgnclass{EntityPoolNode} belongs to a single compartment. If two
@@ -3841,7 +3881,7 @@ specification.
 \label{sec:techref:material-types-cv}
 
 The material type of an EPN indicates its chemical structure.  A list
-of common material types is shown in \tab{material-types-cv}, but
+of common material types is shown in \tab{techref:material-types-cv}, but
 others are possible.  The values are to be taken from the \sbo
 (\sbourl), specifically from the branch having identifier
 \sboid{SBO:0000240} ($\!$\emph{material entity} under \emph{physical entity representation}).
@@ -3862,7 +3902,7 @@ The labels are defined by \SBGNPDLone.
     \bottomrule
   \end{tabular}
   \caption{A sample of values from the \emph{material types} controlled
-    vocabulary (\sect{material-types-cv}).}
+    vocabulary (\sect{techref:material-types-cv}).}
   \label{tab:techref:material-types-cv}
 \end{table}
 
@@ -3878,7 +3918,7 @@ a role.
 
 An EPN's \emph{conceptual type} indicates its function within the
 context of a given \PD.  A list of common conceptual types is shown in
-\tab{conceptual-types-cv}, but others are possible.  The values are to
+\tab{techref:conceptual-types-cv}, but others are possible.  The values are to
 be taken from the \sbo (\sbourl), specifically from the branch having
 identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
 \emph{physical entity representation}).  The labels are defined by \SBGNPDLone.
@@ -3897,7 +3937,7 @@ identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
     \bottomrule
   \end{tabular}
   \caption{A sample of values from the \emph{conceptual types} vocabulary
-    (\sect{conceptual-types-cv}).}
+    (\sect{techref:conceptual-types-cv}).}
   \label{tab:techref:conceptual-types-cv}
 \end{table}
 
@@ -3906,7 +3946,7 @@ identifier \sboid{SBO:0000241} ($\!$\emph{functional entity} under
 \label{sec:techref:covalent-mod-cv}
 
 A common reason for the introduction of state variables
-(\sect{stateVariable}) on an entity is to allow access to the
+(\sect{techref:stateVariable}) on an entity is to allow access to the
 configuration of possible covalent modification sites on that entity.
 For instance, a macromolecule may have one or more sites where a
 phosphate group may be attached; this change in the site's
@@ -3916,14 +3956,14 @@ Being able to describe such modifications in a consistent fashion is
 the motivation for the existence of SBGN's covalent modifications
 controlled vocabulary.
 
-\tab{covalent-mod-cv} lists a number of common types of covalent
+\tab{techref:covalent-mod-cv} lists a number of common types of covalent
 modifications.  The most common values are defined by the \sbo in the
 branch having identifier \sboid{SBO:0000210} (\emph{addition of a
   chemical group} under
 \emph{interaction}$\rightarrow$\emph{process}$\rightarrow$\emph{biochemical
   or transport reaction}$\rightarrow$\\\emph{biochemical
   reaction}$\rightarrow$\emph{conversion}).  The labels shown in
-\tab{covalent-mod-cv} are defined by \SBGNPDLone; for all other kinds
+\tab{techref:covalent-mod-cv} are defined by \SBGNPDLone; for all other kinds
 of modifications not listed here, the author of a \PD must create a
 new label (and should also describe the meaning of the label in a
 legend or text accompanying the map).
@@ -3948,7 +3988,7 @@ legend or text accompanying the map).
     \bottomrule
   \end{tabular}
   \caption{A sample of values from the \emph{covalent modifications} vocabulary
-    (\sect{covalent-mod-cv}).}
+    (\sect{techref:covalent-mod-cv}).}
   \label{tab:techref:covalent-mod-cv}
 \end{table}
 
@@ -3958,7 +3998,7 @@ legend or text accompanying the map).
 
 \SBGNPDLone defines a special unit of information for describing
 certain common physical characteristics.
-\tab{physical-characteristics-cv} lists the particular values defined
+\tab{techref:physical-characteristics-cv} lists the particular values defined
 by \SBGNPDLone.
 
 
@@ -3974,55 +4014,97 @@ by \SBGNPDLone.
     \bottomrule
   \end{tabular}
   \caption{A sample of values from the \emph{physical
-      characteristics} vocabulary (\sect{physical-characteristics-cv}).}
+      characteristics} vocabulary (\sect{techref:physical-characteristics-cv}).}
   \label{tab:techref:physical-characteristics-cv}
 \end{table}
 
-\section{Entity Pool Node Identity and Cloning}
+\section{Uniqueness and Cloning}
 \label{sec:techref:epnuniqueness}
 \label{sec:techref:uniquenessdefinition}
 
-All elements in an SBGN \PDm have an implicit identify defined by the
-\attrib{id} attribute in \classref{SBGNElement} so in that respect all
-elements drawn are unique. However, in some cases it is possible to
-draw two or elements that define identical information in the map. In
-some clases, such as the \sbgnclass{Compartment} this is prohibited, but in
-others (\sbgnclass{EntityPoolNode}) it is not, but requires
-special decoration (the clone marker) to indicate that the information
-is replicated on the map. We define this type of identity and
-``logical identity'' and the attributes that so discriminate between
-elements as the ``logical key''\query{This is recapitulation of
-  the rules as defined in the previous version of the specification
-  and as it is understood in discussions.}.
+By definition all glyphs drawn on a \PDl are unique. They are shapes
+that are distinct from other shapes drawn on the map. However, in some
+cases the glyphs can represent the same concepts. The \PDl has a
+number of rules that rely on and understanding when two glyphs are the
+same concept. For example there is a rule that two or more
+macromolecules in the same compartment must be decorated with a
+\glyph{Clone Marker}, and another rule that a compartment cannot be
+duplicated in a \PDm.  To distinguish between the uniqueness of the
+glyph and its underlying concept we use the concept of ``logical
+identity''. Each glyph has a ``logical key'' that uniquely identifies
+it. In the element definitions above this is described in the
+\emph{Unique Key} section.
 
-Clearly it is therefore important that we define the logical key for
-all the elements in the map and that we do this for the class definitions
-(section \ref{sec:techref:definitions}). The conventions used for this is as
-follows:
+The Unique key defines the attributes of the class that uniquely
+define it.  So, for example, a compartment it is uniquely defined by a
+combination of its owning map and its name (see
+section~\ref{sec:techref:compartment}). However not all entries have a
+Unique key defined and for these each glyph drawn on the map and its
+underlying concept are unique. In other-words both the glyph and its
+concept have instance identity.
 
-\begin{itemize}
-\item If no logical key is specified then instance identity applies
-  (see above).
-\item If the logical key is defined then this should be applied when
-  determining equality between two elements.
-\item If an element can be replicated and two elements are determined
-  to be logically identical, then instance identity should be used to
-  determine uniqueness.
-\item If an element can be replicated if marked as a clone, then the
-  above rule applies. If the element is not marked as cloned, then the
-  only the logical key can be used when determining uniqueness.
-\end{itemize}
+%Now extend to Cloning!
+Logical identity is important when understanding when to use the
+\glyph{Simple Clone Marker} and \glyph{Labelled Clone Marker}. A clone
+marker must be applied when type glyphs of type \sbgnclass{EntityPoolNode}
+is logically identical on a map. In effect this rule means that glyphs
+representing the same entity pools are highlighted, allowing the reader
+to easily identify that equivalence.  Clone marker usage is
+illustrated in figure~\ref{fig:techref:cloningrules-eg}.
 
-\fig{techref:cloningrules-eg} illustrates how the above rules are applied in
-practise in the \PDm. They also affect our understanding when reading
-a map. For example since all processes are unique, two \glyph{Process}
-glyphs connected to the same input and output indicates that the same
-``reaction'' can be carried out by two distinct processes, with
-potentially different mechanisms.
+%   We can summarise these rules as:
+
+% \begin{itemize}
+% \item If a unique key is specified for a glyph then this is used to
+%   determine if two glyphs are identical, otherwise instance identity
+%   applies,
+% \end{itemize}
+
+% The rules that apply when two glyphs are identical vary. By default
+% all glyphs must be unique on a \PDm, however, there are two
+% exceptions. When  
+
+% All elements in an SBGN \PDm have an implicit identify defined by the
+% \attrib{id} attribute in \classref{SBGNElement} so in that respect all
+% elements drawn are unique. However, in some cases it is possible to
+% draw two or elements that define identical information in the map. In
+% some clases, such as the \sbgnclass{Compartment} this is prohibited, but in
+% others (\sbgnclass{EntityPoolNode}) it is not, but requires
+% special decoration (the clone marker) to indicate that the information
+% is replicated on the map. We define this type of identity and
+% ``logical identity'' and the attributes that so discriminate between
+% elements as the ``logical key''\query{This is recapitulation of
+%   the rules as defined in the previous version of the specification
+%   and as it is understood in discussions.}.
+
+% Clearly it is therefore important that we define the logical key for
+% all the elements in the map and that we do this for the class definitions
+% (section \ref{sec:techref:definitions}). The conventions used for this is as
+% follows:
+
+% \begin{itemize}
+% \item If no logical key is specified then instance identity applies
+%   (see above).
+% \item If the logical key is defined then this should be applied when
+%   determining equality between two elements.
+% \item If an element can be replicated and two elements are determined
+%   to be logically identical, then instance identity should be used to
+%   determine uniqueness.
+% \item If an element can be replicated if marked as a clone, then the
+%   above rule applies. If the element is not marked as cloned, then the
+%   only the logical key can be used when determining uniqueness.
+% \end{itemize}
+
+% \fig{techref:cloningrules-eg} illustrates how the above rules are applied in
+% practise in the \PDm. They also affect our understanding when reading
+% a map. For example since all processes are unique, two \glyph{Process}
+% glyphs connected to the same input and output indicates that the same
+% ``reaction'' can be carried out by two distinct processes, with
+% potentially different mechanisms.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=\textwidth]{images/cloningrules-eg}
+  \includegraphics[width=0.75\textwidth]{images/cloningrules-eg}
   \caption{This fictitious example illustrates the correct cloning semantics in
     the \PDl. The diagram shows the association of the phosphorylated
     macromolecule A (A[P]) and simple chemical B into a complex. Two

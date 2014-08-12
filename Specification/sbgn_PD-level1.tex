@@ -5,7 +5,7 @@
 % $HeadURL$
 % =============================================================================
 
-\documentclass[a4paper,11pt,oneside]{memoir}
+\documentclass[a4paper,12pt,oneside]{memoir}
 \usepackage[utf8]{inputenc} % unicode support
 \RequirePackage[T1]{fontenc}
 \RequirePackage{pifont}
@@ -23,6 +23,7 @@
 \usepackage{xspace}
 \usepackage{float}
 \usepackage{framed}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage{eso-pic}
 \usepackage{ifthen}
 %\usepackage[american]{varioref}
@@ -53,6 +54,7 @@
 \setsubparaheadstyle{\bfseries\itshape\raggedright}
 \setsubparaindent{0cm}
 
+\setsecnumdepth{subsection}
 
 %% ----------------------------------------------------------------------------
 %% Layout customizations and macro definitions.
@@ -76,17 +78,17 @@
 \mainmatter
 \linenumbers
 
-\part{SBGN Primer}
+%\part{SBGN Primer}
 
 \include{sources/introduction}
 \include{sources/concepts}
-\include{sources/language_overview}
+%\include{sources/language_overview}
 %\include{sources/primer}
 
-\include{sources/worked_examples}
+%\include{sources/worked_examples}
 
-\part{Technical Reference}
-\label{part:techref}
+%\part{Technical Reference}
+%\label{part:techref}
 
 \include{sources/glyphs}
 \include{sources/layout}
