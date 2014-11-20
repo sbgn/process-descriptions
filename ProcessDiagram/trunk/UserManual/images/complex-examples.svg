@@ -13,7 +13,7 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48+devel r9813"
    version="1.0"
    sodipodi:docname="complex-examples.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -67,16 +67,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0461789"
-     inkscape:cx="599.5386"
+     inkscape:cx="523.06984"
      inkscape:cy="398.16681"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g3497"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1280"
-     inkscape:window-height="779"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="2560"
+     inkscape:window-height="1391"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
      showgrid="false"
@@ -98,7 +98,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -223,7 +223,7 @@
            style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
            y="397.06033"
            x="778.60144"
-           sodipodi:role="line">globin</tspan></text>
+           sodipodi:role="line">CaM</tspan></text>
       <rect
          style="fill:#ffffc8;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect3359"
