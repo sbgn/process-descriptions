@@ -18,7 +18,7 @@ makes the specification more difficult to update in the future. To
 achieve this we took our lead from other successful standards: the
 Unified Modelling Language (UML) \cite{umlspec} which is a graphical
 language that has been used by tens of thousands of software
-developers for over decade to describe and software system; and the
+developers for over a decade to describe and software system; and the
 Systems Biology Markup Language (SBML) Level 3 Core specification
 \cite{sbmll3core} which is the ``daddy'' of computational systems
 biological standards and over 10 years after its inception is firmly
@@ -29,7 +29,7 @@ class in turn and in so doing describes how the language elements fit
 together (syntax) and how they are applied and their rules
 (semantics).  Since UML is a graphical language, the class definition
 also includes, where applicable to the language element, a description
-of description of the symbols used and guidelines about how the
+of the symbols used and guidelines about how the
 symbols should be drawn or laid out.
 
 Based on these specifications we will follow the following conventions
@@ -47,7 +47,7 @@ in this chapter:
   element represented, parent classes, attributes, interactions with
   other classes and any semantic rules not captured in UML.
 \item Where classes correspond to a glyph, the symbol representing it
-  is described and appropriate illustrations provided.
+  is described and appropriate illustrations are provided.
 \end{itemize}
 
 \section{Note on typographical convention}
@@ -72,8 +72,7 @@ that is new or potentially contentious.
 Here we will describe the elements of the class definitions that are
 the core of the language specification. Each definition starts with an
 introduction describing the purpose of the class and what it
-represents conceptually or physically. It's context within the UML
-\PDl is then described by a detailed figure showing the class, its
+represents conceptually or physically. It's context within the \PDl is then described by a detailed figure showing the class, its
 associations and its interaction with other key classes to help
 understand its context and any rules that are part of the
 definition. In these descriptions we will use a number of terms for
@@ -157,7 +156,7 @@ The specification uses a number of primitive types that are used in
 attribute definitions. These are:
 \begin{description}
 \item[int] An integer.
-\item[string] A string of UniCode characters.
+\item[string] A string of Unicode characters.
 \item[boolean] A Boolean value that can be either True or False.
 \item[object] A type that can be any value.
 \item[cv] A controlled vocabulary (see \ref{sec:techref:CVs}).
@@ -193,7 +192,7 @@ definition.
 described here. The glyph is described in words and graphically. In
 cases where several glyphs combine in complex ways usage examples are
 provided.
-\item[Layout Rules and Guidelines] In some cases the graphical layout of a glyph and is more complicated
+\item[Layout Rules and Guidelines] In some cases the graphical layout of a glyph is more complicated
 and requires some additional explanation. If this is the case this
 will be provided here.
 \item[Changes from Previous Version] In order to help track changes between versions of the specification
@@ -1408,7 +1407,9 @@ which represents a \sbgnclass{Complex} where the \attrib{cardinality}
 is one and the \glyph{Complex Multimer} where the cardinality is
 greater than that.
 
-\paragraph{\glyph{Complex Monomer}}
+\paragraph{Glyph: \glyph{Complex Monomer}}
+
+This glyphs represents a monomeric complex.
 
 \begin{glyphDescription}
 \glyphSboTerm SBO:0000253 ! non-covalent complex
@@ -1430,10 +1431,12 @@ optimise the clarity and avoid overlapping.
   \label{fig:techref:complex}
 \end{figure}
 
+\paragraph{Glyph: \glyph{Complex Multimer}}
 
-\paragraph{\glyph{Complex Multimer}}
+This glyphs represents a multimeric complex.
 
- \begin{glyphDescription}
+\begin{glyphDescription}
+
 \glyphSboTerm SBO:0000418 ! multimer of complexes
 \glyphContainer A \glyph{Complex Multimer} is represented by two
 identical \glyph{Complex} containers shifted horizontally and
@@ -2837,7 +2840,7 @@ This is a new language element and an not previous versions of the \PDl.
 
 \sbgnclass{CrossReference}\query{A new concept required for
   consistency between tags ans submap terminals.} handles links or relationships between elements of a
-map and sub-map. At present there is only one reference glyph,
+map and submap. At present there is only one reference glyph,
 \glyph{tag}, which can be used in a map refered to by a \glyph{submap}
 (\sect{techref:submap}) or as an auxilary unit on the \glyph{submap}. The
 \glyph{clone marker} can also provide additional reference mechanisms
@@ -3854,7 +3857,7 @@ the \attrib{natures} of an \classref{EntityPoolNode} or
 \classref{Compartment} or the \attrib{value} of the
 \classref{StateVariable}. The values held by these attributes can be
 taken from controlled vocabularies defined below. When displayed in
-some cases is mandatory to prefix a code indicating the type of
+some cases it is mandatory to prefix a code indicating the type of
 controlled vocabulary used.  This is in order to make it clear what
 the information is that the value referes to: for example 'mt'
 indicates that a value 'rna' is describing the material RNA.
@@ -4113,7 +4116,7 @@ illustrated in figure~\ref{fig:techref:cloningrules-eg}.
     then dissociates into the same components that formed it which
     requires an appropriate clone marker to be applied. A[P] is
     translocated into compartment 2 where A[P] is not cloned as it
-    does not have a duplicate. The unphosphorylated from of A
+    does not have a duplicate. The unphosphorylated form of A
     dimerised, but again this does not require a clone marker as these
     are regarded as separate entity pools.}
   \label{fig:techref:cloningrules-eg}
@@ -4152,12 +4155,13 @@ these rules here. The concepts and nomenclature here can get confusing, so we wi
 \end{description}
 
 \fig{techref:submap-folded} represents a \glyph{submap node} that transforms
-glucose into fructose-6-phosphate. The \glyph{submap node} carries five
-terminals, four linked to EPNs and one linked to a
-\glyph{compartment}.  The latter is particularly important in the case
-of EPNs present only in a \glyph{compartment} enclosed in a
-\glyph{submap node}, and that are not linked to terminals themselves.  Note
-that the terminals do not define a ``direction'', such as input or
+glucose into fructose-6-phosphate.
+%The \glyph{submap node} carries five terminals, four linked to EPNs and one linked
+%to a \glyph{compartment}.  The latter is particularly important in the case of EPNs
+%present only in a \glyph{compartment} enclosed in a \glyph{submap node}, and that
+%are not linked to terminals themselves.
+The \glyph{submap node} carries four terminals linked to EPNs.
+Note that the terminals do not define a ``direction'', such as input or
 output.  The flux of the reactions is determined by the context.
 
 \begin{figure}[htb]
@@ -4171,7 +4175,7 @@ The map in \fig{techref:submap-unfolded} represents an unfolded version of a
 \glyph{submap}.  Here, anything outside the \glyph{submap node} has
 disappeared, and the internal \glyph{tags} are not linked to the
 corresponding external \glyph{submap terminals}.\query{This example
-in the previous version fo the spec  included compartment
+in the previous version of the spec  included compartment
 tagging. This has been removed, but the example may need refinement as
 a result.}
 
@@ -4214,8 +4218,7 @@ submaps in the \PDl\query{These rules are taken from the previous
 \item For a valid mapping between subclasses of \sbgnclass{EntityPoolNode} in a supermap and submap to
   exist, the \sbgnclass{EntityPoolNode} subclasses must be logically
   identical and the \attrib{reference\_id} in their associated \sbgnclass{CrossReference} must be identical.
-  identical.
-\item A \sbgnclass{SubmapNode} which do not have a corresponding
+\item A \sbgnclass{SubmapNode} which does not have a corresponding
   submap is valid.
 \item Submaps without a corresponding supermap are invalid\query{We
   need to sort out mapping between super and sub maps to get this
