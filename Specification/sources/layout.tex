@@ -3,7 +3,15 @@
 
 \section{Introduction}
 
-The previous chapters describe the appearance and meaning of \SBGNPDLone components. Here we describe rules governing the visual appearence and asthetics of the \PDl. The components of a \PD have to be placed in a meaningful way -- a random distribution with spaghetti-like connections will most likely hide the information encoded in the underlying model, whereas an elegant placement of the objects, giving a congenial appearance of the maps, may reveal new insights. The arrangement of components in a map is called a \emph{layout}.
+The previous chapters describe the appearance and meaning of
+\SBGNPDLone components. Here we describe rules governing the visual
+appearence and asthetics of the \PDl. The components of a \PD have to
+be placed in a meaningful way -- a random distribution with
+spaghetti-like connections will most likely hide the information
+encoded in the underlying model, whereas an elegant placement of the
+objects, giving a congenial appearance of the maps, may reveal new
+insights. The arrangement of components in a map is called a
+\emph{layout}.
 
 SBGN \PDs should be easily recognisable not only by the
 glyphs used, but also by the general style of the layout. However, the
@@ -31,7 +39,7 @@ SBGN. Although one can use colors to emphasize part of a map or
 encode additional information, the meaning of the map should not
 depend on the colors. Furthermore, objects can have different sizes
 and size is also meaningless in SBGN. For example, a process node
-may be larger than a protein node. Also the meaning of a graph
+may be larger than a EPN node. Also the meaning of a graph
 should be conserved upon scaling as far as possible.
 
 \section{Requirements}
@@ -41,7 +49,9 @@ produce a valid \PDm.
 
 \subsection{Node-node overlaps}
 
-Nodes are only allowed to overlap in two cases when they are allowed to contain other nodes --- as described in \chap{glyphs}. Otherwise, nodes are not allowed to overlap (\fig{layout1}). This includes the
+Nodes are only allowed to overlap in two cases when they are allowed
+to contain other nodes --- as described in \chap{glyphs}. Otherwise,
+nodes are not allowed to overlap (\fig{layout1}). This includes the
 touching of nodes. Touching is not allowed apart from the case where
 it has a specific meaning, e.g.\, two macromolecules touching each
 other within a complex because they form the complex.
@@ -100,9 +110,12 @@ rotation of elements is not allowed (\fig{layout5}).
 \subsection{Node-edge connection}
 
 \begin{enumerate}
-\item The arcs linking the square glyph of a \glyph{process} to the \glyph{consumption} and \glyph{production arcs}
- are attached to the center of opposite sides (\fig{layout6}).
-\item The modulatory arcs are attached to the other two sides, but not necessarily all to the center, as several modifiers can affect the same process node.
+\item The arcs linking the square glyph of a \glyph{process} to the
+  \glyph{consumption} and \glyph{production arcs} are attached to the
+  center of opposite sides (\fig{layout6}).
+\item The modulatory arcs are attached to the other two sides, but not
+  necessarily all to the center, as several modifiers can affect the
+  same process node.
 \end{enumerate}
 
 \begin{figure}[htb]
@@ -114,7 +127,10 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \subsection{Node labels}
 
-At least a part of the label (unbordered box containing a string of characters) has to be placed inside the node it belongs to. Node labels are not allowed to overlap other nodes or other labels (this includes touching of other nodes or labels).
+At least a part of the label (unbordered box containing a string of
+characters) has to be placed inside the node it belongs to. Node
+labels are not allowed to overlap other nodes or other labels (this
+includes touching of other nodes or labels).
 
 \subsection{Edge labels}
 
@@ -123,7 +139,11 @@ of nodes.
 
 \subsection{Compartments}
 
-If a process has all participants in the same compartment the process node and all edges/arcs should be drawn in this compartment.  If a process has participants in at least two different compartments, the process node has to be either in a compartment where the process has at least one participant or in the empty space.
+If a process has all participants in the same compartment the process
+node and all edges/arcs should be drawn in this compartment.  If a
+process has participants in at least two different compartments, the
+process node has to be either in a compartment where the process has
+at least one participant or in the empty space.
 
 \section{Recommendations}
 
@@ -132,7 +152,9 @@ Recommendations are rules which should be followed if possible and generally sho
 \subsection{Node-edge crossing}
 \label{sec:crosEdNo}
 
-Situations where edges and nodes cross should be avoided. Note that some crossings may be unavoidable, e.\,g.~the crossing between an edge and a compartment border or an edge and a complex (if the edge connects an element inside the complex with something outside).
+Situations where edges and nodes cross should be avoided. Note that
+some crossings may be unavoidable, e.\,g.~the crossing between an edge
+and a compartment border or an edge and a complex.
 
 \subsection{Labels}
 
@@ -147,7 +169,10 @@ The amount of crossings between edges should be minimized.
 
 \subsection{Branching of \glyph{association} and \glyph{dissociation}}
 
-The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed closed to the symbol of the process, if possible at a distance comparable than, or smaller to, the diameter of the symbol defining the process (\fig{branching}).
+The branching points of \glyph{association} and \glyph{dissociation}
+nodes should be placed closed to the symbol of the process, if
+possible at a distance comparable than, or smaller to, the diameter of
+the symbol defining the process (\fig{branching}).
 
 \begin{figure}[htb]
   \centering

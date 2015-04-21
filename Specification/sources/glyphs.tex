@@ -6,8 +6,8 @@
 \chapter{Language Specification}
 \label{chp:glyphs}
 
-
 \section{Introduction}
+\label{sec:lang-intro}
 
 In this chapter we aim to describe the \PDl by describing its elements
 and underlying concepts in detail. The challenge in doing this is to
@@ -16,37 +16,32 @@ rules understandable to the users of the specification. An additional
 goal is to minimise duplication or rules as much as possible, which
 makes the specification more difficult to update in the future. To
 achieve this we took our lead from other successful standards: the
-Unified Modelling Language (UML) \cite{umlspec} which is a graphical
+Unified Modelling Language (UML) \cite{umlspec} (a graphical
 language that has been used by tens of thousands of software
-developers for over a decade to describe and software system; and the
-Systems Biology Markup Language (SBML) Level 3 Core specification
-\cite{sbmll3core} which is the ``daddy'' of computational systems
-biological standards and over 10 years after its inception is firmly
-embedded in the scientific community it serves. In both these
-specifications the language is modelled in UML where each language
-element is described as an UML class. The specification defines each
-class in turn and in so doing describes how the language elements fit
-together (syntax) and how they are applied and their rules
-(semantics).  Since UML is a graphical language, the class definition
-also includes, where applicable to the language element, a description
-of the symbols used and guidelines about how the
-symbols should be drawn or laid out.
-
-Based on these specifications we will follow the following conventions
-in this chapter:
+developers for almost two decades to describe and software system); and the
+Systems Biology Markup Language \cite{sbmll3core}  (SBML; the ``daddy'' of computational systems
+biological standards and almost 15 years after its inception it is firmly
+embedded in the scientific community it serves). Both languages
+specifications have similar approaches. The concepts and elements of
+the language are defined as classes and their interaction is described
+as relationships of containment, association or inheritance. In the
+case of UML, being a graphical language, the class descriptions also
+include a description of the symbols used with guidelines about how
+the symbols should be drawn or laid out. In this document we will also
+follow these precedents and take the following approach:
 
 \begin{itemize}
 \item The language will be described by a UML class model:
   \begin{itemize}
-  \item each language element or concept being represented as a
+  \item each language element or concept is represented as a
     class.
-  \item the syntax being represented by the cardinality of
-      associations between classes.
+  \item conceptual organisation is described by a generalisation relationship
+  \item syntax is defined by the cardinality of associations between classes.
   \end{itemize}
 \item Each class is defined in detail, including a description of the concept or
   element represented, parent classes, attributes, interactions with
-  other classes and any semantic rules not captured in UML.
-\item Where classes correspond to a glyph, the symbol representing it
+  other classes and any semantic rules that cannot be captured in UML.
+\item Where a class corresponds to a glyph, the symbol representing it
   is described and appropriate illustrations are provided.
 \end{itemize}
 
@@ -141,12 +136,13 @@ called \attrib{container} to class B.
   shown at the opposite end of the association to it.
 \item[shared aggregation (open diamond)] The aggregating class (C) is
   adjacent to the diamond and is connected to the other class (D) via
-  a solid line. Here there is a whole/part relationship, but there the
-  part (class D) can be shared with another class and can exists
-  independently of C.
-\item[navigability (black diamond anchor arrowhead)] If the association ends in an arrow, this
-  indicates the direction of the association. Here this should be
-  taken to mean that only one aside of the association (G) is `aware' of the relationship.
+  a solid line. This represents a whole/part relationship (as above), but one
+  where the 'part' (class D) can be shared with another class and can
+  exists independently of C.
+\item[navigability (black diamond anchor arrowhead)] If the
+  association ends in an arrow, this indicates the direction of the
+  association. This means that only one aside of the association (G)
+  is `aware' of the relationship.
 \item[dependency] Indicates that the dependent class (E) requires the
   other class adjacent to the arrow head (F) to satisfy its
   specification or implementation.
@@ -167,7 +163,7 @@ attribute definitions. These are:
 
 \subsection{Definition format}
 
-To help you read the definitions each one follows a standard format
+ To help you read the definitions each one follows a standard format
 which each section found in the same order.  Sections that are not
 relevant are omitted.
 
@@ -249,7 +245,11 @@ one or more glyphs.
 \section{Definitions}
 \label{sec:techref:definitions}
 
-\subsection{SBGNElement}
+\subsection{Index of Classes}
+
+\printindex
+
+\umlclasshead{SBGNElement}
 \label{defn:SBGNElement}
 
 All the glyphs in \SBGNPDLone inherit from
@@ -280,13 +280,13 @@ None
 
 Not defined in the previous version.
 
-\subsection{Map}
+\umlclasshead{Map}
 \label{defn:Map}\label{sec:techref:map}
 
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.55\textwidth]{images/mapuml}
+  \includegraphics[width=0.6\textwidth]{images/mapuml}
   \caption{UML definition of Map and \sbgnclass{SBGNElement}.}
   \label{fig:techref:mapuml}
 \end{figure}
@@ -336,12 +336,12 @@ not convey any meaning in itself.
 
 Not defined explicitly in previous versions.
 
-\subsection{SBGNGlyph}
+\umlclasshead{SBGNGlyph}
 \label{defn:SBGNGlyph}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.9\textwidth]{images/glyphauxuml}
+  \includegraphics[width=\textwidth]{images/glyphauxuml}
 \caption{UML definition of the \sbgnclass{SBGNGlyph} and its subclasses.}
   \label{fig:techref:glyphauxuml}
 \end{figure}
@@ -375,12 +375,12 @@ No additional rules and constraints.
 Not defined in  previous version.
 
 
-\subsection{AuxiliaryUnit}
+\umlclasshead{AuxiliaryUnit}
 \label{defn:AuxiliaryUnit}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/auxiliaryunituml}
+  \includegraphics[width=\textwidth]{images/auxiliaryunituml}
 \caption{UML definition of the Auxiliary Unit and its subclasses.}
   \label{fig:techref:auxiliaryunituml}
 \end{figure}
@@ -412,7 +412,7 @@ No additional rules and constraints.
 Not defined in previous version.
 
 
-\subsection{SBGNNode}
+\umlclasshead{SBGNNode}
 \label{defn:SBGNNode}
 
 The \sbgnclass{SBGNNode} (figure \ref{fig:techref:sbgnnodearcuml}) represents
@@ -422,7 +422,7 @@ within the \PDl. The nodes are connected to glyphs descended from
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.55\textwidth]{images/sbgnnodearcuml}
+  \includegraphics[width=0.6\textwidth]{images/sbgnnodearcuml}
 \caption{UML definition of the \sbgnclass{SBGNNode} and
   \sbgnclass{SBGNArc} classes.}
   \label{fig:techref:sbgnnodearcuml}
@@ -457,7 +457,7 @@ No additional attributes.
 
 Not defined in the previous version.
 
-\subsection{SBGNArc}
+\umlclasshead{SBGNArc}
 \label{defn:SBGNArc}
 
 The \sbgnclass{SBGNArc} (figure \ref{fig:techref:sbgnnodearcuml}) represents
@@ -495,12 +495,12 @@ No additional rules and constraints.
 Not defined in the previous version.
 
 
-\subsection{EntityType}
+\umlclasshead{EntityType}
 \label{defn:EntityType}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{images/entitytypeuml}
+  \includegraphics[width=\textwidth]{images/entitytypeuml}
 \caption{UML definition of the entity type and the state variable
   definition. The diagram shows how these classes interact with the
   entity pool, state variable and so influence
@@ -600,7 +600,7 @@ as a separate \glyph{Unit of Information}.
 Although not defined explicitly in the previous version, this concept
 and the associated rules did exist in the language.
 
-\subsection{StateVariableDefinition}
+\umlclasshead{StateVariableDefinition}
 \label{defn:StateVariableDefinition}
 
 The \sbgnclass{StateVariableDefinition}\query{As with EntityType this
@@ -642,7 +642,7 @@ None.
 Although not defined explicitly in the previous version, arguably this
 concept did exist in the language.
 
-\subsection{EntityPoolNode}
+\umlclasshead{EntityPoolNode}
 \label{sec:techref:EPNs}\label{defn:EntityPoolNode}\label{sec:techref:EPN}
 
 An entity pool is a population of entities that cannot be
@@ -659,7 +659,7 @@ endoplasmic reticulum.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{images/epnuml}
+  \includegraphics[width=0.95\textwidth]{images/epnuml}
 \caption{UML definition of the entity pool node and its descendant glyphs.}
   \label{fig:techref:epnuml}
 \end{figure}
@@ -762,7 +762,7 @@ is that of the \attrib{natures}, which didn't formally exist before,
 but which now must contain a unique set of controlled vocabularies and
 is part of the logical key of the \sbgnclass{EntityPoolNode}.
 
-\subsection{Empty Set}
+\umlclasshead{EmptySet}
 \label{sec:techref:sourceSink}
 
 It is useful to have the ability to represent the creation of an entity or
@@ -797,7 +797,7 @@ sinks is critical.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/emptysetuml}
+  \includegraphics[width=0.9\textwidth]{images/emptysetuml}
   \caption{The UML definition of the \glyph{EmptySet} and its context
     in relation to other elements of the \PDl.}
   \label{fig:techref:emptysetuml}
@@ -863,7 +863,7 @@ same, but the underlying concept has changed. The \glyph{Source} and
 \glyph{Sink} glyphs where types of EPN, representing single entity
 pools, while the \sbgnclass{EmptySet} is not.
 
-\subsection{StatelessEPN}
+\umlclasshead{StatelessEPN}
 \label{defn:StatelessEPN}
 
 The \sbgnclass{StatelessEPN} (figure \ref{fig:techref:statelessepnuml})
@@ -874,7 +874,7 @@ a state-variable.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/statelessepnuml}
+  \includegraphics[width=0.9\textwidth]{images/statelessepnuml}
   \caption{UML definition of the stateless entity pool node and its
     descendant glyphs.}
   \label{fig:techref:statelessepnuml}
@@ -904,7 +904,7 @@ No additional associations.
 
 Not defined in the previous version.
 
-\subsection{Simple chemical}
+\umlclasshead{SimpleChemical}
 \label{sec:techref:simpleChemical}
 
 A \sbgnclass{SimpleChemical} is the `opposite' of a macromolecule
@@ -989,7 +989,7 @@ to the stadium glyph. Previously the glyph was a circle. To maintain
 compatibility with previous versions the stadium symbol can be drawn
 without straight horizontal elements so that it becomes a circle.
 
-\subsection{UnspecifiedEntity}
+\umlclasshead{UnspecifiedEntity}
 \label{sec:techref:unspecifiedEntity}
 
 The simplest type of \sbgnclass{EntityPoolNode} is the
@@ -1053,7 +1053,7 @@ container.
 
 No changes from the previous version.
 
-\subsection{Perturbing Agent}
+\umlclasshead{PerturbingAgent}
 \label{sec:techref:perturbing agent}
 
 Biochemical networks can be affected by external influences.  Those
@@ -1112,7 +1112,7 @@ mandatory.  The label box must be attached to the center of the
 
 No changes from pervious version.
 
-\subsection{StatefulEPN}
+\umlclasshead{StatefulEPN}
 \label{defn:StatefulEPN}
 
 Stateful entity pools can undergo physical changes, for example
@@ -1124,7 +1124,7 @@ used to indicated that the \sbgnclass{StatefulEPN} is cloned.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/statefulepnuml}
+  \includegraphics[width=\textwidth]{images/statefulepnuml}
 \caption{UML definition of the stateful entity pool node: showing its
   descendants and its association with state variables.}
   \label{fig:techref:statefulepnuml}
@@ -1161,7 +1161,7 @@ No additional attributes.
 
 Not defined explicitly in the previous version.
 
-\subsection{Macromolecule}
+\umlclasshead{Macromolecule}
 \label{sec:techref:macromolecule}
 
 Many biological processes involve \emph{macromolecules}: biochemical
@@ -1264,7 +1264,7 @@ In this section, we provide examples of Entity Pool Node representations drawn u
 
 No changes from the previous version.
 
-\subsection{NucleicAcidFeature}
+\umlclasshead{NucleicAcidFeature}
 \label{sec:techref:genetic}
 
 The \sbgnclass{NucleicAcidFeature} represents a fragment of a
@@ -1349,7 +1349,7 @@ No changes from the previous version.
 %%%%                   Complex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Complex}\label{sec:techref:complex}
+\umlclasshead{Complex}\label{sec:techref:complex}
 \label{defn:Complex}
 
 A \sbgnclass{Complex} represents a biochemical entity composed of
@@ -1363,7 +1363,7 @@ composition of the complex.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.75\textwidth]{images/complexsubunituml}
+  \includegraphics[width = 0.9\textwidth]{images/complexsubunituml}
   \caption{The UML definition of the \sbgnclass{Complex} and its
     associated \sbgnclass{subunit}s. In particular this describes organisation
    of the state variables that belong to both the subunit, but also
@@ -1471,7 +1471,7 @@ illustrates the glyph.
   Complex glyph.
 \end{itemize}
 
-\subsection{Subunit}
+\umlclasshead{Subunit}
 \label{defn:Subunit}\label{sec:techref:subunits}
 
 The \sbgnclass{Subunit}\query{The principles of the subunit have been
@@ -1618,7 +1618,7 @@ there are pools within pools, which breaks one of the fundamental
 paradigms of the \PDl. This is corrected in the current version and
 subunits are now adornments of the \sbgnclass{Complex}.
 
-\subsection{ProcessNode}\label{sec:techref:PNs}
+\umlclasshead{ProcessNode}\label{sec:techref:PNs}
 \label{defn:ProcessNode}
 
 The \sbgnclass{Process} (figure \ref{fig:techref:processumlview}) represents a
@@ -1666,7 +1666,7 @@ No additional rules and constraints.
   been changed the current status where all processes are unique in a \PDm.
 \end{itemize}
 
-\subsection{NonStoichiometricProcess}
+\umlclasshead{NonStoichiometricProcess}
 \label{defn:NonStoichiometricProcess}
 
 The \sbgnclass{NonStoichiometricProcess}\query{This has been discussed
@@ -1679,7 +1679,7 @@ important or is being summarised.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.45\textwidth]{images/nonstoichprocessuml}
+  \includegraphics[width = 0.75\textwidth]{images/nonstoichprocessuml}
   \caption{The UML definition of the \sbgnclass{NonStoichiometricProcess} and its
     associated subclasses.}
   \label{fig:techref:nonstoichprocessuml}
@@ -1707,7 +1707,7 @@ No additional rules and constraints.
 
 Not defined in the previous version.
 
-\subsection{Phenotype}
+\umlclasshead{Phenotype}
 
 A biochemical network can generate phenotypes or affect biological
 processes.  Such processes can take place at different levels and are
@@ -1780,7 +1780,7 @@ cloned as it is now a subclass of \sbgnclass{Process}, which is always
 unique.
 
 
-\subsection{SubmapNode}
+\umlclasshead{SubmapNode}
 \label{sec:techref:submap}\label{defn:SubmapNode}
 
 The \sbgnclass{SubmapNode}\query{This name change has not been
@@ -1791,14 +1791,14 @@ the detail of this process from the \PDm, but make it available to the
 reader as a separate related map. The \sbgnclass{Submap} is not
 equivalent to an \sbgnclass{OmittedProcess} (section
 \ref{sec:techref:omitted}). The \sbgnclass{Submap} allows the detail of
-section of the \PDm to be exported to another \PDm and replaced by the
+the section of the \PDm to be exported to another \PDm and replaced by the
 \sbgnclass{SubmapNode}, which acts as a place-holder.  This is
 described in section \ref{sec:techref:map} and the semantics of submap linking
 is defined in section \ref{sec:techref:submaplinkingsemantics}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.65\textwidth]{images/submapnodeuml}
+  \includegraphics[width = \textwidth]{images/submapnodeuml}
   \caption{The UML definition of the \sbgnclass{SubmapNode} and its
    relationship to its submap, tags etc.}
   \label{fig:techref:submapnodeuml}
@@ -1838,7 +1838,7 @@ which are identified by a \sbgnclass{Tag}.
 \begin{itemize}
 \item All instances of \classref{SubmapTerminal} held by this class
   must be logically unique.
-\item attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
+\item \attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
   degree $=0$).
 \end{itemize}
 
@@ -1874,13 +1874,13 @@ This glyph was called \glyph{Submap} in previous version of the \PD
 specification. This is confusing when talking about the Submap itself
 so this glyph is now referred to as the SubmapNode to distinguish it.
 
-\subsection{LogicalOperator}
+\umlclasshead{LogicalOperator}
 \label{sec:techref:logic}
 \label{defn:LogicalOperator}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/logicaloperatoruml}
+  \includegraphics[width = 0.75\textwidth]{images/logicaloperatoruml}
   \caption{The UML definition of the \sbgnclass{LogicalOperator}.}
   \label{fig:techref:logicaloperatoruml}
 \end{figure}
@@ -1993,12 +1993,12 @@ Although the \sbgnclass{LogicOperator} was not explicitly defined in
 the previous version the semantics and glyphs are unchanged.
 
 
-\subsection{StoichiometricProcess}
+\umlclasshead{StoichiometricProcess}
 \label{defn:StoichiometricProcess}\label{sec:techref:stoichiometricprocess}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.45\textwidth]{images/stoichprocessuml}
+  \includegraphics[width = 0.6\textwidth]{images/stoichprocessuml}
   \caption{The UML definition of the
     \sbgnclass{StiochiometricProcess}. The class interacts with
     subclasses of \sbgnclass{FluxArc} and \sbgnclass{ModulationArc}.}
@@ -2373,13 +2373,13 @@ The example in \fig{techref:dissoc-ribo} illustrates the dissociation of the sma
 Although the \sbgnclass{NonStoichiometricProcess} was not explicitly defined in
 the previous version the semantics and glyphs are unchanged.
 
-\subsection{Compartment}
+\umlclasshead{Compartment}
 \label{sec:techrefcompartment}
 \label{defn:Compartment}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/compartmentuml}
+  \includegraphics[width = 0.9\textwidth]{images/compartmentuml}
   \caption{The UML definition of the \sbgnclass{Compartment} showing
     how it containment of \sbgnclass{EntityPoolNode}.}
   \label{fig:techref:compartmentuml}
@@ -2503,12 +2503,12 @@ not distinct or if the \glyph{unit of information} contains arbitrary
 text as annotation then maps containing these features will be invalid
 according to the current specification.
 
-\subsection{AttributeValue}
+\umlclasshead{AttributeValue}
 \label{defn:AttributeValue}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/attributevalueuml}
+  \includegraphics[width = 0.9\textwidth]{images/attributevalueuml}
   \caption{The UML definition of the \sbgnclass{AttributeValue} and
     its usage by other classes.}
   \label{fig:techref:attributevalueuml}
@@ -2605,7 +2605,7 @@ Since the use of the \glyph{Unit of Information} has been deprecated,
 it is recommended that \classref{Annotation} and the
 \glyph{Annotation} glyph is used instead.
 
-\subsection{StateVariable}
+\umlclasshead{StateVariable}
 \label{defn:StateVariable}
 
 Many biological entities such as molecules can exist in different
@@ -2633,7 +2633,7 @@ displayed for a given entity type, then it must always be displayed.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/statevariableviewuml}
+  \includegraphics[width = \textwidth]{images/statevariableviewuml}
   \caption{The UML definition of the \sbgnclass{StateVariable} showing
     its relationship to \sbgnclass{StatefulEPN} and \sbgnclass{StateVariableDefinition}.}
   \label{fig:techref:statevariableviewuml}
@@ -2744,7 +2744,7 @@ previous versions of the specification, however the \glyph{state
   variable} was. Some aspects of its notation have been deprecated and
 these are detailed above (section \ref{sec:techref:stateVariable}).
 
-\subsection{Annotation}
+\umlclasshead{Annotation}
 \label{defn:Annotation}
 
 In \SBGNPDLone there are cases where the language does not capture
@@ -2825,12 +2825,12 @@ overlap with the object it is annotating.
 This is a new language element and an not previous versions of the \PDl.
 
 
-\subsection{CrossReference}
+\umlclasshead{CrossReference}
 \label{defn:CrossReference}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/crossreferenceuml}
+  \includegraphics[width = \textwidth]{images/crossreferenceuml}
   \caption{The UML definition of the \sbgnclass{Crossreference} showing
     its subclasses \sbgnclass{Tag} and \sbgnclass{SubmapTerminal} and
     its association with other elements in the \PDl.}
@@ -2877,7 +2877,7 @@ None
 
 Not defined in the previous version.
 
- \subsection{SubmapTerminal}
+ \umlclasshead{SubmapTerminal}
 \label{defn:SubmapTerminal}
 
 A \sbgnclass{SubmapTerminal}\query{Not properly defined in previous
@@ -2940,7 +2940,7 @@ container. The label may spill outside of the container.
 Clarified that the tag does not link a \sbgnclass{Compartment}, but
 only instances of \sbgnclass{EntityPoolNode}.
 
-\subsection{Tag}
+\umlclasshead{Tag}
 \label{defn:Tag}
 
 A \sbgnclass{Tag} is a named handle, or reference, to another \sbgnclass{EntityPoolNode}.  \glyph{Tags} are used to identify those elements in \glyph{submaps} (\sect{techref:submap}).
@@ -2994,12 +2994,12 @@ No additional associations.
 Clarified that the tag does not link a \sbgnclass{Compartment}, but
 only instances of \sbgnclass{EntityPoolNode}.
 
-\subsection{FluxArc}
+\umlclasshead{FluxArc}
 \label{defn:FluxArc}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/fluxarcuml}
+  \includegraphics[width = 0.75\textwidth]{images/fluxarcuml}
   \caption{The UML definition of the \sbgnclass{FluxArc} and its subclasses.}
   \label{fig:techref:fluxarcuml}
 \end{figure}
@@ -3167,7 +3167,7 @@ corners (see figure \ref{fig:techref:stoichlabellayout}.)\query{These layout
   rules were agreed at COMBINE 2010, but have not been voted on.}.
 
 \begin{glyphDescription}
-\glyphSboTerm None
+\glyphSboTerm Not Applicable
 \glyphContainer A rectangle with a draw edge.
 \glyphLabel A number that should remain within the container and be of
 a normal font, \ie not bold or italic.
@@ -3309,12 +3309,12 @@ been clarified.
 % No changes from previous versions. \textbf{Do we need to put a
 %   Reversible arc to handle the reversible side of the consumption arc?}
 
-\subsection{ModulationArc}
+\umlclasshead{ModulationArc}
 \label{defn:ModulationArc}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.65\textwidth]{images/modulationarcuml}
+  \includegraphics[width = 0.9\textwidth]{images/modulationarcuml}
   \caption{The UML definition of the \sbgnclass{ModulationArc}. The class interacts with
     subclasses of \sbgnclass{StoichiometricProcess}.}
   \label{fig:techref:modulationarcuml}
@@ -3537,7 +3537,7 @@ The definition of \sbgnclass{ModulationArc} did not exist in the
 previous version but there has been no changes to the glyphs and glyph
 semantics in this version.
 
-\subsection{LogicArc}
+\umlclasshead{LogicArc}
 \label{defn:LogicArc}
 
 The \sbgnclass{LogicArc} (figure \ref{fig:techref:logicarcuml}) takes a quantity from either a
@@ -3549,7 +3549,7 @@ the output is True.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.7\textwidth]{images/logicarcuml}
+  \includegraphics[width = 0.9\textwidth]{images/logicarcuml}
   \caption{The UML definition of the \sbgnclass{LogicArc} and its context.}
   \label{fig:techref:logicarcuml}
 \end{figure}
@@ -3600,12 +3600,12 @@ the outcome of a logic operator.
 
 No changes from the previous version.
 
-\subsection{EquivalenceArc}
+\umlclasshead{EquivalenceArc}
 \label{defn:EquivalenceArc}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.7\textwidth]{images/equivalencearcuml}
+  \includegraphics[width = 0.9\textwidth]{images/equivalencearcuml}
   \caption{The UML definition of the \sbgnclass{EquivalenceArc} and its context.}
   \label{fig:techref:equivalencearcuml}
 \end{figure}
@@ -3660,13 +3660,13 @@ The relationship of \sbgnclass{EquivalenceArc} to the
 \classref{SubmapTerminal} was unclear in previous versions of the
 specification and has been clarified here.
 
-\subsection{CloneMarker}
+\umlclasshead{CloneMarker}
 \label{defn:CloneMarker}
 \label{sec:techref:cloneMarker}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width = 0.5\textwidth]{images/clonemarkeruml}
+  \includegraphics[width = 0.9\textwidth]{images/clonemarkeruml}
   \caption{The UML definition of the \sbgnclass{StateVariable} showing
     its relationship to \sbgnclass{StatefulEPN}, \sbgnclass{Complex}
     and \sbgnclass{Subunit}.}
@@ -3713,7 +3713,7 @@ No additional rules and constraints.
 
 Not defined in previous version.
 
-\subsection{SimpleCloneMarker}
+\umlclasshead{SimpleCloneMarker}
 
 The \sbgnclass{SimpleCloneMarker} (figure \ref{fig:techref:clonemarkeruml}) is
 the unlabelled subclass \sbgnclass{CloneMarker}. All duplicated
@@ -3781,7 +3781,7 @@ smaller than the unfilled one.
 No change from previous version.
 
 
-\subsection{LabelledClonerMarker}
+\umlclasshead{LabelledClonerMarker}
 \label{defn:LabelledCloneMarker}
 
 Unlike the classref{SimpleCloneMarker}, the
