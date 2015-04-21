@@ -31,11 +31,11 @@
 \usepackage[right,pagewise,modulo]{lineno}
 \usepackage[olditem,oldenum]{paralist}
 \usepackage{fourier}
+\usepackage{multicol}
 %\usepackage{layouts}
 
 \usepackage[pdftex]{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png}
-
 
  \usepackage[pdftex]{hyperref}
 
@@ -56,6 +56,10 @@
 
 \setsecnumdepth{subsection}
 
+%\maxtocdepth{subsection}
+
+
+
 %% ----------------------------------------------------------------------------
 %% Layout customizations and macro definitions.
 %% ----------------------------------------------------------------------------
@@ -63,10 +67,15 @@
 %\input{sources/latex-style}
 \input{sources/latex-macros}
 
+\makeindex
 
 %% ----------------------------------------------------------------------------
 \begin{document}
 %% ----------------------------------------------------------------------------
+
+\newcommand{\umlclasshead}[1]{\subsection{\index{#1}#1}}
+
+\renewenvironment*{theindex}{\begin{itemize}[label={}]\tightlist\setlength{\itemindent}{-25pt}\nolinenumbers\begin{multicols}{2}}{\end{multicols}\end{itemize}}
 
 \frontmatter
 
@@ -75,6 +84,7 @@
 
 \tableofcontents
 
+
 \mainmatter
 \linenumbers
 
@@ -82,6 +92,9 @@
 
 \include{sources/introduction}
 \include{sources/concepts}
+
+\include{sources/whatsnew}
+
 %\include{sources/language_overview}
 %\include{sources/primer}
 
@@ -110,6 +123,9 @@
 \bibliographystyle{unsrt}
 \bibliography{sbgn_PD-level1}
 
+\clearpage
+%\pagestyle{Index}
+%\printindex
 
 %% ----------------------------------------------------------------------------
 \end{document}

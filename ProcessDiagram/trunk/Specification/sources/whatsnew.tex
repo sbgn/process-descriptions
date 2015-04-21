@@ -1,0 +1,30 @@
+\chapter{What's New}
+
+\section{Introduction}
+
+This version of the \PDl is a significant revision of the previous version of the standard. It includes new and updated glyphs, updated and clarified semantics and most obviously this radically revised specification document.  Below we provide more details about the these changes.
+
+
+\section{Specification}
+
+The previous version of the specification suffered from a number of deficiencies:
+
+\begin{enumerate}
+\item It was redundant and in places inconsistent. The glyph and grammars section described the same language rules, but these descriptions were sometime inconsistent.
+\item It was hard for the reader to find rules as they were spread between the glyph and grammar sections.
+\item The specification contained a number of ambiguities such as when an EPN was the same or whether the Phenotype could be cloned. Such ambiguities arose partly because some concepts like the type of an EPN were not explicitly defined.
+\item Some rules were difficult to articulate in prose and a UML based description allows us to articulate such rules explicitly and in a unified description with the other concepts in the language.
+\end{enumerate}
+
+This specification addresses such problems by putting the language rules and glyph description in one place (chapter~\ref{chp:glyphs}) and based the language definition on a UML class model. The approach taken and the motivation is described in more detail in section~\ref{sec:lang-intro}.
+
+\section{Glyphs}
+
+\begin{description}
+\item[Annotation (New)] This version sees the introduction of the annotation glyph. This makes the \PDl consistent with the other SBGN languages. The glyph provides a mechanisms to annotate parts of an SBGN map and does not affect the meaning of the map. See section~\ref{defn:Annotation}.
+\item[State Variable] The symbol used for this glyph has been modified to use the stadium (or capsule) glyph. This replaces the elipse although the circle is preserved (it can be though of as a special form of the stadium symbol with no straight edges). More details can be found in section~\ref{defn:StateVariable}.
+\item[Small Molecule] 
+\end{description}
+
+\section{Semantics}
+
