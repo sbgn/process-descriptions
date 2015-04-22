@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,9 +13,8 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.91 r13725"
    version="1.0"
-   sodipodi:docbase="/home/lenov/SBGN/svn/sbgn/trunk/documents/specifications/ProcessDiagram/Level1/images"
    sodipodi:docname="modulation.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -115,13 +115,14 @@
      inkscape:current-layer="layer2"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1392"
-     inkscape:window-height="1022"
-     inkscape:window-x="280"
-     inkscape:window-y="0"
+     inkscape:window-width="1192"
+     inkscape:window-height="609"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      showguides="true"
      inkscape:guide-bbox="true"
-     showgrid="true">
+     showgrid="true"
+     inkscape:window-maximized="1">
     <sodipodi:guide
        orientation="vertical"
        position="301.42857"
@@ -160,18 +161,18 @@
        id="text2859"
        y="282.09448"
        x="832.28571"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         style="font-weight:normal;font-size:24px;text-align:center;text-anchor:middle"
          y="282.09448"
          x="832.28571"
          id="tspan2861"
          sodipodi:role="line">Target</tspan><tspan
          id="tspan2863"
-         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         style="font-weight:normal;font-size:24px;text-align:center;text-anchor:middle"
          y="312.09448"
          x="832.28571"
-         sodipodi:role="line">TRN</tspan></text>
+         sodipodi:role="line">PN</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.00000014;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect2197"
