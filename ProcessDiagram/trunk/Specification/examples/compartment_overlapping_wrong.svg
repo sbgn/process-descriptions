@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,10 +13,10 @@
    height="1052.3622047"
    id="svg18713"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
-   sodipodi:docbase="D:\workspace-doc\SBGN_trunk\documents\specifications\ProcessDiagram\Level1\examples"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="compartment_overlapping_wrong.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
   <defs
      id="defs18715" />
   <sodipodi:namedview
@@ -33,10 +34,12 @@
      inkscape:cy="441.08315"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     inkscape:window-width="1360"
-     inkscape:window-height="712"
+     inkscape:window-width="1192"
+     inkscape:window-height="670"
      inkscape:window-x="0"
-     inkscape:window-y="22" />
+     inkscape:window-y="22"
+     showgrid="false"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata18718">
     <rdf:RDF>
@@ -147,7 +150,7 @@
        x="205.61003"
        y="618.52759"
        rx="0"
-       ry="12.606059" />
+       ry="0" />
     <text
        xml:space="preserve"
        style="font-size:5.38127995px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -164,14 +167,6 @@
        d="M 274.61267,681.36171 L 265.83952,673.2263 L 275.18203,669.39375 L 274.61267,681.36171 z "
        id="path6038"
        sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 175.97549,717.91131 C 172.8058,728.86008 162.70004,736.87248 150.73425,736.87248 C 138.76847,736.87249 128.66271,728.86008 125.49302,717.91132"
-       id="path6233" />
-    <path
-       id="path6235"
-       d="M 309.45878,717.91131 C 306.28909,728.86008 296.18333,736.87248 284.21754,736.87248 C 272.25176,736.87249 262.146,728.86008 258.97631,717.91132"
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:0.60392157;fill-rule:nonzero;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3520"
