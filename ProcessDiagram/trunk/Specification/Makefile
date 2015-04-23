@@ -11,6 +11,7 @@ MAIN   = sbgn_PD-level1
 
 LATEX  = pdflatex
 BIBTEX = bibtex
+MKIDX = makeindex
 
 all default: images examples
 	$(MAKE) -C examples
@@ -18,6 +19,7 @@ all default: images examples
 	$(MAKE) -C le_images
 	$(LATEX) $(MAIN).tex
 	$(LATEX) $(MAIN).tex
+	$(MKIDX) $(MAIN)
 	$(BIBTEX) $(MAIN)
 	$(LATEX) $(MAIN).tex
 
@@ -33,6 +35,7 @@ clean:
 	-rm -f *.log
 	-rm -f *.tmp
 	-rm -f *.prv
+	-rm -f *.idx
 	-rm -f sbgn_PD-level1.fdb_latexmk
 
 dist_clean: clean
