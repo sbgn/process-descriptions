@@ -32,6 +32,7 @@
 \usepackage[olditem,oldenum]{paralist}
 \usepackage{fourier}
 \usepackage{multicol}
+\usepackage[toc,section=chapter,numberedsection]{glossaries}
 %\usepackage{layouts}
 
 \usepackage[pdftex]{graphicx}
@@ -67,11 +68,26 @@
 %\input{sources/latex-style}
 \input{sources/latex-macros}
 
+\makeglossaries
+
 \makeindex
+
+\renewcommand{\glsglossarymark}[1]{}
 
 %% ----------------------------------------------------------------------------
 \begin{document}
 %% ----------------------------------------------------------------------------
+
+
+\newenvironment{valrules}{\begin{description}}{\end{description}}
+
+\newcommand{\defrule}[2]{\newglossaryentry{#1}
+{
+    name=#1,
+    description={#2}
+}
+\item[\gls{#1}] #2
+}
 
 \newcommand{\umlclasshead}[1]{\subsection{\index{#1}#1}}
 

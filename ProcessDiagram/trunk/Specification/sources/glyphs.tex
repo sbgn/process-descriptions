@@ -557,14 +557,37 @@ used this type.
 
 \subsubsection{Rule and Constraints}
 
-\begin{itemize}
-\item All instances of \sbgnclass{EntityPoolNode} associated with a
-  particular \sbgnclass{EntityType} must be of the same class.
-\item If an instance of \sbgnclass{EntityType} contains one or more
+
+
+\begin{valrules}
+% \newglossaryentry{Rule001}
+% {
+%     name=Rule001,
+%     description={All instances of \sbgnclass{EntityPoolNode} associated with a
+%   particular \sbgnclass{EntityType} must be of the same class.}
+% }
+% \item[\gls{Rule001}] All instances of \sbgnclass{EntityPoolNode} associated with a
+%   particular \sbgnclass{EntityType} must be of the same class.
+\defrule{Rule001}{All instances of \sbgnclass{EntityPoolNode} associated with a
+  particular \sbgnclass{EntityType} must be of the same class.}
+\defrule{Rule002}{If an instance of \sbgnclass{EntityType} contains one or more
   instances of \sbgnclass{StateVariableDefinition} then the
   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
-  \sbgnclass{StatefulEPN}.
-\end{itemize}
+  \sbgnclass{StatefulEPN}.}
+
+% \newglossaryentry{Rule002}
+% {
+%     name=Rule002,
+%     description={If an instance of \sbgnclass{EntityType} contains one or more
+%   instances of \sbgnclass{StateVariableDefinition} then the
+%   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
+%   \sbgnclass{StatefulEPN}.}
+% }
+% \item[\gls{Rule002}] If an instance of \sbgnclass{EntityType} contains one or more
+%   instances of \sbgnclass{StateVariableDefinition} then the
+%   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
+%   \sbgnclass{StatefulEPN}.
+\end{valrules}
 
 \subsubsection{Notation}
 

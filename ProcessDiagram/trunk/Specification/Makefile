@@ -12,6 +12,7 @@ MAIN   = sbgn_PD-level1
 LATEX  = pdflatex
 BIBTEX = bibtex
 MKIDX = makeindex
+MKGLOS = makeglossaries
 
 all default: images examples
 	$(MAKE) -C examples
@@ -20,7 +21,9 @@ all default: images examples
 	$(LATEX) $(MAIN).tex
 	$(LATEX) $(MAIN).tex
 	$(MKIDX) $(MAIN)
+	$(MKGLOS) $(MAIN)
 	$(BIBTEX) $(MAIN)
+	$(LATEX) $(MAIN).tex
 	$(LATEX) $(MAIN).tex
 
 clean:
@@ -32,11 +35,16 @@ clean:
 	-rm -f *.dvi
 	-rm -f *.toc
 	-rm -f *.aux
+	-rm -f *.fls
 	-rm -f *.log
 	-rm -f *.tmp
 	-rm -f *.prv
 	-rm -f *.idx
+	-rm -f *.ind
+	-rm -f *.ist
 	-rm -f sbgn_PD-level1.fdb_latexmk
+	-rm -f *.gl*
+	-rm -f *.ilg
 
 dist_clean: clean
 	-rm -f *.pdf
