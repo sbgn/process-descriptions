@@ -316,11 +316,18 @@ No additional attributes
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item A map is valid if it is empty (although not very useful).
-\item All instances of \classref{SBGNGlyph} must be unique (see
-  section \ref{sec:techref:uniquenessdefinition}).
-\end{itemize}
+\begin{valrules}
+\defrule{PD1}{A map is valid if it is empty (although not very
+  useful).}
+\defrule{PD2}{All instances of \classref{SBGNGlyph} must be unique (see
+  section \ref{sec:techref:uniquenessdefinition}).}
+\end{valrules}
+
+% \begin{itemize}
+% \item A map is valid if it is empty (although not very useful).
+% \item All instances of \classref{SBGNGlyph} must be unique (see
+%   section \ref{sec:techref:uniquenessdefinition}).
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -444,11 +451,17 @@ No additional attributes.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The set of \sbgnclass{SBGNNode}s linked to this node via a
+\begin{valrules}
+\defrule{PD3}{The set of \sbgnclass{SBGNNode}s linked to this node via a
   \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
-  different entity pools (as defined by \sbgnclass{EntityPoolNode}).
-\end{itemize}
+  different entity pools (as defined by \sbgnclass{EntityPoolNode}).}
+\end{valrules}
+
+% \begin{itemize}
+% \item The set of \sbgnclass{SBGNNode}s linked to this node via a
+%   \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
+%   different entity pools (as defined by \sbgnclass{EntityPoolNode}).
+% \end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
@@ -553,25 +566,16 @@ used this type.
   \item \attrib{natures}
 \end{logicalkey}
 
-\subsubsection{Rule and Constraints}
-
-
+\subsubsection{Rules and Constraints}
 
 \begin{valrules}
-% \newglossaryentry{Rule001}
-% {
-%     name=Rule001,
-%     description={All instances of \sbgnclass{EntityPoolNode} associated with a
-%   particular \sbgnclass{EntityType} must be of the same class.}
-% }
-% \item[\gls{Rule001}] All instances of \sbgnclass{EntityPoolNode} associated with a
-%   particular \sbgnclass{EntityType} must be of the same class.
-\defrule{Rule001}{All instances of \sbgnclass{EntityPoolNode} associated with a
+\defrule{PD68}{All instances of \sbgnclass{EntityPoolNode} associated with a
   particular \sbgnclass{EntityType} must be of the same class.}
-\defrule{Rule002}{If an instance of \sbgnclass{EntityType} contains one or more
+\defrule{PD69}{If an instance of \sbgnclass{EntityType} contains one or more
   instances of \sbgnclass{StateVariableDefinition} then the
   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
   \sbgnclass{StatefulEPN}.}
+\end{valrules}
 
 % \newglossaryentry{Rule002}
 % {
@@ -585,7 +589,6 @@ used this type.
 %   instances of \sbgnclass{StateVariableDefinition} then the
 %   \sbgnclass{EntityPoolNode}s associated with it must be subclasses of
 %   \sbgnclass{StatefulEPN}.
-\end{valrules}
 
 \subsubsection{Notation}
 
@@ -735,21 +738,39 @@ that not all EPNs can be cloned.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
-  as a multimer.
-\item If the EPN is drawn directly on a \glyph{Map} then
+\begin{valrules}
+\defrule{PD4}{If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
+  as a multimer.}
+\defrule{PD5}{If the EPN is drawn directly on a \glyph{Map} then
   \attrib{owning\_compartment} is not set. We interpret this as
-  belonging to an invisible default compartment.
- \item \attrib{natures} can only use the material type (section
- \ref{sec:techref:material-types-cv}), conceptual type (section \ref{sec:techref:conceptual-types-cv}) or physical
- characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.
-\item The appropriate subclass of \sbgnclass{CloneMarker} must be used
-  to distinguish logically identical instances of this class.
-\item All \sbgnclass{StateVariableDefinition}s associated with the
+  belonging to an invisible default compartment.}
+\defrule{PD6}{\attrib{natures} can only use the material type
+   (section~\ref{sec:techref:material-types-cv}), conceptual type
+   (section \ref{sec:techref:conceptual-types-cv}) or physical 
+ characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.}
+\defrule{PD7}{The appropriate subclass of \sbgnclass{CloneMarker} must be used
+  to distinguish logically identical instances of this class.}
+\defrule{PD8}{All \sbgnclass{StateVariableDefinition}s associated with the
   \sbgnclass{EntityType} must have an associated
-  \sbgnclass{StateVariable}.
-\end{itemize}
+  \sbgnclass{StateVariable}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
+%   as a multimer.
+% \item If the EPN is drawn directly on a \glyph{Map} then
+%   \attrib{owning\_compartment} is not set. We interpret this as
+%   belonging to an invisible default compartment.
+%  \item \attrib{natures} can only use the material type
+%    (section~\ref{sec:techref:material-types-cv}), conceptual type
+%    (section \ref{sec:techref:conceptual-types-cv}) or physical 
+%  characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.
+% \item The appropriate subclass of \sbgnclass{CloneMarker} must be used
+%   to distinguish logically identical instances of this class.
+% \item All \sbgnclass{StateVariableDefinition}s associated with the
+%   \sbgnclass{EntityType} must have an associated
+%   \sbgnclass{StateVariable}.
+% \end{itemize}
 
 % \subsubsection{Notation}
 
@@ -847,13 +868,21 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item  All instances of \glyph{Empty Set} can be regarded as identical
+\begin{valrules}
+\defrule{PD9}{All instances of \glyph{Empty Set} can be regarded as identical
 therefore no special decoration is used to indicate replication on
-the map.
-\item the \sbgnclass{EmptySet} must be associated with at least
-  one \classref{SBGNArc} (degree $> 0$).
-\end{itemize}
+the map.}
+\defrule{PD10}{The \sbgnclass{EmptySet} must be associated with at least
+  one \classref{SBGNArc} (degree $> 0$).}
+\end{valrules}
+
+% \begin{itemize}
+% \item  All instances of \glyph{Empty Set} can be regarded as identical
+% therefore no special decoration is used to indicate replication on
+% the map.
+% \item The \sbgnclass{EmptySet} must be associated with at least
+%   one \classref{SBGNArc} (degree $> 0$).
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -917,9 +946,13 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item if a clone marker is used it must be of type \sbgnclass{SimpleCloneMarker}.
-\end{itemize}
+\begin{valrules}
+\defrule{PD11}{If a clone marker is used it must be of type \sbgnclass{SimpleCloneMarker}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item if a clone marker is used it must be of type \sbgnclass{SimpleCloneMarker}.
+% \end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
@@ -1040,10 +1073,15 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
-  1$. This means there is no multimer glyph.
-\end{itemize}
+\begin{valrules}
+\defrule{PD12}{The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
+  1$. This means there is no multimer glyph.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The \sbgnclass{UnspecifiedEntity} cannot have cardinality $>
+%   1$. This means there is no multimer glyph.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1102,10 +1140,15 @@ No additional attributes.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The \sbgnclass{PerturbingAgent} cannot have \attrib{cardinality} $>
-  1$. This means there is no multimer glyph.
-\end{itemize}
+\begin{valrules}
+\defrule{PD13}{The \sbgnclass{PerturbingAgent} cannot have \attrib{cardinality} $>
+  1$. This means there is no multimer glyph.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The \sbgnclass{PerturbingAgent} cannot have \attrib{cardinality} $>
+%   1$. This means there is no multimer glyph.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1170,13 +1213,21 @@ No additional attributes.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item State variables do not need to be logically unique, therefore
-  two or more state variables with the same name are permitted.
-\item The \sbgnclass{LabelledCloneMarker} must be used to indicate
+\begin{valrules}
+\defrule{PD14}{State variables do not need to be logically unique, therefore
+  two or more state variables with the same name are permitted.}
+\defrule{PD15}{The \sbgnclass{LabelledCloneMarker} must be used to indicate
   cloning for instances of \sbgnclass{StatefulEPN} and its subclasses,
-  with a must use the same
-\end{itemize}
+  with a must use the same}
+\end{valrules}
+
+% \begin{itemize}
+% \item State variables do not need to be logically unique, therefore
+%   two or more state variables with the same name are permitted.
+% \item The \sbgnclass{LabelledCloneMarker} must be used to indicate
+%   cloning for instances of \sbgnclass{StatefulEPN} and its subclasses,
+%   with a must use the same
+% \end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
@@ -1410,16 +1461,25 @@ No additional attributes
  \end{attributes}
 
 
-\subsubsection{Special Rules and Constraints}
+\subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item Once a set of subunits are defined for an \sbgnclass{Complex}
+\begin{valrules}
+\defrule{PD16}{Once a set of subunits are defined for an \sbgnclass{Complex}
   with a given \sbgnclass{EntityType}, then they must be used by every
-  instance using that entity type.\query{New rule.}.
-\item The set of subunits in the Complex does not identify it. One or
+  instance using that entity type.\query{New rule.}.}
+\defrule{PD17}{The set of subunits in the Complex does not identify it. One or
   more Complexes that contain the same set of subunits, but have
-  different labels are \textbf{not} identical.
-\end{itemize}
+  different labels are \textbf{not} identical.}
+\end{valrules}
+
+% \begin{itemize}
+% \item Once a set of subunits are defined for an \sbgnclass{Complex}
+%   with a given \sbgnclass{EntityType}, then they must be used by every
+%   instance using that entity type.\query{New rule.}.
+% \item The set of subunits in the Complex does not identify it. One or
+%   more Complexes that contain the same set of subunits, but have
+%   different labels are \textbf{not} identical.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1475,12 +1535,19 @@ illustrates the glyph.
 
 \subsubsection{Layout Rules and Guidelines}
 
-\begin{itemize}
-\item The subunits inside the complex must not overlap.
-\item The subunits should sit above the clone marker so that they are
-  not obscured by it.
-\item The label should not be obscured by subunits or obscure them.
-\end{itemize}
+\begin{valrules}
+\defrule{PD18}{The subunits inside the complex must not overlap.}
+\defrule{PD19}{The subunits should sit above the clone marker so that they are
+  not obscured by it.}
+\defrule{PD20}{The label should not be obscured by subunits or obscure them.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The subunits inside the complex must not overlap.
+% \item The subunits should sit above the clone marker so that they are
+%   not obscured by it.
+% \item The label should not be obscured by subunits or obscure them.
+% \end{itemize}
 
 
 \subsubsection{Changes from Previous Version}
@@ -1537,23 +1604,41 @@ hierarchy (\sbgnclass{Subunit}, but rather uses the
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item Two or more state variables with the same name are
-  permitted.
-\item State variables with no name set are permitted.
-\item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
-  below apply.
-\item The subunit defines a namespace for its state variables, e.g.\,
+\begin{valrules}
+\defrule{PD21}{Two or more state variables with the same name are
+  permitted.}
+\defrule{PD22}{State variables with no name set are permitted.}
+\defrule{PD23}{Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
+  below apply.}
+\defrule{PD24}{The subunit defines a namespace for its state variables, e.g.\,
   subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
   ``B'' assigned the same state variable can be distinguised as
-  A:P@Ser202 and B:P@Ser202.
-\item If the subunit is of type Complex then \attrib{children} can contain one or
-  more \sbgnclass{Subunit} instances.
-\item If the subunit has a cardinality $>1$ then this should be
-  displayed by the \classref{AttributeValue}.
-\item If \attrib{natures} contains one or more instances then these
-  must be displayed via an \sbgnclass{AttributeValue}.
-\end{itemize}
+  A:P@Ser202 and B:P@Ser202.}
+\defrule{PD25}{If the subunit is of type Complex then \attrib{children} can contain one or
+  more \sbgnclass{Subunit} instances.}
+\defrule{PD26}{If the subunit has a cardinality $>1$ then this should be
+  displayed by the \classref{AttributeValue}.}
+\defrule{PD27}{If \attrib{natures} contains one or more instances then these
+  must be displayed via an \sbgnclass{AttributeValue}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item Two or more state variables with the same name are
+%   permitted.
+% \item State variables with no name set are permitted.
+% \item Subunits can also contain subunits. There is no limit on such nesting. The namespace rules
+%   below apply.
+% \item The subunit defines a namespace for its state variables, e.g.\,
+%   subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
+%   ``B'' assigned the same state variable can be distinguised as
+%   A:P@Ser202 and B:P@Ser202.
+% \item If the subunit is of type Complex then \attrib{children} can contain one or
+%   more \sbgnclass{Subunit} instances.
+% \item If the subunit has a cardinality $>1$ then this should be
+%   displayed by the \classref{AttributeValue}.
+% \item If \attrib{natures} contains one or more instances then these
+%   must be displayed via an \sbgnclass{AttributeValue}.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1760,12 +1845,19 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The number of \attrib{in\_arcs} must be $>0$.
-\item \attrib{in\_arc} can only contain instances of
-\classref{ModulationArc} and its subclasses.
-\item \attrib{out\_arcs} must be empty.
-\end{itemize}
+\begin{valrules}
+\defrule{PD28}{The number of \attrib{in\_arcs} must be $>0$.}
+\defrule{PD29}{\attrib{in\_arc} can only contain instances of
+\classref{ModulationArc} and its subclasses.}
+\defrule{PD30}{\attrib{out\_arcs} must be empty.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The number of \attrib{in\_arcs} must be $>0$.
+% \item \attrib{in\_arc} can only contain instances of
+% \classref{ModulationArc} and its subclasses.
+% \item \attrib{out\_arcs} must be empty.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1864,12 +1956,19 @@ which are identified by a \sbgnclass{Tag}.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item All instances of \classref{SubmapTerminal} held by this class
-  must be logically unique.
-\item \attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
-  degree $=0$).
-\end{itemize}
+\begin{valrules}
+\defrule{PD31}{All instances of \classref{SubmapTerminal} held by this class
+  must be logically unique.}
+\defrule{PD32}{\attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
+  degree $=0$).}
+\end{valrules}
+
+% \begin{itemize}
+% \item All instances of \classref{SubmapTerminal} held by this class
+%   must be logically unique.
+% \item \attrib{in\_arcs} and \attrib{out\_arcs} must be empty (\ie
+%   degree $=0$).
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -1956,17 +2055,29 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item \attrib{in\_arc} can only contain one or more instances of
-  \sbgnclass{LogicArc}.
-\item \attrib{out\_arc} can only contain one or more instances of
-  \sbgnclass{LogicArc} or \sbgnclass{ModulationArc}.
-\item if \attrib{operator\_type} is AND or OR, then \attrib{in\_arc} must
-  contain two or more arcs.
-\item if \attrib{operator\_type} is NOT then \attrib{in\_arc} must
-  contain only one arc.
-\item \attrib{out\_arc} can contain only one arc.
-\end{itemize}
+\begin{valrules}
+\defrule{PD33}{\attrib{in\_arc} can only contain one or more instances of
+  \sbgnclass{LogicArc}.}
+\defrule{PD34}{\attrib{out\_arc} can only contain one or more instances of
+  \sbgnclass{LogicArc} or \sbgnclass{ModulationArc}.}
+\defrule{PD35}{if \attrib{operator\_type} is AND or OR, then \attrib{in\_arc} must
+  contain two or more arcs.}
+\defrule{PD36}{if \attrib{operator\_type} is NOT then \attrib{in\_arc} must
+  contain only one arc.}
+\defrule{PD37}{\attrib{out\_arc} can contain only one arc.}
+\end{valrules}
+
+% \begin{itemize}
+% \item \attrib{in\_arc} can only contain one or more instances of
+%   \sbgnclass{LogicArc}.
+% \item \attrib{out\_arc} can only contain one or more instances of
+%   \sbgnclass{LogicArc} or \sbgnclass{ModulationArc}.
+% \item if \attrib{operator\_type} is AND or OR, then \attrib{in\_arc} must
+%   contain two or more arcs.
+% \item if \attrib{operator\_type} is NOT then \attrib{in\_arc} must
+%   contain only one arc.
+% \item \attrib{out\_arc} can contain only one arc.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -2139,60 +2250,108 @@ No additional associations.
 
 \paragraph{General}
 
-\begin{itemize}
-\item The \attrib{in\_arc} must contain one or more
-  \sbgnclass{FluxArc}s containing the same \attrib{flux\_type} value.
-\item The \attrib{in\_arc} may only contains \sbgnclass{FluxArc}
-  instances with a \attrib{flux\_type} of `consumption', or `reversible'.
-\item In addition the \attrib{in\_arc} may contain zero, one or more
-  instances of \sbgnclass{ModulationArc}.
-\item The \attrib{out\_arc} must contain one or more
- instances of \sbgnclass{FluxArc} with a \attrib{flux\_type} or `production'.
-\item If \attrib{in\_arcs}  contains one or more \sbgnclass{FluxArc}s
-  of type `reversible' this process reversible.
-\item The \sbgnclass{EntityPoolNode}s that make up the LHS of the
+\begin{valrules}
+\defrule{PD38}{The \attrib{in\_arc} must contain one or more
+  \sbgnclass{FluxArc}s containing the same \attrib{flux\_type} value.}
+\defrule{PD39}{The \attrib{in\_arc} may only contains \sbgnclass{FluxArc}
+  instances with a \attrib{flux\_type} of `consumption', or `reversible'.}
+\defrule{PD40}{The \attrib{in\_arc} may only contains \sbgnclass{FluxArc}
+  instances with a \attrib{flux\_type} of `consumption', or `reversible'.}
+\defrule{PD41}{In addition the \attrib{in\_arc} may contain zero, one or more
+  instances of \sbgnclass{ModulationArc}.}
+\defrule{PD42}{The \attrib{out\_arc} must contain one or more
+ instances of \sbgnclass{FluxArc} with a \attrib{flux\_type} or `production'.}
+\defrule{PD43}{If \attrib{in\_arcs}  contains one or more \sbgnclass{FluxArc}s
+  of type `reversible' this process reversible.}
+\defrule{PD44}{The \sbgnclass{EntityPoolNode}s that make up the LHS of the
   process should be consistent with the RHS, i.e.\, the process should
  be stoichiometrically balanced.\query{Tracker issue 329060. If the
    process is stoichiometric this must make sense. The previous spec
-   states this so this is consistent with it.}
-\item If at least one \sbgnclass{FluxArc} associated with a
+   states this so this is consistent with it.}}
+\defrule{PD45}{If at least one \sbgnclass{FluxArc} associated with a
   \sbgnclass{StoichiometricProcess} displays its stoichiometry via a
   \glyph{stoichiometry label} then all must.\query{Take from previous
     spec, but that said if one displays stoichiometry in a map which
-    is too restrictive.}
-\item If more than one set of stoichiometries can be applied to the
+    is too restrictive.}}
+\defrule{PD46}{If more than one set of stoichiometries can be applied to the
   flux arcs of the process then the stoichiometry of the flux arcs
-  must be displayed.
-\end{itemize}
+  must be displayed.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The \attrib{in\_arc} must contain one or more
+%   \sbgnclass{FluxArc}s containing the same \attrib{flux\_type} value.
+% \item The \attrib{in\_arc} may only contains \sbgnclass{FluxArc}
+%   instances with a \attrib{flux\_type} of `consumption', or `reversible'.
+% \item In addition the \attrib{in\_arc} may contain zero, one or more
+%   instances of \sbgnclass{ModulationArc}.
+% \item The \attrib{out\_arc} must contain one or more
+%  instances of \sbgnclass{FluxArc} with a \attrib{flux\_type} or `production'.
+% \item If \attrib{in\_arcs}  contains one or more \sbgnclass{FluxArc}s
+%   of type `reversible' this process reversible.
+% \item The \sbgnclass{EntityPoolNode}s that make up the LHS of the
+%   process should be consistent with the RHS, i.e.\, the process should
+%  be stoichiometrically balanced.\query{Tracker issue 329060. If the
+%    process is stoichiometric this must make sense. The previous spec
+%    states this so this is consistent with it.}
+% \item If at least one \sbgnclass{FluxArc} associated with a
+%   \sbgnclass{StoichiometricProcess} displays its stoichiometry via a
+%   \glyph{stoichiometry label} then all must.\query{Take from previous
+%     spec, but that said if one displays stoichiometry in a map which
+%     is too restrictive.}
+% \item If more than one set of stoichiometries can be applied to the
+%   flux arcs of the process then the stoichiometry of the flux arcs
+%   must be displayed.
+% \end{itemize}
 
 
 \paragraph{Association}
 
 These rules apply if the \attrib{process\_type} is `association'.
 
-\begin{itemize}
-\item The process must be irreversible.
-\item There can only be one `production' \sbgnclass{FluxArc}, with
-  \attrib{stoichiometry} $= 1$.
-\item If a \sbgnclass{Complex} is on the RHS of the association then
+\begin{valrules}
+\defrule{PD47}{The process must be irreversible.}
+\defrule{PD48}{There can only be one `production' \sbgnclass{FluxArc}, with
+  \attrib{stoichiometry} $= 1$.}
+\defrule{PD49}{If a \sbgnclass{Complex} is on the RHS of the association then
   there must be at least 2 EPNS on the LHS.\glyph{Is this too
     restrictive? It prevents multimers being represented as a complex
     of 2 identical subunits. It is taken from v1.0 of the spec and got lost in
-    later versions.}
-\end{itemize}
+    later versions.}}
+\end{valrules}
+
+% \begin{itemize}
+% \item The process must be irreversible.
+% \item There can only be one `production' \sbgnclass{FluxArc}, with
+%   \attrib{stoichiometry} $= 1$.
+% \item If a \sbgnclass{Complex} is on the RHS of the association then
+%   there must be at least 2 EPNS on the LHS.\glyph{Is this too
+%     restrictive? It prevents multimers being represented as a complex
+%     of 2 identical subunits. It is taken from v1.0 of the spec and got lost in
+%     later versions.}
+% \end{itemize}
 
 \paragraph{Dissociation}
 
 These rules apply if the \attrib{process\_type} is `dissociation'.
 
-\begin{itemize}
-\item The process must be irreversible.
-\item There can only be one `consumption \sbgnclass{FluxArc}, with
-  \attrib{stoichiometry} $= 1$.
-\item If a \sbgnclass{Complex} is on the LHS of the dissociation then
+\begin{valrules}
+\defrule{PD50}{The process must be irreversible.}
+\defrule{PD51}{There can only be one `consumption \sbgnclass{FluxArc}, with
+  \attrib{stoichiometry} $= 1$.}
+\defrule{PD52}{If a \sbgnclass{Complex} is on the LHS of the dissociation then
   there must be at least 2 EPNS on the RHS.\glyph{see comment in
-    association rules}.
-\end{itemize}
+    association rules}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The process must be irreversible.
+% \item There can only be one `consumption \sbgnclass{FluxArc}, with
+%   \attrib{stoichiometry} $= 1$.
+% \item If a \sbgnclass{Complex} is on the LHS of the dissociation then
+%   there must be at least 2 EPNS on the RHS.\glyph{see comment in
+%     association rules}.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -2456,14 +2615,21 @@ usage of the UofI for annotation.} that describes
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item \attrib{name} must not be used by another instance of
-  \sbgnclass{Compartment} contained by the same instance of
-  \sbgnclass{Map}.
-\item \attrib{epns} must contain a unique set of
+\begin{valrules}
+\defrule{PD53}{The process must be irreversible.}
+\defrule{PD54}{\attrib{epns} must contain a unique set of
   \sbgnclass{EntityPoolNodes}. See section \ref{sec:techref:epnuniqueness} for
-  the definition of \sbgnclass{EntityPoolNode} uniqueness.
-\end{itemize}
+  the definition of \sbgnclass{EntityPoolNode} uniqueness.}
+\end{valrules}
+
+% \begin{itemize}
+% \item \attrib{name} must not be used by another instance of
+%   \sbgnclass{Compartment} contained by the same instance of
+%   \sbgnclass{Map}.
+% \item \attrib{epns} must contain a unique set of
+%   \sbgnclass{EntityPoolNodes}. See section \ref{sec:techref:epnuniqueness} for
+%   the definition of \sbgnclass{EntityPoolNode} uniqueness.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -2905,11 +3071,16 @@ None
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item  Two or more instances of \sbgnclass{CrossReference} with the
-  same \attrib{reference\_id} value are pointing to the same element.
-%\item The above rules applies within a \PDm's namespace (see section \ref{sec:techref:mapsubmaps}).
-\end{itemize}
+\begin{valrules}
+\defrule{PD55}{Two or more instances of \sbgnclass{CrossReference} with the
+  same \attrib{reference\_id} value are pointing to the same element.}
+\end{valrules}
+
+% \begin{itemize}
+% \item  Two or more instances of \sbgnclass{CrossReference} with the
+%   same \attrib{reference\_id} value are pointing to the same element.
+% %\item The above rules applies within a \PDm's namespace (see section \ref{sec:techref:mapsubmaps}).
+% \end{itemize}
 
 \subsubsection{Changes from Previous Version}
 
@@ -3000,10 +3171,15 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item All values of \attrib{reference\_id} must be unique within an
-  instance of \sbgnclass{Map}.
-\end{itemize}
+\begin{valrules}
+\defrule{PD56}{All values of \attrib{reference\_id} must be unique within an
+  instance of \sbgnclass{Map}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item All values of \attrib{reference\_id} must be unique within an
+%   instance of \sbgnclass{Map}.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -3088,31 +3264,54 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item if the \attrib{stoichiometry} is not displayed then it is
+\begin{valrules}
+\defrule{PD57}{if the \attrib{stoichiometry} is not displayed then it is
 assumes to be 1\query{The previous version said that the stoichiometry
   was unspecified, but this was before the stoichiometric process was
   specified. In addition since cardinality is defined explicitly the
-  stoichiometry can often be implied.}
-\item If the \attrib{stoichiometry} $>1$ then the stoichiometry must
-  be displayed.\query{See above comment.}
-%\item If the stoichiometry is undefined or unknown this should be
- % indicated by the use of a question mark (``?'')\query{This is
-  %  inconsistent with balanced stoichiometry. It should be removed IMHO.}.
-\item if \attrib{flux\_type} $=$ `consumption' or 'reversible' then:
+  stoichiometry can often be implied.}}
+\defrule{PD58}{If the \attrib{stoichiometry} $>1$ then the stoichiometry must
+  be displayed.\query{See above comment.}}
+\defrule{PD59}{if \attrib{flux\_type} $=$ `consumption' or 'reversible' then:
   \begin{itemize}
   \item The \attrib{in\_node} must be an instance of
     \classref{EntityPoolNode}.
   \item The \attrib{out\_node} must be an instance of
     \classref{StoichiometricProcess}.
-  \end{itemize}
-\item if \attrib{flux\_type} $=$ `production' then:
+  \end{itemize}}
+\defrule{PD60}{if \attrib{flux\_type} $=$ `production' then:
   \begin{itemize}
   \item The \attrib{in\_node} must be an instance of \classref{StoichiometricProcess}.
   \item The \attrib{out\_node} must be an instance of
     \classref{EntityPoolNode}.
-  \end{itemize}
-\end{itemize}
+  \end{itemize}}
+\end{valrules}
+
+% \begin{itemize}
+% \item if the \attrib{stoichiometry} is not displayed then it is
+% assumes to be 1\query{The previous version said that the stoichiometry
+%   was unspecified, but this was before the stoichiometric process was
+%   specified. In addition since cardinality is defined explicitly the
+%   stoichiometry can often be implied.}
+% \item If the \attrib{stoichiometry} $>1$ then the stoichiometry must
+%   be displayed.\query{See above comment.}
+% %\item If the stoichiometry is undefined or unknown this should be
+%  % indicated by the use of a question mark (``?'')\query{This is
+%   %  inconsistent with balanced stoichiometry. It should be removed IMHO.}.
+% \item if \attrib{flux\_type} $=$ `consumption' or 'reversible' then:
+%   \begin{itemize}
+%   \item The \attrib{in\_node} must be an instance of
+%     \classref{EntityPoolNode}.
+%   \item The \attrib{out\_node} must be an instance of
+%     \classref{StoichiometricProcess}.
+%   \end{itemize}
+% \item if \attrib{flux\_type} $=$ `production' then:
+%   \begin{itemize}
+%   \item The \attrib{in\_node} must be an instance of \classref{StoichiometricProcess}.
+%   \item The \attrib{out\_node} must be an instance of
+%     \classref{EntityPoolNode}.
+%   \end{itemize}
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -3413,21 +3612,37 @@ No additional attributes.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item At most one \glyph{necessary stimulation} can be assigned to a process node. Two \glyph{necessary stimulations}
+\begin{valrules}
+\defrule{PD61}{At most one \glyph{necessary stimulation} can be assigned to a process node. Two \glyph{necessary stimulations}
   would imply an implicit AND or OR operator. For clarity only
   one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
   explicitly expressed using \glyph{logical operators}\query{Taken
-    from the grammar section of the previous specification.}.
-\item At most one \glyph{catalysis} can be assigned to a
+    from the grammar section of the previous specification.}.}
+\defrule{PD62}{At most one \glyph{catalysis} can be assigned to a
   \glyph{process}. Modulation by a catalysis arc implies that the exact biochemical mechanism underlying
   the process is known. In this context two \glyph{catalysis} cannot
   be assigned to the same process node as they represent
   independent reactions. Other EPNs can be assigned to the same process as a catalysis, such as modulators, stimulators, and
   inhibitors, and will have a multiplicative modulation on the
   reaction rate defined by the catalysis\query{Taken from the grammar
-    section of the previous specification.}.
-\end{itemize}
+    section of the previous specification.}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item At most one \glyph{necessary stimulation} can be assigned to a process node. Two \glyph{necessary stimulations}
+%   would imply an implicit AND or OR operator. For clarity only
+%   one \glyph{necessary stimulation} can be assigned to a \glyph{process}, and such combinations must be
+%   explicitly expressed using \glyph{logical operators}\query{Taken
+%     from the grammar section of the previous specification.}.
+% \item At most one \glyph{catalysis} can be assigned to a
+%   \glyph{process}. Modulation by a catalysis arc implies that the exact biochemical mechanism underlying
+%   the process is known. In this context two \glyph{catalysis} cannot
+%   be assigned to the same process node as they represent
+%   independent reactions. Other EPNs can be assigned to the same process as a catalysis, such as modulators, stimulators, and
+%   inhibitors, and will have a multiplicative modulation on the
+%   reaction rate defined by the catalysis\query{Taken from the grammar
+%     section of the previous specification.}.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -3609,12 +3824,19 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item The \attrib{in\_node} must be an instance of
-  \sbgnclass{EntityPoolNode} or \sbgnclass{LogicalOperator}.
-\item The \attrib{out\_node} must be an instance of
-  \sbgnclass{LogicalOperator}.
-\end{itemize}
+\begin{valrules}
+\defrule{PD63}{The \attrib{in\_node} must be an instance of
+  \sbgnclass{EntityPoolNode} or \sbgnclass{LogicalOperator}.}
+\defrule{PD64}{The \attrib{out\_node} must be an instance of
+  \sbgnclass{LogicalOperator}.}
+\end{valrules}
+
+% \begin{itemize}
+% \item The \attrib{in\_node} must be an instance of
+%   \sbgnclass{EntityPoolNode} or \sbgnclass{LogicalOperator}.
+% \item The \attrib{out\_node} must be an instance of
+%   \sbgnclass{LogicalOperator}.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -3775,10 +3997,15 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item Only subclasses of \classref{StatelessEPN} can contain
-\sbgnclass{SimpleCloneMarker}s.
-\end{itemize}
+\begin{valrules}
+\defrule{PD65}{Only subclasses of \classref{StatelessEPN} can contain
+\sbgnclass{SimpleCloneMarker}s.}
+\end{valrules}
+
+% \begin{itemize}
+% \item Only subclasses of \classref{StatelessEPN} can contain
+% \sbgnclass{SimpleCloneMarker}s.
+% \end{itemize}
 
 \subsubsection{Notation}
 
@@ -3851,13 +4078,21 @@ No additional associations.
 
 \subsubsection{Rules and Constraints}
 
-\begin{itemize}
-\item At least two or more instanced of a
+\begin{valrules}
+\defrule{PD66}{At least two or more instanced of a
   \sbgnclass{LabelledCloneMarker} with the same \attrib{label} must
-  exist in this same in a given \classref{Map}.
-\item Only subclasses of \classref{StatefulEPN} can contain
-labelled clone markers.
-\end{itemize}
+  exist in this same in a given \classref{Map}.}
+\defrule{PD67}{Only subclasses of \classref{StatefulEPN} can contain
+labelled clone markers.}
+\end{valrules}
+
+% \begin{itemize}
+% \item At least two or more instanced of a
+%   \sbgnclass{LabelledCloneMarker} with the same \attrib{label} must
+%   exist in this same in a given \classref{Map}.
+% \item Only subclasses of \classref{StatefulEPN} can contain
+% labelled clone markers.
+% \end{itemize}
 
 \subsubsection{Notation}
 

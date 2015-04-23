@@ -1,185 +1,185 @@
-format 75
+format 207
 "org.sbgn.level1" // org.sbgn.level1
-  revision 20
+  revision 21
   modified_by 45 "smoodie"
   // class settings
-  //class diagram settings
-  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  //use case diagram settings
-  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
-  //sequence diagram settings
-  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-  //collaboration diagram settings
-  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
-  //object diagram settings
-   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
-  //component diagram settings
-  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  //deployment diagram settings
-  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  //state diagram settings
-  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
-  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
-  //activity diagram settings
-  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
-  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classdiagramsettings member_max_width 0 end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
   
   class_color white 
   classview 128173 "Class View"
-    //class diagram settings
-    draw_all_relations yes hide_attributes no hide_operations default hide_getset_operations default show_members_full_definition yes show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers yes member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language uml show_context_mode default auto_label_position yes show_relation_modifiers yes show_relation_visibility default show_infonote default shadow yes show_stereotype_properties default
-    //collaboration diagram settings
-    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
-    //object diagram settings
-     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
-    //sequence diagram settings
-    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-    //state diagram settings
-    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
-    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
-    //class settings
-    //activity diagram settings
-    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
-    show_infonote default drawing_language default show_stereotype_properties default
+    
+    classdiagramsettings draw_all_relations yes hide_attributes no show_members_full_definition yes show_attribute_modifiers yes member_max_width 0 drawing_language uml auto_label_position yes show_relation_modifiers yes shadow yes end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
     classdiagram 128173 "MainView"
-      draw_all_relations no hide_attributes yes hide_operations yes hide_getset_operations yes show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow no show_stereotype_properties default
+      classdiagramsettings draw_all_relations no hide_attributes yes hide_operations yes hide_getset_operations yes member_max_width 0 shadow no end
       size A2-Landscape
     end
 
     classdiagram 175021 "StoichiometricProcessView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 168109 "AuxiliaryUnitView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 174893 "LogicalOperatorView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 168365 "SubmapNodeView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 134701 "MapView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 134829 "GlyphAuxView"
-      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations yes member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 134957 "EntityPoolNodeView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A0-Landscape
     end
 
     classdiagram 135085 "StatelessEPNView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 141613 "StatefulEPNView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 141741 "EmptySetView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 141869 "ComplexView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 148397 "ProcessView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 154925 "NonStoichiometricProcessView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 161453 "SBGNArcsView"
-      draw_all_relations yes hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations yes member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 168237 "CrossreferenceView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 175149 "CompartmentView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 181677 "AttributeValueView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 188205 "StateVariableView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 194733 "AnnotationView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 194861 "TagView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 201389 "CloneMarkerView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 201517 "FluxArcView"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 201645 "ModulationArcView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 201773 "LogicArcView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 208301 "EquivalenceArcView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 208429 "EntityDefinitionView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
     classdiagram 214957 "SBGNNodeView"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      classdiagramsettings member_max_width 0 end
       size A4-Landscape
     end
 
@@ -193,6 +193,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       attribute 134701 "id"
 	private explicit_type "identifier"
@@ -202,6 +203,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -215,6 +218,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 137389 // elements (<composition>)
 	relation 136749 *---
@@ -259,6 +263,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 137517 // owning_map (<composition>)
 	relation_ref 136749 // <composition>
@@ -283,6 +288,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 128173 // <generalisation>
 	relation 128173 ---|>
@@ -311,6 +317,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 128301 // <generalisation>
 	relation 128301 ---|>
@@ -355,6 +362,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 128557 // <generalisation>
 	relation 128557 ---|>
@@ -373,6 +381,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 142765 // <composition>
@@ -421,6 +431,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 138029 // <generalisation>
 	relation 137261 ---|>
@@ -453,6 +464,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 138157 // <generalisation>
 	relation 137389 ---|>
@@ -473,6 +485,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 142637 // epns (<composition>)
 	relation 140589 *---
@@ -503,6 +516,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       attribute 156077 "natures"
@@ -514,6 +529,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 209069 // displayed_attributes (<directional composition>)
@@ -536,6 +553,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 138285 // <generalisation>
 	relation 137517 ---|>
@@ -575,6 +593,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 138541 // owning_epn (<composition>)
 	relation_ref 137645 // <composition>
@@ -589,6 +608,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 138797 // <generalisation>
@@ -619,6 +640,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 138669 // <generalisation>
 	relation 137773 ---|>
@@ -639,6 +661,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 142253 // <generalisation>
 	relation 140205 ---|>
@@ -666,6 +689,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 139053 // <generalisation>
 	relation 138157 ---|>
@@ -686,6 +710,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 139181 // <generalisation>
 	relation 138285 ---|>
@@ -704,6 +729,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -717,6 +744,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 139309 // <generalisation>
 	relation 138413 ---|>
@@ -735,6 +763,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -748,6 +778,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 140077 // <generalisation>
 	relation 138925 ---|>
@@ -773,6 +804,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -786,6 +819,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       attribute 155693 "operator_type"
 	private explicit_type "enum"
@@ -796,6 +830,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 194989 // <generalisation>
@@ -831,6 +867,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 141741 // <generalisation>
 	relation 139821 ---|>
@@ -865,6 +902,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 142125 // <generalisation>
 	relation 140077 ---|>
@@ -885,6 +923,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 142381 // <generalisation>
 	relation 140333 ---|>
@@ -905,6 +944,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143021 // <generalisation>
 	relation 140845 ---|>
@@ -925,6 +965,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143149 // <generalisation>
 	relation 140973 ---|>
@@ -945,6 +986,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143277 // <generalisation>
 	relation 141101 ---|>
@@ -965,6 +1007,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143533 // owning_epn (<composition>)
 	relation_ref 141229 // <composition>
@@ -989,6 +1032,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143661 // <generalisation>
 	relation 141357 ---|>
@@ -1009,6 +1053,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 143789 // <generalisation>
 	relation 141485 ---|>
@@ -1027,6 +1072,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -1040,6 +1087,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       attribute 141869 "code"
 	private explicit_type "string"
@@ -1050,6 +1098,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       attribute 141997 "value"
@@ -1061,6 +1111,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 188333 // <generalisation>
@@ -1082,6 +1134,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 151085 // <generalisation>
 	relation 148653 ---|>
@@ -1100,6 +1153,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       attribute 142509 "natures"
@@ -1111,6 +1166,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       attribute 142381 "subunit_type"
@@ -1121,6 +1178,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 151597 // states (<aggregation>)
@@ -1168,6 +1227,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 151469 // <generalisation>
 	relation 148909 ---|>
@@ -1192,6 +1252,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 166189 // <generalisation>
 	relation 162989 ---|>
@@ -1202,7 +1263,7 @@ ${members}}
       end
     end
 
-    class 158509 "SubmapNode"
+    class 158509 "Submap"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -1212,6 +1273,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 172717 // <generalisation>
 	relation 169517 ---|>
@@ -1251,6 +1313,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -1264,6 +1328,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 172845 // <generalisation>
 	relation 169645 ---|>
@@ -1275,7 +1340,7 @@ ${members}}
 
       classrelation 179629 // <dependency>
 	relation 176429 -_->
-	  a default
+	  a package
 	    classrelation_ref 179629 // <dependency>
 	  b parent class_ref 137005 // ModulationArc
       end
@@ -1289,6 +1354,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -1302,6 +1369,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 179501 // <generalisation>
 	relation 176301 ---|>
@@ -1322,6 +1390,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 179373 // <generalisation>
 	relation 176173 ---|>
@@ -1342,6 +1411,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 180141 // owning_submap_node (<composition>)
 	relation_ref 176685 // <composition>
@@ -1374,6 +1444,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 180653 // <generalisation>
 	relation 177069 ---|>
@@ -1415,6 +1486,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 181037 // <generalisation>
 	relation 177325 ---|>
@@ -1443,6 +1515,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       attribute 149037 "reference_id"
 	private explicit_type "string"
@@ -1453,6 +1526,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 249645 // equivalence (<aggregation>)
@@ -1474,6 +1549,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 215597 // <generalisation>
 	relation 211757 ---|>
@@ -1492,6 +1568,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 215725 // annotated_glyph (<unidirectional association>)
@@ -1514,6 +1592,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       attribute 175789 "name"
 	private explicit_type "string"
@@ -1524,6 +1603,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       attribute 175917 "natures"
@@ -1535,6 +1616,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
 
       classrelation 229421 // state_definitions (<composition>)
@@ -1564,6 +1647,7 @@ ${members}}
       python_2_2 python_decl ""
       idl_decl ""
       explicit_switch_type ""
+      mysql_decl ""
       
       classrelation 229549 // owning_entity_type (<composition>)
 	relation_ref 225581 // <composition>
@@ -1578,6 +1662,8 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
   end
