@@ -293,11 +293,9 @@ Not defined in the previous version.
 The \sbgnclass{Map}\query{Defining this explicitly is new, but the
   concept of the map as a container of glyphs has always existed in
   the \PDl} (figure \ref{fig:techref:mapuml}) is a container that
-holds all the glyphs (\classref{SBGNGlyph}) drawn in a \PDm. A map may
-represent a submap or a supermap and should comply with the rules set
-out in section \ref{sec:techref:mapsubmaps}. The \attrib{elements} held should be
-logically unique and conform to the identity rules in section
-\ref{sec:techref:uniquenessdefinition}.
+holds all the glyphs (\classref{SBGNGlyph}) drawn in a \PDm. The
+\attrib{elements} held should be logically unique and conform to the
+identity rules in section \ref{sec:techref:uniquenessdefinition}.
 
 
 \subsubsection{Generalisation}
@@ -1782,7 +1780,7 @@ No additional associations.
 hexagon, as illustrated in \fig{techref:phenotype}.
 
 \glyphLabel A \glyph{phenotype} is identified by a label placed in an
-unbordered box containing a string of characters.  The characters can be
+unordered box containing a string of characters.  The characters can be
 distributed on several lines to improve readability, although this is not
 mandatory.  The label box must be attached to the center of the
 \glyph{phenotype} container.  The label may spill outside of the container.
@@ -1803,26 +1801,34 @@ cloned as it is now a subclass of \sbgnclass{Process}, which is always
 unique.
 
 
-\umlclasshead{SubmapNode}
-\label{sec:techref:submap}\label{defn:SubmapNode}
+\umlclasshead{Submap}
+\label{sec:techref:submap}\label{defn:Submap}
 
-The \sbgnclass{SubmapNode}\query{This name change has not been
-  discussed at the time of writing. The aim is to provide clarity
-  between the submap and this glyph.} (figure \ref{fig:techref:submapnodeuml}) is a
-placeholder for another process and is used when one wishes to hide
-the detail of this process from the \PDm, but make it available to the
-reader as a separate related map. The \sbgnclass{Submap} is not
-equivalent to an \sbgnclass{OmittedProcess} (section
-\ref{sec:techref:omitted}). The \sbgnclass{Submap} allows the detail of
-the section of the \PDm to be exported to another \PDm and replaced by the
-\sbgnclass{SubmapNode}, which acts as a place-holder.  This is
-described in section \ref{sec:techref:map} and the semantics of submap linking
-is defined in section \ref{sec:techref:submaplinkingsemantics}.
+The \sbgnclass{Submap} (figure \ref{fig:techref:submapnodeuml})
+represents a process or set of processes and is a mechanism for hiding
+the detail of a portion of a \PDm. The \sbgnclass{Submap} can be
+'collapsed', in which case it acts as a placeholder in the map for the
+information it is hiding, or 'expanded' when the content of the submap
+is displayed. The node is linked to EPNs outside the submap that are
+also in the \sbgnclass{Submap}.  It is anticipated that a software tool
+will use these forms as a convenient way to hide and show portions of
+a large SBGN map.
+
+% is a placeholder for another process
+% and is used when one wishes to hide the detail of this process from
+% the \PDm. The \sbgnclass{Submap} is not equivalent to an
+% \sbgnclass{OmittedProcess} (section \ref{sec:techref:omitted}),
+% because it does not necessarily have inputs and outputs. The
+% \sbgnclass{Submap} allows the detail of the section of the \PDm to be
+% exported to another \PDm and replaced by the \sbgnclass{Submap},
+% which acts as a place-holder.  This is described in section
+% \ref{sec:techref:map} and the semantics of submap linking is defined
+% in section \ref{sec:techref:submaplinkingsemantics}.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width = \textwidth]{images/submapnodeuml}
-  \caption{The UML definition of the \sbgnclass{SubmapNode} and its
+  \caption{The UML definition of the \sbgnclass{Submap} and its
    relationship to its submap, tags etc.}
   \label{fig:techref:submapnodeuml}
 \end{figure}
@@ -1867,7 +1873,7 @@ which are identified by a \sbgnclass{Tag}.
 
 \subsubsection{Notation}
 
-\paragraph{Glyph: \glyph{Submap Node}}
+\paragraph{Glyph: \glyph{Submap}}
 
 \begin{glyphDescription}
 
@@ -1887,15 +1893,16 @@ which are identified by a \sbgnclass{Tag}.
     symbol, without the \glyph{submap terminal} auxiliary units that
     would normally be associated with it. (b) The glyph as it would
     typically be used within a map --- associated with EPN glyphs and
-    containing \glyph{submap terminals}.}
+    containing \glyph{submap terminals}. (c) An expanded view of the
+    submap showing its content.}
   \label{fig:techref:submap}
 \end{figure}
 
 \subsubsection{Changes from Previous Version}
 
 This glyph was called \glyph{Submap} in previous version of the \PD
-specification. This is confusing when talking about the Submap itself
-so this glyph is now referred to as the SubmapNode to distinguish it.
+specification. The semantics of the Submap have been clarified and the
+ability of submaps to be independent of the main map has been removed.
 
 \umlclasshead{LogicalOperator}
 \label{sec:techref:logic}
@@ -2825,7 +2832,11 @@ container with a folded corner, as illustrated in
 via a callout (see figure \ref{fig:techref:ex-annotation}. The callout should
 overlap with the object it is annotating.
 
-\glyphLabel An \glyph{annotation} contains information placed in an unbordered box containing a string of characters.  The characters can be distributed on several lines to improve readability, although this is not mandatory.  The label box must be attached to the center of the container. The label may spill outside of the container.
+\glyphLabel An \glyph{annotation} contains information placed in an
+unbordered box containing a string of characters.  The characters can
+be distributed on several lines to improve readability, although this
+is not mandatory.  The label box must be attached to the center of the
+container. The label may spill outside of the container.
 
 \end{glyphDescription}
 
@@ -2839,7 +2850,11 @@ overlap with the object it is annotating.
 \begin{figure}[htb]
   \centering
   \includegraphics[scale = 0.5]{examples/ex-annotation}
-  \caption{Example of \glyph{annotations} adding information to the description of the trans-phosphorylation of CaMKII. Note that three different types of links are used between annotation nodes and annotated elements. However, it is recommended to use a consistent scheme whithin a map.}
+  \caption{Example of \glyph{annotations} adding information to the
+    description of the trans-phosphorylation of CaMKII. Note that
+    three different types of links are used between annotation nodes
+    and annotated elements. However, it is recommended to use a
+    consistent scheme whithin a map.}
   \label{fig:techref:ex-annotation}
 \end{figure}
 
@@ -2893,7 +2908,7 @@ None
 \begin{itemize}
 \item  Two or more instances of \sbgnclass{CrossReference} with the
   same \attrib{reference\_id} value are pointing to the same element.
-\item The above rules applies within a \PDm's namespace (see section \ref{sec:techref:mapsubmaps}).
+%\item The above rules applies within a \PDm's namespace (see section \ref{sec:techref:mapsubmaps}).
 \end{itemize}
 
 \subsubsection{Changes from Previous Version}
@@ -2906,8 +2921,8 @@ Not defined in the previous version.
 A \sbgnclass{SubmapTerminal}\query{Not properly defined in previous
   versions of the spec. The rules described here are consistent with
   accepted usage.} (figure \ref{fig:techref:submapnodeuml}) is a named reference that is part of a
-\classref{SubmapNode}. It provides the reference that is the link to a
-tag in the submap that the \sbgnclass{SubmapNode} refers to.
+\classref{Submap}. It provides the reference that is the link to a
+tag in the submap that the \sbgnclass{Submap} refers to.
 
 \subsubsection{Generalisation}
 
@@ -4049,8 +4064,6 @@ by \SBGNPDLone.
 \label{sec:techref:epnuniqueness}
 \label{sec:techref:uniquenessdefinition}
 
-\textbf{Add something about process identity}
-
 By definition all glyphs drawn on a \PDl are unique. They are shapes
 that are distinct from other shapes drawn on the map. However, in some
 cases the glyphs can represent the same concepts. The \PDl has a
@@ -4148,110 +4161,69 @@ illustrated in figure~\ref{fig:techref:cloningrules-eg}.
   \label{fig:techref:cloningrules-eg}
 \end{figure}
 
-\section{Map and Submap Linking}
-\label{sec:techref:mapsubmaps}
-\label{sec:techref:submaplinkingsemantics}
+% \section{Map and Submap Linking}
+% \label{sec:techref:mapsubmaps}
+% \label{sec:techref:submaplinkingsemantics}
 
-The submap is a visual device that allows the detail of an \PD map to
-be exported into another \PD map and replaced by a
-\classref{SubmapNode}, which acts as a place-holder. In the case of an
-SBGN description that is made available through a software tool, the
-content of a \sbgnclass{SubmapNode} may be available to the tool.  A
-user could then ask the tool to expand it, for instance by clicking on
-the \glyph{submap node} glyph.  The tool might then expand and show
-its submap within the same map, or it might display it as a separate
-map. In the case of an SBGN description made available in a book or a
-website, the content of the \glyph{submap node} may be available on another
-page, possibly accessible via a hyperlink.\query{Currently we can't
-  name a map so linking between supermaps and submaps is problematic.}
+% The submap is a visual device that allows the detail of an \PD map to
+% be exported into another \PD map and replaced by a
+% \classref{Submap}, which acts as a place-holder. In the case of an
+% SBGN description that is made available through a software tool, the
+% content of a \sbgnclass{Submap} may be available to the tool.  A
+% user could then ask the tool to expand it, for instance by clicking on
+% the \glyph{submap node} glyph.  The tool might then expand and show
+% its submap within the same map, or it might display it as a separate
+% map. In the case of an SBGN description made available in a book or a
+% website, the content of the \glyph{submap node} may be available on another
+% page, possibly accessible via a hyperlink.\query{Currently we can't
+%   name a map so linking between supermaps and submaps is problematic.}
 
-As you can see the rules relating to the submap concept range wider
-than those applying to the \sbgnclass{SubmapNode} so we will detail
-these rules here. The concepts and nomenclature here can get confusing, so we will use
- the following nomenclature in the rest of this section\query{This
-   nomenclature has not been used previously. The previous
-   nomenclature was a bit confusing and didn't capture the hierarchy
-   of maps well.}:
-\begin{description}
-\item[supermap] The map that owns the submap and so contains the submap glyph referring to it.
-\item[submap] The map that contains the detail summarised by the submap glyph in the super-map.
-\item[\attrib{reference\_id}] the value displayed by the tag and
-  submap terminal. These must be the same to indicate equivalence
-  between map and submap.
-\end{description}
+% As you can see the rules relating to the submap concept range wider
+% than those applying to the \sbgnclass{Submap} so we will detail
+% these rules here. The concepts and nomenclature here can get confusing, so we will use
+%  the following nomenclature in the rest of this section\query{This
+%    nomenclature has not been used previously. The previous
+%    nomenclature was a bit confusing and didn't capture the hierarchy
+%    of maps well.}:
+% \begin{description}
+% \item[supermap] The map that owns the submap and so contains the submap glyph referring to it.
+% \item[submap] The map that contains the detail summarised by the submap glyph in the super-map.
+% \item[\attrib{reference\_id}] the value displayed by the tag and
+%   submap terminal. These must be the same to indicate equivalence
+%   between map and submap.
+% \end{description}
 
-\fig{techref:submap-folded} represents a \glyph{submap node} that transforms
-glucose into fructose-6-phosphate.
-%The \glyph{submap node} carries five terminals, four linked to EPNs and one linked
-%to a \glyph{compartment}.  The latter is particularly important in the case of EPNs
-%present only in a \glyph{compartment} enclosed in a \glyph{submap node}, and that
-%are not linked to terminals themselves.
-The \glyph{submap node} carries four terminals linked to EPNs.
-Note that the terminals do not define a ``direction'', such as input or
-output.  The flux of the reactions is determined by the context.
+% \fig{techref:submap-folded} represents a \glyph{submap node} that transforms
+% glucose into fructose-6-phosphate.
+% %The \glyph{submap node} carries five terminals, four linked to EPNs and one linked
+% %to a \glyph{compartment}.  The latter is particularly important in the case of EPNs
+% %present only in a \glyph{compartment} enclosed in a \glyph{submap node}, and that
+% %are not linked to terminals themselves.
+% The \glyph{submap} carries four terminals linked to EPNs.
+% Note that the terminals do not define a ``direction'', such as input or
+% output.  The flux of the reactions is determined by the context.
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[scale = 0.4]{examples/submap-folded}
-  \caption{Example of a submap with contents elided.}
-  \label{fig:techref:submap-folded}
-\end{figure}
+% \begin{figure}[htb]
+%   \centering
+%   \includegraphics[scale = 0.4]{examples/submap-folded}
+%   \caption{Example of a submap with contents elided.}
+%   \label{fig:techref:submap-folded}
+% \end{figure}
 
-The map in \fig{techref:submap-unfolded} represents an unfolded version of a
-\glyph{submap}.  Here, anything outside the \glyph{submap node} has
-disappeared, and the internal \glyph{tags} are not linked to the
-corresponding external \glyph{submap terminals}.\query{This example
-in the previous version of the spec  included compartment
-tagging. This has been removed, but the example may need refinement as
-a result.}
+% The map in \fig{techref:submap-unfolded} represents an unfolded version of a
+% \glyph{submap}.  Here, anything outside the \glyph{submap} has
+% disappeared, and the internal \glyph{tags} are not linked to the
+% corresponding external \glyph{submap terminals}.\query{This example
+% in the previous version of the spec  included compartment
+% tagging. This has been removed, but the example may need refinement as
+% a result.}
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[scale = 0.35]{examples/submap-dissociated}
-  \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{techref:submap-folded}.}
-  \label{fig:techref:submap-unfolded}
-\end{figure}
-
-\subsection{Namespace and the relationship between maps}
-
-The following rules apply to the use of the \sbgnclass{SubmapNode} and
-submaps in the \PDl\query{These rules are taken from the previous
- version of the spec, but rules about the depth of submap `recursion',
- the uniqueness of reference\_id values and cloning between maps are not}.
-
-
-\begin{itemize}
-\item Submaps can contain \sbgnclass{SubmapNode} instances so submaps
-  can contain submaps - there is no limit on the depth of this.
-\item Submaps share the same namespace as their supermap. Therefore submaps of
-  submaps share the top-most map's namespace.
-\item Compartment's can be replicated across submaps and they all
-  refer to the same compartment if they share the same name.
-\item Subclasses of \sbgnclass{EntityPoolNode} replicated in both map
-  and its immediate submap must be
-  associated with a subclass of \sbgnclass{CrossReference}
-  (\sbgnclass{SubmapTerminal} for the supermap and \sbgnclass{Tag} for
- the submap).
-\item Subclasses of \sbgnclass{EntityPoolNode} may be replicated
-  between submaps separated by one or more other submaps, i.e. those
-  not affected by the above rule.
-\item All \attrib{reference\_id}s used must be unique within a given
-  map namespace.
-\item submap folding: all tagged nodes in submap merge with those
-  linked to terminals in super-map. If either node is cloned then all
-  equivalent nodes in merged map must share the appropriate clone
-  marker.
-\item For a valid mapping between subclasses of \sbgnclass{EntityPoolNode} in a supermap and submap to
-  exist, the \sbgnclass{EntityPoolNode} subclasses must be logically
-  identical and the \attrib{reference\_id} in their associated \sbgnclass{CrossReference} must be identical.
-\item A \sbgnclass{SubmapNode} which does not have a corresponding
-  submap is valid.
-\item Submaps without a corresponding supermap are invalid\query{We
-  need to sort out mapping between super and sub maps to get this
-  working. I propose naming the maps}.
-\item Subclasses of \sbgnclass{EntityPoolNode} with the same name must
-  share the same \sbgnclass{EntityType}.
-\end{itemize}
+% \begin{figure}[htb]
+%   \centering
+%   \includegraphics[scale = 0.35]{examples/submap-dissociated}
+%   \caption{Example of an unfolded submap. The unfolded submap corresponds to the folded submap of \fig{techref:submap-folded}.}
+%   \label{fig:techref:submap-unfolded}
+% \end{figure}
 
 \subsection{Compartment spanning}
 
