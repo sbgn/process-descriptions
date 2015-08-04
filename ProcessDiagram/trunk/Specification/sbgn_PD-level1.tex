@@ -32,7 +32,7 @@
 \usepackage[olditem,oldenum]{paralist}
 \usepackage{fourier}
 \usepackage{multicol}
-\usepackage[toc,section=chapter,numberedsection]{glossaries}
+%\usepackage[toc,section=chapter,numberedsection]{glossaries}
 %\usepackage{layouts}
 
 \usepackage[pdftex]{graphicx}
@@ -41,6 +41,16 @@
  \usepackage[pdftex]{hyperref}
 
 \usepackage{rotating}
+
+% glossaries must be loaded after hyperref
+% to avoid warnings "pdfTeX warning (dest): name{glo:...} has been referenced but does not exist, replaced by a fixed one"
+% use the following three lines or [noredefwarn} as an option for the glossaries package
+% to avoid warnings "Package glossaries Warning: Overriding \printglossary on input line ..." and "Package glossaries Warning: Overriding 'theglossary' environment on input line ..."
+%\let\printglossary\relax
+%\let\theglossary\relax
+%\let\endtheglossary\relax
+%\usepackage[toc,section=chapter,numberedsection]{glossaries}
+\usepackage[toc,section=chapter,numberedsection,noredefwarn]{glossaries}
 
 % Booktabs for sharp-looking \toprule, \midrule, \bottomrule in tables.
 
@@ -66,6 +76,12 @@
 %% ----------------------------------------------------------------------------
 
 %\input{sources/latex-style}
+
+% this option avoids these warnings "PDF inclusion: multiple pdfs with page group included in a single page"
+% pdftex 1.40.15 and higher
+% see also https://tex.stackexchange.com/questions/183149/cant-silence-a-pdftex-pdf-inclusion-multiple-pdfs-with-page-group-error
+\pdfsuppresswarningpagegroup=1
+
 \input{sources/latex-macros}
 
 \makeglossaries
