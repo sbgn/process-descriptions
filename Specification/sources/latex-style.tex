@@ -8,6 +8,10 @@
 
 \usepackage{ifpdf}
 
+% loading package float before package hyperref avoids these warnings
+% "destination with the same identifier ... has been already used, duplicate ignored"
+\usepackage{float}
+
 % Pass options to xcolor. This is called by other packages so an
 % explicit call later leads to an error.
 \ifpdf
@@ -30,7 +34,7 @@
 \usepackage{array}
 \usepackage{fancybox}
 \usepackage{xspace}
-\usepackage{float}
+%\usepackage{float}
 \usepackage{framed}
 \usepackage{eso-pic}
 \usepackage{ifthen}
@@ -94,6 +98,11 @@
 %% ----------------------------------------------------------------------------
 %% Special customizations
 %% ----------------------------------------------------------------------------
+
+% this option avoids these warnings "PDF inclusion: multiple pdfs with page group included in a single page"
+% pdftex 1.40.15 and higher
+% see also https://tex.stackexchange.com/questions/183149/cant-silence-a-pdftex-pdf-inclusion-multiple-pdfs-with-page-group-error
+\pdfsuppresswarningpagegroup=1
 
 \makeatletter
 

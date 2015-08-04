@@ -98,7 +98,7 @@ which it makes sense to provide a brief glossary here:
   \item[R] Required (attributes only).
   \item[O] Optional (attributes only).
   \item[1] required - only one instance is permitted (association only).
-  \item[0..1] optional -  zero or one instance ir permitted (association only).
+  \item[0..1] optional -  zero or one instance is permitted (association only).
   \item[1..*] at least 1 instance is required.
   \item[*] any number of instances are permitted.
   \end{description}
@@ -176,7 +176,7 @@ this classes definition but are not defined here explicitly.
 superclasses are not included here, but are part of this classes
 definition.
 \item[Unique Key] The attributes that together uniquely identify the
-  \PD element or concept. If this is ommited then there is no unique
+  \PD element or concept. If this is omitted then there is no unique
   key. See section~\ref{sec:techref:uniquenessdefinition} for more
   information about identity and uniqueness.
 \item[Rules and Constraints] The semantics of the class are defined
@@ -317,9 +317,9 @@ No additional attributes
 \subsubsection{Rules and Constraints}
 
 \begin{valrules}
-\defrule{PD1}{A map is valid if it is empty (although not very
+\defrule{PD01}{A map is valid if it is empty (although not very
   useful).}
-\defrule{PD2}{All instances of \classref{SBGNGlyph} must be unique (see
+\defrule{PD02}{All instances of \classref{SBGNGlyph} must be unique (see
   section \ref{sec:techref:uniquenessdefinition}).}
 \end{valrules}
 
@@ -452,7 +452,7 @@ No additional attributes.
 \subsubsection{Rules and Constraints}
 
 \begin{valrules}
-\defrule{PD3}{The set of \sbgnclass{SBGNNode}s linked to this node via a
+\defrule{PD03}{The set of \sbgnclass{SBGNNode}s linked to this node via a
   \sbgnclass{SBGNArc} (its adjacent nodes) must be all belong to
   different entity pools (as defined by \sbgnclass{EntityPoolNode}).}
 \end{valrules}
@@ -739,18 +739,18 @@ that not all EPNs can be cloned.
 \subsubsection{Rules and Constraints}
 
 \begin{valrules}
-\defrule{PD4}{If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
+\defrule{PD04}{If \attrib{cardinality} $>1$ then the descendant glyph must be displayed
   as a multimer.}
-\defrule{PD5}{If the EPN is drawn directly on a \glyph{Map} then
+\defrule{PD05}{If the EPN is drawn directly on a \glyph{Map} then
   \attrib{owning\_compartment} is not set. We interpret this as
   belonging to an invisible default compartment.}
-\defrule{PD6}{\attrib{natures} can only use the material type
+\defrule{PD06}{\attrib{natures} can only use the material type
    (section~\ref{sec:techref:material-types-cv}), conceptual type
    (section \ref{sec:techref:conceptual-types-cv}) or physical 
  characteristics (section \ref{sec:techref:physical-characteristics-cv}) controlled vocabularies.}
-\defrule{PD7}{The appropriate subclass of \sbgnclass{CloneMarker} must be used
+\defrule{PD07}{The appropriate subclass of \sbgnclass{CloneMarker} must be used
   to distinguish logically identical instances of this class.}
-\defrule{PD8}{All \sbgnclass{StateVariableDefinition}s associated with the
+\defrule{PD08}{All \sbgnclass{StateVariableDefinition}s associated with the
   \sbgnclass{EntityType} must have an associated
   \sbgnclass{StateVariable}.}
 \end{valrules}
@@ -869,7 +869,7 @@ No additional associations.
 \subsubsection{Rules and Constraints}
 
 \begin{valrules}
-\defrule{PD9}{All instances of \glyph{Empty Set} can be regarded as identical
+\defrule{PD09}{All instances of \glyph{Empty Set} can be regarded as identical
 therefore no special decoration is used to indicate replication on
 the map.}
 \defrule{PD10}{The \sbgnclass{EmptySet} must be associated with at least
@@ -1174,13 +1174,13 @@ mandatory.  The label box must be attached to the center of the
 
 \subsubsection{Changes from Previous Version}
 
-No changes from pervious version.
+No changes from previous version.
 
 \umlclasshead{StatefulEPN}
 \label{defn:StatefulEPN}
 
 Stateful entity pools can undergo physical changes, for example
-chemical modifcation or conformational change, which we wish to record
+chemical modification or conformational change, which we wish to record
 in a \PDm. This information is captured via the
 \sbgnclass{StateVariable} (as can be seen in figure
 \ref{fig:techref:statefulepnuml}). The \sbgnclass{LabellecCloneMarker} must be
@@ -1612,7 +1612,7 @@ hierarchy (\sbgnclass{Subunit}, but rather uses the
   below apply.}
 \defrule{PD24}{The subunit defines a namespace for its state variables, e.g.\,
   subunit ``A'' assigned a state variable ``P@Ser202''  and a subunit
-  ``B'' assigned the same state variable can be distinguised as
+  ``B'' assigned the same state variable can be distinguished as
   A:P@Ser202 and B:P@Ser202.}
 \defrule{PD25}{If the subunit is of type Complex then \attrib{children} can contain one or
   more \sbgnclass{Subunit} instances.}
@@ -1655,7 +1655,7 @@ corresponding to their \attrib{name}.
 \begin{tabular}[c]{l l l}\toprule\\
 SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
   Chemical Multimer}\\
-UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\
+UnspecifiedEntity & \glyph{Unspecified Entity} & None\\
 PerturbingAgent & \glyph{Perturbing Agent} & None\\
 Macromolecule & \glyph{Macromolecule Monomer} &
 \glyph{Macromolecule Multimer}\\
@@ -1687,7 +1687,7 @@ Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
 % \begin{supertabular}{ l l l}
 % SimpleChemical &  \glyph{Simple Chemical Monomer} & \glyph{Simple
 %   Chemical Multimer}\\
-% UnspecifiedEntity & \glyph{Unspecificed Entity} & None\\
+% UnspecifiedEntity & \glyph{Unspecified Entity} & None\\
 % PerturbingAgent & \glyph{Perturbing Agent} & None\\
 % Macromolecule & \glyph{Macromolecule Monomer} &
 % \glyph{Macromolecule Multimer}\\
@@ -1698,7 +1698,7 @@ Complex & \glyph{Complex Monomer} & \glyph{Complex Multimer}\\
 % \end{center}
 
 The example in figure \ref{fig:techref:complexSubunits} illustrates the use of
-subunits in a complex.  It also shows an equivalent compex without
+subunits in a complex.  It also shows an equivalent complex without
 subunits.
 %  This is an import point. For every \glyph{Complex} drawn
 % with subunits it will always be possible to drawn an equivalent
@@ -2878,7 +2878,7 @@ No additional rules and constraints.
 \glyphSboTerm Not applicable.
 
 \glyphContainer A \glyph{state variable} is represented by a
-``stadium'' container, that is two hemicercles of same radius joined
+``stadium'' container, that is two hemicircles of same radius joined
 by parallel segments, as shown in \fig{techref:state-var}.  The parallel
 segment axis should be tangent to the border of the glyph of the
 \glyph{EPN} being modified by the \glyph{state variable}. The center
@@ -3020,7 +3020,7 @@ container. The label may spill outside of the container.
     description of the trans-phosphorylation of CaMKII. Note that
     three different types of links are used between annotation nodes
     and annotated elements. However, it is recommended to use a
-    consistent scheme whithin a map.}
+    consistent scheme within a map.}
   \label{fig:techref:ex-annotation}
 \end{figure}
 
@@ -3045,8 +3045,8 @@ This is a new language element and an not previous versions of the \PDl.
 \sbgnclass{CrossReference}\query{A new concept required for
   consistency between tags ans submap terminals.} handles links or relationships between elements of a
 map and submap. At present there is only one reference glyph,
-\glyph{tag}, which can be used in a map refered to by a \glyph{submap}
-(\sect{techref:submap}) or as an auxilary unit on the \glyph{submap}. The
+\glyph{tag}, which can be used in a map referred to by a \glyph{submap}
+(\sect{techref:submap}) or as an auxiliary unit on the \glyph{submap}. The
 \glyph{clone marker} can also provide additional reference mechanisms
 and is discussed below (\sect{techref:cloneMarker}).
 
@@ -4133,7 +4133,7 @@ the \attrib{natures} of an \classref{EntityPoolNode} or
 taken from controlled vocabularies defined below. When displayed in
 some cases it is mandatory to prefix a code indicating the type of
 controlled vocabulary used.  This is in order to make it clear what
-the information is that the value referes to: for example 'mt'
+the information is that the value refers to: for example 'mt'
 indicates that a value 'rna' is describing the material RNA.
 
 In the rest of this section, we describe the controlled vocabularies
@@ -4144,7 +4144,7 @@ characteristics. These controlled vocabularies are \emph{closed} in
 the sense that only the values defined for each CV can be used in a
 valid \PDm and also closed because only the controlled vocabularies
 defined in this specification can be used in a valid \PDm\query{The
-  previous version was a bit vaque but implied that the CVs were
+  previous version was a bit vague but implied that the CVs were
   open. This has been changed after discussion on the list.}. We
 understand that this is of necessity restrictive, but in closing these
 definitions it means we can be clear about the meaning of all CV terms
@@ -4173,7 +4173,7 @@ The labels are defined by \SBGNPDLone.
     Non-macromolecular ion     & mt:ion  & SBO:0000327\\
     Non-macromolecular radical & mt:rad  & SBO:0000328\\
     Ribonucleic acid           & mt:rna  & SBO:0000250\\
-    Deoxribonucleic acid       & mt:dna  & SBO:0000251\\
+    Deoxyribonucleic acid       & mt:dna  & SBO:0000251\\
     Protein                    & mt:prot & SBO:0000297\\
     Polysaccharide             & mt:psac & SBO:0000249\\
     \bottomrule

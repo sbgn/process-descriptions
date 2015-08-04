@@ -203,14 +203,14 @@ marked as cloned in the submap --- even if there is only one copy of the EPN in 
 % \subsection{Entity Pool Nodes}
 
 % \begin{description}
-% \item[PD1] The identity of an EPN is defined by a combination of its compartment, entity type (e.g. complex or macromolecule), name and state variables (if any).
-% \item[PD2] A Complex’s identity consists of the identity of its subunits and a name is optional. All complexes with the same name should have the same subunits.
-% \item[PD3] An EPN may belong to only one compartment.
-% \item[PD4] An EPN belongs to only one compartment. If no compartment is draw it is assumed to belong to a “default” compartment.
-% \item[PD5] An EPN can overlap more than one compartment and in this case it is deferred to the drawing tool or author to assign the owning compartment. Note this rule need not apply in cases where SBGN is draw by hand.
-% \item[PD6] A Complex may contain subunits that belong to different compartments (the complex itself will belong to only one, however).
-% \item[PD7] The layout or organisation of a compartment does not imply anything about its topology.
-% \item[PD8] The layout or organisation of the EPNs in a complex does not imply any information about topology.
+% \item[PD01] The identity of an EPN is defined by a combination of its compartment, entity type (e.g. complex or macromolecule), name and state variables (if any).
+% \item[PD02] A Complex’s identity consists of the identity of its subunits and a name is optional. All complexes with the same name should have the same subunits.
+% \item[PD03] An EPN may belong to only one compartment.
+% \item[PD04] An EPN belongs to only one compartment. If no compartment is draw it is assumed to belong to a “default” compartment.
+% \item[PD05] An EPN can overlap more than one compartment and in this case it is deferred to the drawing tool or author to assign the owning compartment. Note this rule need not apply in cases where SBGN is draw by hand.
+% \item[PD06] A Complex may contain subunits that belong to different compartments (the complex itself will belong to only one, however).
+% \item[PD07] The layout or organisation of a compartment does not imply anything about its topology.
+% \item[PD08] The layout or organisation of the EPNs in a complex does not imply any information about topology.
 % \item[PD10] Complexes can be nested. This does imply information about the complex’s topology.
 % \item[PD11] A complex should consist of different EPNs. If two or more elements of the complex are identical then they should be replaced by a multimer.
 % \item[PD12] Source and sink nodes must have no name and be attached to only one consumption or production arc.
