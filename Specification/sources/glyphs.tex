@@ -1941,8 +1941,8 @@ a large SBGN map.
 \subsubsection{Associations}
 
 \begin{attributes}
-\associtem{terminals}{SubmapTerminal}{1..*} The terminals provide a
-reference between the EPNs in the Main Map and those in the submap,
+\associtem{terminals}{SubmapTerminal}{1..*} The terminals show how the
+EPNs in the Map link to those in the collapsed submap,
 which are identified by a \sbgnclass{Tag}.
 \end{attributes}
 
@@ -1998,9 +1998,9 @@ which are identified by a \sbgnclass{Tag}.
 
 \subsubsection{Changes from Previous Version}
 
-This glyph was called \glyph{Submap} in previous version of the \PD
-specification. The semantics of the Submap have been clarified and the
-ability of submaps to be independent of the main map has been removed.
+The semantics of the Submap have been clarified and the ability of
+submaps to be independent of a map has been removed\footnote{This
+  change was agreed at SBGN 10 in Los Angeles, 2014.}.
 
 \umlclasshead{LogicalOperator}
 \label{sec:techref:logic}
@@ -2184,7 +2184,7 @@ for example association and dissociation. The permitted values for
 \begin{tabular}[c]{l p{10cm}}
 \\\toprule
 generic & A generic stoichiometric process that transforms a set of entity pools into another set of entity pools.\\
-omitted & Omitted processes are processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony. A single \glyph{omitted process} can represent any number of actual processes. The \glyph{omitted process} is different from a \glyph{submap}. While a \glyph{submap} references to an explicit content, that is hidden in the main map, the \glyph{omitted process} does not ``hide'' anything within the context of the map, and cannot be ``unfolded''.\\
+omitted & Omitted processes are processes that are known to exist, but are omitted from the map for the sake of clarity or parsimony. A single \glyph{omitted process} can represent any number of actual processes. The \glyph{omitted process} is different from a \glyph{submap}. While a \glyph{submap} references to an explicit content, that is hidden in the map, the \glyph{omitted process} does not ``hide'' anything within the context of the map, and cannot be ``unfolded''.\\
 uncertain & Uncertain processes are processes that may not exist. A single \glyph{uncertain process} can represent any number of actual processes.\\
 association & The association between one or more \glyph{EPNs} represents the non-covalent binding of the biological objects represented by those \glyph{EPNs} into a larger complex.\\
 dissociation & The dissociation of an \glyph{EPN} into one or more \glyph{EPNs} represents the rupture of a non-covalent binding between the biological entities represented by those \glyph{EPNs}.\\
