@@ -1,0 +1,99 @@
+% $HeadURL$
+
+\begin{titlingpage}
+
+\vspace*{0.75in}
+
+\begin{center}
+
+  \textbf{\sffamily\bfseries\huge
+    Systems Biology Graphical Notation:\\[0.3em]
+    \PDl}
+
+\vspace*{0.2in}
+
+\textbf{\sffamily\bfseries\huge Level 1}
+
+\vspace*{0.25in}
+
+\Large
+\textbf{Version 2.0}\\[0.2in]
+\large
+% Date: \sbgndate\\[0.25in]
+Date: \today\\[0.25in]
+
+ \cornersize{0.3}\ovalbox{\begin{minipage}{4.9in}\color{DarkRed}
+ Disclaimer: This is a working draft of the SBGN Process Description
+ Level~1 Version 2.0 specification.  It is not a normative document.
+ \end{minipage}}
+
+\vspace{0.5in}
+
+% Acknowledgements
+
+\textbf{\sffamily Editors}:\\[7pt]
+\begin{tabular}{l>{\hspace*{15pt}}r}
+Stuart Moodie & \emph{Eight Pillars Ltd, UK}\\
+Tobias Czauderna  & \emph{Monash University, Australia}\\
+Emek Demir       & \emph{Memorial Sloan-Kettering Institute, USA}\\
+Robin Haw       & \emph{Ontario Institute for Cancer Research, Canada}\\
+Augustin Luna & \emph{Memorial Sloan-Kettering Institute, USA}\\
+Huaiyu Mi & \emph{University of Southern California, USA}\\
+Nicolas \lenov   & \emph{Babraham Institute, UK}\\
+Falk Schreiber  & \emph{Monash University, Australia \& MLU Halle, Germany}\\
+Anatoly Sorokin  & \emph{Institute of Cell Biophysics RAS, RU}\\
+Alice Vill\'{e}ger & \emph{Freelance IT Consultant, UK}
+\end{tabular}
+
+% \vspace*{1em}
+% \textbf{\sffamily Principal Authors}:\\[7pt]
+% \begin{tabular}{l>{\hspace*{15pt}}r}
+% Nicolas \lenov   & \emph{EMBL European Bioinformatics Institute, UK}\\
+% Stuart Moodie    & \emph{CSBE, University of Edinburgh, UK}\\
+% Anatoly Sorokin  & \emph{University of Edinburgh, UK}\\
+% Michael Hucka	 & \emph{California Institute of Technology, USA}\\
+% Falk Schreiber	 & \emph{IPK Gatersleben \& MLU Halle, Germany}\\
+% Emek Demir	 & \emph{MSKCC Computational Biology Center, USA}\\
+% Huaiyu Mi	 & \emph{SRI International, USA}\\
+% Yukiko Matsuoka	 & \emph{The Systems Biology Institute, Japan}\\
+% Katja Wegner	 & \emph{University of Hertfordshire, UK}\\
+% \multicolumn{2}{l}{\emph{and}}\\
+% Hiroaki Kitano	 & \emph{The Systems Biology Institute, Japan}\\
+% \end{tabular}
+
+\vfill
+
+\normalsize
+\begin{minipage}{5in}
+  \emph{To discuss any aspect of SBGN, please send your messages
+    to the mailing list \mailto{sbgn-discuss@caltech.edu}.  To get
+    subscribed to the mailing list or to contact us directly,
+    please write to \mailto{sbgn-editors@lists.sourceforge.net}. Bug reports and specific comments about the specification should be entered in the issue tracker \url{http://p.sf.net/sbgn/pd_tracker}.}
+\end{minipage}
+
+\vfill
+
+\centerline{\includegraphics[width=1.25in]{\SBGNLogoFile}}
+
+\end{center}
+
+\end{titlingpage}
+
+% The title page is considered unnumbered and the next page after this
+% starts with the page number 1 (actually, i), but the duplication of page
+% number 1 confuses hyperref and leads to the following latex warning:
+%
+%   "pdfTeX warning (ext4): destination with the same identifier
+%   (name{page.1}) has been already used, duplicate ignored"
+%
+% The following change makes the title page have page number 1 and the next
+% page after that it becomes page ii.  This is unorthodox, but seems not
+% completely unreasonable, and it avoids the confusing warning above.
+
+\setcounter{page}{2}
+
+
+% The following is for [X]Emacs users.  Please leave in place.
+% Local Variables:
+% TeX-master: "../sbgn_PD-level1"
+% End:

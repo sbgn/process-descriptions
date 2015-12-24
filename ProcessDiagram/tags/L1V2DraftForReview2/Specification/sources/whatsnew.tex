@@ -1,0 +1,45 @@
+\chapter{What's New}
+\label{chap:whatsnew}
+
+\section{Introduction}
+
+This version of the \PDl is a significant revision of the previous version of the standard. It includes new and updated glyphs, updated and clarified semantics and most obviously this radically revised specification document.  Below we provide more details about the these changes.
+
+
+\section{Specification}
+
+The previous version of the specification suffered from a number of deficiencies:
+
+\begin{enumerate}
+\item It was redundant and in places inconsistent. The glyph and grammars section described the same language rules, but these descriptions were sometime inconsistent.
+\item It was hard for the reader to find rules as they were spread between the glyph and grammar sections.
+\item The specification contained a number of ambiguities such as when an EPN was the same or whether the Phenotype could be cloned. Such ambiguities arose partly because some concepts like the type of an EPN were not explicitly defined.
+\item Some rules were difficult to articulate in prose and a UML based description allows us to articulate such rules explicitly and in a unified description with the other concepts in the language.
+\end{enumerate}
+
+This specification addresses such problems by putting the language rules and glyph description in one place (chapter~\ref{chp:glyphs}) and based the language definition on a UML class model. The approach taken and the motivation is described in more detail in section~\ref{sec:lang-intro}.
+
+\section{Glyphs}
+
+\begin{description}
+\item[Annotation (New)] This version sees the introduction of the annotation glyph. This makes the \PDl consistent with the other SBGN languages. The glyph provides a mechanisms to annotate parts of an SBGN map and does not affect the meaning of the map. See section~\ref{defn:Annotation}.
+\item[State Variable] The symbol used for this glyph has been modified to use the stadium (or capsule) glyph. This replaces the ellipse although the circle is preserved (it can be though of as a special form of the stadium symbol with no straight edges). More details can be found in section~\ref{defn:StateVariable}.
+\item[Small Molecule] The small molecule glyph has been changed from a circle to a stadium symbol. The circle had the drawback of taking up a lot of space if the author wanted to draw the label inside the shape. Also if the circle was deformed it became an oval, which is the symbol of a Unspecified Entity. The new glyph does not have either of these problems and can also adopt a circle shape if the straight lined have zero length. See section~\ref{sec:techref:simpleChemical}.
+\item[Empty Set] The empty set glyph is a rationalisation of the source and sink glyphs, which both have the same symbol. They are now represented by the same glyph and the usage rules have been relaxed. More details can be found in section~\ref{defn:emptySet}.
+\end{description}
+
+%\begin{figure}
+%\includegraphics[width=0.9\textwidth]{images/new_glyphs}
+%\end{figure}
+
+\section{Rule Changes and Clarifications}
+
+\begin{description}
+\item[Process Duplication] The specification was unclear about whether a process could be duplicated. This situation could possibly arise if two processes were drawn that involved the same inputs, outputs and modulators. This is now clarified and all processes drawn in a map are unique and should be interpreted as describing different processes.
+\item[Phenotype Duplication] The phenotype has, in previous specifications, been described as having a clone marker. This was inconsistent with the concept that a phenotype as a process, which cannot be cloned (see above). The specification has been revised accordingly (section~\ref{sec:techref:process}).
+\item[Clarified Identity Semantics] The specification was vague on when an author needed to use a clone marker. Especially when a macromolecule of the same name had material type or cardinality units of information. These rules have been expanded and the role of the cardinality and material type clarified. See section~\ref{sec:techref:epnuniqueness}.
+\item[Subunits are not EPNs] Previous specifications treated the subunit of a complex as a EPN. This was a mistake as the complex itself is the EPN and the subunits provide an illustrative guide of its composition. The specification has been revised to reflect this new understanding of the complex and its subunit decoration (see section~\ref{sec:techref:subunits}).
+\item[Complex Identity] There was an open question about how a complex was to be identified. This was important because the decision about whether to use a clone marker correctly relies on this. The complex is now identified solely by its name and states and the its subunit composition is ignored (see section~\ref{defn:Complex}).
+\item[Stoichiometry] In the previous specification it was possible to define a stoichiometry as unknown and also it was assumed that the stoichiometry was unknown if it was not displayed. The current specification revises this rule so that the stoichiometry is assumed to be one if not displayed and also if specified the stoichiometry must be an integer (see section~\ref{defn:stoichlabel}).
+\item[Submap rules simplified] In previous specifications the submap was described as being an independent map, which shared the same namespace as its parent map. The rules for consistency checking between maps were under-defined there, but attempts to enumerate the rules led to an unacceptable increase in complexity. To simplify this situation the submap is now assumed to be a mechanism to be used by software to collapse a region of detail in a given map.  See section~\ref{sec:techref:submap}.
+\end{description}

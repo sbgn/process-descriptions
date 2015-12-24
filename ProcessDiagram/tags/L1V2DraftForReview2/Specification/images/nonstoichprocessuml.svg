@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="948" height="299" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="441" y="236" width="3" height="45" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="351" y="278" width="93" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="347" y="232" width="94" height="46" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="394" y="249">Submap</text>
+	<line stroke="black" stroke-opacity="1" x1="347" y1="251" x2="441" y2="251" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="351" y="268">name : string</text>
+	<line stroke="black" stroke-opacity="1" x1="347" y1="270" x2="441" y2="270" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="603" y="111" width="3" height="33" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="409" y="141" width="197" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="405" y="107" width="198" height="34" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="504" y="124">NonStoichiometricProcess</text>
+	<line stroke="black" stroke-opacity="1" x1="405" y1="126" x2="603" y2="126" />
+	<line stroke="black" stroke-opacity="1" x1="405" y1="134" x2="603" y2="134" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="676" y="236" width="3" height="45" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="586" y="278" width="93" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="582" y="232" width="94" height="46" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="629" y="249">Phenotype</text>
+	<line stroke="black" stroke-opacity="1" x1="582" y1="251" x2="676" y2="251" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="586" y="268">name : string</text>
+	<line stroke="black" stroke-opacity="1" x1="582" y1="270" x2="676" y2="270" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="932" y="241" width="3" height="45" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="768" y="283" width="167" height="3" />
+	<rect fill="#ffffff" stroke="black" stroke-width="1" stroke-opacity="1" x="764" y="237" width="168" height="46" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="848" y="254">ModulationArc</text>
+	<line stroke="black" stroke-opacity="1" x1="764" y1="256" x2="932" y2="256" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="768" y="273">modulation_type : enum</text>
+	<line stroke="black" stroke-opacity="1" x1="764" y1="275" x2="932" y2="275" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="631" y1="188" x2="506" y2="188" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="188" x2="506" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="145" x2="500" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="145" x2="512" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="500" y1="151" x2="512" y2="151" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="631" y1="231" x2="631" y2="188" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="396" y1="188" x2="506" y2="188" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="188" x2="506" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="145" x2="500" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="506" y1="145" x2="512" y2="151" />
+	<line stroke="#000000" stroke-opacity="1" x1="500" y1="151" x2="512" y2="151" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="396" y1="231" x2="396" y2="188" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="763" y1="258" x2="757" y2="251" />
+	<line stroke="black" stroke-opacity="1" x1="763" y1="258" x2="756" y2="263" />
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="680" y1="257" x2="763" y2="258" />
+</g>
+</svg>

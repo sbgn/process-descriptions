@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="897" height="443" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="257" y="350" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="151" y="382" width="109" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="147" y="346" width="110" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="202" y="363">ReversibleArc</text>
+	<line stroke="black" stroke-opacity="1" x1="147" y1="366" x2="257" y2="366" />
+	<line stroke="black" stroke-opacity="1" x1="147" y1="374" x2="257" y2="374" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="881" y="193" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="809" y="225" width="75" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="805" y="189" width="76" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="843" y="206">LogicArc</text>
+	<line stroke="black" stroke-opacity="1" x1="805" y1="209" x2="881" y2="209" />
+	<line stroke="black" stroke-opacity="1" x1="805" y1="217" x2="881" y2="217" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="135" y="349" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="23" y="381" width="115" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="19" y="345" width="116" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="77" y="362">ProductionArc</text>
+	<line stroke="black" stroke-opacity="1" x1="19" y1="365" x2="135" y2="365" />
+	<line stroke="black" stroke-opacity="1" x1="19" y1="373" x2="135" y2="373" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="735" y="191" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="617" y="223" width="121" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="613" y="187" width="122" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="674" y="204">EquivalenceArc</text>
+	<line stroke="black" stroke-opacity="1" x1="613" y1="207" x2="735" y2="207" />
+	<line stroke="black" stroke-opacity="1" x1="613" y1="215" x2="735" y2="215" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="559" y="108" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="487" y="140" width="75" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="483" y="104" width="76" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="521" y="121">SBGNArc</text>
+	<line stroke="black" stroke-opacity="1" x1="483" y1="124" x2="559" y2="124" />
+	<line stroke="black" stroke-opacity="1" x1="483" y1="132" x2="559" y2="132" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="579" y="192" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="467" y="224" width="115" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="463" y="188" width="116" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="521" y="205">ModulationArc</text>
+	<line stroke="black" stroke-opacity="1" x1="463" y1="208" x2="579" y2="208" />
+	<line stroke="black" stroke-opacity="1" x1="463" y1="216" x2="579" y2="216" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="569" y="26" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="479" y="58" width="93" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="475" y="22" width="94" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="522" y="39">SBGNGlyph</text>
+	<line stroke="black" stroke-opacity="1" x1="475" y1="42" x2="569" y2="42" />
+	<line stroke="black" stroke-opacity="1" x1="475" y1="50" x2="569" y2="50" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="804" y1="198" x2="568" y2="135" />
+	<line stroke="black" stroke-opacity="1" x1="563" y1="134" x2="567" y2="141" />
+	<line stroke="black" stroke-opacity="1" x1="563" y1="134" x2="570" y2="129" />
+	<line stroke="black" stroke-opacity="1" x1="567" y1="141" x2="570" y2="129" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="523" y1="187" x2="523" y2="150" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="144" x2="517" y2="150" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="144" x2="529" y2="150" />
+	<line stroke="black" stroke-opacity="1" x1="517" y1="150" x2="529" y2="150" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="98" y1="344" x2="171" y2="268" />
+	<line stroke="black" stroke-opacity="1" x1="176" y1="264" x2="167" y2="264" />
+	<line stroke="black" stroke-opacity="1" x1="176" y1="264" x2="176" y2="272" />
+	<line stroke="black" stroke-opacity="1" x1="167" y1="264" x2="176" y2="272" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="638" y1="186" x2="565" y2="146" />
+	<line stroke="black" stroke-opacity="1" x1="560" y1="144" x2="562" y2="152" />
+	<line stroke="black" stroke-opacity="1" x1="560" y1="144" x2="568" y2="141" />
+	<line stroke="black" stroke-opacity="1" x1="562" y1="152" x2="568" y2="141" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="523" y1="286" x2="523" y2="234" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="228" x2="517" y2="234" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="228" x2="529" y2="234" />
+	<line stroke="black" stroke-opacity="1" x1="517" y1="234" x2="529" y2="234" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="523" y1="103" x2="523" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="62" x2="517" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="523" y1="62" x2="529" y2="68" />
+	<line stroke="black" stroke-opacity="1" x1="517" y1="68" x2="529" y2="68" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="430" y1="286" x2="491" y2="231" />
+	<line stroke="black" stroke-opacity="1" x1="496" y1="228" x2="487" y2="227" />
+	<line stroke="black" stroke-opacity="1" x1="496" y1="228" x2="495" y2="236" />
+	<line stroke="black" stroke-opacity="1" x1="487" y1="227" x2="495" y2="236" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="402" y="350" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="272" y="382" width="133" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="268" y="346" width="134" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="335" y="363">ConsumptionArc</text>
+	<line stroke="black" stroke-opacity="1" x1="268" y1="366" x2="402" y2="366" />
+	<line stroke="black" stroke-opacity="1" x1="268" y1="374" x2="402" y2="374" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="315" y1="345" x2="236" y2="268" />
+	<line stroke="black" stroke-opacity="1" x1="232" y1="264" x2="232" y2="272" />
+	<line stroke="black" stroke-opacity="1" x1="232" y1="264" x2="240" y2="263" />
+	<line stroke="black" stroke-opacity="1" x1="232" y1="272" x2="240" y2="263" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="580" y="291" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="466" y="323" width="117" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="462" y="287" width="118" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="521" y="304">StimulationArc</text>
+	<line stroke="black" stroke-opacity="1" x1="462" y1="307" x2="580" y2="307" />
+	<line stroke="black" stroke-opacity="1" x1="462" y1="315" x2="580" y2="315" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="521" y1="390" x2="521" y2="332" />
+	<line stroke="black" stroke-opacity="1" x1="522" y1="327" x2="515" y2="332" />
+	<line stroke="black" stroke-opacity="1" x1="522" y1="327" x2="527" y2="333" />
+	<line stroke="black" stroke-opacity="1" x1="515" y1="332" x2="527" y2="333" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="253" y="216" width="3" height="47" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="157" y="260" width="99" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="153" y="212" width="100" height="48" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="203" y="229">FluxArc</text>
+	<line stroke="black" stroke-opacity="1" x1="153" y1="232" x2="253" y2="232" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" x="157" y="249">stoichiometry</text>
+	<line stroke="black" stroke-opacity="1" x1="153" y1="252" x2="253" y2="252" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="257" y1="217" x2="476" y2="138" />
+	<line stroke="black" stroke-opacity="1" x1="482" y1="136" x2="474" y2="132" />
+	<line stroke="black" stroke-opacity="1" x1="482" y1="136" x2="478" y2="143" />
+	<line stroke="black" stroke-opacity="1" x1="474" y1="132" x2="478" y2="143" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="204" y1="345" x2="204" y2="270" />
+	<line stroke="black" stroke-opacity="1" x1="204" y1="264" x2="198" y2="270" />
+	<line stroke="black" stroke-opacity="1" x1="204" y1="264" x2="210" y2="270" />
+	<line stroke="black" stroke-opacity="1" x1="198" y1="270" x2="210" y2="270" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="571" y="395" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="471" y="427" width="103" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="467" y="391" width="104" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="519" y="408">CatalysisArc</text>
+	<line stroke="black" stroke-opacity="1" x1="467" y1="411" x2="571" y2="411" />
+	<line stroke="black" stroke-opacity="1" x1="467" y1="419" x2="571" y2="419" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="458" y="291" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="360" y="323" width="101" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="356" y="287" width="102" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="407" y="304">InhibitionArc</text>
+	<line stroke="black" stroke-opacity="1" x1="356" y1="307" x2="458" y2="307" />
+	<line stroke="black" stroke-opacity="1" x1="356" y1="315" x2="458" y2="315" />
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="783" y="290" width="3" height="35" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="591" y="322" width="195" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="587" y="286" width="196" height="36" />
+	<text font-family="Helvetica" font-size="15" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="685" y="303">NecessaryStimulationArc</text>
+	<line stroke="black" stroke-opacity="1" x1="587" y1="306" x2="783" y2="306" />
+	<line stroke="black" stroke-opacity="1" x1="587" y1="314" x2="783" y2="314" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="653" y1="285" x2="563" y2="231" />
+	<line stroke="black" stroke-opacity="1" x1="558" y1="228" x2="560" y2="236" />
+	<line stroke="black" stroke-opacity="1" x1="558" y1="228" x2="566" y2="225" />
+	<line stroke="black" stroke-opacity="1" x1="560" y1="236" x2="566" y2="225" />
+</g>
+</svg>

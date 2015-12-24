@@ -1,0 +1,16 @@
+window_sizes 1680 951 262 1412 899 0
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128173 // MainView
+    1341 570 57 16 0 0
+  classdiagram_ref 154925 // NonStoichiometricProcessView
+    120 98 100 18 0 0
+end
+show_stereotypes
+selected classdiagram_ref 168365 // SubmapNodeView
+open
+  classdiagram_ref 134701 // MapView
+  class_ref 158637 // Phenotype
+  class_ref 178861 // EntityType
+end
+end

@@ -1,0 +1,81 @@
+format 207
+
+classcanvas 128045 class_ref 158509 // Submap
+  classdiagramsettings member_max_width 0 end
+  xyz 923 259 2000
+end
+classcanvas 128173 class_ref 165805 // CrossReference
+  classdiagramsettings member_max_width 0 end
+  xyz 506 111 2000
+end
+classcanvas 128301 class_ref 165421 // SubmapTerminal
+  classdiagramsettings member_max_width 0 end
+  xyz 513 265 2006
+end
+classcanvas 128685 class_ref 165549 // EquivalenceArc
+  classdiagramsettings member_max_width 0 end
+  xyz 144 117 3005
+end
+classcanvas 129965 class_ref 128685 // EntityPoolNode
+  classdiagramsettings member_max_width 0 end
+  xyz 146 241 3011
+end
+classcanvas 130477 class_ref 136365 // AuxiliaryUnit
+  classdiagramsettings member_max_width 0 end
+  xyz 332 345 2012
+end
+classcanvas 130989 class_ref 129325 // Map
+  classdiagramsettings member_max_width 0 end
+  xyz 948 116 3005
+end
+relationcanvas 128429 relation_ref 177709 // <generalisation>
+  geometry VHV
+  from ref 128301 z 2007 to point 576 211
+  line 128941 z 2007 to point 576 211
+  line 129069 z 2007 to ref 128173
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128557 relation_ref 176685 // <composition>
+  geometry HVH
+  from ref 128045 z 2007 to point 782 282
+  line 129453 z 2007 to point 782 282
+  line 129581 z 2007 to ref 128301
+  role_a_pos 655 264 3000 role_b_pos 761 264 3000
+  multiplicity_a_pos 655 291 3000 multiplicity_b_pos 904 291 3000
+end
+relationcanvas 130093 relation_ref 177197 // <unidirectional association>
+  geometry HVH unfixed
+  from ref 128685 z 3012 to point 70 134
+  line 130221 z 3012 to point 70 264
+  line 130349 z 3012 to ref 129965
+  role_a_pos 84 246 3000 no_role_b
+  multiplicity_a_pos 127 273 3000 multiplicity_b_pos 127 143 3000
+end
+relationcanvas 130605 relation_ref 177581 // <generalisation>
+  geometry VHV
+  from ref 128301 z 2013 to point 576 322
+  line 131245 z 2013 to point 381 322
+  line 131373 z 2013 to ref 130477
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131117 relation_ref 176557 // <unidirectional association>
+  from ref 128045 z 3006 to ref 130989
+  role_a_pos 980 161 3000 no_role_b
+  multiplicity_a_pos 952 161 3000 no_multiplicity_b
+end
+relationcanvas 131629 relation_ref 238893 // <aggregation>
+  geometry HVH
+  from ref 128685 z 3006 to point 385 134
+  line 131885 z 3006 to point 385 134
+  line 132013 z 3006 to ref 128173
+  role_a_pos 442 116 3000 role_b_pos 278 116 3000
+  multiplicity_a_pos 487 143 3000 multiplicity_b_pos 278 143 3000
+end
+relationcanvas 132141 relation_ref 239021 // <aggregation>
+  from ref 130989 z 3006 to ref 128173
+  role_a_pos 660 115 3000 role_b_pos 852 115 3000
+  multiplicity_a_pos 660 142 3000 multiplicity_b_pos 929 142 3000
+end
+end

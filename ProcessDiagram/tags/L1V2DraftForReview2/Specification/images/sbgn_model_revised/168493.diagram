@@ -1,0 +1,23 @@
+format 75
+
+componentcanvas 128045 component_ref 128045 // MainMap
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 102 148 2000 191 67
+end
+componentcanvas 128173 component_ref 128173 // Submap
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 499 152 2000 183 57
+end
+arrowjunctioncanvas 128429 class_ref 165677 // Tag
+  xyz 399 234 3005 label_xy 395 253
+arrowjunctioncanvas 128813 class_ref 165421 // SubmapTerminal
+  xyz 391 114 3005 label_xy 342 133
+line 128557 ---O
+  from ref 128173 z 3006 to ref 128429
+line 128685 ---(
+  from ref 128045 z 3006 to ref 128429
+line 128941 ---O
+  from ref 128045 z 3006 to ref 128813
+line 129069 ---(
+  from ref 128173 z 3006 to ref 128813
+end

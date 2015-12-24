@@ -1,0 +1,38 @@
+% $HeadURL: https://sbgn.svn.sourceforge.net/svnroot/sbgn/ProcessDiagram/tags/L1V1.3Full/sources/sourceSink.tex $
+
+\subsection{Glyph: \glyph{Source} and \glyph{Sink}}
+\label{sec:sourceSink}
+
+It is useful to have the ability to represent the creation of an entity or
+a state from an unspecified source, that is, from something that one does
+not need or wish to make precise.  For instance, in a model where the
+production of a protein is represented, it may not be desirable to
+represent all of the amino acids, sugars and other metabolites used, or the
+energy involved in the protein's creation.  Similarly, we may not wish to
+bother representing the details of the destruction or decomposition of some
+biochemical species into a large number of more primitive entities,
+preferring instead to simply say that the species ``disappears into a
+sink''.  Yet another example is that one may need to represent an input
+(respectively, output) into (resp. from) a compartment without explicitly
+representing a transport process from a source (resp. to a target).
+
+For these and other situations, SBGN defines a glyph for explicitly
+representing the involvement of an unspecified source or sink. A \glyph{source} or \glyph{sink} is represented by the mathematical symbol for ``empty
+set'', that is, a circle crossed by a bar linking the upper-right and
+lower-left corners of an invisible square drawn around the circle ($\emptyset$).
+\fig{sourceSink} illustrates this. Each source or sink node should be linked to one
+and only one arc in a map. The symbol
+used in SBGN is borrowed from the mathematical symbol for ``empty set'',
+but it is important to note that it does not actually represent a true
+absence of everything or a physical void---it represents the absence of the
+corresponding structures in the model, that is, the fact that these sources
+or sinks are conceptually outside the scope of the map. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.3]{images/sourceSink}
+  \caption{The \glyph{source} and \glyph{sink} glyphs.}
+  \label{fig:sourceSink}
+\end{figure}
+
+
