@@ -13,7 +13,7 @@
    height="744.09448"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.91 r13725"
    version="1.0"
    sodipodi:docname="process-translocation.svg"
    inkscape:export-filename="/home/lenov/SBGN/svn/sbgn/ProcessDiagram/trunk/UserManual/images/process-translocation.png"
@@ -59,16 +59,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="373.04428"
-     inkscape:cy="438.94195"
+     inkscape:cx="266.25857"
+     inkscape:cy="381.79909"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      width="1052.3622px"
      height="744.09448px"
-     inkscape:window-width="1680"
-     inkscape:window-height="1029"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="2234"
+     inkscape:window-height="1195"
+     inkscape:window-x="2226"
+     inkscape:window-y="-8"
      showguides="true"
      inkscape:guide-bbox="true"
      showgrid="false"
@@ -86,7 +86,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -106,7 +106,7 @@
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="435.65817"
        y="199.53555"
        id="text2890"><tspan
@@ -114,7 +114,7 @@
          id="tspan2892"
          x="435.65817"
          y="199.53555"
-         style="font-size:48px">RE</tspan></text>
+         style="font-size:48px">ER</tspan></text>
     <path
        transform="matrix(-1,0,0,1,676.8622,25.39817)"
        d="m 363.65492,267.30249 a 58.588848,58.588848 0 1 1 -117.1777,0 58.588848,58.588848 0 1 1 117.1777,0 z"
