@@ -5,7 +5,7 @@ services:
 - docker
 before_install:
 - docker pull cannin/latex
-- docker run -t cannin/latex /bin/sh -c "pdflatex --version"
+- docker run -t cannin/latex /bin/sh -c "source /etc/environment && pdflatex --version"
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
 - ls download
 - cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/cannin/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu 
