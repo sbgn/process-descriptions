@@ -6,16 +6,14 @@ services:
 before_install:
 - docker pull cannin/latex
 - docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape && cd /latex/Specification && make"
 script:
-- cd Specification && make
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape && cd /latex/Specification && make"
 deploy:
   provider: releases
   api_key:
-    secure: YOUR KEY
+    secure: "2U/bJTyuaDF0drjjdZayBX6nshBo9KU/OOMZtD4g9dGm4AjiyCNuZFS7oNJgREOMef7M18b2N9b4A/miqt393818VKXsmUpW6jIRSuiko0GHVTJzBKOER7PplScTIGONVx2evQxEDtyq8ly8IGTMpXIVmXnp8TxkXKXCv9kcknX6v3sVTrD4Ivb1qCI0lIkLeZdEKUeQzCG0rxlZMy4HIb8OKe/CX76IsGcFnzJvntKnrwshV4mY8dm0AqrlU4UtfYXtkJSbk+YYto75pWSpi2id+5FUehuuqVn/7G645JI8UOA6ksMfdSztRdDWR06dSdnC9QvM6ShBnQqmasUrYn8mjsaiohUCGU5L/BBXZv7jwFmeb4v0duYihiQxNE/wjhVHzEkDinsAwDymjCbRAVEqZ0M8HWYhbsTPvhzesvSceQGYFcyscn06smc75Tyw8RQ1el/MxCR9BAyFbU5Unloulf2fLOUqrtglMZ1ek5PQHyaObg7j6lwk1e2q/7WUC3ZLfkEw2krv/WeiuNyOJnf2NLVB4PPLsxlCKrEoU9N14DZ/HWBL9ZWnZsnFiv+KYYfdC+UffntZGMxFw1BnRrx1hwc2IaaPjMRwvD4B01ckE5pvus24vOzgAqlj3YbSCfTw+7YgNmbLS+qINm2/kSDUp5hhaItF5tQDrBTZVNs="
   file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
+  - Specification/sbgn_PD-level1.pdf
   skip_cleanup: true
   on:
     tags: true
