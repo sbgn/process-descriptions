@@ -3,12 +3,12 @@ dist: trusty
 # - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-humanities texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended inkscape latex-xcolor texlive-latex-base texlive-generic-recommended
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
-- mkdir downloads && cd downloads && wget http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu -i texlive.iso
+- cd download && wget http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu -i texlive.iso
 - sudo source /etc/environment
 - pdflatex --version
 cache:
   directories:
-    - downloads
+    - download
 script:
 - cd Specification && make
 deploy:
