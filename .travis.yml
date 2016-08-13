@@ -1,38 +1,19 @@
 sudo: required
-
 dist: trusty
-
 services:
 - docker
-
-#before_install:
-#- docker pull cannin/latex
-#- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
-#  cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
-
-# Current directory: /home/travis/build/cannin/process-descriptions
 script:
-- echo "3O4GitHub Pes plachlder" > index.html
-#- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
-#  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
-
+- echo "4O4GitHub Pes plachlder" > index.html
 after_success:
-- git clone https://6d1361a35a408250785b9b2e752aa9053212821c@github.com/cannin/process-descriptions.git tmp
-- git config --global push.default simple && git config --global user.name "fake" && git config --global user.email "fake@fake.com"
+- git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
+  tmp
+- git config --global push.default simple && git config --global user.name "fake"
+  && git config --global user.email "fake@fake.com"
 - cd tmp && mkdir travis && cp index.html travis
-- git add . && git commit -m "T2"
-- git remote set-url origin https://6d1361a35a408250785b9b2e752aa9053212821c@github.com/cannin/process-descriptions.git
+- git add . && git commit -m "T3"
+- git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
 - git push origin master
-
-#deploy:
-#  provider: releases
-#  file:
-#  - Specification/sbgn_PD-level1.pdf
-#  skip_cleanup: true
-#  on:
-#    tags: true
-
 env:
   global:
   - GITHUB_REPO: cannin/process-descriptions
-  - secure: a15kyqGJiAbvz4eb2XvzV8jjep4IXUMg7REkPUgstm+cj+kX7qZaKLqTp916MJZnp9Z01FXRJJa6BflTekMlPPGScQZJKu8irjAxou6fxpXJwlEtvWS9Ci5XjIyk21zg6Em/+ANfGeVGDsoKPz1wnJ9Mg37qE5V1IZhlNfYLg2reskNBBWyFjIzns3Ys7Abi5k2mHAoGRTBX6tDQyRRITxs+zJH/lPrgv+0vkNAfO6UF8DOtxQJSf1msntkkEPzBTcTmivLShWenbS4HURLJYIrodjnLXVk6XCV/XkeraruuXn5mkF0ZjrkZQAJBcFo2FrgbZEXTd5qhSLAeemYP5Bx9x8VVmb61TSNVvHkGuFCn7llVUhxEcRb1WlHpAu1eiJ4MvKMpuBsk7SO0ubUBcO4WqeG8h71TokkU4fCr833dW/P6XAIZaniVw+7NoMy60FYLy1oCI4QmpWiRcTZoC5LvBcW4avRa03mdlkEfUwaJqjLPlifS4SoTPD3lSP8IxihfE19mniNBYoa74E/DN6AmQ8gytoMZATwi6bZ91jH3labsUhp4CpifW0PvNoOXPQPgxkUXiiqVkniDCXZmyoUF/C+xoF1DQ6aSLnSedtigaZkOQ6pqd3QbQCLd/KSD0V8Rvsg62gD+RMA1A/a1NbHv/IT4z3S843piUsGSlho=
+  - secure: KcKTj9j574ZFY//V+03yigQgtrxHq67+BKpqRHBLzOGY2QhsEfYb+AzhXPFWKc3lh7b2r6vSBiurhAR8TiseRCcbtVw0Z1d+ReOMNmCTDegCT1hP4s2LI0ZAI6yUHx5Vv1SuWNMIbx1OB0vhhkh7OzmbNe8a1mrhWCdPCV4pvqDmY2HdBoArZF4jjKXqlIM6/6qxGHg10NsgbrN7ahSlGHWE+4DzpVp+Fyxks2Nl5Iwuv9COt+Qf9r+cDhBCK/giHuWiS2BlAuqPQDCp3j0d8wYJcpzHyLGQBYvN+r5GeC8g6CtoRGYyKJoGQJStT19eS45EUha0PTmTOqzTtgiuey+GMqGpY/tAiVMd6AHieEnqFpIPh1vC0cnFW5we5lW2fxPEmagkfeN5PA8gp6VR1o+tNIpS0z7y2uGLHDO6ZR2oiI9d57SRHbWsiAF8OWiGGNI094n7+P9FdGRHapMx7M9q+WeOtO5gpYRxqfE/jy/+TcX6KZXi9npLsw6KqlS/NfJgkoWdax6yY8G8rt3VAeKggvOrbSdHWQ9BQ5ITzkTbIDqpVnv83daU1lcjRE7nQPROQRi0g5dgEdJLNZ4St4rLwyEEz+D+K2gwy26H2iDYfd+vmdMzpb1lc/RvqQe6sz1wV8gKRUy2F2uO3A9KUdH+5X6g2VGB5q9KE3+2nWs=
