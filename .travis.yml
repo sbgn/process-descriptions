@@ -2,13 +2,18 @@ sudo: required
 dist: trusty
 services:
 - docker
+before_install:
+- docker pull cannin/latex
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
 script:
-- echo "B111itHub Pes plachlder" > index.html
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape && cd /latex/Specification && make"
+#script:
+#- echo "B111itHub Pes plachlder" > index.html
 after_success:
 - git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
-- cd tmp && mkdir -p Specification/build && cp ../index.html Specification/build
-- git add Specification/build/index.html && git commit -m "T5"
+- cd tmp && mkdir -p Specification/build && cp ../*.pdf Specification/build
+- git add Specification/build/* && git commit -m "M6"
 - git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
 - git push origin master > /dev/null 2>&1
 env:
