@@ -14,9 +14,8 @@ before_install:
 script:
 - docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
   cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
-- chmod +x deploy.sh && ./deploy.sh
 - rm -rf tmp && mkdir tmp
-- git config --global user.name ${GIT_NAME} && git config --global user.email ${GIT_EMAIL}
+- git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
 - cd tmp && mkdir travis && cp $TRAVIS_BUILD_DIR/Specification/*.pdf travis
 - git init && git add . && git commit -m "Deploy"
 - git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:gh-pages > /dev/null 2>&1
