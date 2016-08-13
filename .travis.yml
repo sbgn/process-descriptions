@@ -3,14 +3,12 @@ dist: trusty
 services:
 - docker
 script:
-- echo "4O4GitHub Pes plachlder" > index.html
+- echo "H1itHub Pes plachlder" > index.html
 after_success:
-- git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
-  tmp
-- git config --global push.default simple && git config --global user.name "fake"
-  && git config --global user.email "fake@fake.com"
-- cd tmp && mkdir travis && cp index.html travis
-- git add . && git commit -m "T3"
+- git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
+- git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
+- cd tmp && mkdir -p Specification/build && cp index.html Specification/build
+- git add Specification/build/index.html && git commit -m "T4"
 - git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
 - git push origin master
 env:
