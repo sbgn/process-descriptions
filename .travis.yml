@@ -4,7 +4,7 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
 - cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu -i texlive.iso
-- sudo source /etc/environment
+- while read -r env; do export "$env"; done
 - pdflatex --version
 cache:
   directories:
