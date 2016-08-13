@@ -3,6 +3,7 @@ dist: trusty
 # - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-humanities texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended inkscape latex-xcolor texlive-latex-base texlive-generic-recommended
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
+- ls download
 - cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/cannin/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu -i texlive.iso
 - tail /home/travis/build/cannin/process-descriptions/download/install-tl-1.log
 - while read -r env; do export "$env"; done
