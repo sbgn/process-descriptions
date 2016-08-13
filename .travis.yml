@@ -5,10 +5,8 @@ services:
 - docker
 before_install:
 - docker pull cannin/latex
-- docker run -t cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version"
-- ls /home/travis/build/cannin/process-descriptions
 - docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape && cd /latex/Specification && make"
 script:
 - cd Specification && make
 deploy:
