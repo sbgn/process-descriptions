@@ -5,20 +5,21 @@ dist: trusty
 services:
 - docker
 
-before_install:
-- docker pull cannin/latex
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
-  cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
+#before_install:
+#- docker pull cannin/latex
+#- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
+#  cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
 
 # Current directory: /home/travis/build/cannin/process-descriptions
 script:
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
-  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
+- echo "GitHub Pages placeholder" > index.html
+#- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
+#  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
 
 after_success:
 - git clone https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
-- cd tmp && mkdir travis && cp $TRAVIS_BUILD_DIR/Specification/*.pdf travis
+- cd tmp && mkdir travis && cp index.html travis
 - git add . && git commit -m "Deploy"
 - git push --quiet origin master > /dev/null 2>&1
 
