@@ -12,7 +12,7 @@ services:
 
 # Current directory: /home/travis/build/cannin/process-descriptions
 script:
-- echo "GitHub Pages placeholder" > index.html
+- echo "GitHub Pages plachlder" > index.html
 #- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
 #  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
 
@@ -20,8 +20,8 @@ after_success:
 - git clone https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
 - cd tmp && mkdir travis && cp index.html travis
-- git add . && git commit -m "Deploy"
-- git push --quiet origin master > /dev/null 2>&1
+- git add . && git commit -m "T1"
+- git push origin master
 
 deploy:
   provider: releases
