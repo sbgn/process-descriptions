@@ -7,7 +7,7 @@ script:
 after_success:
 - git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
-- cd tmp && mkdir -p Specification/build && cp index.html Specification/build
+- cd tmp && mkdir -p Specification/build && cp ../index.html Specification/build
 - git add Specification/build/index.html && git commit -m "T5"
 - git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
 - git push origin master
