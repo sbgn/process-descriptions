@@ -3,7 +3,7 @@ dist: trusty
 services:
 - docker
 script:
-- echo "A211itHub Pes plachlder" > index.html
+- echo "B111itHub Pes plachlder" > index.html
 after_success:
 - git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
