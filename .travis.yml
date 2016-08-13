@@ -8,8 +8,9 @@ before_install:
 - docker run -t cannin/latex /bin/sh -c "pdflatex --version"
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
 - ls download
-- cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/cannin/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu -i texlive.iso
+- cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/cannin/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu 
 - ls download
+- sudo ./install-tl-ubuntu -i texlive.iso
 - tail /home/travis/build/cannin/process-descriptions/download/install-tl-1.log
 - while read -r env; do export "$env"; done
 - pdflatex --version
