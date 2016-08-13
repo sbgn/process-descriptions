@@ -12,12 +12,12 @@ services:
 
 # Current directory: /home/travis/build/cannin/process-descriptions
 script:
-- echo "1GitHub Pes plachlder" > index.html
+- echo "2GitHub Pes plachlder" > index.html
 #- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
 #  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
 
 after_success:
-- git clone https://7445ebade8eff29be6c1d7825fcd094c7e662338@$github.com/cannin/process-descriptions.git tmp
+- git clone https://7445ebade8eff29be6c1d7825fcd094c7e662338@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
 - cd tmp && mkdir travis && cp index.html travis
 - git add . && git commit -m "T1"
