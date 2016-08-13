@@ -12,25 +12,25 @@ services:
 
 # Current directory: /home/travis/build/cannin/process-descriptions
 script:
-- echo "2O4GitHub Pes plachlder" > index.html
+- echo "3O4GitHub Pes plachlder" > index.html
 #- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
 #  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
 
 after_success:
-- git clone https://cfac0e734c79f6edb46a28c78fb49dfe88a7a537:x-oauth-basic@github.com/cannin/process-descriptions.git tmp
-- git config --global user.name "cannin" && git config --global user.email "cannin@gmail.com"
+- git clone https://6d1361a35a408250785b9b2e752aa9053212821c@github.com/cannin/process-descriptions.git tmp
+- git config --global push.default simple && git config --global user.name "fake" && git config --global user.email "fake@fake.com"
 - cd tmp && mkdir travis && cp index.html travis
-- git add . && git commit -m "T1"
-- git remote set-url origin https://cfac0e734c79f6edb46a28c78fb49dfe88a7a537:x-oauth-basic@github.com/cannin/process-descriptions.git
+- git add . && git commit -m "T2"
+- git remote set-url origin https://6d1361a35a408250785b9b2e752aa9053212821c@github.com/cannin/process-descriptions.git
 - git push origin master
 
-deploy:
-  provider: releases
-  file:
-  - Specification/sbgn_PD-level1.pdf
-  skip_cleanup: true
-  on:
-    tags: true
+#deploy:
+#  provider: releases
+#  file:
+#  - Specification/sbgn_PD-level1.pdf
+#  skip_cleanup: true
+#  on:
+#    tags: true
 
 env:
   global:
