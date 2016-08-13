@@ -8,7 +8,7 @@ before_install:
 - pdflatex --version
 cache:
   directories:
-    - download
+    - downloads
 script:
 - cd Specification && make
 deploy:
