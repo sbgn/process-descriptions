@@ -4,19 +4,21 @@ services:
 - docker
 before_install:
 - docker pull cannin/latex
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
+  cannin/latex /bin/sh -c ". /etc/environment && pdflatex --version && ls -l /latex"
 script:
-- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape && cd /latex/Specification && make"
-#script:
-#- echo "B111itHub Pes plachlder" > index.html
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex
+  cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get
+  install -y --no-install-recommends inkscape && cd /latex/Specification && make"
 after_success:
 - git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
-- cd tmp && mkdir -p Specification/build && cp /home/travis/build/cannin/process-descriptions/Specification/*.pdf Specification/build
+- cd tmp && mkdir -p Specification/build && cp /home/travis/build/cannin/process-descriptions/Specification/*.pdf
+  Specification/build
 - git add Specification/build/* && git commit -m "M6"
 - git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
 - git push origin master > /dev/null 2>&1
 env:
   global:
   - GITHUB_REPO: cannin/process-descriptions
-  - secure: KcKTj9j574ZFY//V+03yigQgtrxHq67+BKpqRHBLzOGY2QhsEfYb+AzhXPFWKc3lh7b2r6vSBiurhAR8TiseRCcbtVw0Z1d+ReOMNmCTDegCT1hP4s2LI0ZAI6yUHx5Vv1SuWNMIbx1OB0vhhkh7OzmbNe8a1mrhWCdPCV4pvqDmY2HdBoArZF4jjKXqlIM6/6qxGHg10NsgbrN7ahSlGHWE+4DzpVp+Fyxks2Nl5Iwuv9COt+Qf9r+cDhBCK/giHuWiS2BlAuqPQDCp3j0d8wYJcpzHyLGQBYvN+r5GeC8g6CtoRGYyKJoGQJStT19eS45EUha0PTmTOqzTtgiuey+GMqGpY/tAiVMd6AHieEnqFpIPh1vC0cnFW5we5lW2fxPEmagkfeN5PA8gp6VR1o+tNIpS0z7y2uGLHDO6ZR2oiI9d57SRHbWsiAF8OWiGGNI094n7+P9FdGRHapMx7M9q+WeOtO5gpYRxqfE/jy/+TcX6KZXi9npLsw6KqlS/NfJgkoWdax6yY8G8rt3VAeKggvOrbSdHWQ9BQ5ITzkTbIDqpVnv83daU1lcjRE7nQPROQRi0g5dgEdJLNZ4St4rLwyEEz+D+K2gwy26H2iDYfd+vmdMzpb1lc/RvqQe6sz1wV8gKRUy2F2uO3A9KUdH+5X6g2VGB5q9KE3+2nWs=
+  - secure: vOe3JvKi29f6pD3nUYC7DxC2RZOJgPgMANEYdQx4l4y0QzKsHhQ1EwqH5V8DwVIhh3CemLyM/IIVmQRxQ8M7E5bffhPMuV2DED2GRQhV7tLSjGkpzBOM+q6reHh6gsGMywpAdyCWLizMprbnhw6C0Zvwy30LAHOgU8e9k+fK7/ci3pffuU9QqJ8yStzgEbgA7fAGpDizA7yZfwH1k/nmF4yYYa8DxTWPbdkr4zDgAfv8dMdBPFSIKv8f/0uaLh8Yk9hw0tenVSpN9SX0XSmsfs/iwu/eOWvhW0eX/hUQZfhh62g7rIngAth/fJXBds+6jKEppRXoC1d469OYLMMZuz4rKTZBooEKpg6xq25a8Dh2TdDRA4Pf2Ng+QhmgeIvQiHLq7YHtRgADXpHL3qx8nbokdEgRsjwiZzZX8G6Zo43HD1EVjtqlh/9gSC+AJOC0oEqacNJ6pRGX+nnpcDgK7tteG62x45uVMUWL0jxMpQUI75ns1ycAld4zT7jq+D472TXjf2NkIL37q8iUO+nPhidxv/RW8jZDNOgEgs7sSM2xndNkxgj6Djo+OxzmYrDX6x4ZKVpuf9HZk3sznzraek+cAt87g835Vcc5xXyN2sCcVzdfZ6m2j4Niiy8yhHV5X7ziYQoW40fO3qs4WeS2LwsH0LtGton7Tmq/Cg1nwho=
