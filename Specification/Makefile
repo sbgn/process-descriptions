@@ -9,7 +9,7 @@
 
 MAIN   = sbgn_PD-level1
 
-LATEX  = pdflatex -halt-on-error 
+LATEX  = pdflatex -interaction=nonstopmode
 BIBTEX = bibtex
 MKIDX = makeindex
 MKGLOS = makeglossaries
