@@ -17,11 +17,11 @@ script:
 #  cannin/latex /bin/sh -c ". /etc/environment && cd /latex/Specification && make"
 
 after_success:
-- git clone https://cannin:cfac0e734c79f6edb46a28c78fb49dfe88a7a537@github.com/cannin/process-descriptions.git tmp
+- git clone https://cfac0e734c79f6edb46a28c78fb49dfe88a7a537:x-oauth-basic@github.com/cannin/process-descriptions.git tmp
 - git config --global user.name "cannin" && git config --global user.email "cannin@gmail.com"
 - cd tmp && mkdir travis && cp index.html travis
 - git add . && git commit -m "T1"
-- git remote set-url origin https://cannin:cfac0e734c79f6edb46a28c78fb49dfe88a7a537@github.com/cannin/process-descriptions.git
+- git remote set-url origin https://cfac0e734c79f6edb46a28c78fb49dfe88a7a537:x-oauth-basic@github.com/cannin/process-descriptions.git
 - git push origin master
 
 deploy:
