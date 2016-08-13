@@ -6,18 +6,9 @@ services:
 before_install:
 - docker pull cannin/latex
 - docker run -t cannin/latex /bin/sh -c "source /etc/environment && pdflatex --version"
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends inkscape
-- ls download
-- cd download && wget -c http://ctan.mirrors.hoobly.com/systems/texlive/Images/texlive.iso && wget https://github.com/cannin/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu 
-- ls download
-- sudo ./install-tl-ubuntu -i texlive.iso
-- tail /home/travis/build/cannin/process-descriptions/download/install-tl-1.log
-- while read -r env; do export "$env"; done
-- pdflatex --version
-cache:
-  directories:
-    - download
-    - media
+- ls /home/travis/build/cannin/process-descriptions
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c "source /etc/environment && pdflatex --version && ls -l /latex"
+- docker run -t -v /home/travis/build/cannin/process-descriptions:/latex -w /latex cannin/latex /bin/sh -c "source /etc/environment && cd /latex/Specification && make"
 script:
 - cd Specification && make
 deploy:
