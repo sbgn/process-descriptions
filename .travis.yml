@@ -11,12 +11,11 @@ script:
   cannin/latex /bin/sh -c ". /etc/environment && apt-get -qq update && sudo apt-get
   install -y --no-install-recommends inkscape && cd /latex/Specification && make"
 after_success:
-- git clone https://${GH_TOKEN}@github.com/cannin/process-descriptions.git tmp
+- git clone https://${GH_TOKEN}@github.com/cannin/temp.git tmp
 - git config --global user.name "Travis CI" && git config --global user.email "nobody@nobody.org"
-- cd tmp && mkdir -p Specification/build && cp /home/travis/build/cannin/process-descriptions/Specification/*.pdf
-  Specification/build
-- git add Specification/build/* && git commit -m "M6"
-- git remote set-url origin https://${GH_TOKEN}@github.com/cannin/process-descriptions.git
+- cd tmp && cp /home/travis/build/cannin/process-descriptions/Specification/*.pdf .
+- git add . && git commit -m "M7"
+- git remote set-url origin https://${GH_TOKEN}@github.com/cannin/temp.git
 - git push origin master > /dev/null 2>&1
 env:
   global:
