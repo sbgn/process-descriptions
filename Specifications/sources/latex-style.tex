@@ -6,27 +6,7 @@
 
 % Warning: more \usepackage commands are used later in this file.
 
-\usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
-\usepackage[utf8]{inputenc} % unicode support
-\usepackage{shadow}
-\usepackage{supertabular}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage{enumitem}
-\usepackage{lscape}
-\usepackage{layout}
-\usepackage{array}
-\usepackage{fancybox}
-\usepackage{xspace}
 \usepackage{ifpdf}
-\usepackage{float}
-\usepackage{eso-pic}
-\usepackage[american]{varioref}
-\usepackage[normalem]{ulem}
-
-% Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
-% that needs to be used if pdflatex is being used.  The following puts
-% these inside a conditional for that situation.
 
 \ifpdf
   % Case: using pdflatex
@@ -47,7 +27,7 @@
   \usepackage[pdftex,rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
 
 \else
-  % Case: not using pdflatex
+%   % Case: not using pdflatex
 
   \usepackage{graphicx}
   \DeclareGraphicsExtensions{.eps,.png}
@@ -56,6 +36,29 @@
   \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
 
 \fi
+
+
+
+\usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
+\usepackage[utf8]{inputenc} % unicode support
+\usepackage{shadow}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{lscape}
+\usepackage{layout}
+\usepackage{array}
+\usepackage{fancybox}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{eso-pic}
+\usepackage[american]{varioref}
+\usepackage[normalem]{ulem}
+
+% Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
+% that needs to be used if pdflatex is being used.  The following puts
+% these inside a conditional for that situation.
 
 % Package 'rotating' needs to come after the others.
 
