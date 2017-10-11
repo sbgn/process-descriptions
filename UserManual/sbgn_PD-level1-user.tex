@@ -1,0 +1,40 @@
+\documentclass[11pt,oneside]{book}
+
+%% ----------------------------------------------------------------------------
+%% Layout customizations and macro definitions.
+%% ----------------------------------------------------------------------------
+
+\input{sources/latex-style}
+\input{sources/latex-macros}
+
+%% ----------------------------------------------------------------------------
+\begin{document}
+%% ----------------------------------------------------------------------------
+
+\frontmatter
+
+\input{sources/front-page}
+%\input{sources/toc}
+
+\mainmatter
+%\linenumbers
+
+\include{sources/introduction}
+\include{sources/symbols}
+\include{sources/build}
+%\include{sources/interpret}
+%\include{sources/examples}
+  
+\include{sources/refcard}
+
+\backmatter
+
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{sbgn_PD-level1-user}
+
+
+%% ----------------------------------------------------------------------------
+\end{document}
+%% ----------------------------------------------------------------------------
+

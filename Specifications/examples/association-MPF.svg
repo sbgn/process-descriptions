@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docbase="/home/lenov/SBGN/cvs/documents/specifications/Level1/images"
+   sodipodi:docname="association-MPF.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 372.04724 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1052.3622 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
+       id="perspective33" />
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path2972"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path2978"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="291.44493"
+     inkscape:cy="383.54506"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     width="1052.3622px"
+     height="744.09448px"
+     inkscape:window-width="1392"
+     inkscape:window-height="1022"
+     inkscape:window-x="282"
+     inkscape:window-y="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false">
+    <sodipodi:guide
+       orientation="vertical"
+       position="764.68548"
+       id="guide2990" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="579.12045"
+       id="guide2307" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="final"
+     style="opacity:1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 496.95155,194.14459 L 462.2644,229.95502 L 462.5144,477.70766 L 496.79746,514.04438 L 628.4887,514.04438 L 662.98559,477.82122 L 662.98559,229.72622 L 628.84093,194.14459 L 496.95155,194.14459 z "
+       id="rect2243"
+       sodipodi:nodetypes="ccccccccc" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2974"
+       width="165.25592"
+       height="119.08628"
+       x="115.95184"
+       y="154.62462"
+       ry="35.714287"
+       rx="35.714287" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="200.41544"
+       y="222.65302"
+       id="text5899"><tspan
+         sodipodi:role="line"
+         x="200.41544"
+         y="222.65302"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan5901">CDC2</tspan></text>
+    <rect
+       rx="35.714287"
+       ry="35.714287"
+       y="388.62463"
+       x="116.94171"
+       height="119.08628"
+       width="165.25592"
+       id="rect11797"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text11799"
+       y="456.65302"
+       x="201.40527"
+       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan11801"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="456.65302"
+         x="201.40527"
+         sodipodi:role="line">cyclin</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 277.92014,274.22731 L 337.22702,333.69749"
+       id="path7152" />
+    <path
+       id="path7154"
+       d="M 277.92014,391.69749 L 337.22702,332.22731"
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       rx="35.714287"
+       ry="35.714287"
+       y="210.18301"
+       x="478.77881"
+       height="119.08628"
+       width="165.25592"
+       id="rect11853"
+       style="opacity:1;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text11855"
+       y="278.2114"
+       x="563.24243"
+       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan11857"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="278.2114"
+         x="563.24243"
+         sodipodi:role="line">CDC2</tspan></text>
+    <rect
+       style="opacity:1;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11859"
+       width="165.25592"
+       height="119.08628"
+       x="479.93158"
+       y="330.62463"
+       ry="35.714287"
+       rx="35.714287" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="564.39514"
+       y="398.65302"
+       id="text11861"><tspan
+         sodipodi:role="line"
+         x="564.39514"
+         y="398.65302"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         id="tspan11863">cyclin</tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.75000000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 335.71835,332.97255 L 429.75983,332.97255"
+       id="path2839" />
+    <text
+       id="text12300"
+       y="489.65302"
+       x="565.39514"
+       style="font-size:12px;font-style:normal;font-weight:normal;opacity:1;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan12302"
+         style="font-size:24px;font-weight:normal;text-align:center;text-anchor:middle"
+         y="489.65302"
+         x="565.39514"
+         sodipodi:role="line">MPF</tspan></text>
+    <path
+       style="opacity:1;fill:black;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:2.49212766;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 452.10462,333.139 L 427.89538,344.35355 L 427.89538,321.83541 L 452.10462,333.139 z "
+       id="path3336"
+       sodipodi:nodetypes="cccc" />
+    <path
+       transform="translate(53.93393,65.377778)"
+       d="M 319.8143,267.30249 A 14.748228,14.748228 0 1 1 290.31784,267.30249 A 14.748228,14.748228 0 1 1 319.8143,267.30249 z"
+       sodipodi:ry="14.748228"
+       sodipodi:rx="14.748228"
+       sodipodi:cy="267.30249"
+       sodipodi:cx="305.06607"
+       id="path3333"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:type="arc" />
+  </g>
+</svg>

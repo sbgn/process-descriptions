@@ -1,0 +1,7 @@
+\chapter{Building a SBGN \PDm?}
+\label{chp:build}
+
+Now that the various symbols used by the SBGN \PDl have been introduced, some guidance on building map will be provided. 
+
+\input{sources/choose}
+%\include{sources/draw}
