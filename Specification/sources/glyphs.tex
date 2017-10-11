@@ -2133,6 +2133,107 @@ Although the \sbgnclass{LogicOperator} was not explicitly defined in
 the previous version the semantics and glyphs are unchanged.
 
 
+
+
+
+
+
+
+\umlclasshead{RelationalOperator}
+\label{sec:techref:relation}
+\label{defn:RelationalOperator}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width = 0.75\textwidth]{images/logicaloperatoruml}
+  \caption{The UML definition of the \sbgnclass{LogicalOperator}.}
+  \label{fig:techref:logicaloperatoruml}
+\end{figure}
+
+
+Until now the SBGN Process Description language has not provided mechanisms to sub-class EPNs. There was no specific means of specifying that macromolecules or nucleic acid features X1, X2 and X2 are subclasses of X. Therefore, any process that applies to all the subtypes of X had to be triplicated. That situation could easily generate combinatorial explosions of the number of EPNs or PNs. 
+
+To enable the representation of EPNs together with corresponding sub-classes of this EPNs, we introduce the equivalence operator glyph. Please note that this glyph can potentially introduce ambiguity. Examples of the correct use of the glyph are provided in Appendix D together with examples of misuse and with the proposed set of rules suggested as guideline for the use of the equivalence operator glyph.
+
+
+
+
+ The \sbgnclass{RelationalOperator} (figure \ref{fig:techref:relationaloperatoruml} performs a Boolean operation on one or
+more inputs to give a binary output. The input must be a Boolean
+value, and are obtained from the \classref{LogicArc} connected to the
+\sbgnclass{LogicOperator}. The output a two-value quantity,  0 for False and positive
+non-zero for True. This is required because the output of the
+\sbgnclass{LogicOperator} must be connected to either a
+\sbgnclass{LogicArc} or a \classref{ModulationArc} both of which
+require their out node to provide a quality. The behaviour of the
+logical operator for each type of \attrib{operator\_type} is shown in
+the following table:
+
+\begin{tabular}[t]{c p{12cm}}
+\toprule
+AND & All inputs must be True for output to be True, otherwise output
+is false.\\
+OR & At least one input must be True for output to be True. If all
+inputs are False then output is False.\\
+NOT & Only one input is permitted and the output is the inversion of
+the input. Therefore True gives False and False gives True.\\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Generalisation}
+
+\begin{itemize}
+\item \classref{NonStoichiometricProcess}
+\end{itemize}
+
+\subsubsection{Attributes}
+
+No additional attributes.
+
+\subsubsection{Associations}
+
+No additional associations.
+
+\subsubsection{Rules and Constraints}
+
+\begin{valrules}
+\defrule{PD??}{\attrib{in\_arc} can only contain one or more instances of
+  \sbgnclass{EquivalenceArc}.}
+\defrule{PD??}{\attrib{out\_arc} can only contain one or more instances of
+  \sbgnclass{LogicArc} or \sbgnclass{ModulationArc}.}
+\end{valrules}
+
+\subsubsection{Notation}
+
+Currently one glyph is used to represent equivalence relationships between generic and specific entities.
+
+\paragraph{Glyph: \glyph{Equivalence}}\label{sec:techref:equivalence}
+
+\begin{glyphDescription}
+ \glyphSboTerm SBO:0000392 equivalence (is a).
+ \glyphNode \glyph{Equivalence} is represented by a circle carrying letter "xi" of the Greek alphabet. The choice of the symbol is motivated by its use in mathematics for describing relationships as "equivalent to" or "identical to". 
+\end{glyphDescription}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale = 0.5]{images/equivalence}
+  \caption{The \PD glyph for \glyph{equivalence}. Only two inputs are represented, but more would be allowed.}
+  \label{fig:techref:equivalence}
+\end{figure}
+
+\subsubsection{Changes from Previous Version}
+
+This is a new language element and it did not exist in the previous versions.
+
+
+
+
+
+
+
+
+
+
 \umlclasshead{StoichiometricProcess}
 \label{defn:StoichiometricProcess}\label{sec:techref:stoichiometricprocess}
 
