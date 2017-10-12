@@ -6,31 +6,76 @@
 
 \chapter{Introduction}
 
-The goal of the \textbf{S}ystems \textbf{B}iology \textbf{G}raphical 
-\textbf{N}otation (SBGN) is to standardize the graphical/visual 
-representation of biochemical and cellular processes. SBGN 
+With the rise of systems and synthetic biology, the use of graphical representations
+of pathways and networks to describe biological systems has become pervasive. 
+It was therefore important to use a consistent notation that would allow people 
+to interpret those maps easily and quickly, without the need of extensive legends.
+Futhermore, distributed investigation of biological systems in different labs as well
+as activities like synthetic biology, that reconstruct biological systems, need
+to exchange their descriptions unambiguously, as engineers exchange circuit diagrams.
+The goal of the Systems Biology Graphical Notation (SBGN) is to standardize the 
+graphical/visual representation of biochemical and cellular processes. SBGN 
 defines comprehensive sets of symbols with precise semantics, together with 
-detailed syntactic rules defining their use.  It also describes the manner 
-in which such graphical information should be interpreted. For a general 
-description of SBGN, one can read:
-
-\begin{quote}
- Nicolas Le Nov\`{e}re, Michael Hucka, Huaiyu Mi, Stuart Moodie, Falk 
-Schreiber, Anatoly Sorokin, Emek Demir, Katja Wegner, Mirit I Aladjem, 
-Sarala M Wimalaratne, Frank T Bergman, Ralph Gauges, Peter Ghazal, Hideya 
-Kawaji, Lu Li, Yukiko Matsuoka, Alice Vill\'{e}ger, Sarah E Boyd, Laurence 
-Calzone, Melanie Courtot, Ugur Dogrusoz, Tom C Freeman, Akira Funahashi, 
-Samik Ghosh, Akiya Jouraku, Sohyoung Kim, Fedor Kolpakov, Augustin Luna, 
-Sven Sahle, Esther Schmidt, Steven Watterson, Guanming Wu, Igor Goryanin, 
-Douglas B Kell, Chris Sander, Herbert Sauro, Jacky L Snoep, Kurt Kohn  \& 
-Hiroaki Kitano. The Systems Biology Graphical Notation. \emph{Nature 
-Biotechnology} \textbf{27}, 735 - 741 (2009).  \url{http://dx.doi.org/10.1038/nbt.1558}
-\end{quote}
-
+detailed syntactic rules defining their use. It also describes the manner 
+in which such graphical information should be interpreted.
+SBGN is made up of three different and complementary languages \cite{Novere:2009p1}.
 This document defines the \emph{\PD{}} visual language of SBGN. \PDs are 
-one of three views of a biological process offered by SBGN.  It is the 
+one of three views of a biological process offered by SBGN. It is the 
 product of many hours of discussion and development by many individuals and 
 groups.
+
+\section{What are the languages?}
+\label{sec:what-languages}
+
+\textbf{PD} is a language that permits the description of all the processes
+taking place in a biological system. The ensemble of all these processes constitute
+a Description. \textbf{ER} is a language that permits the description of all 
+the relations involving the entities of a biological system. The ensemble of all 
+these relations constitute a Relationship. \textbf{AF} is a language that permits the 
+description of the flow of activity in a biological system.
+
+\section{Nomenclature}
+\label{sec:nomenclature}
+
+The three languages of SBGN should be referred to as:
+\begin{compactitem}
+\item the Process Description language.
+\item the Entity Relationship language.
+\item the Activity Flow language.
+\end{compactitem}
+
+Abbreviated as:
+\begin{compactitem}
+\item the PD language.
+\item the ER language.
+\item the AF language.
+\end{compactitem}
+
+A specific representation of a biological system in one of the SBGN languages should be referred to as:
+\begin{compactitem}
+\item a Process Description map.
+\item an Entity Relationship map.
+\item an Activity Flow map.
+\end{compactitem}
+
+Abbreviated as:
+\begin{compactitem}
+\item a PD map.
+\item an ER map.
+\item an AF map.
+\end{compactitem}
+
+The corpus of all SBGN representations should be referred to as:
+\begin{compactitem}
+\item Process Descriptions.
+\item Entity Relationships.
+\item Activity Flows.
+\end{compactitem}
+
+The capitalization is important. PD, ER and AF are names of languages. 
+As such they must be capitalized in English. This is not the case of the accompanying noun (language or map).
+
+
 
 \section{SBGN levels and versions}
 \label{sec:sbgn-levels}
@@ -46,10 +91,13 @@ development into levels.
 A \emph{level} of one of the SBGN languages represents a set of features 
 deemed to fit together cohesively, constituting a usable set of 
 functionality that the user community agrees is sufficient for a reasonable 
-set of tasks and goals.  Within \emph{levels}, \emph{versions} represent 
+set of tasks and goals. Within \emph{levels}, \emph{versions} represent 
 small evolution of a language, that may involve new glyphs, refined 
 semantics, but no fundamental change of the way maps are to be generated 
-and interpreted. Capabilities and features that cannot be agreed upon and 
+and interpreted. In addition new versions should be backwards compatible, 
+\ie \PD maps that conform to an earlier version of the \PDl within 
+the same level should still be valid. This does not apply to a new level.
+Capabilities and features that cannot be agreed upon and 
 are judged insufficiently critical to require inclusion in a given level, 
 are postponed to a higher level or version.  In this way, the development 
 of SBGN languages is envisioned to proceed in stages, with each higher 
@@ -58,7 +106,7 @@ levels adding richness compared to the levels below it.
 \section{Developments, discussions, and notifications of updates}
 \label{sec:discussions}
 
-The SBGN website (\url{http://sbgn.org/}) is a portal for all things 
+The SBGN website (\url{http://sbgn.github.io/sbgn/}) is a portal for all things 
 related to SBGN.  It provides a web forum interface to the SBGN discussion 
 list (\mailto{sbgn-discuss@caltech.edu}) and information about how anyone 
 may subscribe to it.  The easiest and best way to get involved in SBGN 
@@ -78,6 +126,13 @@ the mailing list and announced on the SBGN website.
 The concept represented by a glyph is written using a normal font, while a 
 \glyph{glyph} means the SBGN visual representation of the concept. For 
 instance ``a biological process is encoded by the SBGN PD \glyph{process}''.
+A UML class is written in camel case and presented as CamelCaseClassName.
+\textcolor{red}{Attributes are written in lower case and presented as camelCaseAttribute.}
+
+
+\textcolor{red}{Note that in drafts of this document the margin-note is used to indicate that this
+part of the document may require special attention from the reader as it may contain
+material that is new or potentially contentious.}
 
 % The following is for [X]Emacs users.  Please leave in place.
 % Local Variables:
