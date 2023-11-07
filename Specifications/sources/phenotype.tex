@@ -1,34 +1,42 @@
-% $HeadURL$
-
 \subsection{Glyph: \glyph{Phenotype}}
 \label{sec:phenotype}
 
-A biochemical network can generate phenotypes or affect biological
-processes.  Such processes can take place at different levels and are
-independent of the biochemical network itself.  To represent these
-processes in a map, SBGN defines the \glyph{phenotype} glyph.
+A biochemical network can generate phenotypes or affect biological processes.
+Such processes can take place at different levels and are independent of the biochemical network itself.
+To represent these processes in a map, \PD defines the \glyph{phenotype} glyph.
 
 \begin{glyphDescription}
 
-\glyphSboTerm SBO:0000358 ! phenotype
+\glyphSboTerm
+SBO:0000358 ! phenotype
 
-\glyphContainer A \glyph{phenotype} is represented by an elongated
-hexagon, as illustrated in \fig{phenotype}.
+\add{
+\glyphIncoming
+One or more \glyph{modulation} arcs (\sect{modulations}).
+}
 
-\glyphLabel A \glyph{phenotype} is identified by a label placed in an
-unbordered box containing a string of characters.  The characters can be
-distributed on several lines to improve readability, although this is not
-mandatory.  The label box must be attached to the center of the
-\glyph{phenotype} container.  The label may spill outside of the container.
+\add{
+\glyphOutgoing
+None.
+}
 
-\glyphAux A \glyph{phenotype} may carry a \glyph{clone marker}
-(\sect{cloneMarker}).
+\glyphContainer
+A \glyph{phenotype} is represented by an elongated hexagonal shape, as shown in \fig{phenotype}.
+
+\glyphLabel
+A \glyph{phenotype} is identified by a label that is \corr{an unbordered box containing}{} a string of characters \corr{.
+The characters}{that} may be distributed on several lines to improve readability.
+The centre of the label must be placed on the centre of the shape.
+The label may extend outside of the shape.
+
+\glyphAux 
+\corr{A \glyph{phenotype} does not carry any auxiliary items}{None}.
 
 \end{glyphDescription}
- 
+
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/phenotype}
+  \includegraphics{images/phenotype}
   \caption{The \PD glyph for \glyph{phenotype}.}
   \label{fig:phenotype}
 \end{figure}

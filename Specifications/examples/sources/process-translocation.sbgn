@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph compartmentOrder="-4.0" id="glyph1" class="compartment">
+            <label text="RE">
+                <bbox y="53.0" x="219.0" h="31.0" w="44.0"/>
+            </label>
+            <bbox y="50.0" x="50.0" h="120.0" w="216.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph1" id="glyph3" class="simple chemical">
+            <label text="Ca2+"/>
+            <bbox y="80.0" x="163.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph id="glyph4" class="process">
+            <bbox y="98.0" x="251.0" h="24.0" w="24.0"/>
+            <port y="110.0" x="239.0" id="glyph4.1"/>
+            <port y="110.0" x="287.0" id="glyph4.2"/>
+        </glyph>
+        <glyph id="glyph2" class="simple chemical">
+            <label text="Ca2+"/>
+            <bbox y="80.0" x="318.0" h="60.0" w="60.0"/>
+        </glyph>
+        <arc target="glyph4.1" source="glyph3" id="arc1" class="consumption">
+            <start y="110.0" x="223.0"/>
+            <end y="110.0" x="239.0"/>
+        </arc>
+        <arc target="glyph2" source="glyph4.2" id="arc2" class="production">
+            <start y="110.0" x="287.0"/>
+            <end y="110.0" x="318.0"/>
+        </arc>
+    </map>
+</sbgn>

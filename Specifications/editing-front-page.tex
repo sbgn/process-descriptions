@@ -1,0 +1,21 @@
+Here are some useful commands for the edition opf the spec:\\
+
+\noindent\textbf{Comments:} comments can be added in the margins using the command
+\begin{center}
+    \Verb|\your_name{your_comment}|
+\end{center}
+
+\noindent\textbf{Modifications:} modifications can be added using the commands
+\begin{center}
+\Verb|\add[optional title]{text to be added}| and \Verb|\corr[optional title]{text to be deleted}{text to be added}|
+\end{center}
+
+for additions and corrections, respectively.
+These modifications will appear in the ``List of Modifications'' below.\\
+
+\begingroup
+    \let\cleardoublepage\relax
+    \listofmodification
+\endgroup
+\newpage
+

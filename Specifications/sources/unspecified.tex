@@ -3,31 +3,46 @@
 \subsection{Glyph: \glyph{Unspecified entity}}
 \label{sec:unspecifiedEntity}
 
-The simplest type of EPN is the \glyph{unspecified entity}: one whose type is unknown or simply not relevant to the purposes of the map.  This arises, for example, when the existence of the entity has been inferred indirectly, or when the entity is merely a construct introduced for the needs of a map, without direct biological relevance.  These are examples of situations where the \emph{unspecified entity} glyph is appropriate.  (Conversely, for cases where the identity of the entities composing the pool \emph{is} known, there exist other, more specific glyphs described elsewhere in the specification.)
+The simplest type of EPN is the \glyph{unspecified entity}: one whose type is unknown or simply not relevant to the purposes of the map.
+This arises, for example, when the existence of the entity has been inferred indirectly, or when the entity is merely a construct introduced for the needs of a map, without direct biological relevance.
+These are examples of situations where the \emph{unspecified entity} glyph is appropriate.
+(Conversely, for cases where the identity of the entities composing the pool is known, there exist other, more specific glyphs described elsewhere in the specification.)
 
 \begin{glyphDescription}
 
-\glyphSboTerm SBO:0000285 ! material entity of unspecified nature 
+\glyphSboTerm
+ SBO:0000285 ! material entity of unspecified nature
 
-\glyphContainer An \glyph{unspecified entity} is represented by an
-elliptic container, as shown in \fig{unspecified}.  Note that this
-must remain an ellipse to avoid confusion with the Simple Chemical
-glyph, which is a circle (c.f.\, \ref{sec:simpleChemical}).
+\add{
+\glyphIncoming
+Zero or more \glyph{production} arcs (\sect{production}).
+}
 
-\glyphLabel An \glyph{unspecified entity} is identified by a label
-placed in an unbordered box containing a string of characters.  The
-characters can be distributed on several lines to improve readability,
-although this is not mandatory.  The label box must be attached to the
-center of the container.  The label may spill outside of the
-container.
+\add{
+\glyphOutgoing
+Zero or more \glyph{consumption} arcs (\sect{consumption}), \glyph{modulation arcs} (\sect{modulations}), \glyph{logic arcs} (\sect{logicArc}), or \glyph{equivalence arcs} (\sect{equivalenceArc}).
+}
 
-\glyphAux An \glyph{unspecified entity} may carry a \glyph{clone marker} (\sect{cloneMarker}).
+\glyphContainer
+A \glyph{unspecified entity} is represented by an elliptic shape, as shown in \fig{unspecified}.
+Note that the shape must remain an ellipse to avoid confusion with \glyph{simple chemical}, which is represented with a stadium shape (\sect{simpleChemical}).
+
+\glyphLabel
+A \glyph{unspecified entity} is identified by a label \corr{an unbordered box containing}{} that is a string of characters \corr{.
+The characters}{that} may be distributed on several lines to improve readability.
+The centre of the label must be placed on the centre of the \corr{shape}{container}.
+The label may extend outside of the \corr{shape}{container}.
+\rougny{For here, and most other labeled glyphs: can the label be empty? If not, should it be specified? Also, what kind of characters can be in the label? Any unicode? ASCII + greek? \dots Is that even important? UD: I think we should only specify when something is not allowed. I don't see a reason to restrict the character set.}
+\draeger{I would assume that a label can be empty. As far as allowable characters go, I don't see any reason for restricting the use of characters. UTF-8 or even UTF-16 should be fine.}
+
+\glyphAux
+An \glyph{unspecified entity} can carry a \glyph{clone marker} (see \sect{cloneMarker}).
 
 \end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.3]{images/unspecified}
+  \includegraphics{images/unspecified}
   \caption{The \PD glyph for \glyph{unspecified entity}.}
   \label{fig:unspecified}
 \end{figure}

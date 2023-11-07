@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="perturbing agent">
+            <label text="LABEL"/>
+            <bbox y="50.0" x="50.0" h="60.0" w="108.0"/>
+        </glyph>
+    </map>
+</sbgn>

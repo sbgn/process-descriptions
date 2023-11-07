@@ -3,7 +3,7 @@
 
 \section{Overview}
 
-One of the goals of \SBGNPDLone is to provide a visual description of biological systems that can accurately and unambiguously  convey to the reader what the writer of a \PDm meant. A secondary, but nevertheless important goal is to provide a visual language that can be supported by software tools. To achieve both goals we require a detailed set of rules that are universally applied to \PDms. In \chap{glyphs} the glyphs of the \PDl were introduced and key usage rules were described; we expect that this will be sufficient for casual users of the notation. However, this chapter provides a more detailed description of the rules that apply to the \PDl and it is anticipated that this will be required reading for ``power users'' of the notation and tool developers implementing SBGN \PD viewers or editors.
+One of the goals of \SBGNPDLone is to provide a visual description of biological systems that can accurately and unambiguously  convey to the reader what the writer of a \PDm meant. A secondary, but nevertheless important goal is to provide a visual language that can be supported by software tools. To achieve both goals we require a detailed set of rules that are universally applied to \PDms. In \chap{glyphs} the glyphs of the \PDl were introduced and key usage rules were described; we expect that this will be sufficient for casual users of the notation. However, this chapter provides a more detailed description of the rules that apply to the \PDl and it is anticipated that this will be required reading for \corr{``power users''}{advanced users} of the notation and tool developers implementing SBGN \PD viewers or editors.
 
 In addition to understanding the rules of the notation it is also important to understand the underlying model, or abstraction, of the biological world that the \PDl uses. By understanding the abstractions used one can also understand more clearly what the author of a map meant, and also what the author could not say given the limitations of the notation. In the next section, we describe the abstractions and concepts implicit in the SBGN \PDl.
 
@@ -20,9 +20,10 @@ In addition to understanding the rules of the notation it is also important to u
 \section{Concepts}
 \label{sec:concepts}
 
-The key abstraction of the SBGN \PDl is one of processes that act on pools of entities. The entities are typically biological molecules, but need not be (such as a \glyph{perturbing agent}), and the \glyph{process} is typically a combination of one or more  biochemical reactions, but again need not be. Processes are controlled, or \emph{modulated}, by other entity pools and new entities can be obtained from a \glyph{source} and existing entities discarded to a \glyph{sink}.
+The key abstraction of the SBGN \PDl is one of \borlinghaus{rather "one of the processes"?\\AR: or maybe the one of processes} processes that act on pools of entities. The entities are typically biological molecules, but need not be (such as a \glyph{perturbing agent}), and the \glyph{process} is typically a combination of one or more  biochemical reactions, but again need not be.
+Processes are controlled, or \emph{modulated}, by other entity pools and new entities can be obtained from \corr{a \glyph{source}}{an \glyph{empty set}} and existing entities discarded to \corr{a \glyph{sink}}{an \glyph{empty set}}.
 
-It can be helpful to think of the SBGN \PD as describing the flow of a fluid, especially when tying to understand concepts such as stoichiometry, and modulation. In this analogy, each \glyph{EPN} represents a tank of fluid, which may be emptied via a pipe (the consumption arc, \sect{consumption}) that is connected to a valve (the process node, \sect{PNs}), which in turn is connected to other pipes (the production arcs, \sect{production}) that fill other tanks (\glyph{EPNs}). The opening of the valve, and thus the rate of the process can be controlled by the volume of fluid in another tank (this is modulation)\footnote{The precise nature of the relationship between valve opening and amount of fluid determines the nature of the modulation.}. If there are two consumption pipes feeding fluid into the process and one is wider and allows double the flow of the first then the fluid will mix in the process with a 2:1 ratio. This corresponds to the stoichiometry of the \glyph{consumption} and \glyph{production} arcs. Finally, the system needs a source of fluid from one or more external sources (\glyph{source}, section \sect{sourceSink}) and somewhere for it to drain away (the \glyph{sink}).
+It can be helpful to think of the SBGN \PD as describing the flow of a fluid, especially when trying to understand concepts such as stoichiometry, and modulation. In this analogy, each \glyph{EPN} represents a tank of fluid, which may be emptied via a pipe (the consumption arc, \sect{consumption}) that is connected to a valve (the process node, \sect{PNs}), which in turn is connected to other pipes (the production arcs, \sect{production}) that fill other tanks (\glyph{EPNs}). The opening of the valve, and thus the rate of the process can be controlled by the volume of fluid in another tank (this is modulation)\footnote{The precise nature of the relationship between valve opening and amount of fluid determines the nature of the modulation.}. If there are two consumption pipes feeding fluid into the process and one is wider and allows double the flow of the first then the fluid will mix in the process with a 2:1 ratio. This corresponds to the stoichiometry of the \glyph{consumption} and \glyph{production} arcs. Finally, the system needs a source of fluid from one or more external sources (\corr{\glyph{source}}{represented with the \glyph{empty set}}, \add{see} section \sect{emptySet}) and \corr{somewhere}{one or more sinks} for it to drain away (\corr{the \glyph{sink}}{also represented with the \glyph{empty set}}).
 
 One can see that this maps very closely to the abstraction described in the \PDl, but it also has an interesting side-effect that it allows us to add quantities to SBGN glyphs. In particular, EPNs have an implicit amount of entities in the entity pool and processes have an implicit rate. Since SBGN \PD is not a modelling language this will not be discussed in any further detail, however, this is an important concept that underpins our understanding of how processes are modulated in \sect{mod-semantics}.
 
@@ -69,7 +70,8 @@ In order to formalize the conceptual representation described above and the sema
 % \begin{landscape}
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{images/sbgn_node_taxonomy}
+\includegraphics[width=\linewidth]{images/sbgn_node_taxonomy}
+% \includegraphics[width=0.6\linewidth]{images/sbgn_node_taxonomy}
 \caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
 \label{fig:sbgn_node_tax}
 \end{center}
@@ -102,39 +104,47 @@ In order to formalize the conceptual representation described above and the sema
 \begin{supertabular}{|p{4.5cm}|p{10cm}|}\hline
 Unit of Information & \emph{instance} \\\hline
 State variable & Owning StatefulEpnNode, value \\\hline
+\rougny{This does not really make sense (e.g. for an EPN with state variables val@var1, val@var2, states variable val@var1 and val@var2 would be identical, which is not the case.)}
 Clone maker & Owning EpnNode \\\hline
 Labelled clone maker & Owning EpnNode, Label \\\hline
 Unspecified entity & Owning compartment, Label \\\hline
 Simple chemical & Owning compartment, Label \\\hline
 Macromolecule & Owning compartment, Label, Material type, \emph{state values} \\\hline
 Nucleic acid feature & Owning compartment, Label, Conceptual type, \emph{state values} \\\hline
-Complex & Owning compartment, Label, Subunit Epns, \emph{state values} \\\hline
+Complex & Owning compartment, Label, \corr{Subunit Epns,}{} \emph{state values} \\\hline
 Simple chemical multimer & Owning compartment, Label, Cardinality \\\hline
 Macromolecule multimer & Owning compartment, Label, Material type, Cardinality, \emph{state values} \\\hline
 Nucleic acid feature multimer & Owning compartment, Label, Conceptual type, Cardinality, \emph{state values} \\\hline
-Complex multimer & Owning compartment, Label, Cardinality, Subunit Epns, \emph{state values} \\\hline
-Source & Owning compartment \\\hline
-Sink & Owning compartment \\\hline
+Complex multimer & Owning compartment, Label, Cardinality, \corr{Subunit Epns,}{} \emph{state values} \\\hline
+% \corr{Source}{} & \corr{Owning compartment}{} \\\hline
+% \corr{Sink}{} & \corr{Owning compartment}{} \\\hline
+\add{Empty set} & \add{\emph{instance}} \\\hline
 Perturbing agent & Label \\\hline
 Tag & Label \\\hline
+\add{Submap terminal} & Label \\\hline
 Compartment & Label \\\hline
 Submap & Label \\\hline
-Process & Combination of all EPNs connecting to process. \\\hline
-Omitted process & As \glyph{process}. \\\hline
-Uncertain process & As \glyph{process}. \\\hline
-Association & As \glyph{process}. \\\hline
-Dissociation & As \glyph{process}. \\\hline
-Phenotype & Label \\\hline
+Process & \corr{Combination of all EPNs connecting to process.}{\emph{instance}} \\\hline
+Omitted process & \corr{As \glyph{process}.}{\emph{instance}} \\\hline
+Uncertain process & \corr{As \glyph{process}.}{\emph{instance}} \\\hline
+Association & \corr{As \glyph{process}.}{\emph{instance}} \\\hline
+Dissociation & \corr{As \glyph{process}.}{\emph{instance}} \\\hline
+Phenotype & \corr{Label}{\emph{instance}} \\\hline
 \end{supertabular}
 \end{small}
 \end{center}
+\rougny{Only added modifications from oldV2 that do not need work or discussion (identity of process is ``instance'', subunits do not identify a complex, and sink and source are replaced by the empty set).
+    I believe the current model still contains mistakes (e.g. identity of unit of information should not be ``instance'' for cloning rule to be useful, \emph{state values} is too loosely defined, \dots).
+There might also be irrelevant entries (e.g. clone marker).
+A better model is proposed in oldV2, but it still needs work and discussions.
+So maybe we can leave this as it is for now and improve the model with the help of the community for a subsequent version.}
 
 \paragraph*{Notes}
 
-\begin{enumerate}
-\item A complex may have a Label or be defined by its subunits. In the case where it has both then all complexes with the same label must also have the same subunit composition.
-\item  Generally process nodes are unique, but if all EPNs associated with a process are cloned, then the \glyph{process} must be a duplicate as well.
-\end{enumerate}
+% \begin{enumerate}
+A complex may have a Label or be defined by its subunits. In the case where it has both then all complexes with the same label must also have the same subunit composition.
+% \item  Generally process nodes are unique, but if all EPNs associated with a process are cloned, then the \glyph{process} must be a duplicate as well.
+% \end{enumerate}
 
 
 % The model is separated into two layers. The Visual Layer (\fig{sbgn_visual}) directly maps to the glyphs used to visualise SBGN and reflects the syntax of the notation. The Conceptual Layer describes what is ``meant'' by the visual SBGN representation (\fig{sbgn_conceptual}). It is important in defining concepts such as Entity types and state variables that are implicit in the Visual Layer.

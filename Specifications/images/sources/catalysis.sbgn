@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="unspecified entity">
+            <bbox y="50.0" x="50.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph2" class="process">
+            <bbox y="55.0" x="269.0" h="50.0" w="70.0"/>
+        </glyph>
+        <arc target="glyph2" source="glyph1" id="arc1" class="catalysis">
+            <start y="80.0" x="158.0"/>
+            <end y="80.0" x="269.0"/>
+        </arc>
+    </map>
+</sbgn>

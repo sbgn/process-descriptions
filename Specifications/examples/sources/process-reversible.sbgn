@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="macromolecule">
+            <label text="Channel"/>
+            <bbox y="30.0" x="35.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph2" class="macromolecule">
+            <label text="Channel"/>
+            <bbox y="30.0" x="340.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph3" class="process">
+            <bbox y="48.0" x="228.0" h="24.0" w="24.0"/>
+            <port y="60.0" x="216.0" id="glyph3.1"/>
+            <port y="60.0" x="264.0" id="glyph3.2"/>
+        </glyph>
+        <arc target="glyph1" source="glyph3.1" id="arc1" class="production">
+            <start y="60.0" x="216.0"/>
+            <end y="60.0" x="143.0"/>
+        </arc>
+        <arc target="glyph2" source="glyph3.2" id="arc2" class="production">
+            <start y="60.0" x="264.0"/>
+            <end y="60.0" x="340.0"/>
+        </arc>
+    </map>
+</sbgn>

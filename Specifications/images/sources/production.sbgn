@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph2" class="process">
+            <bbox y="43.0" x="30.0" h="24.0" w="24.0"/>
+            <port y="55.0" x="66.0" id="glyph2.2"/>
+        </glyph>
+        <glyph id="glyph1" class="unspecified entity">
+            <label text="Target&#xA; EPN"/>
+            <bbox y="25.0" x="158.0" h="60.0" w="108.0"/>
+        </glyph>
+        <arc target="glyph1" source="glyph2.2" id="arc1" class="production">
+            <glyph id="glyph3" class="cardinality">
+                <label text="N"/>
+                <bbox y="37.0" x="99.0" h="17.5" w="24.5"/>
+            </glyph>
+            <start y="55.0" x="66.0"/>
+            <end y="55.0" x="158.0"/>
+        </arc>
+    </map>
+</sbgn>

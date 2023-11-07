@@ -1,0 +1,43 @@
+\subsection{Glyph: \glyph{<GLYPH NAME>}}
+\label{sec:<LABEL>}
+
+<USAGE DESCRIPTION>
+
+\begin{glyphDescription}
+
+\glyphSboTerm
+%IF APPLICABLE%
+    <ACCESSION NUMBER> ! <NAME>
+%ELSE%
+    Not applicable.
+%ENDIF%
+
+\glyphOrigin
+Any \glyph{<GLYPH NAME ORIGIN 1>} (\sect{<SECTION ORIGIN 1>})
+%OPTIONAL
+    %OPTIONAL REPEAT%
+        , \glyph{<GLYPH NAME ORIGIN K>} (\sect{<SECTION ORIGIN K>})
+    %ENDOPTIONAL REPEAT%
+    or \glyph{<GLYPH NAME ORIGIN N>} (\sect{<SECTION ORIGIN N>})
+%ENDOPTIONAL%
+.
+
+\glyphTarget
+Any \glyph{<GLYPH NAME TARGET 1>} (\sect{<SECTION TARGET 1>})
+%OPTIONAL
+    %OPTIONAL REPEAT%
+        , \glyph{<GLYPH NAME TARGET K>} (\sect{<SECTION TARGET K>})
+    %ENDOPTIONAL REPEAT%
+    or \glyph{<GLYPH NAME TARGET N>} (\sect{<SECTION TARGET N>})
+%ENDOPTIONAL%
+.
+
+\glyphSymbol
+%IF APPLICABLE%
+    The target extremity of a \glyph{<GLYPH NAME>} carries a <SHAPE DESCRIPTION>
+%ELSE%
+    No particular symbol is used to represent a \glyph{<GLYPH NAME>}
+%ENDIF%
+, as shown in \fig{<REF>}.
+
+\end{glyphDescription}

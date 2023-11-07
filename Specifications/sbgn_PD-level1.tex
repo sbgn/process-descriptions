@@ -6,29 +6,41 @@
 % =============================================================================
 
 \documentclass[11pt,oneside]{book}
-
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage[olditem,oldenum]{paralist}
 %% ----------------------------------------------------------------------------
 %% Layout customizations and macro definitions.
 %% ----------------------------------------------------------------------------
 
+%For edition of the draft, set to true. Set to false for release
+\newbool{draft}
+\setbool{draft}{false}
+
 \input{sources/latex-style}
 \input{sources/latex-macros}
-
+% \input{sources/latex-commenting}
+% \input{sources/latex-modifications}
+\input{sources/latex-draft}
 
 %% ----------------------------------------------------------------------------
 \begin{document}
 %% ----------------------------------------------------------------------------
-
 \frontmatter
 
+\ifbool{draft}{
+    \input{editing-front-page}
+}{
+}
+
 \input{sources/front-page}
-%\input{sources/preface}
+\input{sources/preface}
 \input{sources/toc}
 
 \mainmatter
 
 \include{sources/introduction}
-\include{sources/glyphs}
+\include{sources/glyphs} % compile error
 \include{sources/grammar}
 \include{sources/layout}
 
@@ -36,7 +48,8 @@
 
 \appendix
 
-\include{sources/examples}
+\include{sources/examples} % compile error
+\include{sources/examples_equivalence}
 \include{sources/refcard}
 \include{sources/working}
 \include{sources/revision_history}
@@ -45,6 +58,7 @@
 
 \clearpage
 \bibliographystyle{unsrt}
+\dogrusoz{we should list author names consistently in Bibliography: M. Kaufmann vs. Michael Kaufmann}
 \bibliography{sbgn_PD-level1}
 
 
