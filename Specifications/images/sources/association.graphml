@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Created by the Gravisto/VANTED graphML writer plugin on Fri Jan 11 16:05:10 JST 2019. --><graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/graphml http://graphml.graphdrawing.org/xmlns/graphml/graphml-structure-1.0rc.xsd">
+<key attr.name=".directed" attr.type="boolean" for="graph" id="ga0"/>
+<key attr.name=".graphbackgroundcolor" attr.type="string" for="graph" id="ga1"/>
+<key attr.name=".sbgn.role" attr.type="string" for="graph" id="ga2"/>
+<key attr.name=".graphics.fill.red" attr.type="int" for="node" id="na7"/>
+<key attr.name=".graphics.shape" attr.type="string" for="node" id="na17"/>
+<key attr.name=".graphics.coordinate.x" attr.type="double" for="node" id="na0"/>
+<key attr.name=".graphics.fill.blue" attr.type="int" for="node" id="na4"/>
+<key attr.name=".graphics.dimension.height" attr.type="double" for="node" id="na2"/>
+<key attr.name=".graphics.opacity" attr.type="double" for="node" id="na11"/>
+<key attr.name=".sbgn.glyphid" attr.type="string" for="node" id="na18"/>
+<key attr.name=".graphics.linemode" attr.type="string" for="node" id="na10"/>
+<key attr.name=".graphics.fill.green" attr.type="int" for="node" id="na5"/>
+<key attr.name=".graphics.outline.opacity" attr.type="int" for="node" id="na14"/>
+<key attr.name=".graphics.coordinate.y" attr.type="double" for="node" id="na1"/>
+<key attr.name=".graphics.outline.red" attr.type="int" for="node" id="na15"/>
+<key attr.name=".graphics.dimension.width" attr.type="double" for="node" id="na3"/>
+<key attr.name=".graphics.fill.opacity" attr.type="int" for="node" id="na6"/>
+<key attr.name=".graphics.outline.blue" attr.type="int" for="node" id="na12"/>
+<key attr.name=".graphics.rounding" attr.type="double" for="node" id="na16"/>
+<key attr.name=".zlevel" attr.type="int" for="node" id="na20"/>
+<key attr.name=".graphics.outline.green" attr.type="int" for="node" id="na13"/>
+<key attr.name=".sbgn.role" attr.type="string" for="node" id="na19"/>
+<key attr.name=".graphics.gradient" attr.type="double" for="node" id="na9"/>
+<key attr.name=".graphics.frameThickness" attr.type="double" for="node" id="na8"/>
+<key attr.name=".graphics.fill.red" attr.type="int" for="edge" id="ea10"/>
+<key attr.name=".graphics.fill.blue" attr.type="int" for="edge" id="ea7"/>
+<key attr.name=".graphics.opacity" attr.type="double" for="edge" id="ea15"/>
+<key attr.name=".graphics.linemode" attr.type="string" for="edge" id="ea13"/>
+<key attr.name=".graphics.bends.bend1.x" attr.type="double" for="edge" id="ea3"/>
+<key attr.name=".graphics.outline.opacity" attr.type="int" for="edge" id="ea18"/>
+<key attr.name=".graphics.bends.bend1.y" attr.type="double" for="edge" id="ea4"/>
+<key attr.name=".graphics.docking.target" attr.type="string" for="edge" id="ea6"/>
+<key attr.name=".graphics.outline.red" attr.type="int" for="edge" id="ea19"/>
+<key attr.name=".graphics.rounding" attr.type="double" for="edge" id="ea20"/>
+<key attr.name=".zlevel" attr.type="int" for="edge" id="ea25"/>
+<key attr.name=".graphics.gradient" attr.type="double" for="edge" id="ea12"/>
+<key attr.name=".graphics.thickness" attr.type="double" for="edge" id="ea22"/>
+<key attr.name=".graphics.frameThickness" attr.type="double" for="edge" id="ea11"/>
+<key attr.name=".graphics.shape" attr.type="string" for="edge" id="ea21"/>
+<key attr.name=".sbgn.glyphid" attr.type="string" for="edge" id="ea23"/>
+<key attr.name=".graphics.docking.source" attr.type="string" for="edge" id="ea5"/>
+<key attr.name=".graphics.arrowhead" attr.type="string" for="edge" id="ea1"/>
+<key attr.name=".graphics.linetype" attr.type="string" for="edge" id="ea14"/>
+<key attr.name=".graphics.fill.green" attr.type="int" for="edge" id="ea8"/>
+<key attr.name=".SBGN.BendIn" attr.type="string" for="edge" id="ea0"/>
+<key attr.name=".graphics.fill.opacity" attr.type="int" for="edge" id="ea9"/>
+<key attr.name=".graphics.outline.blue" attr.type="int" for="edge" id="ea16"/>
+<key attr.name=".graphics.outline.green" attr.type="int" for="edge" id="ea17"/>
+<key attr.name=".sbgn.role" attr.type="string" for="edge" id="ea24"/>
+<key attr.name=".graphics.arrowtail" attr.type="string" for="edge" id="ea2"/>
+<graph edgedefault="directed" id="G">
+<data key="ga2">PROCESSDESCRIPTION</data>
+<data key="ga1">#ffffff</data>
+<data key="ga0">true</data>
+<node id="n44">
+<data key="na20">-1</data>
+<data key="na19">MACROMOLECULE</data>
+<data key="na18">glyph1</data>
+<data key="na17">org.graffiti.plugins.views.defaults.RectangleNodeShape</data>
+<data key="na16">15.0</data>
+<data key="na15">254</data>
+<data key="na14">255</data>
+<data key="na13">254</data>
+<data key="na9">0.0</data>
+<data key="na12">254</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">65.0</data>
+<data key="na0">149.0</data>
+</node>
+<node id="n45">
+<data key="na20">-1</data>
+<data key="na19">MACROMOLECULE</data>
+<data key="na18">glyph3</data>
+<data key="na17">org.graffiti.plugins.views.defaults.RectangleNodeShape</data>
+<data key="na16">15.0</data>
+<data key="na15">254</data>
+<data key="na14">255</data>
+<data key="na13">254</data>
+<data key="na9">0.0</data>
+<data key="na12">254</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">195.0</data>
+<data key="na0">149.0</data>
+</node>
+<node id="n46">
+<data key="na20">-1</data>
+<data key="na19">DISSOCIATION</data>
+<data key="na18">glyph5</data>
+<data key="na17">sbgndissociation</data>
+<data key="na16">0.0</data>
+<data key="na15">0</data>
+<data key="na14">255</data>
+<data key="na13">0</data>
+<data key="na9">0.0</data>
+<data key="na12">0</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">0</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">0</data>
+<data key="na4">0</data>
+<data key="na3">24.0</data>
+<data key="na2">24.0</data>
+<data key="na1">130.0</data>
+<data key="na0">240.0</data>
+</node>
+<node id="n47">
+<data key="na20">-1</data>
+<data key="na19">MACROMOLECULE</data>
+<data key="na18">glyph2</data>
+<data key="na17">org.graffiti.plugins.views.defaults.RectangleNodeShape</data>
+<data key="na16">15.0</data>
+<data key="na15">254</data>
+<data key="na14">255</data>
+<data key="na13">254</data>
+<data key="na9">0.0</data>
+<data key="na12">254</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">130.0</data>
+<data key="na0">344.0</data>
+</node>
+<node id="n48">
+<data key="na20">-4</data>
+<data key="na19">MACROMOLECULE</data>
+<data key="na17">rectangle</data>
+<data key="na16">15.0</data>
+<data key="na15">254</data>
+<data key="na14">255</data>
+<data key="na13">254</data>
+<data key="na9">0.0</data>
+<data key="na12">254</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">130.0</data>
+<data key="na0">160.5</data>
+</node>
+<node id="n49">
+<data key="na20">-1</data>
+<data key="na19">MACROMOLECULE</data>
+<data key="na17">rectangle</data>
+<data key="na16">15.0</data>
+<data key="na15">254</data>
+<data key="na14">255</data>
+<data key="na13">254</data>
+<data key="na9">0.0</data>
+<data key="na12">254</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">130.0</data>
+<data key="na0">321.0</data>
+</node>
+<edge id="e0" source="n44" target="n46">
+<data key="ea19">172</data>
+<data key="ea18">255</data>
+<data key="ea17">172</data>
+<data key="ea16">172</data>
+<data key="ea15">1.0</data>
+<data key="ea14"/>
+<data key="ea13"> 0.0</data>
+<data key="ea12">0.0</data>
+<data key="ea11">1.5</data>
+<data key="ea10">0</data>
+<data key="ea25">-2</data>
+<data key="ea24">CONSUMPTION</data>
+<data key="ea23">arc1</data>
+<data key="ea22">15.0</data>
+<data key="ea21">org.graffiti.plugins.views.defaults.PolyLineEdgeShape</data>
+<data key="ea9">255</data>
+<data key="ea20">5.0</data>
+<data key="ea8">0</data>
+<data key="ea7">0</data>
+<data key="ea6"/>
+<data key="ea5"/>
+<data key="ea4">130.0</data>
+<data key="ea3">216.0</data>
+<data key="ea2"/>
+<data key="ea1"/>
+<data key="ea0">216.0;130.0</data>
+</edge>
+<edge id="e1" source="n45" target="n46">
+<data key="ea19">172</data>
+<data key="ea18">255</data>
+<data key="ea17">172</data>
+<data key="ea16">172</data>
+<data key="ea15">1.0</data>
+<data key="ea14"/>
+<data key="ea13"> 0.0</data>
+<data key="ea12">0.0</data>
+<data key="ea11">1.5</data>
+<data key="ea10">0</data>
+<data key="ea25">-3</data>
+<data key="ea24">CONSUMPTION</data>
+<data key="ea23">arc2</data>
+<data key="ea22">15.0</data>
+<data key="ea21">org.graffiti.plugins.views.defaults.PolyLineEdgeShape</data>
+<data key="ea9">255</data>
+<data key="ea20">5.0</data>
+<data key="ea8">0</data>
+<data key="ea7">0</data>
+<data key="ea6"/>
+<data key="ea5"/>
+<data key="ea4">130.0</data>
+<data key="ea3">216.0</data>
+<data key="ea2"/>
+<data key="ea1"/>
+<data key="ea0">216.0;130.0</data>
+</edge>
+<edge id="e2" source="n48" target="n46">
+<data key="ea19">0</data>
+<data key="ea18">255</data>
+<data key="ea17">0</data>
+<data key="ea16">0</data>
+<data key="ea15">1.0</data>
+<data key="ea14"/>
+<data key="ea13"> 0.0</data>
+<data key="ea12">0.0</data>
+<data key="ea11">1.5</data>
+<data key="ea10">0</data>
+<data key="ea24">CONSUMPTION</data>
+<data key="ea22">15.0</data>
+<data key="ea21">org.graffiti.plugins.views.defaults.PolyLineEdgeShape</data>
+<data key="ea9">255</data>
+<data key="ea20">5.0</data>
+<data key="ea8">0</data>
+<data key="ea7">0</data>
+<data key="ea6"/>
+<data key="ea5"/>
+<data key="ea4">130.0</data>
+<data key="ea3">216.0</data>
+<data key="ea2"/>
+<data key="ea1"/>
+<data key="ea0">216.0;130.0</data>
+</edge>
+<edge id="e3" source="n46" target="n47">
+<data key="ea19">172</data>
+<data key="ea18">255</data>
+<data key="ea17">172</data>
+<data key="ea16">172</data>
+<data key="ea15">1.0</data>
+<data key="ea14"/>
+<data key="ea13"> 0.0</data>
+<data key="ea12">0.0</data>
+<data key="ea11">1.5</data>
+<data key="ea10">0</data>
+<data key="ea24">CONSUMPTION</data>
+<data key="ea22">15.0</data>
+<data key="ea21">org.graffiti.plugins.views.defaults.StraightLineEdgeShape</data>
+<data key="ea9">255</data>
+<data key="ea20">5.0</data>
+<data key="ea8">0</data>
+<data key="ea7">0</data>
+<data key="ea6"/>
+<data key="ea5"/>
+<data key="ea2"/>
+<data key="ea1"/>
+</edge>
+<edge id="e4" source="n46" target="n49">
+<data key="ea19">0</data>
+<data key="ea18">255</data>
+<data key="ea17">0</data>
+<data key="ea16">0</data>
+<data key="ea15">1.0</data>
+<data key="ea14"/>
+<data key="ea13"> 0.0</data>
+<data key="ea12">0.0</data>
+<data key="ea11">1.5</data>
+<data key="ea10">0</data>
+<data key="ea24">CONSUMPTION</data>
+<data key="ea22">15.0</data>
+<data key="ea21">org.graffiti.plugins.views.defaults.StraightLineEdgeShape</data>
+<data key="ea9">255</data>
+<data key="ea20">5.0</data>
+<data key="ea8">0</data>
+<data key="ea7">0</data>
+<data key="ea6"/>
+<data key="ea5"/>
+<data key="ea2"/>
+<data key="ea1"/>
+</edge>
+</graph>
+</graphml>

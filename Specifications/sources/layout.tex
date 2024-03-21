@@ -12,9 +12,9 @@ no simple rule which can be applied to all cases. Therefore this
 section provides rules for the layout of process description maps, divided
 into two categories:
 \begin{enumerate}
-  \item requirements, i.\,e.~rules which \textbf{must} be fulfilled by a
+  \item requirements, i.e., rules which \textbf{must} be fulfilled by a
   layout, and
-  \item recommendations, i.\,e.~rules which \textbf{should} be followed if
+  \item recommendations, i.e., rules which \textbf{should} be followed if
   possible. 
 \end{enumerate}
 In addition, we provide a list of additional suggestions which may help in producing aesthetically more pleasant layouts, possibly easier to understand.
@@ -24,12 +24,12 @@ the map, and apply to both manually drawn maps as well as
 maps produced by an automatic layout algorithm. The rules do
 not deal with interactive aspects (e.\,g.~the effect of zooming). Further information about automatic network layout
 (graph drawing) can be found, for example, in the books of Di Battista and
-co-authors~\cite{DiBattista:1998} and Kaufmann and Wagner~\cite{Kaufmann:2001}.
+co-authors~\cite{DiBattista:1998}, and Kaufmann and Wagner~\cite{Kaufmann:2001}.
 
 Please note that the color of objects do not carry any meaning in
-SBGN. Although one can use colors to emphasize part of a map or
+SBGN. Although one can use colours to emphasize part of a map or
 encode additional information, the meaning of the map should not
-depend on the colors. Furthermore, objects can have different sizes
+depend on the colours. Furthermore, objects can have different sizes
 and size is also meaningless in SBGN. For example, a process node
 may be larger than a protein node. Also the meaning of a graph
 should be conserved upon scaling as far as possible.
@@ -41,14 +41,14 @@ produce a valid \PDm.
 
 \subsection{Node-node overlaps}
 
-Nodes are only allowed to overlap in two cases when they are allowed to contain other nodes --- as described in \sect{containment}. Otherwise, nodes are not allowed to overlap (\fig{layout1}). This includes the
+Nodes are only allowed to overlap in two cases when they are allowed to contain other nodes---as described in \sect{containment}. Otherwise, nodes are not allowed to overlap (\fig{layout1}). This includes the
 touching of nodes. Touching is not allowed apart from the case where
-it has a specific meaning, e.g.\, two macromolecules touching each
+it has a specific meaning, e.g., two macromolecules touching each
 other within a complex because they form the complex.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-node-node}
+  \includegraphics[scale=0.8]{images/layout-node-node}
   \caption{Nodes must not overlap.}\label{fig:layout1}
 \end{figure}
 
@@ -58,7 +58,7 @@ Edges must be drawn on the top of a the node (\fig{layout2}). See also recommend
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-node-edge}
+  \includegraphics[scale=0.8]{images/layout-node-edge}
   \caption{If an edge crosses a node, the edge must be drawn on top
   of the node.}\label{fig:layout2}
 \end{figure}
@@ -69,7 +69,7 @@ Edges are not allowed to overlap the border lines of nodes (\fig{layout3}).
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-node-border-edge}
+  \includegraphics[scale=0.8]{images/layout-node-border-edge}
   \caption{Edges must not overlap node borders.}\label{fig:layout3}
 \end{figure}
 
@@ -77,11 +77,11 @@ Edges are not allowed to overlap the border lines of nodes (\fig{layout3}).
 
 Edges are not allowed to overlap (\fig{layout4}). This includes touching of edges.
 Furthermore, an edge is neither allowed to cross itself nor to cross
-a boundary of node more than twice or other edges more than once.
+the boundary of node more than twice or other edges more than once.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-edge-edge}
+  \includegraphics[scale=0.8]{images/layout-edge-edge}
   \caption{Edges must not overlap.}\label{fig:layout4}
 \end{figure}
 
@@ -92,7 +92,7 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-orientation}
+  \includegraphics[scale=0.8]{images/layout-orientation}
   \caption{The node orientation must be horizontally or
   vertically.}\label{fig:layout5}
 \end{figure}
@@ -101,14 +101,14 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \begin{enumerate}
 \item The arcs linking the square glyph of a \glyph{process} to the \glyph{consumption} and \glyph{production arcs}
- are attached to the center of opposite sides (\fig{layout6}).
-\item The modulatory arcs are attached to the other two sides, but not necessarily all to the center, as several modifiers can affect the same process node.
+ are attached to the centre of opposite sides (\fig{layout6}).
+\item The modulatory arcs are attached to the other two sides, but not necessarily all to the centre, as several modifiers can affect the same process node.
 \end{enumerate}
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-connecting-arcs}
-  \caption{Arcs between a \glyph{process}  and the \glyph{consumption} and \glyph{production arcs} must be attached to the center of opposite sides, modulatory
+  \includegraphics[scale=0.8]{images/layout-connecting-arcs}
+  \caption{Arcs between a \glyph{process}  and the \glyph{consumption} and \glyph{production arcs} must be attached to the centre of opposite sides, modulatory
   arcs must be attached to the other two sides.}\label{fig:layout6}
 \end{figure}
 
@@ -132,7 +132,7 @@ Recommendations are rules which should be followed if possible and generally sho
 \subsection{Node-edge crossing}
 \label{sec:crosEdNo}
 
-Situations where edges and nodes cross should be avoided. Note that some crossings may be unavoidable, e.\,g.~the crossing between an edge and a compartment border or an edge and a complex (if the edge connects an element inside the complex with something outside).
+Situations where edges and nodes cross should be avoided. Note that some crossings may be unavoidable, e.g., the crossing between an edge and a compartment border or an edge and a complex (if the edge connects an element inside the complex with something outside).
 
 \subsection{Labels}
 
@@ -147,11 +147,11 @@ The amount of crossings between edges should be minimized.
 
 \subsection{Branching of \glyph{association} and \glyph{dissociation}}
 
-The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed closed to the symbol of the process, if possible at a distance comparable than, or smaller to, the diameter of the symbol defining the process (\fig{branching}).
+The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed close to the symbol of the process, if possible at a distance comparable to, or smaller than, the diameter of the symbol defining the process (\fig{branching}).
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.3]{images/layout-branching}
+  \includegraphics[scale=0.5]{images/layout-branching}
   \caption{Branching points should be close to association and dissociation symbols.}\label{fig:branching}
 \end{figure}
 
@@ -163,7 +163,7 @@ elements (\fig{layout7}).
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[scale=0.5]{images/layout-unit-information}
+  \includegraphics[scale=0.8]{images/layout-unit-information}
   \caption{Units of information should not overlap with any
   other element.}\label{fig:layout7}
 \end{figure}
@@ -173,7 +173,7 @@ elements (\fig{layout7}).
 Here is a list of additional layout suggestions which may help improve the asthetics and clarity of \PD maps.
 
 \begin{itemize}
-  \item Angle of edge crossings: If edge crossing cannot be avoided then the edges should cross with an angle close to 90 degrees.
+  \item Angle of edge crossings: If edge crossing cannot be avoided then the edges should cross with an angle close to 90\degree.
  \item Drawing area and width/height ratio: The drawing should
   be compact and the ratio between the width and the height
   of the drawing should be close to 1.
@@ -183,11 +183,11 @@ Here is a list of additional layout suggestions which may help improve the asthe
   \item Similar and symmetric parts: Similar parts of a map
   should be drawn in a similar way, and symmetric parts
   should be drawn symmetrically.
-  \item Proximity information: Related elements (e.\,g.~nodes
+  \item Proximity information: Related elements (e.g., nodes
   connected by a process or all elements within a compartment)
   should be drawn close together.
-  \item Directional information: Subsequent processes (e.\,g.~a sequence
-  of reactions) should be drawn in one direction (e.\,g.~from
+  \item Directional information: Subsequent processes (e.g., a sequence
+  of reactions) should be drawn in one direction (e.g., from
   top to bottom or from left to right).
   \item Compartments: It can help clarity to use a different background shade or color for each compartment.
 \end{itemize}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph2" class="submap">
+            <label text="wrong"/>
+            <bbox y="45.0" x="50.0" h="190.0" w="220.0"/>
+            <glyph id="glyph3" class="macromolecule">
+                <bbox y="115.0" x="126.0" h="60.0" w="108.0"/>
+            </glyph>
+            <glyph id="glyph4" class="macromolecule">
+                <bbox y="75.0" x="76.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph1" class="submap">
+            <label text="correct"/>
+            <bbox y="45.0" x="270.0" h="190.0" w="220.0"/>
+            <glyph id="glyph5" class="macromolecule">
+                <bbox y="150.0" x="356.0" h="60.0" w="108.0"/>
+            </glyph>
+            <glyph id="glyph6" class="macromolecule">
+                <bbox y="75.0" x="291.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+    </map>
+</sbgn>

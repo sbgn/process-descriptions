@@ -4,8 +4,8 @@
 
  \begin{enumerate}
    \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node.
-   \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignore.}.
-   \item EPNs should not be orphaned (i.e.\, they must be associated with at least one arc.
+   \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignored.}.
+   \item EPNs should not be orphaned (i.e.\, they must be associated with at least one arc\add{)}.
 %    \item A \glyph{complex} should consists of different EPNs. If two or more 
 %    elements of the complex are identical they should be replaced by multimer. 
  \end{enumerate}
@@ -16,7 +16,7 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.4]{images/process_sidedness}
+  \includegraphics[scale = 0.8]{images/process_sidedness}
   \caption{An illustration of the ``sidedness'' of a process. The designation of LHS and RHS is essentially arbitrary.}
   \label{fig:process-sidedness}
 \end{figure}
@@ -28,9 +28,9 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
     \item All EPNs on the LHS of a process must be unique.
     \item All EPNs on the RHS of a process must be unique.
     \item All \glyph{phenotype} glyphs must be associated with at least one modulation arc.
-    \item The EPNs that make up the LHS of the process should be consistent with the RHS, i.e.\, the process should constitute a    balanced biochemical reaction.
+    \item The EPNs that make up the LHS of the process should be consistent with the RHS, i.e., the process should constitute a    balanced biochemical reaction.
     \item Once the stoichiometry of a flux arc is displayed in a map then all other flux arcs should
-    display theit stoichiometry make.
+    display their stoichiometry make.
     \item If the stoichiometry is undefined or unknown this should be indicated by the use of a question mark (``?''). 
    \item If more than one set of stoichiometries can be applied to the flux arcs of the process then the stoichiometry of the flux arcs must be displayed.
 %     \item \glyph{PNs} should have only one \glyph{Catalysis} arc connected to them. If
@@ -44,11 +44,14 @@ As described in \sect{process}, the \glyph{consumption} and \glyph{production} a
 
   \begin{enumerate}
     \item An \glyph{Association} is always an irreversible process.
+    \item If a \glyph{Complex} is on the RHS of the association then
+  there must be at least 2 EPNS on the LHS.
 \end{enumerate}  
 
 \subsubsection{\glyph{Dissociation}}
   \begin{enumerate}
-    \item An \glyph{Dissociation} is always an irreversible process.
+    \item A \glyph{Dissociation} is always an irreversible process.
+    \item If a \glyph{Complex} is on the LHS of the dissociation then there must be at least 2 EPNs on the RHS.
 \end{enumerate}  
 
 \subsubsection{Modulation}
@@ -85,15 +88,15 @@ A process is deemed to be reversible if it has \glyph{production} arcs on both t
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.4]{images/reversible_process}
+  \includegraphics[scale = 0.8]{images/reversible_process}
   \caption{A valid reversible process. A process is reversible if its LHS and RHS contain only \glyph{production} arcs.}
   \label{fig:process-reversibility}
 \end{figure}
  
 \begin{enumerate}
 \item  A mixture of \glyph{consumption} and \glyph{production} arcs on the same side of a \glyph{process} is not permitted.
-\item A \glyph{sink} cannot be linked to a reversible process as it only receives entities, and so would effectively make the process irreversible\footnote{A \glyph{source} can only be associated with a \glyph{consumption} arc so this rule does not apply in this case.}.
-\item The semantics of \glyph{modulation} is the same as for irreversible processes, .i.e. the amount of entity in the modulation pool affects the rate of the process.
+\corr{\item A \glyph{sink} cannot be linked to a reversible process as it only receives entities, and so would effectively make the process irreversible\footnote{A \glyph{source} can only be associated with a \glyph{consumption} arc so this rule does not apply in this case.}.}{}
+\item The semantics of \glyph{modulation} is the same as for irreversible processes, .i.e., the amount of entity in the modulation pool affects the rate of the process.
 \end{enumerate}
 
  
@@ -122,8 +125,8 @@ explicitly marked as such. This is done using a \glyph{clone marker}. The detail
 Compartment   & N & & \\\hline
 SimpleChemical & Y & \glyph{Simple clone marker} & \\\hline
 UnspecifiedEntity & Y & \glyph{Simple clone marker} & \\\hline
-Source & N & & \\\hline
-Sink & N & & \\\hline
+\add{EmptySet} & Y & & \\\hline
+% Sink & N & & \\\hline
 Perturbing Agent & Y & \glyph{Simple clone marker} & \\\hline
 Phenotype & Y & \glyph{Simple clone marker} & \\\hline
 MultimerChemicalEntity & Y & \glyph{Simple clone marker} & \\\hline
@@ -132,7 +135,7 @@ Macromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 MultimerMacromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 Nucleic\-Acid\-Feature & Y & \glyph{Labeled clone marker} & \\\hline
 Complex & Y & \glyph{Labeled clone marker} & \\\hline
-Process & Y & None & Duplication is implied when all EPNs linked to the Process are marked as clones.\\\hline
+Process & Y & None & \corr{Duplication is implied when all EPNs linked to the Process are marked as clones.}{}\\\hline
 OmittedProcess & Y & As Process  & \\\hline
 UncertainProcess & Y & As Process  & \\\hline
 Association & Y & As Process  & \\\hline
@@ -141,6 +144,7 @@ LogicalOperator & Y & None & \\\hline
 AND & Y & None & \\\hline
 OR & Y & None & \\\hline
 NOT & Y & None & \\\hline
+\add{Equivalence} & Y & None & \\\hline
 \end{supertabular}
 \end{footnotesize}
 \end{center}
@@ -159,13 +163,13 @@ entities that span more than one {compartment}.
 This restriction makes it impossible to represent in a semantically
 correct way a macromolecule that spans more then one compartment ---
 for example a receptor protein. It is clearly desirable to be able to
-show a macromolecule in a manner that the biologist expects (i.e.\,
+show a macromolecule in a manner that the biologist expects (i.e.,
 spanning from the outside through the membrane to the
 inside). Therefore, the author is recommended to draw the
 macromolecule across compartment boundaries, but the underlying SBGN
-semantic model will assign it to only one. The assignment to a
-\glyph{compartment} may be decided by the software drawing tool or the
-author. Note that this has implications for auto-layout algorithms as
+semantic model will assign it to only one.
+\corr{The assignment to a \glyph{compartment} may be decided by the software drawing tool or the author.}{}
+Note that this has implications for auto-layout algorithms as
 they will only be able to treat such \glyph{entity pool nodes} as contained within
 a \glyph{compartment} and will have no way of knowing a macromolecule spans a
 compartment.
@@ -184,6 +188,21 @@ The submap is a visual device that allows the detail of an \PD map to be exporte
 \item If the same EPN is present in the map and a submap, then they must be mapped to each other.
 \item Since the main map and submap share the same namespace, an EPN that is cloned in the main map must also be
 marked as cloned in the submap --- even if there is only one copy of the EPN in the submap. The converse applies when the EPN in the submap is cloned\footnote{This has the additional benefit of ensuring that main maps and submaps do not need to be modified if the submap is exanded and collapsed by a viewing or editing tool.}.
+\end{enumerate}
+
+\subsection{\add{Equivalence operator}}
+\label{sec:eq-semantics}
+
+\begin{enumerate}
+    \item Pools should not overlap
+    \item A \glyph{process} should not affect \glyph{EPNs} belonging or deriving from both sides of an \glyph{equivalence operator}
+    \item For \glyph{simple chemicals} (stateless \glyph{EPNs}) it is not allowed to show specifics both as input and as output of a pathway
+\end{enumerate}
+
+For automatic verification, the first rule can be transformed into the following validation rules:
+\begin{enumerate}[label=(\alph*)]
+    \item Split generic processes and influences into specific ones.
+    \item There should not be any repeating processes or influences after this splitting procedure is complete.
 \end{enumerate}
 
 % \section{Summary of Rules}

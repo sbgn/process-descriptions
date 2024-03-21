@@ -1,50 +1,41 @@
-% $HeadURL$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     Consumption
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Glyph: \glyph{Consumption}}
 \label{sec:consumption}
 
-\glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process,
-but is not produced by the process.
+\glyph{Consumption} is the arc used to represent the fact that an entity pool is consumed by a process, but is not produced by the process.
 
 \begin{glyphDescription}
- \glyphSboTerm SBO:0000394 ! consumption.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}).
- \glyphTarget Any \glyph{process node} (\sect{PNs}).
- \glyphEndPoint No particular symbol is used to represent a consumption.
+
+\glyphSboTerm
+SBO:0000394 ! consumption
+
+\glyphOrigin
+\corr{Any}{One} \glyph{EPN} (\sect{EPNs}).
+
+\glyphTarget
+\corr{Any}{One} \glyph{process node} (\sect{PNs}).
+
+\glyphSymbol
+No particular symbol is used to represent a \glyph{consumption}, as shown in \fig{consumption}.\borlinghaus{maybe we could draw light colored arrows to the process node like we did before for associations. Just to make sure the unexperienced reader recognises the square as a process node}
+
 \end{glyphDescription}
-
-
-A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or 
-\glyph{production} (\sect{production}) arcs, indicating the stoichiometry of a process. This label is a number enclosed in a rectangle with one of the long sides adjacent to the consumption arc. The cardinality is 
-required to eliminate ambiguity when the exact composition, or the number of 
-copies, of the inputs or outputs to a reaction are ambiguous from the map. 
-An example is a multimer of 6 subunits dissociating into 2 monomers and 2 
-dimers. Without stoichiometry labels another result, such as 4 monomers and 1 
-dimer could be inferred.
-Once assigned to one arc connecting to a process node, cardinality should be represented on
-all \glyph{consumption} and \glyph{production} arcs connected to that process
-node to avoid misinterpretation.
-
-Omitted cardinality on one edge only should not be treated as cardinality of 1, but
-as an unspecified cardinality. In most cases, the exact value may be derived from the
-context, but unless cardinality is explicitly shown, it should be considered as
-unspecified. In the case where the stoichiometry of some part of the process is not
-known, or undefined, a question mark (?) should be used within the cardinality label
-of the corresponding arcs.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.4]{images/consumption}
+  \includegraphics{images/consumption}
   \caption{The \PD glyph for \glyph{consumption}.}
   \label{fig:consumption}
 \end{figure}
 
+A cardinality label may be associated with \glyph{consumption} (\sect{consumption}) or \glyph{production} (\sect{production}) arcs, indicating the stoichiometry of a process.
+This label is a number enclosed in a rectangular container with one of the long sides adjacent to the \corr{consumption}{\glyph{consumption}} arc.
+The cardinality is required to eliminate ambiguity when the exact composition, or the number of copies, of the inputs or outputs to a reaction are ambiguous from the map.
+An example is a multimer of six subunits dissociating into two monomers and two dimers.
+Without stoichiometry labels another result, such as four monomers and one dimer could be inferred.
+Once assigned to one arc connecting to a process node, cardinality should be represented on all \glyph{consumption} and \glyph{production} arcs connected to that process node to avoid misinterpretation.
 
-
+Omitted cardinality on one edge only should not be treated as cardinality of one, but as an unspecified cardinality.
+In most cases, the exact value may be derived from the context, but unless cardinality is explicitly shown, it should be considered as unspecified.
+In the case where the stoichiometry of some part of the process is not known, or undefined, a question mark (\corr{?}{"?"}) should be used within the cardinality label of the corresponding arcs.
 
 % The following is for [X]Emacs users.  Please leave in place.
 % Local Variables:

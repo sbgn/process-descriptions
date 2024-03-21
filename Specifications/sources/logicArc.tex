@@ -1,22 +1,28 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     Logic arc
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\color{blue}
-\subsection{Glyph: \glyph{Logic arc} }\label{sec:logicArc}
+\subsection{Glyph: \glyph{Logic arc}}
+\label{sec:logicArc}
 
-\glyph{Logic arc} is used to represent the fact that an entity influences
-the outcome of a logic operator. 
+\glyph{Logic arc} is used to represent the fact that an entity \add{pool or a logical operator} influences
+the outcome of a logic operator.
 
 \begin{glyphDescription}
- \glyphSboTerm SBO:0000398 ! logical relationship.
- \glyphOrigin Any \glyph{EPN} (\sect{EPNs}) or \glyph{logical operator} (\sect{logic}).
- \glyphTarget Any \glyph{logical operator} (\sect{logic}).
- \glyphEndPoint No particular symbol is used to represent a logic arc.
- \end{glyphDescription}
+
+\glyphSboTerm
+SBO:0000398 ! logical relationship
+
+\glyphOrigin
+\corr{Any}{One} \glyph{EPN} (\sect{EPNs}) or \glyph{logical operator} (\sect{logic}).
+
+\glyphTarget
+\corr{Any}{One} \glyph{logical operator} (\sect{logic}) \add{or \glyph{EPN} (\sect{EPNs})}.
+
+\glyphSymbol
+No particular symbol is used to represent a \glyph{logic arc}, as shown in \fig{logicArc}.
+
+\end{glyphDescription}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale = 0.4]{images/logicArc}
+  \includegraphics{images/logicArc}
   \caption{The \PD glyph for \glyph{logic arc}.}
   \label{fig:logicArc}
 \end{figure}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="complex multimer">
+            <label text="LABEL">
+                <bbox y="67.5" x="476.0" h="25.0" w="70.0"/>
+            </label>
+            <bbox y="50.0" x="457.0" h="60.0" w="108.0"/>
+            <glyph id="glyph1a" class="unit of information">
+                <label text="N:2"/>
+                <bbox y="42.0" x="468.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph3" class="nucleic acid feature multimer">
+            <label text="LABEL"/>
+            <bbox y="50.0" x="305.0" h="60.0" w="108.0"/>
+            <glyph id="glyph3a" class="unit of information">
+                <label text="N:2"/>
+                <bbox y="42.0" x="316.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph2" class="macromolecule multimer">
+            <label text="LABEL"/>
+            <bbox y="50.0" x="150.0" h="60.0" w="108.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="N:5"/>
+                <bbox y="42.0" x="161.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph4" class="simple chemical multimer">
+            <label text="LABEL"/>
+            <bbox y="50.0" x="50.0" h="60.0" w="60.0"/>
+            <glyph id="glyph4a" class="unit of information">
+                <label text="N:2"/>
+                <bbox y="42.0" x="64.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+    </map>
+</sbgn>
