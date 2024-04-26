@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph2" class="simple chemical multimer">
+            <label text="LABEL"/>
+            <clone/>
+            <bbox y="23.333" x="112.0" h="60.0" w="80.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="N:3"/>
+                <bbox y="15.333" x="136.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph3" class="simple chemical">
+            <label text="LABEL"/>
+            <clone/>
+            <bbox y="23.333" x="9.5" h="60.0" w="75.0"/>
+        </glyph>
+    </map>
+</sbgn>

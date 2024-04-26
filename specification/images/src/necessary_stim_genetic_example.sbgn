@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph3" class="nucleic acid feature">
+            <label text="gene X"/>
+            <bbox y="270.0" x="136.0" h="60.0" w="108.0"/>
+            <glyph id="glyph3a" class="unit of information">
+                <label text="ct:gene"/>
+                <bbox y="262.0" x="165.0" h="16.0" w="50.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph5" class="source and sink">
+            <bbox y="160.0" x="50.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph id="glyph4" class="source and sink">
+            <bbox y="50.0" x="195.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph id="glyph6" class="process">
+            <bbox y="68.0" x="328.0" h="24.0" w="24.0"/>
+            <port y="80.0" x="316.0" id="glyph6.1"/>
+            <port y="80.0" x="364.0" id="glyph6.2"/>
+        </glyph>
+        <glyph id="glyph1" class="macromolecule">
+            <label text="X"/>
+            <bbox y="50.0" x="441.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph7" class="process">
+            <bbox y="178.0" x="178.0" h="24.0" w="24.0"/>
+            <port y="190.0" x="166.0" id="glyph7.1"/>
+            <port y="190.0" x="214.0" id="glyph7.2"/>
+        </glyph>
+        <glyph id="glyph2" class="nucleic acid feature">
+            <label text="mRNA X"/>
+            <bbox y="160.0" x="286.0" h="60.0" w="108.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="ct:mRNA"/>
+                <bbox y="152.0" x="312.5" h="16.0" w="55.0"/>
+            </glyph>
+        </glyph>
+        <arc target="glyph7" source="glyph3" id="arc1" class="necessary stimulation">
+            <start y="270.0" x="190.0"/>
+            <end y="202.0" x="190.0"/>
+        </arc>
+        <arc target="glyph6" source="glyph2" id="arc2" class="necessary stimulation">
+            <start y="160.0" x="340.0"/>
+            <end y="92.0" x="340.0"/>
+        </arc>
+        <arc target="glyph7.1" source="glyph5" id="arc3" class="consumption">
+            <start y="190.0" x="110.0"/>
+            <next y="190.0" x="140.0"/>
+            <end y="190.0" x="166.0"/>
+        </arc>
+        <arc target="glyph6.1" source="glyph4" id="arc4" class="consumption">
+            <start y="80.0" x="255.0"/>
+            <end y="80.0" x="316.0"/>
+        </arc>
+        <arc target="glyph1" source="glyph6.2" id="arc5" class="production">
+            <start y="80.0" x="364.0"/>
+            <end y="80.0" x="441.0"/>
+        </arc>
+        <arc target="glyph2" source="glyph7.2" id="arc6" class="production">
+            <start y="190.0" x="214.0"/>
+            <end y="190.0" x="286.0"/>
+        </arc>
+    </map>
+</sbgn>

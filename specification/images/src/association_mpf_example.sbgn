@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph3" class="macromolecule">
+            <label text="CDC2"/>
+            <bbox y="25.0" x="96.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph2" class="macromolecule">
+            <label text="cyclin"/>
+            <bbox y="170.0" x="96.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph4" class="association">
+            <bbox y="118.0" x="238.0" h="24.0" w="24.0"/>
+            <port y="130.0" x="226.0" id="glyph4.1"/>
+            <port y="130.0" x="274.0" id="glyph4.2"/>
+        </glyph>
+        <glyph id="glyph1" class="complex">
+            <label text="MPF">
+                <bbox y="198.0" x="368.5" h="15.0" w="33.0"/>
+            </label>
+            <bbox y="45.0" x="320.0" h="170.0" w="130.0"/>
+            <glyph id="glyph6" class="macromolecule">
+                <label text="CDC2"/>
+                <bbox y="55.0" x="331.0" h="60.0" w="108.0"/>
+            </glyph>
+            <glyph id="glyph5" class="macromolecule">
+                <label text="cyclin"/>
+                <bbox y="130.0" x="331.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+        <arc target="glyph4.1" source="glyph3" id="arc1" class="consumption">
+            <start y="85.0" x="180.4"/>
+            <end y="130.0" x="226.0"/>
+        </arc>
+        <arc target="glyph4.1" source="glyph2" id="arc2" class="consumption">
+            <start y="170.0" x="182.57143"/>
+            <end y="130.0" x="226.0"/>
+        </arc>
+        <arc target="glyph1" source="glyph4.2" id="arc3" class="production">
+            <start y="130.0" x="274.0"/>
+            <end y="130.0" x="320.0"/>
+        </arc>
+    </map>
+</sbgn>

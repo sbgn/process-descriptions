@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Created by the Gravisto/VANTED graphML writer plugin on Wed Jan 16 14:17:05 JST 2019. --><graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/graphml http://graphml.graphdrawing.org/xmlns/graphml/graphml-structure-1.0rc.xsd">
+<key attr.name=".directed" attr.type="boolean" for="graph" id="ga0"/>
+<key attr.name=".graphbackgroundcolor" attr.type="string" for="graph" id="ga1"/>
+<key attr.name=".sbgn.role" attr.type="string" for="graph" id="ga2"/>
+<key attr.name=".labelgraphics2.alignment" attr.type="string" for="node" id="na46"/>
+<key attr.name=".graphics.fill.blue" attr.type="int" for="node" id="na4"/>
+<key attr.name=".labelgraphics1.text" attr.type="string" for="node" id="na44"/>
+<key attr.name=".graphics.dimension.height" attr.type="double" for="node" id="na2"/>
+<key attr.name=".graphics.opacity" attr.type="double" for="node" id="na11"/>
+<key attr.name=".labelgraphics2.fontSize" attr.type="int" for="node" id="na50"/>
+<key attr.name=".labelgraphics2.type" attr.type="string" for="node" id="na58"/>
+<key attr.name=".graphics.outline.opacity" attr.type="int" for="node" id="na14"/>
+<key attr.name=".labelgraphics1.labelOffset.x" attr.type="double" for="node" id="na39"/>
+<key attr.name=".labelgraphics2.color" attr.type="string" for="node" id="na48"/>
+<key attr.name=".labelgraphics2.fontStyle" attr.type="string" for="node" id="na51"/>
+<key attr.name=".labelgraphics1.labelOffset.y" attr.type="double" for="node" id="na40"/>
+<key attr.name=".labelgraphics3.fontName" attr.type="string" for="node" id="na62"/>
+<key attr.name=".graphics.gradient" attr.type="double" for="node" id="na9"/>
+<key attr.name=".labelgraphics.labelOffset.x" attr.type="double" for="node" id="na24"/>
+<key attr.name=".graphics.coordinate.x" attr.type="double" for="node" id="na0"/>
+<key attr.name=".labelgraphics.labelOffset.y" attr.type="double" for="node" id="na25"/>
+<key attr.name=".labelgraphics.text" attr.type="string" for="node" id="na29"/>
+<key attr.name=".labelgraphics.fontName" attr.type="string" for="node" id="na21"/>
+<key attr.name=".labelgraphics.color" attr.type="string" for="node" id="na20"/>
+<key attr.name=".labelgraphics2.labelOffset.x" attr.type="double" for="node" id="na52"/>
+<key attr.name=".labelgraphics2.labelOffset.y" attr.type="double" for="node" id="na53"/>
+<key attr.name=".graphics.coordinate.y" attr.type="double" for="node" id="na1"/>
+<key attr.name=".labelgraphics1.position.localAlign" attr.type="double" for="node" id="na41"/>
+<key attr.name=".labelgraphics1.position.relVert" attr.type="double" for="node" id="na43"/>
+<key attr.name=".labelgraphics1.type" attr.type="string" for="node" id="na45"/>
+<key attr.name=".labelgraphics2.position.relHor" attr.type="double" for="node" id="na55"/>
+<key attr.name=".labelgraphics3.position.relVert" attr.type="double" for="node" id="na69"/>
+<key attr.name=".graphics.dimension.width" attr.type="double" for="node" id="na3"/>
+<key attr.name=".labelgraphics.position.relVert" attr.type="double" for="node" id="na28"/>
+<key attr.name=".sbgn.role" attr.type="string" for="node" id="na31"/>
+<key attr.name=".labelgraphics1.alignment" attr.type="string" for="node" id="na33"/>
+<key attr.name=".labelgraphics.fontSize" attr.type="int" for="node" id="na22"/>
+<key attr.name=".labelgraphics.type" attr.type="string" for="node" id="na30"/>
+<key attr.name=".graphics.fill.red" attr.type="int" for="node" id="na7"/>
+<key attr.name=".labelgraphics1.fontName" attr.type="string" for="node" id="na36"/>
+<key attr.name=".labelgraphics2.position.localAlign" attr.type="double" for="node" id="na54"/>
+<key attr.name=".graphics.linemode" attr.type="string" for="node" id="na10"/>
+<key attr.name=".labelgraphics1.color" attr.type="string" for="node" id="na35"/>
+<key attr.name=".labelgraphics1.fontStyle" attr.type="string" for="node" id="na38"/>
+<key attr.name=".labelgraphics3.labelOffset.y" attr.type="double" for="node" id="na66"/>
+<key attr.name=".labelgraphics.fontStyle" attr.type="string" for="node" id="na23"/>
+<key attr.name=".labelgraphics1.anchor" attr.type="string" for="node" id="na34"/>
+<key attr.name=".labelgraphics2.anchor" attr.type="string" for="node" id="na47"/>
+<key attr.name=".labelgraphics3.anchor" attr.type="string" for="node" id="na60"/>
+<key attr.name=".labelgraphics3.labelOffset.x" attr.type="double" for="node" id="na65"/>
+<key attr.name=".labelgraphics.position.relHor" attr.type="double" for="node" id="na27"/>
+<key attr.name=".graphics.outline.red" attr.type="int" for="node" id="na15"/>
+<key attr.name=".graphics.rounding" attr.type="double" for="node" id="na16"/>
+<key attr.name=".labelgraphics.position.localAlign" attr.type="double" for="node" id="na26"/>
+<key attr.name=".zlevel" attr.type="int" for="node" id="na32"/>
+<key attr.name=".labelgraphics1.position.relHor" attr.type="double" for="node" id="na42"/>
+<key attr.name=".labelgraphics3.text" attr.type="string" for="node" id="na70"/>
+<key attr.name=".labelgraphics.alignment" attr.type="string" for="node" id="na18"/>
+<key attr.name=".labelgraphics.anchor" attr.type="string" for="node" id="na19"/>
+<key attr.name=".labelgraphics3.fontSize" attr.type="int" for="node" id="na63"/>
+<key attr.name=".graphics.frameThickness" attr.type="double" for="node" id="na8"/>
+<key attr.name=".graphics.shape" attr.type="string" for="node" id="na17"/>
+<key attr.name=".labelgraphics3.position.localAlign" attr.type="double" for="node" id="na67"/>
+<key attr.name=".labelgraphics3.type" attr.type="string" for="node" id="na71"/>
+<key attr.name=".graphics.fill.green" attr.type="int" for="node" id="na5"/>
+<key attr.name=".labelgraphics3.alignment" attr.type="string" for="node" id="na59"/>
+<key attr.name=".labelgraphics3.position.relHor" attr.type="double" for="node" id="na68"/>
+<key attr.name=".labelgraphics1.fontSize" attr.type="int" for="node" id="na37"/>
+<key attr.name=".labelgraphics2.fontName" attr.type="string" for="node" id="na49"/>
+<key attr.name=".graphics.fill.opacity" attr.type="int" for="node" id="na6"/>
+<key attr.name=".graphics.outline.blue" attr.type="int" for="node" id="na12"/>
+<key attr.name=".labelgraphics2.text" attr.type="string" for="node" id="na57"/>
+<key attr.name=".graphics.outline.green" attr.type="int" for="node" id="na13"/>
+<key attr.name=".labelgraphics2.position.relVert" attr.type="double" for="node" id="na56"/>
+<key attr.name=".labelgraphics3.color" attr.type="string" for="node" id="na61"/>
+<key attr.name=".labelgraphics3.fontStyle" attr.type="string" for="node" id="na64"/>
+<graph edgedefault="directed" id="G">
+<data key="ga2">PROCESSDESCRIPTION</data>
+<data key="ga1">#ffffff</data>
+<data key="ga0">true</data>
+<node id="n21">
+<data key="na21">Arial</data>
+<data key="na20">#000000</data>
+<data key="na32">-1</data>
+<data key="na31">MACROMOLECULE</data>
+<data key="na30">text</data>
+<data key="na19">c</data>
+<data key="na18">center</data>
+<data key="na17">complex</data>
+<data key="na16">15.0</data>
+<data key="na15">0</data>
+<data key="na14">255</data>
+<data key="na13">0</data>
+<data key="na9">0.0</data>
+<data key="na12">0</data>
+<data key="na8">2.0</data>
+<data key="na11">1.0</data>
+<data key="na7">255</data>
+<data key="na10"> 0.0</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">110.0</data>
+<data key="na29">LABEL</data>
+<data key="na0">130.0</data>
+<data key="na28">0.0</data>
+<data key="na27">0.0</data>
+<data key="na26">0.0</data>
+<data key="na25">0.0</data>
+<data key="na24">0.0</data>
+<data key="na23">plain</data>
+<data key="na22">20</data>
+</node>
+<node id="n22">
+<data key="na29">LABEL</data>
+<data key="na9">0.0</data>
+<data key="na28">0.0</data>
+<data key="na8">2.0</data>
+<data key="na27">0.0</data>
+<data key="na7">255</data>
+<data key="na58">text</data>
+<data key="na26">0.0</data>
+<data key="na6">255</data>
+<data key="na57">val@var</data>
+<data key="na25">0.0</data>
+<data key="na5">255</data>
+<data key="na56">0.0</data>
+<data key="na24">0.0</data>
+<data key="na4">255</data>
+<data key="na55">0.0</data>
+<data key="na23">plain</data>
+<data key="na3">108.0</data>
+<data key="na54">0.0</data>
+<data key="na22">20</data>
+<data key="na2">60.0</data>
+<data key="na53">0.0</data>
+<data key="na1">110.0</data>
+<data key="na21">Arial</data>
+<data key="na52">0.0</data>
+<data key="na0">270.0</data>
+<data key="na20">#000000</data>
+<data key="na51">plain,capsule</data>
+<data key="na50">10</data>
+<data key="na19">c</data>
+<data key="na18">center</data>
+<data key="na49">Arial</data>
+<data key="na17">complex</data>
+<data key="na48">#000000</data>
+<data key="na16">15.0</data>
+<data key="na47">btr</data>
+<data key="na15">0</data>
+<data key="na46">center</data>
+<data key="na14">255</data>
+<data key="na45">text</data>
+<data key="na13">0</data>
+<data key="na44">INFO</data>
+<data key="na12">0</data>
+<data key="na43">0.0</data>
+<data key="na11">1.0</data>
+<data key="na42">0.0</data>
+<data key="na10"> 0.0</data>
+<data key="na41">0.0</data>
+<data key="na40">0.0</data>
+<data key="na39">0.0</data>
+<data key="na38">box</data>
+<data key="na37">10</data>
+<data key="na36">Arial</data>
+<data key="na35">#000000</data>
+<data key="na34">btl</data>
+<data key="na33">center</data>
+<data key="na32">-1</data>
+<data key="na31">MACROMOLECULE</data>
+<data key="na30">text</data>
+</node>
+<node id="n23">
+<data key="na49">Arial</data>
+<data key="na48">#ffffff</data>
+<data key="na47">b</data>
+<data key="na46">center</data>
+<data key="na45">text</data>
+<data key="na44">INFO</data>
+<data key="na43">0.0</data>
+<data key="na42">0.0</data>
+<data key="na41">0.0</data>
+<data key="na40">0.0</data>
+<data key="na39">0.0</data>
+<data key="na38">box</data>
+<data key="na37">10</data>
+<data key="na36">Arial</data>
+<data key="na35">#000000</data>
+<data key="na34">btl</data>
+<data key="na33">center</data>
+<data key="na32">-1</data>
+<data key="na31">MACROMOLECULE</data>
+<data key="na30">text</data>
+<data key="na29">LABEL</data>
+<data key="na28">0.0</data>
+<data key="na27">0.0</data>
+<data key="na26">0.0</data>
+<data key="na25">0.0</data>
+<data key="na24">0.0</data>
+<data key="na23">plain</data>
+<data key="na22">20</data>
+<data key="na21">Arial</data>
+<data key="na20">#000000</data>
+<data key="na9">-0.3333333333333333</data>
+<data key="na8">2.0</data>
+<data key="na7">255</data>
+<data key="na6">255</data>
+<data key="na5">255</data>
+<data key="na4">255</data>
+<data key="na3">108.0</data>
+<data key="na2">60.0</data>
+<data key="na1">110.0</data>
+<data key="na0">410.0</data>
+<data key="na19">c</data>
+<data key="na18">center</data>
+<data key="na17">complex</data>
+<data key="na16">15.0</data>
+<data key="na15">0</data>
+<data key="na14">255</data>
+<data key="na13">0</data>
+<data key="na12">0</data>
+<data key="na11">1.0</data>
+<data key="na10"> 0.0</data>
+<data key="na71">text</data>
+<data key="na70">val@var</data>
+<data key="na69">0.0</data>
+<data key="na68">0.0</data>
+<data key="na67">0.0</data>
+<data key="na66">0.0</data>
+<data key="na65">0.0</data>
+<data key="na64">plain,capsule</data>
+<data key="na63">10</data>
+<data key="na62">Arial</data>
+<data key="na61">#000000</data>
+<data key="na60">btr</data>
+<data key="na59">center</data>
+<data key="na58">text</data>
+<data key="na57">MARKER</data>
+<data key="na56">0.0</data>
+<data key="na55">0.0</data>
+<data key="na54">0.0</data>
+<data key="na53">0.0</data>
+<data key="na52">0.0</data>
+<data key="na51">plain</data>
+<data key="na50">10</data>
+</node>
+</graph>
+</graphml>
