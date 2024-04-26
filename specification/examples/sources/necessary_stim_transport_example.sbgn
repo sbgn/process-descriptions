@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph compartmentOrder="-6.0" id="glyph1" class="compartment">
+            <label text="CYTOSOL">
+                <bbox y="59.5" x="79.0" h="18.0" w="76.0"/>
+            </label>
+            <bbox y="50.0" x="50.0" h="300.0" w="430.0"/>
+        </glyph>
+        <glyph compartmentOrder="-5.0" id="glyph2" class="compartment">
+            <label text="ER">
+                <bbox y="134.5" x="96.0" h="18.0" w="28.0"/>
+            </label>
+            <bbox y="125.0" x="85.0" h="200.0" w="230.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph2" id="glyph5" class="simple chemical">
+            <label text="Ca2+"/>
+            <bbox y="245.0" x="190.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph1" id="glyph4" class="simple chemical">
+            <label text="Ca2+"/>
+            <bbox y="245.0" x="385.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph1" id="glyph3" class="macromolecule">
+            <label text="IP3R"/>
+            <bbox y="165.0" x="271.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph6" class="process">
+            <bbox y="263.0" x="298.0" h="24.0" w="24.0"/>
+            <port y="275.0" x="286.0" id="glyph6.1"/>
+            <port y="275.0" x="334.0" id="glyph6.2"/>
+        </glyph>
+        <arc target="glyph6.1" source="glyph5" id="arc1" class="consumption">
+            <start y="275.0" x="250.0"/>
+            <end y="275.0" x="286.0"/>
+        </arc>
+        <arc target="glyph4" source="glyph6.2" id="arc2" class="production">
+            <start y="275.0" x="334.0"/>
+            <end y="275.0" x="385.0"/>
+        </arc>
+        <arc target="glyph6" source="glyph3" id="arc3" class="necessary stimulation">
+            <start y="225.0" x="341.66666"/>
+            <next y="240.0" x="350.0"/>
+            <end y="264.5" x="322.0"/>
+        </arc>
+    </map>
+</sbgn>
