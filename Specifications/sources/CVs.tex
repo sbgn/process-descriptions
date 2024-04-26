@@ -4,7 +4,7 @@
 %\color{blue}
 
 Some glyphs in SBGN \PDs can contain particular kinds of textual annotations conveying information relevant to the purpose of the glyph.  These annotations are \glyph{units of information} (\sect{unitInfo}) or \glyph{state variables}  (\sect{stateVariable}).  For example, multimers can have a unit of information conveying the number of monomers composing the multimer. 
-\borlinghaus{"An example is the case.." would sound nicer to me. What do the native speakers say?}
+
 Other cases are described throughout the rest of this chapter.
 
 The text that appears as the unit of information decorating an Entity Pool Node (EPN) must in most cases be prefixed with a controlled vocabulary term indicating the type of information being expressed.  The prefixes are mandatory except in the case of macromolecule covalent modifications (\sect{covalent-mod-cv}).  
@@ -15,14 +15,14 @@ They cover the following categories of information: an EPN's material type, an E
 In each case, some CV terms are predefined by SBGN, but unless otherwise noted, \emph{they are not the only terms permitted}.  
 Users may use other CV values not listed here.
 In such cases, they should explain the term's meanings in a figure legend or other text accompanying the map.
-% \borlinghaus{I think we could shorten these sentences by deleting the "but"s and replace them by "." }
-\add{Users of CV values not listed here should \emph{strongly} attempt different prefixes from those listed in this document.} \luna{Text to help guide users of CVs not defined spec}
+% 
+Users of CV values not listed here should \emph{strongly} attempt different prefixes from those listed in this document. 
 
 
 \subsection{Entity pool node material types}
 \label{sec:material-types-cv}
 
-The material type of an EPN indicates its chemical structure \add{and physical composition}.  A list of common material types is shown in \tab{material-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000240} (the \emph{material entity} under \emph{entity}).
+The material type of an EPN indicates its chemical structure and physical composition.  A list of common material types is shown in \tab{material-types-cv}, but others are possible.  The values are to be taken from the \sbo (\sbourl), specifically from the branch having identifier \sboid{SBO:0000240} (the \emph{material entity} under \emph{entity}).
 
 \begin{table}[h]
   \centering
@@ -33,7 +33,7 @@ The material type of an EPN indicates its chemical structure \add{and physical c
     Non-macromolecular ion     & mt:ion  & SBO:0000327\\
     Non-macromolecular radical & mt:rad  & SBO:0000328\\
     Ribonucleic acid           & mt:rna  & SBO:0000250\\
-    \corr{Deoxribonucleic}{Deoxyribonucleic} acid       & mt:dna  & SBO:0000251\\
+    Deoxyribonucleic acid       & mt:dna  & SBO:0000251\\
     Protein                    & mt:prot & SBO:0000297\\
     Polysaccharide             & mt:psac & SBO:0000249\\
     \bottomrule

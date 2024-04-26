@@ -10,7 +10,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \hline
 \raisebox{20pt}{$Arc \backslash EPN$} &\vglyph{macromolecule} & \vglyph{simple chemical} & 
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
-\vglyph{nucleic acid feature}& \vglyph{tag} & \add{\vglyph{submap terminal}} & \add{\vglyph{empty set}} & 
+\vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{submap terminal} & \vglyph{empty set} & 
 \vglyph{perturbing agent} &  \vglyph{submap}\\ \hline 
 \glyph{consumption}      & S & S & S & S & S & S &   & & S(1) &  & \\ \hline 
 \glyph{production}        & T & T & T & T & T & T &   & & T(1) &  & \\ \hline 
@@ -20,7 +20,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \glyph{inhibition}          & S & S & S & S & S & S &   & & & S & \\ \hline 
 \glyph{necessary stimulation} & S & S & S & S & S & S &  & &  & S & \\ \hline 
 \glyph{logic arc}          & S & S & S & S & S & S &   &  & &   & \\ \hline 
-\glyph{equivalence arc}     & S & S & S & S & S & S & T & \add{T}  & &\corr{T}{} \\ \hline \hline
+\glyph{equivalence arc}     & S & S & S & S & S & S & T & T  & & \\ \hline \hline
 \end{tabular}
 \end{center}
 
@@ -29,7 +29,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \begin{enumerate}
     \item An EPN that is a \glyph{subunit} of a \glyph{complex} can only be linked to a modulation arc.
     \item With the above exception, glyphs that are subunits cannot be connect to any arc glyph.
-    \item \add{A \glyph{logic arc} that is linked to an \glyph{equivalence operator} on one side can only be linked to an EPN on the other side.}
+    \item A \glyph{logic arc} that is linked to an \glyph{equivalence operator} on one side can only be linked to an EPN on the other side.
 \end{enumerate}
     
 \begin{center}
@@ -38,7 +38,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \hline
 \raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
 \vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
-\vglyph{or} & \vglyph{not} & \add{\vglyph{equivalence}} \\ \hline 
+\vglyph{or} & \vglyph{not} & \vglyph{equivalence} \\ \hline 
 \glyph{consumption} & T & T &  T & & T    & T(1) &      &      &  &    \\ \hline
 \glyph{production}  & S & S & S & & S(1) & S    &      &      &   &   \\ \hline
 \glyph{modulation}  & T & T & T & T  &   &      & S(1) & S(1) & S(1) & \\ \hline
@@ -74,7 +74,7 @@ By containment we mean that a glyph can be drawn inside the other glyph. This do
 \glyph{macromolecule}        &         +       &          +        \\ \hline
 \glyph{nucleic acid feature}   &         +       &          +      \\ \hline 
 \glyph{multimer}             &         +       &          +         \\ \hline
-\add{\glyph{empty set}}          &         -       &          +          \\ \hline 
+\glyph{empty set}          &         -       &          +          \\ \hline 
 \glyph{perturbing agent}          &         -       &          +      \\ \hline
 \glyph{phenotype}           &         -       &          +         \\ \hline
 \glyph{tag}                  &         -       &          +          \\ \hline
@@ -100,7 +100,7 @@ By containment we mean that a glyph can be drawn inside the other glyph. This do
 \glyph{and}                  &         -       &          +         \\ \hline
 \glyph{or}                   &         -       &          +          \\ \hline
 \glyph{not}                  &         -       &          +         \\ \hline
-\add{\glyph{equivalence}}                  &         -       &          +         \\ \hline
+\glyph{equivalence}                  &         -       &          +         \\ \hline
 \hline
 \end{supertabular}
 \end{center}

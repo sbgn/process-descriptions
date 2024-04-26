@@ -17,8 +17,8 @@
 \section{Auxiliary units}
 
 Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader.
-In doing so, they change the meaning of the glyph \corr{and/}{}or provide additional information about it.
-These can provide \add{specific} annotation (\glyph{unit of information}), state information (\glyph{state variable}), indicate duplication of entity pool nodes (\glyph{clone marker}), describe specific glyphs (\glyph{subunit} for \glyph{complex})\add{, or provide handles to elements lying outside of the maps (\glyph{submap terminal} for \glyph{submap})}.
+In doing so, they change the meaning of the glyph or provide additional information about it.
+These can provide specific annotation (\glyph{unit of information}), state information (\glyph{state variable}), indicate duplication of entity pool nodes (\glyph{clone marker}), describe specific glyphs (\glyph{subunit} for \glyph{complex}), or provide handles to elements lying outside of the maps (\glyph{submap terminal} for \glyph{submap}).
 
 \input{sources/unitInformation.tex}
 \input{sources/stateVariable.tex} % FIX 101717
@@ -43,7 +43,7 @@ Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong
 
 The \PD contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).
 (Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN.)
-In addition to the material entities, \PD represents two conceptual \corr{entities}{entity pools}: \glyph{empty set} (\sect{emptySet}), and \glyph{perturbing agent} (\sect{perturbing agent}).
+In addition to the material entities, \PD represents two conceptual entity pools: \glyph{empty set} (\sect{emptySet}), and \glyph{perturbing agent} (\sect{perturbing agent}).
 Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
 
 \input{sources/unspecified.tex}
@@ -100,10 +100,10 @@ Process nodes represent processes that transform one or several entity pools int
 \section{Flux arcs}
 \label{sec:fluxes}
 
-\add{Processes transform entity pools into other entity pools (\sect{PNs}).
+Processes transform entity pools into other entity pools (\sect{PNs}).
 Flux arcs allow representing which entity pools are consumed and produced by a process.
 \glyph{Consumption} arcs link processes to their reactants, and \glyph{production} arcs link processes to their products.
-\SBGNPDLone does not provide any specific arc to represent the fluxes of a reversible process, that can be conveniently represented using only \glyph{production} arcs.}
+\SBGNPDLone does not provide any specific arc to represent the fluxes of a reversible process, that can be conveniently represented using only \glyph{production} arcs.
 
 \input{sources/consumption.tex}
 \input{sources/production.tex}
@@ -111,9 +111,9 @@ Flux arcs allow representing which entity pools are consumed and produced by a p
 \section{Modulation arcs}
 \label{sec:modulations}
 
-\add{Modulation arcs represent influences of entity pools on processes.
+Modulation arcs represent influences of entity pools on processes.
 A stimulation affects positively the flux of a process, while an inhibition affects it negatively.
-\SBGNPDLone provides six modulation arcs: \glyph{modulation}, \glyph{stimulation}, \glyph{catalysis}, \glyph{necessary stimulation} and \glyph{inhibition}.}
+\SBGNPDLone provides six modulation arcs: \glyph{modulation}, \glyph{stimulation}, \glyph{catalysis}, \glyph{necessary stimulation} and \glyph{inhibition}.
 
 \input{sources/modulation.tex}
 \input{sources/stimulation.tex}
@@ -128,13 +128,12 @@ A stimulation affects positively the flux of a process, while an inhibition affe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Logical operators}
-\dogrusoz{Any particular reason we have "nodes" here? Sounded like unnecessary introduction of a term.\\AR: to be consistent with the naming of other classes of nodes: Entity Pool Nodes and Process nodes.\\
-AR: actually you're right, removed nodes}
+
 \label{sec:logic}
 
-\add{The \glyph{logical operator} performs an operation on one or more inputs to give a unique output.
-The \glyph{and}, \glyph{or}, and \glyph{not} operators perform a Boolean operation to give a binary output, while the \glyph{equivalence} operator performs a union of pools to give a new pool.}
-\rougny{There was no text in V1.3, adapted part of the text of oldV2 to include the equivalence operator. Is the part on the ``union of pools'' exact? Rather talk of subclasses and superclass, or something like that: combines subclasses into a superclass?}
+The \glyph{logical operator} performs an operation on one or more inputs to give a unique output.
+The \glyph{and}, \glyph{or}, and \glyph{not} operators perform a Boolean operation to give a binary output, while the \glyph{equivalence} operator performs a union of pools to give a new pool.
+
 
 \input{sources/and.tex}
 \input{sources/or.tex}
@@ -155,7 +154,7 @@ The \glyph{and}, \glyph{or}, and \glyph{not} operators perform a Boolean operati
 
 Reference nodes handle links or relationships between elements of a map and sub-map.
 At present there is only one reference glyph, \glyph{tag}, which can be used in a map referred to by a \glyph{submap} (\sect{submap}).
-\corr{or as an auxilary unit on the \glyph{submap}. The \glyph{clone marker} can also provide additional reference mechanisms and is discussed below (\sect{cloneMarker}).}{}
+
 
 \input{sources/tag.tex}
 \input{sources/equivalenceArc.tex}

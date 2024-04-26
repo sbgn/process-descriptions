@@ -5,7 +5,7 @@
  \begin{enumerate}
    \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node.
    \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignored.}.
-   \item EPNs should not be orphaned (i.e.\, they must be associated with at least one arc\add{)}.
+   \item EPNs should not be orphaned (i.e.\, they must be associated with at least one arc).
 %    \item A \glyph{complex} should consists of different EPNs. If two or more 
 %    elements of the complex are identical they should be replaced by multimer. 
  \end{enumerate}
@@ -95,7 +95,7 @@ A process is deemed to be reversible if it has \glyph{production} arcs on both t
  
 \begin{enumerate}
 \item  A mixture of \glyph{consumption} and \glyph{production} arcs on the same side of a \glyph{process} is not permitted.
-\corr{\item A \glyph{sink} cannot be linked to a reversible process as it only receives entities, and so would effectively make the process irreversible\footnote{A \glyph{source} can only be associated with a \glyph{consumption} arc so this rule does not apply in this case.}.}{}
+
 \item The semantics of \glyph{modulation} is the same as for irreversible processes, .i.e., the amount of entity in the modulation pool affects the rate of the process.
 \end{enumerate}
 
@@ -125,7 +125,7 @@ explicitly marked as such. This is done using a \glyph{clone marker}. The detail
 Compartment   & N & & \\\hline
 SimpleChemical & Y & \glyph{Simple clone marker} & \\\hline
 UnspecifiedEntity & Y & \glyph{Simple clone marker} & \\\hline
-\add{EmptySet} & Y & & \\\hline
+EmptySet & Y & & \\\hline
 % Sink & N & & \\\hline
 Perturbing Agent & Y & \glyph{Simple clone marker} & \\\hline
 Phenotype & Y & \glyph{Simple clone marker} & \\\hline
@@ -135,7 +135,7 @@ Macromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 MultimerMacromolecule & Y & \glyph{Labeled clone marker} & \\\hline
 Nucleic\-Acid\-Feature & Y & \glyph{Labeled clone marker} & \\\hline
 Complex & Y & \glyph{Labeled clone marker} & \\\hline
-Process & Y & None & \corr{Duplication is implied when all EPNs linked to the Process are marked as clones.}{}\\\hline
+Process & Y & None & \\\hline
 OmittedProcess & Y & As Process  & \\\hline
 UncertainProcess & Y & As Process  & \\\hline
 Association & Y & As Process  & \\\hline
@@ -144,7 +144,7 @@ LogicalOperator & Y & None & \\\hline
 AND & Y & None & \\\hline
 OR & Y & None & \\\hline
 NOT & Y & None & \\\hline
-\add{Equivalence} & Y & None & \\\hline
+Equivalence & Y & None & \\\hline
 \end{supertabular}
 \end{footnotesize}
 \end{center}
@@ -168,7 +168,7 @@ spanning from the outside through the membrane to the
 inside). Therefore, the author is recommended to draw the
 macromolecule across compartment boundaries, but the underlying SBGN
 semantic model will assign it to only one.
-\corr{The assignment to a \glyph{compartment} may be decided by the software drawing tool or the author.}{}
+
 Note that this has implications for auto-layout algorithms as
 they will only be able to treat such \glyph{entity pool nodes} as contained within
 a \glyph{compartment} and will have no way of knowing a macromolecule spans a
@@ -190,7 +190,7 @@ The submap is a visual device that allows the detail of an \PD map to be exporte
 marked as cloned in the submap --- even if there is only one copy of the EPN in the submap. The converse applies when the EPN in the submap is cloned\footnote{This has the additional benefit of ensuring that main maps and submaps do not need to be modified if the submap is exanded and collapsed by a viewing or editing tool.}.
 \end{enumerate}
 
-\subsection{\add{Equivalence operator}}
+\subsection{Equivalence operator}
 \label{sec:eq-semantics}
 
 \begin{enumerate}

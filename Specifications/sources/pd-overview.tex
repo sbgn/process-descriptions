@@ -5,7 +5,7 @@ To set the stage for what follows in this chapter, we give first a brief overvie
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{examples/MAPK-only}
-  \caption{This example of a \PD \add{map} uses two kinds of entity pool nodes: one
+  \caption{This example of a \PD map uses two kinds of entity pool nodes: one
     for pools of different macromolecules (\sect{macromolecule}) and
     another for pools of simple chemicals (\sect{simpleChemical}).  Most
     \glyph{macromolecule} nodes in this map are adorned with \glyph{state
@@ -39,12 +39,10 @@ The essence of the \PDs is the \emph{change}: it shows how different entities in
     & Specific macromolecules or other chemical species \\[0.5em]
 
     Container node	
-    % \rougny{Complexes also belong to EPNs, putting them there is maybe not relevant
-    % VT: Yes can be removed. What about 'Container node' Do we have this term somewhere else? It has been changed in the table of content for compartments.
-    % UD: The Reference Card uses the term "Container node" but only lists compartment as a container node, complexes are listed under EPNs. Actually I think a complex is both an EPN and a container node but for consistency with the Reference Card, we might want to move complexes to EPN.}
+    % 
     & CN
     & An encapsulation of one or more other SBGN constructs
-    & \corr{Complexes, c}{C}ompartments \\[1.6em]
+    & Compartments \\[1.6em]
 
     Process node
     & PN
@@ -53,11 +51,11 @@ The essence of the \PDs is the \emph{change}: it shows how different entities in
 
     Arc
     & ---
-    & Links between EPNs\corr{ or}{,} CNs \add{or Logical Operators} to PNs or \corr{CNs to indicate influences}{Logical operators}
+    & Links between EPNs, CNs or Logical Operators to PNs or Logical operators
     & Production, catalysis, inhibition \\[0.5em]
 
     Logical operators
-    & \corr{---}{LO}
+    & LO
     & Combines one or several inputs into one output
     & Boolean \emph{and}, \emph{or}, \emph{not} \\
     \bottomrule

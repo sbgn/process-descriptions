@@ -4,10 +4,10 @@
 
 Many biological processes involve \emph{macromolecules}: biochemical substances that are built up from the covalent linking of pseudo-identical units.
 Examples of macromolecules include proteins, nucleic acids (RNA, DNA), and polysaccharides (glycogen, cellulose, starch, etc.).
-Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone \corr{defines}{specifies} only one glyph for all macromolecules.
+Attempting to define a separate glyph for all of these different molecules would lead to an explosion of symbols in SBGN, so instead, \SBGNPDLone specifies only one glyph for all macromolecules.
 The same glyph is to be used for a protein, a nucleic acid, a complex sugar, and so on.
 The exact nature of a particular macromolecule in a map is then clarified using its label and decorations, as it will become clearer below.
-% \dogrusoz{I agree with these suggested changes.}
+% 
 (Future levels of SBGN may subclass the \glyph{macromolecule} and introduce different glyphs to differentiate between types of macromolecules.)
 
 \begin{glyphDescription}
@@ -15,24 +15,23 @@ The exact nature of a particular macromolecule in a map is then clarified using 
 \glyphSboTerm
 SBO:0000245 ! macromolecule
 
-\add{
+
 \glyphIncoming
 Zero or more \glyph{production} arcs (\sect{production}).
-}
 
-\add{
+
+
 \glyphOutgoing
 Zero or more \glyph{consumption} arcs (\sect{consumption}), \glyph{modulation arcs} (\sect{modulations}), \glyph{logic arcs} (\sect{logicArc}), or \glyph{equivalence arcs} (\sect{equivalenceArc}).
-}
+
 
 \glyphContainer
 A \glyph{macromolecule} is represented by a rectangular shape with rounded corners, as shown in \fig{macromolecule}.
 
 \glyphLabel
-A \glyph{macromolecule} is identified by a label \corr{an unbordered box containing}{} that is a string of characters \corr{.
-The characters}{that} may be distributed on several lines to improve readability.
-The centre of the label must be placed on the centre of the \corr{shape}{container}.
-The label may extend outside of the \corr{shape}{container}.
+A \glyph{macromolecule} is identified by a label  that is a string of characters that may be distributed on several lines to improve readability.
+The centre of the label must be placed on the centre of the container.
+The label may extend outside of the container.
 
 \glyphAux
 A \glyph{macromolecule} can carry one or more \glyph{state variables} that add information about its state (\sect{stateVariable}).

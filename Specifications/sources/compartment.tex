@@ -7,35 +7,33 @@ A compartment is a logical or physical structure that contains entity pool nodes
 
 \glyphSboTerm  SBO:0000290 ! physical compartment
 
-\add{
+
 \glyphIncoming
 None.
-}
 
-\add{
+
+
 \glyphOutgoing
 Zero or more \glyph{equivalence arcs} (\sect{equivalenceArc}).
-}
+
 
 \glyphContainer
 A \glyph{compartment} is represented by a surface enclosed in a continuous border or located between continuous borders.
 These borders should be noticeably thicker than the borders of the EPNs.
-A compartment can take \textbf{any} \corr{geometry}{shape}.
+A compartment can take \textbf{any} shape.
 A compartment must always be entirely enclosed.
 
 \glyphLabel
-A \glyph{compartment} is identified by a label that is \corr{an unbordered box containing}{} a string of characters \corr{.
-The characters}{that} may be distributed on several lines to improve readability.
+A \glyph{compartment} is identified by a label that is  a string of characters that may be distributed on several lines to improve readability.
 The label can be placed anywhere in the shape.
 The label may extend outside of the shape.
 
 \glyphAux
 A \glyph{compartment} can carry one or more \glyph{units of information} (\sect{unitInfo}).
 These can characterise the physical environment, such as pH, temperature or voltage.
-\corr{Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and the conceptual type (\sect{conceptual-types-cv}) of a \glyph{compartment}.}{}
-\rougny{Not relevant for compartments I guess?}
-\borlinghaus{If we want to describe the lipids in the membrane? For example if we want to emphasize lipid modification.\\
-AR: Could you explain more please, I do not see the link with the sentence above.}
+
+
+
 
 \end{glyphDescription}
 

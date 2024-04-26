@@ -19,10 +19,10 @@ The value of a \glyph{state variable} has to be perfectly defined in \SBGNPDLone
 
 The current specification cannot represent combinations of events and entities. For instance, a variable ``voltage'' cannot be controlled by a difference of concentration between different entities, such as a given ion in both sides of a membrane. 
 
-% \section{\corr{Generics}{}}
+% \section{}
 %
-% \corr{\SBGNPDLone does not provide mechanisms to sub-class \glyph{EPNs}. There is no specific means of specifying that \glyph{macromolecules} or \glyph{nucleic acid features} X1, X2 and X2 are subclasses of X. Therefore, any process that applies to all the subtypes of X has to be triplicated. That situation can easily generate combinatorial explosions of the number of \glyph{EPNs} or \glyph{PNs}.}{}
+% 
 
 \section{State and transformation of compartments}
 
-In \SBGNPDLone a \glyph{compartment} is a stateless entity. It cannot carry  \glyph{state variables}, and cannot be subjected to process modifying a state. As a result, a \glyph{compartment} cannot be transformed, moved, split or merged with another. If one \corr{want}{wants} to represent the transformation of a compartment, one has to create the start and end compartments, and represent the transport of all the \glyph{EPNs} from one to the other. This is not satisfactory, and should be addressed in the future.
+In \SBGNPDLone a \glyph{compartment} is a stateless entity. It cannot carry  \glyph{state variables}, and cannot be subjected to process modifying a state. As a result, a \glyph{compartment} cannot be transformed, moved, split or merged with another. If one wants to represent the transformation of a compartment, one has to create the start and end compartments, and represent the transport of all the \glyph{EPNs} from one to the other. This is not satisfactory, and should be addressed in the future.
