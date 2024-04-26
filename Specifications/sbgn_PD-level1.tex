@@ -17,11 +17,11 @@
 \newbool{draft}
 \setbool{draft}{false}
 
-\input{sources/latex-style}
-\input{sources/latex-macros}
+\input{sources/latex_style}
+\input{sources/latex_macros}
 % \input{sources/latex-commenting}
 % \input{sources/latex-modifications}
-\input{sources/latex-draft}
+\input{sources/latex_draft}
 
 %% ----------------------------------------------------------------------------
 \begin{document}
@@ -29,11 +29,11 @@
 \frontmatter
 
 \ifbool{draft}{
-    \input{editing-front-page}
+    \input{editing_front_page}
 }{
 }
 
-\input{sources/front-page}
+\input{sources/front_page}
 \input{sources/preface}
 \input{sources/toc}
 
@@ -58,7 +58,6 @@
 
 \clearpage
 \bibliographystyle{unsrt}
-\dogrusoz{we should list author names consistently in Bibliography: M. Kaufmann vs. Michael Kaufmann}
 \bibliography{sbgn_PD-level1}
 
 
