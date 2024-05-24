@@ -1,13 +1,3 @@
-% $HeadURL$
-% Definitions that change with releases of the document.
-% ----------------------------------------------------------------
-
-\newcommand{\sbgndate}{14 February, 2010}
-
-% ----------------------------------------------------------------
-% Common commands when writing.
-% ----------------------------------------------------------------
-
 \newcommand{\SBGNPDLone}{SBGN \PD Level~1\xspace}
 
 \newcommand{\PD}{Process Description\xspace}
@@ -27,10 +17,6 @@
 \newcommand{\AFm}{Activity Flow map\xspace}
 \newcommand{\AFms}{Activity Flow maps\xspace}
 \newcommand{\AFl}{Activity Flow language\xspace}
-
-% The name of a glyph is emphasized. Note that this is only the
-% case when we talk about the glyph, not the biological concept
-% represented by the glyph.
 
 \newcommand{\glyph}[1]    {\emph{#1}} 
 \newcommand{\vglyph}[1]   {\begin{sideways}\emph{#1}\end{sideways}}
@@ -62,48 +48,5 @@
 \newcommand{\tab}[1]      {Table~\protect\vref{tab:#1}\xspace}
 \newcommand{\eg}          {e.g.,\xspace}
 \newcommand{\ie}          {i.e.,\xspace}
-
-% \AddToShipoutPicture{\resizebox{0.9\pdfpagewidth}{0.9\pdfpageheight}% 
-% {\rotatebox{60}{\color[gray]{0.8}\hspace*{5mm}\textsc{Working draft}}}}
-
-% ----------------------------------------------------------------
-% Commands for internal comments.
-% ----------------------------------------------------------------
-
 \newcommand\question[2]{{\color{red}[#1]}\marginpar{\color{red}\small\emph{#1: #2}}}
 \newcommand\comment[2]{\footnote{{\color{blue}[#2] #1}}}
-
-% Uncomment the definitions below to hide questions & comments.
-
-% \renewcommand\question[2]{}
-% \renewcommand\comment[2]{}
-
-
-% ----------------------------------------------------------------
-% SBGN logo.
-% ----------------------------------------------------------------
-
-\newcommand{\logofilebasename}{sbgn-logo-rgb}
-
-\ifpdf
-  % When creating PDFs, request the JPG format specifically,
-  % because the resulting quality in the PDF final output is best
-  % that way.
-  \newcommand{\SBGNLogoFile}{\logofilebasename.jpg}
-\else
-  \newcommand{\SBGNLogoFile}{\logofilebasename.eps}
-\fi
-
-% Graphics path adjustments to get the logo.  The path setup is so
-% that the \includegraphics can find the logo file no matter where
-% the document is located (but obviously, it only works for
-% certain path combinations -- it's a total hack).
-
-\graphicspath{{.}{./images/}{../images/}}
-
-
-
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:

@@ -1,18 +1,13 @@
-% $HeadURL$
-
 \chapter{Process Description Glyphs}
 \label{chp:glyphs}
 
-%[Note on the color code: \textcolor{blue}{The glyphs that have been thoroughly discussed, and are considered frozen, are represented in blue}. \textcolor{green}{The glyphs that have been thorougly discussed, but are still posing problems are represented in green}. \textcolor{red}{The glyphs that have been proposed but for which in-depth discussion is yet to come are represented in red}.]
-
-
 \section{Overview}
 
-\input{sources/pd_overview.tex}
+\input{pd_overview.tex}
 
 \section{Controlled vocabularies used in \SBGNPDLone}\label{sec:CVs}
 
-\input{sources/cvs.tex}
+\input{cvs.tex}
 
 \section{Auxiliary units}
 
@@ -20,18 +15,11 @@ Auxiliary units are glyphs that decorate other glyphs, providing additional info
 In doing so, they change the meaning of the glyph or provide additional information about it.
 These can provide specific annotation (\glyph{unit of information}), state information (\glyph{state variable}), indicate duplication of entity pool nodes (\glyph{clone marker}), describe specific glyphs (\glyph{subunit} for \glyph{complex}), or provide handles to elements lying outside of the maps (\glyph{submap terminal} for \glyph{submap}).
 
-\input{sources/unit_information.tex}
-\input{sources/state_variable.tex} % FIX 101717
-\input{sources/clone_marker.tex} % Done, Ugur
-\input{sources/subunit.tex}
-\input{sources/submap_terminal.tex}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   State nodes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{unit_information.tex}
+\input{state_variable.tex}
+\input{clone_marker.tex}
+\input{subunit.tex}
+\input{submap_terminal.tex}
 
 \section{Entity pool nodes}\label{sec:EPNs}
 
@@ -46,56 +34,30 @@ The \PD contains six glyphs representing classes of material entities: \glyph{un
 In addition to the material entities, \PD represents two conceptual entity pools: \glyph{empty set} (\sect{emptySet}), and \glyph{perturbing agent} (\sect{perturbing agent}).
 Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
 
-\input{sources/unspecified.tex}
-\input{sources/simple_chemical.tex}
-\input{sources/macromolecule.tex} % FIX 101717
-\input{sources/nucleic_acid_feature.tex}
-\input{sources/multimer.tex}
-\input{sources/complex.tex}
+\input{unspecified.tex}
+\input{simple_chemical.tex}
+\input{macromolecule.tex}
+\input{nucleic_acid_feature.tex}
+\input{multimer.tex}
+\input{complex.tex}
+\input{empty_set.tex}
+\input{perturbing_agent.tex}
+\input{complex_epn_eg.tex}
 
-\input{sources/empty_set.tex}
-\input{sources/perturbing_agent.tex}
-
-\input{sources/complex_epn_eg.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Containers
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Container nodes}\label{sec:CNs}
 \section{Defined sets of entity pool nodes}
 
-\input{sources/compartment.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Process nodes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{compartment.tex}
 
 \section{Process nodes}\label{sec:PNs}
 
 Process nodes represent processes that transform one or several entity pools into one or several entity pools, identical or different.  \SBGNPDLone defines a generic \glyph{process} (\sect{process}), as well as five more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}), the \glyph{dissociation} (\sect{dissociation}), and the \glyph{phenotype} (\sect{phenotype}).  In future levels of the SBGN \PDl, more processes may be defined.  (One can even envision the development of a controlled vocabulary of processes, as is done now for \glyph{EPNs}; see \sect{CVs}.)
 
-\input{sources/process.tex}
-\input{sources/omitted.tex}
-\input{sources/uncertain.tex}
-\input{sources/association.tex}
-\input{sources/dissociation.tex}
-\input{sources/phenotype.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                  Arcs
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Arcs}\label{sec:arcs}
-
-% Arcs are lines that link \glyph{EPNs} and \glyph{PNs} together.  The symbols attached to their extremities indicate their semantics.
-
+\input{process.tex}
+\input{omitted.tex}
+\input{uncertain.tex}
+\input{association.tex}
+\input{dissociation.tex}
+\input{phenotype.tex}
 
 \section{Flux arcs}
 \label{sec:fluxes}
@@ -105,8 +67,8 @@ Flux arcs allow representing which entity pools are consumed and produced by a p
 \glyph{Consumption} arcs link processes to their reactants, and \glyph{production} arcs link processes to their products.
 \SBGNPDLone does not provide any specific arc to represent the fluxes of a reversible process, that can be conveniently represented using only \glyph{production} arcs.
 
-\input{sources/consumption.tex}
-\input{sources/production.tex}
+\input{consumption.tex}
+\input{production.tex}
 
 \section{Modulation arcs}
 \label{sec:modulations}
@@ -115,17 +77,11 @@ Modulation arcs represent influences of entity pools on processes.
 A stimulation affects positively the flux of a process, while an inhibition affects it negatively.
 \SBGNPDLone provides six modulation arcs: \glyph{modulation}, \glyph{stimulation}, \glyph{catalysis}, \glyph{necessary stimulation} and \glyph{inhibition}.
 
-\input{sources/modulation.tex}
-\input{sources/stimulation.tex}
-\input{sources/catalysis.tex}
-\input{sources/inhibition.tex}
-\input{sources/necessary_stim.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Logical operators
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{modulation.tex}
+\input{stimulation.tex}
+\input{catalysis.tex}
+\input{inhibition.tex}
+\input{necessary_stim.tex}
 
 \section{Logical operators}
 
@@ -134,20 +90,19 @@ A stimulation affects positively the flux of a process, while an inhibition affe
 The \glyph{logical operator} performs an operation on one or more inputs to give a unique output.
 The \glyph{and}, \glyph{or}, and \glyph{not} operators perform a Boolean operation to give a binary output, while the \glyph{equivalence} operator performs a union of pools to give a new pool.
 
-
-\input{sources/and.tex}
-\input{sources/or.tex}
-\input{sources/not.tex}
-\input{sources/equivalence.tex}
+\input{and.tex}
+\input{or.tex}
+\input{not.tex}
+\input{equivalence.tex}
 
 \section{Logic arc}
 \label{sec:logic_arc}
 
-\input{sources/logic_arc.tex}
+\input{logic_arc.tex}
 
 \section{Annotating nodes and arcs}
 
-\input{sources/annotation.tex}
+\input{annotation.tex}
 
 \section{Referring to other nodes}
 \label{sec:ref_nodes}
@@ -156,20 +111,10 @@ Reference nodes handle links or relationships between elements of a map and sub-
 At present there is only one reference glyph, \glyph{tag}, which can be used in a map referred to by a \glyph{submap} (\sect{submap}).
 
 
-\input{sources/tag.tex}
-\input{sources/equivalence_arc.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Submap
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tag.tex}
+\input{equivalence_arc.tex}
 
 \section{Encapsulation}
 \label{sec:encapsulation}
-\input{sources/submap.tex}
 
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:
+\input{submap.tex}

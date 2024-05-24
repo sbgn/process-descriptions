@@ -9,8 +9,8 @@ They show how the use of such an operator might allow reducing drastically the c
 \begin{figure}
     \centering
     \begin{tabular}{lc}
-        A & \raisebox{-\height}{\includegraphics[scale=0.25]{examples/D1_2A}}\\
-        B & \raisebox{-\height}{\includegraphics[scale=0.25]{examples/D1_2B}}
+        A & \raisebox{-\height}{\includegraphics[scale=0.25]{images/build/d1_2a_example.pdf}}\\
+        B & \raisebox{-\height}{\includegraphics[scale=0.25]{images/build/d1_2b_example.pdf}}
 \end{tabular}
 \caption{LXR signalling induced by 25-hydroxycholesterol, 27-hydroxycholesterol and 24(S)-hydroxycholesterol. A. Without an \glyph{equivalence operator}: events have to be multiplied for the three hydroxysterols. B. With an \glyph{equivalence operator}: a compact representation is possible allowing a better readability.}
 \label{fig:D1_2}
@@ -19,8 +19,8 @@ They show how the use of such an operator might allow reducing drastically the c
 \begin{figure}
     \centering
     \begin{tabular}{lc}
-        A & \raisebox{-\height}{\includegraphics[scale=0.35]{examples/D1_3A}}\\
-        B & \raisebox{-\height}{\includegraphics[scale=0.35]{examples/D1_3B}}
+        A & \raisebox{-\height}{\includegraphics[scale=0.35]{images/build/d1_3a_example.pdf}}\\
+        B & \raisebox{-\height}{\includegraphics[scale=0.35]{images/build/d1_3b_example.pdf}}
     \end{tabular}
 \caption{First step of the inhibition of cholesterol synthesis in presence of sterols. A. Without an \glyph{equivalence operator}. B. With an \glyph{equivalence operator}.}
 \label{fig:D1_3}
@@ -32,7 +32,7 @@ The example of \fig{D3_3} does not respect the first rule, the example of \fig{D
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.4]{examples/D3_3}
+\includegraphics[scale=0.4]{images/build/d3_3_example.pdf}
 \end{center}
 \caption{An example of misuse of the \glyph{equivalence operator}. The use of the \glyph{equivalence operators} does not respect the first rule, because the two generic pools colored in red on the right of the \glyph{equivalence operator} do overlap.}
 \label{fig:D3_3}
@@ -40,7 +40,7 @@ The example of \fig{D3_3} does not respect the first rule, the example of \fig{D
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.35]{examples/D3_1}
+\includegraphics[scale=0.35]{images/build/d3_1_example.pdf}
 \end{center}
 \caption{An example of misuse of the \glyph{equivalence operator} in a signalling pathway.
 Because the phosphorylation of ERK1 is `included'' in the phosphorylation of MAPK, phosphorylated ERK1 and phosphorylated MAPK are overlapping pools, which contradicts the first rule.
@@ -52,12 +52,10 @@ In terms of automatic verification, phosphorylation of MAPK can be split into tw
 \begin{figure}
     \centering
     \begin{tabular}{lclc}
-        A & \raisebox{-\height}{\includegraphics[scale=0.35]{examples/D3_2A}} & B & \raisebox{-\height}{\includegraphics[scale=0.35]{examples/D3_2B}}
+        A & \raisebox{-\height}{\includegraphics[scale=0.35]{images/build/d3_2a_example.pdf}} & B & \raisebox{-\height}{\includegraphics[scale=0.35]{images/build/d3_2b_example.pdf}}
     \end{tabular}
 \caption{An example of misuse of the \glyph{equivalence operator} in an abstract pathway involving \glyph{simple chemicals}.
 A. Correct use. The use of the \glyph{equivalence operator} respects the third rule, because the pathway involves \glyph{macromolecules}, that are stateful \glyph{EPNs}.
 B. Misuse. The use of the \glyph{equivalence operator} does not respect the third rule, because the pathway involves \glyph{simple chemicals}, that are stateless \glyph{EPNs}.}
 \label{fig:D3_2}
 \end{figure}
-
-

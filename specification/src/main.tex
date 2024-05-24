@@ -1,37 +1,15 @@
-% =============================================================================
-% $Id$
-% Top-level latex file for the SBGN Process Description specification document.
-%
-% $HeadURL$
-% =============================================================================
-
 \documentclass[11pt,oneside]{book}
+
 \usepackage{enumitem}
 \usepackage{etoolbox}
 \usepackage[olditem,oldenum]{paralist}
-%% ----------------------------------------------------------------------------
-%% Layout customizations and macro definitions.
-%% ----------------------------------------------------------------------------
-
-%For edition of the draft, set to true. Set to false for release
-\newbool{draft}
-\setbool{draft}{false}
 
 \input{latex_style}
 \input{latex_macros}
-% \input{latex-commenting}
-% \input{latex-modifications}
-\input{latex_draft}
 
-%% ----------------------------------------------------------------------------
 \begin{document}
-%% ----------------------------------------------------------------------------
-\frontmatter
 
-\ifbool{draft}{
-    \input{editing_front_page}
-}{
-}
+\frontmatter
 
 \input{front_page}
 \input{preface}
@@ -40,7 +18,7 @@
 \mainmatter
 
 \include{introduction}
-\include{glyphs} % compile error
+\include{glyphs}
 \include{grammar}
 \include{layout}
 
@@ -48,7 +26,7 @@
 
 \appendix
 
-\include{examples} % compile error
+\include{examples}
 \include{examples_equivalence}
 \include{refcard}
 \include{working}
@@ -57,16 +35,8 @@
 \backmatter
 
 \clearpage
+
 \bibliographystyle{unsrt}
 \bibliography{main}
 
-
-%% ----------------------------------------------------------------------------
 \end{document}
-%% ----------------------------------------------------------------------------
-
-
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: t
-% End:
