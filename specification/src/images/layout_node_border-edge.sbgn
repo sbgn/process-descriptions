@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph3" class="submap">
+            <label text="correct"/>
+            <bbox y="45.0" x="490.0" h="190.0" w="220.0"/>
+            <glyph id="glyph6" class="macromolecule">
+                <bbox y="115.0" x="550.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph2" class="submap">
+            <label text="wrong"/>
+            <bbox y="45.0" x="50.0" h="190.0" w="220.0"/>
+            <glyph id="glyph4" class="macromolecule">
+                <bbox y="115.0" x="100.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph1" class="submap">
+            <label text="correct"/>
+            <bbox y="45.0" x="270.0" h="190.0" w="220.0"/>
+            <glyph id="glyph5" class="macromolecule">
+                <bbox y="115.0" x="325.0" h="60.0" w="108.0"/>
+            </glyph>
+        </glyph>
+        <arc target="glyph5" source="glyph4" id="arc1" class="equivalence arc">
+            <start y="100.0" x="310.0"/>
+            <end y="100.0" x="460.0"/>
+        </arc>
+        <arc target="glyph4" source="glyph4" id="arc3" class="equivalence arc">
+            <start y="115.0" x="90.5"/>
+            <end y="115.0" x="240.5"/>
+        </arc>
+        <arc target="glyph6" source="glyph5" id="arc2" class="equivalence arc">
+            <start y="115.0" x="510.0"/>
+            <next y="115.0" x="540.0"/>
+            <next y="95.0" x="540.0"/>
+            <next y="95.0" x="670.0"/>
+            <next y="115.0" x="670.0"/>
+            <end y="115.0" x="700.0"/>
+        </arc>
+    </map>
+</sbgn>

@@ -1,6 +1,8 @@
 #!/bin/bash
 SRC_DIR=../src/images
-BUILD_DIR=../build/images
+BUILD_DIR=$SRC_DIR/build
+rm -rf $BUILD_DIR
+mkdir $BUILD_DIR
 for input_file_path in "$SRC_DIR"/*.final.svg
 do
     input_file_name="${input_file_path##*/}"

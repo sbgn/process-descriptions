@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="macromolecule">
+            <label text="GluR"/>
+            <bbox y="50.0" x="50.0" h="60.0" w="108.0"/>
+            <glyph id="glyph1a" class="unit of information">
+                <label text="mt:prot"/>
+                <bbox y="42.0" x="53.5" h="16.0" w="47.0"/>
+            </glyph>
+        </glyph>
+    </map>
+</sbgn>

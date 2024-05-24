@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph1" class="unspecified entity">
+            <label text="Original EPN"/>
+            <bbox y="130.0" x="16.0" h="60.0" w="108.0"/>
+        </glyph>
+        <glyph id="glyph2" class="unspecified entity">
+            <label text="Logical operator"/>
+            <bbox y="130.0" x="296.0" h="60.0" w="108.0"/>
+        </glyph>
+        <arc target="glyph2" source="glyph1" id="arc1" class="logic arc">
+            <start y="160.0" x="124.0"/>
+            <end y="160.0" x="296.0"/>
+        </arc>
+    </map>
+</sbgn>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph2" class="macromolecule">
+            <label text="LABEL"/>
+            <clone>
+                <label text="marker">
+                    <bbox y="66.0" x="170.0" h="14.0" w="40.0"/>
+                </label>
+            </clone>
+            <bbox y="22.0" x="132.5" h="60.0" w="115.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="INFO"/>
+                <bbox y="14.0" x="141.75" h="16.0" w="39.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph3" class="macromolecule">
+            <label text="LABEL"/>
+            <bbox y="22.0" x="10.5" h="60.0" w="115.0"/>
+        </glyph>
+    </map>
+</sbgn>
