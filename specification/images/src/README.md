@@ -3,7 +3,7 @@ Primary sources for images are either:
     - an SVG file, to be edited in Inkscape, in the case there is no corresponding GraphML file.
 
 Final sources for images are always SVG files labeled "final".
-These are the files that are converted to PDFs in the `../build` directory.
+These are the files that are converted to PDFs in the `../../build/images/` directory using the `../../scripts/make_images.sh` script.
 They are direct exports from SBGN-ED when they have a corresponding GraphML file and no intermediate version (see below), and from Inkscape when they have a GraphML and an intermediate version.
 When they have no corresponding GraphML file, they are themselves a source file, and should be edited in Inkscape.
 
