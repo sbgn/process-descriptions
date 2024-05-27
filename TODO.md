@@ -1,0 +1,1 @@
+* Remove the `user_manual/` directory? The user manual is 10 years old and is not up to date. We could make the repository exclusive to the specification and move `specification/*` to the root directory.
