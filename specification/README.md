@@ -24,8 +24,8 @@ The specification can also be compiled locally using `latexmk`, in a manner comp
 ### Prerequisites
 
 Make sure you have the following software installed:
-* Inkscape and pdfcrop for building the image source files;
-* pdflatex and latexmk for compiling the specificationa (these are the tools used by Overleaf).
+* `Inkscape` and `pdfcrop` for building the image source files;
+* `pdflatex` and `latexmk` for compiling the specificationa (these are the tools used by Overleaf, and are usually already included in TeX distributions).
 
 ### Building the sources of the images
 
