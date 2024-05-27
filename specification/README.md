@@ -10,7 +10,7 @@ It can also be edited and compiled locally using this repository, which is synch
 * `src/`: contains all source files;
 * `src/images/`: contains the source files for the images;
 * `src/images/build/`: contains the PDF files used as sources for the images in the TeX files; built from the source SVG files in `src/images/` with extension `*.final.svg` using the script `scripts/make_pdf_images.sh`.
-* `src/scripts/`: scripts to be run before compiling the specification. Currently only contains the `scripts/make_pdf_images.sh` script.
+* `scripts/`: scripts to be run before compiling the specification. Currently only contains the `scripts/make_pdf_images.sh` script.
 * `templates/`: templates for writing the description of glyphs.
 
 ## How to compile the specification
