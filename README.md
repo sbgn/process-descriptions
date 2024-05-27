@@ -1,6 +1,6 @@
 # Specification for the Systems Biology Graphical Notation (SBGN) Process Description
 
-The specification is usually edited and compiled on Overleaf at <overleaf.com>.
+The specification is usually edited and compiled on Overleaf at https://overleaf.com.
 It can be edited and compiled locally using this repository, which is synchronized with Overleaf.
 Please refere to the [README](specication/README.md) of the specification for more details.
 
@@ -11,8 +11,8 @@ Please refere to the [README](specication/README.md) of the specification for mo
 
 ## SBGN website
 
-For more information about SBGN, please visit <sbgn.org>.
+For more information about SBGN, please visit https://sbgn.org.
 
 ## Discussion list
 
-Please join the sbgn-discuss mailing list by visiting <sbgn.org/contact>.
+Please join the sbgn-discuss mailing list by visiting https://sbgn.org/contact.
