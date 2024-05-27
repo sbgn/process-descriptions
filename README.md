@@ -2,7 +2,7 @@
 
 The specification is usually edited and compiled on Overleaf at https://overleaf.com.
 It can be edited and compiled locally using this repository, which is synchronized with Overleaf.
-Please refere to the [README](specication/README.md) of the specification for more details.
+Please refere to the [README](specification/README.md) of the specification for more details.
 
 ## Organization of the repository
 
