@@ -19,10 +19,6 @@ The value of a \glyph{state variable} has to be perfectly defined in \SBGNPDLone
 
 The current specification cannot represent combinations of events and entities. For instance, a variable ``voltage'' cannot be controlled by a difference of concentration between different entities, such as a given ion in both sides of a membrane. 
 
-% \section{}
-%
-% 
-
 \section{State and transformation of compartments}
 
 In \SBGNPDLone a \glyph{compartment} is a stateless entity. It cannot carry  \glyph{state variables}, and cannot be subjected to process modifying a state. As a result, a \glyph{compartment} cannot be transformed, moved, split or merged with another. If one wants to represent the transformation of a compartment, one has to create the start and end compartments, and represent the transport of all the \glyph{EPNs} from one to the other. This is not satisfactory, and should be addressed in the future.

@@ -1,8 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Controlled vocabularies
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\color{blue}
-
 Some glyphs in SBGN \PDs can contain particular kinds of textual annotations conveying information relevant to the purpose of the glyph.  These annotations are \glyph{units of information} (\sect{unitInfo}) or \glyph{state variables}  (\sect{stateVariable}).  For example, multimers can have a unit of information conveying the number of monomers composing the multimer. 
 
 Other cases are described throughout the rest of this chapter.
@@ -15,9 +10,7 @@ They cover the following categories of information: an EPN's material type, an E
 In each case, some CV terms are predefined by SBGN, but unless otherwise noted, \emph{they are not the only terms permitted}.  
 Users may use other CV values not listed here.
 In such cases, they should explain the term's meanings in a figure legend or other text accompanying the map.
-% 
 Users of CV values not listed here should \emph{strongly} attempt different prefixes from those listed in this document. 
-
 
 \subsection{Entity pool node material types}
 \label{sec:material-types-cv}
@@ -45,7 +38,6 @@ The material type of an EPN indicates its chemical structure and physical compos
 
 The material types are in contrast to the \emph{conceptual types} (see below).  The distinction is that material types are about physical composition, while conceptual types are about roles.  For example, a strand of RNA is a material type, but its use as messenger RNA is a role.
 
-
 \subsection{Entity pool node conceptual types}
 \label{sec:conceptual-types-cv}
 
@@ -68,7 +60,6 @@ An EPN's \emph{conceptual type} indicates its function within the context of a g
     (\sect{conceptual-types-cv}).}
   \label{tab:conceptual-types-cv}
 \end{table}
-
 
 \subsection{Macromolecule covalent modifications}
 \label{sec:covalent-mod-cv}
@@ -102,7 +93,6 @@ The most common values are defined by the \sbo in the branch having identifier \
   \label{tab:covalent-mod-cv}
 \end{table}
 
-
 \subsection{Physical characteristics}
 \label{sec:physical-characteristics-cv}
 
@@ -127,7 +117,6 @@ It is anticipated that these will be used to describe the nature of a \glyph{per
   \label{tab:physical-characteristics-cv}
 \end{table}
 
-
 \subsection{Cardinality}
 \label{sec:cardinality-cv}
 
@@ -148,13 +137,3 @@ It is anticipated that these will be used to describe the nature of a \glyph{per
     number; for example, ``\texttt{N:5}''.}
   \label{tab:cardinality-cv}
 \end{table}
-
-
-
-% \normalcolor
-
-
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:

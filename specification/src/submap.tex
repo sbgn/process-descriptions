@@ -1,8 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                     module
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\glyph{Submap}}\label{sec:submap}
-
 
 A \glyph{submap} is used to encapsulate a map (including all types of nodes and edges) within one glyph.
 As such, it is not equivalent to an \glyph{omitted process} (\sect{omitted}).
@@ -44,12 +40,10 @@ A \glyph{submap} must carry one or more \glyph{submap terminals} (\sect{submapTe
 \end{center}
 \end{figure}
 
-
 \fig{folded} represents a \glyph{submap} that encapsulates processes transforming glucose into fructose-6-phosphate.
 The \glyph{submap} carries five \glyph{submap terminals}, four linked to \glyph{EPNs} and one linked to a \glyph{compartment}.
 The latter is particularly important in the case of \glyph{EPNs} present only in a \glyph{compartment} enclosed in a \glyph{submap}, and that are not linked to \glyph{submap terminals} themselves.
 Note that the \glyph{submap terminals} do not allow defining a ``direction'' for the flux of the processes enclosed in the \glyph{submap}, which is solely determined by the context as in \fig{folded}.
-
 
 \begin{figure}
 \begin{center}
@@ -61,13 +55,11 @@ The map enclosed by the \glyph{submap} is shown in \fig{unfolded}, whose \glyph{
 \end{center}
 \end{figure}
 
-
 The map in \fig{unfolded} represents the map enclosed in the \glyph{submap} of \fig{folded}.
 Note that the tag 5 links the mitochondria \glyph{compartment} in this map to the mitochondria \glyph{compartment} of the main map in \fig{unfolded}.
 
 The \glyph{compartment} containing glucose-6-phosphate is implicitly defined as the same as the \glyph{compartment} containing glucose and fructose-6-phosphate.
 There is no ambiguity because if glucose and fructose-6-phosphate were in different \glyph{compartments}, at least one of them would have been linked to a \glyph{submap terminal} of the \glyph{submap} of \fig{folded}.
-
 
 \begin{figure}
 \begin{center}

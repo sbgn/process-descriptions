@@ -1,5 +1,3 @@
-% $HeadURL$
-
 \subsection{Glyph: \glyph{State variable}}
 \label{sec:stateVariable}
 
@@ -8,45 +6,32 @@ These states can arise for a variety of reasons.
 For example, macromolecules can be subject to post-synthesis modifications, wherein residues of the macromolecules (amino acids, nucleosides, or glucid residues) are modified through covalent linkage to other chemicals.
 Other examples of states are alternative conformations as in the closed/open/desensitised conformations of a transmembrane channel, and the active/inactive forms of an enzyme.
 
-
 To describe such states, the \PD introduces the concept of the state variable.
 A state variable of a biological entity usually has a name (\eg ``S122'' to indicate residue Serine 122 of a protein), and can be assigned a value (\eg ``P'', to indicate a phosphate group).
 Such a state variable models a dimension along which the state of the overall entity can vary.
 The state of an entity can then be described by the current values assigned to all its state variables, and of all its possible components, recursively.
 A state variable may be assigned no value; an example of a situation where this might arise is an unphosphorylated phosphorylation site.
-% 
 A state variable might also be unnamed, in cases where there is no ambiguity between this state variable and another state variable carried by the same entity (\eg when an entity carries a unique state variable, it might be unnamed).
-% 
 In \PD, state variables, together with the values assigned to them, are represented using the \glyph{state variable} glyph.
-
 
 \begin{glyphDescription}
 
 \glyphSboTerm
 Not applicable.
 
-
 \glyphIncoming
 None.
 
-
-
 \glyphOutgoing
 None.
-
 
 \glyphContainer
 A \glyph{state variable} is represented by a ``stadium'' shape, that is two semicircles of the same radius joined by parallel segments, as shown in \novreffig{state-var}.
 
 The centre of the shape should be placed on the border of the EPN.
 
-% 
 In previous versions of this specification, the \glyph{state variable} was represented by an elliptic shape.
 This symbol is now \textbf{deprecated} in favour of the stadium shape described above.
-
-% 
-
-
 
 \glyphLabel
 A \glyph{state variable} is identified by a label that is  a string of characters.
@@ -57,20 +42,6 @@ The label is constituted of two substrings separated by the character ``@'', the
 The character ``@'' is omitted when the state variable is unnamed.
 Aternatively, the substring identifying the name of the state variable may be displayed using a second label, placed outside of the shape.
 This is, however, strongly discouraged.
-
-
-% \glyphLabel
-% A \glyph{state variable} is identified by a label that is an unbordered box containing a string of characters.
-% The characters cannot be distributed on several lines.
-% The centre of the label must be placed on the centre of the shape.
-% The label may extend outside of the shape.
-% The label is constituted of one or two substrings.
-% The first substring, that is mandatory, identifies the value of the \glyph{state variable}.
-% It may be empty; an example of a situation where this might arise is an unphosphorylated phosphorylation site.
-% The second substring, which is optional, identifies the variable of the \glyph{state variable}, preceded by the character ``@''.
-% This substring should be included in the label if confusion is possible between several \glyph{state variables} (\eg several phosphorylation sites).
-% In previous versions of this specification, the substring identifying the variable could be displayed in an additional label lying outside of the \glyph{state variable}'s shape.
-% This is now \textbf{deprecated}.
 
 \glyphAux
 None.
@@ -93,9 +64,3 @@ None.
   \caption{A. Examples of discouraged use of \glyph{state variables}. B. Encouraged use.}
  \label{fig:wrong-state-var}
 \end{figure}
-
-% The following is for [X]Emacs users.  Please leave in place.
-% Local Variables:
-% TeX-master: "../sbgn_PD-level1"
-% End:
-

@@ -1,29 +1,18 @@
-% $HeadURL$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%                   Complex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Glyph: \glyph{Complex}}\label{sec:complex}
 
 A \glyph{complex} represents a pool of biochemical entities, each composed of other biochemical entities, whether macromolecules, simple chemicals, multimers, or other complexes. The resulting entity may have its own identity, properties and function in an SBGN map.
 The \glyph{complex} can be described by the set of \glyph{subunits} (\sect{subunit}) it contains (see \fig{complexSubunits}). This description is entirely optional and is there to assist the user with a visual shorthand about the composition of the complex.
-% 
 
 \begin{glyphDescription}
 
 \glyphSboTerm
 SBO:0000253 ! non-covalent complex
 
-
 \glyphIncoming
 Zero or more \glyph{production} arcs (\sect{production}).
 
-
-
 \glyphOutgoing
 Zero or more \glyph{consumption} arcs (\sect{consumption}), \glyph{modulation arcs} (\sect{modulations}), \glyph{logic arcs} (\sect{logicArc}), or \glyph{equivalence arcs} (\sect{equivalenceArc}).
-
 
 \glyphContainer
 
