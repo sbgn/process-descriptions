@@ -1,44 +1,9 @@
-% $HeadURL$
-
-%% ----------------------------------------------------------------------------
-%% Load up packages we need.
-%% ----------------------------------------------------------------------------
-
-% Warning: more \usepackage commands are used later in this file.
-
-\usepackage{ifpdf}
-
-\ifpdf
-  % Case: using pdflatex
-
-  \usepackage[pdftex]{graphicx}
-  \DeclareGraphicsExtensions{.pdf,.png}
-
-  % Options get even more complicated.  If we're producing grayscale output,
-  % we don't want to bother with coloring links, but we still want to load
-  % hyperref so that its macros are defined (and we don't have to redefine
-  % everything that uses hyperref).  So:
-
-  \usepackage[pdftex,breaklinks=true,colorlinks=true,plainpages=false,
-  pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,
-  pdfhighlight=/O,linkcolor={RoyalBlue},citecolor={RoyalBlue},
-  urlcolor={RoyalBlue}]{hyperref}
-
-  \usepackage[pdftex,rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
-
-\else
-%   % Case: not using pdflatex
-
-  \usepackage{graphicx}
-  \DeclareGraphicsExtensions{.eps,.png}
-
-  \usepackage[breaklinks,plainpages=false,pdfpagelabels]{hyperref}
-  \usepackage[rgb,dvipsnames,svgnames,hyperref,table]{xcolor}
-
-\fi
-
-
-
+\usepackage{graphicx}
+\usepackage[breaklinks=true,colorlinks=true,plainpages=false,
+pdfpagelabels,bookmarks=true,bookmarksopen=true,bookmarksopenlevel=2,
+pdfhighlight=/O,linkcolor={RoyalBlue},citecolor={RoyalBlue},
+urlcolor={RoyalBlue}]{hyperref}
+\usepackage[rgb,hyperref,table]{xcolor}
 \usepackage[a4paper,centering,margin=1in,marginparwidth=0.75in]{geometry}
 \usepackage[utf8]{inputenc} % unicode support
 \usepackage{shadow}
@@ -58,27 +23,14 @@
 \usepackage{amssymb}
 \usepackage{gensymb}
 \usepackage{tabu}
-\usepackage[export]{adjustbox}
-
-% Hyperref, xcolor, graphicx and possibly others have a flag "pdftex"
-% that needs to be used if pdflatex is being used.  The following puts
-% these inside a conditional for that situation.
-
 % Package 'rotating' needs to come after the others.
-
+\usepackage[export]{adjustbox}
 \usepackage{rotating}
-
 % Booktabs for sharp-looking \toprule, \midrule, \bottomrule in tables.
-
 \usepackage{booktabs}
 \setlength{\cmidrulewidth}{0.3 pt}
 \setlength{\lightrulewidth}{0.3 pt}
 \setlength{\heavyrulewidth}{0.9 pt}
-
-
-%% ----------------------------------------------------------------------------
-%% Special customizations
-%% ----------------------------------------------------------------------------
 
 \makeatletter
 
@@ -331,14 +283,4 @@
 \usepackage[normalem]{ulem}
 \newcommand{\corr}[2]{\sout{#1}#2} % #=1old text #2=new text
 
-%% ----------------------------------------------------------------------------
-%% The end.
-%% ----------------------------------------------------------------------------
-
 \makeatother
-
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "../sbgn_PD-level1"
-%%% End: 
