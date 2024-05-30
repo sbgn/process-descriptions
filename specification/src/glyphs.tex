@@ -1,0 +1,119 @@
+\chapter{Process Description Glyphs}
+\label{chp:glyphs}
+
+\section{Overview}
+
+\input{pd_overview.tex}
+
+\section{Controlled vocabularies used in \SBGNPDLone}\label{sec:CVs}
+
+\input{cvs.tex}
+
+\section{Auxiliary units}
+
+Auxiliary units are glyphs that decorate other glyphs, providing additional information that may be useful to the reader.
+In doing so, they change the meaning of the glyph or provide additional information about it.
+These can provide specific annotation (\glyph{unit of information}), state information (\glyph{state variable}), indicate duplication of entity pool nodes (\glyph{clone marker}), describe specific glyphs (\glyph{subunit} for \glyph{complex}), or provide handles to elements lying outside of the maps (\glyph{submap terminal} for \glyph{submap}).
+
+\input{unit_information.tex}
+\input{state_variable.tex}
+\input{clone_marker.tex}
+\input{subunit.tex}
+\input{submap_terminal.tex}
+
+\section{Entity pool nodes}\label{sec:EPNs}
+
+An entity pool is a population of entities that cannot be distinguished from each other when it comes to the \SBGNPDLone map.
+For instance, all the molecular  entities that fulfill the same role in a given process form an entity pool.
+As a result, an entity pool can represent different granularity levels, such as all the proteins, all the instances of a given protein, only certain forms of a given protein.
+To belong to a different compartment is sufficient to belong to different entity pools.
+Calcium ions in the endoplasmic reticulum and calcium ions in the cytosol belong to different entity pools when it comes to representing calcium release from the endoplasmic reticulum.
+
+The \PD contains six glyphs representing classes of material entities: \glyph{unspecified entity} (\sect{unspecifiedEntity}), \glyph{simple chemical} (\sect{simpleChemical}), \glyph{macromolecule} (\sect{macromolecule}), \glyph{nucleic acid feature} (\sect{genetic}), \glyph{multimer} (\sect{multimer}) and \glyph{complex} (\sect{complex}).
+(Specific types of macromolecules, such as protein, RNA, DNA, polysaccharide, and specific simple chemicals are not defined by \PD but may be part of future levels of SBGN.)
+In addition to the material entities, \PD represents two conceptual entity pools: \glyph{empty set} (\sect{emptySet}), and \glyph{perturbing agent} (\sect{perturbing agent}).
+Material and conceptual entities can optionally carry auxiliary units such as \glyph{units of information} (\sect{unitInfo}), \glyph{state variables}  (\sect{stateVariable}) and \glyph{clone markers} (\sect{cloneMarker}).
+
+\input{unspecified.tex}
+\input{simple_chemical.tex}
+\input{macromolecule.tex}
+\input{nucleic_acid_feature.tex}
+\input{multimer.tex}
+\input{complex.tex}
+\input{empty_set.tex}
+\input{perturbing_agent.tex}
+\input{complex_epn_eg.tex}
+
+\section{Defined sets of entity pool nodes}
+
+\input{compartment.tex}
+
+\section{Process nodes}\label{sec:PNs}
+
+Process nodes represent processes that transform one or several entity pools into one or several entity pools, identical or different.  \SBGNPDLone defines a generic \glyph{process} (\sect{process}), as well as five more specific ones: the \glyph{omitted process} (\sect{omitted}), the \glyph{uncertain process} (\sect{uncertain}), the \glyph{association} (\sect{association}), the \glyph{dissociation} (\sect{dissociation}), and the \glyph{phenotype} (\sect{phenotype}).  In future levels of the SBGN \PDl, more processes may be defined.  (One can even envision the development of a controlled vocabulary of processes, as is done now for \glyph{EPNs}; see \sect{CVs}.)
+
+\input{process.tex}
+\input{omitted.tex}
+\input{uncertain.tex}
+\input{association.tex}
+\input{dissociation.tex}
+\input{phenotype.tex}
+
+\section{Flux arcs}
+\label{sec:fluxes}
+
+Processes transform entity pools into other entity pools (\sect{PNs}).
+Flux arcs allow representing which entity pools are consumed and produced by a process.
+\glyph{Consumption} arcs link processes to their reactants, and \glyph{production} arcs link processes to their products.
+\SBGNPDLone does not provide any specific arc to represent the fluxes of a reversible process, that can be conveniently represented using only \glyph{production} arcs.
+
+\input{consumption.tex}
+\input{production.tex}
+
+\section{Modulation arcs}
+\label{sec:modulations}
+
+Modulation arcs represent influences of entity pools on processes.
+A stimulation affects positively the flux of a process, while an inhibition affects it negatively.
+\SBGNPDLone provides six modulation arcs: \glyph{modulation}, \glyph{stimulation}, \glyph{catalysis}, \glyph{necessary stimulation} and \glyph{inhibition}.
+
+\input{modulation.tex}
+\input{stimulation.tex}
+\input{catalysis.tex}
+\input{inhibition.tex}
+\input{necessary_stim.tex}
+
+\section{Logical operators}
+
+\label{sec:logic}
+
+The \glyph{logical operator} performs an operation on one or more inputs to give a unique output.
+The \glyph{and}, \glyph{or}, and \glyph{not} operators perform a Boolean operation to give a binary output, while the \glyph{equivalence} operator performs a union of pools to give a new pool.
+
+\input{and.tex}
+\input{or.tex}
+\input{not.tex}
+\input{equivalence.tex}
+
+\section{Logic arc}
+\label{sec:logic_arc}
+
+\input{logic_arc.tex}
+
+\section{Annotating nodes and arcs}
+
+\input{annotation.tex}
+
+\section{Referring to other nodes}
+\label{sec:ref_nodes}
+
+Reference nodes handle links or relationships between elements of a map and sub-map.
+At present there is only one reference glyph, \glyph{tag}, which can be used in a map referred to by a \glyph{submap} (\sect{submap}).
+
+\input{tag.tex}
+\input{equivalence_arc.tex}
+
+\section{Encapsulation}
+\label{sec:encapsulation}
+
+\input{submap.tex}

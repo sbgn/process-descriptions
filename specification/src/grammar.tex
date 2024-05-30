@@ -1,0 +1,94 @@
+\chapter{Process Description Language Grammar}
+\label{chp:grammar}
+
+\section{Overview}
+
+One of the goals of \SBGNPDLone is to provide a visual description of biological systems that can accurately and unambiguously  convey to the reader what the writer of a \PDm meant. A secondary, but nevertheless important goal is to provide a visual language that can be supported by software tools. To achieve both goals we require a detailed set of rules that are universally applied to \PDms. In \chap{glyphs} the glyphs of the \PDl were introduced and key usage rules were described; we expect that this will be sufficient for casual users of the notation. However, this chapter provides a more detailed description of the rules that apply to the \PDl and it is anticipated that this will be required reading for advanced users of the notation and tool developers implementing SBGN \PD viewers or editors.
+
+In addition to understanding the rules of the notation it is also important to understand the underlying model, or abstraction, of the biological world that the \PDl uses. By understanding the abstractions used one can also understand more clearly what the author of a map meant, and also what the author could not say given the limitations of the notation. In the next section, we describe the abstractions and concepts implicit in the SBGN \PDl.
+
+\section{Concepts}
+\label{sec:concepts}
+
+The key abstraction of the SBGN \PDl is one of  processes that act on pools of entities. The entities are typically biological molecules, but need not be (such as a \glyph{perturbing agent}), and the \glyph{process} is typically a combination of one or more  biochemical reactions, but again need not be.
+Processes are controlled, or \emph{modulated}, by other entity pools and new entities can be obtained from an \glyph{empty set} and existing entities discarded to an \glyph{empty set}.
+
+It can be helpful to think of the SBGN \PD as describing the flow of a fluid, especially when trying to understand concepts such as stoichiometry, and modulation. In this analogy, each \glyph{EPN} represents a tank of fluid, which may be emptied via a pipe (the consumption arc, \sect{consumption}) that is connected to a valve (the process node, \sect{PNs}), which in turn is connected to other pipes (the production arcs, \sect{production}) that fill other tanks (\glyph{EPNs}). The opening of the valve, and thus the rate of the process can be controlled by the volume of fluid in another tank (this is modulation)\footnote{The precise nature of the relationship between valve opening and amount of fluid determines the nature of the modulation.}. If there are two consumption pipes feeding fluid into the process and one is wider and allows double the flow of the first then the fluid will mix in the process with a 2:1 ratio. This corresponds to the stoichiometry of the \glyph{consumption} and \glyph{production} arcs. Finally, the system needs a source of fluid from one or more external sources (represented with the \glyph{empty set}, see section \sect{emptySet}) and one or more sinks for it to drain away (also represented with the \glyph{empty set}).
+
+One can see that this maps very closely to the abstraction described in the \PDl, but it also has an interesting side-effect that it allows us to add quantities to SBGN glyphs. In particular, EPNs have an implicit amount of entities in the entity pool and processes have an implicit rate. Since SBGN \PD is not a modelling language this will not be discussed in any further detail, however, this is an important concept that underpins our understanding of how processes are modulated in \sect{mod-semantics}.
+
+\section{The conceptual model}
+\label{sec:conceptual-model}
+
+In order to formalize the conceptual representation described above and the semantic rules that we will describe later, we have described the \PDl using UML Domain Object Model. We have used it to define the ``taxonomy'' of the \PD glyphs and their relationship to each other. Finally we describe the attributes of each node glyph that are required to uniquely identify an instance of it in a \PDm. The concept of identity is important in some of the rules described below.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=\linewidth]{images/build/sbgn_node_taxonomy.pdf}
+\caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_node_tax}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb!]
+\begin{center}
+\includegraphics[width=\linewidth]{images/build/sbgn_edge_taxonomy.pdf}
+\caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\label{fig:sbgn_edge_tax}
+\end{center}
+\end{figure}
+
+
+\begin{center}
+\begin{small}
+\tablefirsthead{\hline
+\textbf{Glyph} & \textbf{Identifying Attributes} \\\hline\hline}
+\tablehead{\hline
+\multicolumn{2}{|l|}{\small\sl continued from previous page}\\\hline
+\textbf{Glyph} & \textbf{Identifying Attributes} \\\hline\hline}
+\tabletail{\hline
+\multicolumn{2}{|r|}{\small\sl continued on next page}\\
+\hline}
+\tablelasttail{\hline}
+
+\topcaption{The Identifying attributes of \PD node glyphs. When a glyph is always unique in a map, this is indicated by the term \emph{instance}. The term \emph{state values} indicates that the values of all the EPN's state variables are used in the definition of its identity.}
+
+\begin{supertabular}{|p{4.5cm}|p{10cm}|}\hline
+Unit of Information & \emph{instance} \\\hline
+State variable & Owning StatefulEpnNode, value \\\hline
+
+Clone maker & Owning EpnNode \\\hline
+Labelled clone maker & Owning EpnNode, Label \\\hline
+Unspecified entity & Owning compartment, Label \\\hline
+Simple chemical & Owning compartment, Label \\\hline
+Macromolecule & Owning compartment, Label, Material type, \emph{state values} \\\hline
+Nucleic acid feature & Owning compartment, Label, Conceptual type, \emph{state values} \\\hline
+Complex & Owning compartment, Label,  \emph{state values} \\\hline
+Simple chemical multimer & Owning compartment, Label, Cardinality \\\hline
+Macromolecule multimer & Owning compartment, Label, Material type, Cardinality, \emph{state values} \\\hline
+Nucleic acid feature multimer & Owning compartment, Label, Conceptual type, Cardinality, \emph{state values} \\\hline
+Complex multimer & Owning compartment, Label, Cardinality,  \emph{state values} \\\hline
+Empty set & \emph{instance} \\\hline
+Perturbing agent & Label \\\hline
+Tag & Label \\\hline
+Submap terminal & Label \\\hline
+Compartment & Label \\\hline
+Submap & Label \\\hline
+Process & \emph{instance} \\\hline
+Omitted process & \emph{instance} \\\hline
+Uncertain process & \emph{instance} \\\hline
+Association & \emph{instance} \\\hline
+Dissociation & \emph{instance} \\\hline
+Phenotype & \emph{instance} \\\hline
+\end{supertabular}
+\end{small}
+\end{center}
+
+
+\paragraph*{Notes}
+
+A complex may have a Label or be defined by its subunits. In the case where it has both then all complexes with the same label must also have the same subunit composition.
+
+\input{syntax.tex}
+
+\input{semantics.tex}

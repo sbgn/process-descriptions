@@ -1,0 +1,2 @@
+* Find a valid source file for `src/images/simple_chemical_combined.graphml`: the current source file is a copy of `src/images/macromolecule_combined.graphml`; the original source file is empty on overleaf and github.
+* Find an alternative to the BOUML projects (`src/images/conceptual_model` and `src/images/sbgn_bouml`): these directories contain the BOUML projects for editing the UML diagrams of the specification (one might be a copy of the other?); BOUML is an old software that is not well supported on all OS; we should find an alternative to edit the corresponding images.
