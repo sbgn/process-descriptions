@@ -34,14 +34,13 @@ In previous versions of this specification, the \glyph{state variable} was repre
 This symbol is now \textbf{deprecated} in favour of the stadium shape described above.
 
 \glyphLabel
-A \glyph{state variable} is identified by a label that is  a string of characters.
+A \glyph{state variable} is identified by a label that is a string of characters.
 The characters cannot be distributed on several lines.
 The centre of the label must be placed on the centre of the container.
 The label may extend outside of the container.
 The label is constituted of two substrings separated by the character ``@'', the first one indentifying the value of the state variable, and the second one its name.
 The character ``@'' is omitted when the state variable is unnamed.
-Aternatively, the substring identifying the name of the state variable may be displayed using a second label, placed outside of the shape.
-This is, however, strongly discouraged.
+In previous versions of this specification, the substring identifying the name of the state variable was allowed to be displayed using a second label, placed outside of the shape. This alternative approach is now deprecated with this version.
 
 \glyphAux
 None.
@@ -51,7 +50,7 @@ None.
 \begin{figure}[H]
   \centering
   \includegraphics{images/build/state_variable.pdf}
-  \caption{The \PD glyph for \glyph{state variable}, shown with a value and a variable on the far left, with only a value on the middle-left, with an additional label for the variable on the middle-right (discouraged), and decorating a \glyph{macromolecule} (\sect{macromolecule}) on the far right.}
+  \caption{The \PD glyph for \glyph{state variable}, shown with a value and a variable on the far left, with only a value on the middle-left, with an additional label for the variable on the middle-right (deprecated), and decorating a \glyph{macromolecule} (\sect{macromolecule}) on the far right.}
   \label{fig:state-var}
 \end{figure}
 
