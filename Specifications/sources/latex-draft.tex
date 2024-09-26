@@ -1,0 +1,108 @@
+\usepackage[normalem]{ulem}
+\usepackage[titles]{tocloft}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{xparse}
+\usepackage{expl3}
+
+% ----------------------------------------------------------------
+% Convenient macros to highlight modifications
+% ----------------------------------------------------------------
+
+\ExplSyntaxOn
+\ifbool{draft}{
+    \newcommand{\listmodificationname}{List of Modifications}
+    \newlistof{modification}{mod}{\listmodificationname}
+
+    \def\old{\color{red!80!black}}
+    \def\new{\color{green!60!black}}
+
+    \newenvironment{modification}[1][Modification]
+    {
+        \refstepcounter{modification}
+        \label{mod:\themodification}
+        \addcontentsline{mod}{modification}{\protect\numberline{\thesection.\themodification}#1}
+        \noindent
+    }
+    {
+        \color{black}
+        \ignorespacesafterend
+    }
+
+    \DeclareDocumentCommand{\corr}{ O{Correction} m  m }{
+        \begingroup
+        \old-[#2]\new+[#3]
+        \refstepcounter{modification}
+        \label{mod:\themodification}
+        \addcontentsline{mod}{modification}{\protect\numberline{\thesection.\themodification} \hspace{1.0cm} #1}
+        \endgroup
+    }
+
+    \DeclareDocumentCommand{\add}{ O{Addition} m }{
+        \begingroup
+            \new+[#2]
+            \refstepcounter{modification}
+            \label{mod:\themodification}
+            \addcontentsline{mod}{modification}{\protect\numberline{\thesection.\themodification} \hspace{1.0cm} #1}
+        \endgroup
+    }
+
+    \DeclareDocumentCommand{\rem}{ O{Correction}  m }{
+        \begingroup
+        \old-[#2]
+        \refstepcounter{modification}
+        \label{mod:\themodification}
+        \addcontentsline{mod}{modification}{\protect\numberline{\thesection.\themodification} \hspace{1.0cm} #1}
+        \endgroup
+    }
+}{
+
+\DeclareDocumentCommand{\corr}{mm}{
+    \tl_if_blank:nTF{#2}
+    {#2\ignorespaces}
+    {#2}
+}
+
+    \DeclareDocumentCommand{\add}{ O{Correction} m }{
+        #2
+    }
+
+    \DeclareDocumentCommand{\rem}{ O{Correction}  m }{
+    }
+}
+% ----------------------------------------------------------------
+% Convenient macros for commenting.
+% ----------------------------------------------------------------
+
+\ifbool{draft}{
+    \usepackage{todonotes}
+    \usepackage{marginnote}
+    \renewcommand{\marginpar}{\marginnote}
+    \geometry{showframe,a4paper,papersize={11.3in, 12.7 in},right=4in,marginparsep=1in,marginparwidth=3in}
+    \newcommand{\mazein}[1]{\todo[color=blue!30]{Alexander: #1}}
+    \newcommand{\dogrusoz}[1]{\todo[color=red!30]{Ugur: #1}}
+    \newcommand{\toure}[1]{\todo[color=orange!30]{Vasundra: #1}}
+    \newcommand{\draeger}[1]{\todo[color=green!30]{Andreas: #1}}
+    \newcommand{\rougny}[1]{\todo[color=brown!30]{Adrien: #1}}
+    \newcommand{\luna}[1]{\todo[color=gray!30]{Augustin: #1}}
+    \newcommand{\lenovere}[1]{\todo[color=yellow!30]{Nicolas: #1}}
+    \newcommand{\wu}[1]{\todo[color=white!30]{Guanming: #1}}
+    \newcommand{\balaur}[1]{\todo[color=purple!30]{Irina: #1}}
+    \newcommand{\borlinghaus}[1]{\todo[color=purple!30]{Hanna: #1}}
+    \newcommand{\blinov}[1]{\todo[color=blue!30]{Michael: #1}}
+
+}{
+    \newcommand{\mazein}[1]{}
+    \newcommand{\dogrusoz}[1]{}
+    \newcommand{\toure}[1]{}
+    \newcommand{\draeger}[1]{}
+    \newcommand{\rougny}[1]{}
+    \newcommand{\luna}[1]{}
+    \newcommand{\lenovere}[1]{}
+    \newcommand{\wu}[1]{}
+    \newcommand{\balaur}[1]{}
+    \newcommand{\borlinghaus}[1]{}
+    \newcommand{\blinov}[1]{}
+}
+
+\ExplSyntaxOff
