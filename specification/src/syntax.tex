@@ -39,16 +39,17 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
 \vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
 \vglyph{or} & \vglyph{not} & \vglyph{equivalence} \\ \hline 
-\glyph{consumption} & T & T &  T & & T    & T(1) &      &      &  &    \\ \hline
-\glyph{production}  & S & S & S & & S(1) & S    &      &      &   &   \\ \hline
-\glyph{modulation}  & T & T & T & T  &   &      & S(1) & S(1) & S(1) & \\ \hline
-\glyph{stimulation} & T & T & T & T &    &      & S(1) & S(1) & S(1) & \\ \hline
-\glyph{catalysis}   & T & T & T & T &    &      & S(1) & S(1) & S(1) & \\ \hline
-\glyph{inhibition}  & T & T & T &  T &    &      & S(1) & S(1) & S(1) & \\ \hline
-\glyph{necessary stimulation}     & T & T & T &  T &    &      & S(1) & S(1) & S(1) & \\ \hline
-\glyph{logic arc}   &   &   &   &      & &      & T    & T    & T(1) & T \\ \hline
+\glyph{consumption} & T & T &  T & & T    & T(1)\footnotemark[1] &      &      &  &    \\ \hline
+\glyph{production}  & S & S & S & & S(1)\footnotemark[1] & S    &      &      &   &   \\ \hline
+\glyph{modulation}  & T & T & T & T  & T  &   T  & S(1) & S(1) & S(1) & \\ \hline
+\glyph{stimulation} & T & T & T & T & T  &   T  & S(1) & S(1) & S(1) & \\ \hline
+\glyph{catalysis}   & T & T & T & T & T  &  T   & S(1) & S(1) & S(1) & \\ \hline
+\glyph{inhibition}  & T & T & T &  T & T  &   T  & S(1) & S(1) & S(1) & \\ \hline
+\glyph{necessary stimulation}     & T & T & T &  T &  T &  T   & S(1) & S(1) & S(1) & \\ \hline
+\glyph{logic arc}   &   &   &   &      & &      & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular}    & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular}    & \begin{tabular}{@{}c@{}}S(1) \\ T(1)\end{tabular} & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular} \\ \hline
 \glyph{equivalence arc} &   &   &  &    & &      &      &      &    &  \\ \hline \hline
 \end{tabular}
+\footnotetext[1]{The cardinality restriction is deprecated in this version.}
 \end{center}
 
 \subsection{Containment definition}

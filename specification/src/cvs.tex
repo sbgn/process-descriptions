@@ -2,8 +2,7 @@ Some glyphs in SBGN \PDs can contain particular kinds of textual annotations con
 
 Other cases are described throughout the rest of this chapter.
 
-The text that appears as the unit of information decorating an Entity Pool Node (EPN) must in most cases be prefixed with a controlled vocabulary term indicating the type of information being expressed.  The prefixes are mandatory except in the case of macromolecule covalent modifications (\sect{covalent-mod-cv}).  
-Without the use of controlled vocabulary prefixes, it would be necessary to have different glyphs to indicate different classes of information; this would lead to an explosion in the number of symbols needed.
+The text that appears as the unit of information decorating an Entity Pool Node (EPN) for cases where there is a controlled vocabulary defined in either (\sect{material-types-cv} or \sect{conceptual-types-cv}) must use these prefixes indicating the type of information being expressed. Without the use of controlled vocabulary prefixes, it would be necessary to have different glyphs to indicate different classes of information; this would lead to an explosion in the number of glyphs needed.
 
 In the rest of this section, we describe the controlled vocabularies (CVs) used in \SBGNPDLone.  
 They cover the following categories of information: an EPN's material type, an EPN's conceptual type, covalent modifications on macromolecules, the physical characteristics of compartments, and cardinality (\eg of multimers).  

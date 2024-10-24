@@ -22,7 +22,8 @@ urlcolor={RoyalBlue}]{hyperref}
 \usepackage[american]{varioref}
 \usepackage[normalem]{ulem}
 \usepackage{amssymb}
-\usepackage{gensymb}
+% use package textcomp to avoid warning from package gensymb about missing macros
+\usepackage{textcomp,gensymb}
 \usepackage{tabu}
 % Package 'rotating' needs to come after the others.
 \usepackage[export]{adjustbox}

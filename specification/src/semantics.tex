@@ -4,7 +4,8 @@
 
  \begin{enumerate}
    \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node.
-   \item If a state variable is used in one EPN then is must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignored.}.
+   \item If a state variable is used in one EPN then it must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignored.}.
+   \item All \glyph{units of information} associated with an EPN should be unique and not duplicated within that node.
    \item EPNs should not be orphaned (i.e.\, they should be associated with at least one arc).
  \end{enumerate}
 
@@ -117,9 +118,9 @@ explicitly marked as such. This is done using a \glyph{clone marker}. The detail
 Compartment   & N & & \\\hline
 SimpleChemical & Y & \glyph{Simple clone marker} & \\\hline
 UnspecifiedEntity & Y & \glyph{Simple clone marker} & \\\hline
-EmptySet & Y & & \\\hline
+EmptySet & Y & None & \\\hline
 Perturbing Agent & Y & \glyph{Simple clone marker} & \\\hline
-Phenotype & Y & \glyph{Simple clone marker} & \\\hline
+
 MultimerChemicalEntity & Y & \glyph{Simple clone marker} & \\\hline
 StatefulEntityPool & Y & \glyph{Labeled clone marker} & \\\hline
 Macromolecule & Y & \glyph{Labeled clone marker} & \\\hline
@@ -131,6 +132,7 @@ OmittedProcess & Y & As Process  & \\\hline
 UncertainProcess & Y & As Process  & \\\hline
 Association & Y & As Process  & \\\hline
 Dissociation & Y & As Process  & \\\hline
+Phenotype & Y & None & \\\hline
 LogicalOperator & Y & None & \\\hline
 AND & Y & None & \\\hline
 OR & Y & None & \\\hline
@@ -185,9 +187,9 @@ marked as cloned in the submap --- even if there is only one copy of the EPN in 
 \label{sec:eq-semantics}
 
 \begin{enumerate}
-    \item Pools should not overlap
-    \item A \glyph{process} should not affect \glyph{EPNs} belonging or deriving from both sides of an \glyph{equivalence operator}
-    \item For \glyph{simple chemicals} (stateless \glyph{EPNs}) it is not allowed to show specifics both as input and as output of a pathway
+    \item Pools should not overlap.
+    \item A \glyph{process} should not affect. \glyph{EPNs} belonging or deriving from both sides of an \glyph{equivalence operator}
+    \item For \glyph{simple chemicals} (stateless \glyph{EPNs}) it is not allowed to show specifics both as input and as output of a pathway.
 \end{enumerate}
 
 For automatic verification, the first rule can be transformed into the following validation rules:
