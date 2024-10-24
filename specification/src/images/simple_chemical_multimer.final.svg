@@ -6,16 +6,16 @@
   /><g
   ><defs id="defs1"
     ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath1"
-      ><path d="M0 0 L342 0 L342 278 L0 278 L0 0 Z"
+      ><path d="M0 0 L856 0 L856 524 L0 524 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2"
       ><path d="M0 0 L0 75 L123 75 L123 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 28 L72 28 L72 0 Z"
+      ><path d="M0 0 L0 27 L72 27 L72 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
-      ><path d="M0 0 L0 27 L71 27 L71 0 Z"
+      ><path d="M0 0 L0 26 L71 26 L71 0 Z"
       /></clipPath
     ></defs
     ><g stroke-linecap="round" transform="translate(119,103)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
@@ -24,8 +24,8 @@
       /><path d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L79 61 C95.5685 61 109 47.5685 109 31 L109 31 C109 14.4315 95.5685 1 79 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" clip-path="url(#clipPath2)" stroke="none"
       /><path fill="none" d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L79 61 C95.5685 61 109 47.5685 109 31 L109 31 C109 14.4315 95.5685 1 79 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" clip-path="url(#clipPath2)" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" font-size="20px" transform="translate(139,121)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="16" clip-path="url(#clipPath4)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-size="20px" font-family="'Arial'" transform="translate(139,121)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="20" clip-path="url(#clipPath4)" stroke="none"
       >LABEL</text
     ></g
   ></g

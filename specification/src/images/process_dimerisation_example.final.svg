@@ -6,22 +6,22 @@
   /><g
   ><defs id="defs1"
     ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath1"
-      ><path d="M0 0 L704 0 L704 380 L0 380 L0 0 Z"
+      ><path d="M0 0 L452 0 L452 212 L0 212 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2"
       ><path d="M0 0 L0 64 L64 64 L64 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 21 L39 21 L39 0 Z"
+      ><path d="M0 0 L0 20 L39 20 L39 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
-      ><path d="M0 0 L0 20 L38 20 L38 0 Z"
+      ><path d="M0 0 L0 19 L38 19 L38 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath5"
-      ><path d="M0 0 L0 21 L38 21 L38 0 Z"
+      ><path d="M0 0 L0 20 L38 20 L38 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath6"
-      ><path d="M0 0 L0 20 L37 20 L37 0 Z"
+      ><path d="M0 0 L0 19 L37 19 L37 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath7"
       ><path d="M0 0 L0 28 L28 28 L28 0 Z"
@@ -30,10 +30,10 @@
       ><path d="M0 0 L0 17 L87 17 L87 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M0 0 L0 20 L24 20 L24 0 Z"
+      ><path d="M0 0 L0 19 L24 19 L24 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M0 0 L0 19 L23 19 L23 0 Z"
+      ><path d="M0 0 L0 18 L23 18 L23 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M0 0 L0 2 L67 2 L67 0 Z"
@@ -43,16 +43,16 @@
     ><path d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L31 61 C47.5685 61 61 47.5685 61 31 L61 31 C61 14.4315 47.5685 1 31 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" stroke="none" clip-path="url(#clipPath2)"
       /><path fill="none" d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L31 61 C47.5685 61 61 47.5685 61 31 L61 31 C61 14.4315 47.5685 1 31 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" clip-path="url(#clipPath2)" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" font-size="14px" transform="translate(60,69)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="12" clip-path="url(#clipPath4)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-size="14px" font-family="'Arial'" transform="translate(60,70)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="14" clip-path="url(#clipPath4)" stroke="none"
       >GAL</text
     ></g
     ><g stroke-linecap="round" transform="translate(288,48)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
     ><path d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L31 61 C47.5685 61 61 47.5685 61 31 L61 31 C61 14.4315 47.5685 1 31 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" stroke="none" clip-path="url(#clipPath2)"
       /><path fill="none" d="M1 31 L1 31 C1 47.5685 14.4315 61 31 61 L31 61 C47.5685 61 61 47.5685 61 31 L61 31 C61 14.4315 47.5685 1 31 1 L31 1 C14.4315 1 1 14.4315 1 31 Z" clip-path="url(#clipPath2)" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" font-size="14px" transform="translate(301,69)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="12" clip-path="url(#clipPath6)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-size="14px" font-family="'Arial'" transform="translate(301,70)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="14" clip-path="url(#clipPath6)" stroke="none"
       >LAC</text
     ></g
     ><g stroke-linecap="round" transform="translate(176,66)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
@@ -63,23 +63,23 @@
     ><path fill="none" d="M0.75 8.25 L11.25 8.25 L70.75 8.25" clip-path="url(#clipPath8)"
       /><path d="M70.75 0.75 L70.75 15.75 L85.75 8.25 Z" clip-path="url(#clipPath8)" stroke="none"
     /></g
-    ><g fill="white" text-rendering="optimizeLegibility" stroke-width="1.5" transform="translate(237,61)" stroke="white" image-rendering="optimizeQuality"
-    ><rect x="1.25" width="20.5" height="16.5" y="1.25" clip-path="url(#clipPath10)" stroke="none"
-      /><rect x="1.25" y="1.25" clip-path="url(#clipPath10)" fill="none" width="20.5" height="16.5" stroke="black"
+    ><g transform="translate(237,62)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="'Arial'" stroke="white" stroke-width="1.5"
+    ><rect x="1.25" width="20.5" height="15.5" y="1.25" clip-path="url(#clipPath10)" stroke="none"
+      /><rect x="1.25" y="1.25" clip-path="url(#clipPath10)" fill="none" width="20.5" height="15.5" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" stroke-width="1.5" transform="translate(237,61)" image-rendering="optimizeQuality"
-    ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
+    ><g text-rendering="optimizeLegibility" stroke-width="1.5" font-family="'Arial'" transform="translate(237,62)" image-rendering="optimizeQuality"
+    ><text x="8" xml:space="preserve" y="13" clip-path="url(#clipPath10)" stroke="none"
       >1</text
     ></g
     ><g stroke-linecap="butt" transform="translate(110,79)" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke-width="1.5"
     ><path fill="none" d="M0.75 0.75 L55.25 0.75 L65.75 0.75" clip-path="url(#clipPath11)"
     /></g
-    ><g fill="white" text-rendering="optimizeLegibility" stroke-width="1.5" transform="translate(120,62)" stroke="white" image-rendering="optimizeQuality"
-    ><rect x="1.25" width="20.5" height="16.5" y="1.25" clip-path="url(#clipPath10)" stroke="none"
-      /><rect x="1.25" y="1.25" clip-path="url(#clipPath10)" fill="none" width="20.5" height="16.5" stroke="black"
+    ><g transform="translate(120,62)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="'Arial'" stroke="white" stroke-width="1.5"
+    ><rect x="1.25" width="20.5" height="15.5" y="1.25" clip-path="url(#clipPath10)" stroke="none"
+      /><rect x="1.25" y="1.25" clip-path="url(#clipPath10)" fill="none" width="20.5" height="15.5" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" stroke-width="1.5" transform="translate(120,62)" image-rendering="optimizeQuality"
-    ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
+    ><g text-rendering="optimizeLegibility" stroke-width="1.5" font-family="'Arial'" transform="translate(120,62)" image-rendering="optimizeQuality"
+    ><text x="8" xml:space="preserve" y="13" clip-path="url(#clipPath10)" stroke="none"
       >2</text
     ></g
   ></g

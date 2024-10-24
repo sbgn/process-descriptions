@@ -6,22 +6,22 @@
   /><g
   ><defs id="defs1"
     ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath1"
-      ><path d="M0 0 L812 0 L812 337 L0 337 L0 0 Z"
+      ><path d="M0 0 L1000 0 L1000 626 L0 626 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2"
       ><path d="M0 0 L0 194 L224 194 L224 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 18 L48 18 L48 0 Z"
+      ><path d="M0 0 L0 17 L45 17 L45 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
-      ><path d="M0 0 L0 17 L47 17 L47 0 Z"
+      ><path d="M0 0 L0 16 L44 16 L44 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath5"
-      ><path d="M0 0 L0 18 L45 18 L45 0 Z"
+      ><path d="M0 0 L0 17 L48 17 L48 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath6"
-      ><path d="M0 0 L0 17 L44 17 L44 0 Z"
+      ><path d="M0 0 L0 16 L47 16 L47 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath7"
       ><path d="M0 0 L0 64 L112 64 L112 0 Z"
@@ -36,28 +36,28 @@
       ><path d="M0 0 L0 22 L192 22 L192 0 Z"
       /></clipPath
     ></defs
-    ><g stroke-linecap="round" transform="translate(488,43)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
-    ><path d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" stroke="none" clip-path="url(#clipPath2)"
-      /><path fill="none" d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" clip-path="url(#clipPath2)" stroke="black"
-    /></g
-    ><g text-rendering="optimizeLegibility" transform="translate(576,214)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="10" clip-path="url(#clipPath4)" stroke="none"
-      >correct</text
-    ></g
     ><g stroke-linecap="round" transform="translate(48,43)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
     ><path d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" stroke="none" clip-path="url(#clipPath2)"
       /><path fill="none" d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" clip-path="url(#clipPath2)" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" transform="translate(137,214)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="10" clip-path="url(#clipPath6)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-family="'Arial'" transform="translate(137,215)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="12" clip-path="url(#clipPath4)" stroke="none"
       >wrong</text
     ></g
     ><g stroke-linecap="round" transform="translate(268,43)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
     ><path d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" stroke="none" clip-path="url(#clipPath2)"
       /><path fill="none" d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" clip-path="url(#clipPath2)" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" transform="translate(356,214)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="10" clip-path="url(#clipPath4)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-family="'Arial'" transform="translate(356,215)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="12" clip-path="url(#clipPath6)" stroke="none"
+      >correct</text
+    ></g
+    ><g stroke-linecap="round" transform="translate(488,43)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
+    ><path d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" stroke="none" clip-path="url(#clipPath2)"
+      /><path fill="none" d="M1 1 L221 1 L221 191 L1 191 L1 1 Z" clip-path="url(#clipPath2)" stroke="black"
+    /></g
+    ><g text-rendering="optimizeLegibility" font-family="'Arial'" transform="translate(576,215)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="12" clip-path="url(#clipPath6)" stroke="none"
       >correct</text
     ></g
     ><g stroke-linecap="round" transform="translate(98,113)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"

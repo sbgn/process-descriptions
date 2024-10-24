@@ -6,16 +6,16 @@
   /><g
   ><defs id="defs1"
     ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath1"
-      ><path d="M0 0 L292 0 L292 218 L0 218 L0 0 Z"
+      ><path d="M0 0 L1073 0 L1073 527 L0 527 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2"
       ><path d="M0 0 L0 75 L123 75 L123 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 28 L72 28 L72 0 Z"
+      ><path d="M0 0 L0 27 L72 27 L72 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
-      ><path d="M0 0 L0 27 L71 27 L71 0 Z"
+      ><path d="M0 0 L0 26 L71 26 L71 0 Z"
       /></clipPath
     ></defs
     ><g stroke-linecap="round" transform="translate(59,43)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
@@ -24,8 +24,8 @@
       /><path d="M1 1 L109 1 L109 46 L109 48 L108 51 L107 53 L106 55 L105 57 L103 58 L101 59 L99 60 L96 61 L94 61 L16 61 L14 61 L11 60 L9 59 L7 58 L5 57 L4 55 L3 53 L2 51 L1 48 L1 46 Z" clip-path="url(#clipPath2)" fill-rule="evenodd" stroke="none"
       /><path fill="none" d="M1 1 L109 1 L109 46 L109 48 L108 51 L107 53 L106 55 L105 57 L103 58 L101 59 L99 60 L96 61 L94 61 L16 61 L14 61 L11 60 L9 59 L7 58 L5 57 L4 55 L3 53 L2 51 L1 48 L1 46 Z" clip-path="url(#clipPath2)" fill-rule="evenodd" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" font-size="20px" transform="translate(79,61)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="16" clip-path="url(#clipPath4)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-size="20px" font-family="'Arial'" transform="translate(79,61)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="20" clip-path="url(#clipPath4)" stroke="none"
       >LABEL</text
     ></g
   ></g

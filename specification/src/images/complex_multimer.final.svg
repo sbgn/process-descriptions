@@ -6,16 +6,16 @@
   /><g
   ><defs id="defs1"
     ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath1"
-      ><path d="M0 0 L2780 0 L2780 1919 L0 1919 L0 0 Z"
+      ><path d="M0 0 L1047 0 L1047 539 L0 539 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2"
       ><path d="M0 0 L0 75 L123 75 L123 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 28 L72 28 L72 0 Z"
+      ><path d="M0 0 L0 27 L72 27 L72 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
-      ><path d="M0 0 L0 27 L71 27 L71 0 Z"
+      ><path d="M0 0 L0 26 L71 26 L71 0 Z"
       /></clipPath
     ></defs
     ><g stroke-linecap="round" transform="translate(169,93)" fill="white" text-rendering="optimizeLegibility" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="white" stroke-width="2"
@@ -24,8 +24,8 @@
       /><path d="M1 6 L6 1 L104 1 L109 6 L109 56 L104 61 L6 61 L1 56 Z" clip-path="url(#clipPath2)" fill-rule="evenodd" stroke="none"
       /><path fill="none" d="M1 6 L6 1 L104 1 L109 6 L109 56 L104 61 L6 61 L1 56 Z" clip-path="url(#clipPath2)" fill-rule="evenodd" stroke="black"
     /></g
-    ><g text-rendering="optimizeLegibility" font-size="20px" transform="translate(189,111)" image-rendering="optimizeQuality"
-    ><text x="5" xml:space="preserve" y="16" clip-path="url(#clipPath4)" stroke="none"
+    ><g text-rendering="optimizeLegibility" font-size="20px" font-family="'Arial'" transform="translate(189,111)" image-rendering="optimizeQuality"
+    ><text x="5" xml:space="preserve" y="20" clip-path="url(#clipPath4)" stroke="none"
       >LABEL</text
     ></g
   ></g
