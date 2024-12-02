@@ -2,6 +2,7 @@
 \label{chp:layout}
 
 \section{Introduction}
+\label{sec:layout-intro}
 
 The previous chapters describe the appearance and meaning of \SBGNPDLone components. Here we describe rules governing the visual appearence and asthetics of the \PDl. The components of a \PD have to be placed in a meaningful way -- a random distribution with spaghetti-like connections will most likely hide the information encoded in the underlying model, whereas an elegant placement of the objects, giving a congenial appearance of the maps, may reveal new insights. The arrangement of components in a map is called a \emph{layout}.
 
@@ -9,14 +10,7 @@ SBGN \PDs should be easily recognisable not only by the
 glyphs used, but also by the general style of the layout. However, the
 arrangement of the components is a complex art in itself, and there is
 no simple rule which can be applied to all cases. Therefore this
-section provides rules for the layout of process description maps, divided
-into two categories:
-\begin{enumerate}
-  \item requirements, i.e., rules which \textbf{must} be fulfilled by a
-  layout, and
-  \item recommendations, i.e., rules which \textbf{should} be followed if
-  possible. 
-\end{enumerate}
+section provides rules, some of which are requirements and some are recommendations, for the layout of process description maps.
 In addition, we provide a list of additional suggestions which may help in producing aesthetically more pleasant layouts, possibly easier to understand.
 
 Those layout rules are independent of the method used to produce
@@ -36,20 +30,28 @@ should be conserved upon scaling as far as possible.
 
 \section{Requirements}
 
-Requirements are rules which \textbf{must} be fulfilled by a layout to
+Requirements are rules which must be fulfilled by a layout to
 produce a valid \PDm.
 
 \subsection{Node-node overlaps}
+\label{sec:node-node-overlap}
 
 Nodes are only allowed to overlap in two cases when they are allowed to contain other nodes---as described in \sect{containment}. Otherwise, nodes are not allowed to overlap (\fig{layout1}). This includes the
 touching of nodes. Touching is not allowed apart from the case where
 it has a specific meaning, e.g., two macromolecules touching each
-other within a complex because they form the complex.
+other within a complex because they form the complex. Similarly, \fig{overlap-bad} illustrates the problem using an incorrect map where a compartment hides an EPN.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[scale=0.8]{images/build/layout_node_node.pdf}
   \caption{Nodes must not overlap.}\label{fig:layout1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale = 0.8]{images/build/compartment_overlapping_wrong_example.pdf}
+  \caption{Example of an \textbf{incorrect} map.  Overlapped compartments must not obscure other objects.}
+  \label{fig:overlap-bad}
 \end{figure}
 
 \subsection{Node-edge crossing}\label{crosEdNoRe}
@@ -65,7 +67,7 @@ Edges must be drawn on the top of a the node (\fig{layout2}). See also recommend
 
 \subsection{Node border-edge overlaps}
 
-Edges are not allowed to overlap the border lines of nodes (\fig{layout3}).
+Edges must not overlap the border lines of nodes (\fig{layout3}).
 
 \begin{figure}[htb]
   \centering
@@ -75,7 +77,7 @@ Edges are not allowed to overlap the border lines of nodes (\fig{layout3}).
 
 \subsection{Edge-edge overlaps}
 
-Edges are not allowed to overlap (\fig{layout4}). This includes touching of edges.
+Edges must not overlap (\fig{layout4}). This includes touching of edges.
 Furthermore, an edge is neither allowed to cross itself nor to cross
 the boundary of node more than twice or other edges more than once.
 
@@ -87,7 +89,7 @@ the boundary of node more than twice or other edges more than once.
 
 \subsection{Node orientation}
 
-Nodes have to be drawn horizontally or vertically, any other
+Nodes must be drawn horizontally or vertically, any other
 rotation of elements is not allowed (\fig{layout5}).
 
 \begin{figure}[htb]
@@ -101,8 +103,8 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \begin{enumerate}
 \item The arcs linking the square glyph of a \glyph{process} to the \glyph{consumption} and \glyph{production arcs}
- are attached to the centre of opposite sides (\fig{layout6}).
-\item The modulatory arcs are attached to the other two sides, but not necessarily all to the centre, as several modifiers can affect the same process node.
+ must be attached to the centre of opposite sides (\fig{layout6}).
+\item The modulatory arcs must be attached to the other two sides, but not necessarily all to the centre, as several modifiers can affect the same process node.
 \end{enumerate}
 
 \begin{figure}[htb]
@@ -114,20 +116,19 @@ rotation of elements is not allowed (\fig{layout5}).
 
 \subsection{Node labels}
 
-At least a part of the label (unbordered box containing a string of characters) has to be placed inside the node it belongs to. Node labels are not allowed to overlap other nodes or other labels (this includes touching of other nodes or labels).
+At least a part of the label (unbordered box containing a string of characters) has to be placed inside the node it belongs to. Node labels must not overlap other nodes or other labels (this includes touching of other nodes or labels).
 
 \subsection{Edge labels}
 
-Edge labels are not allowed to overlap nodes. This includes touching
-of nodes.
+Edge labels must not overlap nodes. This includes touching of nodes.
 
 \subsection{Compartments}
 
-If a process has all participants in the same compartment the process node and all edges/arcs should be drawn in this compartment.  If a process has participants in at least two different compartments, the process node has to be either in a compartment where the process has at least one participant or in the empty space.
+If a process has all participants in the same compartment the process node and all edges/arcs must be drawn in this compartment.  If a process has participants in at least two different compartments, the process node must to be either in a compartment where the process has at least one participant or in the empty space.
 
 \section{Recommendations}
 
-Recommendations are rules which should be followed if possible and generally should improve the clarity of the diagram.
+Recommendations are rules which should be followed if possible and generally tend to improve the clarity of the diagram.
 
 \subsection{Node-edge crossing}
 \label{sec:crosEdNo}
@@ -135,9 +136,10 @@ Recommendations are rules which should be followed if possible and generally sho
 Situations where edges and nodes cross should be avoided. Note that some crossings may be unavoidable, e.g., the crossing between an edge and a compartment border or an edge and a complex (if the edge connects an element inside the complex with something outside).
 
 \subsection{Labels}
+\label{sec:labels}
 
 Labels should be horizontal and non-empty strings. Node labels should be placed completely
-inside the node if possible. Edge labels should be placed close to the edge and avoid overlapping the edge as well as other edge
+inside the node if possible. Edge labels should be placed close to the edge and should avoid overlapping the edge as well as other edge
 labels.
 
 \subsection{Avoid edge crossings}
@@ -168,14 +170,14 @@ elements (\fig{layout7}).
 \end{figure}
 
 \section{Additional suggestions}
+\label{sec:additional-suggestions}
 
 Here is a list of additional layout suggestions which may help improve the asthetics and clarity of \PD maps.
 
 \begin{itemize}
   \item Angle of edge crossings: If edge crossing cannot be avoided then the edges should cross with an angle close to 90\degree.
  \item Drawing area and width/height ratio: The drawing should
-  be compact and the ratio between the width and the height
-  of the drawing should be close to 1.
+  be compact.
   \item Edge length: Long edges should be avoided.
   \item Number of edge bends: Edges should be drawn with
   as few bends as possible.

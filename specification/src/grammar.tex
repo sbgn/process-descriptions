@@ -20,21 +20,13 @@ One can see that this maps very closely to the abstraction described in the \PDl
 \section{The conceptual model}
 \label{sec:conceptual-model}
 
-In order to formalize the conceptual representation described above and the semantic rules that we will describe later, we have described the \PDl using UML Domain Object Model. We have used it to define the ``taxonomy'' of the \PD glyphs and their relationship to each other. Finally we describe the attributes of each node glyph that are required to uniquely identify an instance of it in a \PDm. The concept of identity is important in some of the rules described below.
+In order to formalize the conceptual representation described above and the glyph specific rules that we will describe later, we have described the \PDl using UML Domain Object Model. We have used it to define the ``taxonomy'' of the \PD glyphs and their relationship to each other. Finally we describe the attributes of each node glyph that are required to uniquely identify an instance of it in a \PDm. The concept of identity is important in some of the rules described below.
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=\linewidth]{images/build/sbgn_node_taxonomy.pdf}
-\caption{Organisation of the node glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
+\includegraphics[width=\linewidth]{images/build/sbgn_glyph_model.pdf}
+\caption{Organisation of the node, arc and auxiliary unit glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
 \label{fig:sbgn_node_tax}
-\end{center}
-\end{figure}
-
-\begin{figure}[htb!]
-\begin{center}
-\includegraphics[width=\linewidth]{images/build/sbgn_edge_taxonomy.pdf}
-\caption{Organisation of the edge glyphs within SBGN \PDl. All UML classes (boxes) correspond to \PD node glyphs except those with italicised names, which are organisational groupings. They correspond to the groupings used elsewhere in this document.}
-\label{fig:sbgn_edge_tax}
 \end{center}
 \end{figure}
 
@@ -42,7 +34,7 @@ In order to formalize the conceptual representation described above and the sema
 \begin{center}
 \begin{small}
 \tablefirsthead{\hline
-\textbf{Glyph} & \textbf{Identifying Attributes} \\\hline\hline}
+\textbf{Glyph} & \textbf{Identifying Attributes} \\\hline}
 \tablehead{\hline
 \multicolumn{2}{|l|}{\small\sl continued from previous page}\\\hline
 \textbf{Glyph} & \textbf{Identifying Attributes} \\\hline\hline}
@@ -53,6 +45,7 @@ In order to formalize the conceptual representation described above and the sema
 
 \topcaption{The Identifying attributes of \PD node glyphs. When a glyph is always unique in a map, this is indicated by the term \emph{instance}. The term \emph{state values} indicates that the values of all the EPN's state variables are used in the definition of its identity.}
 
+\pagebreak
 \begin{supertabular}{|p{4.5cm}|p{10cm}|}\hline
 Unit of Information & \emph{instance} \\\hline
 State variable & Owning StatefulEpnNode, value \\\hline

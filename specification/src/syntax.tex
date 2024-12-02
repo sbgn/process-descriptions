@@ -1,17 +1,19 @@
-\section{Syntax}
+\section{Connectivity and containment}
+
+\subsection{Node connectivity}
+\label{sec:node-connectivity}
 
 The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An incidence matrix has arcs as rows and nodes as columns. Each element of the matrix represents the role of an arc in connection to a node. Source (S) means that the arc can begin at that node. Target (T) indicates that the arc can end at that node. Numbers in parenthesis represent the maximum number of arcs of a particular type to have this specific connection role with the node. Empty cells means the arc is not able to connect to the node.
 
-\subsection{Node connectivity}
+
 
 \begin{center}
-\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c|c|c||}
-\hline
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \raisebox{20pt}{$Arc \backslash EPN$} &\vglyph{macromolecule} & \vglyph{simple chemical} & 
 \vglyph{unspecified entity} &  \vglyph{multimer} & \vglyph{complex} & 
 \vglyph{nucleic acid feature}& \vglyph{tag} & \vglyph{submap terminal} & \vglyph{empty set} & 
-\vglyph{perturbing agent} &  \vglyph{submap}\\ \hline 
+\vglyph{perturbing agent} &  \vglyph{submap} \\ \hline 
 \glyph{consumption}      & S & S & S & S & S & S &   & & S(1) &  & \\ \hline 
 \glyph{production}        & T & T & T & T & T & T &   & & T(1) &  & \\ \hline 
 \glyph{modulation}        & S & S & S & S & S & S &   & &  & S & \\ \hline 
@@ -20,7 +22,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \glyph{inhibition}          & S & S & S & S & S & S &   & & & S & \\ \hline 
 \glyph{necessary stimulation} & S & S & S & S & S & S &  & &  & S & \\ \hline 
 \glyph{logic arc}          & S & S & S & S & S & S &   &  & &   & \\ \hline 
-\glyph{equivalence arc}     & S & S & S & S & S & S & T & T  & & \\ \hline \hline
+\glyph{equivalence arc}     & S & S & S & S & S & S & T & T  & &   & \\ \hline 
 \end{tabular}
 \end{center}
 
@@ -33,8 +35,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \end{enumerate}
     
 \begin{center}
-\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c||}
-\hline
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \raisebox{20pt}{$Arc \backslash PN$} & \vglyph{process}  & \vglyph{omitted process}  & 
 \vglyph{uncertain process} & \vglyph{phenotype}  & \vglyph{association}  & \vglyph{dissociation}  & \vglyph{and}  &  
@@ -47,7 +48,7 @@ The syntax of the SBGN \PDl is defined in the form of an incidence matrix. An in
 \glyph{inhibition}  & T & T & T &  T & T  &   T  & S(1) & S(1) & S(1) & \\ \hline
 \glyph{necessary stimulation}     & T & T & T &  T &  T &  T   & S(1) & S(1) & S(1) & \\ \hline
 \glyph{logic arc}   &   &   &   &      & &      & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular}    & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular}    & \begin{tabular}{@{}c@{}}S(1) \\ T(1)\end{tabular} & \begin{tabular}{@{}c@{}}S(1) \\ T\end{tabular} \\ \hline
-\glyph{equivalence arc} &   &   &  &    & &      &      &      &    &  \\ \hline \hline
+\glyph{equivalence arc} &   &   &  &    & &      &      &      &    &  \\ \hline
 \end{tabular}
 \footnotetext[1]{The cardinality restriction is deprecated in this version.}
 \end{center}
@@ -59,10 +60,10 @@ By containment we mean that a glyph can be drawn inside the other glyph. This do
 
 \begin{center}
 \tablefirsthead{\hline
-\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline}
 \tablehead{\hline
 \multicolumn{3}{|l|}{\small\sl continued from previous page}\\\hline
-\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline\hline}
+\textbf{Glyph $\backslash$ Containers}  & \textbf{\glyph{complex}} & \textbf{\glyph{compartment}}  \\\hline}
 \tabletail{\hline
 \multicolumn{3}{|r|}{\small\sl continued on next page}\\
 \hline}
@@ -101,6 +102,5 @@ By containment we mean that a glyph can be drawn inside the other glyph. This do
 \glyph{or}                   &         -       &          +          \\ \hline
 \glyph{not}                  &         -       &          +         \\ \hline
 \glyph{equivalence}                  &         -       &          +         \\ \hline
-\hline
 \end{supertabular}
 \end{center}

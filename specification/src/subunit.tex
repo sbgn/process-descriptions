@@ -10,7 +10,7 @@ It also shows how the same complex can be represented without decorating \glyph{
 The SBGN \PD defines nine different \glyph{subunit} glyphs, each representing a different type of bio-molecular (sub)-entity.
 The five main \glyph{subunits} are the \glyph{unspecified entity subunit}, \glyph{macromolecule subunit}, \glyph{simple chemical subunit}, \glyph{nucleic acid feature subunit}, and \glyph{complex subunit}.
 This latter \glyph{subunit} allows representing complexes formed of other complexes.
-The remaining four \glyph{subunits} are multimeric: \glyph{multimer of macromolecules subunit}, \glyph{multimer of simple chemicals subunit}, \glyph{multimer of nucleic acid feature subunit}, and \glyph{multimer of complexes subunit}.
+The remaining four \glyph{subunits} are multimeric: \glyph{macromolecule multimer subunit}, \glyph{simple chemical multimer subunit}, \glyph{nucleic acid feature multimer subunit}, and \glyph{complex multimer subunit}.
 
 \begin{glyphDescription}
 
@@ -24,7 +24,7 @@ None.
 None.
 
 \glyphContainer
-Each \glyph{subunit} is represented by its own shape depending on its bio-molecular nature, as shown in \tab{subunit_containers}.
+Each \glyph{subunit} is represented by its own shape depending on its bio-molecular nature, as shown in \fig{subunit_containers}.
 Those shapes are the same as those used to represent entity pools~(\sect{EPNs}).
 
 \glyphLabel
@@ -41,23 +41,9 @@ A \glyph{macromolecule}, \glyph{simple chemical}, \glyph{nucleic acid feature}, 
 These can characterize a domain, such as a binding site.
 Particular \glyph{units of information} are available for describing the material type (\sect{material-types-cv}) and conceptual type (\sect{conceptual-types-cv}) of such a \glyph{subunit}.
 
-\end{glyphDescription}
+A \glyph{complex subunit} can carry \glyph{subunits} and there is no limit on such nesting. 
 
-\begin{table}[h]
-\begin{tabu}{X[c,m]X[c,m]X[c,m]X[c,m]}
-    \toprule
-    \includegraphics[scale=0.8, valign=m]{images/build/unspecified_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/simple_chemical_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/macromolecule_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/genetic_subunit.pdf}\\[0.2cm]
-    \glyph{unspecified entity subunit} & \glyph{simple chemical subunit} & \glyph{macromolecule subunit} & \glyph{nucleic acid feature subunit}\\[0.5cm]
-    \includegraphics[scale=0.8, valign=m]{images/build/complex_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/macromolecule_multimer_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/simple_chemical_multimer_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/genetic_multimer_subunit.pdf}\\[0.2cm]
-    \glyph{complex subunit} & \glyph{multimer of macromolecules subunit} & \glyph{multimer of simple chemicals subunit} & \glyph{multimer of nucleic acid feature subunit}\\[0.5cm]
-    \includegraphics[scale=0.8, valign=m]{images/build/complex_multimer_subunit.pdf} &  &  & \\[0.2cm]
-    \glyph{multimer of complexes subunit} & & & \\
-    \bottomrule
-\end{tabu}
-\caption{The \PD glyphs for the different types of \glyph{subunits}.
-Each \glyph{subunit} decorates a \glyph{complex}.}
-\label{tab:subunit_containers}
-\end{table}
+\end{glyphDescription}
 
 \begin{figure}[htb]
   \centering
@@ -68,3 +54,17 @@ Each \glyph{subunit} decorates a \glyph{complex}.}
       However, their states are represented using \glyph{state variables} decorating the \glyph{complex}.}
   \label{fig:complexSubunits}
 \end{figure} 
+
+\begin{figure}[h]
+\begin{tabu}{X[c,m]X[c,m]X[c,m]X[c,m]}
+    \includegraphics[scale=0.8, valign=m]{images/build/unspecified_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/simple_chemical_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/macromolecule_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/genetic_subunit.pdf}\\[0.2cm]
+    \glyph{unspecified entity subunit} & \glyph{simple chemical subunit} & \glyph{macromolecule subunit} & \glyph{nucleic acid feature subunit}\\[0.5cm]
+    \includegraphics[scale=0.8, valign=m]{images/build/complex_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/macromolecule_multimer_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/simple_chemical_multimer_subunit.pdf} & \includegraphics[scale=0.8, valign=m]{images/build/genetic_multimer_subunit.pdf}\\[0.2cm]
+    \glyph{complex subunit} & \glyph{macromolecule multimer subunit} & \glyph{simple chemical multimer subunit} & \glyph{nucleic acid feature multimer subunit}\\[0.5cm]
+    \includegraphics[scale=0.8, valign=m]{images/build/complex_multimer_subunit.pdf} &  &  & \\[0.2cm]
+    \glyph{complex multimer subunit} & & & \\
+\end{tabu}
+\caption{The \PD glyphs for the different types of \glyph{subunits}.
+Each \glyph{subunit} decorates a \glyph{complex}.}
+\label{fig:subunit_containers}
+\end{figure}

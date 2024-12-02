@@ -1,9 +1,10 @@
-\section{Semantic rules}
+\section{Glyph specific rules}
 
 \subsection{EPNs}
+\label{sec:epn-rules}
 
  \begin{enumerate}
-   \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node if variable name is provided.
+   \item All \glyph{state variables} associated with a Stateful Entity Pool Node should be unique and not duplicated within that node if names of the state variables are provided.
    \item If a state variable is used in one EPN then it must be used in all equivalent stateful EPNs\footnote{A stateful EPN is equivalent if the EPNs are identical when their state descriptions are ignored.}.
    \item All \glyph{units of information} associated with an EPN should be unique and not duplicated within that node.
    \item EPNs should not be orphaned (i.e.\, they should be associated with at least one arc).
@@ -95,6 +96,7 @@ A process is deemed to be reversible if it has \glyph{production} arcs on both t
 
  
 \subsection{Cloning}
+\label{sec:cloning}
 
 SBGN allows identical nodes to be duplicated on a map if they are
 explicitly marked as such. This is done using a \glyph{clone marker}. The details are shown in table \ref{tab:processduprules}.
@@ -105,7 +107,7 @@ explicitly marked as such. This is done using a \glyph{clone marker}. The detail
 \label{tab:processduprules}
 \begin{footnotesize}
 \tablefirsthead{\hline
-  Node & Can be duplicated & Indication & Additional Rules\\\hline}
+  \textbf{Node} & \textbf{Can be duplicated} & \textbf{Indication} & \textbf{Additional Rules}\\\hline}
 \tablehead{\hline
 \multicolumn{4}{|l|}{\small\sl continued from previous page}\\
 \hline\hline
@@ -158,7 +160,7 @@ correct way a macromolecule that spans more then one compartment ---
 for example a receptor protein. It is clearly desirable to be able to
 show a macromolecule in a manner that the biologist expects (i.e.,
 spanning from the outside through the membrane to the
-inside). Therefore, the author is recommended to draw the
+inside). Therefore, the author should to draw the
 macromolecule across compartment boundaries, but the underlying SBGN
 semantic model will assign it to only one.
 
@@ -188,7 +190,7 @@ marked as cloned in the submap --- even if there is only one copy of the EPN in 
 
 \begin{enumerate}
     \item Pools should not overlap.
-    \item A \glyph{process} should not affect. \glyph{EPNs} belonging or deriving from both sides of an \glyph{equivalence operator}
+    \item A \glyph{process} should not affect \glyph{EPNs} belonging or deriving from both sides of an \glyph{equivalence operator}.
     \item For \glyph{simple chemicals} (stateless \glyph{EPNs}) it is not allowed to show specifics both as input and as output of a pathway.
 \end{enumerate}
 
