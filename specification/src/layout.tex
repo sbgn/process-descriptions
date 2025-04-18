@@ -4,7 +4,7 @@
 \section{Introduction}
 \label{sec:layout-intro}
 
-The previous chapters describe the appearance and meaning of \SBGNPDLone components. Here we describe rules governing the visual appearence and asthetics of the \PDl. The components of a \PD have to be placed in a meaningful way -- a random distribution with spaghetti-like connections will most likely hide the information encoded in the underlying model, whereas an elegant placement of the objects, giving a congenial appearance of the maps, may reveal new insights. The arrangement of components in a map is called a \emph{layout}.
+The previous chapters describe the appearance and meaning of \SBGNPDLone components. Here we describe rules governing the visual appearance and aesthetics of the \PDl. The components of a \PD have to be placed in a meaningful way -- a random distribution with spaghetti-like connections will most likely hide the information encoded in the underlying model, whereas an elegant placement of the objects, giving a congenial appearance of the maps, may reveal new insights. The arrangement of components in a map is called a \emph{layout}.
 
 SBGN \PDs should be easily recognisable not only by the
 glyphs used, but also by the general style of the layout. However, the
@@ -20,12 +20,12 @@ not deal with interactive aspects (e.\,g.~the effect of zooming). Further inform
 (graph drawing) can be found, for example, in the books of Di Battista and
 co-authors~\cite{DiBattista:1998}, and Kaufmann and Wagner~\cite{Kaufmann:2001}.
 
-Please note that the color of objects do not carry any meaning in
+Please note that the colour of objects does not carry any meaning in
 SBGN. Although one can use colours to emphasize part of a map or
 encode additional information, the meaning of the map should not
-depend on the colours. Furthermore, objects can have different sizes
+depend on the colours. Furthermore, objects can have different sizes,
 and size is also meaningless in SBGN. For example, a process node
-may be larger than a protein node. Also the meaning of a graph
+may be larger than a protein node. Also, the meaning of a graph
 should be conserved upon scaling as far as possible.
 
 \section{Requirements}
@@ -56,7 +56,7 @@ other within a complex because they form the complex. Similarly, \fig{overlap-ba
 
 \subsection{Node-edge crossing}\label{crosEdNoRe}
 
-Edges must be drawn on the top of a the node (\fig{layout2}). See also recommendation \sect{crosEdNo}.
+Edges must be drawn on the top of the node (\fig{layout2}). See also recommendation \sect{crosEdNo}.
 
 \begin{figure}[htb]
   \centering
@@ -124,7 +124,7 @@ Edge labels must not overlap nodes. This includes touching of nodes.
 
 \subsection{Compartments}
 
-If a process has all participants in the same compartment the process node and all edges/arcs must be drawn in this compartment.  If a process has participants in at least two different compartments, the process node must to be either in a compartment where the process has at least one participant or in the empty space.
+If a process has all participants in the same compartment the process node and all edges/arcs must be drawn in this compartment.  If a process has participants in at least two different compartments, the process node must be either in a compartment where the process has at least one participant or in the empty space.
 
 \section{Recommendations}
 
@@ -144,11 +144,11 @@ labels.
 
 \subsection{Avoid edge crossings}
 
-The amount of crossings between edges should be minimized.
+The number of crossings between edges should be minimized.
 
 \subsection{Branching of \glyph{association} and \glyph{dissociation}}
 
-The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed close to the symbol of the process, if possible at a distance comparable to, or smaller than, the diameter of the symbol defining the process (\fig{branching}).
+The branching points of \glyph{association} and \glyph{dissociation} nodes should be placed close to the symbol of the process, if possible, at a distance comparable to, or smaller than, the diameter of the symbol defining the process (\fig{branching}).
 
 \begin{figure}[htb]
   \centering
@@ -172,7 +172,7 @@ elements (\fig{layout7}).
 \section{Additional suggestions}
 \label{sec:additional-suggestions}
 
-Here is a list of additional layout suggestions which may help improve the asthetics and clarity of \PD maps.
+Here is a list of additional layout suggestions which may help improve the aesthetics and clarity of \PD maps.
 
 \begin{itemize}
   \item Angle of edge crossings: If edge crossing cannot be avoided then the edges should cross with an angle close to 90\degree.
@@ -190,5 +190,5 @@ Here is a list of additional layout suggestions which may help improve the asthe
   \item Directional information: Subsequent processes (e.g., a sequence
   of reactions) should be drawn in one direction (e.g., from
   top to bottom or from left to right).
-  \item Compartments: It can help clarity to use a different background shade or color for each compartment.
+  \item Compartments: It can help clarity to use a different background shade or colour for each compartment.
 \end{itemize}

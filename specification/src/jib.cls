@@ -90,7 +90,7 @@
     \parindent 1em%
     \noindent
     \hb@xt@1.8em{\hss\textsuperscript{\scriptsize{\jibfootnotemark}}}##1}
-  \newcommand{\jibauthorfootnote}[3][]{%
+  \newcommand{\jibauthorfootnote}[3][]{% 
     \renewcommand{\jibfurtherfootnotes}{##1}%
     \renewcommand{\jibfootnotemark}{##2}%
     \footnote{##3}}
