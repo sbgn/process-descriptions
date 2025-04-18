@@ -1,6 +1,6 @@
 Primary sources for images are either:
 
-    - a GraphML file, to be edited in SBGN-ED;
+    - a GraphML file, to be edited in SBGN-ED; (Vanted 2.8, SBGN-ED 1.6)
     - an SVG file, to be edited in Inkscape, in the case there is no corresponding GraphML file (except for the files `sbgn_node_taxonomy.final.svg` and `sbgn_edge_taxonomy.final.svg`, see below).
 
 Final sources for images are always SVG files labeled "final".

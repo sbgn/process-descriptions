@@ -6,7 +6,7 @@ Please refere to the [README](specification/README.md) of the specification for 
 
 ## Organization of the repository
 
-* `specification/`: the source files for the specification;
+* `specification/`: the source files for the specification; instructions on the building the specification document and tools for generating images in the specification are also provided
 * `user_manual/`: the source files for the user manual; note that the user manual is not currently updated and should not be taken as a reference.
 
 ## SBGN website
